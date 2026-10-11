@@ -1035,9 +1035,10 @@ body.intro #ticker{visibility:hidden}
 .oid span{font-size:12px;color:var(--mute)}.oid b{font-size:15px;font-weight:600}.oid em{font-style:normal;font-size:12.5px}
 /* ── Strategy guide ── */
 .gv{display:grid;grid-template-columns:1fr;gap:14px;margin:24px 0 18px;background:rgba(18,19,16,.86);border:1px solid var(--line2);border-radius:14px;padding:18px}
-.gvq{display:grid;grid-template-columns:130px 1fr;gap:12px;align-items:center}
+.gvq{display:grid;grid-template-columns:130px 1fr;gap:12px;align-items:start}.gvq small{padding-top:10px}
 .gvq small{font-size:11px;letter-spacing:.1em;color:var(--amber)}
 .gvq .seg{flex-wrap:wrap;width:max-content;max-width:100%}
+.gvh{font-size:12px;color:var(--mute);margin-top:8px;line-height:1.5;max-width:720px}.gvh b{color:var(--amber);font-weight:500}
 .gvt{all:unset;cursor:pointer;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;font-size:12px;letter-spacing:.08em;color:#1a1408;background:var(--amber);border-radius:10px;padding:10px 14px;width:max-content;max-width:100%}
 .gvt span{letter-spacing:0;font-size:12.5px;opacity:.8}
 .gvt:hover{filter:brightness(1.08)}
@@ -2889,13 +2890,13 @@ function payoffSVG(st, big){
   if (big) { g += arr(X(55) - 2, Y(yL), 1, yL >= 0); g += arr(X(145) + 2, Y(yR), -1, yR >= 0); }
   return `<svg class="po${big ? ' big' : ''}" viewBox="0 0 ${W} ${H}" aria-label="${esc(st.n)} payoff at expiry">${g}</svg>`;
 }
-const GLAB = {dir:{bull:'Bullish', bear:'Bearish', neutral:'Range', move:'Big move', hedge:'Protect coins'}, vol:{up:'Vol rising', down:'Vol falling', flat:'Any vol'}, risk:{defined:'Defined risk', large:'Large risk'}};
+const GLAB = {dir:{bull:'Bullish', bear:'Bearish', neutral:'Range', move:'Big move', hedge:'Protect coins'}, vol:{up:'Buys options', down:'Sells options', flat:'Buy + sell'}, risk:{defined:'Defined risk', large:'Large risk'}};
 let GVIEW = {dir:'neutral', vol:'down', risk:'any'}, GSEL = null;
 function guideFits(st){ return st.dir === GVIEW.dir && (GVIEW.vol === 'any' || st.vol === GVIEW.vol || st.vol === 'flat') && (GVIEW.risk === 'any' || st.risk === 'defined'); }
 function todayView(){
   const A = SNAP.dm && SNAP.dm.assets.BTC, X = sentiment(A); if (!A || !X) return null;
   const sc = X.score, pctl = A.ivPct ? A.ivPct.percentile : 50, longG = !A.gamma || A.gamma.regime === 'long_gamma';
-  return {dir:sc > .15 ? 'bull' : sc < -.15 ? 'bear' : longG ? 'neutral' : 'move', vol:pctl < 30 ? 'up' : pctl > 70 ? 'down' : 'any', why:`BTC options lean ${X.verdict[0].toLowerCase()}, implied vol at the ${ord(pctl)} percentile${longG ? ', dealers long gamma' : ''}`};
+  return {dir:sc > .15 ? 'bull' : sc < -.15 ? 'bear' : longG ? 'neutral' : 'move', vol:pctl < 30 ? 'up' : pctl > 70 ? 'down' : 'any', why:`BTC options: ${X.verdict[0].toLowerCase()}, ${pctl < 30 ? 'cheap' : pctl > 70 ? 'expensive' : 'fairly priced'} (${ord(pctl)} percentile)${longG ? ', dealers long gamma' : ''}`};
 }
 function gCard(st){
   const P = payoff(st);
@@ -2903,10 +2904,12 @@ function gCard(st){
     <em><i class="${st.dir}">${GLAB.dir[st.dir]}</i><i>${GLAB.vol[st.vol]}</i><i class="${st.risk}">${GLAB.risk[st.risk]}</i></em></button>`;
 }
 function renderGuide(){
-  const tv = todayView();
+  const tv = todayView(), A0 = SNAP.dm && SNAP.dm.assets.BTC, p0 = A0 && A0.ivPct ? A0.ivPct.percentile : null;
+  const ivNow = p0 == null ? '' : `${p0 < 30 ? 'cheap' : p0 > 70 ? 'expensive' : 'fairly priced'} (${ord(p0)} percentile of the past year)`;
   const seg = (k, opts) => `<div class="seg" data-gk="${k}">${opts.map(([v, l]) => `<button data-gv="${v}" aria-pressed="${GVIEW[k] === v}">${l}</button>`).join('')}</div>`;
   $('gvPick').innerHTML = `<div class="gvq"><small>1 · DIRECTION</small>${seg('dir', [['bear', 'Bearish'], ['neutral', 'Range-bound'], ['bull', 'Bullish'], ['move', 'Big move, either way'], ['hedge', 'Protect my coins']])}</div>
-    <div class="gvq"><small>2 · VOLATILITY</small>${seg('vol', [['up', 'Will rise / options cheap'], ['down', 'Will fall / options rich'], ['any', 'No view']])}</div>
+    <div class="gvq"><small>2 · OPTION PRICES</small><div>${seg('vol', [['up', 'Cheap → I’d rather buy options'], ['down', 'Expensive → I’d rather sell options'], ['any', 'Not sure']])}
+      <p class="gvh">Cheap options make buying (calls, puts, straddles) pay off more; expensive options make selling (collecting premium) pay more.${ivNow ? ` <b>Today BTC options are ${ivNow}.</b>` : ''}</p></div></div>
     <div class="gvq"><small>3 · RISK</small>${seg('risk', [['defined', 'Defined risk only'], ['any', 'Open to large risk']])}</div>
     ${tv ? `<button class="gvt" id="gvToday">USE TODAY’S MARKET READ <span>${esc(tv.why)}</span></button>` : ''}`;
   const fit = STRATS.filter(guideFits), rest = STRATS.filter(s => !guideFits(s));
