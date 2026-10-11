@@ -1,0 +1,128 @@
+{
+ "BTC": [
+  {
+   "d": "2026-10-04",
+   "score": 0.339,
+   "verdict": "LEANING BULLISH",
+   "rr": 1.357,
+   "partial": true
+  },
+  {
+   "d": "2026-10-05",
+   "score": 0.395,
+   "verdict": "BULLISH",
+   "rr": 1.582,
+   "partial": true
+  },
+  {
+   "d": "2026-10-06",
+   "score": -0.068,
+   "verdict": "NEUTRAL",
+   "rr": -0.272,
+   "partial": true
+  },
+  {
+   "d": "2026-10-07",
+   "score": 0.086,
+   "verdict": "NEUTRAL",
+   "rr": 0.342,
+   "partial": true
+  },
+  {
+   "d": "2026-10-08",
+   "score": -0.547,
+   "verdict": "BEARISH",
+   "rr": -2.189,
+   "partial": true
+  },
+  {
+   "d": "2026-10-09",
+   "score": -0.049,
+   "verdict": "NEUTRAL",
+   "rr": -0.195,
+   "partial": true
+  },
+  {
+   "d": "2026-10-10",
+   "score": -0.624,
+   "verdict": "BEARISH",
+   "rr": -2.497,
+   "partial": true
+  },
+  {
+   "d": "2026-10-11",
+   "score": -0.322,
+   "verdict": "LEANING BEARISH",
+   "rr": -2.24,
+   "rr7": 1.063,
+   "pc": 0.722,
+   "flowC": -188629,
+   "flowP": -208508,
+   "near": -1.651,
+   "spot": 82979.012
+  }
+ ],
+ "ETH": [
+  {
+   "d": "2026-10-04",
+   "score": 0.078,
+   "verdict": "NEUTRAL",
+   "rr": 0.314,
+   "partial": true
+  },
+  {
+   "d": "2026-10-05",
+   "score": 0.385,
+   "verdict": "BULLISH",
+   "rr": 1.54,
+   "partial": true
+  },
+  {
+   "d": "2026-10-06",
+   "score": -0.034,
+   "verdict": "NEUTRAL",
+   "rr": -0.135,
+   "partial": true
+  },
+  {
+   "d": "2026-10-07",
+   "score": -0.421,
+   "verdict": "BEARISH",
+   "rr": -1.682,
+   "partial": true
+  },
+  {
+   "d": "2026-10-08",
+   "score": -0.689,
+   "verdict": "BEARISH",
+   "rr": -2.755,
+   "partial": true
+  },
+  {
+   "d": "2026-10-09",
+   "score": -0.719,
+   "verdict": "BEARISH",
+   "rr": -2.876,
+   "partial": true
+  },
+  {
+   "d": "2026-10-10",
+   "score": -0.891,
+   "verdict": "BEARISH",
+   "rr": -3.566,
+   "partial": true
+  },
+  {
+   "d": "2026-10-11",
+   "score": -0.405,
+   "verdict": "BEARISH",
+   "rr": -3.16,
+   "rr7": 0.24,
+   "pc": 0.549,
+   "flowC": 6923,
+   "flowP": 48137,
+   "near": -3.266,
+   "spot": 2506.886
+  }
+ ]
+}

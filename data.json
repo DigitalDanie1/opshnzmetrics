@@ -1,0 +1,1208 @@
+{
+  "headline": "This week: Hunch joins the Friends — plain-English options on Derive.",
+  "relations": [
+    {
+      "a": "Dream",
+      "b": "Derive",
+      "label": "Built on Derive Chain"
+    },
+    {
+      "a": "Odette",
+      "b": "Thetanuts",
+      "label": "First V4 partner"
+    },
+    {
+      "a": "Hunch",
+      "b": "Derive",
+      "label": "Settles on Derive"
+    }
+  ],
+  "ignore": [
+    "parent#ribbon-finance"
+  ],
+  "telegram": "",
+  "goals": [
+    {
+      "id": "earn",
+      "icon": "◎",
+      "title": "Earn yield on my crypto",
+      "sub": "Deposit and let a vault sell options for you — steady premium, no trading",
+      "picks": [
+        {
+          "name": "Thetanuts",
+          "why": "Altcoin option vaults — deposit and the vault sells options for you"
+        },
+        {
+          "name": "Rysk",
+          "why": "Covered-call vaults on Hyperliquid with a fixed yield up front"
+        },
+        {
+          "name": "3Jane",
+          "why": "USDC credit market plus option vaults"
+        }
+      ]
+    },
+    {
+      "id": "bet",
+      "icon": "↗",
+      "title": "Bet on a price, simply",
+      "sub": "Pick a coin, a direction and a date — no option jargon",
+      "picks": [
+        {
+          "name": "Hunch",
+          "why": "Type “ETH goes above $3,200 by Oct 30” and it builds the trade"
+        },
+        {
+          "name": "Dream",
+          "why": "Mobile app — BTC, ETH & HYPE options in a few taps, plus points"
+        },
+        {
+          "name": "CallPut",
+          "why": "24/7 options on stocks, ETFs and crypto from one wallet"
+        },
+        {
+          "name": "Joyride",
+          "why": "Same-day (0DTE) options with onchain settlement"
+        }
+      ]
+    },
+    {
+      "id": "pro",
+      "icon": "Δ",
+      "title": "Trade options like a pro",
+      "sub": "Orderbooks, RFQ, perpetual options, hedging and volatility itself",
+      "picks": [
+        {
+          "name": "Derive",
+          "why": "The deepest onchain options orderbook — ~90% of onchain volume"
+        },
+        {
+          "name": "Paradex",
+          "why": "Perpetual options that never expire, alongside perps"
+        },
+        {
+          "name": "Aevo",
+          "why": "Options orderbook from the Ribbon team"
+        },
+        {
+          "name": "Hypercall",
+          "why": "RFQ options on HyperEVM — no liquidations, even SpaceX & S&P markets"
+        },
+        {
+          "name": "Olive",
+          "why": "Options, perps and dated futures on Solana"
+        },
+        {
+          "name": "GammaSwap",
+          "why": "Oracle-free perpetual options built from AMM liquidity"
+        },
+        {
+          "name": "Volmex",
+          "why": "Trade volatility itself — BVIV, BTC’s 30-day implied vol, as a perp"
+        }
+      ]
+    }
+  ],
+  "strategy": {
+    "note": "",
+    "scenarios": [
+      {
+        "if": "Hot CPI or a hawkish Fed",
+        "then": "Protect the downside",
+        "how": "Buy puts or put spreads before the print — implied vol jumps after a surprise, so buy early, not after.",
+        "friends": [
+          "Derive",
+          "Paradex",
+          "Aevo"
+        ]
+      },
+      {
+        "if": "Soft data or a rate cut",
+        "then": "Lean long with calls",
+        "how": "Call spreads keep the cost down; selling puts into strength also works.",
+        "friends": [
+          "Derive",
+          "Paradex",
+          "Hunch"
+        ]
+      },
+      {
+        "if": "Big event, then nothing happens",
+        "then": "Sell premium after the event",
+        "how": "Implied vol usually drops right after FOMC or CPI (vol crush) — vaults and covered calls collect it.",
+        "friends": [
+          "Thetanuts",
+          "Rysk",
+          "3Jane"
+        ]
+      },
+      {
+        "if": "Shock headline or liquidation cascade",
+        "then": "Own volatility, not direction",
+        "how": "Short-dated puts reprice fastest; BVIV / EVIV perps let you trade the fear itself.",
+        "friends": [
+          "Volmex",
+          "GammaSwap"
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "ticker": "DRV",
+      "name": "Derive",
+      "stage": "post",
+      "core": true,
+      "lineage": "Ex-Lyra",
+      "what": "Options & perps orderbook on its own chain (Derive Chain)",
+      "cg": "derive",
+      "llama": [
+        "parent#lyra"
+      ],
+      "site": "https://www.derive.xyz",
+      "x": "derivexyz",
+      "home": "Derive Chain",
+      "origin": "Lyra",
+      "keywords": [
+        "Options + perps orderbook",
+        "Own appchain",
+        "Ex-Lyra",
+        "#1 onchain options"
+      ],
+      "note": "",
+      "app": "https://www.derive.xyz/options/eth"
+    },
+    {
+      "ticker": "DIME",
+      "name": "Paradex",
+      "stage": "post",
+      "core": true,
+      "lineage": "Paradigm / Deribit",
+      "what": "Perpetual (no-expiry) options + perps on a Starknet appchain",
+      "cg": "paradex",
+      "llama": [
+        "parent#paradex"
+      ],
+      "site": "https://www.paradex.trade",
+      "x": "tradeparadex",
+      "home": "Paradex",
+      "origin": "Paradigm",
+      "keywords": [
+        "Perpetual options",
+        "Starknet appchain",
+        "Paradigm-incubated",
+        "Perps"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "",
+        "catalysts": [],
+        "risks": [
+          "80% of core-contributor & Paradigm-shareholder allocation unlocks on performance conditions; the other 20% vests 25% after 1 year, then monthly over 36 months"
+        ],
+        "timeline": [
+          {
+            "date": "2026-03-03",
+            "text": "$DIME TGE announced"
+          }
+        ]
+      },
+      "app": "https://app.paradex.trade/trade/BTC-USD-PERP"
+    },
+    {
+      "ticker": "NUTS",
+      "name": "Thetanuts",
+      "stage": "post",
+      "core": true,
+      "lineage": "QCP Capital",
+      "what": "Altcoin options vaults + V4 RFQ engine, multichain",
+      "cg": "thetanuts-finance",
+      "llama": [
+        "thetanuts-finance"
+      ],
+      "site": "https://thetanuts.finance",
+      "x": "ThetanutsFi",
+      "home": "Base",
+      "origin": "QCP",
+      "keywords": [
+        "Altcoin options",
+        "V4 RFQ",
+        "Option vaults",
+        "Base"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "",
+        "catalysts": [
+          "V4 RFQ engine — Odette (0DTE on Base) is the first partner"
+        ],
+        "risks": [],
+        "timeline": [
+          {
+            "date": "2024-05-20",
+            "text": "$NUTS TGE"
+          }
+        ]
+      },
+      "app": "https://app.thetanuts.finance"
+    },
+    {
+      "ticker": "AEVO",
+      "name": "Aevo",
+      "stage": "post",
+      "core": true,
+      "lineage": "Ex-Ribbon Finance",
+      "what": "Options & perps orderbook on its own rollup",
+      "cg": "aevo-exchange",
+      "llama": [
+        "parent#aevo"
+      ],
+      "site": "https://www.aevo.xyz",
+      "x": "aevoxyz",
+      "home": "Ethereum",
+      "origin": "Ribbon",
+      "keywords": [
+        "Options orderbook",
+        "Ex-Ribbon",
+        "Pre-launch perps",
+        "Own rollup"
+      ],
+      "note": "",
+      "app": "https://app.aevo.xyz/option/eth"
+    },
+    {
+      "ticker": "SYN",
+      "name": "Hypercall",
+      "stage": "post",
+      "core": true,
+      "lineage": "Ex-Synapse → now Hypercall",
+      "what": "Options on HyperEVM — RFQ, no liquidations, powered by SYN (no new token)",
+      "cg": "synapse-2",
+      "llama": [
+        "hypercall"
+      ],
+      "site": "https://hypercall.xyz",
+      "x": "",
+      "home": "Hyperliquid",
+      "origin": "Synapse",
+      "keywords": [
+        "HyperEVM",
+        "RFQ",
+        "No liquidations",
+        "SpaceX & S&P options"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "The options layer on Hyperliquid — extends SYN utility instead of launching a new token",
+        "catalysts": [
+          "Launched with SpaceX options instead of BTC/ETH, later added S&P 500 options",
+          "Arthur Hayes bought ~6.16M SYN OTC, calling Hypercall a potential Deribit challenger"
+        ],
+        "risks": [
+          "Most price/valuation coverage is from the June rally — moves that size can reverse"
+        ],
+        "timeline": []
+      },
+      "app": "https://app.hypercall.xyz"
+    },
+    {
+      "ticker": "GS",
+      "name": "GammaSwap",
+      "stage": "post",
+      "core": true,
+      "lineage": "True OG",
+      "what": "Perpetual options built by borrowing AMM liquidity, oracle-free",
+      "cg": "gammaswap",
+      "llama": [
+        "gammaswap-open-interest",
+        "gammaswap-yield-tokens",
+        "gammaswap-classic"
+      ],
+      "site": "https://gammaswap.com",
+      "x": "",
+      "home": "Arbitrum",
+      "origin": "",
+      "keywords": [
+        "Perpetual options",
+        "Oracle-free",
+        "AMM liquidity",
+        "OG"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "",
+        "catalysts": [],
+        "risks": [
+          "Small TVL and volume"
+        ],
+        "timeline": []
+      },
+      "app": "https://app.gammaswap.com"
+    },
+    {
+      "ticker": "",
+      "name": "Dream",
+      "stage": "pre",
+      "core": true,
+      "lineage": "Built on Derive Chain",
+      "what": "Mobile trading app with BTC, ETH & HYPE options",
+      "status": "Beta · points",
+      "points": "Points on every trade, 2× on options",
+      "cg": "",
+      "llama": [
+        "dream"
+      ],
+      "site": "https://dreamos.app",
+      "x": "dreaming",
+      "home": "Derive Chain",
+      "origin": "",
+      "keywords": [
+        "Mobile app",
+        "Points",
+        "HYPE options",
+        "Derive Chain"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "",
+        "catalysts": [
+          "Points: 2× on options trades, 20% referral fee share"
+        ],
+        "risks": [
+          "No official token launch announced"
+        ],
+        "timeline": []
+      },
+      "app": "https://dreamos.app",
+      "isNew": true
+    },
+    {
+      "ticker": "",
+      "name": "CallPut",
+      "stage": "pre",
+      "core": true,
+      "lineage": "",
+      "what": "24/7 stock, ETF & crypto options, non-custodial",
+      "status": "No token yet",
+      "points": "",
+      "cg": "",
+      "llama": [
+        "callput"
+      ],
+      "site": "https://callput.app",
+      "x": "CallPutApp",
+      "home": "Base",
+      "origin": "",
+      "keywords": [
+        "Stock & ETF options",
+        "24/7",
+        "Non-custodial",
+        "Base"
+      ],
+      "note": "",
+      "app": "https://callput.app"
+    },
+    {
+      "ticker": "",
+      "name": "Joyride",
+      "stage": "pre",
+      "core": true,
+      "lineage": "",
+      "origin": "",
+      "home": "Solana",
+      "what": "0DTE options exchange — CLOB matching with non-custodial onchain settlement",
+      "status": "Pre-TGE",
+      "cg": "",
+      "llama": [],
+      "site": "https://joyride.exchange",
+      "x": "JoyrideExchange",
+      "logo": "logos/joyride.jpg",
+      "keywords": [
+        "0DTE",
+        "CLOB",
+        "Non-custodial",
+        "Self-custody"
+      ],
+      "note": "",
+      "app": "https://joyride.exchange",
+      "isNew": true
+    },
+    {
+      "ticker": "",
+      "name": "Olive",
+      "stage": "pre",
+      "core": true,
+      "lineage": "",
+      "origin": "",
+      "home": "Solana",
+      "what": "Derivatives exchange on Solana — options, perps and expiry futures",
+      "status": "Points · Season 1",
+      "points": "Points for trading, providing liquidity & referrals → share of 100M OLIVE Season 1 airdrop",
+      "cg": "",
+      "llama": [],
+      "site": "https://olive.exchange",
+      "x": "Olive_Exchange",
+      "logo": "logos/olive.jpg",
+      "keywords": [
+        "Options + perps + futures",
+        "Solana",
+        "Points",
+        "Season 1 airdrop"
+      ],
+      "note": "",
+      "app": "https://olive.exchange",
+      "isNew": true
+    },
+    {
+      "ticker": "",
+      "name": "3Jane",
+      "stage": "pre",
+      "core": true,
+      "lineage": "",
+      "origin": "",
+      "home": "Ethereum",
+      "what": "Unsecured USDC credit money market + options vaults",
+      "cg": "",
+      "llama": [
+        "3jane-options"
+      ],
+      "site": "https://www.3jane.xyz",
+      "x": "3janexyz",
+      "keywords": [
+        "Unsecured credit",
+        "Option vaults"
+      ],
+      "note": "",
+      "app": "https://app.3jane.xyz"
+    },
+    {
+      "ticker": "",
+      "name": "Volmex",
+      "stage": "pre",
+      "core": true,
+      "lineage": "",
+      "origin": "",
+      "home": "Hyperliquid",
+      "what": "Implied-volatility indices (BVIV, EVIV) — BVIV perps now trade on Hyperliquid",
+      "status": "Pre-TGE",
+      "cg": "",
+      "llama": [
+        "volmex"
+      ],
+      "site": "https://volmex.finance",
+      "x": "volmexfinance",
+      "logo": "logos/volmex.jpg",
+      "keywords": [
+        "Volatility index",
+        "BVIV / EVIV",
+        "Vol perps",
+        "Hyperliquid"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "",
+        "catalysts": [
+          "BVIV Index perpetual futures went live on Hyperliquid (Sep 29, 2026) — trade BTC 30-day implied vol directly"
+        ],
+        "risks": [],
+        "timeline": [
+          {
+            "date": "2026-09-29",
+            "text": "BVIV perps live on Hyperliquid"
+          }
+        ]
+      },
+      "app": "https://volmex.finance"
+    },
+    {
+      "ticker": "",
+      "name": "Hunch",
+      "stage": "pre",
+      "core": true,
+      "lineage": "",
+      "origin": "",
+      "home": "Derive Chain",
+      "what": "Options in plain English — “I think ETH goes above $3,200 by Oct 30” — settled on Derive",
+      "status": "Pre-TGE",
+      "cg": "",
+      "llama": [],
+      "site": "https://www.hunch.cool",
+      "x": "",
+      "logo": "logos/hunch.png",
+      "keywords": [
+        "Consumer options",
+        "Plain-English trades",
+        "Settles on Derive",
+        "Leaderboard"
+      ],
+      "note": "",
+      "deep": {
+        "writeup": "",
+        "thesis": "",
+        "catalysts": [],
+        "risks": [],
+        "timeline": [],
+        "updated": "2026-10-10T13:14:28.882Z"
+      },
+      "app": "https://www.hunch.cool",
+      "isNew": true
+    },
+    {
+      "ticker": "",
+      "name": "Rysk",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Hyperliquid",
+      "what": "Options vaults & RFQ on Hyperliquid — fixed yield via covered calls",
+      "cg": "",
+      "llama": [
+        "parent#rysk-finance"
+      ],
+      "site": "https://app.rysk.finance",
+      "x": "ryskfinance",
+      "keywords": [
+        "Covered-call vaults",
+        "Fixed yield",
+        "Hyperliquid"
+      ],
+      "note": "",
+      "status": "Points · v12",
+      "points": "Activity points + referral points (period v12) — open one position to unlock your referral code",
+      "pointsUrl": "https://app.rysk.finance/points/"
+    },
+    {
+      "ticker": "",
+      "name": "Panoptic",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Ethereum",
+      "what": "Perpetual options built from Uniswap LP positions — no oracles, no expiry",
+      "cg": "",
+      "llama": [
+        "parent#panoptic"
+      ],
+      "site": "https://panoptic.xyz",
+      "x": "Panoptic_xyz",
+      "keywords": [
+        "Perpetual options",
+        "Uniswap LP",
+        "Oracle-free"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Hegic",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Arbitrum",
+      "what": "Peer-to-pool options: ETH & BTC calls/puts and one-click strategies",
+      "cg": "hegic",
+      "llama": [
+        "hegic"
+      ],
+      "site": "https://www.hegic.co",
+      "x": "HegicOptions",
+      "keywords": [
+        "Peer-to-pool",
+        "ETH & BTC options",
+        "One-click strategies"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Deri",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Protocol for trading risk exposure (perps & options), multichain",
+      "cg": "deri-protocol",
+      "llama": [
+        "parent#deri"
+      ],
+      "site": "https://deri.io",
+      "x": "DeriProtocol",
+      "keywords": [
+        "Risk exchange",
+        "Multichain"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Odette",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Base",
+      "what": "Daily 0DTE options, cash-settled in USDC",
+      "cg": "",
+      "llama": [
+        "odette"
+      ],
+      "site": "",
+      "x": "odetteonchain",
+      "keywords": [
+        "0DTE",
+        "USDC cash-settled",
+        "Thetanuts V4"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Katana",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Solana",
+      "what": "Automated options-strategy yield vaults on Solana",
+      "cg": "",
+      "llama": [
+        "katana"
+      ],
+      "site": "",
+      "x": "Katana_HQ",
+      "keywords": [
+        "Solana",
+        "Option vaults",
+        "Automated strategies"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Opyn",
+      "stage": "pre",
+      "core": false,
+      "lineage": "OG",
+      "origin": "",
+      "home": "Ethereum",
+      "what": "The original DeFi options infrastructure (Gamma, Squeeth)",
+      "cg": "",
+      "llama": [
+        "parent#opyn"
+      ],
+      "site": "https://www.opyn.co",
+      "x": "opyn_",
+      "keywords": [
+        "Options infra",
+        "Squeeth",
+        "OG"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "SOFA.org",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Ethereum",
+      "what": "Options-style structured products DAO with onchain settlement",
+      "cg": "rch-token",
+      "llama": [
+        "sofa.org"
+      ],
+      "site": "",
+      "x": "SOFAorgDAO",
+      "keywords": [
+        "Structured products",
+        "DAO",
+        "Onchain settlement"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Typus",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Options vaults (DOV) & derivatives on Sui",
+      "cg": "typus",
+      "llama": [
+        "parent#typus-finance"
+      ],
+      "site": "https://typus.finance",
+      "x": "TypusFinance",
+      "keywords": [
+        "Sui",
+        "Option vaults"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Toros",
+      "stage": "post",
+      "core": false,
+      "lineage": "Ex-dHEDGE → Chamber",
+      "origin": "dHEDGE",
+      "home": "Arbitrum",
+      "what": "Leveraged options vaults (Chamber family)",
+      "cg": "dhedge-dao",
+      "llama": [
+        "toros-options"
+      ],
+      "site": "https://chamberfi.com",
+      "x": "torosfinance",
+      "keywords": [
+        "Leveraged vaults",
+        "Ex-dHEDGE"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Kyan",
+      "stage": "pre",
+      "core": false,
+      "lineage": "Ex-Premia",
+      "origin": "Premia",
+      "home": "Arbitrum",
+      "what": "Orderbook + RFQ options exchange",
+      "cg": "",
+      "llama": [
+        "parent#premia"
+      ],
+      "site": "https://kyan.blue",
+      "x": "KyanExchange",
+      "keywords": [
+        "Orderbook + RFQ",
+        "Ex-Premia"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Dual Finance",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Solana",
+      "what": "Token incentives paid as options (staking options)",
+      "cg": "dual-finance",
+      "llama": [
+        "dual-finance"
+      ],
+      "site": "",
+      "x": "DualFinance",
+      "keywords": [
+        "Solana",
+        "Option incentives"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "TYMIO",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Arbitrum",
+      "what": "Options-style yield from time-limited limit orders",
+      "cg": "",
+      "llama": [
+        "tymio"
+      ],
+      "site": "",
+      "x": "TYMIOapp",
+      "keywords": [
+        "Time-limit orders",
+        "Dual investment"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Stryke",
+      "stage": "post",
+      "core": false,
+      "lineage": "Ex-Dopex",
+      "origin": "Dopex",
+      "home": "Arbitrum",
+      "what": "Concentrated-liquidity AMM options (CLAMM)",
+      "cg": "stryke",
+      "llama": [
+        "parent#dopex"
+      ],
+      "site": "https://www.stryke.xyz",
+      "x": "stryke_xyz",
+      "keywords": [
+        "CLAMM",
+        "Ex-Dopex"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Carmine",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Options AMM on Starknet",
+      "cg": "",
+      "llama": [
+        "carmine-options"
+      ],
+      "site": "",
+      "x": "CarmineOptions",
+      "keywords": [
+        "Starknet",
+        "Options AMM"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Lien",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Ethereum",
+      "what": "Early protocol minting options & stablecoins from ETH",
+      "cg": "lien",
+      "llama": [
+        "lien"
+      ],
+      "site": "",
+      "x": "LienFinance",
+      "keywords": [
+        "Early generation",
+        "ETH options"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Zomma",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Options protocol on zkSync",
+      "cg": "",
+      "llama": [
+        "zomma-protocol"
+      ],
+      "site": "",
+      "x": "ZommaProtocol",
+      "keywords": [
+        "zkSync",
+        "Options"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Opium",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Ethereum",
+      "what": "General-purpose protocol to create and settle any derivative",
+      "cg": "opium",
+      "llama": [
+        "opium"
+      ],
+      "site": "",
+      "x": "Opium_Network",
+      "keywords": [
+        "Generic derivatives",
+        "Early generation"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Oddz",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Multichain options & derivatives trading (early generation)",
+      "cg": "oddz",
+      "llama": [
+        "oddz"
+      ],
+      "site": "",
+      "x": "oddz_finance",
+      "keywords": [
+        "Multichain",
+        "Early generation"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Prodigy.Fi",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Hyperliquid",
+      "what": "Options-based real-yield products",
+      "cg": "",
+      "llama": [
+        "parent#prodigy-fi"
+      ],
+      "site": "https://prodigy.fi",
+      "x": "ProdigyFi",
+      "keywords": [
+        "Real yield",
+        "Hyperliquid"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Jasper Vault",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Arbitrum",
+      "what": "Peer-to-peer options, multichain",
+      "cg": "",
+      "llama": [
+        "jasper-vault"
+      ],
+      "site": "",
+      "x": "jaspervault",
+      "keywords": [
+        "P2P options",
+        "Multichain"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Margin Zero",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Oracle-less options + protected perps (Sonic)",
+      "cg": "",
+      "llama": [
+        "margin-zero"
+      ],
+      "site": "",
+      "x": "marginzero_xyz",
+      "keywords": [
+        "Sonic",
+        "Oracle-free"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "TON Hedge",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Options on TON",
+      "cg": "",
+      "llama": [
+        "ton-hedge"
+      ],
+      "site": "",
+      "x": "tonhedge",
+      "keywords": [
+        "TON",
+        "Options"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Hypersurface",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Hyperliquid",
+      "what": "Covered-call & cash-secured-put structured products",
+      "cg": "",
+      "llama": [
+        "hypersurface"
+      ],
+      "site": "",
+      "x": "hypersurfaceX",
+      "keywords": [
+        "Covered calls",
+        "Cash-secured puts"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Ithaca",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Arbitrum",
+      "what": "Composable options protocol",
+      "cg": "ithaca-protocol",
+      "llama": [
+        "ithaca-protocol"
+      ],
+      "site": "",
+      "x": "IthacaProtocol",
+      "keywords": [
+        "Composable options",
+        "Arbitrum"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Auctus",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Ethereum",
+      "what": "Onchain options (early generation)",
+      "cg": "auctus",
+      "llama": [
+        "auctus"
+      ],
+      "site": "",
+      "x": "AuctusOptions",
+      "keywords": [
+        "Early generation",
+        "Onchain options"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Antimatter",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Options-style derivatives: dual investment, bull/bear tokens",
+      "cg": "antimatter",
+      "llama": [
+        "antimatter"
+      ],
+      "site": "",
+      "x": "antimatterdefi",
+      "keywords": [
+        "Dual investment",
+        "Bull/bear tokens"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Smilee",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Arbitrum",
+      "what": "Options built from impermanent gain (IG)",
+      "cg": "smilee",
+      "llama": [
+        "parent#smilee-finance"
+      ],
+      "site": "https://smilee.finance",
+      "x": "SmileeFinance",
+      "keywords": [
+        "Impermanent gain",
+        "Arbitrum"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": "",
+      "name": "Stochastic",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Base",
+      "what": "Permissionless option minting + AMM trading on Base",
+      "cg": "",
+      "llama": [
+        "stochastic-finance"
+      ],
+      "site": "",
+      "x": "stochastic_fin",
+      "keywords": [
+        "Permissionless options",
+        "Base AMM"
+      ],
+      "note": ""
+    },
+    {
+      "ticker": null,
+      "name": "Omen",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Fractional options exchange (OMEX) — European options with a 1x multiplier, from $1 notional, 24/7, cross-margined with perps",
+      "cg": null,
+      "llama": [],
+      "site": "https://omen.trade",
+      "app": "https://omen.trade",
+      "x": "omenapp",
+      "logo": "logos/omen.jpg",
+      "keywords": [
+        "Fractional options",
+        "$1 contracts",
+        "24/7",
+        "Perps cross-margin"
+      ],
+      "status": "Just launched",
+      "since": "2026-10",
+      "isNew": true,
+      "note": "",
+      "deep": {
+        "thesis": "",
+        "catalysts": [],
+        "risks": [],
+        "timeline": [
+          {
+            "date": "2026-10-10",
+            "text": "Fractional options launched — “This is the future of trading.” Manifesto by co-founder & CEO Daniel Jeong (omen.trade/manifesto)"
+          }
+        ],
+        "writeup": ""
+      }
+    }
+  ]
+}

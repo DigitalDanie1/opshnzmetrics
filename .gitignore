@@ -1,0 +1,12 @@
+.env
+.DS_Store
+logs/
+share/
+preview.png
+preview.txt
+preview-map.png
+preview-race.png
+preview-fundamentals.png
+preview-masthead.png
+data.json.bak
+mecha-preview.html

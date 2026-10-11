@@ -1,0 +1,175 @@
+{
+  "refs": {
+    "Dream": {
+      "code": "",
+      "url": ""
+    },
+    "CallPut": {
+      "code": "",
+      "url": ""
+    },
+    "Joyride": {
+      "code": "",
+      "url": ""
+    },
+    "Olive": {
+      "code": "",
+      "url": ""
+    },
+    "3Jane": {
+      "code": "",
+      "url": ""
+    },
+    "Volmex": {
+      "code": "",
+      "url": ""
+    },
+    "Rysk": {
+      "code": "",
+      "url": ""
+    },
+    "Panoptic": {
+      "code": "",
+      "url": ""
+    },
+    "Odette": {
+      "code": "",
+      "url": ""
+    },
+    "Katana": {
+      "code": "",
+      "url": ""
+    },
+    "Opyn": {
+      "code": "",
+      "url": ""
+    },
+    "Kyan": {
+      "code": "",
+      "url": ""
+    },
+    "TYMIO": {
+      "code": "",
+      "url": ""
+    },
+    "Carmine": {
+      "code": "",
+      "url": ""
+    },
+    "Zomma": {
+      "code": "",
+      "url": ""
+    },
+    "Prodigy.Fi": {
+      "code": "",
+      "url": ""
+    },
+    "Jasper Vault": {
+      "code": "",
+      "url": ""
+    },
+    "Margin Zero": {
+      "code": "",
+      "url": ""
+    },
+    "TON Hedge": {
+      "code": "",
+      "url": ""
+    },
+    "Hypersurface": {
+      "code": "",
+      "url": ""
+    },
+    "Stochastic": {
+      "code": "",
+      "url": ""
+    },
+    "Hunch": {
+      "code": "",
+      "url": ""
+    }
+  },
+  "farms": [
+    {
+      "name": "RiseX",
+      "what": "Perp DEX",
+      "chain": "",
+      "x": "",
+      "site": "",
+      "code": "",
+      "url": ""
+    },
+    {
+      "name": "Truenorth",
+      "what": "Perp DEX",
+      "chain": "",
+      "x": "",
+      "site": "",
+      "code": "",
+      "url": ""
+    },
+    {
+      "name": "Arcus",
+      "what": "Perp DEX",
+      "chain": "",
+      "x": "",
+      "site": "",
+      "code": "",
+      "url": ""
+    },
+    {
+      "name": "Entropy",
+      "what": "Perp DEX",
+      "chain": "",
+      "x": "",
+      "site": "",
+      "code": "",
+      "url": ""
+    },
+    {
+      "name": "Hello Trade",
+      "what": "Perp DEX",
+      "chain": "",
+      "x": "",
+      "site": "",
+      "code": "",
+      "url": ""
+    },
+    {
+      "name": "MNX",
+      "what": "Perp DEX",
+      "chain": "",
+      "x": "",
+      "site": "",
+      "code": "",
+      "url": ""
+    },
+    {
+      "name": "Pacifica",
+      "what": "Perp DEX",
+      "chain": "",
+      "x": "",
+      "site": "",
+      "code": "",
+      "url": ""
+    },
+    {
+      "name": "QFEX",
+      "what": "Perp DEX",
+      "chain": "",
+      "x": "",
+      "site": "",
+      "code": "",
+      "url": ""
+    },
+    {
+      "name": "Quote",
+      "what": "Perp DEX",
+      "chain": "",
+      "x": "",
+      "site": "",
+      "code": "",
+      "url": ""
+    }
+  ]
+}

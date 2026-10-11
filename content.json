@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "type": "research",
+      "title": "Hypercall: Hyperliquid’s up-and-coming options DEX",
+      "url": "https://members.delphidigital.io/feed/hypercall-hyperliquids-up-and-coming-options-dex",
+      "source": "Delphi Digital",
+      "date": "",
+      "projects": [
+        "Hypercall"
+      ],
+      "note": "Mainnet alpha; first market was SpaceX options"
+    },
+    {
+      "type": "article",
+      "title": "Hypercall — the options layer on Hyperliquid",
+      "url": "https://blog.hypercall.xyz/hypercall-the-options-layer-on-hyperliquid/",
+      "source": "Hypercall Blog",
+      "date": "",
+      "projects": [
+        "Hypercall"
+      ],
+      "note": ""
+    },
+    {
+      "type": "article",
+      "title": "Arthur Hayes bets on Synapse’s Hypercall",
+      "url": "https://coingape.com/arthur-hayes-bets-big-synapse-hypercall-deribit-rival-syn-token-jumps/",
+      "source": "CoinGape",
+      "date": "",
+      "projects": [
+        "Hypercall"
+      ],
+      "note": "~6.16M SYN bought OTC"
+    },
+    {
+      "type": "article",
+      "title": "Paradex signals upcoming $DIME TGE",
+      "url": "https://decrypt.co/359780",
+      "source": "Decrypt",
+      "date": "2026-03-03",
+      "projects": [
+        "Paradex"
+      ],
+      "note": ""
+    },
+    {
+      "type": "research",
+      "title": "Paradex updated tokenomics and perpetual options",
+      "url": "https://research.nansen.ai/articles/paradex-updated-tokenomics-and-perpetual-options",
+      "source": "Nansen",
+      "date": "",
+      "projects": [
+        "Paradex"
+      ],
+      "note": ""
+    },
+    {
+      "type": "article",
+      "title": "Thetanuts V4 + RFQ engine, first partner Odette",
+      "url": "https://coinstats.app/en/news/41f7342c7a21ea9986ef386684cf45b7059c40bc501e92911d4c8fa93ed68f62_Thetanuts-Finance-Partners-with-Odette-to-Debut-V4-and-RFQ-Engine-on-Base/",
+      "source": "CoinStats",
+      "date": "",
+      "projects": [
+        "Thetanuts",
+        "Odette"
+      ],
+      "note": ""
+    }
+  ]
+}
