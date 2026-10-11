@@ -1083,6 +1083,10 @@ body.intro #ticker{visibility:hidden}
 .gc em i.bull{color:var(--up)}.gc em i.bear{color:var(--down)}.gc em i.large{color:var(--amber)}
 .gcards.dim .gc{opacity:.55}.gcards.dim .gc:hover{opacity:1}
 @media (max-width:900px){.gvq{grid-template-columns:1fr}.gdi{grid-template-columns:1fr}.gst{grid-template-columns:1fr 1fr}.gdh h3{font-size:26px}}
+.refw{display:flex;flex-direction:column;gap:0}
+.perk{font-size:12px;line-height:1.45;color:var(--ink2);border:1px dashed rgba(242,181,68,.55);border-top:0;background:rgba(242,181,68,.04);padding:7px 10px}
+.perk b{font-size:10px;letter-spacing:.1em;color:#1a1408;background:var(--amber);border-radius:999px;padding:1px 7px;margin-right:8px}
+.dd-ref{margin-top:14px;max-width:460px}
 </style>
 </head>
 <body>
@@ -1667,6 +1671,7 @@ function renderDeep(p){
         ${kwHTML(p)}
         <p class="dd-what">${esc(p.what)}</p>
         <div class="dd-links">${links}</div>
+        ${refOf(p.name) ? `<div class="dd-ref">${refBox(refOf(p.name))}</div>` : ''}
         ${EDITOR_KEY ? `<button class="edit-btn" id="ddEditBtn">✎ EDIT THIS PAGE</button> <span class="muted" id="ddSaved" style="font-size:12px;margin-left:8px"></span>` : ''}
       </div>
     </div>
@@ -2356,6 +2361,7 @@ function renderNew(){
         ${when}
         <p>${esc(p.what || '')}</p>
         ${(p.keywords || []).length ? `<div class="kw2">${p.keywords.slice(0, 4).map(k => `<span>${esc(k)}</span>`).join('')}</div>` : ''}
+        ${refOf(p.name) ? refBox(refOf(p.name)) : ''}
         <div class="lk">${links}<a class="dd" href="${deepHref(p)}">DEEP DIVE →</a></div></div></article>`;
   }).join('') || '<p class="empty">No new projects yet.</p>';
 }
@@ -2492,7 +2498,7 @@ function oracleCard(p, i, tag){
 const REFS = (BOOT.refs && BOOT.refs.refs) || {};
 const hasRef = r => r && (r.code || r.url);
 const refOf = name => hasRef(REFS[name]) ? REFS[name] : null;
-const refBox = r => !r ? '' : `<div class="ref"><span>REF</span><b>${esc(r.code || 'link')}</b>${r.code ? `<button data-copy="${esc(r.code)}">COPY</button>` : ''}${r.url ? `<a class="join" href="${esc(r.url)}" target="_blank" rel="noopener">JOIN ↗</a>` : ''}</div>`;
+const refBox = r => !r ? '' : `<div class="refw"><div class="ref"><span>REF</span><b>${esc(r.code || 'link')}</b>${r.code ? `<button data-copy="${esc(r.code)}">COPY</button>` : ''}${r.url ? `<a class="join" href="${esc(r.url)}" target="_blank" rel="noopener">JOIN ↗</a>` : ''}</div>${r.perk ? `<p class="perk"><b>${esc(r.perkTag || 'PERK')}</b>${esc(r.perk)}</p>` : ''}</div>`;
 document.addEventListener('click', async e => {
   const b = e.target.closest('[data-copy]'); if (!b) return;
   e.preventDefault();
