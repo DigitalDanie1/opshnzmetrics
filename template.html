@@ -333,7 +333,7 @@ body.tg #orrery *{animation:none!important}
 .cta span{transition:transform .2s}
 .cta:hover{background:#ffd27a}
 .cta:hover span{transform:translateX(4px)}
-.m-nav.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-bottom:0;margin:22px 0 0}
+.m-nav.tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-bottom:0;margin:22px 0 0}
 .m-nav.tabs a{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:var(--amber);opacity:.6;padding:14px 0 16px;border-bottom:2px solid transparent;margin-bottom:-1px;font-weight:400}
 .m-nav.tabs a:not(:first-child){padding-left:14px}
 .m-nav.tabs a[aria-current=page]{opacity:1;color:var(--amber);border-color:var(--amber)}
@@ -371,13 +371,13 @@ body.tg .mast{margin:-40px -40px 0;padding:0 40px}
 .m-nav .go{display:inline-block;opacity:0;transform:translateX(-4px);transition:.2s}
 .m-nav a:hover .go{opacity:1;transform:none}
 /* 내부 페이지 상단 바: 브랜드 · 경로(HOME / OVERVIEW) · 탭 */
-.crumbbar{display:grid;grid-template-columns:1fr auto;grid-template-areas:"brand nav" "bc nav";align-items:end;gap:6px 24px;margin:-36px -28px 0;padding:20px 28px 0;border-bottom:1px solid var(--line2)}
+.crumbbar{display:grid;grid-template-columns:1fr;grid-template-areas:"brand" "bc" "nav";align-items:end;gap:6px 24px;margin:-36px -28px 0;padding:20px 28px 0;border-bottom:1px solid var(--line2)}
 .crumbbar .brand{grid-area:brand;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--amber);display:inline-flex;gap:8px;align-items:center}
 .crumbbar .bc{grid-area:bc;font-family:var(--mono);font-size:clamp(22px,2.7vw,36px);white-space:nowrap;font-weight:300;letter-spacing:-.03em;color:var(--amber);padding:6px 0 16px;text-transform:uppercase}
 .crumbbar .bc a{color:var(--mute);transition:color .2s}
 .crumbbar .bc a:hover{color:var(--ink)}
 .crumbbar .bc i{font-style:normal;color:var(--mute);margin:0 .35em}
-.crumbbar .cnav{grid-area:nav;display:flex;gap:20px;align-self:end}
+.crumbbar .cnav{grid-area:nav;display:flex;gap:24px;align-self:end;overflow-x:auto;scrollbar-width:none}
 .crumbbar .cnav a{white-space:nowrap;font-size:11.5px}
 .crumbbar .cnav a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--amber);opacity:.55;padding:0 0 18px;border-bottom:2px solid transparent;margin-bottom:-1px}
 .crumbbar .cnav a:hover{opacity:1}
@@ -1033,6 +1033,55 @@ body.intro #ticker{visibility:hidden}
 .oid > div{display:grid;grid-template-columns:90px 1fr auto;gap:12px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line)}
 .oid > div:last-child{border-bottom:0}
 .oid span{font-size:12px;color:var(--mute)}.oid b{font-size:15px;font-weight:600}.oid em{font-style:normal;font-size:12.5px}
+/* ── Strategy guide ── */
+.gv{display:grid;grid-template-columns:1fr;gap:14px;margin:24px 0 18px;background:rgba(18,19,16,.86);border:1px solid var(--line2);border-radius:14px;padding:18px}
+.gvq{display:grid;grid-template-columns:130px 1fr;gap:12px;align-items:center}
+.gvq small{font-size:11px;letter-spacing:.1em;color:var(--amber)}
+.gvq .seg{flex-wrap:wrap;width:max-content;max-width:100%}
+.gvt{all:unset;cursor:pointer;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;font-size:12px;letter-spacing:.08em;color:#1a1408;background:var(--amber);border-radius:10px;padding:10px 14px;width:max-content;max-width:100%}
+.gvt span{letter-spacing:0;font-size:12.5px;opacity:.8}
+.gvt:hover{filter:brightness(1.08)}
+.gd{background:rgba(18,19,16,.9);border:1px solid var(--line2);border-radius:16px;padding:22px;margin-bottom:34px;scroll-margin-top:20px}
+.gdh{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-end}
+.gdh small{font-size:11px;letter-spacing:.1em;color:var(--amber)}
+.gdh h3{font-size:34px;font-weight:600;letter-spacing:-.02em;margin:6px 0 4px}
+.gdh p{color:var(--ink2);font-size:14px}
+.gst{display:grid;grid-template-columns:repeat(4,auto);gap:22px}
+.gst span{display:block;font-size:11px;color:var(--mute)}.gst b{font-size:17px;font-weight:600}
+.gst .u,.ggk .u{color:var(--up)}.gst .d,.ggk .d{color:var(--down)}
+.gdc{margin:18px 0 6px}
+.po{width:100%;height:auto;display:block}
+.po .z{stroke:rgba(236,231,220,.35);stroke-width:1}
+.po .ax{stroke:rgba(236,231,220,.25)}
+.po .pl{fill:none;stroke-width:2.4;stroke-linejoin:round}.po .pl.u{stroke:var(--up)}.po .pl.d{stroke:var(--down)}
+.po.big .pl{stroke-width:3.2}
+.po .ar.u{fill:var(--up)}.po .ar.d{fill:var(--down)}
+.po .kd,.po .sp{stroke:rgba(236,231,220,.35);stroke-dasharray:3 4}
+.po .mx{stroke:rgba(114,220,143,.35);stroke-dasharray:2 5}
+.po .kl{font-size:12.5px;fill:var(--ink2)}.po .kl.s{fill:var(--mute)}.po .kl.up{fill:var(--up)}.po .kl.dn{fill:var(--down)}.po .kl.be{fill:var(--amber)}
+.po .be{fill:var(--amber)}
+.po .yl{font-size:15px;font-weight:600;fill:var(--ink2)}.po .yl.up{fill:var(--up)}.po .yl.dn{fill:var(--down)}
+.po .xl{font-size:14px;fill:var(--ink2)}.po .xl.m{fill:var(--mute);font-size:12.5px}
+.gdi{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:22px;border-top:1px solid var(--line);padding-top:16px}
+.gdi h4{font-size:10.5px;letter-spacing:.1em;color:var(--amber);font-weight:500;margin-bottom:8px}
+.gdi p{font-size:13px;line-height:1.5;color:var(--ink2);margin-bottom:12px}
+.legs{list-style:none;display:grid;gap:8px;font-size:13px}
+.legs b{display:inline-block;min-width:58px;font-size:10.5px;letter-spacing:.08em;padding:2px 8px;border-radius:999px;margin-right:8px;text-align:center}
+.legs b.lg{color:var(--up);border:1px solid rgba(114,220,143,.4)}.legs b.sh{color:var(--down);border:1px solid rgba(255,128,119,.4)}
+.ggk{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px}
+.ggk span{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;border-bottom:1px solid var(--line);padding:5px 0}
+.ggk i{font-style:normal;color:var(--ink2);text-transform:none}.ggk b{font-weight:600;font-size:12.5px}
+.gcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-bottom:40px}
+.gc{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:8px;background:rgba(18,19,16,.86);border:1px solid var(--line2);padding:14px;transition:border-color .2s,transform .2s,opacity .2s}
+.gc:hover{border-color:rgba(242,181,68,.6);transform:translateY(-2px)}
+.gc.on{border-color:var(--amber);box-shadow:inset 0 0 0 1px var(--amber)}
+.gc:focus-visible{outline:2px solid var(--amber)}
+.gc b{font-size:16px;font-weight:600}.gc > span{font-size:12.5px;line-height:1.45;color:var(--ink2)}
+.gc em{display:flex;flex-wrap:wrap;gap:5px;font-style:normal;margin-top:auto}
+.gc em i{font-style:normal;font-size:10.5px;color:var(--mute);border:1px solid var(--line2);border-radius:999px;padding:1px 8px}
+.gc em i.bull{color:var(--up)}.gc em i.bear{color:var(--down)}.gc em i.large{color:var(--amber)}
+.gcards.dim .gc{opacity:.55}.gcards.dim .gc:hover{opacity:1}
+@media (max-width:900px){.gvq{grid-template-columns:1fr}.gdi{grid-template-columns:1fr}.gst{grid-template-columns:1fr 1fr}.gdh h3{font-size:26px}}
 </style>
 </head>
 <body>
@@ -1088,6 +1137,7 @@ body.intro #ticker{visibility:hidden}
       <a href="#/overview" data-r="overview"><span class="n">03</span> ECOSYSTEM OVERVIEW <span class="go">→</span></a>
       <a href="#/deep" data-r="deep"><span class="n">04</span> DEEP DIVE<span class="n" id="ddn"></span> <span class="go">→</span></a>
       <a href="#/new" data-r="new"><span class="n">05</span> NEW PROJECTS <span class="go">→</span></a>
+      <a href="#/guide" data-r="guide"><span class="n">06</span> STRATEGY GUIDE <span class="go">→</span></a>
     </nav>
   </header>
   </section>
@@ -1095,7 +1145,7 @@ body.intro #ticker{visibility:hidden}
     <a class="brand home-btn" href="#/" title="Back to the first screen"><svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><path d="M1.5 6.6 7 2l5.5 4.6M3.2 5.4V12h7.6V5.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>HOME</a>
     <span class="bc"><a href="#/home">DASHBOARD</a><i>/</i><b id="bcHere">OVERVIEW</b></span>
     <nav class="cnav" aria-label="Views">
-      <a data-r="strategy" href="#/strategy">01 SENTIMENT &amp; STRATEGY</a><a data-r="fundamentals" href="#/fundamentals">02 OPTION FUNDAMENTAL</a><a data-r="overview" href="#/overview">03 ECOSYSTEM OVERVIEW</a><a data-r="deep" href="#/deep">04 DEEP DIVE</a><a data-r="new" href="#/new">05 NEW PROJECTS</a>
+      <a data-r="strategy" href="#/strategy">01 SENTIMENT &amp; STRATEGY</a><a data-r="fundamentals" href="#/fundamentals">02 OPTION FUNDAMENTAL</a><a data-r="overview" href="#/overview">03 ECOSYSTEM OVERVIEW</a><a data-r="deep" href="#/deep">04 DEEP DIVE</a><a data-r="new" href="#/new">05 NEW PROJECTS</a><a data-r="guide" href="#/guide">06 STRATEGY GUIDE</a>
     </nav>
   </div>
   <nav class="subnav" id="subnav" aria-label="Sections" hidden></nav>
@@ -1207,6 +1257,16 @@ body.intro #ticker{visibility:hidden}
       <div><h2>New <em>projects</em></h2><p>Options projects that are new to the space — launched or first listed since 2025, newest first.</p><p class="gp-src">Dates from each project’s launch post, or the day <b class="dlc">DefiLlama</b> first listed it</p></div>
     </div>
     <div class="nwgrid" id="nwGrid" style="margin-top:26px"></div>
+  </main>
+
+  <main id="v-guide" hidden>
+    <div class="fd-head">
+      <div><h2>Strategy <em>guide</em></h2><p>Pick your view — we’ll show the option structures that fit it, with the payoff at expiry.</p><p class="gp-src">Payoffs drawn for a 30-day option at 55% implied vol, as % of today’s price · education, not financial advice</p></div>
+    </div>
+    <section class="gv" id="gvPick" aria-label="Your view"></section>
+    <section class="gd" id="gvDetail"></section>
+    <section><div class="sh"><h2>Fits your view<span id="gvFitN"></span></h2></div><div class="gcards" id="gvFit"></div></section>
+    <section><div class="sh"><h2>Other strategies<span id="gvRestN"></span></h2></div><div class="gcards dim" id="gvRest"></div></section>
   </main>
 
   <main id="v-deep" hidden>
@@ -2034,8 +2094,8 @@ const SUBS = {
   fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['cex','Onchain vs CEX'],['underlying','By underlying'],['trades','Largest trades'],['venues','Venues'],['track','Race'],['standings','Standings']],
   strategy:[['now','Market now'],['log','Sentiment log'],['plays','Today’s plays'],['macro','Macro playbook']],
 };
-const PAGES = [['strategy','01 Sentiment & Strategy'],['fundamentals','02 Option Fundamental'],['overview','03 Ecosystem Overview'],['deep','04 Deep Dive'],['new','05 New Projects']];
-const VIEWS = {overview:['v-overview','v-oracle'], fundamentals:['v-fund','v-race'], strategy:['v-strat'], deep:['v-deep'], new:['v-new']};
+const PAGES = [['strategy','01 Sentiment & Strategy'],['fundamentals','02 Option Fundamental'],['overview','03 Ecosystem Overview'],['deep','04 Deep Dive'],['new','05 New Projects'],['guide','06 Strategy Guide']];
+const VIEWS = {overview:['v-overview','v-oracle'], fundamentals:['v-fund','v-race'], strategy:['v-strat'], deep:['v-deep'], new:['v-new'], guide:['v-guide']};
 function renderSubnav(page, sub){
   const nav = $('subnav'); if (!nav) return;
   // 딥다이브는 Friends 하나하나가 탭
@@ -2299,6 +2359,119 @@ function renderNew(){
   }).join('') || '<p class="empty">No new projects yet.</p>';
 }
 
+// ════════════════ Strategy guide: 내 뷰 → 맞는 옵션 전략 + 만기 손익 그래프 ════════════════
+// 다리(legs): t = C 콜 · P 풋 · U 기초자산, q = +매수 / −매도, k = 행사가(오늘 가격 = 100)
+const STRATS = [
+  {id:'long-call', n:'Long call', dir:'bull', vol:'up', risk:'defined', lv:1, legs:[{t:'C', q:1, k:105}], one:'Bet on a rally with a fixed, small cost.', use:'You expect a sharp move up soon and options are cheap.', watch:'Time decay eats it if the move is slow.', where:['Derive','Paradex','Aevo','Hunch']},
+  {id:'bull-call', n:'Bull call spread', dir:'bull', vol:'flat', risk:'defined', lv:2, legs:[{t:'C', q:1, k:100}, {t:'C', q:-1, k:110}], one:'Cheaper long call — gives up gains past the upper strike.', use:'You expect a moderate rise to a target.', watch:'Profit capped at the short strike.', where:['Derive','Paradex','Aevo']},
+  {id:'bull-put', n:'Bull put spread', dir:'bull', vol:'down', risk:'defined', lv:2, legs:[{t:'P', q:-1, k:95}, {t:'P', q:1, k:85}], one:'Collect premium if price stays above a floor.', use:'Mildly bullish and options are expensive.', watch:'Small credit vs a larger defined loss.', where:['Derive','Paradex','Aevo']},
+  {id:'short-put', n:'Cash-secured put', dir:'bull', vol:'down', risk:'large', lv:1, legs:[{t:'P', q:-1, k:95}], one:'Get paid to buy lower — premium now, coins if it dips.', use:'You’d happily own the coin at the strike.', watch:'A crash still hurts — you own it all the way down.', where:['Thetanuts','Rysk','Derive']},
+  {id:'covered-call', n:'Covered call', dir:'bull', vol:'down', risk:'large', lv:1, legs:[{t:'U', q:1}, {t:'C', q:-1, k:110}], one:'Earn yield on coins you hold — sell the upside past a strike.', use:'You hold the coin and expect a slow grind.', watch:'Upside is capped; downside is the coin’s.', where:['Thetanuts','Rysk','3Jane']},
+  {id:'risk-reversal', n:'Risk reversal', dir:'bull', vol:'flat', risk:'large', lv:3, legs:[{t:'P', q:-1, k:90}, {t:'C', q:1, k:110}], one:'Sell a put to fund a call — near-zero-cost upside.', use:'Strongly bullish and put skew is rich.', watch:'Below the put strike you lose like holding the coin.', where:['Derive','Paradex']},
+  {id:'long-put', n:'Long put', dir:'bear', vol:'up', risk:'defined', lv:1, legs:[{t:'P', q:1, k:95}], one:'Bet on a drop with a fixed, small cost.', use:'You expect a sharp move down and options are cheap.', watch:'Decay if the drop doesn’t come quickly.', where:['Derive','Paradex','Aevo','Hunch']},
+  {id:'bear-put', n:'Bear put spread', dir:'bear', vol:'flat', risk:'defined', lv:2, legs:[{t:'P', q:1, k:100}, {t:'P', q:-1, k:90}], one:'Cheaper long put — gives up gains past the lower strike.', use:'You expect a moderate decline to a target.', watch:'Profit capped at the short strike.', where:['Derive','Paradex','Aevo']},
+  {id:'bear-call', n:'Bear call spread', dir:'bear', vol:'down', risk:'defined', lv:2, legs:[{t:'C', q:-1, k:105}, {t:'C', q:1, k:115}], one:'Collect premium if price stays below a ceiling.', use:'Mildly bearish and options are expensive.', watch:'Small credit vs a larger defined loss.', where:['Derive','Paradex','Aevo']},
+  {id:'long-straddle', n:'Long straddle', dir:'move', vol:'up', risk:'defined', lv:2, legs:[{t:'C', q:1, k:100}, {t:'P', q:1, k:100}], one:'Profit from a big move either way.', use:'A catalyst is coming and options are cheap.', watch:'Needs a move bigger than both premiums.', where:['Derive','Paradex','Volmex']},
+  {id:'long-strangle', n:'Long strangle', dir:'move', vol:'up', risk:'defined', lv:2, legs:[{t:'C', q:1, k:110}, {t:'P', q:1, k:90}], one:'Cheaper straddle — needs an even bigger move.', use:'You expect a breakout but not its direction.', watch:'Loses everything if price stays in the range.', where:['Derive','Paradex','Volmex']},
+  {id:'iron-condor', n:'Iron condor', dir:'neutral', vol:'down', risk:'defined', lv:3, legs:[{t:'P', q:1, k:80}, {t:'P', q:-1, k:90}, {t:'C', q:-1, k:110}, {t:'C', q:1, k:120}], one:'Get paid while price stays inside a range.', use:'Range-bound market and options are expensive.', watch:'A breakout to either wing costs more than the credit.', where:['Derive','Paradex','Thetanuts']},
+  {id:'iron-fly', n:'Iron butterfly', dir:'neutral', vol:'down', risk:'defined', lv:3, legs:[{t:'P', q:1, k:85}, {t:'P', q:-1, k:100}, {t:'C', q:-1, k:100}, {t:'C', q:1, k:115}], one:'Bigger credit than a condor, but price must pin near today.', use:'You expect price to barely move into expiry.', watch:'The profit zone is narrow.', where:['Derive','Paradex']},
+  {id:'call-fly', n:'Long call butterfly', dir:'neutral', vol:'down', risk:'defined', lv:3, legs:[{t:'C', q:1, k:90}, {t:'C', q:-2, k:100}, {t:'C', q:1, k:110}], one:'Cheap bet that price lands near a target.', use:'You have a precise price target at expiry.', watch:'Pays off only near the middle strike.', where:['Derive','Paradex']},
+  {id:'short-strangle', n:'Short strangle', dir:'neutral', vol:'down', risk:'large', lv:3, legs:[{t:'C', q:-1, k:110}, {t:'P', q:-1, k:90}], one:'Collect two premiums while price stays in a wide range.', use:'Calm market, rich volatility, strong risk control.', watch:'Unlimited loss on a big move — not for beginners.', where:['Derive','Paradex']},
+  {id:'protective-put', n:'Protective put', dir:'hedge', vol:'up', risk:'defined', lv:1, legs:[{t:'U', q:1}, {t:'P', q:1, k:90}], one:'Insurance for coins you hold — losses stop at the strike.', use:'You hold and fear a drawdown, and puts are cheap.', watch:'The premium is a cost if nothing happens.', where:['Derive','Paradex','Aevo']},
+  {id:'collar', n:'Collar', dir:'hedge', vol:'flat', risk:'defined', lv:2, legs:[{t:'U', q:1}, {t:'P', q:1, k:90}, {t:'C', q:-1, k:110}], one:'Free-ish insurance: sell upside to pay for the put.', use:'You hold and want protection without paying for it.', watch:'Upside is capped at the call strike.', where:['Derive','Paradex']},
+];
+// 블랙-숄즈 (r=0): 가격·델타·감마·세타·베가
+const GV = {iv:.55, T:30 / 365};
+const ncdf = x => { const t = 1 / (1 + .2316419 * Math.abs(x)), d = .3989423 * Math.exp(-x * x / 2), p = d * t * (.3193815 + t * (-.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274)))); return x > 0 ? 1 - p : p; };
+const npdf = x => Math.exp(-x * x / 2) / Math.sqrt(2 * Math.PI);
+function bs(t, S, K, v = GV.iv, T = GV.T){
+  if (t === 'U') return {p:S, d:1, g:0, th:0, ve:0};
+  const s = v * Math.sqrt(T), d1 = Math.log(S / K) / s + s / 2, d2 = d1 - s;
+  const p = t === 'C' ? S * ncdf(d1) - K * ncdf(d2) : K * ncdf(-d2) - S * ncdf(-d1);
+  return {p, d:t === 'C' ? ncdf(d1) : ncdf(d1) - 1, g:npdf(d1) / (S * s), th:-S * npdf(d1) * v / (2 * Math.sqrt(T)) / 365, ve:S * npdf(d1) * Math.sqrt(T) / 100};
+}
+function payoff(st){
+  const S0 = 100, legs = st.legs.map(l => ({...l, prem:bs(l.t, S0, l.k).p}));
+  const at = S => legs.reduce((a, l) => a + l.q * ((l.t === 'C' ? Math.max(S - l.k, 0) : l.t === 'P' ? Math.max(l.k - S, 0) : S) - (l.t === 'U' ? S0 : l.prem)), 0);
+  const xs = []; for (let S = 55; S <= 145.001; S += .5) xs.push(S);
+  const pts = xs.map(S => [S, at(S)]);
+  const slopeL = at(55) - at(56), slopeR = at(145) - at(144);
+  const ys = pts.map(p => p[1]), mx = Math.max(...ys), mn = Math.min(...ys);
+  const be = []; for (let i = 1; i < pts.length; i++) { const [a, ya] = pts[i - 1], [b, yb] = pts[i]; if ((ya < 0) !== (yb < 0) && ya !== yb) be.push(a + (b - a) * (-ya) / (yb - ya)); }
+  const net = legs.reduce((a, l) => a + (l.t === 'U' ? 0 : -l.q * l.prem), 0);   // +크레딧 / −데빗
+  const gk = ['d', 'g', 'th', 've'].map(k => legs.reduce((a, l) => a + l.q * bs(l.t, S0, l.k)[k], 0));
+  return {pts, mx, mn, be, net, unbUp:slopeR > .01 ? 1 : slopeR < -.01 ? -1 : 0, unbDn:slopeL > .01 ? 1 : slopeL < -.01 ? -1 : 0, gk, legs};
+}
+const pc1 = v => (v >= 0 ? '+' : '−') + Math.abs(v).toFixed(1) + '%';
+function payoffSVG(st, big){
+  const P = payoff(st), W = big ? 900 : 300, H = big ? 420 : 150, L = big ? 70 : 6, R = big ? 24 : 6, T = big ? 30 : 10, B = big ? 54 : 10;
+  const lim = Math.max(8, Math.max(Math.abs(P.mx), Math.abs(P.mn)) * 1.15), cap = big ? Math.min(lim, 32) : Math.min(lim, 32);
+  const X = S => L + (S - 55) / 90 * (W - L - R), Y = v => T + (1 - (Math.max(-cap, Math.min(cap, v)) + cap) / (2 * cap)) * (H - T - B);
+  const d = P.pts.map(([S, v], i) => (i ? 'L' : 'M') + X(S).toFixed(1) + ' ' + Y(v).toFixed(1)).join('');
+  const id = 'pc' + st.id + (big ? 'B' : 's');
+  const strikes = [...new Set(st.legs.filter(l => l.t !== 'U').map(l => l.k))];
+  let g = `<defs><clipPath id="${id}u"><rect x="0" y="0" width="${W}" height="${Y(0)}"/></clipPath><clipPath id="${id}d"><rect x="0" y="${Y(0)}" width="${W}" height="${H}"/></clipPath></defs>`;
+  g += `<line class="z" x1="${L}" x2="${W - R}" y1="${Y(0)}" y2="${Y(0)}"/>`;
+  if (big) {
+    g += `<line class="ax" x1="${L}" x2="${L}" y1="${T}" y2="${H - B}"/>`;
+    g += `<text class="yl up" x="${L - 12}" y="${T + 8}" text-anchor="end">Profit</text><text class="yl" x="${L - 12}" y="${Y(0) + 5}" text-anchor="end">0%</text><text class="yl dn" x="${L - 12}" y="${H - B}" text-anchor="end">Loss</text>`;
+    g += `<text class="xl" x="${(L + W - R) / 2}" y="${H - 14}" text-anchor="middle">Price at expiry</text><text class="xl m" x="${L + 4}" y="${H - 14}">◀ Lower</text><text class="xl m" x="${W - R - 4}" y="${H - 14}" text-anchor="end">Higher ▶</text>`;
+    g += `<line class="sp" x1="${X(100)}" x2="${X(100)}" y1="${T}" y2="${H - B}"/><text class="kl s" x="${X(100)}" y="${H - B + 16}" text-anchor="middle">today</text>`;
+    strikes.forEach((k, i) => { const legsK = st.legs.filter(l => l.k === k).map(l => `${l.q > 0 ? 'Long' : 'Short'}${Math.abs(l.q) > 1 ? ' ×' + Math.abs(l.q) : ''} ${l.t === 'C' ? 'call' : 'put'}`).join(' / ');
+      const yv = P.pts.find(p => Math.abs(p[0] - k) < .26)[1], up = yv >= 0, ly = up ? Y(yv) + 20 : Y(yv) - 12, left = k < 100, lx = X(k) + (left ? -8 : 8);
+      g += `<line class="kd" x1="${X(k)}" x2="${X(k)}" y1="${Y(yv)}" y2="${Y(0)}"/><text class="kl" x="${lx}" y="${ly}" text-anchor="${left ? 'end' : 'start'}">${legsK} ${k - 100 >= 0 ? '+' : '−'}${Math.abs(k - 100)}%</text>`; });
+    if (!P.unbUp && !P.unbDn || P.mx < 30) g += `<line class="mx" x1="${L}" x2="${W - R}" y1="${Y(P.mx)}" y2="${Y(P.mx)}"/><text class="kl up" x="${L + 8}" y="${Y(P.mx) - 7}">Max profit ${P.unbUp > 0 || P.unbDn < 0 ? 'unlimited' : pc1(P.mx)}</text>`;
+    if (P.mn > -30) g += `<text class="kl dn" x="${L + 8}" y="${Y(P.mn) + 16}">Max loss ${pc1(P.mn)}</text>`;
+    P.be.forEach(b => { g += `<circle class="be" cx="${X(b)}" cy="${Y(0)}" r="4.5"/><text class="kl be" x="${X(b) + (b < 100 ? -10 : 10)}" y="${Y(0) - 10}" text-anchor="${b < 100 ? 'end' : 'start'}">Break-even ${b - 100 >= 0 ? '+' : '−'}${Math.abs(b - 100).toFixed(1)}%</text>`; });
+  }
+  g += `<path d="${d}" class="pl u" clip-path="url(#${id}u)"/><path d="${d}" class="pl d" clip-path="url(#${id}d)"/>`;
+  const arr = (x, y, dir, up) => `<path class="ar ${up ? 'u' : 'd'}" d="M${x} ${y} l${-dir * 9} -6 l0 12 z" transform="rotate(${0} ${x} ${y})"/>`;
+  const yL = P.pts[0][1], yR = P.pts[P.pts.length - 1][1];
+  if (big) { g += arr(X(55) - 2, Y(yL), 1, yL >= 0); g += arr(X(145) + 2, Y(yR), -1, yR >= 0); }
+  return `<svg class="po${big ? ' big' : ''}" viewBox="0 0 ${W} ${H}" aria-label="${esc(st.n)} payoff at expiry">${g}</svg>`;
+}
+const GLAB = {dir:{bull:'Bullish', bear:'Bearish', neutral:'Range', move:'Big move', hedge:'Protect coins'}, vol:{up:'Vol rising', down:'Vol falling', flat:'Any vol'}, risk:{defined:'Defined risk', large:'Large risk'}};
+let GVIEW = {dir:'neutral', vol:'down', risk:'any'}, GSEL = null;
+function guideFits(st){ return st.dir === GVIEW.dir && (GVIEW.vol === 'any' || st.vol === GVIEW.vol || st.vol === 'flat') && (GVIEW.risk === 'any' || st.risk === 'defined'); }
+function todayView(){
+  const A = SNAP.dm && SNAP.dm.assets.BTC, X = sentiment(A); if (!A || !X) return null;
+  const sc = X.score, pctl = A.ivPct ? A.ivPct.percentile : 50, longG = !A.gamma || A.gamma.regime === 'long_gamma';
+  return {dir:sc > .15 ? 'bull' : sc < -.15 ? 'bear' : longG ? 'neutral' : 'move', vol:pctl < 30 ? 'up' : pctl > 70 ? 'down' : 'any', why:`BTC options lean ${X.verdict[0].toLowerCase()}, implied vol at the ${ord(pctl)} percentile${longG ? ', dealers long gamma' : ''}`};
+}
+function gCard(st){
+  const P = payoff(st);
+  return `<button class="gc${GSEL === st.id ? ' on' : ''}" data-st="${st.id}">${payoffSVG(st, false)}<b>${esc(st.n)}</b><span>${esc(st.one)}</span>
+    <em><i class="${st.dir}">${GLAB.dir[st.dir]}</i><i>${GLAB.vol[st.vol]}</i><i class="${st.risk}">${GLAB.risk[st.risk]}</i></em></button>`;
+}
+function renderGuide(){
+  const tv = todayView();
+  const seg = (k, opts) => `<div class="seg" data-gk="${k}">${opts.map(([v, l]) => `<button data-gv="${v}" aria-pressed="${GVIEW[k] === v}">${l}</button>`).join('')}</div>`;
+  $('gvPick').innerHTML = `<div class="gvq"><small>1 · DIRECTION</small>${seg('dir', [['bear', 'Bearish'], ['neutral', 'Range-bound'], ['bull', 'Bullish'], ['move', 'Big move, either way'], ['hedge', 'Protect my coins']])}</div>
+    <div class="gvq"><small>2 · VOLATILITY</small>${seg('vol', [['up', 'Will rise / options cheap'], ['down', 'Will fall / options rich'], ['any', 'No view']])}</div>
+    <div class="gvq"><small>3 · RISK</small>${seg('risk', [['defined', 'Defined risk only'], ['any', 'Open to large risk']])}</div>
+    ${tv ? `<button class="gvt" id="gvToday">USE TODAY’S MARKET READ <span>${esc(tv.why)}</span></button>` : ''}`;
+  const fit = STRATS.filter(guideFits), rest = STRATS.filter(s => !guideFits(s));
+  if (!GSEL || !STRATS.some(s => s.id === GSEL) || (fit.length && !fit.some(s => s.id === GSEL))) GSEL = (fit[0] || STRATS[0]).id;
+  $('gvFit').innerHTML = fit.map(gCard).join('') || '<p class="empty">No strategy matches all three — loosen the volatility or risk choice.</p>';
+  $('gvRest').innerHTML = rest.map(gCard).join('');
+  $('gvFitN').textContent = fit.length; $('gvRestN').textContent = rest.length;
+  const st = STRATS.find(s => s.id === GSEL), P = payoff(st), EPS = [.03, .0004, .002, .008], arrow = (v, i) => v > EPS[i] ? '↑ long' : v < -EPS[i] ? '↓ short' : '– flat';   // 0 근처는 '평평'
+  const legs = st.legs.map(l => `<li><b class="${l.q > 0 ? 'lg' : 'sh'}">${l.q > 0 ? 'BUY' : 'SELL'}${Math.abs(l.q) > 1 ? ' ×' + Math.abs(l.q) : ''}</b>${l.t === 'U' ? 'the coin (or hold it)' : `${l.t === 'C' ? 'call' : 'put'} · strike ${l.k === 100 ? 'at today’s price' : (l.k > 100 ? '+' : '−') + Math.abs(l.k - 100) + '%'}`}</li>`).join('');
+  const maxP = P.unbUp > 0 || P.unbDn < 0 ? 'Unlimited' : pc1(P.mx), maxL = P.unbUp < 0 || P.unbDn > 0 ? (st.legs.some(l => l.t === 'U') || st.id === 'short-put' || st.id === 'risk-reversal' ? 'Large (down to zero)' : 'Unlimited') : pc1(P.mn);
+  $('gvDetail').innerHTML = `<div class="gdh"><div><small>${GLAB.dir[st.dir].toUpperCase()} · ${GLAB.vol[st.vol].toUpperCase()} · ${'●'.repeat(st.lv)}${'○'.repeat(3 - st.lv)} ${['', 'BEGINNER', 'INTERMEDIATE', 'ADVANCED'][st.lv]}</small><h3>${esc(st.n)}</h3><p>${esc(st.one)}</p></div>
+      <div class="gst"><div><span>Max profit</span><b class="u">${maxP}</b></div><div><span>Max loss</span><b class="d">${maxL}</b></div><div><span>Break-even</span><b>${P.be.map(b => (b - 100 >= 0 ? '+' : '−') + Math.abs(b - 100).toFixed(1) + '%').join(' / ') || '—'}</b></div><div><span>Opening cost</span><b>${P.net >= 0 ? 'credit ' : 'debit '}${Math.abs(P.net).toFixed(1)}%</b></div></div></div>
+    <div class="gdc">${payoffSVG(st, true)}</div>
+    <div class="gdi"><div><h4>THE TRADE</h4><ul class="legs">${legs}</ul></div>
+      <div><h4>WHEN IT FITS</h4><p>${esc(st.use)}</p><h4>WATCH OUT</h4><p>${esc(st.watch)}</p></div>
+      <div><h4>GREEKS AT OPEN</h4><div class="ggk">${['Δ delta', 'Γ gamma', 'Θ theta', 'ν vega'].map((n, i) => `<span><i>${n}</i><b class="${P.gk[i] > EPS[i] ? 'u' : P.gk[i] < -EPS[i] ? 'd' : ''}">${arrow(P.gk[i], i)}</b></span>`).join('')}</div>
+        <h4 style="margin-top:14px">WHERE TO TRADE IT</h4><div class="fls">${friendChips(st.where)}</div></div></div>`;
+}
+document.addEventListener('click', e => {
+  const c = e.target.closest('[data-st]'); if (c) { GSEL = c.dataset.st; renderGuide(); $('gvDetail').scrollIntoView({behavior:'smooth', block:'start'}); return; }
+  const b = e.target.closest('[data-gv]'); if (b && b.closest('#gvPick')) { GVIEW[b.closest('[data-gk]').dataset.gk] = b.dataset.gv; GSEL = null; renderGuide(); return; }
+  if (e.target.closest('#gvToday')) { const tv = todayView(); if (tv) { GVIEW = {...GVIEW, dir:tv.dir, vol:tv.vol}; GSEL = null; renderGuide(); } }
+});
+
 // ════════════════ Oracle (포인트 · 프리 TGE) ════════════════
 function oracleCard(p, i, tag){
   const v = SNAP.fund && SNAP.fund.venues.find(x => x.name === p.name), n = v && v.notional;
@@ -2485,16 +2658,17 @@ function route(){
   // 옛 주소(Race·Oracle)는 새 구조로
   for (const [re, to] of OLD) if (re.test(h)) { location.replace(h.replace(re, to)); return; }
   // 주소가 없으면 랜딩(Home). 텔레그램 캡처(#tg·#tgmap)는 Overview
-  const page = TG ? 'overview' : h.startsWith('#/deep') ? 'deep' : h.startsWith('#/fundamentals') ? 'fundamentals' : h.startsWith('#/strategy') ? 'strategy' : h.startsWith('#/overview') ? 'overview' : h.startsWith('#/new') ? 'new' : 'home';
+  const page = TG ? 'overview' : h.startsWith('#/deep') ? 'deep' : h.startsWith('#/fundamentals') ? 'fundamentals' : h.startsWith('#/strategy') ? 'strategy' : h.startsWith('#/overview') ? 'overview' : h.startsWith('#/new') ? 'new' : h.startsWith('#/guide') ? 'guide' : 'home';
   const home = page === 'home';
   $('v-home').hidden = !home; $('crumb').hidden = home;
   document.body.dataset.view = page;
   let sub = !home && !TG ? (h.split('/')[2] || '') : '';
-  let bc = {overview:'ECOSYSTEM OVERVIEW', fundamentals:'OPTION FUNDAMENTAL', strategy:'SENTIMENT', deep:'DEEP DIVE', new:'NEW PROJECTS'}[page] || '';
+  let bc = {overview:'ECOSYSTEM OVERVIEW', fundamentals:'OPTION FUNDAMENTAL', strategy:'SENTIMENT', deep:'DEEP DIVE', new:'NEW PROJECTS', guide:'STRATEGY GUIDE'}[page] || '';
   if (page === 'fundamentals') {
     if (!$('v-fund').dataset.on) { $('v-fund').dataset.on = 1; renderFund(); renderCex(); }
     if (!$('v-race').dataset.on) { $('v-race').dataset.on = 1; renderRaceChips(); renderStandings(); runRace(); }
   } else { cancelAnimationFrame(rpRaf); rpPlaying = false; }
+  if (page === 'guide' && !$('v-guide').dataset.on) { $('v-guide').dataset.on = 1; renderGuide(); }
   if (page === 'new' && !$('v-new').dataset.on) { $('v-new').dataset.on = 1; renderNew(); }
   if (page === 'strategy' && !$('v-strat').dataset.on) { $('v-strat').dataset.on = 1; renderStrategy(); }
   if (page === 'overview' && !TG && !$('v-oracle').dataset.on) { $('v-oracle').dataset.on = 1; renderOracle(); }
@@ -2660,7 +2834,7 @@ function enterSite(){
 function renderAll(){
   if (location.hash.startsWith('#share/')) { renderShare(location.hash.slice(7)); return; }
   renderHead(); renderTicker(); renderSubscribe(); renderFinder(); buildSurface(); buildOrrery(); renderClients(); renderHabitats(); renderFeed(); renderLog();
-  delete $('v-race').dataset.on; delete $('v-fund').dataset.on; delete $('v-strat').dataset.on; delete $('v-oracle').dataset.on; delete $('v-new').dataset.on;
+  delete $('v-race').dataset.on; delete $('v-fund').dataset.on; delete $('v-strat').dataset.on; delete $('v-oracle').dataset.on; delete $('v-new').dataset.on; delete $('v-guide').dataset.on;
   current = null; route();
   document.documentElement.dataset.h = Math.ceil(document.querySelector('.wrap').getBoundingClientRect().bottom + scrollY);
 }
