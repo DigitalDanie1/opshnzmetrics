@@ -551,7 +551,7 @@
       "ticker": "",
       "name": "Rysk",
       "stage": "pre",
-      "core": false,
+      "core": true,
       "lineage": "",
       "origin": "",
       "home": "Hyperliquid",
@@ -565,12 +565,14 @@
       "keywords": [
         "Covered-call vaults",
         "Fixed yield",
+        "RFQ",
         "Hyperliquid"
       ],
       "note": "",
       "status": "Points · v12",
       "points": "Activity points + referral points (period v12) — open one position to unlock your referral code",
-      "pointsUrl": "https://app.rysk.finance/points/"
+      "pointsUrl": "https://app.rysk.finance/points/",
+      "app": "https://app.rysk.finance"
     },
     {
       "ticker": "",
