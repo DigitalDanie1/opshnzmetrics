@@ -1,15 +1,20 @@
-# 매일 아침 GitHub 서버에서 데이터를 새로 받아 사이트(index.html)를 다시 만들고 저장소에 올린다.
+# 매일 아침 GitHub 서버에서 데이터를 새로 받아 사이트(index.html)를 다시 만들고, 저장소에 올린 뒤 GitHub Pages 로 배포한다.
 # Mac 이 꺼져 있어도 돈다. 실패하면(예: CoinGecko 일시 차단) 2시간 반 뒤 한 번 더 시도한다.
+# 직접 push(편집기 저장 등)했을 때는 데이터는 그대로 두고 배포만 한다.
 name: Daily build
 
 on:
   schedule:
     - cron: '5 1 * * *'    # 10:05 KST
-    - cron: '35 3 * * *'   # 12:35 KST 재시도 — 오늘 이미 성공했으면 건너뜀
+    - cron: '35 3 * * *'   # 12:35 KST 재시도 — 오늘 이미 성공했으면 빌드는 건너뜀
   workflow_dispatch: {}    # Actions 탭에서 "Run workflow" 로 바로 실행
+  push:
+    branches: [main]
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: daily-build
@@ -26,16 +31,17 @@ jobs:
         with:
           node-version: 22
 
-      - name: Skip the retry if today is already built
-        id: done
+      - name: Decide whether to rebuild the data
+        id: plan
         run: |
           today=$(TZ=Asia/Seoul date +%F)
-          if [ "${{ github.event.schedule }}" = "35 3 * * *" ] && git log -1 --format=%s | grep -q "daily build $today"; then
-            echo "skip=1" >> "$GITHUB_OUTPUT"
-          fi
+          run=1
+          if [ "${{ github.event_name }}" = "push" ]; then run=0; fi
+          if [ "${{ github.event.schedule }}" = "35 3 * * *" ] && git log -1 --format=%s | grep -q "daily build $today"; then run=0; fi
+          echo "run=$run" >> "$GITHUB_OUTPUT"
 
       - name: Build (data → index.html, Telegram on Mondays if secrets are set)
-        if: steps.done.outputs.skip != '1'
+        if: steps.plan.outputs.run == '1'
         env:
           CI: '1'
           CHROME: /usr/bin/google-chrome
@@ -46,7 +52,7 @@ jobs:
         run: node publish.mjs --auto
 
       - name: Commit and push the new build
-        if: steps.done.outputs.skip != '1'
+        if: steps.plan.outputs.run == '1'
         run: |
           git config user.name "opshnz-bot"
           git config user.email "opshnz-bot@users.noreply.github.com"
@@ -55,3 +61,19 @@ jobs:
           git commit -m "daily build $(TZ=Asia/Seoul date +%F)"
           git pull --rebase --autostash
           git push
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
