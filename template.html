@@ -2339,7 +2339,7 @@ function renderCex(){
 const NEW_SINCE = '2025-01';
 const ymLabel = ym => ym ? new Date(ym + '-15T00:00:00Z').toLocaleDateString('en-US', {timeZone:'UTC', month:'short', year:'numeric'}) : '';
 function newProjects(){
-  return SNAP.projects.filter(p => p.isNew || (p.since && p.since >= NEW_SINCE))
+  return SNAP.projects.filter(p => p.isNew !== false && (p.isNew || (p.since && p.since >= NEW_SINCE)))   // data.json 에 isNew:false 면 제외
     .sort((a, b) => (b.since || '0000').localeCompare(a.since || '0000') || (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0) || (b.core ? 1 : 0) - (a.core ? 1 : 0));
 }
 function renderNew(){
