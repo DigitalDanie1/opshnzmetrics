@@ -1237,7 +1237,7 @@ body.intro #ticker{visibility:hidden}
   <main id="v-strat" hidden>
     <div class="fd-head">
       <div><h2>Sentiment <em>&amp; strategy</em></h2><p>Step 1 — read what the options market thinks, then what to play and how to react when macro moves.</p><p class="gp-src" id="stSrc"></p></div>
-      <div class="seg" id="stAsset" role="group" aria-label="Asset"><button data-a="BTC" aria-pressed="true">BTC</button><button data-a="ETH" aria-pressed="false">ETH</button></div>
+      <div class="seg" id="stAsset" role="group" aria-label="Asset"></div>
     </div>
     <section data-blk="now" style="margin-top:22px"><div class="sh"><h2>Market now<span id="stWhen"></span></h2></div><div id="stNow"></div></section>
     <section data-blk="log"><div class="sh"><h2>Sentiment log<span>what options said — day by day, and what price did next</span></h2>
@@ -2168,15 +2168,19 @@ function sentiHTML(A){
     <div class="sr">${X.rows.map(r => `<div><span class="dot ${r.sig}"></span><div class="k">${esc(r.k)}<em class="${r.sig}">${W[r.sig]}</em></div><div class="v">${esc(r.v)}</div><p>${esc(r.d)}</p></div>`).join('')}</div></div>`;
 }
 let stAsset = 'BTC';
-const kRound = v => v >= 1000 ? '$' + (v / 1000).toFixed(v >= 1e4 ? 0 : 1) + 'k' : k$(v);
+const kRound = v => v >= 1000 ? '$' + (v / 1000).toFixed(v >= 1e4 ? 0 : 1) + 'k' : Number.isInteger(+v) ? '$' + v : k$(v);
 function renderStrategy(){
+  const AS = Object.keys((SNAP.dm && SNAP.dm.assets) || {BTC:1, ETH:1}), order = ['BTC', 'ETH', 'HYPE', 'ZEC'];
+  AS.sort((x, y) => (order.indexOf(x) + 1 || 99) - (order.indexOf(y) + 1 || 99));
+  if (!AS.includes(stAsset)) stAsset = AS[0] || 'BTC';
+  $('stAsset').innerHTML = AS.map(a => `<button data-a="${a}" aria-pressed="${a === stAsset}">${a}</button>`).join('');
   const D = SNAP.dm, A = D && D.assets[stAsset];
   $('stSrc').innerHTML = `Market data from the <a href="${dmLink(stAsset)}" target="_blank" rel="noopener"><b style="color:var(--ink)">Derivatives Monkey</b> ↗</a> public API (12 venues) · macro calendar from <b style="color:var(--ink)">Forex Factory</b>`;
   const earn = goalNames('earn'), bet = goalNames('bet'), pro = goalNames('pro');
   // ── 지금 시장 (쉬운 말 4개) ──
   if (A) {
     $('stWhen').textContent = `${stAsset} · ` + new Date(D.at).toLocaleString('en-US', {timeZone:'Asia/Seoul', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12:false}) + ' KST';
-    const pctl = A.ivPct ? A.ivPct.percentile : 50, longG = !A.gamma || A.gamma.regime === 'long_gamma', calm = !A.term || A.term.tag === 'contango';
+    const pctl = A.ivPct ? A.ivPct.percentile : 50, longG = !A.gamma || A.gamma.regime !== 'short_gamma', calm = !A.term || A.term.tag === 'contango';
     const price = pctl < 25 ? ['CHEAP', 'lo'] : pctl > 75 ? ['EXPENSIVE', 'hi'] : ['FAIR', ''];
     const lo = A.putWall && A.putWall.strike, hi = A.callWall && A.callWall.strike;
     const chips = [
@@ -2205,7 +2209,7 @@ function renderStrategy(){
   const sc = (cfg.scenarios || []).map(x => `<article><div class="if"><small>IF</small>${esc(x.if)}</div><div class="then"><small>THEN</small><b>${esc(x.then)}</b><p>${esc(x.how || '')}</p>${(x.friends || []).length ? `<div class="fls"><span>WHERE</span>${friendChips(x.friends)}</div>` : ''}</div></article>`).join('');
   let book = '';
   if (A && A.putWall && A.callWall) {
-    const X = sentiment(A), score = X ? X.score : 0, longG = !A.gamma || A.gamma.regime === 'long_gamma', pctl = A.ivPct ? A.ivPct.percentile : 50;
+    const X = sentiment(A), score = X ? X.score : 0, longG = !A.gamma || A.gamma.regime !== 'short_gamma', pctl = A.ivPct ? A.ivPct.percentile : 50;
     const lo = A.putWall.strike, hi = A.callWall.strike, flip = A.flip && A.flip.strike, exp = A.topExpiry;
     const soon = M.filter(e => { const t = Date.parse(e.date); return t > now && t - now < 7 * 864e5; });
     // 확률: 딜러 감마가 길면 박스 유지가 기본, 1주 안 고영향 지표가 있으면 박스 확률을 깎고, 나머지는 심리 점수로 위·아래에 나눈다 (경험칙 — 범위로 표기)
@@ -2442,7 +2446,7 @@ let GVIEW = {dir:'neutral', vol:'down', risk:'any'}, GSEL = null;
 function guideFits(st){ return st.dir === GVIEW.dir && (GVIEW.vol === 'any' || st.vol === GVIEW.vol || st.vol === 'flat') && (GVIEW.risk === 'any' || st.risk === 'defined'); }
 function todayView(){
   const A = SNAP.dm && SNAP.dm.assets.BTC, X = sentiment(A); if (!A || !X) return null;
-  const sc = X.score, pctl = A.ivPct ? A.ivPct.percentile : 50, longG = !A.gamma || A.gamma.regime === 'long_gamma';
+  const sc = X.score, pctl = A.ivPct ? A.ivPct.percentile : 50, longG = !A.gamma || A.gamma.regime !== 'short_gamma';
   return {dir:sc > .15 ? 'bull' : sc < -.15 ? 'bear' : longG ? 'neutral' : 'move', vol:pctl < 30 ? 'up' : pctl > 70 ? 'down' : 'any', why:`BTC options: ${X.verdict[0].toLowerCase()}, ${pctl < 30 ? 'cheap' : pctl > 70 ? 'expensive' : 'fairly priced'} (${ord(pctl)} percentile)${longG ? ', dealers long gamma' : ''}`};
 }
 function gCard(st){

@@ -23,14 +23,14 @@
  {
   "d": "2026-10-11",
   "kind": "move",
-  "text": "$DIME +35.5% in 24h",
+  "text": "$DIME +17.7% in 24h",
   "href": "#/deep/Paradex",
   "key": "$DIME"
  },
  {
   "d": "2026-10-11",
   "kind": "vol",
-  "text": "BVIV 38.9 (+1.1% 24h) — BTC implied vol ticking up",
+  "text": "BVIV 38.7 (+1.0% 24h) — BTC implied vol ticking up",
   "href": "#/deep/Volmex",
   "key": "BVIV"
  },

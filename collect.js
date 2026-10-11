@@ -352,6 +352,7 @@ async function venueExtras() {
 // Derivatives Monkey 공개 API: 12개 거래소(CEX + 온체인) 옵션을 한 기준으로 모은 시장 상태
 // BTC·ETH 시장 요약(IV·감마·월·풋콜) + 변동성 콘 + 기간구조 + 거래소별 OI
 const DM = 'https://www.derivativesmonkey.com/api/market';
+const DM_ASSETS = ['btc', 'eth', 'hype', 'zec'];
 const DM_SRC = ['deribit', 'okx', 'bybit', 'binance', 'bullish', 'delta', 'derive', 'paradex', 'aevo', 'thalex', 'callput', 'hypercall'];
 // 옵션 심리: 25델타 리스크 리버설(콜−풋 IV, 14일) · 그 7일 변화 · 풋/콜 OI · 24시간 프리미엄 흐름
 async function dmSentiment(a, all) {
@@ -379,8 +380,12 @@ async function dmSentiment(a, all) {
 
 async function dmMarket() {
   const out = { at: Date.now(), assets: {}, venues: [] };
-  const all = DM_SRC.join(',');
-  for (const a of ['btc', 'eth']) {
+  // 코인마다 옵션이 있는 거래소가 다르다 (ZEC = Derive·Paradex, HYPE = Derive·Paradex·Aevo·Deribit·Bybit)
+  const srcAll = await getJSON(`${DM}/sources-all`, 2);
+  for (const a of DM_ASSETS) {
+    const avail = srcAll && srcAll.assets && srcAll.assets[a] ? srcAll.assets[a].sources : (['btc', 'eth'].includes(a) ? DM_SRC : []);
+    if (!avail.length) continue;
+    const all = avail.join(',');
     const [sum, cone, term] = await Promise.all([
       getJSON(`${DM}/market-summary?asset=${a}&sources=${all}`, 2),
       getJSON(`${DM}/vol-cone?asset=${a}`, 2),
@@ -396,7 +401,7 @@ async function dmMarket() {
     };
     out.assets[a.toUpperCase()].senti = await dmSentiment(a, all);
   }
-  // 거래소별 OI (코인 수 × 현물가). Paradex 는 양쪽을 다 세서 ÷2
+  // 거래소별 OI (코인 수 × 현물가, BTC+ETH). Paradex 는 양쪽을 다 세서 ÷2
   for (const s of DM_SRC) {
     const row = { venue: s, btc: 0, eth: 0 };
     for (const a of ['btc', 'eth']) {
@@ -442,7 +447,7 @@ function sentiInputs(A) {
 // BTC·ETH 1년 일별 가격 (심리 일지 차트·"그 뒤 7일" 계산용)
 async function majorsHistory() {
   const out = {};
-  for (const [id, t] of [['bitcoin', 'BTC'], ['ethereum', 'ETH']]) {
+  for (const [id, t] of [['bitcoin', 'BTC'], ['ethereum', 'ETH'], ['hyperliquid', 'HYPE'], ['zcash', 'ZEC']]) {
     const j = await getJSON(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=365&interval=daily`, 3);
     if (j && j.prices) out[t] = j.prices.map(([ts, p]) => [ts, +p.toPrecision(6)]);
   }
