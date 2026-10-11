@@ -1029,6 +1029,10 @@ body.intro #ticker{visibility:hidden}
 .mb-watch > div:last-of-type{border-bottom:0}
 .mb-watch time{font-size:12px;color:var(--ink2)}.mb-watch b{font-size:13.5px;font-weight:600}.mb-watch span{font-size:12px;color:var(--mute)}
 @media (max-width:1000px){.mb-sc,.mb-two{grid-template-columns:1fr}.mb-watch > div{grid-template-columns:1fr}.mb-box .fr{grid-template-columns:auto 1fr;}.mb-box .fr .ar{display:none}}
+.oid{display:grid;gap:0;margin-top:6px}
+.oid > div{display:grid;grid-template-columns:90px 1fr auto;gap:12px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line)}
+.oid > div:last-child{border-bottom:0}
+.oid span{font-size:12px;color:var(--mute)}.oid b{font-size:15px;font-weight:600}.oid em{font-style:normal;font-size:12.5px}
 </style>
 </head>
 <body>
@@ -1706,7 +1710,7 @@ function lineChart(pts, marks, fmt = price){
   const d = pts.map(([t,v], i) => (i ? 'L' : 'M') + X(t).toFixed(1) + ' ' + Y(v).toFixed(1)).join('');
   const gid = 'g' + Math.random().toString(36).slice(2,7);
   const ticks = [lo, (lo+hi)/2, hi].map(v => `<line class="grid" x1="${L}" x2="${w-R}" y1="${Y(v)}" y2="${Y(v)}"/><text class="ax" x="${w-R+8}" y="${Y(v)+3}">${fmt(v)}</text>`).join('');
-  const xt = [0, .5, 1].map(f => { const t = x0 + (x1-x0)*f; return `<text class="ax" x="${X(t)}" y="${h-6}" text-anchor="${f === 0 ? 'start' : f === 1 ? 'end' : 'middle'}">${fmtD(t)}</text>`; }).join('');
+  const seen = new Set(), xt = [0, .5, 1].map(f => { const t = x0 + (x1-x0)*f, lb = fmtD(t); if (seen.has(lb)) return ''; seen.add(lb); return `<text class="ax" x="${X(t)}" y="${h-6}" text-anchor="${f === 0 ? 'start' : f === 1 ? 'end' : 'middle'}">${lb}</text>`; }).join('');
   const mk = marks.map(m => `<g><line x1="${X(m.t)}" x2="${X(m.t)}" y1="${T}" y2="${h-B}" stroke="var(--amber)" stroke-dasharray="2 3" opacity=".7"/><circle cx="${X(m.t)}" cy="${T}" r="4" fill="var(--amber)" data-tip="${esc(m.label)}"/></g>`).join('');
   const last = pts[pts.length-1];
   return `<svg viewBox="0 0 ${w} ${h}" class="lc" data-fmt="${fmt === usd ? 'usd' : 'price'}" data-pts='${JSON.stringify(pts.map(([t,v]) => [t, +v.toPrecision(5)]))}' data-geo='${JSON.stringify({w,h,L,R,T,B,x0,x1,lo,hi,pad})}'>
@@ -2433,13 +2437,21 @@ function renderEx(){
   $('ltBody').innerHTML = X.trades.length ? `<table class="lt">${X.trades.slice(0, 10).map(t => { const [u, , exp, k, cp] = t.market.split('-');
     return `<tr><td class="${t.side === 'BUY' ? 'buy' : 'sell'}">${t.side === 'BUY' ? 'BUY' : 'SELL'}</td><td class="mk">${u} ${k} ${cp === 'C' ? 'CALL' : 'PUT'} · ${exp}</td><td class="n">${t.size.toLocaleString('en-US')}×</td><td class="n">${usd(t.notional)}</td><td class="n muted">${new Date(t.t).toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'})}</td></tr>`; }).join('')}</table>` : '<p class="empty">No large fills in the last 24h.</p>';
   $('ltF').innerHTML = `<span>Source <a class="srct" style="color:var(--ink2);background:rgba(236,231,220,.08)" href="https://docs.paradex.trade" target="_blank" rel="noopener">Paradex API ↗</a> · notional = contracts × underlying · Derive & Aevo don’t publish public fills</span><span>as of ${asOf()}</span>`;
-  // OI 추이: 하루 한 점씩 쌓인다
-  const H = SNAP.fund.oiHist || [];
-  const box = $('oiBody');
-  if (box && H.length >= 2 && !box.querySelector('.oih')) {
+  // OI 추이: 하루 한 점씩 쌓인다. 7일이 안 되면 선 대신 날짜별 표, 7일부터 선 그래프 (범례 아래에 붙인다 — 범례는 위 막대용)
+  const H = SNAP.fund.oiHist || [], card = $('oiCard');
+  if (card && !card.querySelector('.oih')) {
     const pts = H.map(h => [Date.parse(h.d) / 1000, Object.values(h.oi).reduce((a, b) => a + b, 0)]);
-    box.insertAdjacentHTML('beforeend', `<div class="oih"><h4>Total open interest · daily</h4>${lineChart(pts, [], usd)}</div>`);
-  } else if (box && H.length < 2 && !box.querySelector('.oih')) box.insertAdjacentHTML('beforeend', `<div class="oih"><h4>Total open interest · daily</h4><p class="muted" style="font-size:12px">History starts ${H[0] ? H[0].d : 'today'} — one point per day, the chart appears from day two.</p></div>`);
+    let body;
+    if (pts.length >= 7) {
+      const ys = pts.map(p => p[1]), lo = Math.min(...ys), hi = Math.max(...ys), tight = (hi - lo) / hi < .02;
+      body = lineChart(pts, [], v => v >= 1e9 ? '$' + (v / 1e9).toFixed(tight ? 3 : 2) + 'B' : usd(v));
+    } else {
+      body = `<div class="oid">${pts.map(([t, v], i) => { const p = i ? pts[i - 1][1] : null, c = p ? (v / p - 1) * 100 : null;
+        return `<div><span>${new Date(t * 1000).toLocaleDateString('en-US', {timeZone:'UTC', month:'short', day:'numeric'})}</span><b>${usd(v)}</b><em>${c == null ? '' : pct(c)}</em></div>`; }).reverse().join('')}</div>
+        <p class="muted" style="font-size:12px;margin-top:8px">Logged once a day since ${H[0] ? new Date(H[0].d + 'T12:00:00Z').toLocaleDateString('en-US', {month:'short', day:'numeric'}) : 'today'} — the trend chart appears once a week of history is in.</p>`;
+    }
+    $('oiLegend').insertAdjacentHTML('afterend', `<div class="oih"><h4>Total open interest · daily · Derive + Paradex + Aevo</h4>${body}</div>`);
+  }
 }
 
 // ════════════════ 공유 카드 (#share/podium · movers · signals) ════════════════
