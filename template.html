@@ -1087,6 +1087,26 @@ body.intro #ticker{visibility:hidden}
 .perk{font-size:12px;line-height:1.45;color:var(--ink2);border:1px dashed rgba(242,181,68,.55);border-top:0;background:rgba(242,181,68,.04);padding:7px 10px}
 .perk b{font-size:10px;letter-spacing:.1em;color:#1a1408;background:var(--amber);border-radius:999px;padding:1px 7px;margin-right:8px}
 .dd-ref{margin-top:14px;max-width:460px}
+/* ── 기부 ── */
+.tip{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.08em;color:rgba(236,234,228,.75);border:1px solid rgba(236,234,228,.22);border-radius:999px;padding:7px 8px 7px 14px;transition:border-color .2s,color .2s}
+.tip i{font-style:normal;color:var(--amber)}
+.tip .a{letter-spacing:.02em;color:#eceae4;text-transform:none}
+.tip .c{font-size:10px;letter-spacing:.1em;color:#1a1408;background:var(--amber);border-radius:999px;padding:3px 9px}
+.tip:hover{border-color:var(--amber);color:#eceae4}
+.tip:focus-visible,.dn-a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.donate{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-top:22px;padding:16px 18px;border:1px solid rgba(242,181,68,.28);border-radius:14px;background:linear-gradient(90deg,rgba(242,181,68,.08),rgba(242,181,68,.02) 60%,transparent)}
+.dn-l{display:flex;gap:14px;align-items:center;min-width:0}
+.dn-l i{font-style:normal;font-size:20px;color:var(--amber);text-shadow:0 0 14px rgba(242,181,68,.5)}
+.dn-l b{display:block;font-size:15px;font-weight:600}
+.dn-l span{display:block;font-size:12.5px;color:var(--ink2);margin-top:2px}
+.dn-a{all:unset;cursor:pointer;display:grid;grid-template-columns:auto auto;grid-template-areas:"s c" "a c";gap:2px 14px;align-items:center;padding:8px 8px 8px 14px;border:1px solid var(--line2);border-radius:10px;background:rgba(10,11,9,.6);max-width:100%;transition:border-color .2s}
+.dn-a:hover{border-color:var(--amber)}
+.dn-a small{grid-area:s;font-size:10px;letter-spacing:.1em;color:var(--mute)}
+.dn-a code{grid-area:a;font-family:var(--mono);font-size:12.5px;color:var(--amber);overflow-wrap:anywhere}
+.dn-a .c,.tip .c{transition:background .2s}
+.dn-a .c{grid-area:c;font-size:10.5px;letter-spacing:.1em;color:#1a1408;background:var(--amber);border-radius:8px;padding:8px 12px}
+.it-foot{align-items:center}
+@media (max-width:640px){.tip .l{display:none}.dn-a{grid-template-columns:1fr auto}}
 </style>
 </head>
 <body>
@@ -1106,6 +1126,7 @@ body.intro #ticker{visibility:hidden}
   <div class="it-half up" aria-hidden="true"><svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice"><ellipse class="th-o" cx="500" cy="500" rx="165" ry="205"/><line class="th-c" x1="335" y1="500" x2="665" y2="500"/><line class="th-b" x1="335" y1="500" x2="-200" y2="500" pathLength="1"/><line class="th-b" x1="665" y1="500" x2="1200" y2="500" pathLength="1"/></svg></div>
   <div class="it-half dn" aria-hidden="true"><svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice"><ellipse class="th-o" cx="500" cy="500" rx="165" ry="205"/><line class="th-c" x1="335" y1="500" x2="665" y2="500"/><line class="th-b" x1="335" y1="500" x2="-200" y2="500" pathLength="1"/><line class="th-b" x1="665" y1="500" x2="1200" y2="500" pathLength="1"/></svg></div>
   <div class="it-foot it-in" style="animation-delay:.7s">
+    <button class="tip" data-addr="0x054d5A7856D88Ed44C78D4027A555f5eC6E55f8d" title="Copy donation address"><i>◆</i><span class="l">Support Opshnz</span><span class="a">0x054d…5f8d</span><span class="c">COPY</span></button>
     <span>Sentiment → data → projects</span>
     <span>By <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener">0xdefidaniel</a> · Seoul</span>
   </div>
@@ -1135,6 +1156,10 @@ body.intro #ticker{visibility:hidden}
       <div><b id="mOthers"></b><p>The rest of the onchain options map, tracked automatically.</p></div>
       <div><b id="when"></b><p>Refreshed daily from DefiLlama, CoinGecko &amp; venue APIs.</p></div>
       <a class="cta" href="#/strategy">START WITH SENTIMENT <span>→</span></a>
+    </div>
+    <div class="donate">
+      <div class="dn-l"><i>◆</i><div><b>Keep Opshnz free</b><span>Built and updated daily by one Korean. If it helps your trading, a tip keeps it running.</span></div></div>
+      <button class="dn-a" data-addr="0x054d5A7856D88Ed44C78D4027A555f5eC6E55f8d" title="Copy donation address"><small>EVM ADDRESS · DONATIONS</small><code>0x054d5A7856D88Ed44C78D4027A555f5eC6E55f8d</code><span class="c">COPY</span></button>
     </div>
     <nav class="tabs m-nav" aria-label="Views">
       <a href="#/strategy" data-r="strategy"><span class="n">01</span> SENTIMENT &amp; STRATEGY <span class="go">→</span></a>
@@ -2170,7 +2195,7 @@ function sentiHTML(A){
 let stAsset = 'BTC';
 const kRound = v => v >= 1000 ? '$' + (v / 1000).toFixed(v >= 1e4 ? 0 : 1) + 'k' : Number.isInteger(+v) ? '$' + v : k$(v);
 function renderStrategy(){
-  const AS = Object.keys((SNAP.dm && SNAP.dm.assets) || {BTC:1, ETH:1}), order = ['BTC', 'ETH', 'HYPE', 'ZEC'];
+  const AS = Object.keys((SNAP.dm && SNAP.dm.assets) || {BTC:1, ETH:1}), order = ['BTC', 'ETH', 'SOL', 'HYPE', 'ZEC'];
   AS.sort((x, y) => (order.indexOf(x) + 1 || 99) - (order.indexOf(y) + 1 || 99));
   if (!AS.includes(stAsset)) stAsset = AS[0] || 'BTC';
   $('stAsset').innerHTML = AS.map(a => `<button data-a="${a}" aria-pressed="${a === stAsset}">${a}</button>`).join('');
@@ -2771,6 +2796,13 @@ function drawSurface(t){
   $('vsFrame').innerHTML = `<path class="frame" d="M${c.map(p => p.map(v => v.toFixed(1)).join(' ')).join('L')}Z${c.map((p, i) => `M${p[0].toFixed(1)} ${p[1].toFixed(1)}L${top[i][0].toFixed(1)} ${top[i][1].toFixed(1)}`).join('')}"/>`;
 }
 
+// 기부 주소 복사
+document.addEventListener('click', async e => {
+  const b = e.target.closest('[data-addr]'); if (!b) return;
+  e.preventDefault(); e.stopPropagation();
+  try { await navigator.clipboard.writeText(b.dataset.addr); } catch { const t = document.createElement('textarea'); t.value = b.dataset.addr; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); }
+  const c = b.querySelector('.c'); if (c) { c.textContent = 'COPIED ✓'; setTimeout(() => c.textContent = 'COPY', 1600); }
+}, true);
 function renderSubscribe(){
   const h = (BOOT.config.telegram || '').replace(/^@|^https?:\/\/t\.me\//, '');
   const top = $('subTop'); if (top) { top.hidden = !h; if (h) top.href = 'https://t.me/' + h; }

@@ -352,7 +352,7 @@ async function venueExtras() {
 // Derivatives Monkey 공개 API: 12개 거래소(CEX + 온체인) 옵션을 한 기준으로 모은 시장 상태
 // BTC·ETH 시장 요약(IV·감마·월·풋콜) + 변동성 콘 + 기간구조 + 거래소별 OI
 const DM = 'https://www.derivativesmonkey.com/api/market';
-const DM_ASSETS = ['btc', 'eth', 'hype', 'zec'];
+const DM_ASSETS = ['btc', 'eth', 'sol', 'hype', 'zec'];
 const DM_SRC = ['deribit', 'okx', 'bybit', 'binance', 'bullish', 'delta', 'derive', 'paradex', 'aevo', 'thalex', 'callput', 'hypercall'];
 // 옵션 심리: 25델타 리스크 리버설(콜−풋 IV, 14일) · 그 7일 변화 · 풋/콜 OI · 24시간 프리미엄 흐름
 async function dmSentiment(a, all) {
@@ -447,7 +447,7 @@ function sentiInputs(A) {
 // BTC·ETH 1년 일별 가격 (심리 일지 차트·"그 뒤 7일" 계산용)
 async function majorsHistory() {
   const out = {};
-  for (const [id, t] of [['bitcoin', 'BTC'], ['ethereum', 'ETH'], ['hyperliquid', 'HYPE'], ['zcash', 'ZEC']]) {
+  for (const [id, t] of [['bitcoin', 'BTC'], ['ethereum', 'ETH'], ['solana', 'SOL'], ['hyperliquid', 'HYPE'], ['zcash', 'ZEC']]) {
     const j = await getJSON(`https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=365&interval=daily`, 3);
     if (j && j.prices) out[t] = j.prices.map(([ts, p]) => [ts, +p.toPrecision(6)]);
   }
