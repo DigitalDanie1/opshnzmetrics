@@ -40,5 +40,19 @@
   "text": "$DRV −8.2% in 24h",
   "href": "#/deep/Derive",
   "key": "$DRV"
+ },
+ {
+  "d": "2026-10-12",
+  "kind": "move",
+  "text": "$DIME −8.1% in 24h",
+  "href": "#/deep/Paradex",
+  "key": "$DIME"
+ },
+ {
+  "d": "2026-10-12",
+  "kind": "vol",
+  "text": "BVIV 39.7 (+2.0% 24h) — BTC implied vol ticking up",
+  "href": "#/deep/Volmex",
+  "key": "BVIV"
  }
 ]
