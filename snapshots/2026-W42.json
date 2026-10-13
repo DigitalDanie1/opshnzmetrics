@@ -70,39 +70,6 @@
     "summary": null,
     "rounds": [
      {
-      "date": "2021-07",
-      "round": "Seed",
-      "amount": 3300000,
-      "lead": [
-       "Framework Ventures",
-       "ParaFi Capital"
-      ],
-      "as": "Lyra",
-      "src": "https://insights.derive.xyz/lyra-dao-raises-3-3m/",
-      "agg": false
-     },
-     {
-      "date": "2022-11",
-      "round": "Strategic",
-      "amount": 3000000,
-      "lead": [
-       "Framework Ventures",
-       "GSR"
-      ],
-      "as": "Lyra",
-      "src": "https://insights.derive.xyz/lyra-raises-strategic-round/",
-      "agg": false
-     },
-     {
-      "date": "2024-09",
-      "round": "Angel",
-      "amount": null,
-      "lead": [],
-      "as": null,
-      "src": "https://www.chaincatcher.com/en/article/2142980",
-      "agg": true
-     },
-     {
       "date": "2026-02",
       "round": "Strategic (DRV tokens)",
       "amount": null,
@@ -115,110 +82,26 @@
      }
     ],
     "vcs": [
-     "Framework Ventures",
-     "ParaFi Capital",
-     "GSR",
      "Variant",
-     "DeFi Alliance",
-     "Divergence",
-     "Orthogonal Trading",
-     "Robot Ventures",
-     "Apollo Capital"
+     "Framework Ventures",
+     "GSR"
     ],
-    "angels": [
-     {
-      "name": "Kain Warwick",
-      "note": "Synthetix"
-     },
-     {
-      "name": "Jordan Momtazi",
-      "note": "Synthetix"
-     },
-     {
-      "name": "Jing",
-      "note": "Optimism"
-     },
-     {
-      "name": "Stani",
-      "note": "Aave"
-     },
-     {
-      "name": "Ryan",
-      "note": "Bankless"
-     },
-     {
-      "name": "Anton",
-      "note": "1inch"
-     },
-     {
-      "name": "Tyler",
-      "note": "Barnbridge"
-     },
-     {
-      "name": "Hasu",
-      "note": ""
-     },
-     {
-      "name": "wsbmod",
-      "note": ""
-     },
-     {
-      "name": "Kieran",
-      "note": "Illuvium"
-     },
-     {
-      "name": "Anthony",
-      "note": "The Daily Gwei"
-     },
-     {
-      "name": "Rok Kopp",
-      "note": "co-founder of EtherFi"
-     },
-     {
-      "name": "DCFGOD",
-      "note": ""
-     },
-     {
-      "name": "SPREEK",
-      "note": ""
-     }
-    ],
-    "reported": [
-     "Magnet Capital"
-    ],
+    "angels": [],
+    "reported": [],
     "sources": [
      {
-      "label": "Derive blog (2021)",
-      "url": "https://insights.derive.xyz/lyra-dao-raises-3-3m/",
+      "label": "derive.xyz",
+      "url": "https://www.derive.xyz",
       "agg": false
      },
      {
-      "label": "Derive blog (2022)",
-      "url": "https://insights.derive.xyz/lyra-raises-strategic-round/",
-      "agg": false
-     },
-     {
-      "label": "The Block",
-      "url": "https://www.theblock.co/news/defi/2021-07-26-3-3-million-raised-for-ethereum-options-protocol-built-on-optimism-and-synthetix-112505",
-      "agg": false
-     },
-     {
-      "label": "ChainCatcher",
-      "url": "https://www.chaincatcher.com/en/article/2142980",
-      "agg": true
-     },
-     {
-      "label": "Derive blog (2026)",
+      "label": "insights.derive.xyz",
       "url": "https://insights.derive.xyz/variant-invests-in-derive-to-build-the-volatility-layer-onchain/",
       "agg": false
-     },
-     {
-      "label": "CoinCarp",
-      "url": "https://www.coincarp.com/fundraising/lyra-seed/",
-      "agg": true
      }
     ],
-    "level": "confirmed"
+    "level": "confirmed",
+    "heading": "Trusted by:"
    },
    "price": 0.428025,
    "ch24": -8.22652,
@@ -339,19 +222,35 @@
     "total": null,
     "totalNote": "",
     "incubator": "Paradigm",
-    "summary": "Incubated by Paradigm — Paradex did not raise venture capital (Paradex Foundation)",
+    "summary": null,
     "rounds": [],
-    "vcs": [],
+    "vcs": [
+     "Paradigm",
+     "Jump Capital",
+     "Dragonfly Capital",
+     "Digital Currency Group",
+     "Optiver",
+     "QCP Capital",
+     "Nexo",
+     "IMC",
+     "GSR",
+     "Akuna Capital",
+     "Vectr",
+     "Amber",
+     "CMT Digital",
+     "Avon Ventures"
+    ],
     "angels": [],
     "reported": [],
     "sources": [
      {
-      "label": "Paradex Foundation",
-      "url": "https://www.paradex.foundation/blog/introducing-dime-the-native-token-of-the-paradex-network",
+      "label": "paradex.trade",
+      "url": "https://www.paradex.trade/",
       "agg": false
      }
     ],
-    "level": "partial"
+    "level": "confirmed",
+    "heading": "Backed by The Best"
    },
    "price": 0.061535,
    "ch24": -0.93285,
@@ -466,86 +365,16 @@
    },
    "app": "https://app.thetanuts.finance",
    "backers": {
-    "total": 35000000,
-    "totalNote": "sum of disclosed rounds",
-    "incubator": null,
+    "level": "none",
     "summary": null,
-    "rounds": [
-     {
-      "date": "2022-03",
-      "round": "Seed",
-      "amount": 18000000,
-      "lead": [
-       "Three Arrows Capital",
-       "Deribit",
-       "QCP Capital",
-       "Jump Crypto"
-      ],
-      "as": null,
-      "src": "https://www.coindesk.com/business/2022/03/01/defi-platform-thetanuts-finance-raises-18m-seed-funding-to-fuel-growth",
-      "agg": false
-     },
-     {
-      "date": "2023-04",
-      "round": "Institutional round",
-      "amount": 17000000,
-      "lead": [
-       "Polychain Capital",
-       "Hyperchain Capital",
-       "Magnus Capital"
-      ],
-      "as": null,
-      "src": "https://www.coindesk.com/business/2023/04/24/defi-protocol-thetanuts-finance-raises-17m-for-expansion-new-partnerships",
-      "agg": false
-     }
-    ],
-    "vcs": [
-     "Three Arrows Capital",
-     "Deribit",
-     "QCP Capital",
-     "Jump Crypto",
-     "Polychain Capital",
-     "Hyperchain Capital",
-     "Magnus Capital"
-    ],
+    "rounds": [],
+    "vcs": [],
     "angels": [],
-    "reported": [
-     "Tribe Capital",
-     "Raptor Group",
-     "Borderless Capital",
-     "DeFi Capital",
-     "GoldenTree Asset Management",
-     "Mirana Ventures",
-     "Crypto.com Capital"
-    ],
-    "sources": [
-     {
-      "label": "CoinDesk (2022)",
-      "url": "https://www.coindesk.com/business/2022/03/01/defi-platform-thetanuts-finance-raises-18m-seed-funding-to-fuel-growth",
-      "agg": false
-     },
-     {
-      "label": "CoinDesk (2023)",
-      "url": "https://www.coindesk.com/business/2023/04/24/defi-protocol-thetanuts-finance-raises-17m-for-expansion-new-partnerships",
-      "agg": false
-     },
-     {
-      "label": "Forklog",
-      "url": "https://forklog.com/en/news/defi-protocol-thetanuts-raises-17m",
-      "agg": false
-     },
-     {
-      "label": "CoinCarp",
-      "url": "https://www.coincarp.com/de/fundraising/thetanuts-finance-seed/",
-      "agg": true
-     },
-     {
-      "label": "VCBacked",
-      "url": "https://www.vcbacked.co/company/thetanuts-finance",
-      "agg": true
-     }
-    ],
-    "level": "confirmed"
+    "reported": [],
+    "sources": [],
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": 0.00098041,
    "ch24": 1.35875,
@@ -652,80 +481,28 @@
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2022-03",
-      "round": "Series A+",
-      "amount": 8750000,
-      "lead": [
-       "Paradigm"
-      ],
-      "as": "Ribbon",
-      "src": "https://www.coindesk.com/business/2022/03/22/paradigm-invests-875m-in-defis-ribbon-finance",
-      "agg": false
-     },
-     {
-      "date": "2024-05",
-      "round": "Strategic",
-      "amount": null,
-      "lead": [
-       "Binance Labs"
-      ],
-      "as": null,
-      "src": "https://www.coindesk.com/markets/2024/05/21/crypto-derivatives-dex-aevos-token-jumps-10-as-binance-labs-discloses-investment",
-      "agg": false
-     }
-    ],
+    "rounds": [],
     "vcs": [
      "Paradigm",
-     "Binance Labs"
+     "Coinbase",
+     "Dragonfly",
+     "Nascent",
+     "Scalar Capital",
+     "Ethereal Ventures",
+     "Robot Ventures",
+     "Alliance"
     ],
     "angels": [],
-    "reported": [
-     "Dragonfly Capital",
-     "Nascent",
-     "Coinbase Ventures",
-     "Scalar Capital",
-     "DeFi Alliance",
-     "Robot Ventures",
-     "Alliance DAO",
-     "Ethereal Ventures",
-     "Joseph Lubin (angel)",
-     "Hart Lambur (angel)"
-    ],
+    "reported": [],
     "sources": [
      {
-      "label": "Ribbon blog",
-      "url": "https://ribbonfinance.medium.com/ribbon-partners-with-paradigm-6aa7219b1411",
+      "label": "aevo.xyz",
+      "url": "https://www.aevo.xyz/",
       "agg": false
-     },
-     {
-      "label": "CoinDesk (2022)",
-      "url": "https://www.coindesk.com/business/2022/03/22/paradigm-invests-875m-in-defis-ribbon-finance",
-      "agg": false
-     },
-     {
-      "label": "CoinDesk (2024)",
-      "url": "https://www.coindesk.com/markets/2024/05/21/crypto-derivatives-dex-aevos-token-jumps-10-as-binance-labs-discloses-investment",
-      "agg": false
-     },
-     {
-      "label": "Crowdfund Insider",
-      "url": "https://www.crowdfundinsider.com/2024/05/225414-binance-labs-invests-in-aevo-to-support-future-of-l2-blockchain-innovations/",
-      "agg": false
-     },
-     {
-      "label": "CoinCarp",
-      "url": "https://www.coincarp.com/project/ribbon-finance/",
-      "agg": true
-     },
-     {
-      "label": "CB Insights",
-      "url": "https://www.cbinsights.com/company/ribbon-finance/financials",
-      "agg": true
      }
     ],
-    "level": "partial"
+    "level": "confirmed",
+    "heading": "Backed By The Best Investors In The Space"
    },
    "price": 0.02521228,
    "ch24": -6.15501,
@@ -839,41 +616,16 @@
    },
    "app": "https://app.hypercall.xyz",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
-    "summary": "A Synapse product — no separate Hypercall round. Synapse-era backers per aggregators.",
+    "level": "none",
+    "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
-    "reported": [
-     "Alameda Research",
-     "Three Arrows Capital",
-     "CMS Holdings",
-     "DeFiance Capital",
-     "Mechanism Capital",
-     "Primitive Ventures",
-     "Immutable Capital",
-     "FJ Labs"
-    ],
-    "sources": [
-     {
-      "label": "Hypercall",
-      "url": "https://hypercall.xyz/foundation",
-      "agg": false
-     },
-     {
-      "label": "CB Insights",
-      "url": "https://www.cbinsights.com/company/synapse-protocol/financials",
-      "agg": true
-     },
-     {
-      "label": "TokenInsight",
-      "url": "https://tokeninsight.com/en/coins/synapse/tokenomics",
-      "agg": true
-     }
-    ],
-    "level": "partial"
+    "reported": [],
+    "sources": [],
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": 0.200585,
    "ch24": 0.72557,
@@ -991,19 +743,16 @@
     "rounds": [
      {
       "date": "2023-02",
-      "round": "Seed",
+      "round": "Seed (private, 'strongly oversubscribed')",
       "amount": 1700000,
-      "lead": [
-       "Skycatcher"
-      ],
+      "lead": [],
       "as": null,
-      "src": "https://www.chaincatcher.com/en/article/2087076",
-      "agg": true
+      "src": "https://gammaswap.com/blog/gammaswap-closes-1-7m-seed-round-to-revolutionize-defi-impermanent-gains",
+      "agg": false
      }
     ],
     "vcs": [
-     "Skycatcher",
-     "Dialectic",
+     "Skycatcher Crypto",
      "Space Whale Capital",
      "Modular Capital",
      "Portico Ventures",
@@ -1012,36 +761,46 @@
      "RenGen",
      "Manifold Trading"
     ],
-    "angels": [],
-    "reported": [
-     "Coinflip Canada",
-     "bizyugo (angel)",
-     "0x_d24 (angel)",
-     "DanDefiEd (angel)"
-    ],
-    "sources": [
+    "angels": [
      {
-      "label": "ChainCatcher",
-      "url": "https://www.chaincatcher.com/en/article/2087076",
-      "agg": true
+      "name": "coinflipcanada",
+      "note": "Core Team @ GMX"
      },
      {
-      "label": "TokenInsight",
-      "url": "https://tokeninsight.com/en/news/defi-structured-protocol-gammaswap-closes-1.7-million-seed-round-led-by-skycatcher",
-      "agg": true
+      "name": "quattro",
+      "note": "Core Team @ GMX. Advising on Tokenomics"
      },
      {
-      "label": "DefiLlama",
-      "url": "https://defillama.com/raises/skycatcher",
-      "agg": true
+      "name": "bizyugo",
+      "note": "2nd largest wallet on DeBank. 1st on Degen Score"
      },
      {
-      "label": "CB Insights",
-      "url": "https://www.cbinsights.com/company/gammaswap/financials",
-      "agg": true
+      "name": "0x_d24",
+      "note": "Started in TradFi / Tech M&A. Now DeFi Native Investor"
+     },
+     {
+      "name": "Dan",
+      "note": "Co-Founder at Rysk. Prev Core Team at Opyn (Squeeth)"
+     },
+     {
+      "name": "Phil Huang",
+      "note": "Co-Founder of DeFi Conference. Managing Partner at Orchard Street Capital"
+     },
+     {
+      "name": "Vae Victis",
+      "note": "Crypto since 2013. DeFi Native Angel & Advisor"
      }
     ],
-    "level": "partial"
+    "reported": [],
+    "sources": [
+     {
+      "label": "gammaswap.com",
+      "url": "https://gammaswap.com/blog/gammaswap-closes-1-7m-seed-round-to-revolutionize-defi-impermanent-gains",
+      "agg": false
+     }
+    ],
+    "level": "confirmed",
+    "heading": "Investors & Partners"
    },
    "price": 0.00217522,
    "ch24": -1.94214,
@@ -1154,62 +913,16 @@
    "app": "https://dreamos.app",
    "isNew": true,
    "backers": {
-    "total": 2100000,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
-    "rounds": [
-     {
-      "date": "2024-03",
-      "round": "Seed",
-      "amount": 2100000,
-      "lead": [
-       "Arca"
-      ],
-      "as": "DreamOS",
-      "src": "https://en.theblockbeats.news/news/51695",
-      "agg": true
-     }
-    ],
-    "vcs": [
-     "Arca",
-     "Hack VC",
-     "Mantle",
-     "Polygon Ventures",
-     "Karatage",
-     "Selini Capital",
-     "No Limit Holdings"
-    ],
+    "rounds": [],
+    "vcs": [],
     "angels": [],
     "reported": [],
-    "sources": [
-     {
-      "label": "BlockBeats",
-      "url": "https://en.theblockbeats.news/news/51695",
-      "agg": true
-     },
-     {
-      "label": "Bitget News",
-      "url": "https://www.bitget.com/news/detail/12560603921019",
-      "agg": true
-     },
-     {
-      "label": "CoinCarp",
-      "url": "https://www.coincarp.com/project/dreamos/",
-      "agg": true
-     },
-     {
-      "label": "Airdrops.io",
-      "url": "https://airdrops.io/dream/",
-      "agg": true
-     },
-     {
-      "label": "Tracxn",
-      "url": "https://tracxn.com/d/companies/dreamos/__t-YSCbE3XFMymzUSFX-4XNdP_N6-b1EuI3CDpN0ARSk",
-      "agg": true
-     }
-    ],
-    "level": "partial"
+    "sources": [],
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -1256,16 +969,16 @@
    "note": "",
    "app": "https://callput.app",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -1312,24 +1025,16 @@
    "app": "https://joyride.exchange",
    "isNew": true,
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
-    "summary": "Backer self-reported on X; no round or amount disclosed.",
+    "level": "none",
+    "summary": null,
     "rounds": [],
-    "vcs": [
-     "Superteam"
-    ],
+    "vcs": [],
     "angels": [],
     "reported": [],
-    "sources": [
-     {
-      "label": "X bio (@JoyrideExchange)",
-      "url": "https://x.com/JoyrideExchange",
-      "agg": false
-     }
-    ],
-    "level": "partial"
+    "sources": [],
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -1373,16 +1078,16 @@
    "app": "https://olive.exchange",
    "isNew": true,
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -1423,96 +1128,27 @@
    "note": "",
    "app": "https://app.3jane.xyz",
    "backers": {
-    "total": 5200000,
+    "total": null,
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2025-06",
-      "round": "Seed",
-      "amount": 5200000,
-      "lead": [
-       "Paradigm"
-      ],
-      "as": null,
-      "src": "https://www.theblock.co/post/356872/paradigm-leads-5-million-seed-round-in-crypto-credit-startup-3jane",
-      "agg": false
-     }
-    ],
+    "rounds": [],
     "vcs": [
      "Paradigm",
-     "Coinbase Ventures",
      "Wintermute Ventures",
-     "Robot Ventures",
-     "Bodhi Ventures",
-     "Breed"
+     "Coinbase Ventures"
     ],
-    "angels": [
-     {
-      "name": "Andre Cronje",
-      "note": "Yearn"
-     },
-     {
-      "name": "Guy Young",
-      "note": "Ethena"
-     },
-     {
-      "name": "Julian Koh",
-      "note": "Ribbon"
-     },
-     {
-      "name": "Kain Warwick",
-      "note": "Synthetix"
-     },
-     {
-      "name": "Laurence",
-      "note": "Wildcat"
-     },
-     {
-      "name": "Zabeer",
-      "note": "Split Capital"
-     },
-     {
-      "name": "Joshua Lim",
-      "note": "Arbelos"
-     },
-     {
-      "name": "Yuchen",
-      "note": "BounceBit/OKX"
-     },
-     {
-      "name": "Octoshi",
-      "note": ""
-     },
-     {
-      "name": "Alfaketchum",
-      "note": ""
-     },
-     {
-      "name": "DeFi Dad",
-      "note": ""
-     }
-    ],
+    "angels": [],
     "reported": [],
     "sources": [
      {
-      "label": "The Block",
-      "url": "https://www.theblock.co/post/356872/paradigm-leads-5-million-seed-round-in-crypto-credit-startup-3jane",
-      "agg": false
-     },
-     {
-      "label": "Bitcoin.com",
-      "url": "https://news.bitcoin.com/ethereum-lender-3jane-emerges-from-stealth-with-paradigm-led-funding-round/",
-      "agg": false
-     },
-     {
-      "label": "3Jane (Paragraph)",
-      "url": "https://paragraph.com/@3jane-protocol/5gP46FiksozpocTnAdc3",
+      "label": "3jane.xyz",
+      "url": "https://www.3jane.xyz/",
       "agg": false
      }
     ],
-    "level": "confirmed"
+    "level": "confirmed",
+    "heading": "Backed By"
    },
    "price": null,
    "ch24": null,
@@ -1578,87 +1214,37 @@
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2021-03",
-      "round": "Seed",
-      "amount": null,
-      "lead": [],
-      "as": null,
-      "src": "https://www.cbinsights.com/company/volmex-finance/financials",
-      "agg": true
-     },
-     {
-      "date": "2022-01",
-      "round": "Private token sale",
-      "amount": 150000,
-      "lead": [],
-      "as": null,
-      "src": "https://alphagrowth.io/volmex/company",
-      "agg": true
-     },
-     {
-      "date": "2022-09",
-      "round": "Pre-seed",
-      "amount": null,
-      "lead": [],
-      "as": null,
-      "src": "https://alphagrowth.io/volmex/company",
-      "agg": true
-     }
-    ],
+    "rounds": [],
     "vcs": [
-     "Robot Ventures",
      "CMS Holdings",
+     "Robot Ventures",
      "Avenir Group",
      "D64 Ventures",
      "IOSG Ventures",
      "DeFi Technologies",
      "4RC",
-     "Magnus Capital",
-     "Orthogonal Trading",
-     "LedgerPrime",
-     "Alameda Research"
+     "Magnus Capital"
     ],
     "angels": [
      {
       "name": "Anatoly Yakovenko",
-      "note": "founder of Solana"
+      "note": "Solana Labs"
      },
      {
       "name": "Sandeep Nailwal",
-      "note": "founder of Polygon"
+      "note": "Polygon"
      }
     ],
     "reported": [],
     "sources": [
      {
-      "label": "Volmex team (Oct 2026)",
-      "url": null,
-      "agg": false
-     },
-     {
-      "label": "Volmex",
+      "label": "volmex.finance",
       "url": "https://volmex.finance",
       "agg": false
-     },
-     {
-      "label": "The Block",
-      "url": "https://www.theblock.co/post/171294/alameda-backed-volmex-labs-launches-bitcoin-and-ether-volatility-indexes-exclusive",
-      "agg": false
-     },
-     {
-      "label": "AlphaGrowth",
-      "url": "https://alphagrowth.io/volmex/company",
-      "agg": true
-     },
-     {
-      "label": "CB Insights",
-      "url": "https://www.cbinsights.com/company/volmex-finance/financials",
-      "agg": true
      }
     ],
-    "level": "confirmed"
+    "level": "confirmed",
+    "heading": "Backed by leading crypto investors"
    },
    "price": null,
    "ch24": null,
@@ -1712,16 +1298,16 @@
    "app": "https://www.hunch.cool",
    "isNew": true,
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -1766,54 +1352,37 @@
    "pointsUrl": "https://app.rysk.finance/points/",
    "app": "https://app.rysk.finance",
    "backers": {
-    "total": 1400000,
+    "total": null,
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2023-01",
-      "round": "Pre-seed",
-      "amount": 1400000,
-      "lead": [
-       "Lemniscap"
-      ],
-      "as": null,
-      "src": "https://www.prnewswire.com/news-releases/rysk-finance-raises-1-4m-to-spearhead-on-chain-market-making-for-defi-derivatives-301734616.html",
-      "agg": false
-     }
-    ],
+    "rounds": [],
     "vcs": [
+     "Archetype",
      "Lemniscap",
-     "Encode Club",
+     "Coinbase Ventures",
+     "Encode",
      "Ascensive Assets",
-     "Starbloom",
+     "HASHCib",
      "Yunt Capital",
-     "Manifold Trading"
+     "Manifold"
     ],
     "angels": [
      {
-      "name": "Hype.eth",
-      "note": ""
-     },
-     {
-      "name": "ivangbi",
-      "note": ""
-     },
-     {
-      "name": "Windra Thio",
-      "note": ""
+      "name": "Evan Van Ness",
+      "note": "early believers"
      }
     ],
     "reported": [],
     "sources": [
      {
-      "label": "PR Newswire",
-      "url": "https://www.prnewswire.com/news-releases/rysk-finance-raises-1-4m-to-spearhead-on-chain-market-making-for-defi-derivatives-301734616.html",
+      "label": "docs.rysk.finance",
+      "url": "https://docs.rysk.finance/why-rysk",
       "agg": false
      }
     ],
-    "level": "confirmed"
+    "level": "confirmed",
+    "heading": "Why Rysk?"
    },
    "price": null,
    "ch24": null,
@@ -1859,74 +1428,32 @@
    ],
    "note": "",
    "backers": {
-    "total": 11500000,
+    "total": null,
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2023-11",
-      "round": "Seed",
-      "amount": 7000000,
-      "lead": [
-       "Greenfield Capital"
-      ],
-      "as": null,
-      "src": "https://www.theblock.co/news/deals/2023-11-20-panoptic-raises-7-million-to-build-perpetual-options-platform-for-defi-263771",
-      "agg": false
-     },
-     {
-      "date": "2022-12",
-      "round": "SAFE round",
-      "amount": 4500000,
-      "lead": [
-       "gumi Cryptos Capital"
-      ],
-      "as": null,
-      "src": "https://www.theblock.co/news/deals/2022-12-05-uniswap-based-defi-protocol-panoptic-raises-4-5-million-192207",
-      "agg": false
-     }
-    ],
+    "rounds": [],
     "vcs": [
-     "Greenfield Capital",
-     "gumi Cryptos Capital",
-     "HashKey",
-     "L1D",
-     "Heartcore Capital",
-     "Comma3",
-     "Zee Prime Capital",
-     "Uniswap Labs Ventures",
+     "Uniswap",
      "Coinbase Ventures",
      "Jane Street",
-     "Blizzard (Avalanche Ecosystem Fund)",
+     "Greenfield Capital",
+     "HashKey Capital",
      "Keyrock",
+     "Gumi Cryptos Capital",
      "SevenX Ventures"
     ],
     "angels": [],
     "reported": [],
     "sources": [
      {
-      "label": "The Block (2023)",
-      "url": "https://www.theblock.co/news/deals/2023-11-20-panoptic-raises-7-million-to-build-perpetual-options-platform-for-defi-263771",
-      "agg": false
-     },
-     {
-      "label": "The Block (2022)",
-      "url": "https://www.theblock.co/news/deals/2022-12-05-uniswap-based-defi-protocol-panoptic-raises-4-5-million-192207",
-      "agg": false
-     },
-     {
-      "label": "Panoptic blog",
-      "url": "https://panoptic.xyz/blog/defi-options-protocol-safe-round",
-      "agg": false
-     },
-     {
-      "label": "Panoptic",
-      "url": "https://www.panoptic.xyz",
+      "label": "panoptic.xyz",
+      "url": "https://panoptic.xyz",
       "agg": false
      }
     ],
-    "level": "confirmed"
+    "level": "confirmed",
+    "heading": "Backed By (subtitle: Institutional conviction.)"
    },
    "price": null,
    "ch24": null,
@@ -1970,45 +1497,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
-    "rounds": [
-     {
-      "date": "2022-01",
-      "round": "Early-stage VC",
-      "amount": null,
-      "lead": [],
-      "as": null,
-      "src": "https://insights.munich-startup.de/companies/hegic",
-      "agg": true
-     }
-    ],
+    "rounds": [],
     "vcs": [],
     "angels": [],
-    "reported": [
-     "Strategic Round Capital",
-     "Fomocraft Ventures"
-    ],
-    "sources": [
-     {
-      "label": "Munich Startup",
-      "url": "https://insights.munich-startup.de/companies/hegic",
-      "agg": true
-     },
-     {
-      "label": "CB Insights",
-      "url": "https://www.cbinsights.com/company/hegic",
-      "agg": true
-     },
-     {
-      "label": "PitchBook",
-      "url": "https://pitchbook.com/profiles/company/439089-22",
-      "agg": true
-     }
-    ],
-    "level": "partial"
+    "reported": [],
+    "sources": [],
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": 0.01496687,
    "ch24": 1.14151,
@@ -2111,46 +1609,32 @@
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2021-11",
-      "round": "Strategic",
-      "amount": null,
-      "lead": [
-       "Binance Smart Chain $1B Growth Fund"
-      ],
-      "as": null,
-      "src": "https://www.newswire.ca/news-releases/deri-protocol-secures-investment-under-binance-smart-chain-s-1b-fund-830012075.html",
-      "agg": false
-     }
-    ],
+    "rounds": [],
     "vcs": [
-     "Binance Smart Chain Growth Fund"
-    ],
-    "angels": [],
-    "reported": [
      "FBG Capital",
-     "Bixin Ventures",
+     "BIXIN Ventures",
      "Lotus Capital",
      "LD Capital",
+     "Kryptos Research",
      "AKG Ventures",
-     "Crypto Dorm Fund",
-     "Crypto Research",
-     "GSR Markets"
+     "Binance Labs",
+     "GSR",
+     "WOO Network",
+     "QCP Capital",
+     "TRON",
+     "CryptoDormFund"
     ],
+    "angels": [],
+    "reported": [],
     "sources": [
      {
-      "label": "Newswire.ca",
-      "url": "https://www.newswire.ca/news-releases/deri-protocol-secures-investment-under-binance-smart-chain-s-1b-fund-830012075.html",
+      "label": "deri.io",
+      "url": "https://deri.io/",
       "agg": false
-     },
-     {
-      "label": "ICO Drops",
-      "url": "https://icodrops.com/deri-protocol",
-      "agg": true
      }
     ],
-    "level": "partial"
+    "level": "confirmed",
+    "heading": "BACKED BY"
    },
    "price": 0.00068507,
    "ch24": -1.13669,
@@ -2249,16 +1733,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -2301,65 +1785,16 @@
    ],
    "note": "",
    "backers": {
-    "total": 5000000,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
-    "rounds": [
-     {
-      "date": "2022-03",
-      "round": "Seed",
-      "amount": 5000000,
-      "lead": [
-       "Framework Ventures"
-      ],
-      "as": null,
-      "src": "https://defillama.com/protocol/katana",
-      "agg": true
-     }
-    ],
+    "rounds": [],
     "vcs": [],
     "angels": [],
-    "reported": [
-     "Founders Fund",
-     "Electric Capital",
-     "Coinbase Ventures",
-     "Solana Ventures",
-     "Alameda Research",
-     "Protofund",
-     "Amber Group",
-     "MGNR",
-     "Reverie",
-     "CMS Holdings",
-     "QCP Capital",
-     "SplitCapital",
-     "Jason Choi (angel)",
-     "Chris McCann (angel)",
-     "Joey Santoro (angel)",
-     "Armani Ferrante (angel)",
-     "Joe McCann (angel)",
-     "Jason Shah (angel)",
-     "Darren Lau (angel)",
-     "Daryl Lau (angel)"
-    ],
-    "sources": [
-     {
-      "label": "DefiLlama",
-      "url": "https://defillama.com/protocol/katana",
-      "agg": true
-     },
-     {
-      "label": "TokenInsight",
-      "url": "https://tokeninsight.com/en/news/solana-ecosystem-defi-protocol-katana-closed-5-million-seed-round-with-alameda-research-and-others",
-      "agg": true
-     },
-     {
-      "label": "Dealroom",
-      "url": "https://app.dealroom.co/companies/katana_1_3",
-      "agg": true
-     }
-    ],
-    "level": "partial"
+    "reported": [],
+    "sources": [],
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -2401,92 +1836,33 @@
    ],
    "note": "",
    "backers": {
-    "total": 8860000,
-    "totalNote": "sum of disclosed rounds",
+    "total": null,
+    "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2021-02",
-      "round": "Series A",
-      "amount": 6700000,
-      "lead": [
-       "Paradigm"
-      ],
-      "as": null,
-      "src": "https://www.theblock.co/post/93603/opyn-defi-options-series-a-paradigm",
-      "agg": false
-     },
-     {
-      "date": "2020-06",
-      "round": "Seed",
-      "amount": 2160000,
-      "lead": [
-       "Dragonfly Capital"
-      ],
-      "as": null,
-      "src": "https://www.theblock.co/post/69154/defi-opyn-funding-dragonfly",
-      "agg": false
-     }
-    ],
+    "rounds": [],
     "vcs": [
      "Paradigm",
-     "Dragonfly Capital",
-     "1kx",
-     "A.Capital Ventures",
-     "Version One Ventures",
-     "Uncorrelated Ventures",
-     "DTC Capital",
-     "CoinFund",
+     "Dragonfly",
+     "VersionOne",
+     "Uncorrelated",
      "Robot Ventures",
-     "Coinbase Ventures"
+     "1kx",
+     "Coinbase",
+     "Coinfund",
+     "A Capital Partners"
     ],
-    "angels": [
-     {
-      "name": "Kain Warwick",
-      "note": "co-founder of Synthetix"
-     },
-     {
-      "name": "Stani Kulechov",
-      "note": "founder of Aave"
-     },
-     {
-      "name": "Robert Leshner",
-      "note": "founder of Compound"
-     },
-     {
-      "name": "Balaji Srinivasan",
-      "note": "former Coinbase CTO"
-     },
-     {
-      "name": "Linda Xie",
-      "note": "crypto investor"
-     }
-    ],
+    "angels": [],
     "reported": [],
     "sources": [
      {
-      "label": "The Block (Series A)",
-      "url": "https://www.theblock.co/post/93603/opyn-defi-options-series-a-paradigm",
-      "agg": false
-     },
-     {
-      "label": "The Block (Seed)",
-      "url": "https://www.theblock.co/post/69154/defi-opyn-funding-dragonfly",
-      "agg": false
-     },
-     {
-      "label": "Decrypt",
-      "url": "https://decrypt.co/33172/crypto-startup-opyn-defi-wave-2-million-funding",
-      "agg": false
-     },
-     {
-      "label": "Opyn",
+      "label": "opyn.co",
       "url": "https://www.opyn.co",
       "agg": false
      }
     ],
-    "level": "confirmed"
+    "level": "confirmed",
+    "heading": "Backed by the best. Proud to be supported by the best investors in crypto."
    },
    "price": null,
    "ch24": null,
@@ -2528,31 +1904,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
-    "summary": "Non-profit DAO — no disclosed funding round; OKX Ventures, HashKey Capital and Galaxy Asia Trading are founding DAO members.",
+    "level": "none",
+    "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
-    "reported": [
-     "OKX Ventures",
-     "HashKey Capital",
-     "Galaxy Asia Trading"
-    ],
-    "sources": [
-     {
-      "label": "Crowdfund Insider",
-      "url": "https://www.crowdfundinsider.com/?p=226370",
-      "agg": false
-     },
-     {
-      "label": "Odaily",
-      "url": "https://www.odaily.news/en/post/5198049",
-      "agg": true
-     }
-    ],
-    "level": "partial"
+    "reported": [],
+    "sources": [],
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": 0.155964,
    "ch24": -1.2487,
@@ -2654,42 +2015,24 @@
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2023-06",
-      "round": "Investment",
-      "amount": null,
-      "lead": [],
-      "as": null,
-      "src": "https://prtimes.jp/main/html/rd/p/000000031.000079365.html",
-      "agg": false
-     }
-    ],
+    "rounds": [],
     "vcs": [
-     "Hyperithm"
+     "Mysten Labs",
+     "Assembly Partners",
+     "Hyperithm",
+     "Soft Holdings"
     ],
     "angels": [],
-    "reported": [
-     "Assembly Partners"
-    ],
+    "reported": [],
     "sources": [
      {
-      "label": "PR Times (Hyperithm)",
-      "url": "https://prtimes.jp/main/html/rd/p/000000031.000079365.html",
-      "agg": false
-     },
-     {
-      "label": "PitchBook",
-      "url": "https://pitchbook.com/profiles/company/711417-34",
-      "agg": true
-     },
-     {
-      "label": "Typus",
+      "label": "typus.finance",
       "url": "https://typus.finance",
       "agg": false
      }
     ],
-    "level": "partial"
+    "level": "confirmed",
+    "heading": "BACKED BY"
    },
    "price": 0.00037416,
    "ch24": -7.31747,
@@ -2789,57 +2132,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
-    "rounds": [
-     {
-      "date": "2020-06",
-      "round": "Seed",
-      "amount": 1040500,
-      "lead": [],
-      "as": "dHEDGE",
-      "src": "https://icodrops.com/dhedge/",
-      "agg": true
-     },
-     {
-      "date": "2020-07",
-      "round": "Strategic",
-      "amount": 1360313,
-      "lead": [],
-      "as": "dHEDGE",
-      "src": "https://icodrops.com/dhedge/",
-      "agg": true
-     }
-    ],
-    "vcs": [
-     "Framework Ventures",
-     "Three Arrows Capital",
-     "BlockTower Capital",
-     "DACM",
-     "Maple Leaf Capital"
-    ],
+    "rounds": [],
+    "vcs": [],
     "angels": [],
     "reported": [],
-    "sources": [
-     {
-      "label": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/synthetix-takes-mimetic-trading-platform-out-of-stealth-mode",
-      "agg": false
-     },
-     {
-      "label": "ICO Drops",
-      "url": "https://icodrops.com/dhedge/",
-      "agg": true
-     },
-     {
-      "label": "Chamber docs",
-      "url": "https://docs.chamberfi.com/ecosystem/toros-finance",
-      "agg": false
-     }
-    ],
-    "level": "partial"
+    "sources": [],
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": 0.04072675,
    "ch24": -6.98886,
@@ -2939,16 +2241,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -2992,16 +2294,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
-    "summary": "No VC round — funded by its DAO via option exercise",
+    "level": "none",
+    "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -3042,16 +2344,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -3092,62 +2394,16 @@
    ],
    "note": "",
    "backers": {
+    "level": "none",
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
     "total": null,
     "totalNote": "",
-    "incubator": null,
-    "summary": null,
-    "rounds": [
-     {
-      "date": "2021-05",
-      "round": "Seed",
-      "amount": null,
-      "lead": [],
-      "as": "Dopex",
-      "src": "https://www.caplight.com/company/stryke",
-      "agg": true
-     },
-     {
-      "date": "2021-06",
-      "round": "Public token sale",
-      "amount": 1050000,
-      "lead": [],
-      "as": "Dopex",
-      "src": "https://icodrops.com/dopex/",
-      "agg": true
-     }
-    ],
-    "vcs": [],
-    "angels": [
-     {
-      "name": "Tetranode",
-      "note": "advisor to Dopex"
-     },
-     {
-      "name": "DeFiGod",
-      "note": ""
-     }
-    ],
-    "reported": [
-     "LedgerPrime"
-    ],
-    "sources": [
-     {
-      "label": "ICO Drops",
-      "url": "https://icodrops.com/dopex/",
-      "agg": true
-     },
-     {
-      "label": "Caplight",
-      "url": "https://www.caplight.com/company/stryke",
-      "agg": true
-     },
-     {
-      "label": "Substack (Semaji)",
-      "url": "https://semaji.substack.com/p/the-definitive-guide-to-dopex-dpx?s=w",
-      "agg": false
-     }
-    ],
-    "level": "partial"
+    "incubator": null
    },
    "price": 0.0450387,
    "ch24": -0.12384,
@@ -3241,16 +2497,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -3291,16 +2547,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -3341,16 +2597,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -3391,69 +2647,35 @@
    ],
    "note": "",
    "backers": {
-    "total": 3250000,
+    "total": null,
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2020-11",
-      "round": "Seed",
-      "amount": 3250000,
-      "lead": [],
-      "as": null,
-      "src": "https://fintech.global/2020/11/09/opium-protocol-secures-its-3-25m-in-its-new-funding-round/",
-      "agg": false
-     }
-    ],
+    "rounds": [],
     "vcs": [
-     "QCP Soteria",
-     "HashKey",
+     "HashKey Capital",
      "Galaxy Digital",
+     "CMS",
      "Rockaway Blockchain Fund",
-     "MetaCartel Ventures",
+     "QSN",
+     "LAUNCHub Ventures",
      "Alameda Research",
-     "Launch Hub",
-     "CMS Holdings",
-     "Kenetic Capital",
-     "One Block",
-     "SevenX",
+     "FBG",
      "Zee Prime Capital",
-     "Digital Strategies"
+     "SevenX Ventures",
+     "QCP Capital"
     ],
-    "angels": [
-     {
-      "name": "Stani Kulechov",
-      "note": "founder of Aave; joined Opium as advisor"
-     },
-     {
-      "name": "Jordan Momtazi",
-      "note": "founder of Synthetix"
-     },
-     {
-      "name": "Trevor Koverko",
-      "note": "founder of Polymath"
-     }
-    ],
+    "angels": [],
     "reported": [],
     "sources": [
      {
-      "label": "fintech.global",
-      "url": "https://fintech.global/2020/11/09/opium-protocol-secures-its-3-25m-in-its-new-funding-round/",
-      "agg": false
-     },
-     {
-      "label": "Yahoo Finance",
-      "url": "https://finance.yahoo.com/news/opium-raises-3-3m-exotic-131347297.html",
-      "agg": false
-     },
-     {
-      "label": "Forklog",
-      "url": "https://forklog.com/en/defi-project-opium-protocol-raises-3-25-million-from-alameda-research-and-galaxy-digital/",
+      "label": "opium.network",
+      "url": "https://opium.network",
       "agg": false
      }
     ],
-    "level": "confirmed"
+    "level": "confirmed",
+    "heading": "Backed and contributed by"
    },
    "price": 0.01014865,
    "ch24": -0.17055,
@@ -3550,78 +2772,34 @@
    ],
    "note": "",
    "backers": {
-    "total": 2600000,
+    "total": null,
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2021-02",
-      "round": "Seed + Private",
-      "amount": 2600000,
-      "lead": [],
-      "as": null,
-      "src": "https://www.coinspeaker.com/oddz-finance-smart-derivatives/",
-      "agg": false
-     }
-    ],
+    "rounds": [],
     "vcs": [
-     "Woodstock Fund",
-     "AU21 Capital",
-     "GBV Capital",
-     "Krypital Group",
-     "X21",
-     "Fire Protocol",
-     "Amesten Capital",
      "TRGC",
-     "NGC Capital",
-     "EX Network",
+     "Woodstock",
+     "Krypital Group",
+     "AU21 Capital",
+     "NGC Ventures",
+     "GBV",
+     "x21",
+     "Exnetwork Capital",
      "Altonomy",
-     "Lotus Capital",
-     "Lumen Capital",
-     "Maha DAO",
-     "DAO Ventures"
+     "Ames"
     ],
-    "angels": [
-     {
-      "name": "Sandeep Nailwal",
-      "note": "Polygon"
-     },
-     {
-      "name": "Ravindra Kumar",
-      "note": "Frontier"
-     },
-     {
-      "name": "Tushar Aggarwal",
-      "note": "Persistence"
-     },
-     {
-      "name": "Chandresh Aharwar",
-      "note": "Unilend Finance"
-     },
-     {
-      "name": "Aniket Jindal",
-      "note": "Biconomy"
-     },
-     {
-      "name": "Etiënne",
-      "note": "TRGC"
-     }
-    ],
+    "angels": [],
     "reported": [],
     "sources": [
      {
-      "label": "Coinspeaker",
-      "url": "https://www.coinspeaker.com/oddz-finance-smart-derivatives/",
-      "agg": false
-     },
-     {
-      "label": "Oddz blog (Medium)",
-      "url": "https://medium.com/oddz-finance/oddz-finance-raises-2-6m-5bce118f231b",
+      "label": "oddz.fi",
+      "url": "https://oddz.fi",
       "agg": false
      }
     ],
-    "level": "confirmed"
+    "level": "confirmed",
+    "heading": "Backers"
    },
    "price": 0.000171,
    "ch24": null,
@@ -3662,57 +2840,16 @@
    "note": "",
    "isNew": false,
    "backers": {
-    "total": 5000000,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
-    "rounds": [
-     {
-      "date": "2025-02",
-      "round": "Seed",
-      "amount": 5000000,
-      "lead": [
-       "Quantstamp",
-       "Republic"
-      ],
-      "as": null,
-      "src": "https://www.chaincatcher.com/en/article/2166319",
-      "agg": true
-     }
-    ],
-    "vcs": [
-     "Quantstamp",
-     "Republic",
-     "Arbelos Markets",
-     "PANONY Group",
-     "RSK Capital",
-     "Samara Alpha"
-    ],
+    "rounds": [],
+    "vcs": [],
     "angels": [],
     "reported": [],
-    "sources": [
-     {
-      "label": "ChainCatcher",
-      "url": "https://www.chaincatcher.com/en/article/2166319",
-      "agg": true
-     },
-     {
-      "label": "Odaily",
-      "url": "https://www.odaily.news/en/newsflash/417474",
-      "agg": true
-     },
-     {
-      "label": "X (@ProdigyFi)",
-      "url": "https://x.com/ProdigyFi/status/1887848917842403560",
-      "agg": false
-     },
-     {
-      "label": "Caplight",
-      "url": "https://www.caplight.com/company/prodigy-fi",
-      "agg": true
-     }
-    ],
-    "level": "confirmed"
+    "sources": [],
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -3755,16 +2892,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -3808,16 +2945,16 @@
    "note": "",
    "isNew": false,
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -3858,16 +2995,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -3911,16 +3048,16 @@
    "note": "",
    "isNew": false,
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -3962,98 +3099,28 @@
    ],
    "note": "",
    "backers": {
-    "total": 2800000,
+    "total": null,
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2024-01",
-      "round": "Pre-seed",
-      "amount": 2500000,
-      "lead": [
-       "Cumberland",
-       "Wintermute Ventures"
-      ],
-      "as": null,
-      "src": "https://chainwire.org/2024/01/31/composable-option-protocol-announces-pre-seed-round-led-by-cumberland-and-wintermute-ventures/",
-      "agg": false
-     }
-    ],
+    "rounds": [],
     "vcs": [
+     "Wintermute",
      "Cumberland",
-     "Wintermute Ventures",
      "Room40 Ventures",
-     "Ghaf Capital Partners",
-     "Enjinstarter",
-     "Merit Circle",
-     "Tradedog"
+     "Ghaf Capital Partners"
     ],
-    "angels": [
-     {
-      "name": "Andrew Keys",
-      "note": ""
-     },
-     {
-      "name": "Georgios Vlachos",
-      "note": "co-founder of Axelar"
-     },
-     {
-      "name": "Stan Miroshnik",
-      "note": "managing partner of TenSquared Capital"
-     },
-     {
-      "name": "Pranav Sharma",
-      "note": "general partner at Woodstock"
-     },
-     {
-      "name": "Mansoor Madhavji",
-      "note": "managing partner at BFF"
-     },
-     {
-      "name": "Aly Madhavji",
-      "note": "managing partner at BFF"
-     },
-     {
-      "name": "Yoeri Krom",
-      "note": "managing partner at Existential VC"
-     },
-     {
-      "name": "Psycho",
-      "note": ""
-     },
-     {
-      "name": "traderMayne",
-      "note": ""
-     },
-     {
-      "name": "rookieXBT",
-      "note": ""
-     },
-     {
-      "name": "Dentoshi",
-      "note": ""
-     }
-    ],
+    "angels": [],
     "reported": [],
     "sources": [
      {
-      "label": "Chainwire",
-      "url": "https://chainwire.org/2024/01/31/composable-option-protocol-announces-pre-seed-round-led-by-cumberland-and-wintermute-ventures/",
-      "agg": false
-     },
-     {
-      "label": "The Defiant",
-      "url": "https://thedefiant.io/news/press-releases/ithaca-protocol-launches-live-beta-announces-airdrop-campaign",
-      "agg": false
-     },
-     {
-      "label": "crypto.news",
-      "url": "https://crypto.news/ithaca-finance-raises-2-5m-to-build-on-chain-options-protocol/",
+      "label": "ithacaprotocol.io",
+      "url": "https://www.ithacaprotocol.io/",
       "agg": false
      }
     ],
-    "level": "confirmed"
+    "level": "confirmed",
+    "heading": "Investors"
    },
    "price": 0.00073092,
    "ch24": 8.70776,
@@ -4151,16 +3218,16 @@
    ],
    "note": "",
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
-    "summary": "2018 token sale; no named investors",
+    "level": "none",
+    "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": 0.00037307,
    "ch24": -0.17055,
@@ -4262,86 +3329,32 @@
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2021-02",
-      "round": "Seed",
-      "amount": 150000,
-      "lead": [],
-      "as": null,
-      "src": "https://cryptobriefing.com/how-defi-project-antimatter-tanked-its-own-token-price/",
-      "agg": false
-     },
-     {
-      "date": null,
-      "round": "Private",
-      "amount": 550000,
-      "lead": [],
-      "as": null,
-      "src": "https://cryptobriefing.com/how-defi-project-antimatter-tanked-its-own-token-price/",
-      "agg": false
-     },
-     {
-      "date": "2021-04",
-      "round": "Strategic",
-      "amount": null,
-      "lead": [
-       "Huobi DeFi Labs"
-      ],
-      "as": null,
-      "src": "https://bitunebtc.medium.com/huobi-defi-labs-invests-in-antimatter-bfee3fc42266",
-      "agg": false
-     }
-    ],
-    "vcs": [
-     "Huobi DeFi Labs",
-     "NGC Ventures",
-     "Monday Capital",
-     "Spark Digital Capital"
-    ],
+    "rounds": [],
+    "vcs": [],
     "angels": [
      {
       "name": "Tekin Salimi",
-      "note": "general partner at Polychain Capital"
+      "note": ""
      },
      {
       "name": "Justin Sun",
-      "note": "founder of TRON"
+      "note": ""
      },
      {
       "name": "Brian Lee",
-      "note": "partner at Alameda Research Ventures"
+      "note": ""
      }
     ],
     "reported": [],
     "sources": [
      {
-      "label": "Antimatter",
+      "label": "antimatter.finance",
       "url": "https://antimatter.finance",
-      "agg": false
-     },
-     {
-      "label": "Antimatter docs",
-      "url": "https://docs.antimatter.finance/antimatter-dao/introduction",
-      "agg": false
-     },
-     {
-      "label": "Medium (Huobi DeFi Labs)",
-      "url": "https://bitunebtc.medium.com/huobi-defi-labs-invests-in-antimatter-bfee3fc42266",
-      "agg": false
-     },
-     {
-      "label": "Medium (AMA recap)",
-      "url": "https://bitunebtc.medium.com/antimatter-x-daku-ama-recap-18c6f83c91a0",
-      "agg": false
-     },
-     {
-      "label": "Crypto Briefing",
-      "url": "https://cryptobriefing.com/how-defi-project-antimatter-tanked-its-own-token-price/",
       "agg": false
      }
     ],
-    "level": "partial"
+    "level": "confirmed",
+    "heading": "Backed by"
    },
    "price": 0.00113558,
    "ch24": null,
@@ -4438,51 +3451,34 @@
    ],
    "note": "",
    "backers": {
-    "total": 2000000,
+    "total": null,
     "totalNote": "",
     "incubator": null,
     "summary": null,
-    "rounds": [
-     {
-      "date": "2023-05",
-      "round": "Seed",
-      "amount": 2000000,
-      "lead": [
-       "Dialectic"
-      ],
-      "as": null,
-      "src": "https://medium.com/smilee-finance/announcing-our-2m-seed-raise-bf93d078ab9d",
-      "agg": false
-     }
-    ],
+    "rounds": [],
     "vcs": [
      "Dialectic",
      "Synergis Capital",
-     "Concave Ventures",
+     "New Order",
+     "DeWhales Capital",
+     "Outlier Ventures",
+     "Concave",
      "Owl Ventures",
      "Yunt Capital",
-     "Dewhales Capital",
-     "Outlier Ventures",
-     "New Order",
-     "Multisig Ventures",
      "GTS Ventures",
-     "Hyperpyra"
+     "Multisig Ventures"
     ],
     "angels": [
-     {
-      "name": "Marc Zeller",
-      "note": "founder of Aave Chan Initiative"
-     },
      {
       "name": "0xSami",
       "note": ""
      },
      {
-      "name": "Barry Fried",
+      "name": "Marc Zeller",
       "note": ""
      },
      {
-      "name": "Darren Camas",
+      "name": "Barry Fried",
       "note": ""
      },
      {
@@ -4493,27 +3489,13 @@
     "reported": [],
     "sources": [
      {
-      "label": "Smilee blog (Medium)",
-      "url": "https://medium.com/smilee-finance/announcing-our-2m-seed-raise-bf93d078ab9d",
+      "label": "smilee.finance",
+      "url": "https://smilee.finance",
       "agg": false
-     },
-     {
-      "label": "Forbes Italia",
-      "url": "https://forbes.it/2023/06/21/questi-due-under-30-hanno-raccolto-due-milioni-di-dollari-per-la-loro-startup-di-finanza-decentralizzata/",
-      "agg": false
-     },
-     {
-      "label": "CoinCarp",
-      "url": "https://www.coincarp.com/fundraising/smilee-seed/",
-      "agg": true
-     },
-     {
-      "label": "VCBacked",
-      "url": "https://www.vcbacked.co/company/smilee-finance",
-      "agg": true
      }
     ],
-    "level": "confirmed"
+    "level": "confirmed",
+    "heading": "Backed By"
    },
    "price": 0.01693376,
    "ch24": null,
@@ -4613,16 +3595,16 @@
    "note": "",
    "isNew": false,
    "backers": {
-    "total": null,
-    "totalNote": "",
-    "incubator": null,
+    "level": "none",
     "summary": null,
     "rounds": [],
     "vcs": [],
     "angels": [],
     "reported": [],
     "sources": [],
-    "level": "none"
+    "total": null,
+    "totalNote": "",
+    "incubator": null
    },
    "price": null,
    "ch24": null,
@@ -4694,12 +3676,13 @@
     "reported": [],
     "sources": [
      {
-      "label": "Omen",
+      "label": "omen.trade",
       "url": "https://omen.trade",
       "agg": false
      }
     ],
-    "level": "confirmed"
+    "level": "confirmed",
+    "heading": "Backed by"
    },
    "price": null,
    "ch24": null,
