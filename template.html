@@ -614,16 +614,20 @@ body.sharing .wrap,body.sharing .ticker,body.sharing .bgart{display:none}
 .cl .home{font-size:11px;color:var(--mute);margin-top:auto}
 
 /* 생태계 전체 (토큰 상태별) */
-.habitats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 32px}
-.hab h3{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);font-weight:500;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:6px;display:flex;justify-content:space-between}
+.habitats{display:flex;flex-direction:column;gap:30px}
+.hab h3{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);font-weight:500;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:12px;display:flex;justify-content:space-between}
 .hab h3 span{color:var(--mute);letter-spacing:.04em}
-.chipp{display:flex;align-items:center;gap:10px;padding:7px 4px;border-radius:8px;cursor:pointer}
-.chipp:hover{background:rgba(236,231,220,.04)}
-.chipp img,.chipp .logo-ph{width:24px;height:24px;border-radius:50%;object-fit:cover;flex:none}
-.chipp .n{font-size:13.5px;font-weight:500}
-.chipp .n.core{color:var(--amber)}
-.chipp .t{font-family:var(--mono);font-size:11px;color:var(--mute)}
-.chipp .k{font-size:11.5px;color:var(--mute);margin-left:auto;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46%}
+.hg{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
+.chipp{display:flex;align-items:center;gap:12px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(18,19,16,.7);min-width:0;transition:border-color .2s,background .2s,transform .2s}
+.chipp:hover{border-color:rgba(242,181,68,.55);background:rgba(18,19,16,.95);transform:translateY(-1px)}
+.chipp.fr{border-color:rgba(242,181,68,.22);background:linear-gradient(135deg,rgba(242,181,68,.07),rgba(18,19,16,.7) 60%)}
+.chipp img,.chipp .logo-ph{width:32px;height:32px;border-radius:50%;object-fit:cover;flex:none}
+.chipp .tx{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.chipp .n{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chipp.fr .n{color:var(--amber)}
+.chipp .n em{font-style:normal;font-size:11px;font-weight:500;color:var(--mute);margin-left:7px}
+.chipp .k{font-size:11.5px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chipp .c{font-size:11.5px;flex:none}
 
 /* 콘텐츠 */
 .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -1622,7 +1626,7 @@ const HAB_GROUPS = [
 function renderHabitats(){
   const groups = HAB_GROUPS.map(([h, f]) => [h, SNAP.projects.filter(f).sort((a,b) => a.name.localeCompare(b.name))]).filter(([, ps]) => ps.length);
   $('habitats').innerHTML = groups.map(([h, ps]) => {
-    return `<div class="hab"><h3>${esc(h)}<span>${ps.length}</span></h3>${ps.map(p => `<a class="chipp" href="${deepHref(p)}">${logo(p)}<span class="n${p.core ? ' core' : ''}">${esc(p.name)}</span><span class="t">${esc(p.ticker ? '$' + p.ticker : '')}</span><span class="k">${esc((p.keywords || [])[0] || '')}</span></a>`).join('')}</div>`;
+    return `<div class="hab"><h3>${esc(h)}<span>${ps.length}</span></h3><div class="hg">${ps.map(p => `<a class="chipp${p.core ? ' fr' : ''}" href="${deepHref(p)}">${logo(p)}<span class="tx"><span class="n">${esc(p.name)}${p.ticker ? `<em>$${esc(p.ticker)}</em>` : ''}</span><span class="k">${esc((p.keywords || [])[0] || p.home || '')}</span></span>${p.ticker && p.ch24 != null ? `<span class="c">${pct(p.ch24)}</span>` : ''}</a>`).join('')}</div></div>`;
   }).join('');
 }
 

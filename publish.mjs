@@ -269,6 +269,13 @@ function digest(s, cfg) {
 // ── 새 옵션 프로젝트 자동 발견 ─────────────────────────────────
 // DefiLlama 옵션 카테고리 + 옵션 거래량 목록에서 살아 있는(TVL ≥ $10K 또는 거래량 있음) 곳 중
 // data.json 에 없는 것을 뒤에 붙인다. 설명은 영어 원문이라 auto:true 로 표시해 둔다.
+// 자동 추가 설명: 첫 문장(최대 120자), 길면 단어 경계에서 자르고 …
+function shortWhat(t) {
+  t = String(t).replace(/\s+/g, ' ').trim();
+  const first = (t.match(/^.+?[.!?](\s|$)/) || [t])[0].trim();
+  if (first.length <= 120) return first.replace(/[.]$/, '');
+  return first.slice(0, 118).replace(/\s+\S*$/, '') + '…';
+}
 async function discover(cfg) {
   const get = u => fetch(u).then(r => r.ok ? r.json() : null).catch(() => null);
   const [protos, opt, lite] = await Promise.all([
@@ -299,7 +306,7 @@ async function discover(cfg) {
     const cg = par.gecko_id || g.m.map(x => x.gecko_id).find(Boolean) || '';
     cfg.projects.push({
       ticker: '', name, stage: cg ? 'post' : 'pre', core: false, lineage: '', origin: '',
-      home: HOME[(m.chains || [])[0]] || '기타', what: (par.description || m.description || '').slice(0, 120),
+      home: HOME[(m.chains || [])[0]] || 'Other', what: shortWhat(par.description || m.description || ''),
       cg, llama: [g.k], site: par.url || m.url || '', x: par.twitter || m.twitter || '', keywords: [], note: '', auto: true,
     });
     added.push(name);
