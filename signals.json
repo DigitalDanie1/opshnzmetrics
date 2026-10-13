@@ -54,5 +54,25 @@
   "text": "BVIV 39.7 (+2.0% 24h) — BTC implied vol ticking up",
   "href": "#/deep/Volmex",
   "key": "BVIV"
+ },
+ {
+  "d": "2026-10-13",
+  "kind": "new",
+  "text": "New options project spotted: HedgeHood",
+  "href": "#/deep/HedgeHood"
+ },
+ {
+  "d": "2026-10-13",
+  "kind": "move",
+  "text": "$DRV −8.2% in 24h",
+  "href": "#/deep/Derive",
+  "key": "$DRV"
+ },
+ {
+  "d": "2026-10-13",
+  "kind": "vol",
+  "text": "BVIV 38.9 (−1.9% 24h) — BTC implied vol easing",
+  "href": "#/deep/Volmex",
+  "key": "BVIV"
  }
 ]

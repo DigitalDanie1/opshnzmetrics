@@ -1,5 +1,5 @@
 {
- "at": "2026-10-12T07:17:03.969Z",
+ "at": "2026-10-13T07:39:03.435Z",
  "week": "2026-W42",
  "ok": {
   "prices": true,
@@ -21,23 +21,23 @@
  "majors": [
   {
    "t": "BTC",
-   "price": 84231,
-   "ch24": 1.36218
+   "price": 83886,
+   "ch24": -0.03598
   },
   {
    "t": "ETH",
-   "price": 2574.57,
-   "ch24": 2.81011
+   "price": 2532.52,
+   "ch24": -1.21776
   },
   {
    "t": "HYPE",
-   "price": 87.9,
-   "ch24": 3.51216
+   "price": 83.03,
+   "ch24": -5.19646
   },
   {
    "t": "SOL",
-   "price": 112.92,
-   "ch24": 2.94648
+   "price": 108.58,
+   "ch24": -3.62448
   }
  ],
  "projects": [
@@ -63,39 +63,188 @@
    ],
    "note": "",
    "app": "https://www.derive.xyz/options/eth",
-   "price": 0.463423,
-   "ch24": -6.73924,
-   "ch7": 14.4505,
-   "ch30": 212.146,
-   "mcap": 463185856,
-   "fdv": 695021150,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2021-07",
+      "round": "Seed",
+      "amount": 3300000,
+      "lead": [
+       "Framework Ventures",
+       "ParaFi Capital"
+      ],
+      "as": "Lyra",
+      "src": "https://insights.derive.xyz/lyra-dao-raises-3-3m/",
+      "agg": false
+     },
+     {
+      "date": "2022-11",
+      "round": "Strategic",
+      "amount": 3000000,
+      "lead": [
+       "Framework Ventures",
+       "GSR"
+      ],
+      "as": "Lyra",
+      "src": "https://insights.derive.xyz/lyra-raises-strategic-round/",
+      "agg": false
+     },
+     {
+      "date": "2024-09",
+      "round": "Angel",
+      "amount": null,
+      "lead": [],
+      "as": null,
+      "src": "https://www.chaincatcher.com/en/article/2142980",
+      "agg": true
+     },
+     {
+      "date": "2026-02",
+      "round": "Strategic (DRV tokens)",
+      "amount": null,
+      "lead": [
+       "Variant"
+      ],
+      "as": null,
+      "src": "https://insights.derive.xyz/variant-invests-in-derive-to-build-the-volatility-layer-onchain/",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Framework Ventures",
+     "ParaFi Capital",
+     "GSR",
+     "Variant",
+     "DeFi Alliance",
+     "Divergence",
+     "Orthogonal Trading",
+     "Robot Ventures",
+     "Apollo Capital"
+    ],
+    "angels": [
+     {
+      "name": "Kain Warwick",
+      "note": "Synthetix"
+     },
+     {
+      "name": "Jordan Momtazi",
+      "note": "Synthetix"
+     },
+     {
+      "name": "Jing",
+      "note": "Optimism"
+     },
+     {
+      "name": "Stani",
+      "note": "Aave"
+     },
+     {
+      "name": "Ryan",
+      "note": "Bankless"
+     },
+     {
+      "name": "Anton",
+      "note": "1inch"
+     },
+     {
+      "name": "Tyler",
+      "note": "Barnbridge"
+     },
+     {
+      "name": "Hasu",
+      "note": ""
+     },
+     {
+      "name": "wsbmod",
+      "note": ""
+     },
+     {
+      "name": "Kieran",
+      "note": "Illuvium"
+     },
+     {
+      "name": "Anthony",
+      "note": "The Daily Gwei"
+     },
+     {
+      "name": "Rok Kopp",
+      "note": "co-founder of EtherFi"
+     },
+     {
+      "name": "DCFGOD",
+      "note": ""
+     },
+     {
+      "name": "SPREEK",
+      "note": ""
+     }
+    ],
+    "reported": [
+     "Magnet Capital"
+    ],
+    "sources": [
+     {
+      "label": "Derive blog (2021)",
+      "url": "https://insights.derive.xyz/lyra-dao-raises-3-3m/",
+      "agg": false
+     },
+     {
+      "label": "Derive blog (2022)",
+      "url": "https://insights.derive.xyz/lyra-raises-strategic-round/",
+      "agg": false
+     },
+     {
+      "label": "The Block",
+      "url": "https://www.theblock.co/news/defi/2021-07-26-3-3-million-raised-for-ethereum-options-protocol-built-on-optimism-and-synthetix-112505",
+      "agg": false
+     },
+     {
+      "label": "ChainCatcher",
+      "url": "https://www.chaincatcher.com/en/article/2142980",
+      "agg": true
+     },
+     {
+      "label": "Derive blog (2026)",
+      "url": "https://insights.derive.xyz/variant-invests-in-derive-to-build-the-volatility-layer-onchain/",
+      "agg": false
+     },
+     {
+      "label": "CoinCarp",
+      "url": "https://www.coincarp.com/fundraising/lyra-seed/",
+      "agg": true
+     }
+    ],
+    "level": "confirmed"
+   },
+   "price": 0.428025,
+   "ch24": -8.22652,
+   "ch7": 4.7248,
+   "ch30": 191.0458,
+   "mcap": 427878544,
+   "fdv": 642041708,
    "ath": 0.569299,
    "athDate": "2026-10-09T15:40:00.000Z",
    "rank": 125,
    "logo": "logos/auto/ddf350ab3656.png",
    "spark": [
-    0.4060560639761038,
-    0.4110905505242623,
-    0.40688332280747896,
-    0.40133938693775967,
-    0.39732047155323996,
-    0.401789743751685,
-    0.4137123175732917,
-    0.40933913123784155,
     0.4101970276502989,
     0.41308691642084855,
     0.41144513949864564,
     0.41119335505903076,
     0.411996421891823,
     0.40331742169804646,
-    0.4025644393877299,
-    0.39731761803082255,
-    0.39856661240540725,
-    0.378311861726985,
-    0.3494838051405759,
-    0.37622078930826763,
-    0.3723526226130522,
-    0.3710780174548374,
+    0.40627167656688157,
+    0.39488276029173613,
+    0.3980073985319092,
+    0.3874571755694306,
+    0.3659658788191922,
+    0.37082385376996335,
+    0.3662124940632424,
+    0.3691038671623373,
     0.37717673237575616,
     0.3634422555862556,
     0.3617247400847506,
@@ -116,30 +265,38 @@
     0.5479932597875438,
     0.5632436642180789,
     0.5461980949780817,
-    0.5517909678641757,
-    0.5475618561142891,
-    0.5277873226503909,
-    0.5375729093462743,
-    0.5092691934468163,
-    0.5010965061786214,
-    0.4907855732236256,
-    0.5086306799239647,
+    0.5544293934698472,
+    0.5543435925284654,
+    0.5295344866813044,
+    0.5371837483199174,
+    0.5095688367447458,
+    0.5052121392560048,
+    0.49246731570754854,
+    0.5016929695951736,
     0.49564887892297504,
     0.5051053533854574,
     0.5093183129274553,
     0.4979800513430066,
     0.4826564506791137,
-    0.46911513253738935
+    0.46911513253738935,
+    0.4646049629795486,
+    0.45843796606461523,
+    0.45474236618911984,
+    0.4412205839471057,
+    0.45615281898741433,
+    0.44253073680234134,
+    0.4147112303542734,
+    0.4320583154841179
    ],
-   "vol30": 4236359441,
-   "vol7": 536990760,
-   "prem30": 80560910,
+   "vol30": 4341966744,
+   "vol7": 619417175,
+   "prem30": 83033427,
    "volSlugs": [
     "derive-options",
     "derive-v3-options",
     "derive-v1"
    ],
-   "tvl": 113896773.611557,
+   "tvl": 107449367.06734635,
    "since": "2023-12"
   },
   {
@@ -178,39 +335,49 @@
     ]
    },
    "app": "https://app.paradex.trade/trade/BTC-USD-PERP",
-   "price": 0.062403,
-   "ch24": -8.06114,
-   "ch7": 37.3527,
-   "ch30": 364.1554,
-   "mcap": 41738419,
-   "fdv": 62403724,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": "Paradigm",
+    "summary": "Incubated by Paradigm — Paradex did not raise venture capital (Paradex Foundation)",
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [
+     {
+      "label": "Paradex Foundation",
+      "url": "https://www.paradex.foundation/blog/introducing-dime-the-native-token-of-the-paradex-network",
+      "agg": false
+     }
+    ],
+    "level": "partial"
+   },
+   "price": 0.061535,
+   "ch24": -0.93285,
+   "ch7": 36.3653,
+   "ch30": 413.0175,
+   "mcap": 41157443,
+   "fdv": 61535099,
    "ath": 0.102264,
    "athDate": "2026-10-11T08:27:50.000Z",
-   "rank": 556,
+   "rank": 537,
    "logo": "logos/auto/47bc15dbf845.png",
    "spark": [
-    0.04530150292183037,
-    0.04517692814743055,
-    0.04569468707639559,
-    0.04486584529663246,
-    0.04390693376685625,
-    0.04410119240678769,
-    0.04518988515748903,
-    0.045180238163555805,
     0.045143684502547465,
     0.04496108347992456,
     0.04514376385873562,
     0.04514244470390435,
     0.045160050226790906,
     0.045093590206177064,
-    0.045096368272678204,
-    0.044755116785756686,
-    0.04254910984464632,
-    0.04228062914684997,
-    0.042954795310077086,
-    0.04293932224368855,
-    0.04051341123251815,
-    0.04100314044842726,
+    0.045098844734217124,
+    0.042581601480226564,
+    0.042631654373691756,
+    0.04249223885805698,
+    0.04221867357509487,
+    0.040479375738209096,
+    0.040476476045479375,
+    0.041001897836917885,
     0.04131523089037961,
     0.041086871277257575,
     0.0410809444291944,
@@ -231,28 +398,36 @@
     0.06984915243054565,
     0.06848290037009354,
     0.06834442514584828,
-    0.06893483699486584,
-    0.06965458611377945,
-    0.06807609267176337,
-    0.06981957283204335,
-    0.06754548603198561,
-    0.06662147688439819,
-    0.07478117949490626,
-    0.06463718045026728,
+    0.06925995038197792,
+    0.07123286513093582,
+    0.06980785142254307,
+    0.06703548644093683,
+    0.06723268611222603,
+    0.06800181954825896,
+    0.06721200556604566,
+    0.06887228169526562,
     0.05591113420552934,
     0.0583493038202277,
     0.05791811811788522,
     0.06204506268451965,
     0.06178086325019831,
-    0.06277789785158185
+    0.06277789785158185,
+    0.062235777135124626,
+    0.06211153131158939,
+    0.06312963615361557,
+    0.06252757359975178,
+    0.06204853872094508,
+    0.06220127134387907,
+    0.0622742020016917,
+    0.06189166214689799
    ],
-   "vol30": 455549796,
-   "vol7": 42857237,
-   "prem30": 3886564,
+   "vol30": 459874634,
+   "vol7": 37010928,
+   "prem30": 3915165,
    "volSlugs": [
     "paradex-options"
    ],
-   "tvl": 32425139.819360875,
+   "tvl": 32284048.279269066,
    "since": "2023-10"
   },
   {
@@ -290,39 +465,113 @@
     ]
    },
    "app": "https://app.thetanuts.finance",
-   "price": 0.00096726,
-   "ch24": 0.40652,
-   "ch7": 3.6135,
-   "ch30": -5.5098,
-   "mcap": 3053913,
-   "fdv": 9672361,
+   "backers": {
+    "total": 35000000,
+    "totalNote": "sum of disclosed rounds",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2022-03",
+      "round": "Seed",
+      "amount": 18000000,
+      "lead": [
+       "Three Arrows Capital",
+       "Deribit",
+       "QCP Capital",
+       "Jump Crypto"
+      ],
+      "as": null,
+      "src": "https://www.coindesk.com/business/2022/03/01/defi-platform-thetanuts-finance-raises-18m-seed-funding-to-fuel-growth",
+      "agg": false
+     },
+     {
+      "date": "2023-04",
+      "round": "Institutional round",
+      "amount": 17000000,
+      "lead": [
+       "Polychain Capital",
+       "Hyperchain Capital",
+       "Magnus Capital"
+      ],
+      "as": null,
+      "src": "https://www.coindesk.com/business/2023/04/24/defi-protocol-thetanuts-finance-raises-17m-for-expansion-new-partnerships",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Three Arrows Capital",
+     "Deribit",
+     "QCP Capital",
+     "Jump Crypto",
+     "Polychain Capital",
+     "Hyperchain Capital",
+     "Magnus Capital"
+    ],
+    "angels": [],
+    "reported": [
+     "Tribe Capital",
+     "Raptor Group",
+     "Borderless Capital",
+     "DeFi Capital",
+     "GoldenTree Asset Management",
+     "Mirana Ventures",
+     "Crypto.com Capital"
+    ],
+    "sources": [
+     {
+      "label": "CoinDesk (2022)",
+      "url": "https://www.coindesk.com/business/2022/03/01/defi-platform-thetanuts-finance-raises-18m-seed-funding-to-fuel-growth",
+      "agg": false
+     },
+     {
+      "label": "CoinDesk (2023)",
+      "url": "https://www.coindesk.com/business/2023/04/24/defi-protocol-thetanuts-finance-raises-17m-for-expansion-new-partnerships",
+      "agg": false
+     },
+     {
+      "label": "Forklog",
+      "url": "https://forklog.com/en/news/defi-protocol-thetanuts-raises-17m",
+      "agg": false
+     },
+     {
+      "label": "CoinCarp",
+      "url": "https://www.coincarp.com/de/fundraising/thetanuts-finance-seed/",
+      "agg": true
+     },
+     {
+      "label": "VCBacked",
+      "url": "https://www.vcbacked.co/company/thetanuts-finance",
+      "agg": true
+     }
+    ],
+    "level": "confirmed"
+   },
+   "price": 0.00098041,
+   "ch24": 1.35875,
+   "ch7": 0.0637,
+   "ch30": -3.7592,
+   "mcap": 3095523,
+   "fdv": 9804146,
    "ath": 0.0407299,
    "athDate": "2024-05-20T02:02:20.000Z",
-   "rank": 2053,
+   "rank": 2040,
    "logo": "logos/auto/6ad3283a5f8f.png",
    "spark": [
-    0.0009711701928038464,
-    0.0009797843264616468,
-    0.0009831071916333984,
-    0.0009864436903731795,
-    0.0009857192735024606,
-    0.000979949225749975,
-    0.0009793635071680198,
-    0.000981635781491669,
     0.0009814871472502609,
     0.0009798738207651525,
     0.0009863789223046044,
     0.0009881501234331182,
     0.000979078736130678,
     0.0009866980123333592,
-    0.0009830051061722764,
-    0.0009851902153076683,
-    0.0009797452462057096,
-    0.0009768027628709601,
-    0.0009826421597597353,
-    0.0009802764170298117,
-    0.0009768484520138482,
-    0.000977424264837072,
+    0.000978883251064704,
+    0.0009823752950402624,
+    0.000980903997123923,
+    0.0009767781623052304,
+    0.0009737885457864057,
+    0.0009784421910149098,
+    0.00097916877343295,
+    0.0009758827591998803,
     0.0009724740607804335,
     0.0009698161638469176,
     0.0009669468526080321,
@@ -343,28 +592,36 @@
     0.0009802089796745314,
     0.0009771955205731175,
     0.0009701866791301073,
-    0.0009771593319886842,
-    0.0009747932262463468,
-    0.000972272380235221,
-    0.0009718033068076402,
-    0.0009691715271497379,
-    0.0009623499377499372,
-    0.0009672969648118992,
-    0.0009761409483040736,
+    0.0009782334129584834,
+    0.0009742200881340525,
+    0.0009722301346458648,
+    0.0009707454288665408,
+    0.0009661749629566965,
+    0.0009597727280612213,
+    0.0009691938857201175,
+    0.0009780896016802377,
     0.000976019499738198,
     0.0009802103876593745,
     0.0009751632397806967,
     0.0009691469340244611,
     0.0009600316110694464,
-    0.000966145363227106
+    0.000966145363227106,
+    0.0009722207790857587,
+    0.0009734709618235136,
+    0.0009755901178957613,
+    0.000975955960166703,
+    0.0009804213841956952,
+    0.0009733456410046227,
+    0.0009777816662057824,
+    0.000978852419507685
    ],
-   "vol30": 396820,
-   "vol7": 109926,
-   "prem30": 11685.2,
+   "vol30": 419399,
+   "vol7": 111450,
+   "prem30": 12064,
    "volSlugs": [
     "thetanuts-finance"
    ],
-   "tvl": 216072.87056007006,
+   "tvl": 215056.40694477022,
    "since": "2021-12"
   },
   {
@@ -390,39 +647,111 @@
    ],
    "note": "",
    "app": "https://app.aevo.xyz/option/eth",
-   "price": 0.0270343,
-   "ch24": 1.72225,
-   "ch7": 1.9438,
-   "ch30": 21.2697,
-   "mcap": 25219747,
-   "fdv": 27039454,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2022-03",
+      "round": "Series A+",
+      "amount": 8750000,
+      "lead": [
+       "Paradigm"
+      ],
+      "as": "Ribbon",
+      "src": "https://www.coindesk.com/business/2022/03/22/paradigm-invests-875m-in-defis-ribbon-finance",
+      "agg": false
+     },
+     {
+      "date": "2024-05",
+      "round": "Strategic",
+      "amount": null,
+      "lead": [
+       "Binance Labs"
+      ],
+      "as": null,
+      "src": "https://www.coindesk.com/markets/2024/05/21/crypto-derivatives-dex-aevos-token-jumps-10-as-binance-labs-discloses-investment",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Paradigm",
+     "Binance Labs"
+    ],
+    "angels": [],
+    "reported": [
+     "Dragonfly Capital",
+     "Nascent",
+     "Coinbase Ventures",
+     "Scalar Capital",
+     "DeFi Alliance",
+     "Robot Ventures",
+     "Alliance DAO",
+     "Ethereal Ventures",
+     "Joseph Lubin (angel)",
+     "Hart Lambur (angel)"
+    ],
+    "sources": [
+     {
+      "label": "Ribbon blog",
+      "url": "https://ribbonfinance.medium.com/ribbon-partners-with-paradigm-6aa7219b1411",
+      "agg": false
+     },
+     {
+      "label": "CoinDesk (2022)",
+      "url": "https://www.coindesk.com/business/2022/03/22/paradigm-invests-875m-in-defis-ribbon-finance",
+      "agg": false
+     },
+     {
+      "label": "CoinDesk (2024)",
+      "url": "https://www.coindesk.com/markets/2024/05/21/crypto-derivatives-dex-aevos-token-jumps-10-as-binance-labs-discloses-investment",
+      "agg": false
+     },
+     {
+      "label": "Crowdfund Insider",
+      "url": "https://www.crowdfundinsider.com/2024/05/225414-binance-labs-invests-in-aevo-to-support-future-of-l2-blockchain-innovations/",
+      "agg": false
+     },
+     {
+      "label": "CoinCarp",
+      "url": "https://www.coincarp.com/project/ribbon-finance/",
+      "agg": true
+     },
+     {
+      "label": "CB Insights",
+      "url": "https://www.cbinsights.com/company/ribbon-finance/financials",
+      "agg": true
+     }
+    ],
+    "level": "partial"
+   },
+   "price": 0.02521228,
+   "ch24": -6.15501,
+   "ch7": -2.0162,
+   "ch30": 11.3735,
+   "mcap": 23515743,
+   "fdv": 25212499,
    "ath": 3.76,
    "athDate": "2024-03-27T16:05:46.000Z",
-   "rank": 767,
+   "rank": 780,
    "logo": "logos/auto/05698313103a.png",
    "spark": [
-    0.026606836201432442,
-    0.026468568339258126,
-    0.02665120680344098,
-    0.026097606868436523,
-    0.026298891426812666,
-    0.026561619224172807,
-    0.026436418137381297,
-    0.02569140064993248,
     0.02591935030673523,
     0.026179487111773245,
     0.02625524274504899,
     0.026212425201136157,
     0.02596211742150786,
     0.02585338367389764,
-    0.025243336487307685,
-    0.024698743908021664,
-    0.02491412778375649,
-    0.024647035841336717,
-    0.024536896450079126,
-    0.024895650314150433,
-    0.024723125059251883,
-    0.025123045511042892,
+    0.025925489404758247,
+    0.02486043716928578,
+    0.024885416219523625,
+    0.02458437753009777,
+    0.02457526861279584,
+    0.0248755362836837,
+    0.02472502288247877,
+    0.025237385232544776,
     0.026100822330692507,
     0.026123361785079045,
     0.026210815019372814,
@@ -443,28 +772,36 @@
     0.02678082509370477,
     0.026321789783860527,
     0.02639047290291388,
-    0.026301685229035553,
-    0.026065338915094452,
-    0.026148041113931254,
-    0.026421720607751234,
-    0.026403659412802788,
-    0.026213495589001202,
-    0.026452115167270526,
-    0.02593631713006401,
+    0.026073034471723964,
+    0.026123889955263848,
+    0.026250637396443618,
+    0.02607053395716889,
+    0.026332258963873582,
+    0.02597063867634481,
+    0.02659978729998012,
+    0.02593354486363049,
     0.026414517957633634,
     0.02644741701774155,
     0.026314812793385295,
     0.026193255547207646,
     0.025809486063015856,
-    0.026483177825923226
+    0.026483177825923226,
+    0.026474831531925053,
+    0.026141876900431373,
+    0.02558265953956061,
+    0.025486796800395593,
+    0.025897717669889207,
+    0.024970788669687938,
+    0.024832591792957538,
+    0.02535468485630458
    ],
-   "vol30": 66489781,
-   "vol7": 12582598,
-   "prem30": 1590384,
+   "vol30": 67215372,
+   "vol7": 13088693,
+   "prem30": 1608174,
    "volSlugs": [
     "aevo-options"
    ],
-   "tvl": 15306801.415386684,
+   "tvl": 15321261.405084368,
    "since": "2023-04"
   },
   {
@@ -501,39 +838,68 @@
     "timeline": []
    },
    "app": "https://app.hypercall.xyz",
-   "price": 0.197868,
-   "ch24": 1.43503,
-   "ch7": 6.6599,
-   "ch30": 138.4348,
-   "mcap": 43347191,
-   "fdv": 49468067,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": "A Synapse product — no separate Hypercall round. Synapse-era backers per aggregators.",
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [
+     "Alameda Research",
+     "Three Arrows Capital",
+     "CMS Holdings",
+     "DeFiance Capital",
+     "Mechanism Capital",
+     "Primitive Ventures",
+     "Immutable Capital",
+     "FJ Labs"
+    ],
+    "sources": [
+     {
+      "label": "Hypercall",
+      "url": "https://hypercall.xyz/foundation",
+      "agg": false
+     },
+     {
+      "label": "CB Insights",
+      "url": "https://www.cbinsights.com/company/synapse-protocol/financials",
+      "agg": true
+     },
+     {
+      "label": "TokenInsight",
+      "url": "https://tokeninsight.com/en/coins/synapse/tokenomics",
+      "agg": true
+     }
+    ],
+    "level": "partial"
+   },
+   "price": 0.200585,
+   "ch24": 0.72557,
+   "ch7": 10.3971,
+   "ch30": 147.1769,
+   "mcap": 43941516,
+   "fdv": 50146314,
    "ath": 4.92,
    "athDate": "2021-10-23T16:24:41.000Z",
-   "rank": 534,
+   "rank": 517,
    "logo": "logos/auto/41453dcae75c.png",
    "spark": [
-    0.1857952144368119,
-    0.18419911132012842,
-    0.18561859898957214,
-    0.18415647501321025,
-    0.18322145069615825,
-    0.18581824286272325,
-    0.18591027149396766,
-    0.18667026402544282,
     0.178565376304746,
     0.17852211806964177,
     0.1758723216662352,
     0.19233109941693366,
     0.18964952806532598,
     0.18770451386953677,
-    0.19052359732387827,
-    0.1870527180750384,
-    0.1918177630661146,
-    0.1903202877469371,
-    0.18417516002748058,
-    0.18941838041229817,
-    0.1865809720203149,
-    0.19359505633579244,
+    0.19203810649709765,
+    0.18939585626361347,
+    0.19793320113226562,
+    0.18763696362315163,
+    0.18403676891768997,
+    0.1881949934476391,
+    0.18572347924550664,
+    0.19077225518837576,
     0.19709151920818438,
     0.19237867099855988,
     0.19600115671984303,
@@ -554,26 +920,34 @@
     0.18459818026500258,
     0.18690856722573398,
     0.18972486158893906,
-    0.19018318926982972,
-    0.19257531772389783,
-    0.19167477990399828,
-    0.19057652553316484,
-    0.1931991448692009,
-    0.1942543017004656,
-    0.19585090249073353,
-    0.19298804988674545,
+    0.1884275276616195,
+    0.19249149078777164,
+    0.19175053803134204,
+    0.19132029376823007,
+    0.19024033952313954,
+    0.19317377671405628,
+    0.19498422909837648,
+    0.19348535745969833,
     0.19447319810227467,
     0.19713503571459698,
     0.19600607161544298,
     0.19727852606799184,
     0.19837721590825197,
-    0.2001003165659703
+    0.2001003165659703,
+    0.1968665316799778,
+    0.18614124130358756,
+    0.18043566022839025,
+    0.17991853609328232,
+    0.1866214546472854,
+    0.18435859230190643,
+    0.19322545093516397,
+    0.2008415133066063
    ],
    "vol30": null,
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 874189.842088896,
+   "tvl": 873435.2646686606,
    "since": "2026-07"
   },
   {
@@ -609,79 +983,139 @@
     "timeline": []
    },
    "app": "https://app.gammaswap.com",
-   "price": 0.00222826,
-   "ch24": null,
-   "ch7": -5.2086,
-   "ch30": -25.1396,
-   "mcap": 953792,
-   "fdv": 3566930,
+   "backers": {
+    "total": 1700000,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2023-02",
+      "round": "Seed",
+      "amount": 1700000,
+      "lead": [
+       "Skycatcher"
+      ],
+      "as": null,
+      "src": "https://www.chaincatcher.com/en/article/2087076",
+      "agg": true
+     }
+    ],
+    "vcs": [
+     "Skycatcher",
+     "Dialectic",
+     "Space Whale Capital",
+     "Modular Capital",
+     "Portico Ventures",
+     "Ouroboros Capital",
+     "Owl Ventures",
+     "RenGen",
+     "Manifold Trading"
+    ],
+    "angels": [],
+    "reported": [
+     "Coinflip Canada",
+     "bizyugo (angel)",
+     "0x_d24 (angel)",
+     "DanDefiEd (angel)"
+    ],
+    "sources": [
+     {
+      "label": "ChainCatcher",
+      "url": "https://www.chaincatcher.com/en/article/2087076",
+      "agg": true
+     },
+     {
+      "label": "TokenInsight",
+      "url": "https://tokeninsight.com/en/news/defi-structured-protocol-gammaswap-closes-1.7-million-seed-round-led-by-skycatcher",
+      "agg": true
+     },
+     {
+      "label": "DefiLlama",
+      "url": "https://defillama.com/raises/skycatcher",
+      "agg": true
+     },
+     {
+      "label": "CB Insights",
+      "url": "https://www.cbinsights.com/company/gammaswap/financials",
+      "agg": true
+     }
+    ],
+    "level": "partial"
+   },
+   "price": 0.00217522,
+   "ch24": -1.94214,
+   "ch7": -6.7755,
+   "ch30": -17.5729,
+   "mcap": 930641,
+   "fdv": 3480344,
    "ath": 0.365599,
    "athDate": "2024-12-04T21:05:23.000Z",
-   "rank": 3039,
+   "rank": 3070,
    "logo": "logos/auto/40e1061b9832.png",
    "spark": [
-    0.002362615419771697,
-    0.002359354863894695,
-    0.0022531369667672056,
-    0.0023435169892394546,
-    0.0023409481793025535,
-    0.0023338558410754048,
-    0.0023329784457287632,
+    0.002331676164369797,
     0.0023479555802111236,
-    0.0023454923625754014,
-    0.0023467030607065313,
-    0.0023170609761355224,
-    0.002346432875635493,
-    0.00234022511397426,
-    0.0023452434760201733,
+    0.0023464007264098375,
+    0.002329798942793775,
+    0.0023438064235166696,
+    0.0023387392776018884,
+    0.002345675363808158,
     0.002344557672624563,
-    0.0022707959331876373,
-    0.002268948958659961,
+    0.002312481925795789,
+    0.0022693171137024284,
     0.0022756554562181858,
     0.0022685781855212722,
-    0.0022422535421834943,
+    0.002241307444075958,
     0.0022332355490763487,
     0.0022337458527513974,
-    0.0022173207406954594,
-    0.0022340393501944803,
+    0.002227006402069614,
+    0.002236959435044692,
     0.0022330283651380103,
-    0.0020817657434549406,
-    0.0020814946568676698,
-    0.002080125371517071,
-    0.0020743425399901943,
-    0.002076832090094827,
-    0.0021622348943270008,
+    0.002082096815360154,
+    0.002084023202806555,
+    0.0020762350450178975,
+    0.0020722619736367673,
+    0.0021609173503528032,
     0.0021512037488521894,
-    0.0021415282711337606,
+    0.00215330712627778,
     0.00214460300062148,
     0.0021445789187845726,
     0.002136528205831115,
     0.002145252117285306,
     0.0021016302692419882,
     0.0021055596166570296,
-    0.00210653115179345,
-    0.0021079304025949106,
-    0.002152158191639261,
-    0.00215224186104977,
-    0.002154074345981613,
-    0.0021644657345135823,
-    0.002165141902246536,
-    0.002162013564289492,
+    0.0021078960267423234,
+    0.00210621424129962,
+    0.002151190238567893,
+    0.002151827043993887,
+    0.002162432544262848,
+    0.002161505188744728,
+    0.0021664967620810814,
     0.0021090399459771127,
     0.002107224692394774,
-    0.0021587413553222764,
+    0.002159744615476805,
     0.002196262036018965,
     0.002182126119148174,
     0.0021843758584359735,
     0.0021975874427216783,
     0.0022014675800903446,
-    0.0022170874599908644
+    0.0022229751288486968,
+    0.002206404774504637,
+    0.0021759499719293043,
+    0.002174399537449632,
+    0.0021585169625298337,
+    0.002166701590787371,
+    0.00211765711979267,
+    0.0020785714789900364,
+    0.0021520896520000957,
+    0.0021723459151116306
    ],
    "vol30": null,
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 145520.34810710975,
+   "tvl": 143799.92097509443,
    "since": "2023-09"
   },
   {
@@ -719,6 +1153,64 @@
    },
    "app": "https://dreamos.app",
    "isNew": true,
+   "backers": {
+    "total": 2100000,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2024-03",
+      "round": "Seed",
+      "amount": 2100000,
+      "lead": [
+       "Arca"
+      ],
+      "as": "DreamOS",
+      "src": "https://en.theblockbeats.news/news/51695",
+      "agg": true
+     }
+    ],
+    "vcs": [
+     "Arca",
+     "Hack VC",
+     "Mantle",
+     "Polygon Ventures",
+     "Karatage",
+     "Selini Capital",
+     "No Limit Holdings"
+    ],
+    "angels": [],
+    "reported": [],
+    "sources": [
+     {
+      "label": "BlockBeats",
+      "url": "https://en.theblockbeats.news/news/51695",
+      "agg": true
+     },
+     {
+      "label": "Bitget News",
+      "url": "https://www.bitget.com/news/detail/12560603921019",
+      "agg": true
+     },
+     {
+      "label": "CoinCarp",
+      "url": "https://www.coincarp.com/project/dreamos/",
+      "agg": true
+     },
+     {
+      "label": "Airdrops.io",
+      "url": "https://airdrops.io/dream/",
+      "agg": true
+     },
+     {
+      "label": "Tracxn",
+      "url": "https://tracxn.com/d/companies/dreamos/__t-YSCbE3XFMymzUSFX-4XNdP_N6-b1EuI3CDpN0ARSk",
+      "agg": true
+     }
+    ],
+    "level": "partial"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -730,10 +1222,12 @@
    "rank": null,
    "logo": "logos/auto/4edd281815a0.webp",
    "spark": [],
-   "vol30": null,
-   "vol7": null,
-   "prem30": null,
-   "volSlugs": [],
+   "vol30": 34784477,
+   "vol7": 20567779,
+   "prem30": 414961.3,
+   "volSlugs": [
+    "dream"
+   ],
    "tvl": 0,
    "since": null
   },
@@ -761,6 +1255,18 @@
    ],
    "note": "",
    "app": "https://callput.app",
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -772,13 +1278,13 @@
    "rank": null,
    "logo": "logos/auto/5a8a15688836.webp",
    "spark": [],
-   "vol30": 85683730,
-   "vol7": 30155678,
-   "prem30": 306192,
+   "vol30": 89707494,
+   "vol7": 31597511,
+   "prem30": 318499,
    "volSlugs": [
     "callput"
    ],
-   "tvl": 163827.09303546514,
+   "tvl": 166182.25269571846,
    "since": "2026-03"
   },
   {
@@ -805,6 +1311,26 @@
    "note": "",
    "app": "https://joyride.exchange",
    "isNew": true,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": "Backer self-reported on X; no round or amount disclosed.",
+    "rounds": [],
+    "vcs": [
+     "Superteam"
+    ],
+    "angels": [],
+    "reported": [],
+    "sources": [
+     {
+      "label": "X bio (@JoyrideExchange)",
+      "url": "https://x.com/JoyrideExchange",
+      "agg": false
+     }
+    ],
+    "level": "partial"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -846,6 +1372,18 @@
    "note": "",
    "app": "https://olive.exchange",
    "isNew": true,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -884,6 +1422,98 @@
    ],
    "note": "",
    "app": "https://app.3jane.xyz",
+   "backers": {
+    "total": 5200000,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2025-06",
+      "round": "Seed",
+      "amount": 5200000,
+      "lead": [
+       "Paradigm"
+      ],
+      "as": null,
+      "src": "https://www.theblock.co/post/356872/paradigm-leads-5-million-seed-round-in-crypto-credit-startup-3jane",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Paradigm",
+     "Coinbase Ventures",
+     "Wintermute Ventures",
+     "Robot Ventures",
+     "Bodhi Ventures",
+     "Breed"
+    ],
+    "angels": [
+     {
+      "name": "Andre Cronje",
+      "note": "Yearn"
+     },
+     {
+      "name": "Guy Young",
+      "note": "Ethena"
+     },
+     {
+      "name": "Julian Koh",
+      "note": "Ribbon"
+     },
+     {
+      "name": "Kain Warwick",
+      "note": "Synthetix"
+     },
+     {
+      "name": "Laurence",
+      "note": "Wildcat"
+     },
+     {
+      "name": "Zabeer",
+      "note": "Split Capital"
+     },
+     {
+      "name": "Joshua Lim",
+      "note": "Arbelos"
+     },
+     {
+      "name": "Yuchen",
+      "note": "BounceBit/OKX"
+     },
+     {
+      "name": "Octoshi",
+      "note": ""
+     },
+     {
+      "name": "Alfaketchum",
+      "note": ""
+     },
+     {
+      "name": "DeFi Dad",
+      "note": ""
+     }
+    ],
+    "reported": [],
+    "sources": [
+     {
+      "label": "The Block",
+      "url": "https://www.theblock.co/post/356872/paradigm-leads-5-million-seed-round-in-crypto-credit-startup-3jane",
+      "agg": false
+     },
+     {
+      "label": "Bitcoin.com",
+      "url": "https://news.bitcoin.com/ethereum-lender-3jane-emerges-from-stealth-with-paradigm-led-funding-round/",
+      "agg": false
+     },
+     {
+      "label": "3Jane (Paragraph)",
+      "url": "https://paragraph.com/@3jane-protocol/5gP46FiksozpocTnAdc3",
+      "agg": false
+     }
+    ],
+    "level": "confirmed"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -899,7 +1529,7 @@
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 110950.66253305016,
+   "tvl": 107985.33038240469,
    "since": "2024-06"
   },
   {
@@ -913,12 +1543,11 @@
    "what": "Benchmark volatility indices — BVIV, the “VIX for Bitcoin” — now expanding into compute and prediction-market indices",
    "status": "Pre-TGE",
    "cg": "",
-   "llama": [
-    "volmex"
-   ],
+   "llama": [],
    "site": "https://volmex.finance",
    "x": "volmexfinance",
    "logo": "logos/volmex.jpg",
+   "cumVolApi": "https://rest-v1.volmex.finance/public/total-volume",
    "keywords": [
     "Volatility index",
     "VIX for Bitcoin",
@@ -944,6 +1573,93 @@
     "updated": "2026-10-13"
    },
    "app": "https://app.hyperliquid.xyz/trade/mkts:BVIV",
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2021-03",
+      "round": "Seed",
+      "amount": null,
+      "lead": [],
+      "as": null,
+      "src": "https://www.cbinsights.com/company/volmex-finance/financials",
+      "agg": true
+     },
+     {
+      "date": "2022-01",
+      "round": "Private token sale",
+      "amount": 150000,
+      "lead": [],
+      "as": null,
+      "src": "https://alphagrowth.io/volmex/company",
+      "agg": true
+     },
+     {
+      "date": "2022-09",
+      "round": "Pre-seed",
+      "amount": null,
+      "lead": [],
+      "as": null,
+      "src": "https://alphagrowth.io/volmex/company",
+      "agg": true
+     }
+    ],
+    "vcs": [
+     "Robot Ventures",
+     "CMS Holdings",
+     "Avenir Group",
+     "D64 Ventures",
+     "IOSG Ventures",
+     "DeFi Technologies",
+     "4RC",
+     "Magnus Capital",
+     "Orthogonal Trading",
+     "LedgerPrime",
+     "Alameda Research"
+    ],
+    "angels": [
+     {
+      "name": "Anatoly Yakovenko",
+      "note": "founder of Solana"
+     },
+     {
+      "name": "Sandeep Nailwal",
+      "note": "founder of Polygon"
+     }
+    ],
+    "reported": [],
+    "sources": [
+     {
+      "label": "Volmex team (Oct 2026)",
+      "url": null,
+      "agg": false
+     },
+     {
+      "label": "Volmex",
+      "url": "https://volmex.finance",
+      "agg": false
+     },
+     {
+      "label": "The Block",
+      "url": "https://www.theblock.co/post/171294/alameda-backed-volmex-labs-launches-bitcoin-and-ether-volatility-indexes-exclusive",
+      "agg": false
+     },
+     {
+      "label": "AlphaGrowth",
+      "url": "https://alphagrowth.io/volmex/company",
+      "agg": true
+     },
+     {
+      "label": "CB Insights",
+      "url": "https://www.cbinsights.com/company/volmex-finance/financials",
+      "agg": true
+     }
+    ],
+    "level": "confirmed"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -959,10 +1675,9 @@
    "prem30": null,
    "volSlugs": [],
    "tvl": null,
-   "since": null,
-   "cumVolApi": "https://rest-v1.volmex.finance/public/total-volume",
-   "cumVol": 101796626.7372783,
-   "cumVolAt": "2026-10-13T02:51:56.777Z"
+   "cumVol": null,
+   "cumVolAt": null,
+   "since": null
   },
   {
    "ticker": "",
@@ -996,6 +1711,18 @@
    },
    "app": "https://www.hunch.cool",
    "isNew": true,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -1038,6 +1765,56 @@
    "points": "Activity points + referral points (period v12) — open one position to unlock your referral code",
    "pointsUrl": "https://app.rysk.finance/points/",
    "app": "https://app.rysk.finance",
+   "backers": {
+    "total": 1400000,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2023-01",
+      "round": "Pre-seed",
+      "amount": 1400000,
+      "lead": [
+       "Lemniscap"
+      ],
+      "as": null,
+      "src": "https://www.prnewswire.com/news-releases/rysk-finance-raises-1-4m-to-spearhead-on-chain-market-making-for-defi-derivatives-301734616.html",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Lemniscap",
+     "Encode Club",
+     "Ascensive Assets",
+     "Starbloom",
+     "Yunt Capital",
+     "Manifold Trading"
+    ],
+    "angels": [
+     {
+      "name": "Hype.eth",
+      "note": ""
+     },
+     {
+      "name": "ivangbi",
+      "note": ""
+     },
+     {
+      "name": "Windra Thio",
+      "note": ""
+     }
+    ],
+    "reported": [],
+    "sources": [
+     {
+      "label": "PR Newswire",
+      "url": "https://www.prnewswire.com/news-releases/rysk-finance-raises-1-4m-to-spearhead-on-chain-market-making-for-defi-derivatives-301734616.html",
+      "agg": false
+     }
+    ],
+    "level": "confirmed"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -1049,15 +1826,15 @@
    "rank": null,
    "logo": "logos/auto/5f8e8b49b78e.webp",
    "spark": [],
-   "vol30": 147823963,
-   "vol7": 29506866,
-   "prem30": 1536483,
+   "vol30": 148130381,
+   "vol7": 29040911,
+   "prem30": 1528851,
    "volSlugs": [
     "rysk-v12",
     "rysk-v1",
     "rysk-premium"
    ],
-   "tvl": 43327753.62131385,
+   "tvl": 45695766.43278543,
    "since": "2023-02"
   },
   {
@@ -1081,6 +1858,76 @@
     "Oracle-free"
    ],
    "note": "",
+   "backers": {
+    "total": 11500000,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2023-11",
+      "round": "Seed",
+      "amount": 7000000,
+      "lead": [
+       "Greenfield Capital"
+      ],
+      "as": null,
+      "src": "https://www.theblock.co/news/deals/2023-11-20-panoptic-raises-7-million-to-build-perpetual-options-platform-for-defi-263771",
+      "agg": false
+     },
+     {
+      "date": "2022-12",
+      "round": "SAFE round",
+      "amount": 4500000,
+      "lead": [
+       "gumi Cryptos Capital"
+      ],
+      "as": null,
+      "src": "https://www.theblock.co/news/deals/2022-12-05-uniswap-based-defi-protocol-panoptic-raises-4-5-million-192207",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Greenfield Capital",
+     "gumi Cryptos Capital",
+     "HashKey",
+     "L1D",
+     "Heartcore Capital",
+     "Comma3",
+     "Zee Prime Capital",
+     "Uniswap Labs Ventures",
+     "Coinbase Ventures",
+     "Jane Street",
+     "Blizzard (Avalanche Ecosystem Fund)",
+     "Keyrock",
+     "SevenX Ventures"
+    ],
+    "angels": [],
+    "reported": [],
+    "sources": [
+     {
+      "label": "The Block (2023)",
+      "url": "https://www.theblock.co/news/deals/2023-11-20-panoptic-raises-7-million-to-build-perpetual-options-platform-for-defi-263771",
+      "agg": false
+     },
+     {
+      "label": "The Block (2022)",
+      "url": "https://www.theblock.co/news/deals/2022-12-05-uniswap-based-defi-protocol-panoptic-raises-4-5-million-192207",
+      "agg": false
+     },
+     {
+      "label": "Panoptic blog",
+      "url": "https://panoptic.xyz/blog/defi-options-protocol-safe-round",
+      "agg": false
+     },
+     {
+      "label": "Panoptic",
+      "url": "https://www.panoptic.xyz",
+      "agg": false
+     }
+    ],
+    "level": "confirmed"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -1092,13 +1939,13 @@
    "rank": null,
    "logo": "logos/auto/85101fc8e8de.webp",
    "spark": [],
-   "vol30": 31989605,
-   "vol7": 5689858,
-   "prem30": 22988.089999999997,
+   "vol30": 31799563,
+   "vol7": 4334927,
+   "prem30": 22800.539999999997,
    "volSlugs": [
     "panoptic-v2"
    ],
-   "tvl": 110102.74373447191,
+   "tvl": 135822.4363442946,
    "since": "2024-12"
   },
   {
@@ -1122,45 +1969,79 @@
     "One-click strategies"
    ],
    "note": "",
-   "price": 0.01485988,
-   "ch24": null,
-   "ch7": -5.7598,
-   "ch30": -1.9333,
-   "mcap": 16013251,
-   "fdv": 16013251,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2022-01",
+      "round": "Early-stage VC",
+      "amount": null,
+      "lead": [],
+      "as": null,
+      "src": "https://insights.munich-startup.de/companies/hegic",
+      "agg": true
+     }
+    ],
+    "vcs": [],
+    "angels": [],
+    "reported": [
+     "Strategic Round Capital",
+     "Fomocraft Ventures"
+    ],
+    "sources": [
+     {
+      "label": "Munich Startup",
+      "url": "https://insights.munich-startup.de/companies/hegic",
+      "agg": true
+     },
+     {
+      "label": "CB Insights",
+      "url": "https://www.cbinsights.com/company/hegic",
+      "agg": true
+     },
+     {
+      "label": "PitchBook",
+      "url": "https://pitchbook.com/profiles/company/439089-22",
+      "agg": true
+     }
+    ],
+    "level": "partial"
+   },
+   "price": 0.01496687,
+   "ch24": 1.14151,
+   "ch7": -5.7891,
+   "ch30": -1.0044,
+   "mcap": 16129571,
+   "fdv": 16129571,
    "ath": 0.642093,
    "athDate": "2021-02-13T08:55:14.000Z",
-   "rank": 996,
+   "rank": 972,
    "logo": "logos/auto/4d19ea0d57e1.png",
    "spark": [
-    0.015861951521364246,
-    0.015601959993046125,
-    0.015610996699599576,
-    0.015658864876424355,
-    0.01595925513630135,
-    0.01593810036660648,
-    0.015880859836228438,
-    0.015892003273225888,
-    0.016057838362665774,
-    0.015848164890331397,
-    0.015842760972841343,
-    0.01582294760611289,
-    0.015878882529284183,
-    0.015712345405481384,
-    0.015539588155629091,
-    0.015540410839448113,
-    0.015538992638625992,
-    0.015408856757166862,
-    0.015285641020921673,
-    0.015229304293183414,
-    0.015151655681491969,
-    0.014900553564715483,
-    0.015106971733179108,
-    0.01510724222828021,
-    0.015011780897583695,
-    0.015017688186658737,
-    0.014987338148394579,
-    0.014998739116901524,
+    0.015877582142677243,
+    0.015909555092560906,
+    0.015843747302029917,
+    0.015883454179753592,
+    0.015822757522136122,
+    0.015823214109963957,
+    0.015539436664676715,
+    0.015540607105977832,
+    0.015540195183027941,
+    0.015538708907595618,
+    0.015312045282658405,
+    0.015240726082714233,
+    0.015201798416946254,
+    0.015147818427252312,
+    0.014940514786105325,
+    0.015107567461826277,
+    0.015010699182534117,
+    0.015014743708230265,
+    0.014993284125134633,
+    0.015000495381991084,
+    0.015003100145899315,
     0.015018689828319767,
     0.01500482330421199,
     0.015002523379148312,
@@ -1188,15 +2069,22 @@
     0.014683130762204469,
     0.01469058788725964,
     0.014733091974100032,
-    0.014798695784738983
+    0.014798695784738983,
+    0.014790297322156776,
+    0.014561522875879486,
+    0.01456367020227618,
+    0.014484594861808654,
+    0.014572017209404667,
+    0.01483026770782682,
+    0.014939528153963466
    ],
-   "vol30": 1434150.99,
-   "vol7": 280062,
-   "prem30": 43026.04,
+   "vol30": 1464356.99,
+   "vol7": 310268,
+   "prem30": 44018.04,
    "volSlugs": [
     "hegic"
    ],
-   "tvl": 9560874.811861431,
+   "tvl": 9605827.900962656,
    "since": null
   },
   {
@@ -1218,36 +2106,70 @@
     "Risk exchange"
    ],
    "note": "",
-   "price": 0.00069453,
-   "ch24": null,
-   "ch7": -1.8789,
-   "ch30": -1.6442,
-   "mcap": 325064,
-   "fdv": 325064,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2021-11",
+      "round": "Strategic",
+      "amount": null,
+      "lead": [
+       "Binance Smart Chain $1B Growth Fund"
+      ],
+      "as": null,
+      "src": "https://www.newswire.ca/news-releases/deri-protocol-secures-investment-under-binance-smart-chain-s-1b-fund-830012075.html",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Binance Smart Chain Growth Fund"
+    ],
+    "angels": [],
+    "reported": [
+     "FBG Capital",
+     "Bixin Ventures",
+     "Lotus Capital",
+     "LD Capital",
+     "AKG Ventures",
+     "Crypto Dorm Fund",
+     "Crypto Research",
+     "GSR Markets"
+    ],
+    "sources": [
+     {
+      "label": "Newswire.ca",
+      "url": "https://www.newswire.ca/news-releases/deri-protocol-secures-investment-under-binance-smart-chain-s-1b-fund-830012075.html",
+      "agg": false
+     },
+     {
+      "label": "ICO Drops",
+      "url": "https://icodrops.com/deri-protocol",
+      "agg": true
+     }
+    ],
+    "level": "partial"
+   },
+   "price": 0.00068507,
+   "ch24": -1.13669,
+   "ch7": -12.1975,
+   "ch30": -3.1317,
+   "mcap": 320563,
+   "fdv": 320563,
    "ath": 3.77,
    "athDate": "2021-02-12T10:27:27.000Z",
-   "rank": 4188,
+   "rank": 4230,
    "logo": "logos/auto/bb4b733c03e3.jpg",
    "spark": [
-    0.0007072291158652224,
-    0.0007072341038067836,
-    0.0006603790734262053,
-    0.000659025661635949,
-    0.0006576424242477347,
-    0.0006551066440435958,
-    0.0006587844315635636,
-    0.0006593076499107744,
-    0.000660050728914147,
-    0.0006602232457021506,
-    0.0007820325133632418,
-    0.0007755479423577027,
     0.0007800275331965668,
     0.0007815564685803042,
-    0.0007777970926788571,
-    0.0006942882639452108,
-    0.0006978630040940744,
-    0.0006949859488198378,
-    0.0006939404776714616,
+    0.0007621527918798468,
+    0.0006940726342087635,
+    0.0006953315507220745,
+    0.0006947286323620366,
+    0.0006923236638004432,
     0.0006774528646852308,
     0.0006849473379376608,
     0.0006846354602316077,
@@ -1262,35 +2184,47 @@
     0.000663831089787552,
     0.0007012795086296159,
     0.000699413296480958,
-    0.0006862430280360657,
-    0.0006937975749479028,
-    0.0007006943863439619,
-    0.0007049065200130846,
-    0.00069963287503133,
-    0.0007042422722066413,
-    0.0007028780491674043,
-    0.0006959341581350131,
-    0.0006962885740809687,
+    0.0006860256917290533,
+    0.0006865525662411609,
+    0.0006952555261231141,
+    0.0006790531411768986,
+    0.0006979303409230858,
+    0.000701740079665466,
+    0.0007046040741072326,
+    0.0006955133942857696,
+    0.0006967931241628347,
     0.0006952782974650873,
     0.0006953854011985589,
     0.0007002440486593267,
     0.0007068053418057179,
     0.0007717005764055078,
-    0.000763720860236036,
-    0.0007637925387272149,
-    0.0007638990658658813,
-    0.0006873162329438892,
-    0.0006861942765470639,
-    0.0006873490602671564,
-    0.0006880649321257802,
-    0.000690253071076857,
-    0.0006927148397918306
+    0.000764407123345345,
+    0.0007633525164147178,
+    0.0007640419452553356,
+    0.0006897929203591777,
+    0.0006874588997159494,
+    0.0006869657764083169,
+    0.0006886638735136068,
+    0.0006903683514986064,
+    0.0006930059387967131,
+    0.0006936656415681565,
+    0.0006906142606385714,
+    0.0007321789446710454,
+    0.0007352510443339263,
+    0.000737596162913348,
+    0.0007377873076923738,
+    0.0006879889896242798,
+    0.0006857310938765694,
+    0.0006750731024186626,
+    0.000676828978600342,
+    0.0006820031248579788,
+    0.0006846956050356159
    ],
    "vol30": null,
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 8456968.368641617,
+   "tvl": 8359426.954984113,
    "since": "2023-11"
   },
   {
@@ -1314,6 +2248,18 @@
     "Thetanuts V4"
    ],
    "note": "",
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -1325,9 +2271,9 @@
    "rank": null,
    "logo": "logos/auto/ebec0d485182.webp",
    "spark": [],
-   "vol30": 2319792,
-   "vol7": 478861,
-   "prem30": 11559.2,
+   "vol30": 2399985,
+   "vol7": 453438,
+   "prem30": 11938,
    "volSlugs": [
     "odette"
    ],
@@ -1354,6 +2300,67 @@
     "Automated strategies"
    ],
    "note": "",
+   "backers": {
+    "total": 5000000,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2022-03",
+      "round": "Seed",
+      "amount": 5000000,
+      "lead": [
+       "Framework Ventures"
+      ],
+      "as": null,
+      "src": "https://defillama.com/protocol/katana",
+      "agg": true
+     }
+    ],
+    "vcs": [],
+    "angels": [],
+    "reported": [
+     "Founders Fund",
+     "Electric Capital",
+     "Coinbase Ventures",
+     "Solana Ventures",
+     "Alameda Research",
+     "Protofund",
+     "Amber Group",
+     "MGNR",
+     "Reverie",
+     "CMS Holdings",
+     "QCP Capital",
+     "SplitCapital",
+     "Jason Choi (angel)",
+     "Chris McCann (angel)",
+     "Joey Santoro (angel)",
+     "Armani Ferrante (angel)",
+     "Joe McCann (angel)",
+     "Jason Shah (angel)",
+     "Darren Lau (angel)",
+     "Daryl Lau (angel)"
+    ],
+    "sources": [
+     {
+      "label": "DefiLlama",
+      "url": "https://defillama.com/protocol/katana",
+      "agg": true
+     },
+     {
+      "label": "TokenInsight",
+      "url": "https://tokeninsight.com/en/news/solana-ecosystem-defi-protocol-katana-closed-5-million-seed-round-with-alameda-research-and-others",
+      "agg": true
+     },
+     {
+      "label": "Dealroom",
+      "url": "https://app.dealroom.co/companies/katana_1_3",
+      "agg": true
+     }
+    ],
+    "level": "partial"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -1369,7 +2376,7 @@
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 2135777.745359717,
+   "tvl": 2057846.8452968514,
    "since": "2022-01"
   },
   {
@@ -1393,6 +2400,94 @@
     "OG"
    ],
    "note": "",
+   "backers": {
+    "total": 8860000,
+    "totalNote": "sum of disclosed rounds",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2021-02",
+      "round": "Series A",
+      "amount": 6700000,
+      "lead": [
+       "Paradigm"
+      ],
+      "as": null,
+      "src": "https://www.theblock.co/post/93603/opyn-defi-options-series-a-paradigm",
+      "agg": false
+     },
+     {
+      "date": "2020-06",
+      "round": "Seed",
+      "amount": 2160000,
+      "lead": [
+       "Dragonfly Capital"
+      ],
+      "as": null,
+      "src": "https://www.theblock.co/post/69154/defi-opyn-funding-dragonfly",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Paradigm",
+     "Dragonfly Capital",
+     "1kx",
+     "A.Capital Ventures",
+     "Version One Ventures",
+     "Uncorrelated Ventures",
+     "DTC Capital",
+     "CoinFund",
+     "Robot Ventures",
+     "Coinbase Ventures"
+    ],
+    "angels": [
+     {
+      "name": "Kain Warwick",
+      "note": "co-founder of Synthetix"
+     },
+     {
+      "name": "Stani Kulechov",
+      "note": "founder of Aave"
+     },
+     {
+      "name": "Robert Leshner",
+      "note": "founder of Compound"
+     },
+     {
+      "name": "Balaji Srinivasan",
+      "note": "former Coinbase CTO"
+     },
+     {
+      "name": "Linda Xie",
+      "note": "crypto investor"
+     }
+    ],
+    "reported": [],
+    "sources": [
+     {
+      "label": "The Block (Series A)",
+      "url": "https://www.theblock.co/post/93603/opyn-defi-options-series-a-paradigm",
+      "agg": false
+     },
+     {
+      "label": "The Block (Seed)",
+      "url": "https://www.theblock.co/post/69154/defi-opyn-funding-dragonfly",
+      "agg": false
+     },
+     {
+      "label": "Decrypt",
+      "url": "https://decrypt.co/33172/crypto-startup-opyn-defi-wave-2-million-funding",
+      "agg": false
+     },
+     {
+      "label": "Opyn",
+      "url": "https://www.opyn.co",
+      "agg": false
+     }
+    ],
+    "level": "confirmed"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -1408,7 +2503,7 @@
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 2343572.9674521303,
+   "tvl": 2312976.909564653,
    "since": "2022-12"
   },
   {
@@ -1432,25 +2527,44 @@
     "Onchain settlement"
    ],
    "note": "",
-   "price": 0.158578,
-   "ch24": 2.74859,
-   "ch7": -4.8147,
-   "ch30": 2.3244,
-   "mcap": 4391034,
-   "fdv": 4391034,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": "Non-profit DAO — no disclosed funding round; OKX Ventures, HashKey Capital and Galaxy Asia Trading are founding DAO members.",
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [
+     "OKX Ventures",
+     "HashKey Capital",
+     "Galaxy Asia Trading"
+    ],
+    "sources": [
+     {
+      "label": "Crowdfund Insider",
+      "url": "https://www.crowdfundinsider.com/?p=226370",
+      "agg": false
+     },
+     {
+      "label": "Odaily",
+      "url": "https://www.odaily.news/en/post/5198049",
+      "agg": true
+     }
+    ],
+    "level": "partial"
+   },
+   "price": 0.155964,
+   "ch24": -1.2487,
+   "ch7": -6.0098,
+   "ch30": 0.4954,
+   "mcap": 4318977,
+   "fdv": 4318977,
    "ath": 3.31,
    "athDate": "2024-06-10T11:44:52.000Z",
-   "rank": 1811,
+   "rank": 1810,
    "logo": "logos/auto/ba399a314483.png",
    "spark": [
-    0.16756860691376432,
-    0.1671652033844507,
-    0.16679439760926507,
-    0.16601538545264063,
-    0.16673315956191007,
-    0.16716597621750945,
-    0.16703850015471308,
-    0.16599825149856498,
     0.1659631271249708,
     0.16675630811206807,
     0.16701102685883146,
@@ -1498,13 +2612,21 @@
     0.15612738793855657,
     0.15645364581587326,
     0.15697150274877267,
-    0.157932041339687
+    0.157932041339687,
+    0.15716024677913723,
+    0.15693819322229285,
+    0.15563667774543544,
+    0.15486012110976569,
+    0.1554017034899824,
+    0.15099641072243256,
+    0.153649198070052,
+    0.15584092432581606
    ],
    "vol30": null,
    "vol7": null,
-   "prem30": 219621,
+   "prem30": 228231,
    "volSlugs": [],
-   "tvl": 1067214.9250680374,
+   "tvl": 1072938.7780150468,
    "since": "2024-06"
   },
   {
@@ -1527,39 +2649,73 @@
     "Option vaults"
    ],
    "note": "",
-   "price": 0.00040539,
-   "ch24": 5.49028,
-   "ch7": -47.3201,
-   "ch30": 70.8286,
-   "mcap": 405588,
-   "fdv": 405588,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2023-06",
+      "round": "Investment",
+      "amount": null,
+      "lead": [],
+      "as": null,
+      "src": "https://prtimes.jp/main/html/rd/p/000000031.000079365.html",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Hyperithm"
+    ],
+    "angels": [],
+    "reported": [
+     "Assembly Partners"
+    ],
+    "sources": [
+     {
+      "label": "PR Times (Hyperithm)",
+      "url": "https://prtimes.jp/main/html/rd/p/000000031.000079365.html",
+      "agg": false
+     },
+     {
+      "label": "PitchBook",
+      "url": "https://pitchbook.com/profiles/company/711417-34",
+      "agg": true
+     },
+     {
+      "label": "Typus",
+      "url": "https://typus.finance",
+      "agg": false
+     }
+    ],
+    "level": "partial"
+   },
+   "price": 0.00037416,
+   "ch24": -7.31747,
+   "ch7": -49.5941,
+   "ch30": 57.6669,
+   "mcap": 374157,
+   "fdv": 374157,
    "ath": 0.100289,
    "athDate": "2024-11-29T19:15:57.000Z",
-   "rank": 3928,
+   "rank": 4050,
    "logo": "logos/auto/1fba9d19434d.png",
    "spark": [
-    0.0007763412558443877,
-    0.0007777326027503715,
-    0.0007711590879365361,
-    0.0007524023887817209,
-    0.0007461673336106304,
-    0.0007606522837257357,
-    0.0007530924961093577,
-    0.0007424850442830589,
     0.0007423906251657381,
     0.0007441020349885542,
     0.0007441268587448685,
     0.0007303277308570636,
     0.0007302904705826495,
     0.0007264950674949244,
-    0.0007105982465289802,
-    0.0007039224591522982,
-    0.0007048186432617407,
-    0.000698865280408066,
-    0.0006919286815913093,
-    0.0006964222760238976,
-    0.0006931770615310032,
-    0.0006946261545502474,
+    0.0007228600398120063,
+    0.0007056790837492759,
+    0.0007048283014557791,
+    0.0006978813974326487,
+    0.0006956003059021257,
+    0.0006951812391690557,
+    0.0006947239556419462,
+    0.0006930532983235405,
     0.0006996637003166808,
     0.0006956660215245437,
     0.0006988261813093052,
@@ -1580,20 +2736,28 @@
     0.0003800087571459212,
     0.00038342175546088016,
     0.00038876222112264164,
-    0.00039179032772668806,
-    0.00038863361284113764,
-    0.0003905872361337312,
-    0.000387738316575595,
-    0.00038659929326973364,
-    0.0003825548420274189,
-    0.0003833536878880924,
-    0.0003819015124616669,
+    0.00038872909641048147,
+    0.0003899137956150332,
+    0.00039022446352429484,
+    0.00038787595229265617,
+    0.0003867074478255772,
+    0.00038313815152063023,
+    0.0003832819197101084,
+    0.00038040685585891636,
     0.0003851639586261804,
     0.0003945650805881216,
     0.00040212220123230186,
     0.00040375010852630847,
     0.00039978057985900063,
-    0.0004040488102237669
+    0.0004040488102237669,
+    0.0004020584646357833,
+    0.00039641549415900636,
+    0.0003908214296837956,
+    0.00038583607479682555,
+    0.00038620304356087035,
+    0.00036345957579033566,
+    0.0003651676975546812,
+    0.0003745183759956375
    ],
    "vol30": 16361,
    "vol7": 1557,
@@ -1601,7 +2765,7 @@
    "volSlugs": [
     "typus-dov"
    ],
-   "tvl": 1103460.0194576872,
+   "tvl": 1088808.8948027901,
    "since": "2023-05"
   },
   {
@@ -1624,39 +2788,84 @@
     "Ex-dHEDGE"
    ],
    "note": "",
-   "price": 0.04391408,
-   "ch24": 0.00359,
-   "ch7": -6.3744,
-   "ch30": -7.7976,
-   "mcap": 2388098,
-   "fdv": 4390894,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2020-06",
+      "round": "Seed",
+      "amount": 1040500,
+      "lead": [],
+      "as": "dHEDGE",
+      "src": "https://icodrops.com/dhedge/",
+      "agg": true
+     },
+     {
+      "date": "2020-07",
+      "round": "Strategic",
+      "amount": 1360313,
+      "lead": [],
+      "as": "dHEDGE",
+      "src": "https://icodrops.com/dhedge/",
+      "agg": true
+     }
+    ],
+    "vcs": [
+     "Framework Ventures",
+     "Three Arrows Capital",
+     "BlockTower Capital",
+     "DACM",
+     "Maple Leaf Capital"
+    ],
+    "angels": [],
+    "reported": [],
+    "sources": [
+     {
+      "label": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/synthetix-takes-mimetic-trading-platform-out-of-stealth-mode",
+      "agg": false
+     },
+     {
+      "label": "ICO Drops",
+      "url": "https://icodrops.com/dhedge/",
+      "agg": true
+     },
+     {
+      "label": "Chamber docs",
+      "url": "https://docs.chamberfi.com/ecosystem/toros-finance",
+      "agg": false
+     }
+    ],
+    "level": "partial"
+   },
+   "price": 0.04072675,
+   "ch24": -6.98886,
+   "ch7": -10.0796,
+   "ch30": -13.0852,
+   "mcap": 2215027,
+   "fdv": 4072675,
    "ath": 5.52,
    "athDate": "2021-03-22T12:19:57.000Z",
-   "rank": 2237,
+   "rank": 2292,
    "logo": "logos/auto/9b5b00d69515.png",
    "spark": [
-    0.0469965546932391,
-    0.04490166343836803,
-    0.04476163560237466,
-    0.045412381440186174,
-    0.045640841547069794,
-    0.04558163165531163,
-    0.04556945302582193,
-    0.04508700681878175,
     0.04320258554224151,
     0.04381650842489018,
     0.04388846702270513,
     0.04369657402312081,
     0.04519004904092449,
     0.04529870070985581,
-    0.044044004818654114,
-    0.0429634809259605,
-    0.042979205029319345,
-    0.04336998707771251,
-    0.04321327158230403,
-    0.044528938202078525,
-    0.044819968891597166,
-    0.04482540539590769,
+    0.04439590371774155,
+    0.043158181686566585,
+    0.04312274037072743,
+    0.04402932576218061,
+    0.0431836888265607,
+    0.043184328946592104,
+    0.04457454568006655,
+    0.04477334274158252,
     0.04495411758641385,
     0.04465947597446193,
     0.04480311284455758,
@@ -1677,23 +2886,31 @@
     0.043784932405629196,
     0.04286640880652295,
     0.042979944735804625,
-    0.04305621154193437,
-    0.044001487935730645,
-    0.044032088439989174,
-    0.044002767713190255,
-    0.04413534253740839,
-    0.043234887474853705,
-    0.042834046315383144,
-    0.0436444428338392,
+    0.04296918320046024,
+    0.04395123332822417,
+    0.044027604508059544,
+    0.04404475882131413,
+    0.044100639251682366,
+    0.043220019683064916,
+    0.043827913183118475,
+    0.04354673832256831,
     0.0436348881392744,
     0.043547342729286787,
     0.04343792665254508,
     0.043375571370046995,
     0.04359608622439214,
-    0.043733854841275344
+    0.043733854841275344,
+    0.043518844286451266,
+    0.04345892048297145,
+    0.0429417524755513,
+    0.040766451955899966,
+    0.041245880388236414,
+    0.04235914896394035,
+    0.039931457899707846,
+    0.04067502043147294
    ],
    "vol30": 922271,
-   "vol7": 175524,
+   "vol7": 109719,
    "prem30": 4610.54,
    "volSlugs": [
     "toros-options"
@@ -1721,6 +2938,18 @@
     "Ex-Premia"
    ],
    "note": "",
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -1740,7 +2969,7 @@
     "premia-v3",
     "kyan-blue-options"
    ],
-   "tvl": 802163.0111198364,
+   "tvl": 797008.0629697054,
    "since": "2023-09"
   },
   {
@@ -1762,6 +2991,18 @@
     "Option incentives"
    ],
    "note": "",
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": "No VC round — funded by its DAO via option exercise",
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -1777,7 +3018,7 @@
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 250803.0839762279,
+   "tvl": 242706.28226436523,
    "since": "2022-04"
   },
   {
@@ -1800,6 +3041,18 @@
     "Dual investment"
    ],
    "note": "",
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -1815,7 +3068,7 @@
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 222895.4738671683,
+   "tvl": 220033.6545216731,
    "since": "2024-06"
   },
   {
@@ -1838,19 +3091,75 @@
     "Ex-Dopex"
    ],
    "note": "",
-   "price": 0.04517349,
-   "ch24": 4.77676,
-   "ch7": 5.7172,
-   "ch30": 183.7218,
-   "mcap": 3133268,
-   "fdv": 3133268,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2021-05",
+      "round": "Seed",
+      "amount": null,
+      "lead": [],
+      "as": "Dopex",
+      "src": "https://www.caplight.com/company/stryke",
+      "agg": true
+     },
+     {
+      "date": "2021-06",
+      "round": "Public token sale",
+      "amount": 1050000,
+      "lead": [],
+      "as": "Dopex",
+      "src": "https://icodrops.com/dopex/",
+      "agg": true
+     }
+    ],
+    "vcs": [],
+    "angels": [
+     {
+      "name": "Tetranode",
+      "note": "advisor to Dopex"
+     },
+     {
+      "name": "DeFiGod",
+      "note": ""
+     }
+    ],
+    "reported": [
+     "LedgerPrime"
+    ],
+    "sources": [
+     {
+      "label": "ICO Drops",
+      "url": "https://icodrops.com/dopex/",
+      "agg": true
+     },
+     {
+      "label": "Caplight",
+      "url": "https://www.caplight.com/company/stryke",
+      "agg": true
+     },
+     {
+      "label": "Substack (Semaji)",
+      "url": "https://semaji.substack.com/p/the-definitive-guide-to-dopex-dpx?s=w",
+      "agg": false
+     }
+    ],
+    "level": "partial"
+   },
+   "price": 0.0450387,
+   "ch24": -0.12384,
+   "ch7": 5.6413,
+   "ch30": 181.6462,
+   "mcap": 3125423,
+   "fdv": 3125423,
    "ath": 0.452935,
    "athDate": "2024-04-08T18:37:30.000Z",
-   "rank": 2032,
+   "rank": 2030,
    "logo": "logos/auto/881c51b9c07b.png",
    "spark": [
-    0.04262164792947418,
-    0.042633604408293745,
     0.04269789148862559,
     0.04502342240846607,
     0.04500133406261708,
@@ -1899,7 +3208,9 @@
     0.044769233817771335,
     0.04464041231618087,
     0.04497757640946082,
-    0.0449869484050192
+    0.0449869484050192,
+    0.04515410013194906,
+    0.045040449781634254
    ],
    "vol30": 0,
    "vol7": 0,
@@ -1907,7 +3218,7 @@
    "volSlugs": [
     "stryke-clamm"
    ],
-   "tvl": 189164.75794978745,
+   "tvl": 188018.36616814713,
    "since": "2023-11"
   },
   {
@@ -1929,6 +3240,18 @@
     "Options AMM"
    ],
    "note": "",
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -1944,7 +3267,7 @@
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 103591.58306040318,
+   "tvl": 100928.31562775867,
    "since": "2023-06"
   },
   {
@@ -1967,6 +3290,18 @@
     "ETH options"
    ],
    "note": "",
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -1982,7 +3317,7 @@
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 94145.07136064797,
+   "tvl": 92031.05697339498,
    "since": null
   },
   {
@@ -2005,6 +3340,18 @@
     "Options"
    ],
    "note": "",
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -2020,7 +3367,7 @@
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 79907.95475371151,
+   "tvl": 79914.5393784533,
    "since": "2023-05"
   },
   {
@@ -2043,39 +3390,96 @@
     "Early generation"
    ],
    "note": "",
-   "price": 0.01019688,
-   "ch24": 0.23065,
-   "ch7": 0.8954,
-   "ch30": 0.2292,
-   "mcap": 191307,
-   "fdv": 1019696,
+   "backers": {
+    "total": 3250000,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2020-11",
+      "round": "Seed",
+      "amount": 3250000,
+      "lead": [],
+      "as": null,
+      "src": "https://fintech.global/2020/11/09/opium-protocol-secures-its-3-25m-in-its-new-funding-round/",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "QCP Soteria",
+     "HashKey",
+     "Galaxy Digital",
+     "Rockaway Blockchain Fund",
+     "MetaCartel Ventures",
+     "Alameda Research",
+     "Launch Hub",
+     "CMS Holdings",
+     "Kenetic Capital",
+     "One Block",
+     "SevenX",
+     "Zee Prime Capital",
+     "Digital Strategies"
+    ],
+    "angels": [
+     {
+      "name": "Stani Kulechov",
+      "note": "founder of Aave; joined Opium as advisor"
+     },
+     {
+      "name": "Jordan Momtazi",
+      "note": "founder of Synthetix"
+     },
+     {
+      "name": "Trevor Koverko",
+      "note": "founder of Polymath"
+     }
+    ],
+    "reported": [],
+    "sources": [
+     {
+      "label": "fintech.global",
+      "url": "https://fintech.global/2020/11/09/opium-protocol-secures-its-3-25m-in-its-new-funding-round/",
+      "agg": false
+     },
+     {
+      "label": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/news/opium-raises-3-3m-exotic-131347297.html",
+      "agg": false
+     },
+     {
+      "label": "Forklog",
+      "url": "https://forklog.com/en/defi-project-opium-protocol-raises-3-25-million-from-alameda-research-and-galaxy-digital/",
+      "agg": false
+     }
+    ],
+    "level": "confirmed"
+   },
+   "price": 0.01014865,
+   "ch24": -0.17055,
+   "ch7": -0.2584,
+   "ch30": 0.2118,
+   "mcap": 190401,
+   "fdv": 1014865,
    "ath": 23.01,
    "athDate": "2021-02-04T00:21:54.000Z",
-   "rank": 4919,
+   "rank": 4957,
    "logo": "logos/auto/67ae8a98e5b8.png",
    "spark": [
-    0.010230113345618685,
-    0.010108100000873964,
-    0.0101783616599899,
-    0.010092406862080657,
-    0.010139091876780972,
-    0.0102386902957309,
-    0.010075391627616793,
-    0.01008380598056548,
     0.010181055037787783,
     0.010084218135795145,
     0.01013522426739401,
     0.010124271422817088,
     0.010159437365023411,
     0.010169133288297345,
-    0.009992861160473234,
-    0.01011601263722498,
-    0.010151379391185862,
-    0.010118298119582153,
-    0.010110407523980024,
-    0.010172053175771856,
-    0.01023750504884284,
-    0.010221303880539115,
+    0.010112062214315902,
+    0.010130725460343961,
+    0.010128149368562387,
+    0.010006152806485561,
+    0.010139307684998971,
+    0.010115470155940715,
+    0.010218281014461962,
+    0.010150206000741888,
     0.01012127810587469,
     0.010090730033853329,
     0.010148161196940878,
@@ -2096,26 +3500,34 @@
     0.01015826009537612,
     0.010049232999004058,
     0.010130100588270548,
-    0.01019868243775873,
-    0.010129306403344364,
-    0.010123913781985388,
-    0.010127061050721807,
-    0.010135733861744703,
-    0.010201737385774306,
-    0.010138793453136265,
-    0.010101395365541482,
+    0.010140198705470962,
+    0.01014514809468702,
+    0.010151221128365097,
+    0.010143123640130655,
+    0.010157768176885797,
+    0.010186433084558381,
+    0.010161448948487221,
+    0.01006948385804911,
     0.010157195259595636,
     0.010141400396706746,
     0.010151071205642544,
     0.010202822982318005,
     0.010180020876611223,
-    0.010207885604189696
+    0.010207885604189696,
+    0.010147422112595162,
+    0.010114506603743413,
+    0.010031494727841695,
+    0.010086046748884376,
+    0.010142667295492487,
+    0.009987253935938675,
+    0.010178009026643274,
+    0.010209366852978371
    ],
    "vol30": null,
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 76349.29087232966,
+   "tvl": 69934.32949341016,
    "since": null
   },
   {
@@ -2137,6 +3549,80 @@
     "Early generation"
    ],
    "note": "",
+   "backers": {
+    "total": 2600000,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2021-02",
+      "round": "Seed + Private",
+      "amount": 2600000,
+      "lead": [],
+      "as": null,
+      "src": "https://www.coinspeaker.com/oddz-finance-smart-derivatives/",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Woodstock Fund",
+     "AU21 Capital",
+     "GBV Capital",
+     "Krypital Group",
+     "X21",
+     "Fire Protocol",
+     "Amesten Capital",
+     "TRGC",
+     "NGC Capital",
+     "EX Network",
+     "Altonomy",
+     "Lotus Capital",
+     "Lumen Capital",
+     "Maha DAO",
+     "DAO Ventures"
+    ],
+    "angels": [
+     {
+      "name": "Sandeep Nailwal",
+      "note": "Polygon"
+     },
+     {
+      "name": "Ravindra Kumar",
+      "note": "Frontier"
+     },
+     {
+      "name": "Tushar Aggarwal",
+      "note": "Persistence"
+     },
+     {
+      "name": "Chandresh Aharwar",
+      "note": "Unilend Finance"
+     },
+     {
+      "name": "Aniket Jindal",
+      "note": "Biconomy"
+     },
+     {
+      "name": "Etiënne",
+      "note": "TRGC"
+     }
+    ],
+    "reported": [],
+    "sources": [
+     {
+      "label": "Coinspeaker",
+      "url": "https://www.coinspeaker.com/oddz-finance-smart-derivatives/",
+      "agg": false
+     },
+     {
+      "label": "Oddz blog (Medium)",
+      "url": "https://medium.com/oddz-finance/oddz-finance-raises-2-6m-5bce118f231b",
+      "agg": false
+     }
+    ],
+    "level": "confirmed"
+   },
    "price": 0.000171,
    "ch24": null,
    "ch7": 30.6705,
@@ -2152,7 +3638,7 @@
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 59187.14733869042,
+   "tvl": 59190.373160603325,
    "since": "2021-11"
   },
   {
@@ -2175,6 +3661,59 @@
    ],
    "note": "",
    "isNew": false,
+   "backers": {
+    "total": 5000000,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2025-02",
+      "round": "Seed",
+      "amount": 5000000,
+      "lead": [
+       "Quantstamp",
+       "Republic"
+      ],
+      "as": null,
+      "src": "https://www.chaincatcher.com/en/article/2166319",
+      "agg": true
+     }
+    ],
+    "vcs": [
+     "Quantstamp",
+     "Republic",
+     "Arbelos Markets",
+     "PANONY Group",
+     "RSK Capital",
+     "Samara Alpha"
+    ],
+    "angels": [],
+    "reported": [],
+    "sources": [
+     {
+      "label": "ChainCatcher",
+      "url": "https://www.chaincatcher.com/en/article/2166319",
+      "agg": true
+     },
+     {
+      "label": "Odaily",
+      "url": "https://www.odaily.news/en/newsflash/417474",
+      "agg": true
+     },
+     {
+      "label": "X (@ProdigyFi)",
+      "url": "https://x.com/ProdigyFi/status/1887848917842403560",
+      "agg": false
+     },
+     {
+      "label": "Caplight",
+      "url": "https://www.caplight.com/company/prodigy-fi",
+      "agg": true
+     }
+    ],
+    "level": "confirmed"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -2186,14 +3725,14 @@
    "rank": null,
    "logo": "logos/auto/e27664009c43.webp",
    "spark": [],
-   "vol30": 36651,
-   "vol7": 14359,
-   "prem30": 146.98,
+   "vol30": 36632,
+   "vol7": 8260,
+   "prem30": 146.97,
    "volSlugs": [
     "prodigy.fi-v2",
     "prodigy.fi-v1"
    ],
-   "tvl": 30144.312500886055,
+   "tvl": 32644.269736498998,
    "since": "2026-05"
   },
   {
@@ -2215,6 +3754,18 @@
     "P2P options"
    ],
    "note": "",
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -2232,7 +3783,7 @@
    "volSlugs": [
     "jasper-vault"
    ],
-   "tvl": 41219.869029448026,
+   "tvl": 41128.60226845385,
    "since": "2024-05"
   },
   {
@@ -2256,6 +3807,18 @@
    ],
    "note": "",
    "isNew": false,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -2271,7 +3834,7 @@
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 43831.98755701648,
+   "tvl": 42478.17142352199,
    "since": "2025-01"
   },
   {
@@ -2294,6 +3857,18 @@
     "Options"
    ],
    "note": "",
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -2311,7 +3886,7 @@
    "volSlugs": [
     "ton-hedge"
    ],
-   "tvl": 25318.237043614605,
+   "tvl": 25317.73089524749,
    "since": "2024-08"
   },
   {
@@ -2335,6 +3910,18 @@
    ],
    "note": "",
    "isNew": false,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -2352,7 +3939,7 @@
    "volSlugs": [
     "hypersurface"
    ],
-   "tvl": 10651.693532341646,
+   "tvl": 10627.643360389538,
    "since": "2026-01"
   },
   {
@@ -2374,39 +3961,125 @@
     "Composable options"
    ],
    "note": "",
-   "price": 0.00067677,
-   "ch24": 38.40705,
-   "ch7": 32.2423,
-   "ch30": 75.7546,
-   "mcap": 451301,
-   "fdv": 609084,
+   "backers": {
+    "total": 2800000,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2024-01",
+      "round": "Pre-seed",
+      "amount": 2500000,
+      "lead": [
+       "Cumberland",
+       "Wintermute Ventures"
+      ],
+      "as": null,
+      "src": "https://chainwire.org/2024/01/31/composable-option-protocol-announces-pre-seed-round-led-by-cumberland-and-wintermute-ventures/",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Cumberland",
+     "Wintermute Ventures",
+     "Room40 Ventures",
+     "Ghaf Capital Partners",
+     "Enjinstarter",
+     "Merit Circle",
+     "Tradedog"
+    ],
+    "angels": [
+     {
+      "name": "Andrew Keys",
+      "note": ""
+     },
+     {
+      "name": "Georgios Vlachos",
+      "note": "co-founder of Axelar"
+     },
+     {
+      "name": "Stan Miroshnik",
+      "note": "managing partner of TenSquared Capital"
+     },
+     {
+      "name": "Pranav Sharma",
+      "note": "general partner at Woodstock"
+     },
+     {
+      "name": "Mansoor Madhavji",
+      "note": "managing partner at BFF"
+     },
+     {
+      "name": "Aly Madhavji",
+      "note": "managing partner at BFF"
+     },
+     {
+      "name": "Yoeri Krom",
+      "note": "managing partner at Existential VC"
+     },
+     {
+      "name": "Psycho",
+      "note": ""
+     },
+     {
+      "name": "traderMayne",
+      "note": ""
+     },
+     {
+      "name": "rookieXBT",
+      "note": ""
+     },
+     {
+      "name": "Dentoshi",
+      "note": ""
+     }
+    ],
+    "reported": [],
+    "sources": [
+     {
+      "label": "Chainwire",
+      "url": "https://chainwire.org/2024/01/31/composable-option-protocol-announces-pre-seed-round-led-by-cumberland-and-wintermute-ventures/",
+      "agg": false
+     },
+     {
+      "label": "The Defiant",
+      "url": "https://thedefiant.io/news/press-releases/ithaca-protocol-launches-live-beta-announces-airdrop-campaign",
+      "agg": false
+     },
+     {
+      "label": "crypto.news",
+      "url": "https://crypto.news/ithaca-finance-raises-2-5m-to-build-on-chain-options-protocol/",
+      "agg": false
+     }
+    ],
+    "level": "confirmed"
+   },
+   "price": 0.00073092,
+   "ch24": 8.70776,
+   "ch7": 15.0596,
+   "ch30": 49.4604,
+   "mcap": 487419,
+   "fdv": 657829,
    "ath": 0.116504,
    "athDate": "2025-01-17T10:55:30.000Z",
-   "rank": 3823,
+   "rank": 3767,
    "logo": "logos/auto/c21764819fa7.png",
    "spark": [
-    0.000596397208166085,
-    0.0005378483883526354,
-    0.0005896112687022434,
-    0.0006148145544978906,
-    0.0005521846505046066,
-    0.0005786381345461726,
-    0.0005462099944826597,
-    0.0005367340455732823,
     0.00051677992212201,
     0.0005028000304633447,
     0.0004970146092926067,
     0.00048269733323737777,
     0.00046422751898431,
     0.00048465108160266506,
-    0.0004749292859943037,
-    0.00047803291171131845,
-    0.0005175762298215228,
-    0.0005002557103756243,
-    0.0004891318070692404,
-    0.00048647898900373447,
-    0.0004890217467657241,
-    0.0005016239099749903,
+    0.0004765544632544192,
+    0.00047540934019288725,
+    0.00048365938722107313,
+    0.0005031907641217939,
+    0.000489343339761922,
+    0.00048805330294678865,
+    0.00048691357633753076,
+    0.0004918199921803806,
     0.0005033686082726006,
     0.0004971852658495587,
     0.0005100807326501432,
@@ -2427,26 +4100,34 @@
     0.000495308468422679,
     0.0004999039535261521,
     0.0004955754673583106,
-    0.0004932276403781856,
-    0.0004932159698224926,
-    0.0004957163808738041,
-    0.0004903965596311313,
-    0.0004889097764695984,
-    0.0004875382414013477,
-    0.0004901550396283369,
-    0.0004883722152718532,
+    0.00049384551823461,
+    0.0004931423332959361,
+    0.0004932474684698528,
+    0.0004927052702436053,
+    0.0004890365716688884,
+    0.0004870152361113819,
+    0.000489257611478169,
+    0.0004891119681924615,
     0.000487649585752378,
     0.0005376997347760739,
     0.0007745802943598267,
     0.0007605744962006479,
     0.0007983345631345094,
-    0.000769203357141614
+    0.000769203357141614,
+    0.0006519021680621142,
+    0.0006186367096304218,
+    0.0006188385519346793,
+    0.0005630509182261858,
+    0.0005730794717931818,
+    0.0005161781479756874,
+    0.0005439878396583477,
+    0.0005468844379756155
    ],
    "vol30": null,
    "vol7": null,
    "prem30": 1999,
    "volSlugs": [],
-   "tvl": 15082.694725794485,
+   "tvl": 15054.879593678073,
    "since": "2024-04"
   },
   {
@@ -2469,39 +4150,43 @@
     "Onchain options"
    ],
    "note": "",
-   "price": 0.00037484,
-   "ch24": 0.23065,
-   "ch7": 0.8954,
-   "ch30": 0.2292,
-   "mcap": 15128.37,
-   "fdv": 24676,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": "2018 token sale; no named investors",
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
+   "price": 0.00037307,
+   "ch24": -0.17055,
+   "ch7": -0.2584,
+   "ch30": 0.2118,
+   "mcap": 15056.69,
+   "fdv": 24559,
    "ath": 1.095,
    "athDate": "2018-05-05T16:00:00.000Z",
-   "rank": 8555,
+   "rank": 8763,
    "logo": "logos/auto/51e852021c8a.png",
    "spark": [
-    0.0003760650515677157,
-    0.0003715797684400342,
-    0.0003741626288215356,
-    0.0003710028793235425,
-    0.00037271904823268096,
-    0.000376380345355504,
-    0.00037037738918380413,
-    0.0003706867058031466,
     0.0003742616389914363,
     0.0003707018568745435,
     0.0003725768726111201,
     0.00037217423952960125,
     0.0003734669604821909,
     0.00037382338838898136,
-    0.00036734352012158676,
-    0.0003718706416588198,
-    0.0003731707445709521,
-    0.00037195465734969917,
-    0.00037166459436195284,
-    0.00037393072518932533,
-    0.00037633677497490116,
-    0.00037574121039142495,
+    0.00037172542176292753,
+    0.0003724114937880209,
+    0.0003723167951218428,
+    0.00036783212893501556,
+    0.0003727269814711397,
+    0.00037185069972413645,
+    0.0003756300880363952,
+    0.0003731276100402861,
     0.0003720642034183412,
     0.0003709412381205102,
     0.0003730524418362894,
@@ -2522,26 +4207,34 @@
     0.0003734236833497036,
     0.00036941578243656297,
     0.0003723885231189216,
-    0.0003749096326993377,
-    0.00037235932840864517,
-    0.0003721610924398993,
-    0.0003722767879106798,
-    0.00037259560560256374,
-    0.00037502193440550654,
-    0.00037270807800199595,
-    0.00037133330205722207,
+    0.0003727597359136788,
+    0.0003729416784052116,
+    0.00037316492673552425,
+    0.000372867258251552,
+    0.0003734056001334008,
+    0.00037445933918964415,
+    0.0003735409074868323,
+    0.0003701602160604905,
     0.00037338453935303716,
     0.00037280391079828516,
     0.0003731594154870675,
     0.00037506184158017755,
     0.0003742236226114555,
-    0.0003752479465714835
+    0.0003752479465714835,
+    0.0003730252726561255,
+    0.00037181527897223225,
+    0.0003687637130377177,
+    0.0003707690777793826,
+    0.00037285048275121426,
+    0.0003671373952124581,
+    0.0003741496658099636,
+    0.0003753023981580181
    ],
    "vol30": null,
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 15077.817382190278,
+   "tvl": 14718.755705638272,
    "since": null
   },
   {
@@ -2564,79 +4257,165 @@
     "Bull/bear tokens"
    ],
    "note": "",
-   "price": 0.00106971,
-   "ch24": -0.00549,
-   "ch7": -4.8742,
-   "ch30": -9.5083,
-   "mcap": 106971,
-   "fdv": 106971,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2021-02",
+      "round": "Seed",
+      "amount": 150000,
+      "lead": [],
+      "as": null,
+      "src": "https://cryptobriefing.com/how-defi-project-antimatter-tanked-its-own-token-price/",
+      "agg": false
+     },
+     {
+      "date": null,
+      "round": "Private",
+      "amount": 550000,
+      "lead": [],
+      "as": null,
+      "src": "https://cryptobriefing.com/how-defi-project-antimatter-tanked-its-own-token-price/",
+      "agg": false
+     },
+     {
+      "date": "2021-04",
+      "round": "Strategic",
+      "amount": null,
+      "lead": [
+       "Huobi DeFi Labs"
+      ],
+      "as": null,
+      "src": "https://bitunebtc.medium.com/huobi-defi-labs-invests-in-antimatter-bfee3fc42266",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Huobi DeFi Labs",
+     "NGC Ventures",
+     "Monday Capital",
+     "Spark Digital Capital"
+    ],
+    "angels": [
+     {
+      "name": "Tekin Salimi",
+      "note": "general partner at Polychain Capital"
+     },
+     {
+      "name": "Justin Sun",
+      "note": "founder of TRON"
+     },
+     {
+      "name": "Brian Lee",
+      "note": "partner at Alameda Research Ventures"
+     }
+    ],
+    "reported": [],
+    "sources": [
+     {
+      "label": "Antimatter",
+      "url": "https://antimatter.finance",
+      "agg": false
+     },
+     {
+      "label": "Antimatter docs",
+      "url": "https://docs.antimatter.finance/antimatter-dao/introduction",
+      "agg": false
+     },
+     {
+      "label": "Medium (Huobi DeFi Labs)",
+      "url": "https://bitunebtc.medium.com/huobi-defi-labs-invests-in-antimatter-bfee3fc42266",
+      "agg": false
+     },
+     {
+      "label": "Medium (AMA recap)",
+      "url": "https://bitunebtc.medium.com/antimatter-x-daku-ama-recap-18c6f83c91a0",
+      "agg": false
+     },
+     {
+      "label": "Crypto Briefing",
+      "url": "https://cryptobriefing.com/how-defi-project-antimatter-tanked-its-own-token-price/",
+      "agg": false
+     }
+    ],
+    "level": "partial"
+   },
+   "price": 0.00113558,
+   "ch24": null,
+   "ch7": 0.9908,
+   "ch30": -13.1502,
+   "mcap": 113558,
+   "fdv": 113558,
    "ath": 6.05,
    "athDate": "2021-04-08T14:44:36.000Z",
-   "rank": 5707,
+   "rank": 5664,
    "logo": "logos/auto/d238cadc474e.png",
    "spark": [
-    0.001124458561506066,
-    0.0011244664920811332,
-    0.001124435861133245,
-    0.001124445196380032,
-    0.001124448979817257,
-    0.0011245860895250622,
-    0.0011245887341863534,
-    0.0011245888983614596,
-    0.0011244404706017592,
-    0.0011243887992746218,
     0.0011244095333764277,
-    0.0011244331172725458,
+    0.0011244473370736086,
     0.0011243835976589849,
     0.001099750334915949,
-    0.001068104753210323,
+    0.0010680963488004644,
     0.0010680865764218599,
     0.0010679790844661326,
-    0.0010985462697151566,
+    0.0010680271407878352,
+    0.001098487247279155,
     0.001136303715079571,
     0.001133290092162575,
-    0.0011745534305942166,
+    0.001174582847315676,
     0.0011745120736449738,
     0.0011745798201753517,
-    0.0011745806824759305,
+    0.001174470514762236,
     0.0011745553962714194,
     0.0011744808733390344,
-    0.0011743931674919402,
+    0.0011744432185082528,
+    0.0011743339030267105,
     0.0011743368663275089,
-    0.001174364549151403,
-    0.0011743313184052501,
+    0.0011743541057133303,
+    0.0011743072513136824,
     0.0011742887579071516,
     0.0011742762259830965,
     0.0011743261726858227,
     0.0011742706646316178,
     0.0011381651249959739,
-    0.0011382102654900806,
+    0.001138207281139847,
     0.0011381896498387557,
-    0.001138174865446493,
-    0.0011381604404448482,
+    0.0011381426095562668,
+    0.0011381976811726461,
+    0.0012241139715496083,
     0.0010675541797294187,
     0.0010675579444962442,
     0.0010698305433210296,
     0.0010698494640995235,
     0.001069819267768545,
-    0.0010698130864082835,
+    0.001069791357188803,
     0.0010698031692529411,
-    0.0010698626891778808,
-    0.0010697796490391452,
+    0.001069760433038101,
+    0.0010698616090445844,
+    0.00106976654398431,
     0.0010698023504673048,
-    0.0010697706638567502,
+    0.0010697645342677801,
     0.0010697796234087505,
     0.001069777044079238,
     0.001069788780046915,
     0.0010697407016842415,
     0.0010697973259221917,
-    0.001069738612686654
+    0.001069746623923431,
+    0.00113556910656701,
+    0.0011355829048233627,
+    0.0011356095743928342,
+    0.0011355316920677522,
+    0.0011356354957957132,
+    0.001135588168712131
    ],
    "vol30": null,
    "vol7": null,
    "prem30": null,
    "volSlugs": [],
-   "tvl": 15218.836878690934,
+   "tvl": 14754.452348079918,
    "since": "2022-02"
   },
   {
@@ -2658,24 +4437,95 @@
     "Impermanent gain"
    ],
    "note": "",
-   "price": 0.01661478,
-   "ch24": 0.03535,
-   "ch7": -2.5721,
-   "ch30": -25.9475,
-   "mcap": 33230,
-   "fdv": 166148,
+   "backers": {
+    "total": 2000000,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [
+     {
+      "date": "2023-05",
+      "round": "Seed",
+      "amount": 2000000,
+      "lead": [
+       "Dialectic"
+      ],
+      "as": null,
+      "src": "https://medium.com/smilee-finance/announcing-our-2m-seed-raise-bf93d078ab9d",
+      "agg": false
+     }
+    ],
+    "vcs": [
+     "Dialectic",
+     "Synergis Capital",
+     "Concave Ventures",
+     "Owl Ventures",
+     "Yunt Capital",
+     "Dewhales Capital",
+     "Outlier Ventures",
+     "New Order",
+     "Multisig Ventures",
+     "GTS Ventures",
+     "Hyperpyra"
+    ],
+    "angels": [
+     {
+      "name": "Marc Zeller",
+      "note": "founder of Aave Chan Initiative"
+     },
+     {
+      "name": "0xSami",
+      "note": ""
+     },
+     {
+      "name": "Barry Fried",
+      "note": ""
+     },
+     {
+      "name": "Darren Camas",
+      "note": ""
+     },
+     {
+      "name": "Slappjakke",
+      "note": ""
+     }
+    ],
+    "reported": [],
+    "sources": [
+     {
+      "label": "Smilee blog (Medium)",
+      "url": "https://medium.com/smilee-finance/announcing-our-2m-seed-raise-bf93d078ab9d",
+      "agg": false
+     },
+     {
+      "label": "Forbes Italia",
+      "url": "https://forbes.it/2023/06/21/questi-due-under-30-hanno-raccolto-due-milioni-di-dollari-per-la-loro-startup-di-finanza-decentralizzata/",
+      "agg": false
+     },
+     {
+      "label": "CoinCarp",
+      "url": "https://www.coincarp.com/fundraising/smilee-seed/",
+      "agg": true
+     },
+     {
+      "label": "VCBacked",
+      "url": "https://www.vcbacked.co/company/smilee-finance",
+      "agg": true
+     }
+    ],
+    "level": "confirmed"
+   },
+   "price": 0.01693376,
+   "ch24": null,
+   "ch7": 1.291,
+   "ch30": -23.1682,
+   "mcap": 33868,
+   "fdv": 169338,
    "ath": 0.228201,
    "athDate": "2026-02-20T03:24:07.000Z",
-   "rank": 7444,
+   "rank": 7517,
    "logo": "logos/auto/a4a6f33147a8.png",
    "spark": [
-    0.01669929152116389,
-    0.016684044167505806,
-    0.016737158935848213,
-    0.016757276285210735,
-    0.016765670309244307,
-    0.01671715807466855,
-    0.016725734170846714,
     0.01667731265892007,
     0.016686455321578718,
     0.016684357536465768,
@@ -2685,46 +4535,53 @@
     0.016718027101981014,
     0.016640733257775316,
     0.016636121010453076,
-    0.01663613406657585,
+    0.016618836881719237,
     0.016618890745315328,
     0.016625802522226042,
+    0.016647846536681096,
     0.01662679358601,
-    0.016605928111644287,
     0.016647504657531176,
     0.016662964554545814,
+    0.016633361924910956,
     0.016959849322541302,
-    0.016972947498835097,
     0.01694709309079,
+    0.016987911360471213,
     0.01697981961877235,
     0.016929088103824024,
-    0.017009050613074367,
     0.016995704868084684,
+    0.016906825522005016,
     0.016913745734478333,
     0.016983789809133603,
-    0.016656049094861347,
+    0.01664033986677799,
     0.016621329147627446,
     0.016602181855806673,
     0.016596224494336616,
-    0.01661935215901951,
+    0.0166194857011173,
     0.01655305623968689,
     0.016589931394263648,
     0.016595638370974188,
     0.016586570548408314,
     0.01659166020708704,
     0.01661881185505331,
-    0.016614221208376384,
+    0.016630027134717163,
     0.016615068481399535,
     0.016598603700438867,
     0.01663017473819557,
-    0.01661240537264051,
+    0.016615836121953227,
     0.01657350903359062,
     0.016643411244482032,
+    0.016638805555174187,
     0.016638597234264165,
-    0.01657304848598817,
     0.016570021448672066,
     0.016603424026654812,
+    0.016583974811468102,
     0.016584606153865027,
-    0.016637978159442252
+    0.016691050171981418,
+    0.016650802769923333,
+    0.01656593157776037,
+    0.016901770191385918,
+    0.016941649781623644,
+    0.01690416630560757
    ],
    "vol30": 0,
    "vol7": 0,
@@ -2732,7 +4589,7 @@
    "volSlugs": [
     "smilee-finance-arbitrum"
    ],
-   "tvl": 927076.0701807983,
+   "tvl": 896541.0846011478,
    "since": "2024-03"
   },
   {
@@ -2755,6 +4612,18 @@
    ],
    "note": "",
    "isNew": false,
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [],
+    "angels": [],
+    "reported": [],
+    "sources": [],
+    "level": "none"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -2766,13 +4635,13 @@
    "rank": null,
    "logo": "logos/auto/269a0fc6c03f.webp",
    "spark": [],
-   "vol30": 5740.14,
-   "vol7": 2507.8,
+   "vol30": 5740.4400000000005,
+   "vol7": 2507.3,
    "prem30": 263.23,
    "volSlugs": [
     "stochastic-finance"
    ],
-   "tvl": 2008.5291357599958,
+   "tvl": 2009.0337148933045,
    "since": "2026-09"
   },
   {
@@ -2812,6 +4681,26 @@
     ],
     "writeup": ""
    },
+   "backers": {
+    "total": null,
+    "totalNote": "",
+    "incubator": null,
+    "summary": null,
+    "rounds": [],
+    "vcs": [
+     "Susa Ventures"
+    ],
+    "angels": [],
+    "reported": [],
+    "sources": [
+     {
+      "label": "Omen",
+      "url": "https://omen.trade",
+      "agg": false
+     }
+    ],
+    "level": "confirmed"
+   },
    "price": null,
    "ch24": null,
    "ch7": null,
@@ -2827,18 +4716,111 @@
    "prem30": null,
    "volSlugs": [],
    "tvl": null
+  },
+  {
+   "ticker": "HEDGE",
+   "name": "HedgeHood",
+   "stage": "post",
+   "core": false,
+   "lineage": "",
+   "origin": "",
+   "home": "기타",
+   "what": "Hedgehood is a DeFi protocol for tokenized stocks, combining collateralized stock lending, Stock Yield covered-call stra",
+   "cg": "hedgehood",
+   "llama": [
+    "parent#hedgehood"
+   ],
+   "site": "https://hedgehood.app",
+   "x": "0xHedgehood",
+   "keywords": [],
+   "note": "",
+   "auto": true,
+   "price": 0.00061743,
+   "ch24": -19.01912,
+   "ch7": 0.2022,
+   "ch30": null,
+   "mcap": 582056,
+   "fdv": 582056,
+   "ath": 0.00355835,
+   "athDate": "2026-09-23T01:48:10.000Z",
+   "rank": 3574,
+   "logo": "logos/auto/f8cd8584b091.png",
+   "spark": [
+    0.0006073588198025277,
+    0.0005690307456295581,
+    0.0005118093037950608,
+    0.0005440861434078818,
+    0.000490406226403517,
+    0.0004901672456511286,
+    0.00044463755600460906,
+    0.0004680234573675681,
+    0.00045672294246744416,
+    0.00044146940683318774,
+    0.0004274259152079731,
+    0.00038920832104084196,
+    0.00039533332535773337,
+    0.000390842004798883,
+    0.00039883968769083224,
+    0.0005411514565169496,
+    0.0005905757663287117,
+    0.0006188051060248391,
+    0.0006286919557544346,
+    0.0007607980799747946,
+    0.000703454826171547,
+    0.0007024930164760497,
+    0.0007057656691279717,
+    0.00068646711694436,
+    0.000702432431526195,
+    0.0006586198433066003,
+    0.0006753662348057815,
+    0.0006770740979612176,
+    0.0006851206692346521,
+    0.0006558854993945193,
+    0.0006323584812564101,
+    0.0006899066889542223,
+    0.0006802362499859927,
+    0.0006690754288970309,
+    0.0006353284615081326,
+    0.0005826370582955704,
+    0.0005422151586852121,
+    0.0005334631329044167,
+    0.0005103195342424344,
+    0.0005620417837551548,
+    0.0006885636031962336,
+    0.0006028583215438357,
+    0.0006137663837274012,
+    0.0007031476918443547,
+    0.0007287261905858005,
+    0.0006879793652954973,
+    0.0006774056524647314,
+    0.0007096793919790631,
+    0.0007541450746319173,
+    0.0007794179755054976,
+    0.0007303167818407173,
+    0.0006987185726773714,
+    0.0006775547775637086,
+    0.0006135072123833196,
+    0.0005382582859745031,
+    0.0005696080304691547
+   ],
+   "vol30": null,
+   "vol7": null,
+   "prem30": null,
+   "volSlugs": [],
+   "tvl": 68179.62236429116,
+   "since": "2026-09"
   }
  ],
  "market": {
-  "total30": 5029028102.13,
-  "total7": 658845793.8,
-  "prev30": 3030081549.91,
+  "total30": 5178743410.43,
+  "total7": 756055123.3,
+  "prev30": 3041786303.91,
   "ranking": [
    {
     "name": "Derive",
-    "vol30": 4236359441,
-    "vol7": 536990760,
-    "prev30": 2594158223,
+    "vol30": 4341966744,
+    "vol7": 619417175,
+    "prev30": 2588617663,
     "chain": "Derive Chain",
     "logo": "logos/auto/8e8b3324476b.webp",
     "tracked": "DRV",
@@ -2846,9 +4828,9 @@
    },
    {
     "name": "Paradex",
-    "vol30": 455549796,
-    "vol7": 42857237,
-    "prev30": 64657420,
+    "vol30": 459874634,
+    "vol7": 37010928,
+    "prev30": 65492365,
     "chain": "Paradex",
     "logo": "logos/auto/c046761d7429.webp",
     "tracked": "DIME",
@@ -2856,9 +4838,9 @@
    },
    {
     "name": "Rysk",
-    "vol30": 147823963,
-    "vol7": 29506866,
-    "prev30": 158676661,
+    "vol30": 148130381,
+    "vol7": 29040911,
+    "prev30": 160419449,
     "chain": "Hyperliquid L1",
     "logo": "logos/auto/6681662c797c.webp",
     "tracked": "Rysk",
@@ -2866,9 +4848,9 @@
    },
    {
     "name": "CallPut",
-    "vol30": 85683730,
-    "vol7": 30155678,
-    "prev30": 115215591,
+    "vol30": 89707494,
+    "vol7": 31597511,
+    "prev30": 114970426,
     "chain": "Base",
     "logo": "logos/auto/5a8a15688836.webp",
     "tracked": "CallPut",
@@ -2876,19 +4858,29 @@
    },
    {
     "name": "Aevo",
-    "vol30": 66489781,
-    "vol7": 12582598,
-    "prev30": 34312754,
+    "vol30": 67215372,
+    "vol7": 13088693,
+    "prev30": 35241457,
     "chain": "Ethereum",
     "logo": "logos/auto/d2f86c5cf72c.webp",
     "tracked": "AEVO",
     "core": true
    },
    {
+    "name": "Dream",
+    "vol30": 34784477,
+    "vol7": 20567779,
+    "prev30": 14022250,
+    "chain": "Off Chain",
+    "logo": "logos/auto/4edd281815a0.webp",
+    "tracked": "Dream",
+    "core": true
+   },
+   {
     "name": "Panoptic",
-    "vol30": 31989605,
-    "vol7": 5689858,
-    "prev30": 34495047,
+    "vol30": 31799563,
+    "vol7": 4334927,
+    "prev30": 34582881,
     "chain": "Ethereum",
     "logo": "logos/auto/85101fc8e8de.webp",
     "tracked": "Panoptic",
@@ -2896,9 +4888,9 @@
    },
    {
     "name": "Odette",
-    "vol30": 2319792,
-    "vol7": 478861,
-    "prev30": 2211282,
+    "vol30": 2399985,
+    "vol7": 453438,
+    "prev30": 2198423,
     "chain": "Base",
     "logo": "logos/auto/ebec0d485182.webp",
     "tracked": "Odette",
@@ -2906,9 +4898,9 @@
    },
    {
     "name": "Hegic",
-    "vol30": 1434150.99,
-    "vol7": 280062,
-    "prev30": 2730106.91,
+    "vol30": 1464356.99,
+    "vol7": 310268,
+    "prev30": 2686750.91,
     "chain": "Arbitrum",
     "logo": "logos/auto/541fee6a7782.webp",
     "tracked": "Hegic",
@@ -2917,210 +4909,214 @@
    {
     "name": "Toros",
     "vol30": 922271,
-    "vol7": 175524,
+    "vol7": 109719,
     "prev30": 838150,
     "chain": "Arbitrum",
     "logo": "logos/auto/4fa067297a81.webp",
     "tracked": "Toros",
     "core": false
-   },
-   {
-    "name": "Thetanuts",
-    "vol30": 396820,
-    "vol7": 109926,
-    "prev30": 274141,
-    "chain": "Ethereum",
-    "logo": "logos/auto/120d70e90b2f.webp",
-    "tracked": "NUTS",
-    "core": true
    }
   ]
  },
  "race": {
   "weeks": [
-   1783927024,
-   1784531824,
-   1785136624,
-   1785741424,
-   1786346224,
-   1786951024,
-   1787555824,
-   1788160624,
-   1788765424,
-   1789370224,
-   1789975024,
-   1790579824,
-   1791184624
+   1784014744,
+   1784619544,
+   1785224344,
+   1785829144,
+   1786433944,
+   1787038744,
+   1787643544,
+   1788248344,
+   1788853144,
+   1789457944,
+   1790062744,
+   1790667544,
+   1791272344
   ],
   "vol": {
    "Derive": [
-    287623050,
-    318837591,
-    284559156,
-    168561209,
-    258327668,
-    905277907,
-    555116840,
-    499704907,
-    850969780,
-    1469970966,
-    856289553,
-    1006357603,
-    590710164
+    294156573,
+    284198824,
+    279009670,
+    171320401,
+    250293930,
+    1055050326,
+    468748850,
+    450860697,
+    942465847,
+    1446853062,
+    843899614,
+    951529076,
+    745658319
    ],
    "Paradex": [
-    13954249,
-    7854620,
-    10562826,
-    10477749,
-    10371206,
-    29776507,
-    12850233,
-    11992769,
-    5756391,
-    161122533,
-    54440413,
-    206924403,
-    36568251
+    14977348,
+    7345078,
+    9994217,
+    10586715,
+    8021482,
+    34340104,
+    14883708,
+    6117757,
+    7004488,
+    178504332,
+    59198090,
+    193750360,
+    31391481
    ],
    "Thetanuts": [
-    45936,
-    15976,
-    33765,
-    43974,
-    7209,
-    107158,
-    55914,
-    85296,
-    41288,
-    84449,
-    142874,
-    63136,
-    93339
+    41548,
+    15504,
+    34126,
+    44180,
+    7635,
+    119822,
+    43977,
+    86027,
+    51788,
+    101512,
+    124481,
+    57532,
+    136922
    ],
    "Aevo": [
-    4292610,
-    4432956,
-    6454484,
-    4809568,
-    5403097,
-    8384061,
-    9260265,
-    9774173,
-    7366437,
-    14660273,
-    21090368,
-    15961887,
-    11387696
+    4456824,
+    4831592,
+    7329862,
+    3717086,
+    5328510,
+    9132011,
+    8607283,
+    9597536,
+    9024529,
+    14167756,
+    22628334,
+    14630023,
+    11379095
+   ],
+   "Dream": [
+    0,
+    0,
+    0,
+    0,
+    62784,
+    6090595,
+    4679734,
+    105246,
+    3354907,
+    188101,
+    2593609,
+    11542360,
+    20189391
    ],
    "CallPut": [
-    41461177,
-    23352975,
-    11679375,
-    7932345,
-    6255197,
-    36748510,
-    40158641,
-    25398422,
-    11371590,
-    9525410,
-    20408341,
-    25849090,
-    28528005
+    38824341,
+    21286139,
+    10166576,
+    7850602,
+    5713342,
+    42144514,
+    38750444,
+    24412562,
+    8480256,
+    11655250,
+    24511949,
+    24069023,
+    31939545
    ],
    "Rysk": [
-    31574490,
-    28619822,
-    24071452,
-    18768520,
-    23865811,
-    46875878,
-    44837606,
-    25108600,
-    29318711,
-    35264528,
-    46501892,
-    32083146,
-    29366530
+    33645021,
+    25773474,
+    24724197,
+    17929987,
+    23592238,
+    48314776,
+    45122716,
+    24715293,
+    28909422,
+    36996759,
+    44455454,
+    32913942,
+    30639799
    ],
    "Panoptic": [
-    1297421,
-    1833337,
-    1748352,
-    1387117,
-    1211308,
-    8258608,
-    12589397,
-    7449056,
-    9221031,
-    11221712,
-    5642970,
-    7023773,
-    4266401
+    1778753,
+    1513508,
+    1951701,
+    1201994,
+    2004761,
+    9549175,
+    11746743,
+    6449501,
+    11369150,
+    9879487,
+    5908031,
+    6280057,
+    3586148
    ],
    "Odette": [
-    1142880,
-    462119,
-    202571,
-    278063,
-    299172,
-    647851,
-    620664,
-    483342,
-    435917,
-    476715,
-    667374,
-    648566,
-    433869
+    892198,
+    447574,
+    204966,
+    311938,
+    311461,
+    697925,
+    597140,
+    430835,
+    539662,
+    501918,
+    617133,
+    612979,
+    454015
    ],
    "Hegic": [
-    91557,
-    129794,
-    223251,
+    122922,
+    99011,
+    222669,
     0,
-    87448,
-    540508,
-    806365,
-    1110247,
-    231385,
-    743130,
-    383061,
-    25408,
-    287734
+    165651,
+    656353,
+    880755,
+    863743,
+    246096,
+    707381,
+    382165,
+    26270,
+    339612
    ],
    "Toros": [
-    427227,
-    132344,
+    557492,
+    1821,
     117126,
-    0,
-    135001,
-    424580,
-    256509,
+    111742,
+    23259,
+    503491,
+    177598,
     111859,
-    21943,
-    407858,
-    235503,
+    76040,
+    456351,
+    132913,
     169191,
     109719
    ],
    "Prodigy.Fi": [
-    19773,
-    78356,
-    58981,
-    78003,
+    39173,
+    58786,
+    78469,
+    58505,
     0,
-    47474,
-    108786,
+    97605,
+    58655,
     19554,
     39,
     1093,
     16629,
     10650,
-    8260
+    11008
    ]
   },
   "days": [
-   1784073600,
    1784160000,
    1784246400,
    1784332800,
@@ -3210,658 +5206,753 @@
    1791590400,
    1791676800,
    1791763200,
-   1791789350
+   1791849600,
+   1791877070
   ],
   "ret": {
    "Derive": [
     0,
-    -6.79,
-    -12.84,
-    -16.19,
-    -19.82,
-    -21.16,
-    -20.44,
-    -22.52,
-    -22.51,
-    -23.51,
-    -25.93,
-    -26.43,
-    -26.05,
-    -31.88,
-    -33.15,
-    -37.85,
-    -38.77,
-    -24.86,
-    -31.01,
-    -36.13,
-    -37.77,
-    -34.98,
-    -35.21,
-    -36.93,
-    -37.63,
-    -37.37,
-    -37.61,
-    -39.18,
-    -37.22,
-    -36.57,
-    -39.08,
-    -39.97,
-    -40.37,
-    -33.17,
-    -38.17,
-    -39.9,
-    -36.55,
-    -37.12,
-    -23.82,
-    -27.37,
-    -15.36,
-    5.09,
-    -4.76,
-    7.94,
-    12.69,
-    8.59,
-    11.63,
-    -0.23,
-    -7.44,
-    -7.77,
-    -7.8,
-    2.52,
-    -2.86,
-    13.32,
-    6.56,
-    2.44,
-    5.7,
-    -0.42,
-    -4.23,
-    -3.91,
-    -3.33,
-    -6.8,
-    -9.01,
-    -11.75,
-    57.63,
-    64.35,
-    88.73,
-    184.13,
-    151,
-    158.24,
-    180.32,
-    215.7,
-    191.6,
-    187.16,
-    167.23,
-    179.51,
-    138.26,
-    147.03,
-    150.5,
-    155.05,
-    155.65,
-    148.1,
-    169.13,
-    165.38,
-    163.15,
-    141.58,
-    184.22,
-    236.18,
-    246.59,
-    221.06,
-    198.59
+    -6.48,
+    -10.08,
+    -13.98,
+    -15.41,
+    -14.64,
+    -16.88,
+    -16.87,
+    -17.94,
+    -20.53,
+    -21.07,
+    -20.66,
+    -26.91,
+    -28.28,
+    -33.33,
+    -34.31,
+    -19.38,
+    -25.99,
+    -31.48,
+    -33.24,
+    -30.24,
+    -30.49,
+    -32.34,
+    -33.08,
+    -32.81,
+    -33.06,
+    -34.75,
+    -32.65,
+    -31.94,
+    -34.64,
+    -35.59,
+    -36.03,
+    -28.3,
+    -33.66,
+    -35.52,
+    -31.92,
+    -32.54,
+    -18.27,
+    -22.07,
+    -9.2,
+    12.75,
+    2.18,
+    15.8,
+    20.91,
+    16.5,
+    19.76,
+    7.04,
+    -0.7,
+    -1.05,
+    -1.08,
+    9.99,
+    4.22,
+    21.58,
+    14.32,
+    9.9,
+    13.4,
+    6.84,
+    2.75,
+    3.1,
+    3.72,
+    -0.01,
+    -2.38,
+    -5.32,
+    69.11,
+    76.32,
+    102.48,
+    204.83,
+    169.29,
+    177.05,
+    200.75,
+    238.71,
+    212.85,
+    208.08,
+    186.7,
+    199.88,
+    155.63,
+    165.03,
+    168.76,
+    173.63,
+    174.28,
+    166.18,
+    188.74,
+    184.72,
+    182.32,
+    159.19,
+    204.93,
+    260.68,
+    271.84,
+    244.45,
+    206.1,
+    196.07
    ],
    "Paradex": [
     0,
-    18.16,
-    12.54,
-    7.85,
-    7.49,
-    4.33,
-    -9.9,
-    -16.02,
-    -28.4,
-    -30.1,
-    -27.6,
-    -28.03,
-    -25.52,
-    -24.31,
-    -30.22,
-    -22.98,
-    -23.31,
-    -29.13,
-    -29.8,
-    -25.37,
-    -29.86,
-    -15.53,
-    -17.07,
-    -17.06,
-    -21.59,
-    -21.27,
-    -17.78,
-    -21.57,
-    -17.76,
-    -0.05,
-    -9.98,
-    -21.5,
-    -16.24,
-    -17.83,
-    -17.76,
-    -18.24,
-    -18.56,
-    2.25,
-    3.28,
-    3.57,
-    -1.38,
-    12.71,
-    9.14,
-    0.46,
-    15.49,
-    13.57,
-    13.3,
-    9.59,
-    10.41,
-    0.78,
-    -9.01,
-    -10.44,
-    -14.56,
-    -18.3,
-    -20.18,
-    -24.78,
-    -21.63,
-    -27.59,
-    -29.95,
-    -20.89,
-    -10.29,
-    -12.94,
-    -24.77,
-    -24.12,
-    -13.96,
-    65.98,
-    194.36,
-    223.91,
-    271.82,
-    351.23,
-    305.97,
-    180.32,
-    209.87,
-    225.46,
-    221.41,
-    217.63,
-    199.49,
-    194.19,
-    195.9,
-    194.72,
-    182.35,
-    225.66,
-    242.75,
-    229.26,
-    236.56,
-    206.35,
-    181.98,
-    340.33,
-    421.1,
-    363.07,
-    365.73
+    -4.76,
+    -8.73,
+    -9.04,
+    -11.71,
+    -23.75,
+    -28.93,
+    -39.41,
+    -40.84,
+    -38.73,
+    -39.09,
+    -36.97,
+    -35.95,
+    -40.94,
+    -34.82,
+    -35.09,
+    -40.03,
+    -40.59,
+    -36.84,
+    -40.64,
+    -28.52,
+    -29.82,
+    -29.81,
+    -33.64,
+    -33.37,
+    -30.42,
+    -33.62,
+    -30.4,
+    -15.41,
+    -23.82,
+    -33.57,
+    -29.11,
+    -30.46,
+    -30.4,
+    -30.8,
+    -31.08,
+    -13.47,
+    -12.59,
+    -12.35,
+    -16.54,
+    -4.62,
+    -7.64,
+    -14.98,
+    -2.26,
+    -3.89,
+    -4.11,
+    -7.26,
+    -6.56,
+    -14.71,
+    -22.99,
+    -24.21,
+    -27.69,
+    -30.86,
+    -32.45,
+    -36.35,
+    -33.67,
+    -38.72,
+    -40.72,
+    -33.05,
+    -24.08,
+    -26.32,
+    -36.33,
+    -35.79,
+    -27.19,
+    40.47,
+    149.11,
+    174.11,
+    214.66,
+    281.87,
+    243.56,
+    137.23,
+    162.24,
+    175.43,
+    172,
+    168.8,
+    153.46,
+    148.96,
+    150.42,
+    149.42,
+    138.95,
+    175.6,
+    190.06,
+    178.64,
+    184.82,
+    159.26,
+    138.64,
+    272.64,
+    341,
+    291.89,
+    292.88,
+    288.67
    ],
    "Thetanuts": [
     0,
-    0.05,
-    -0.21,
-    0.07,
-    -0.03,
-    -0.22,
-    0.3,
-    -0.09,
-    -0.1,
-    0.21,
-    -0.31,
-    -0.86,
-    0.24,
-    0.13,
-    0.46,
-    -0.14,
-    0.72,
-    -0.52,
-    0.11,
-    0.28,
+    -0.26,
     0.02,
+    -0.08,
+    -0.27,
+    0.26,
+    -0.14,
+    -0.15,
+    0.16,
+    -0.36,
+    -0.91,
+    0.2,
+    0.08,
+    0.41,
+    -0.19,
+    0.67,
     -0.56,
-    0.1,
-    -0.24,
-    0.49,
-    -0.05,
-    0.29,
-    0.42,
-    0.46,
-    -0.42,
-    -0.23,
+    0.06,
+    0.23,
+    -0.03,
+    -0.61,
+    0.05,
+    -0.29,
+    0.44,
+    -0.1,
+    0.24,
     0.37,
-    0.37,
-    0.46,
-    -3.5,
-    -6.71,
-    -5.28,
-    -5.44,
-    -5.69,
-    -5.92,
-    -5.24,
-    -5.61,
-    -4.72,
-    -5.68,
-    -5.49,
-    -5.69,
-    -5.58,
-    -5.78,
-    -5.62,
-    -5.99,
-    -5.36,
-    -5.15,
-    -9.31,
-    -8.88,
-    -8.53,
-    -8.28,
-    -8.35,
-    -8.9,
-    -8.74,
-    -8.99,
-    -8.9,
+    0.41,
+    -0.47,
+    -0.28,
+    0.32,
+    0.32,
+    0.41,
+    -3.55,
+    -6.76,
+    -5.33,
+    -5.48,
+    -5.74,
+    -5.97,
+    -5.29,
+    -5.65,
+    -4.76,
+    -5.73,
+    -5.54,
+    -5.74,
+    -5.63,
+    -5.82,
+    -5.66,
+    -6.03,
+    -5.41,
+    -5.2,
+    -9.36,
     -8.92,
-    -8.73,
-    -10.08,
-    -9.83,
-    -8.86,
-    -7.92,
-    -8.38,
-    -8.99,
-    -8.63,
-    -9.34,
-    -9.88,
-    -9.98,
-    -10.32,
-    -10.85,
-    -11.21,
-    -11.89,
-    -12.28,
-    -12.83,
-    -14.96,
-    -16.8,
-    -16.35,
-    -16.34,
-    -13.04,
-    -12.81,
-    -13.39,
-    -13.74,
-    -13.22,
-    -13.61,
-    -13.85,
-    -14.01
+    -8.57,
+    -8.32,
+    -8.4,
+    -8.95,
+    -8.78,
+    -9.04,
+    -8.94,
+    -8.96,
+    -8.78,
+    -10.12,
+    -9.87,
+    -8.91,
+    -7.97,
+    -8.42,
+    -9.04,
+    -8.67,
+    -9.38,
+    -9.92,
+    -10.02,
+    -10.36,
+    -10.9,
+    -11.25,
+    -11.93,
+    -12.32,
+    -12.88,
+    -15.01,
+    -16.84,
+    -16.39,
+    -16.38,
+    -13.08,
+    -12.85,
+    -13.43,
+    -13.79,
+    -13.26,
+    -13.65,
+    -13.89,
+    -13.51,
+    -12.89
    ],
    "Aevo": [
     0,
-    -0.69,
-    -2.92,
-    -3.19,
-    -4.24,
-    -4.46,
-    -2.35,
-    -0.75,
-    0.95,
-    -0.92,
-    -1.57,
-    -1.7,
-    -0.47,
-    -4.97,
-    -4.01,
-    -6.47,
-    -4.82,
-    0.41,
-    8.27,
-    -0.16,
+    -2.25,
+    -2.52,
+    -3.58,
+    -3.8,
+    -1.68,
+    -0.06,
+    1.64,
+    -0.23,
+    -0.89,
+    -1.02,
+    0.22,
+    -4.31,
+    -3.35,
+    -5.82,
+    -4.16,
+    1.1,
+    9.02,
+    0.53,
+    0.69,
+    -2.38,
+    -0.43,
+    2.51,
+    4.58,
+    7.16,
+    6.43,
+    7.85,
+    6.24,
+    1.95,
+    0.86,
+    1.43,
+    4.34,
+    3.28,
+    4.45,
+    9.62,
+    12.88,
+    21.24,
+    31.16,
+    22.43,
+    24.8,
+    20.68,
+    16.88,
+    21.3,
+    19.99,
+    15.76,
+    16.32,
+    12.64,
+    12.2,
+    11.63,
+    11.91,
+    19.01,
+    19.07,
+    23.41,
+    25.15,
+    23.11,
+    24.39,
+    18.73,
+    11.41,
+    14.29,
+    16.54,
+    15.51,
+    15.57,
+    10.29,
+    10.09,
+    13.95,
+    25.54,
+    29.47,
+    26.65,
+    31.01,
+    34.66,
+    29.26,
+    32.43,
+    38.08,
+    41.93,
+    41.39,
+    32.64,
+    31.54,
+    35.37,
+    33.55,
+    36.14,
+    40.25,
+    38.54,
+    38.79,
+    35.38,
+    32.82,
+    41.19,
+    40.73,
+    38.02,
+    36.83,
+    30.44,
+    31.69
+   ],
+   "Hypercall": [
     0,
-    -3.05,
-    -1.12,
-    1.8,
-    3.86,
-    6.42,
-    5.7,
-    7.11,
-    5.51,
-    1.25,
-    0.17,
-    0.74,
-    3.62,
-    2.57,
-    3.74,
-    8.87,
-    12.1,
-    20.41,
-    30.26,
-    21.6,
-    23.94,
-    19.85,
-    16.08,
-    20.47,
-    19.17,
-    14.96,
-    15.53,
-    11.87,
-    11.43,
-    10.86,
-    11.14,
-    18.19,
-    18.25,
-    22.56,
-    24.29,
-    22.26,
-    23.54,
-    17.91,
-    10.65,
-    13.51,
-    15.74,
-    14.72,
-    14.78,
-    9.54,
-    9.34,
-    13.16,
-    24.68,
-    28.59,
-    25.78,
-    30.11,
-    33.74,
-    28.37,
-    31.52,
-    37.13,
-    40.96,
-    40.43,
-    31.73,
-    30.64,
-    34.45,
-    32.63,
-    35.2,
-    39.29,
-    37.59,
-    37.84,
-    34.45,
-    31.91,
-    40.22,
-    39.76,
-    37.08,
-    35.89,
-    40.26
+    -10.56,
+    -28.56,
+    -9,
+    -12.86,
+    -9.34,
+    -17.92,
+    -26.61,
+    -41.54,
+    -41.8,
+    -30.71,
+    -41.74,
+    -42.61,
+    -45.18,
+    -46.6,
+    -57.07,
+    -59.02,
+    -64.47,
+    -63.95,
+    -65.41,
+    -61.88,
+    -42.57,
+    -52.23,
+    -56.63,
+    -56.77,
+    -57.04,
+    -59.03,
+    -56.15,
+    -58.49,
+    -55.83,
+    -57.5,
+    -57.79,
+    -57.24,
+    -58.19,
+    -57.47,
+    -55.33,
+    -56.36,
+    -56.23,
+    -55.25,
+    -55,
+    -55.29,
+    -55.06,
+    -54.75,
+    -55.24,
+    -57.89,
+    -59.46,
+    -61.25,
+    -61.49,
+    -63.5,
+    -64.93,
+    -62.18,
+    -62.96,
+    -63.17,
+    -63.59,
+    -64.23,
+    -63.46,
+    -64.22,
+    -67.62,
+    -67,
+    -67.3,
+    -68.12,
+    -66.39,
+    -59.46,
+    -28.71,
+    -24.27,
+    -10.93,
+    -10.89,
+    -10.98,
+    -0.99,
+    -5.07,
+    -11.92,
+    -18.52,
+    -23.65,
+    -24.21,
+    -28.23,
+    -30.27,
+    -31.78,
+    -35.45,
+    -25.24,
+    -30.53,
+    -24.76,
+    -24.72,
+    -25.16,
+    -22.74,
+    -20.27,
+    -24.92,
+    -24.4,
+    -22.85,
+    -20.14,
+    -25.37,
+    -18.98
    ],
    "GammaSwap": [
     0,
-    -1.51,
-    -4.8,
-    -5.34,
-    -5.09,
-    -5.04,
-    -7.92,
-    -6.36,
-    -8.34,
-    -12.76,
-    -15.48,
-    -17.91,
-    -15.02,
-    -17.3,
-    -16.74,
-    -18.7,
-    -19.58,
-    -22.65,
-    -24.11,
-    -23.04,
-    -22.78,
-    -22.38,
-    -21.93,
-    -22.17,
-    -21.25,
-    -22.13,
-    -21.4,
-    -22.55,
-    -22.65,
-    -22.55,
-    -22.26,
-    -23.27,
-    -24.1,
-    -25.51,
-    -24.05,
-    -24.31,
-    -10.79,
-    -10.81,
-    -6.06,
-    -4.87,
-    -13.24,
-    -14.18,
-    -16.16,
-    -18.78,
-    -18.75,
-    -22.32,
-    -21.75,
-    -28.97,
-    -37.73,
-    -42.91,
+    -3.35,
+    -3.89,
+    -3.64,
+    -3.59,
+    -6.51,
+    -4.93,
+    -6.94,
+    -11.42,
+    -14.19,
+    -16.66,
+    -13.71,
+    -16.03,
+    -15.47,
+    -17.45,
+    -18.35,
+    -21.46,
+    -22.95,
+    -21.86,
+    -21.59,
+    -21.19,
+    -20.73,
+    -20.98,
+    -20.04,
+    -20.94,
+    -20.19,
+    -21.36,
+    -21.46,
+    -21.36,
+    -21.07,
+    -22.1,
+    -22.94,
+    -24.37,
+    -22.89,
+    -23.15,
+    -9.42,
+    -9.45,
+    -4.62,
+    -3.42,
+    -11.92,
+    -12.86,
+    -14.87,
+    -17.54,
+    -17.5,
+    -21.13,
+    -20.55,
+    -27.89,
+    -36.78,
+    -42.03,
+    -41.73,
+    -39.02,
+    -42.67,
     -42.61,
-    -39.94,
-    -43.53,
-    -43.48,
-    -42.16,
-    -43.05,
-    -43.31,
-    -44.46,
-    -47.2,
-    -45.49,
-    -49.92,
-    -55.66,
-    -55.14,
+    -41.27,
+    -42.18,
+    -42.44,
+    -43.61,
+    -46.39,
+    -44.65,
+    -49.15,
+    -54.98,
+    -54.45,
+    -56.28,
+    -56.42,
+    -55.52,
+    -52.97,
+    -57.06,
+    -56.96,
+    -54.81,
+    -53.5,
     -56.94,
-    -57.08,
-    -56.19,
-    -53.68,
-    -57.71,
-    -57.61,
-    -55.49,
-    -54.2,
-    -57.59,
-    -57.82,
-    -57.18,
-    -57.27,
-    -57.5,
     -57.17,
-    -56.1,
-    -57.17,
-    -57.04,
-    -60.92,
-    -57.57,
-    -56.98,
-    -57.35,
-    -57.33,
-    -59.3,
-    -62.12,
-    -60.98,
-    -61.63,
-    -59.53
+    -56.52,
+    -56.62,
+    -56.85,
+    -56.51,
+    -55.42,
+    -56.51,
+    -56.39,
+    -60.32,
+    -56.92,
+    -56.33,
+    -56.7,
+    -56.68,
+    -58.67,
+    -61.54,
+    -60.39,
+    -61.05,
+    -59.57,
+    -61.18,
+    -59.81
    ],
    "Hegic": [
     0,
-    1.64,
+    -3.52,
+    -4.32,
+    -4.27,
+    -3.82,
+    -2.04,
+    -2.23,
     -1.94,
-    -2.75,
-    -2.7,
-    -2.24,
-    -0.43,
-    -0.63,
-    -0.33,
-    -1.43,
-    -2.67,
-    -1.57,
-    2.15,
-    -0.61,
-    -1.08,
-    -2.16,
-    1.19,
-    -2.26,
+    -3.02,
     -4.24,
-    -2.85,
-    -2.42,
-    0.18,
-    0.62,
-    0.36,
-    2.19,
-    2.64,
-    2.57,
-    0.82,
-    0.38,
-    1.25,
-    0.81,
-    0.42,
-    1.24,
-    -1.03,
-    1.22,
-    0.68,
-    16.75,
-    16.39,
-    17.12,
-    16.96,
-    16.84,
-    8.85,
+    -3.16,
+    0.5,
+    -2.22,
+    -2.68,
+    -3.74,
+    -0.44,
+    -3.83,
+    -5.78,
+    -4.42,
+    -4,
+    -1.44,
+    -1,
+    -1.26,
+    0.54,
+    0.98,
+    0.91,
+    -0.8,
+    -1.24,
+    -0.38,
+    -0.82,
+    -1.2,
+    -0.4,
+    -2.63,
+    -0.41,
+    -0.94,
+    14.87,
+    14.51,
+    15.23,
+    15.07,
+    14.95,
+    7.1,
+    5.8,
+    25.44,
+    24.69,
+    17.46,
+    18.36,
+    5.85,
+    9.84,
+    8.12,
+    7.33,
+    6.19,
+    5.58,
+    5.77,
+    8.39,
+    6.8,
+    5.51,
+    4.63,
+    2.68,
     7.53,
-    27.5,
-    26.74,
-    19.38,
-    20.31,
-    7.59,
+    6.67,
+    4.67,
+    6.02,
+    1.11,
+    2.67,
+    3.56,
+    8.5,
+    9.96,
+    13.8,
+    16.97,
+    17.25,
+    11.25,
+    11.05,
+    11.01,
+    12.67,
+    11.24,
     11.65,
-    9.9,
-    9.1,
-    7.93,
-    7.31,
-    7.51,
-    10.17,
-    8.56,
-    7.24,
-    6.35,
-    4.37,
-    9.29,
-    8.42,
-    6.39,
-    7.76,
-    2.77,
-    4.36,
-    5.26,
-    10.28,
-    11.77,
-    15.67,
-    18.89,
-    19.17,
-    13.08,
-    12.87,
-    12.83,
-    14.52,
-    13.07,
-    13.49,
-    11.15,
-    11.68,
-    14.2,
-    11.99,
-    12.23,
-    13.62,
-    14.3,
-    13.72,
-    7.51,
-    4.76,
-    5.53,
-    5.14,
-    5.16,
-    6.3
+    9.36,
+    9.88,
+    12.35,
+    10.18,
+    10.42,
+    11.79,
+    12.45,
+    11.89,
+    5.77,
+    3.06,
+    3.82,
+    3.44,
+    3.46,
+    2.06,
+    5.46
    ],
    "Toros": [
     0,
-    -0.8,
-    -1.53,
-    -8.82,
-    -9.36,
-    -9.61,
-    -8.14,
-    -5.21,
-    -4.96,
-    -5.45,
-    -8.62,
-    -9.63,
-    -5.9,
-    -7.78,
-    -7.21,
-    -5.49,
-    -5.19,
-    -8.92,
-    -11.19,
-    -8.74,
-    -8.8,
-    -7.55,
-    -3.76,
-    -4.16,
-    -3.76,
-    -1.28,
-    -1.91,
-    -2.96,
-    -4.67,
-    -5.6,
-    -3.01,
-    10.14,
-    9.72,
-    9.05,
-    8.54,
-    9.16,
-    23.93,
-    28.76,
-    37.09,
-    44.45,
-    50.11,
-    48.31,
-    51.85,
-    55.01,
-    50.4,
-    76.63,
-    74.82,
-    74.31,
-    82.65,
-    76.47,
-    78.64,
-    84.13,
-    83.36,
-    84.04,
-    87.36,
-    86.23,
-    82.1,
-    78.27,
-    75.62,
-    80.34,
-    80.96,
+    -0.74,
+    -8.08,
+    -8.63,
+    -8.88,
+    -7.39,
+    -4.45,
+    -4.2,
+    -4.69,
+    -7.88,
+    -8.9,
+    -5.14,
+    -7.04,
+    -6.47,
+    -4.72,
+    -4.43,
+    -8.19,
+    -10.48,
+    -8.01,
+    -8.06,
+    -6.81,
+    -2.98,
+    -3.39,
+    -2.98,
+    -0.49,
+    -1.12,
+    -2.18,
+    -3.91,
+    -4.84,
+    -2.23,
+    11.02,
+    10.61,
+    9.93,
+    9.41,
+    10.04,
+    24.93,
+    29.8,
+    38.2,
+    45.61,
+    51.32,
+    49.5,
+    53.07,
+    56.26,
+    51.61,
+    78.06,
+    76.23,
+    75.72,
+    84.12,
+    77.9,
+    80.08,
+    85.62,
+    84.84,
+    85.52,
+    88.87,
+    87.73,
+    83.57,
+    79.71,
+    77.04,
+    81.8,
+    82.42,
+    79.25,
+    83.31,
+    66.93,
+    66.66,
+    76.91,
+    91.65,
+    89.15,
+    91.17,
+    104.39,
+    104.46,
+    132.55,
+    131.92,
+    137.61,
+    129.83,
+    134.82,
+    108.27,
+    64.85,
+    87.47,
     77.81,
-    81.84,
-    65.6,
-    65.33,
-    75.5,
-    90.12,
-    87.64,
-    89.64,
-    102.76,
-    102.82,
-    130.69,
-    130.07,
-    135.7,
-    127.99,
-    132.94,
-    106.61,
-    63.53,
-    85.97,
-    76.39,
-    87.9,
-    82.17,
-    85.37,
-    75.59,
-    74.94,
-    73.42,
-    63.29,
-    66.77,
-    69.94,
-    67.51,
-    69.45
+    89.42,
+    83.64,
+    86.86,
+    77,
+    76.35,
+    74.82,
+    64.61,
+    68.12,
+    71.31,
+    68.87,
+    64.91,
+    58.58
    ]
   },
   "racers": [
@@ -3909,11 +6000,11 @@
     "url": "https://defillama.com/protocol/hegic",
     "inList": true,
     "premium": {
-     "d7": 14184.48,
-     "d30": 43026.04,
-     "prev30": 70177.28,
-     "all": 11352625.91,
-     "d24": 643,
+     "d7": 15176.48,
+     "d30": 44018.04,
+     "prev30": 68376.28,
+     "all": 11353966.91,
+     "d24": 992,
      "m": [
       121466,
       38772,
@@ -3926,30 +6017,30 @@
       8678.6,
       48308.28,
       58634.46,
-      14868.58
+      16209.58
      ],
      "w": [
-      2628,
-      5957.63,
-      6256.969999999999,
+      4722,
+      3879.63,
+      6240.969999999999,
       0,
-      3618.58,
-      19356.7,
-      19169,
-      19950,
-      9893.36,
-      20326.7,
-      8436.41,
-      69.09,
-      14827.48
+      5306.58,
+      27048.7,
+      14719,
+      15773,
+      12409.36,
+      17089.7,
+      8404.41,
+      138.09,
+      16099.48
      ]
     },
     "notional": {
-     "d7": 280062,
-     "d30": 1434150.99,
-     "prev30": 2730106.91,
-     "all": 371575538.90000004,
-     "d24": 7672,
+     "d7": 310268,
+     "d30": 1464356.99,
+     "prev30": 2686750.91,
+     "all": 371628278.90000004,
+     "d24": 30206,
      "m": [
       4530578,
       1464107,
@@ -3962,22 +6053,22 @@
       224585,
       1654337.91,
       2477452,
-      303512.99
+      356252.99
      ],
      "w": [
-      91557,
-      129794,
-      223251,
+      122922,
+      99011,
+      222669,
       0,
-      87447.91,
-      540508,
-      806365,
-      1110247,
-      231385,
-      743130,
-      383061,
-      25407.989999999998,
-      287734
+      165650.91,
+      656353,
+      880755,
+      863743,
+      246096,
+      707381,
+      382165,
+      26269.989999999998,
+      339612
      ]
     }
    },
@@ -4067,11 +6158,11 @@
     "url": "https://defillama.com/protocol/derive-options",
     "inList": true,
     "premium": {
-     "d7": 15525378,
-     "d30": 80560910,
-     "prev30": 74636624,
-     "all": 693712818,
-     "d24": 1847475,
+     "d7": 17889520,
+     "d30": 83033427,
+     "prev30": 74565498,
+     "all": 698583997,
+     "d24": 3461850,
      "m": [
       13305260,
       11831193,
@@ -4084,30 +6175,30 @@
       38700939,
       59052664,
       77666502,
-      25307416
+      30178595
      ],
      "w": [
-      6847329,
-      6989166,
-      6329199,
-      2839951,
-      4487483,
-      30511288,
-      20113672,
-      13397364,
-      15905533,
-      25161347,
-      18167681,
-      13861802,
-      16480191
+      7556027,
+      5973891,
+      6142960,
+      2970247,
+      4657498,
+      38042784,
+      16075730,
+      9943705,
+      18196689,
+      26661030,
+      16605315,
+      11530517,
+      20949873
      ]
     },
     "notional": {
-     "d7": 536990760,
-     "d30": 4236359441,
-     "prev30": 2594158223,
-     "all": 27264509729,
-     "d24": 104735786,
+     "d7": 619417175,
+     "d30": 4341966744,
+     "prev30": 2588617663,
+     "all": 27448472476,
+     "d24": 155255736,
      "m": [
       379359707,
       557604643,
@@ -4120,22 +6211,22 @@
       1708828662,
       1921819566,
       3820244128,
-      1453758845
+      1637721592
      ],
      "w": [
-      287623050,
-      318837591,
-      284559156,
-      168561209,
-      258327668,
-      905277907,
-      555116840,
-      499704907,
-      850969780,
-      1469970966,
-      856289553,
-      1006357603,
-      590710164
+      294156573,
+      284198824,
+      279009670,
+      171320401,
+      250293930,
+      1055050326,
+      468748850,
+      450860697,
+      942465847,
+      1446853062,
+      843899614,
+      951529076,
+      745658319
      ]
     }
    },
@@ -4146,14 +6237,14 @@
     "url": "https://defillama.com/protocol/thetanuts-finance",
     "inList": true,
     "premium": {
-     "d7": 2554,
-     "d30": 11685.2,
-     "prev30": 11385,
-     "all": 386634.3599999999,
-     "d24": 229,
+     "d7": 2426,
+     "d30": 12064,
+     "prev30": 11286.2,
+     "all": 388938.3599999999,
+     "d24": 468,
      "m": [
       4744.560000000001,
-      255770.94999999998,
+      257409.94999999998,
       4207.42,
       5704.6,
       7626.639999999999,
@@ -4163,33 +6254,33 @@
       26949,
       10447,
       11728.2,
-      4056
+      4721
      ],
      "w": [
-      7723,
-      3334,
-      1289,
-      1866,
-      1940,
-      3860,
-      2410,
-      2490,
-      2284.2,
-      2528,
-      3357,
-      2896,
-      2229
+      6227,
+      3131,
+      1326,
+      2061,
+      2037,
+      3911,
+      2305,
+      2268,
+      2648.2,
+      2673,
+      3213,
+      2782,
+      2413
      ]
     },
     "notional": {
-     "d7": 109926,
-     "d30": 396820,
-     "prev30": 274141,
-     "all": 6028436,
-     "d24": 7794,
+     "d7": 111450,
+     "d30": 419399,
+     "prev30": 277110,
+     "all": 7060937,
+     "d24": 31992,
      "m": [
       675490,
-      1742312,
+      2724710,
       667315,
       353048,
       467739,
@@ -4199,22 +6290,22 @@
       135300,
       219976,
       372569,
-      137813
+      187916
      ],
      "w": [
-      45936,
-      15976,
-      33765,
-      43974,
-      7209,
-      107158,
-      55914,
-      85296,
-      41288,
-      84449,
-      142874,
-      63136,
-      93339
+      41548,
+      15504,
+      34126,
+      44180,
+      7635,
+      119822,
+      43977,
+      86027,
+      51788,
+      101512,
+      124481,
+      57532,
+      136922
      ]
     }
    },
@@ -4225,11 +6316,11 @@
     "url": "https://defillama.com/protocol/rysk-v12",
     "inList": true,
     "premium": {
-     "d7": 249914,
-     "d30": 1536483,
-     "prev30": 1466877,
-     "all": 24466134.19,
-     "d24": 17601,
+     "d7": 265743,
+     "d30": 1528851,
+     "prev30": 1499657,
+     "all": 24531111.19,
+     "d24": 45235,
      "m": [
       1042376,
       1212765,
@@ -4242,30 +6333,30 @@
       1615312,
       1222061,
       1516875,
-      526634
+      591611
      ],
      "w": [
-      155831,
-      238880,
-      284823,
-      150878,
-      183288,
-      405052,
-      412301,
-      297772,
-      261260,
-      437047,
-      498165,
-      303264,
-      246001
+      164567,
+      232874,
+      285223,
+      140167,
+      179036,
+      418460,
+      428576,
+      277998,
+      266038,
+      452367,
+      476668,
+      316166,
+      286392
      ]
     },
     "notional": {
-     "d7": 29506866,
-     "d30": 147823963,
-     "prev30": 158676661,
-     "all": 1691986468,
-     "d24": 3252940,
+     "d7": 29040911,
+     "d30": 148130381,
+     "prev30": 160419449,
+     "all": 1694969844,
+     "d24": 3308995,
      "m": [
       60092633,
       58299520,
@@ -4278,22 +6369,22 @@
       144019520,
       140517262,
       138114212,
-      59529195
+      62512571
      ],
      "w": [
-      31574490,
-      28619822,
-      24071452,
-      18768520,
-      23865811,
-      46875878,
-      44837606,
-      25108600,
-      29318711,
-      35264528,
-      46501892,
-      32083146,
-      29366530
+      33645021,
+      25773474,
+      24724197,
+      17929987,
+      23592238,
+      48314776,
+      45122716,
+      24715293,
+      28909422,
+      36996759,
+      44455454,
+      32913942,
+      30639799
      ]
     }
    },
@@ -4324,17 +6415,17 @@
       12
      ],
      "w": [
-      41,
-      29.130000000000003,
-      7.32,
+      32.68,
+      28.220000000000002,
+      3.55,
       21,
       0,
       0,
       0.87,
       16,
       0,
-      19.74,
-      52.58,
+      64.74,
+      7.58,
       0,
       12
      ]
@@ -4360,17 +6451,17 @@
       1557
      ],
      "w": [
-      1011140,
-      2898,
-      875,
+      1006624,
+      2801,
+      499,
       10162,
       0,
       0,
       74,
       6194,
       0,
-      3809,
-      10995,
+      13834,
+      970,
       0,
       1557
      ]
@@ -4561,11 +6652,11 @@
       1999
      ],
      "w": [
-      123986,
-      181080,
-      156770,
-      116658,
-      17994,
+      144784,
+      168281,
+      156766,
+      114658,
+      0,
       0,
       0,
       0,
@@ -4743,11 +6834,11 @@
     "url": "https://defillama.com/protocol/sofa.org",
     "inList": true,
     "premium": {
-     "d7": 51293,
-     "d30": 219621,
-     "prev30": 255669,
-     "all": 19436753,
-     "d24": 7579,
+     "d7": 53257,
+     "d30": 228231,
+     "prev30": 246848,
+     "all": 19446384,
+     "d24": 8600,
      "m": [
       1273741,
       1123332,
@@ -4760,22 +6851,22 @@
       264219,
       256966,
       242230,
-      87672
+      97303
      ],
      "w": [
-      64862,
-      61562,
-      53487,
-      61622,
-      59701,
-      56991,
-      52587,
-      65342,
-      53891,
-      63828,
-      44040,
-      50575,
-      52226
+      60766,
+      61768,
+      52727,
+      60918,
+      59656,
+      57598,
+      53967,
+      64230,
+      51980,
+      59109,
+      49743,
+      49624,
+      55251
      ]
     },
     "notional": null
@@ -5103,11 +7194,11 @@
     "url": "https://defillama.com/protocol/aevo-options",
     "inList": true,
     "premium": {
-     "d7": 418669,
-     "d30": 1590384,
-     "prev30": 1721507,
-     "all": 120509608,
-     "d24": 767,
+     "d7": 440142,
+     "d30": 1608174,
+     "prev30": 1726524,
+     "all": 120533485,
+     "d24": 23877,
      "m": [
       589771,
       408209,
@@ -5120,30 +7211,30 @@
       1852445,
       1786020,
       1822856,
-      448299
+      495286
      ],
      "w": [
-      456053,
-      379313,
-      480525,
-      395137,
-      393282,
-      434330,
-      391679,
-      395202,
-      420636,
-      426230,
-      401994,
-      210061,
-      417032
+      459595,
+      376910,
+      659273,
+      213449,
+      402506,
+      438148,
+      382361,
+      397076,
+      436001,
+      408797,
+      419379,
+      194916,
+      457053
      ]
     },
     "notional": {
-     "d7": 12582598,
-     "d30": 66489781,
-     "prev30": 34312754,
-     "all": 39542432223,
-     "d24": 139580,
+     "d7": 13088693,
+     "d30": 67215372,
+     "prev30": 35241457,
+     "all": 39544133220,
+     "d24": 1700997,
      "m": [
       30936485,
       13557181,
@@ -5156,22 +7247,22 @@
       22458758,
       30076717,
       59824114,
-      20556300
+      23818714
      ],
      "w": [
-      4292610,
-      4432956,
-      6454484,
-      4809568,
-      5403097,
-      8384061,
-      9260265,
-      9774173,
-      7366437,
-      14660273,
-      21090368,
-      15961887,
-      11527276
+      4456824,
+      4831592,
+      7329862,
+      3717086,
+      5328510,
+      9132011,
+      8607283,
+      9597536,
+      9024529,
+      14167756,
+      22628334,
+      14630023,
+      13080092
      ]
     }
    },
@@ -5263,7 +7354,7 @@
     "premium": {
      "d7": 0,
      "d30": 0,
-     "prev30": 255045.88,
+     "prev30": 252269.88,
      "all": 1908385.69,
      "d24": 0,
      "m": [
@@ -5281,15 +7372,15 @@
       0
      ],
      "w": [
-      28548.77,
-      8760.66,
-      12127.369999999999,
-      14634.019999999999,
-      17927.46,
-      143566.55,
-      29033,
-      63737.67,
-      813.66,
+      26187.43,
+      8786,
+      16755.37,
+      9980.140000000001,
+      17915.34,
+      143552.55,
+      39273,
+      54218.67,
+      92.66,
       0,
       0,
       0,
@@ -5299,7 +7390,7 @@
     "notional": {
      "d7": 0,
      "d30": 0,
-     "prev30": 14978611,
+     "prev30": 14905797,
      "all": 139142034,
      "d24": 0,
      "m": [
@@ -5317,19 +7408,98 @@
       0
      ],
      "w": [
-      1867452,
-      929345,
-      858986,
-      1147580,
-      1330241,
-      6298610,
-      2198893,
-      5060165,
-      94867,
+      1600263,
+      926711,
+      1078923,
+      929119,
+      1341498,
+      6283710,
+      2754040,
+      4589208,
+      10677,
       0,
       0,
       0,
       0
+     ]
+    }
+   },
+   {
+    "name": "Dream",
+    "core": true,
+    "logo": "logos/auto/4edd281815a0.webp",
+    "url": "https://defillama.com/protocol/dream",
+    "inList": true,
+    "premium": {
+     "d7": 286407,
+     "d30": 414961.3,
+     "prev30": 60029.95,
+     "all": 474991.25,
+     "d24": 31002,
+     "m": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      46727,
+      60457.25,
+      398809
+     ],
+     "w": [
+      0,
+      0,
+      0,
+      0,
+      147,
+      39087,
+      11699,
+      3090,
+      6488.95,
+      5423.3,
+      30758,
+      97804,
+      311496
+     ]
+    },
+    "notional": {
+     "d7": 20567779,
+     "d30": 34784477,
+     "prev30": 14022250,
+     "all": 48806727,
+     "d24": 2098903,
+     "m": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      10227334,
+      11753995,
+      28924301
+     ],
+     "w": [
+      0,
+      0,
+      0,
+      0,
+      62784,
+      6090595,
+      4679734,
+      105246,
+      3354907,
+      188101,
+      2593609,
+      11542360,
+      22288294
      ]
     }
    },
@@ -5340,11 +7510,11 @@
     "url": "https://defillama.com/protocol/callput",
     "inList": true,
     "premium": {
-     "d7": 107137,
-     "d30": 306192,
-     "prev30": 440911,
-     "all": 1664133.05,
-     "d24": 3150,
+     "d7": 106251,
+     "d30": 318499,
+     "prev30": 439647,
+     "all": 1692353.05,
+     "d24": 18103,
      "m": [
       0,
       0,
@@ -5357,30 +7527,30 @@
       428544.77,
       391805,
       282487,
-      138896
+      167116
      ],
      "w": [
-      159158,
-      96863,
-      39027,
-      38967,
-      21658,
-      160598,
-      153193,
-      82164,
-      39815,
-      39402,
-      69058,
-      94810,
-      96134
+      147233,
+      87854,
+      40578,
+      29696,
+      19301,
+      191095,
+      140479,
+      73598,
+      31473,
+      48106,
+      83062,
+      92470,
+      101140
      ]
     },
     "notional": {
-     "d7": 30155678,
-     "d30": 85683730,
-     "prev30": 115215591,
-     "all": 435940760.17,
-     "d24": 1387941,
+     "d7": 31597511,
+     "d30": 89707494,
+     "prev30": 114970426,
+     "all": 444549867.17,
+     "d24": 5539601,
      "m": [
       0,
       0,
@@ -5393,22 +7563,22 @@
       108464120,
       97613316,
       81404689,
-      39676169
+      48285276
      ],
      "w": [
-      41461177,
-      23352975,
-      11679375,
-      7932345,
-      6255197,
-      36748510,
-      40158641,
-      25398422,
-      11371590,
-      9525410,
-      20408341,
-      25849090,
-      28528005
+      38824341,
+      21286139,
+      10166576,
+      7850602,
+      5713342,
+      42144514,
+      38750444,
+      24412562,
+      8480256,
+      11655250,
+      24511949,
+      24069023,
+      31939545
      ]
     }
    },
@@ -5419,11 +7589,11 @@
     "url": "https://defillama.com/protocol/paradex-options",
     "inList": true,
     "premium": {
-     "d7": 279655,
-     "d30": 3886564,
-     "prev30": 886549,
-     "all": 6183863.75,
-     "d24": 40540,
+     "d7": 254932,
+     "d30": 3915165,
+     "prev30": 888505,
+     "all": 6215709.75,
+     "d24": 34164,
      "m": [
       0,
       0,
@@ -5436,30 +7606,30 @@
       334478.75,
       994309,
       3013078,
-      1003875
+      1035721
      ],
      "w": [
-      111910.31,
-      85432,
-      67180,
-      177817,
-      35710,
-      589312,
-      184583,
-      68149,
-      38422,
-      1877793,
-      809482,
-      965857,
-      257250
+      153492.31,
+      79620,
+      32194,
+      172932,
+      26807,
+      694376,
+      100531,
+      49865,
+      57970,
+      2272435,
+      601699,
+      825995,
+      218122
      ]
     },
     "notional": {
-     "d7": 42857237,
-     "d30": 455549796,
-     "prev30": 64657420,
-     "all": 683507129,
-     "d24": 5027384,
+     "d7": 37010928,
+     "d30": 459874634,
+     "prev30": 65492365,
+     "all": 689616732,
+     "d24": 5666926,
      "m": [
       0,
       0,
@@ -5472,22 +7642,22 @@
       45111495,
       67500573,
       259887869,
-      216916891
+      223026494
      ],
      "w": [
-      13954249,
-      7854620,
-      10562826,
-      10477749,
-      10371206,
-      29776507,
-      12850233,
-      11992769,
-      5756391,
-      161122533,
-      54440413,
-      206924403,
-      36568251
+      14977348,
+      7345078,
+      9994217,
+      10586715,
+      8021482,
+      34340104,
+      14883708,
+      6117757,
+      7004488,
+      178504332,
+      59198090,
+      193750360,
+      31391481
      ]
     }
    },
@@ -5498,7 +7668,7 @@
     "url": "https://defillama.com/protocol/toros-options",
     "inList": true,
     "premium": {
-     "d7": 875,
+     "d7": 549,
      "d30": 4610.54,
      "prev30": 4188,
      "all": 6990440.3100000005,
@@ -5518,23 +7688,23 @@
       1390
      ],
      "w": [
-      2131.2799999999997,
-      662.12,
+      2783,
+      9.12,
       585,
-      0,
-      676,
-      2120,
-      1283,
+      560,
+      116,
+      2515,
+      888,
       559,
-      110,
-      2046,
-      1174.54,
+      382,
+      2288,
+      660.54,
       841,
       549
      ]
     },
     "notional": {
-     "d7": 175524,
+     "d7": 109719,
      "d30": 922271,
      "prev30": 838150,
      "all": 30177920,
@@ -5554,17 +7724,17 @@
       278910
      ],
      "w": [
-      427227,
-      132344,
+      557492,
+      1821,
       117126,
-      0,
-      135001,
-      424580,
-      256509,
+      111742,
+      23259,
+      503491,
+      177598,
       111859,
-      21943,
-      407858,
-      235503,
+      76040,
+      456351,
+      132913,
       169191,
       109719
      ]
@@ -5577,11 +7747,11 @@
     "url": "https://defillama.com/protocol/prodigy.fi-v2",
     "inList": true,
     "premium": {
-     "d7": 77,
-     "d30": 146.98,
-     "prev30": 37.169999999999995,
-     "all": 5452.949999999998,
-     "d24": 0,
+     "d7": 47,
+     "d30": 146.97,
+     "prev30": 37.18,
+     "all": 5464.949999999998,
+     "d24": 12,
      "m": [
       427.67999999999995,
       234.93000000000004,
@@ -5594,30 +7764,30 @@
       123.83999999999999,
       52.13,
       60.120000000000005,
-      88.88
+      100.88
      ],
      "w": [
-      5.76,
-      19.2,
-      67.24,
-      16.98,
+      7.85,
+      15.629999999999999,
+      70.11,
+      13.879999999999999,
       0,
-      9.36,
-      25.79,
+      21.049999999999997,
+      14.1,
       1.54,
       0.49,
       7.9799999999999995,
       50.11,
       41.88,
-      47
+      59
      ]
     },
     "notional": {
-     "d7": 14359,
-     "d30": 36651,
-     "prev30": 175834,
-     "all": 2216760,
-     "d24": 0,
+     "d7": 8260,
+     "d30": 36632,
+     "prev30": 175853,
+     "all": 2219508,
+     "d24": 2748,
      "m": [
       57833,
       211456,
@@ -5630,22 +7800,22 @@
       293963,
       234263,
       37315,
-      18910
+      21658
      ],
      "w": [
-      19773,
-      78356,
-      58981,
-      78003,
+      39173,
+      58786,
+      78469,
+      58505,
       0,
-      47474,
-      108786,
+      97605,
+      58655,
       19554,
       39,
       1093,
       16629,
       10650,
-      8260
+      11008
      ]
     }
    },
@@ -5656,11 +7826,11 @@
     "url": "https://defillama.com/protocol/panoptic-v2",
     "inList": true,
     "premium": {
-     "d7": 2264.09,
-     "d30": 22988.089999999997,
-     "prev30": 9189,
-     "all": 45742.68,
-     "d24": 5.62,
+     "d7": 1736.54,
+     "d30": 22800.539999999997,
+     "prev30": 9080,
+     "all": 45784.13,
+     "d24": 41.45,
      "m": [
       0,
       0,
@@ -5673,30 +7843,30 @@
       7446,
       7230,
       24027,
-      4645.71
+      4722.99
      ],
      "w": [
-      868,
-      1652,
-      4053,
-      1937,
-      1391,
-      1547,
-      1176,
-      1677,
-      5813,
-      8456,
-      6194,
-      4832,
-      1700.7099999999998
+      1129,
+      2229,
+      3507,
+      1930,
+      1255,
+      1570,
+      1203,
+      1770,
+      6767,
+      8325,
+      6200,
+      4120,
+      1368.99
      ]
     },
     "notional": {
-     "d7": 5689858,
-     "d30": 31989605,
-     "prev30": 34495047,
-     "all": 79861284.66,
-     "d24": 0,
+     "d7": 4334927,
+     "d30": 31799563,
+     "prev30": 34582881,
+     "all": 79929810.66,
+     "d24": 68526,
      "m": [
       0,
       0,
@@ -5709,22 +7879,22 @@
       7377922,
       24160240,
       35919135,
-      8905808
+      9042860
      ],
      "w": [
-      1297421,
-      1833337,
-      1748352,
-      1387117,
-      1211308,
-      8258608,
-      12589397,
-      7449056,
-      9221031,
-      11221712,
-      5642970,
-      7023773,
-      4266401
+      1778753,
+      1513508,
+      1951701,
+      1201994,
+      2004761,
+      9549175,
+      11746743,
+      6449501,
+      11369150,
+      9879487,
+      5908031,
+      6280057,
+      3654674
      ]
     }
    },
@@ -5843,18 +8013,18 @@
       0,
       0,
       0,
-      14.100000000000001,
-      18.130000000000003,
-      182.79999999999998,
+      18.380000000000003,
+      28.200000000000003,
+      168.45,
       48.199999999999996
      ]
     },
     "notional": {
-     "d7": 2507.8,
-     "d30": 5740.14,
+     "d7": 2507.3,
+     "d30": 5740.4400000000005,
      "prev30": 0,
-     "all": 5740.14,
-     "d24": 0,
+     "all": 5740.740000000001,
+     "d24": 0.3,
      "m": [
       0,
       0,
@@ -5867,7 +8037,7 @@
       0,
       0,
       1912.34,
-      3827.8
+      3828.4000000000005
      ],
      "w": [
       0,
@@ -5879,10 +8049,10 @@
       0,
       0,
       0,
-      905.3399999999999,
-      1007,
-      1320.8,
-      2507
+      955.3399999999999,
+      957,
+      1721.8,
+      2106.6000000000004
      ]
     }
    },
@@ -5893,11 +8063,11 @@
     "url": "https://defillama.com/protocol/odette",
     "inList": true,
     "premium": {
-     "d7": 2440,
-     "d30": 11559.2,
-     "prev30": 11353,
-     "all": 132728.08000000002,
-     "d24": 228,
+     "d7": 2312,
+     "d30": 11938,
+     "prev30": 11254.2,
+     "all": 133394.08000000002,
+     "d24": 468,
      "m": [
       4210.1,
       5271.030000000001,
@@ -5910,30 +8080,30 @@
       26914,
       10431,
       11694.2,
-      3941
+      4607
      ],
      "w": [
-      7696,
-      3334,
-      1287,
-      1862,
-      1933,
-      3859,
-      2408,
-      2469,
-      2283.2,
-      2524,
-      3350,
-      2895,
-      2114
+      6200,
+      3131,
+      1323,
+      2058,
+      2030,
+      3910,
+      2302,
+      2248,
+      2645.2,
+      2667,
+      3209,
+      2682,
+      2399
      ]
     },
     "notional": {
-     "d7": 478861,
-     "d30": 2319792,
-     "prev30": 2211282,
-     "all": 25292143,
-     "d24": 68083,
+     "d7": 453438,
+     "d30": 2399985,
+     "prev30": 2198423,
+     "all": 25405339,
+     "d24": 93627,
      "m": [
       609265,
       1062646,
@@ -5946,22 +8116,22 @@
       3849643,
       1897509,
       2302507,
-      843276
+      956472
      ],
      "w": [
-      1142880,
-      462119,
-      202571,
-      278063,
-      299172,
-      647851,
-      620664,
-      483342,
-      435917,
-      476715,
-      667374,
-      648566,
-      433869
+      892198,
+      447574,
+      204966,
+      311938,
+      311461,
+      697925,
+      597140,
+      430835,
+      539662,
+      501918,
+      617133,
+      612979,
+      454015
      ]
     }
    },
@@ -6056,13 +8226,13 @@
   ],
   "totals": {
    "premium": {
-    "d30": 88196516.59999998,
-    "prev30": 79774898.2,
-    "all": 979969593.1200001,
-    "d24": 1901710.62,
+    "d30": 91145232.93999997,
+    "prev30": 79788586.56,
+    "all": 985478678.8200002,
+    "d24": 3411010.45,
     "m": [
      19764614.34,
-     17182232.909999996,
+     17183871.909999996,
      31638667.95,
      30801221.82,
      62490932.470000006,
@@ -6070,19 +8240,19 @@
      44246411.18,
      55564934.54999999,
      44050274.730000004,
-     64205948.31,
-     84724129.92999999,
-     27543996.640000004
+     64252675.31,
+     84784587.17999999,
+     32998406.92
     ]
    },
    "notional": {
-    "d30": 5029028102.13,
-    "prev30": 3030081549.91,
-    "all": 80761450152.87,
-    "d24": 114986378,
+    "d30": 5178743410.43,
+    "prev30": 3041786303.91,
+    "all": 81014892421.47,
+    "d24": 150309815.3,
     "m": [
      494219978,
-     647223715,
+     648206113,
      834720858.84,
      741604760.89,
      2124441989,
@@ -6090,16 +8260,16 @@
      1573788225.44,
      1726482399.74,
      2058511793,
-     2297936341.91,
-     4413890556.34,
-     1800931014.79
+     2308163675.91,
+     4425644551.34,
+     2035138402.3899999
     ]
    }
   },
-  "at": "2026-10-12T07:17:03.969Z",
+  "at": "2026-10-13T07:39:03.435Z",
   "deribit": {
-   "notional24": 799610226.9929996,
-   "premium24": 10172202.470000014
+   "notional24": 1823426053.503999,
+   "premium24": 26474290.120000005
   },
   "oi": {
    "venues": {
@@ -6121,25 +8291,26 @@
      }
     },
     "Paradex": {
-     "total": 98710334.9316284,
+     "total": 99920501.25244592,
      "byU": {
-      "ETH": 41588159.10799189,
-      "BTC": 55407736.351331554,
-      "ZEC": 917325.5140477369,
-      "SOL": 270433.06415336,
-      "US500": 188186.139,
-      "HYPE": 305364.47181625006,
-      "CL": 4265.673,
-      "XAU": 27625.95,
-      "US100": 1238.6602876
+      "ETH": 40805394.08752975,
+      "BTC": 57497358.22176793,
+      "ZEC": 882622.8446279329,
+      "SOL": 260802.55326492002,
+      "US500": 187553.27266470002,
+      "HYPE": 253770.25569921007,
+      "CL": 4119.37034535,
+      "XAU": 27662.166546036,
+      "US100": 1218.48
      }
     },
     "Aevo": {
-     "total": 12162881.38233996,
+     "total": 13231339.0990361,
      "byU": {
-      "ETH": 7197169.7608328005,
-      "BTC": 4956875.85441536,
-      "SOL": 8835.7670918
+      "ETH": 8235276.566446999,
+      "BTC": 4982486.713288699,
+      "SOL": 7953.4433004,
+      "HYPE": 5622.376
      }
     }
    },
@@ -6168,28 +8339,29 @@
   "ex": {
    "volU": {
     "Paradex": {
-     "BTC": 589832.1012991978,
-     "SPCX": 34129.333932419984,
-     "ETH": 5370747.447858623,
-     "US100": 4954.664402299999,
+     "BTC": 2328813.6656191917,
+     "SPCX": 0,
+     "ETH": 2160707.727474435,
+     "US100": 0,
      "NEAR": 0,
-     "SOL": 1115.21684705,
-     "US500": 2187.9660892,
-     "META": 0,
+     "SOL": 0,
      "XAU": 0,
-     "CL": 0,
-     "HYPE": 7685.007603350001,
-     "ZEC": 98702.0184907,
+     "HYPE": 57507.619842160006,
+     "CL": 183.5359463,
+     "META": 0,
+     "MSTR": 0,
+     "ZEC": 35961.6021888,
      "MU": 0,
-     "MSTR": 0
+     "US500": 0
     },
     "Aevo": {
-     "ETH": 259058.98508590003,
-     "BTC": 265722.2814451
+     "ETH": 1411313.9455064998,
+     "BTC": 45585.991444449995
     },
     "Derive": {
      "SOL": 0,
      "XAUT": 0,
+     "ETH": 0,
      "ADA": 0,
      "XRP": 0,
      "ZEC": 0,
@@ -6199,155 +8371,156 @@
      "HYPE": 0,
      "LIT": 0,
      "VVV": 0,
-     "AAVE": 0
+     "AAVE": 0,
+     "BTC": 0
     }
    },
    "trades": [
     {
      "venue": "Paradex",
-     "market": "ETH-USD-27NOV26-4000-C",
+     "market": "BTC-USD-30OCT26-180000-C",
      "side": "BUY",
-     "size": 358.8,
-     "premium": 2432.664,
-     "notional": 922495.8417327121,
-     "t": 1791737155907
+     "size": 7.926,
+     "premium": 0.31704,
+     "notional": 665158.5397143522,
+     "t": 1791824335988
     },
     {
      "venue": "Paradex",
-     "market": "ETH-USD-27NOV26-4000-C",
+     "market": "BTC-USD-16OCT26-82000-P",
      "side": "BUY",
-     "size": 325,
-     "premium": 2109.25,
-     "notional": 835594.0595405,
-     "t": 1791736578068
+     "size": 4,
+     "premium": 2400,
+     "notional": 335684.35009556,
+     "t": 1791862642001
     },
     {
      "venue": "Paradex",
-     "market": "ETH-USD-16OCT26-2600-C",
+     "market": "BTC-USD-23OCT26-87000-C",
      "side": "BUY",
-     "size": 325,
-     "premium": 4488.25,
-     "notional": 835594.0595405,
-     "t": 1791717644701
+     "size": 3.171,
+     "premium": 1661.06493,
+     "notional": 266113.7685382552,
+     "t": 1791813208965
     },
     {
      "venue": "Paradex",
-     "market": "ETH-USD-13OCT26-2600-C",
+     "market": "BTC-USD-30OCT26-180000-C",
      "side": "BUY",
-     "size": 210.3,
-     "premium": 611.9730000000001,
-     "notional": 540693.6329888221,
-     "t": 1791717995572
+     "size": 2.259,
+     "premium": 0.11295,
+     "notional": 189577.7367164675,
+     "t": 1791834748918
+    },
+    {
+     "venue": "Paradex",
+     "market": "BTC-USD-30OCT26-180000-C",
+     "side": "BUY",
+     "size": 0.955,
+     "premium": 0.00955,
+     "notional": 80144.63858531495,
+     "t": 1791796340270
     },
     {
      "venue": "Paradex",
      "market": "ETH-USD-30OCT26-3000-C",
      "side": "BUY",
-     "size": 125.9,
-     "premium": 1374.828,
-     "notional": 323696.28337276605,
-     "t": 1791736665353
+     "size": 30,
+     "premium": 192,
+     "notional": 76047.1767258,
+     "t": 1791854724347
     },
     {
      "venue": "Paradex",
-     "market": "ETH-USD-26MAR27-7000-C",
+     "market": "BTC-USD-30OCT26-180000-C",
+     "side": "BUY",
+     "size": 0.742,
+     "premium": 0.00742,
+     "notional": 62269.44694272638,
+     "t": 1791799139825
+    },
+    {
+     "venue": "Paradex",
+     "market": "BTC-USD-30OCT26-180000-C",
+     "side": "BUY",
+     "size": 0.742,
+     "premium": 0.00742,
+     "notional": 62269.44694272638,
+     "t": 1791799063278
+    },
+    {
+     "venue": "Paradex",
+     "market": "BTC-USD-13OCT26-82500-C",
      "side": "SELL",
-     "size": 100,
-     "premium": 944.9999999999999,
-     "notional": 257105.864474,
-     "t": 1791789040506
+     "size": 0.7,
+     "premium": 226.429,
+     "notional": 58744.761266723,
+     "t": 1791825281555
     },
     {
      "venue": "Paradex",
-     "market": "ETH-USD-26MAR27-7000-C",
+     "market": "BTC-USD-13OCT26-82500-P",
      "side": "SELL",
-     "size": 100,
-     "premium": 916,
-     "notional": 257105.864474,
-     "t": 1791787343752
+     "size": 0.7,
+     "premium": 223.937,
+     "notional": 58744.761266723,
+     "t": 1791825281566
     },
     {
      "venue": "Paradex",
-     "market": "ETH-USD-26MAR27-5000-C",
+     "market": "BTC-USD-13OCT26-83000-C",
      "side": "BUY",
-     "size": 100,
-     "premium": 3163,
-     "notional": 257105.864474,
-     "t": 1791789040503
+     "size": 0.5,
+     "premium": 315,
+     "notional": 41960.543761945,
+     "t": 1791805543084
     },
     {
      "venue": "Paradex",
-     "market": "ETH-USD-26MAR27-5000-C",
+     "market": "BTC-USD-13OCT26-83000-P",
      "side": "BUY",
-     "size": 100,
-     "premium": 3106,
-     "notional": 257105.864474,
-     "t": 1791787343749
+     "size": 0.5,
+     "premium": 161.35,
+     "notional": 41960.543761945,
+     "t": 1791805543099
     },
     {
      "venue": "Paradex",
-     "market": "ETH-USD-16OCT26-2450-P",
+     "market": "ETH-USD-16OCT26-2400-P",
      "side": "BUY",
-     "size": 100,
-     "premium": 2237,
-     "notional": 257105.864474,
-     "t": 1791734075116
+     "size": 15,
+     "premium": 169.5,
+     "notional": 38023.5883629,
+     "t": 1791839650070
     },
     {
      "venue": "Paradex",
-     "market": "BTC-USD-30OCT26-90000-C",
+     "market": "ETH-USD-16OCT26-2850-C",
      "side": "BUY",
-     "size": 2,
-     "premium": 1292.46,
-     "notional": 168210.36216746,
-     "t": 1791776862856
+     "size": 15,
+     "premium": 14.399999999999999,
+     "notional": 38023.5883629,
+     "t": 1791839650073
     },
     {
      "venue": "Paradex",
-     "market": "ETH-USD-16OCT26-2500-P",
+     "market": "ZEC-USD-23OCT26-1800-C",
      "side": "BUY",
-     "size": 50,
-     "premium": 1862.5,
-     "notional": 128552.932237,
-     "t": 1791733978890
-    },
-    {
-     "venue": "Paradex",
-     "market": "BTC-USD-30OCT26-85000-C",
-     "side": "BUY",
-     "size": 1.5,
-     "premium": 3064.305,
-     "notional": 126157.77162559499,
-     "t": 1791776094066
-    },
-    {
-     "venue": "Paradex",
-     "market": "ETH-USD-25DEC26-4000-C",
-     "side": "BUY",
-     "size": 42.3,
-     "premium": 710.2169999999999,
-     "notional": 108755.78067250199,
-     "t": 1791748188902
-    },
-    {
-     "venue": "Paradex",
-     "market": "BTC-USD-30OCT26-86000-P",
-     "side": "SELL",
-     "size": 1,
-     "premium": 3750,
-     "notional": 84105.18108373,
-     "t": 1791776964019
+     "size": 30,
+     "premium": 71.07000000000001,
+     "notional": 36781.060340100004,
+     "t": 1791859740203
     }
    ],
    "vol": {
     "BVIV": {
-     "px": 39.71,
-     "prev": 38.949,
-     "oi": 17879.6,
-     "vol24": 435766.9462499998
+     "px": 38.948,
+     "prev": 39.692,
+     "oi": 14788.52,
+     "vol24": 224439.40355
     }
    },
-   "deriveSince": "2026-10-11"
+   "deriveSince": "2026-10-12"
   },
   "oiHist": [
    {
@@ -6376,212 +8549,200 @@
      "Aevo": 12162881
     },
     "bviv": 39.71
+   },
+   {
+    "d": "2026-10-13",
+    "oi": {
+     "Derive": 2239063050,
+     "Paradex": 99920501,
+     "Aevo": 13231339
+    },
+    "bviv": 38.948
    }
   ]
  },
  "dm": {
-  "at": 1791789557164,
+  "at": 1791877258966,
   "assets": {
    "BTC": {
-    "spot": 84159.56859812203,
-    "iv7": 32.94545908116656,
-    "iv30": 36.06549383414664,
+    "spot": 84037.6312287662,
+    "iv7": 32.97898746131164,
+    "iv30": 35.3968151901823,
     "term": {
-     "spread_vp": 3.1200347529800823,
+     "spread_vp": 2.4178277288706624,
      "tag": "contango"
     },
     "gamma": {
-     "value": 394661655.29820096,
+     "value": 337103718.6837238,
      "regime": "long_gamma"
     },
     "pc": {
-     "ratio": 0.7113643033192162,
-     "calls_oi": 293320.03998864954,
-     "puts_oi": 208657.40589609032,
+     "ratio": 0.7219952128768524,
+     "calls_oi": 297531.4617785294,
+     "puts_oi": 214816.2910843504,
      "tag": "balanced"
     },
     "callWall": {
      "strike": 84000,
-     "oi": 7290.46228689
+     "oi": 7047.2336765499995
     },
     "putWall": {
      "strike": 80000,
-     "oi": 16888.97613304
+     "oi": 17190.45913304
     },
     "topExpiry": {
      "expiry_date": "2026-10-30",
-     "oi": 192946.43522650996
+     "oi": 196119.77116976996
     },
     "rv": {
-     "value": 37.13295150603803,
-     "vrp": -1.0674576718913897,
+     "value": 37.860995312667214,
+     "vrp": -2.464180122484912,
      "tag": "fair",
      "tenor_days": 30
     },
     "ivPct": {
-     "percentile": 38.16137873368328,
-     "tag": "normal"
+     "percentile": 83.70137669777326,
+     "tag": "extreme"
     },
     "flip": {
-     "strike": 83839.59077252896,
-     "distance_pct": 0.3802037378792035
+     "strike": 83611.56197075697,
+     "distance_pct": 0.506998176625646
     },
-    "oi": 501977.44588473986,
+    "oi": 512347.7528628798,
     "cone": [
      {
       "w": 7,
-      "hv": 25.280200000000004,
-      "iv": 33.78,
-      "lo": 12.924,
-      "hi": 54.0266,
-      "rank": 52.75
+      "hv": 32.5238,
+      "iv": 32.43594,
+      "lo": 12.9272,
+      "hi": 53.893299999999996,
+      "rank": 47.83
      },
      {
       "w": 14,
-      "hv": 22.8235,
-      "iv": 32.253833,
-      "lo": 20.1159,
-      "hi": 54.634899999999995,
-      "rank": 28.57
+      "hv": 26.4001,
+      "iv": 32.782354,
+      "lo": 20.1267,
+      "hi": 54.5106,
+      "rank": 30.59
      },
      {
       "w": 30,
-      "hv": 37.2735,
-      "iv": 36.99,
-      "lo": 29.796400000000002,
-      "hi": 50.2123,
-      "rank": 20.59
+      "hv": 38.077600000000004,
+      "iv": 36.5,
+      "lo": 29.8506,
+      "hi": 50.193,
+      "rank": 20.29
      },
      {
       "w": 60,
-      "hv": 44.4743,
-      "iv": 37.35,
-      "lo": 41.3128,
-      "hi": 44.523,
+      "hv": 44.7254,
+      "iv": 37.05,
+      "lo": 41.3337,
+      "hi": 44.6188,
       "rank": 0
      },
      {
       "w": 90,
-      "hv": 39.7454,
-      "iv": 37.756254,
-      "lo": 39.8908,
-      "hi": 40.5599,
+      "hv": 40.031499999999994,
+      "iv": 37.658955,
+      "lo": 40.0139,
+      "hi": 40.5596,
       "rank": 0
      }
     ],
     "termPts": [
      {
-      "d": "2026-10-13",
-      "dte": 0.6950629050925926,
-      "iv": 28.36486578076686
-     },
-     {
       "d": "2026-10-14",
-      "dte": 1.6950629050925925,
-      "iv": 29.317048542222224
+      "dte": 0.6798686574074074,
+      "iv": 30.6978067825
      },
      {
       "d": "2026-10-15",
-      "dte": 2.6950629050925925,
-      "iv": 32.26728778285714
+      "dte": 1.6798686574074073,
+      "iv": 34.71452828555555
      },
      {
       "d": "2026-10-16",
-      "dte": 3.6950629050925925,
-      "iv": 32.51520370050596
+      "dte": 2.6798686574074075,
+      "iv": 34.03106113023688
      },
      {
       "d": "2026-10-23",
-      "dte": 10.695062905092593,
-      "iv": 33.410201335454545
+      "dte": 9.679868657407408,
+      "iv": 32.28865969272727
      },
      {
       "d": "2026-10-30",
-      "dte": 17.69506290509259,
-      "iv": 34.202147510229295
+      "dte": 16.679868657407408,
+      "iv": 32.98752492703493
      },
      {
       "d": "2026-11-06",
-      "dte": 24.69506290509259,
-      "iv": 35.856553321569535
+      "dte": 23.679868657407408,
+      "iv": 34.84105898360386
      },
      {
       "d": "2026-11-27",
-      "dte": 45.69506290509259,
-      "iv": 36.68895060727272
+      "dte": 44.679868657407404,
+      "iv": 36.593888935454544
      },
      {
       "d": "2026-12-25",
-      "dte": 73.6950629050926,
-      "iv": 37.024658807
+      "dte": 72.67986865740741,
+      "iv": 37.080377082
      },
      {
       "d": "2027-01-29",
-      "dte": 108.6950629050926,
-      "iv": 37.774815000000004
+      "dte": 107.67986865740741,
+      "iv": 37.756637999999995
      },
      {
       "d": "2027-03-26",
-      "dte": 164.69506290509258,
-      "iv": 38.34724821555555
+      "dte": 163.6798686574074,
+      "iv": 38.386082958888885
      },
      {
       "d": "2027-06-25",
-      "dte": 255.69506290509258,
-      "iv": 38.97223676777778
+      "dte": 254.6798686574074,
+      "iv": 39.06563061888889
      },
      {
       "d": "2027-09-24",
-      "dte": 346.6950629050926,
-      "iv": 39.4578176575
+      "dte": 345.6798686574074,
+      "iv": 39.4550542125
      },
      {
       "d": "2027-12-31",
-      "dte": 444.6950629050926,
-      "iv": 39.45
+      "dte": 443.6798686574074,
+      "iv": 39.489999999999995
      },
      {
       "d": "2028-01-28",
-      "dte": 472.6950629050926,
-      "iv": 39.46
+      "dte": 471.6798686574074,
+      "iv": 39.489999999999995
      },
      {
       "d": "2028-06-30",
-      "dte": 626.6950629050926,
-      "iv": 39.48
+      "dte": 625.6798686574074,
+      "iv": 39.53
      },
      {
       "d": "2028-12-29",
-      "dte": 808.6950629050926,
-      "iv": 39.48
+      "dte": 807.6798686574074,
+      "iv": 39.53
      },
      {
       "d": "2029-01-26",
-      "dte": 836.6950629050926,
-      "iv": 39.48
+      "dte": 835.6798686574074,
+      "iv": 39.54
      }
     ],
     "senti": {
-     "rr": -2.4517,
-     "rr7": 1.7656,
+     "rr": -2.1,
+     "rr7": -0.3441,
      "rrTenor": 14,
      "rrPts": [
-      [
-       1791183600000,
-       1.7656
-      ],
-      [
-       1791205200000,
-       1.4373
-      ],
-      [
-       1791226800000,
-       1.0363
-      ],
-      [
-       1791248400000,
-       0.1163
-      ],
       [
        1791270000000,
        -0.3441
@@ -6680,244 +8841,234 @@
       ],
       [
        1791788400000,
-       -2.5325
+       -2.245
+      ],
+      [
+       1791810000000,
+       -2.6916
+      ],
+      [
+       1791831600000,
+       -2.366
+      ],
+      [
+       1791853200000,
+       -2.3159
+      ],
+      [
+       1791874800000,
+       -1.8708
       ]
      ],
      "flow": {
       "C": {
-       "buy": 5589463.492063948,
-       "sell": 6733450.8216665415
+       "buy": 12433753.586831251,
+       "sell": 12374633.866494674
       },
       "P": {
-       "buy": 4596073.452221515,
-       "sell": 4768140.510066138
+       "buy": 10700361.488178423,
+       "sell": 11854571.024154613
       }
      },
-     "flowSince": 1791702000000,
+     "flowSince": 1791788400000,
      "skew": [
       {
-       "d": "2026-10-13",
-       "dte": 0.69,
-       "rr": 1.621
-      },
-      {
        "d": "2026-10-14",
-       "dte": 1.69,
-       "rr": 0.845
+       "dte": 0.68,
+       "rr": 0.1708
       },
       {
        "d": "2026-10-15",
-       "dte": 2.69,
-       "rr": 0.4721
+       "dte": 1.68,
+       "rr": -0.77
       },
       {
        "d": "2026-10-16",
-       "dte": 3.69,
-       "rr": -1.7755
+       "dte": 2.68,
+       "rr": -2.32
       },
       {
        "d": "2026-10-23",
-       "dte": 10.69,
-       "rr": -2.4521
+       "dte": 9.68,
+       "rr": -1.444
       },
       {
        "d": "2026-10-30",
-       "dte": 17.69,
-       "rr": -3.74
+       "dte": 16.68,
+       "rr": -2.1
       },
       {
        "d": "2026-11-06",
-       "dte": 24.69,
-       "rr": -3.7734
+       "dte": 23.68,
+       "rr": -2.4559
       },
       {
        "d": "2026-11-27",
-       "dte": 45.69,
-       "rr": -2.6
+       "dte": 44.68,
+       "rr": -1.65
       },
       {
        "d": "2026-12-25",
-       "dte": 73.69,
-       "rr": -2.59
+       "dte": 72.68,
+       "rr": -1.6
       }
      ]
     }
    },
    "ETH": {
-    "spot": 2572.129707220785,
-    "iv7": 42.28806502261721,
-    "iv30": 47.7412037007997,
+    "spot": 2536.633039725454,
+    "iv7": 43.42815630732686,
+    "iv30": 47.7849412632976,
     "term": {
-     "spread_vp": 5.453138678182491,
+     "spread_vp": 4.356784955970738,
      "tag": "contango"
     },
     "gamma": {
-     "value": 64210782.78317183,
+     "value": 27740215.123484947,
      "regime": "long_gamma"
     },
     "pc": {
-     "ratio": 0.5462799209717536,
-     "calls_oi": 1770751.9418964584,
-     "puts_oi": 967326.2308797765,
+     "ratio": 0.5266459950333531,
+     "calls_oi": 1850515.0139554546,
+     "puts_oi": 974566.3208487296,
      "tag": "call_skewed"
     },
     "callWall": {
-     "strike": 2560,
-     "oi": 11442.017557209585
+     "strike": 2600,
+     "oi": 123506.8277678
     },
     "putWall": {
      "strike": 2500,
-     "oi": 88237.6722386
+     "oi": 59690.6222386
     },
     "topExpiry": {
      "expiry_date": "2026-12-25",
-     "oi": 821469.7059999997
+     "oi": 827776.195999999
     },
     "rv": {
-     "value": 48.156859508122736,
-     "vrp": -0.4156558073230343,
+     "value": 49.287223161989246,
+     "vrp": -1.502281898691649,
      "tag": "fair",
      "tenor_days": 30
     },
     "ivPct": {
-     "percentile": 12.649549052089085,
-     "tag": "low"
+     "percentile": 64.01244737323815,
+     "tag": "elevated"
     },
     "flip": {
-     "strike": 2540.750492655524,
-     "distance_pct": 1.2199701468075108
+     "strike": 2524.4621129416496,
+     "distance_pct": 0.47980636509890595
     },
-    "oi": 2738078.172776235,
+    "oi": 2825081.3348041843,
     "cone": [
      {
       "w": 7,
-      "hv": 43.117,
-      "iv": 43.1,
-      "lo": 16.114700000000003,
-      "hi": 63.230399999999996,
-      "rank": 54.95
+      "hv": 55.4156,
+      "iv": 43.24,
+      "lo": 16.1923,
+      "hi": 63.227599999999995,
+      "rank": 55.43
      },
      {
       "w": 14,
-      "hv": 34.1945,
-      "iv": 45.27,
-      "lo": 30.4457,
-      "hi": 91.9708,
-      "rank": 55.95
+      "hv": 42.007,
+      "iv": 44.89219,
+      "lo": 30.4514,
+      "hi": 91.9654,
+      "rank": 56.47
      },
      {
       "w": 30,
-      "hv": 42.950500000000005,
-      "iv": 49.19,
-      "lo": 38.9259,
-      "hi": 73.1796,
-      "rank": 52.94
+      "hv": 45.706799999999994,
+      "iv": 49.105898,
+      "lo": 38.926,
+      "hi": 73.1582,
+      "rank": 53.62
      },
      {
       "w": 60,
-      "hv": 59.655100000000004,
-      "iv": 49.853633,
-      "lo": 57.763,
-      "hi": 61.1332,
+      "hv": 60.9432,
+      "iv": 49.859867,
+      "lo": 57.763600000000004,
+      "hi": 61.1309,
       "rank": 0
      },
      {
       "w": 90,
-      "hv": 53.585300000000004,
-      "iv": 51.337991,
-      "lo": 53.5211,
-      "hi": 54.8076,
+      "hv": 54.5281,
+      "iv": 51.313892,
+      "lo": 53.631499999999996,
+      "hi": 54.8056,
       "rank": 0
      }
     ],
     "termPts": [
      {
-      "d": "2026-10-13",
-      "dte": 0.6953523726851852,
-      "iv": 38.74812655809882
-     },
-     {
       "d": "2026-10-14",
-      "dte": 1.6953523726851851,
-      "iv": 40.256690792499995
+      "dte": 0.6805132754629629,
+      "iv": 40.43539487887978
      },
      {
       "d": "2026-10-15",
-      "dte": 2.695352372685185,
-      "iv": 42.153335975000005
+      "dte": 1.680513275462963,
+      "iv": 44.6977744875
      },
      {
       "d": "2026-10-16",
-      "dte": 3.695352372685185,
-      "iv": 41.75309214462427
+      "dte": 2.680513275462963,
+      "iv": 44.24131428461787
      },
      {
       "d": "2026-10-23",
-      "dte": 10.695352372685186,
-      "iv": 42.906698446
+      "dte": 9.680513275462962,
+      "iv": 42.938742852000004
      },
      {
       "d": "2026-10-30",
-      "dte": 17.695352372685186,
-      "iv": 44.979138864793654
+      "dte": 16.680513275462964,
+      "iv": 44.62976502518399
      },
      {
       "d": "2026-11-06",
-      "dte": 24.695352372685186,
-      "iv": 47.32604181309015
+      "dte": 23.680513275462964,
+      "iv": 47.18117148201924
      },
      {
       "d": "2026-11-27",
-      "dte": 45.695352372685186,
-      "iv": 48.885650493
+      "dte": 44.680513275462964,
+      "iv": 49.288596482
      },
      {
       "d": "2026-12-25",
-      "dte": 73.69535237268518,
-      "iv": 49.84957929888889
+      "dte": 72.68051327546296,
+      "iv": 50.11318296333334
      },
      {
       "d": "2027-01-29",
-      "dte": 108.69535237268518,
-      "iv": 51.334590000000006
+      "dte": 107.68051327546296,
+      "iv": 51.410115999999995
      },
      {
       "d": "2027-03-26",
-      "dte": 164.6953523726852,
-      "iv": 52.324902908750005
+      "dte": 163.68051327546297,
+      "iv": 52.27838963625
      },
      {
       "d": "2027-06-25",
-      "dte": 255.6953523726852,
-      "iv": 53.34890973625
+      "dte": 254.68051327546297,
+      "iv": 53.32449459
      },
      {
       "d": "2027-09-24",
-      "dte": 346.6953523726852,
-      "iv": 54.043472262857144
+      "dte": 345.68051327546294,
+      "iv": 53.985635972857146
      }
     ],
     "senti": {
-     "rr": -2.55,
-     "rr7": 1.7617,
+     "rr": -0.4268,
+     "rr7": 0.0903,
      "rrTenor": 14,
      "rrPts": [
-      [
-       1791183600000,
-       1.7617
-      ],
-      [
-       1791205200000,
-       1.3132
-      ],
-      [
-       1791226800000,
-       0.7776
-      ],
-      [
-       1791248400000,
-       0.438
-      ],
       [
        1791270000000,
        0.0903
@@ -7016,219 +9167,209 @@
       ],
       [
        1791788400000,
-       -2.4
+       -2.4561
+      ],
+      [
+       1791810000000,
+       -2.6309
+      ],
+      [
+       1791831600000,
+       -3.0196
+      ],
+      [
+       1791853200000,
+       -2.5509
+      ],
+      [
+       1791874800000,
+       -1.1396
       ]
      ],
      "flow": {
       "C": {
-       "buy": 3262688.795338729,
-       "sell": 3118800.63291165
+       "buy": 4907265.705858273,
+       "sell": 4794908.7466876935
       },
       "P": {
-       "buy": 1478394.5063845988,
-       "sell": 1459950.3051726706
+       "buy": 4303766.311578817,
+       "sell": 5454281.110652191
       }
      },
-     "flowSince": 1791702000000,
+     "flowSince": 1791788400000,
      "skew": [
       {
-       "d": "2026-10-13",
-       "dte": 0.69,
-       "rr": 1.103
-      },
-      {
        "d": "2026-10-14",
-       "dte": 1.69,
-       "rr": 0.51
+       "dte": 0.68,
+       "rr": 1.2499
       },
       {
        "d": "2026-10-15",
-       "dte": 2.69,
-       "rr": 0.7361
+       "dte": 1.68,
+       "rr": 1.74
       },
       {
        "d": "2026-10-16",
-       "dte": 3.69,
-       "rr": -0.77
+       "dte": 2.68,
+       "rr": 0.491
       },
       {
        "d": "2026-10-23",
-       "dte": 10.69,
-       "rr": -2.55
+       "dte": 9.68,
+       "rr": -2.29
       },
       {
        "d": "2026-10-30",
-       "dte": 17.69,
-       "rr": -2.76
+       "dte": 16.68,
+       "rr": -0.4268
       },
       {
        "d": "2026-11-06",
-       "dte": 24.69,
-       "rr": -2.45
+       "dte": 23.68,
+       "rr": -1.03
       },
       {
        "d": "2026-11-27",
-       "dte": 45.69,
-       "rr": -1.806
+       "dte": 44.68,
+       "rr": -0.7286
       },
       {
        "d": "2026-12-25",
-       "dte": 73.69,
-       "rr": -0.3058
+       "dte": 72.68,
+       "rr": -0.4946
       }
      ]
     }
    },
    "SOL": {
-    "spot": 112.90664240200002,
-    "iv7": 45.640428883670666,
-    "iv30": 51.08238514045192,
+    "spot": 108.840826204,
+    "iv7": 59.11994134314211,
+    "iv30": 56.50935135067595,
     "term": {
-     "spread_vp": 5.441956256781253,
-     "tag": "contango"
+     "spread_vp": -2.61058999246616,
+     "tag": "backwardation"
     },
     "gamma": {
-     "value": 497847.7898516925,
-     "regime": "long_gamma"
+     "value": -1744.7196774510667,
+     "regime": "balanced"
     },
     "pc": {
-     "ratio": 0.7153644091291226,
-     "calls_oi": 621483.8540000002,
-     "puts_oi": 444587.43,
+     "ratio": 0.7305797090578815,
+     "calls_oi": 680477.3440000002,
+     "puts_oi": 497142.94000000006,
      "tag": "balanced"
     },
     "callWall": {
      "strike": 113,
-     "oi": 22224
+     "oi": 25989
     },
     "putWall": {
-     "strike": 113,
-     "oi": 15447
+     "strike": 109,
+     "oi": 7489
     },
     "topExpiry": {
      "expiry_date": "2026-12-25",
-     "oi": 474187.852
+     "oi": 474712.75200000004
     },
     "rv": {
-     "value": 58.86868915845046,
-     "vrp": -7.786304017998539,
-     "tag": "cheap",
+     "value": 60.77072031621473,
+     "vrp": -4.261368965538779,
+     "tag": "fair",
      "tenor_days": 30
     },
     "ivPct": {
-     "percentile": 20.057992359736733,
-     "tag": "low"
+     "percentile": 74.80437468539789,
+     "tag": "elevated"
     },
     "flip": {
-     "strike": 111.49520869024109,
-     "distance_pct": 1.2500891725515784
+     "strike": 111.67470506692744,
+     "distance_pct": -2.6036910613081155
     },
-    "oi": 1066071.2840000002,
+    "oi": 1177620.2840000002,
     "cone": [
      {
       "w": 7,
-      "hv": 48.9543,
-      "iv": 49.24,
-      "lo": 23.9086,
-      "hi": 76.7165,
-      "rank": 65.93
+      "hv": 58.78020000000001,
+      "iv": 55.81,
+      "lo": 23.9358,
+      "hi": 76.52369999999999,
+      "rank": 68.48
      },
      {
       "w": 14,
-      "hv": 38.3895,
-      "iv": 50.94,
-      "lo": 27.816000000000003,
-      "hi": 74.7395,
-      "rank": 53.57
+      "hv": 46.3424,
+      "iv": 57.093,
+      "lo": 27.836100000000002,
+      "hi": 74.7132,
+      "rank": 61.18
      },
      {
       "w": 30,
-      "hv": 61.01180000000001,
-      "iv": 53.89,
-      "lo": 32.3575,
-      "hi": 68.8116,
-      "rank": 30.88
+      "hv": 62.9305,
+      "iv": 55.13,
+      "lo": 32.431599999999996,
+      "hi": 68.8041,
+      "rank": 31.88
      },
      {
       "w": 60,
-      "hv": 63.024899999999995,
-      "iv": 52.816742,
-      "lo": 51.019800000000004,
-      "hi": 63.0217,
-      "rank": 26.32
+      "hv": 64.5261,
+      "iv": 53.79,
+      "lo": 51.027,
+      "hi": 63.161100000000005,
+      "rank": 25.64
      },
      {
       "w": 90,
-      "hv": 54.8262,
+      "hv": 56.0136,
       "iv": null,
-      "lo": 53.673,
-      "hi": 55.4071,
+      "lo": 53.7299,
+      "hi": 55.883700000000005,
       "rank": null
      }
     ],
     "termPts": [
      {
-      "d": "2026-10-13",
-      "dte": 0.6948670949074074,
-      "iv": 40.1218379
-     },
-     {
       "d": "2026-10-14",
-      "dte": 1.6948670949074074,
-      "iv": 49.54
+      "dte": 0.6798084837962963,
+      "iv": 61.611561099999996
      },
      {
       "d": "2026-10-15",
-      "dte": 2.6948670949074076,
-      "iv": 52.03
+      "dte": 1.6798084837962963,
+      "iv": 55.24
      },
      {
       "d": "2026-10-16",
-      "dte": 3.6948670949074076,
-      "iv": 44.8980252
+      "dte": 2.6798084837962963,
+      "iv": 60.913082499999994
      },
      {
       "d": "2026-10-23",
-      "dte": 10.694867094907407,
-      "iv": 46.4389015
+      "dte": 9.679808483796297,
+      "iv": 58.0076575
      },
      {
       "d": "2026-10-30",
-      "dte": 17.69486709490741,
-      "iv": 49.1355029
+      "dte": 16.679808483796297,
+      "iv": 57.9443045
      },
      {
       "d": "2026-11-27",
-      "dte": 45.69486709490741,
-      "iv": 53.5798725
+      "dte": 44.67980848379629,
+      "iv": 54.9279295
      },
      {
       "d": "2026-12-25",
-      "dte": 73.69486709490741,
-      "iv": 53.46698166666667
+      "dte": 72.6798084837963,
+      "iv": 54.42247833333332
      }
     ],
     "senti": {
-     "rr": 4.69,
-     "rr7": 2.2091,
+     "rr": 0.8746,
+     "rr7": 1.6635,
      "rrTenor": 14,
      "rrPts": [
-      [
-       1791183600000,
-       2.2091
-      ],
-      [
-       1791205200000,
-       1.7125
-      ],
-      [
-       1791226800000,
-       1.7221
-      ],
-      [
-       1791248400000,
-       1.5763
-      ],
       [
        1791270000000,
        1.6635
@@ -7327,224 +9468,219 @@
       ],
       [
        1791788400000,
-       4.7983
+       1.9008
+      ],
+      [
+       1791810000000,
+       0.4112
+      ],
+      [
+       1791831600000,
+       -0.4736
+      ],
+      [
+       1791853200000,
+       0.6068
+      ],
+      [
+       1791874800000,
+       1.1294
       ]
      ],
      "flow": {
       "C": {
-       "buy": 107475.12350000003,
-       "sell": 86956.44649999996
+       "buy": 107285.58450000001,
+       "sell": 85796.3842
       },
       "P": {
-       "buy": 24986.942712354168,
-       "sell": 49491.133652488075
+       "buy": 118442.96999999996,
+       "sell": 179482.38259999995
       }
      },
-     "flowSince": 1791702000000,
+     "flowSince": 1791788400000,
      "skew": [
       {
-       "d": "2026-10-13",
-       "dte": 0.69,
-       "rr": 3.0243
-      },
-      {
        "d": "2026-10-14",
-       "dte": 1.69,
-       "rr": -5.72
+       "dte": 0.68,
+       "rr": -0.91
       },
       {
        "d": "2026-10-15",
-       "dte": 2.69,
-       "rr": -3.04
+       "dte": 1.68,
+       "rr": -8.19
       },
       {
        "d": "2026-10-16",
-       "dte": 3.69,
-       "rr": -0.933
+       "dte": 2.68,
+       "rr": 3.097
       },
       {
        "d": "2026-10-23",
-       "dte": 10.69,
-       "rr": 4.69
+       "dte": 9.68,
+       "rr": 0.82
       },
       {
        "d": "2026-10-30",
-       "dte": 17.69,
-       "rr": 4.3516
+       "dte": 16.68,
+       "rr": 0.8746
       },
       {
        "d": "2026-11-27",
-       "dte": 45.69,
-       "rr": 3.01
+       "dte": 44.68,
+       "rr": 2.1183
       },
       {
        "d": "2026-12-25",
-       "dte": 73.69,
-       "rr": 3.47
+       "dte": 72.68,
+       "rr": 1.3733
       }
      ]
     }
    },
    "HYPE": {
-    "spot": 87.785168916,
-    "iv7": 52.071606814880425,
-    "iv30": 55.330789674340295,
+    "spot": 83.14839025799999,
+    "iv7": 54.34908755312853,
+    "iv30": 55.58920388985555,
     "term": {
-     "spread_vp": 3.2591828594598695,
-     "tag": "contango"
+     "spread_vp": 1.24011633672702,
+     "tag": "flat"
     },
     "gamma": {
-     "value": 3039444.107500121,
+     "value": 1777486.5672542902,
      "regime": "long_gamma"
     },
     "pc": {
-     "ratio": 0.41144920554760694,
-     "calls_oi": 2650340.4340000004,
-     "puts_oi": 1090480.466,
+     "ratio": 0.41861046553112524,
+     "calls_oi": 2656714.4340000004,
+     "puts_oi": 1112128.466,
      "tag": "call_skewed"
     },
     "callWall": {
-     "strike": 95,
-     "oi": 337552.236
+     "strike": 85,
+     "oi": 259552.46
     },
     "putWall": {
      "strike": 80,
-     "oi": 88961.27
+     "oi": 91541.27
     },
     "topExpiry": {
      "expiry_date": "2026-10-30",
-     "oi": 1541977.725
+     "oi": 1565973.725
     },
     "rv": {
-     "value": 67.01937174810395,
-     "vrp": -11.688582073763655,
+     "value": 68.04594472099328,
+     "vrp": -12.45674083113773,
      "tag": "cheap",
      "tenor_days": 30
     },
     "ivPct": {
-     "percentile": 3.836385509958562,
-     "tag": "crushed"
+     "percentile": 11.028890464374335,
+     "tag": "low"
     },
     "flip": {
-     "strike": 86.00428340375467,
-     "distance_pct": 2.028686091553153
+     "strike": 84.05645887766565,
+     "distance_pct": -1.0921060730677072
     },
-    "oi": 3740820.9000000004,
+    "oi": 3768842.9000000004,
     "cone": [
      {
       "w": 7,
-      "hv": 48.3453,
-      "iv": 54.544,
-      "lo": 42.7301,
-      "hi": 97.6658,
-      "rank": 38.46
+      "hv": 55.675799999999995,
+      "iv": 52.06,
+      "lo": 42.918,
+      "hi": 97.5329,
+      "rank": 29.35
      },
      {
       "w": 14,
-      "hv": 51.589,
-      "iv": 54.587,
-      "lo": 51.0475,
-      "hi": 92.36959999999999,
-      "rank": 20.24
+      "hv": 57.52270000000001,
+      "iv": 55.191,
+      "lo": 51.4395,
+      "hi": 92.3685,
+      "rank": 20
      },
      {
       "w": 30,
-      "hv": 65.4041,
-      "iv": 56.273,
-      "lo": 65.3567,
-      "hi": 84.7777,
-      "rank": 5.88
+      "hv": 67.011,
+      "iv": 56.99,
+      "lo": 65.36149999999999,
+      "hi": 84.7701,
+      "rank": 5.8
      },
      {
       "w": 60,
-      "hv": 76.0752,
-      "iv": 55.85,
-      "lo": 74.3869,
-      "hi": 77.1209,
+      "hv": 77.1806,
+      "iv": 55.67,
+      "lo": 74.4207,
+      "hi": 77.1892,
       "rank": 0
      },
      {
       "w": 90,
-      "hv": 73.3986,
-      "iv": 63.159,
-      "lo": 73.34819999999999,
-      "hi": 74.6211,
+      "hv": 73.747,
+      "iv": 62.889,
+      "lo": 73.3491,
+      "hi": 74.6181,
       "rank": 0
      }
     ],
     "termPts": [
      {
-      "d": "2026-10-13",
-      "dte": 0.6948334953703704,
-      "iv": 49.537352399999996
+      "d": "2026-10-14",
+      "dte": 0.6797730092592592,
+      "iv": 49.5854306
      },
      {
-      "d": "2026-10-14",
-      "dte": 1.6948334953703703,
-      "iv": 50.14999999999999
+      "d": "2026-10-15",
+      "dte": 1.6797730092592593,
+      "iv": 56.279999999999994
      },
      {
       "d": "2026-10-16",
-      "dte": 3.6948334953703705,
-      "iv": 50.99692
+      "dte": 2.679773009259259,
+      "iv": 53.469468400000004
      },
      {
       "d": "2026-10-23",
-      "dte": 10.69483349537037,
-      "iv": 53.306616600000005
+      "dte": 9.679773009259259,
+      "iv": 54.8947042
      },
      {
       "d": "2026-10-30",
-      "dte": 17.69483349537037,
-      "iv": 54.6992942
+      "dte": 16.67977300925926,
+      "iv": 54.8447822
      },
      {
       "d": "2026-11-27",
-      "dte": 45.69483349537037,
-      "iv": 56.1876796
+      "dte": 44.67977300925926,
+      "iv": 56.4096066
      },
      {
       "d": "2026-12-25",
-      "dte": 73.69483349537037,
-      "iv": 55.945733999999995
+      "dte": 72.67977300925926,
+      "iv": 56.032126000000005
      },
      {
       "d": "2027-03-26",
-      "dte": 164.69483349537037,
-      "iv": 59.815546999999995
+      "dte": 163.67977300925926,
+      "iv": 59.8892735
      },
      {
       "d": "2027-06-25",
-      "dte": 255.69483349537037,
-      "iv": 59.883131500000005
+      "dte": 254.67977300925926,
+      "iv": 59.8428445
      },
      {
       "d": "2027-09-24",
-      "dte": 346.69483349537035,
-      "iv": 75.402583
+      "dte": 345.67977300925924,
+      "iv": 69.28064
      }
     ],
     "senti": {
-     "rr": 0.335,
-     "rr7": 1.2797,
+     "rr": 0.522,
+     "rr7": -0.1066,
      "rrTenor": 14,
      "rrPts": [
-      [
-       1791183600000,
-       1.2797
-      ],
-      [
-       1791205200000,
-       1.5759
-      ],
-      [
-       1791226800000,
-       2.1368
-      ],
-      [
-       1791248400000,
-       0.7523
-      ],
       [
        1791270000000,
        -0.1066
@@ -7643,75 +9779,91 @@
       ],
       [
        1791788400000,
-       -0.1756
+       -0.1198
+      ],
+      [
+       1791810000000,
+       0.5007
+      ],
+      [
+       1791831600000,
+       -0.7965
+      ],
+      [
+       1791853200000,
+       -0.0503
+      ],
+      [
+       1791874800000,
+       0.0146
       ]
      ],
      "flow": {
       "C": {
-       "buy": 79746.17434517843,
-       "sell": 16737.0639638805
+       "buy": 407117.89624860696,
+       "sell": 255785.88067003537
       },
       "P": {
-       "buy": 8502.785,
-       "sell": 10045.381
+       "buy": 45477.57412224468,
+       "sell": 42893.00718792135
       }
      },
-     "flowSince": 1791702000000,
+     "flowSince": 1791788400000,
      "skew": [
       {
-       "d": "2026-10-13",
-       "dte": 0.69,
-       "rr": -4.88
+       "d": "2026-10-14",
+       "dte": 0.68,
+       "rr": -4.36
       },
       {
-       "d": "2026-10-14",
-       "dte": 1.69,
-       "rr": -5.39
+       "d": "2026-10-15",
+       "dte": 1.68,
+       "rr": 1.77
       },
       {
        "d": "2026-10-16",
-       "dte": 3.69,
-       "rr": -2.0645
+       "dte": 2.68,
+       "rr": -2.9
       },
       {
        "d": "2026-10-23",
-       "dte": 10.69,
-       "rr": 0.335
+       "dte": 9.68,
+       "rr": 0.4818
       },
       {
        "d": "2026-10-30",
-       "dte": 17.69,
-       "rr": -0.3876
+       "dte": 16.68,
+       "rr": 0.522
       },
       {
        "d": "2026-11-27",
-       "dte": 45.69,
-       "rr": 1.891
+       "dte": 44.68,
+       "rr": 0.673
       },
       {
        "d": "2026-12-25",
-       "dte": 73.69,
-       "rr": 1.506
+       "dte": 72.68,
+       "rr": 1.275
       }
      ]
     }
    },
    "ZEC": {
-    "spot": 1329.88542846,
-    "iv7": 96.7112241927196,
-    "iv30": 105.03664056382173,
+    "spot": 1226.2590150400001,
+    "iv7": 95.59838267035693,
+    "iv30": 101.5749964389726,
     "term": {
-     "spread_vp": 8.325416371102136,
+     "spread_vp": 5.976613768615678,
      "tag": "contango"
     },
     "gamma": {
-     "value": 46981.02866571238,
-     "regime": "long_gamma"
+     "value": 23000.191734697437,
+     "regime": "balanced"
     },
     "pc": {
-     "ratio": 0.7528436553654644,
-     "calls_oi": 16344.456000000004,
-     "puts_oi": 12304.82,
+     "ratio": 0.7579850078459345,
+     "calls_oi": 17012.632000000005,
+     "puts_oi": 12895.32,
      "tag": "balanced"
     },
     "callWall": {
@@ -7724,118 +9876,102 @@
     },
     "topExpiry": {
      "expiry_date": "2026-12-25",
-     "oi": 14940.120000000004
+     "oi": 14727.720000000005
     },
     "rv": {
-     "value": 106.06764956504473,
-     "vrp": -1.0310090012229978,
-     "tag": "fair",
+     "value": 108.02361695651301,
+     "vrp": -6.448620517540405,
+     "tag": "cheap",
      "tenor_days": 30
     },
     "ivPct": {
-     "percentile": 85.79527974333055,
-     "tag": "extreme"
+     "percentile": 65.43571366139324,
+     "tag": "elevated"
     },
     "flip": {
-     "strike": 1339.7668819929888,
-     "distance_pct": -0.7430304386770776
+     "strike": 1245.454350940836,
+     "distance_pct": -1.5653573727415024
     },
-    "oi": 28649.276000000005,
+    "oi": 29907.952000000005,
     "cone": [
      {
       "w": 7,
-      "hv": 96.515,
-      "iv": 118.694,
-      "lo": 41.0989,
-      "hi": 170.2086,
-      "rank": 71.43
+      "hv": 110.7043,
+      "iv": 113.552,
+      "lo": 41.3648,
+      "hi": 169.9676,
+      "rank": 65.22
      },
      {
       "w": 14,
-      "hv": 83.6686,
-      "iv": 122.768,
-      "lo": 48.9711,
-      "hi": 160.9594,
-      "rank": 54.76
+      "hv": 91.3972,
+      "iv": 116.335,
+      "lo": 49.029,
+      "hi": 160.9405,
+      "rank": 55.29
      },
      {
       "w": 30,
-      "hv": 121.265,
-      "iv": 126.302,
-      "lo": 63.8742,
-      "hi": 152.74939999999998,
-      "rank": 50
+      "hv": 123.8947,
+      "iv": 120.018,
+      "lo": 63.92020000000001,
+      "hi": 152.6332,
+      "rank": 40.58
      },
      {
       "w": 60,
-      "hv": 137.3442,
-      "iv": 129.705,
-      "lo": 113.3191,
-      "hi": 137.1515,
-      "rank": 52.63
+      "hv": 139.7586,
+      "iv": 121.723,
+      "lo": 113.3588,
+      "hi": 137.3336,
+      "rank": 28.21
      },
      {
       "w": 90,
-      "hv": 119.23429999999999,
-      "iv": 129.833,
-      "lo": 118.76930000000002,
-      "hi": 121.265,
-      "rank": 100
+      "hv": 120.4954,
+      "iv": null,
+      "lo": 118.7902,
+      "hi": 121.264,
+      "rank": null
      }
     ],
     "termPts": [
      {
       "d": "2026-10-16",
-      "dte": 3.694807395833333,
-      "iv": 93.1325555
+      "dte": 2.6797500578703706,
+      "iv": 91.569433
      },
      {
       "d": "2026-10-23",
-      "dte": 10.694807395833333,
-      "iv": 100.711747
+      "dte": 9.67975005787037,
+      "iv": 98.0974475
      },
      {
       "d": "2026-10-30",
-      "dte": 17.694807395833333,
-      "iv": 103.5505775
+      "dte": 16.679750057870372,
+      "iv": 99.76541850000001
      },
      {
       "d": "2026-11-27",
-      "dte": 45.69480739583334,
-      "iv": 106.93205800000001
+      "dte": 44.67975005787037,
+      "iv": 103.569265
      },
      {
       "d": "2026-12-25",
-      "dte": 73.69480739583334,
-      "iv": 108.0798715
+      "dte": 72.67975005787036,
+      "iv": 104.2007275
      },
      {
       "d": "2027-03-26",
-      "dte": 164.69480739583332,
-      "iv": 108.1331845
+      "dte": 163.67975005787036,
+      "iv": 104.2412895
      }
     ],
     "senti": {
-     "rr": 6.174,
-     "rr7": 1.3953,
+     "rr": 7.19,
+     "rr7": 11.3438,
      "rrTenor": 14,
      "rrPts": [
-      [
-       1791183600000,
-       1.3953
-      ],
-      [
-       1791205200000,
-       8.4863
-      ],
-      [
-       1791226800000,
-       8.1893
-      ],
-      [
-       1791248400000,
-       12.5976
-      ],
       [
        1791270000000,
        11.3438
@@ -7934,45 +10070,61 @@
       ],
       [
        1791788400000,
-       5.3551
+       5.0426
+      ],
+      [
+       1791810000000,
+       6.1034
+      ],
+      [
+       1791831600000,
+       6.1156
+      ],
+      [
+       1791853200000,
+       12.5477
+      ],
+      [
+       1791874800000,
+       7.36
       ]
      ],
      "flow": {
       "C": {
-       "buy": 29357.257054381913,
-       "sell": 59714.69744771584
+       "buy": 39349.95331209301,
+       "sell": 132875.82138767917
       },
       "P": {
-       "buy": 22173,
-       "sell": 4430.472089326748
+       "buy": 17182.75,
+       "sell": 1732.938
       }
      },
-     "flowSince": 1791702000000,
+     "flowSince": 1791788400000,
      "skew": [
       {
        "d": "2026-10-16",
-       "dte": 3.69,
-       "rr": 0.01
+       "dte": 2.68,
+       "rr": 9.415
       },
       {
        "d": "2026-10-23",
-       "dte": 10.69,
-       "rr": 6.174
+       "dte": 9.68,
+       "rr": 5.993
       },
       {
        "d": "2026-10-30",
-       "dte": 17.69,
-       "rr": 6.472
+       "dte": 16.68,
+       "rr": 7.19
       },
       {
        "d": "2026-11-27",
-       "dte": 45.69,
-       "rr": 5.99
+       "dte": 44.68,
+       "rr": 4.422
       },
       {
        "d": "2026-12-25",
-       "dte": 73.69,
-       "rr": 2.7494
+       "dte": 72.68,
+       "rr": 3.671
       }
      ]
     }
@@ -7981,63 +10133,63 @@
   "venues": [
    {
     "venue": "deribit",
-    "btc": 31519702411.281017,
-    "eth": 3725777903.3399997,
-    "total": 35245480314.62102
+    "btc": 32665024531.96803,
+    "eth": 3655290670.32,
+    "total": 36320315202.28803
    },
    {
     "venue": "bullish",
-    "btc": 3576035107.977584,
+    "btc": 3569823909.565927,
     "eth": 0,
-    "total": 3576035107.977584
+    "total": 3569823909.565927
    },
    {
     "venue": "okx",
-    "btc": 2504363738.727952,
-    "eth": 895417422.7473744,
-    "total": 3399781161.4753265
+    "btc": 2606608293.7799993,
+    "eth": 924793970.1000007,
+    "total": 3531402263.88
    },
    {
     "venue": "bybit",
-    "btc": 1678994309.1763694,
-    "eth": 776549942.4232734,
-    "total": 2455544251.5996428
+    "btc": 1747824988.1813633,
+    "eth": 847826282.0100691,
+    "total": 2595651270.1914325
    },
    {
     "venue": "binance",
-    "btc": 1669820867.0814185,
-    "eth": 596040242.9430088,
-    "total": 2265861110.0244274
+    "btc": 1738511407.914518,
+    "eth": 633673140.7462666,
+    "total": 2372184548.6607847
    },
    {
     "venue": "derive",
-    "btc": 492749935.71799994,
-    "eth": 808119334.97,
-    "total": 1300869270.688
+    "btc": 569401204.5800002,
+    "eth": 806884235.0523,
+    "total": 1376285439.6323001
    },
    {
     "venue": "delta",
-    "btc": 656760391.5155998,
-    "eth": 182392318.01159996,
-    "total": 839152709.5271997
+    "btc": 765433714.6402003,
+    "eth": 216874771.18449998,
+    "total": 982308485.8247002
    },
    {
     "venue": "paradex",
-    "btc": 55383840.5712136,
-    "eth": 41576655.93550602,
-    "total": 96960496.50671962
+    "btc": 55964279.39378058,
+    "eth": 40277894.850517236,
+    "total": 96242174.24429782
    },
    {
     "venue": "hypercall",
-    "btc": 350552.7112539,
-    "eth": 778789.4072501692,
-    "total": 1129342.1185040693
+    "btc": 340925.2871673,
+    "eth": 772981.5344110471,
+    "total": 1113906.8215783471
    },
    {
     "venue": "callput",
-    "btc": 427868.26546056045,
-    "eth": 333405.5319677839,
-    "total": 761273.7974283444
+    "btc": 761683.8261411942,
+    "eth": 47106.094570906556,
+    "total": 808789.9207121008
    }
   ]
  },
@@ -8075,13 +10227,13 @@
   {
    "date": "2026-10-15T08:30:00-04:00",
    "title": "Core Retail Sales m/m",
-   "forecast": "0.5%",
+   "forecast": "0.6%",
    "previous": "1.4%"
   },
   {
    "date": "2026-10-15T08:30:00-04:00",
    "title": "PPI m/m",
-   "forecast": "0.5%",
+   "forecast": "0.6%",
    "previous": "0.4%"
   },
   {
@@ -8099,10 +10251,6 @@
  ],
  "majorsHist": {
   "BTC": [
-   [
-    1760313600000,
-    115061
-   ],
    [
     1760400000000,
     115227
@@ -9560,15 +11708,15 @@
     83690.9
    ],
    [
-    1791789460000,
-    84131.5
+    1791849600000,
+    81794.8
+   ],
+   [
+    1791877170000,
+    83951
    ]
   ],
   "ETH": [
-   [
-    1760313600000,
-    4151.92
-   ],
    [
     1760400000000,
     4245.45
@@ -11026,15 +13174,15 @@
     2534.63
    ],
    [
-    1791789490000,
-    2570.98
+    1791849600000,
+    2445.89
+   ],
+   [
+    1791877180000,
+    2533.96
    ]
   ],
   "SOL": [
-   [
-    1760313600000,
-    197.215
-   ],
    [
     1760400000000,
     208.606
@@ -12492,15 +14640,15 @@
     111.252
    ],
    [
-    1791789480000,
-    112.811
+    1791849600000,
+    105.636
+   ],
+   [
+    1791877180000,
+    108.729
    ]
   ],
   "HYPE": [
-   [
-    1760313600000,
-    39.7497
-   ],
    [
     1760400000000,
     42.4698
@@ -13958,15 +16106,15 @@
     86.62
    ],
    [
-    1791789470000,
-    87.7663
+    1791849600000,
+    80.9666
+   ],
+   [
+    1791877190000,
+    83.0566
    ]
   ],
   "ZEC": [
-   [
-    1760313600000,
-    261.286
-   ],
    [
     1760400000000,
     249.76
@@ -15424,8 +17572,12 @@
     1275.57
    ],
    [
-    1791789490000,
-    1329.21
+    1791849600000,
+    1166.91
+   ],
+   [
+    1791877210000,
+    1224.16
    ]
   ]
  },
@@ -15503,6 +17655,18 @@
     "flowP": -172067,
     "near": 0.979,
     "spot": 84159.569
+   },
+   {
+    "d": "2026-10-13",
+    "score": -0.192,
+    "verdict": "LEANING BEARISH",
+    "rr": -2.1,
+    "rr7": -0.344,
+    "pc": 0.722,
+    "flowC": 59120,
+    "flowP": -1154210,
+    "near": -0.973,
+    "spot": 84037.631
    }
   ],
   "ETH": [
@@ -15578,6 +17742,18 @@
     "flowP": 18444,
     "near": 0.783,
     "spot": 2572.13
+   },
+   {
+    "d": "2026-10-13",
+    "score": 0.182,
+    "verdict": "LEANING BULLISH",
+    "rr": -0.427,
+    "rr7": 0.09,
+    "pc": 0.527,
+    "flowC": 112357,
+    "flowP": -1150515,
+    "near": 1.16,
+    "spot": 2536.633
    }
   ],
   "HYPE": [
@@ -15653,6 +17829,18 @@
     "flowP": -1543,
     "near": -5.135,
     "spot": 87.785
+   },
+   {
+    "d": "2026-10-13",
+    "score": 0.358,
+    "verdict": "BULLISH",
+    "rr": 0.522,
+    "rr7": -0.107,
+    "pc": 0.419,
+    "flowC": 151332,
+    "flowP": 2585,
+    "near": -1.83,
+    "spot": 83.148
    }
   ],
   "ZEC": [
@@ -15728,6 +17916,18 @@
     "flowP": 17743,
     "near": null,
     "spot": 1329.885
+   },
+   {
+    "d": "2026-10-13",
+    "score": 0.181,
+    "verdict": "LEANING BULLISH",
+    "rr": 7.19,
+    "rr7": 11.344,
+    "pc": 0.758,
+    "flowC": -93526,
+    "flowP": 15450,
+    "near": 9.415,
+    "spot": 1226.259
    }
   ],
   "SOL": [
@@ -15803,10 +18003,42 @@
     "flowP": -24504,
     "near": -1.912,
     "spot": 112.907
+   },
+   {
+    "d": "2026-10-13",
+    "score": 0.186,
+    "verdict": "LEANING BULLISH",
+    "rr": 0.875,
+    "rr7": 1.663,
+    "pc": 0.731,
+    "flowC": 21489,
+    "flowP": -61039,
+    "near": -2.001,
+    "spot": 108.841
    }
   ]
  },
  "signals": [
+  {
+   "d": "2026-10-13",
+   "kind": "vol",
+   "text": "BVIV 38.9 (−1.9% 24h) — BTC implied vol easing",
+   "href": "#/deep/Volmex",
+   "key": "BVIV"
+  },
+  {
+   "d": "2026-10-13",
+   "kind": "move",
+   "text": "$DRV −8.2% in 24h",
+   "href": "#/deep/Derive",
+   "key": "$DRV"
+  },
+  {
+   "d": "2026-10-13",
+   "kind": "new",
+   "text": "New options project spotted: HedgeHood",
+   "href": "#/deep/HedgeHood"
+  },
   {
    "d": "2026-10-12",
    "kind": "vol",

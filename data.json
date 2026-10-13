@@ -3081,6 +3081,25 @@
         ],
         "level": "confirmed"
       }
+    },
+    {
+      "ticker": "",
+      "name": "HedgeHood",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "기타",
+      "what": "Hedgehood is a DeFi protocol for tokenized stocks, combining collateralized stock lending, Stock Yield covered-call stra",
+      "cg": "hedgehood",
+      "llama": [
+        "parent#hedgehood"
+      ],
+      "site": "https://hedgehood.app",
+      "x": "0xHedgehood",
+      "keywords": [],
+      "note": "",
+      "auto": true
     }
   ]
 }

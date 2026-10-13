@@ -78,10 +78,10 @@
   },
   "Volmex": {
     "file": "shots/volmex.jpg",
-    "url": "https://volmex.finance",
-    "at": "2026-10-10T15:44:16.206Z",
-    "kb": 100,
-    "hid": 1
+    "url": "https://app.hyperliquid.xyz/trade/mkts:BVIV",
+    "at": "2026-10-13T07:41:44.482Z",
+    "kb": 62,
+    "hid": 0
   },
   "Hunch": {
     "file": "shots/hunch.jpg",
@@ -172,6 +172,13 @@
     "url": "https://omen.trade",
     "at": "2026-10-11T04:51:12.698Z",
     "kb": 55,
+    "hid": 0
+  },
+  "HedgeHood": {
+    "file": "shots/hedgehood.jpg",
+    "url": "https://hedgehood.app",
+    "at": "2026-10-13T07:41:44.325Z",
+    "kb": 80,
     "hid": 0
   }
 }
