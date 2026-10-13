@@ -1782,7 +1782,7 @@ function backersHTML(p){
     ${rounds.length ? row('Rounds', `<ul class="bk-r">${rounds.map(roundLi).join('')}</ul>`) : ''}
     ${(b.reported || []).length ? `<p class="bk-rep">Also reported by aggregators: ${b.reported.map(esc).join(' · ')}</p>` : ''}
     ${(b.sources || []).length ? `<div class="bk-src">Sources ${b.sources.map(s => { const u = bkLink(s.url); return (u ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a>` : `<span class="s">${esc(s.label)}</span>`) + (s.agg ? bkAgg : '') + ' '; }).join('')}</div>` : ''}
-    <p class="bk-fn">Investor data from public announcements; aggregator-only items are marked AGG. Corrections: <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p>
+    <p class="bk-fn">Investors as listed on each project’s official website. Corrections: <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p>
   </section>`;
 }
 // 앱 화면 (shots.mjs 가 매주 찍는다)
