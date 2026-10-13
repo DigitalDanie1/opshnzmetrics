@@ -99,6 +99,50 @@
       ]
     }
   ],
+  "lanes": [
+    {
+      "id": "trade",
+      "title": "Trade options",
+      "sub": "Orderbooks & RFQ — calls, puts, spreads",
+      "members": [
+        "Derive",
+        "Paradex",
+        "Aevo",
+        "Hypercall",
+        "Olive",
+        "Joyride"
+      ]
+    },
+    {
+      "id": "earn",
+      "title": "Earn yield",
+      "sub": "Vaults that sell options for you",
+      "members": [
+        "Thetanuts",
+        "Rysk",
+        "3Jane"
+      ]
+    },
+    {
+      "id": "bets",
+      "title": "Simple bets",
+      "sub": "Options in plain English, on your phone",
+      "members": [
+        "Dream",
+        "Hunch",
+        "CallPut"
+      ]
+    },
+    {
+      "id": "vol",
+      "title": "Trade volatility",
+      "sub": "Vol indices & perpetual options",
+      "members": [
+        "Volmex",
+        "GammaSwap"
+      ]
+    }
+  ],
   "strategy": {
     "note": "",
     "scenarios": [

@@ -1163,6 +1163,45 @@ body.intro #ticker{visibility:hidden}
 .er-none{padding:12px;font-size:13px;color:var(--mute)}
 body.tg .eco-search{display:none}
 @media (max-width:700px){.er{grid-template-columns:30px 1fr auto}.er .w{display:none}.eco-search kbd{display:none}}
+/* ── Friends: 빛나는 타일 ── */
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+.fz{position:relative;padding:22px;border-radius:20px;border:1px solid rgba(242,181,68,.25);background:radial-gradient(120% 80% at 0% 0%,rgba(242,181,68,.10),transparent 55%),radial-gradient(90% 70% at 100% 100%,rgba(242,181,68,.06),transparent 60%),rgba(14,15,12,.75);box-shadow:0 0 0 1px rgba(242,181,68,.06),0 30px 80px -40px rgba(242,181,68,.25)}
+.fz-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.fz-h h3{font-size:22px;font-weight:600;color:var(--amber);letter-spacing:-.01em;text-shadow:0 0 22px rgba(242,181,68,.45)}
+.fz-h h3 span{font-size:12px;color:var(--mute);margin-left:8px;text-shadow:none}
+.fz-h p{font-size:13px;color:var(--ink2)}
+.fzl{margin-top:18px}
+.fzl-h{display:flex;align-items:baseline;gap:12px;margin-bottom:10px}
+.fzl-h b{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-weight:600}
+.fzl-h span{font-size:12px;color:var(--mute)}
+.fzl-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.ftl{position:relative;display:flex;flex-direction:column;border-radius:16px;background:linear-gradient(180deg,rgba(26,24,18,.95),rgba(14,14,11,.95));overflow:hidden;isolation:isolate;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+/* 앰버 테두리가 천천히 한 바퀴 도는 빛 */
+.ftl::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:conic-gradient(from var(--ang),rgba(242,181,68,.15) 0deg,rgba(242,181,68,.15) 250deg,rgba(255,214,140,.95) 300deg,rgba(242,181,68,.15) 340deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:ftSpin 7s linear infinite;animation-delay:calc(var(--d) * -1);z-index:2;pointer-events:none}
+@keyframes ftSpin{to{--ang:360deg}}
+/* 가끔 지나가는 빛줄기 */
+.ftl::after{content:"";position:absolute;top:-20%;bottom:-20%;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,230,180,.10),transparent);transform:skewX(-12deg);animation:ftSheen 9s ease-in-out infinite;animation-delay:var(--d);z-index:1;pointer-events:none}
+@keyframes ftSheen{0%,70%{left:-60%}100%{left:130%}}
+.ftl:hover{transform:translateY(-3px);box-shadow:0 18px 40px -18px rgba(242,181,68,.45),0 0 0 1px rgba(242,181,68,.5)}
+.ftl-th{height:84px;background:#0d0e0c;overflow:hidden;position:relative}
+.ftl-th img{width:100%;height:100%;object-fit:cover;object-position:top left;opacity:.5;filter:saturate(.8);transition:opacity .3s,transform .5s}
+.ftl-th::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(20,19,14,.98))}
+.ftl:hover .ftl-th img{opacity:.8;transform:scale(1.04)}
+.ftl-bd{display:flex;align-items:center;gap:12px;padding:0 16px;margin-top:-26px;position:relative;z-index:3}
+.ftl-bd img,.ftl-bd .logo-ph{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 2px rgba(20,19,14,1),0 0 0 3px rgba(242,181,68,.55),0 0 22px rgba(242,181,68,.35)}
+.ftl-n{padding-top:22px;min-width:0}
+.ftl-n b{display:block;font-size:17px;font-weight:600;color:var(--amber);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ftl-n small{font-size:11.5px;color:var(--mute)}
+.ftl-w{padding:8px 16px 0;font-size:12.5px;color:var(--ink2);position:relative;z-index:3}
+.ftl-m{margin-top:auto;padding:12px 16px 14px;position:relative;z-index:3}
+.ftl-main{display:flex;align-items:center;gap:10px;font-size:12.5px}
+.ftl-main .pv{font-size:17px;font-weight:600;color:var(--ink)}
+.ftl-main .pv.st{font-size:13px;color:var(--amber);border:1px solid rgba(242,181,68,.45);background:var(--amber-dim);border-radius:999px;padding:2px 10px;font-weight:500}
+.ftl-main .spk{margin-left:auto;width:74px;height:22px}
+.spk path{fill:none;stroke-width:1.5}.spk path.u{stroke:var(--up)}.spk path.d{stroke:var(--down)}
+.ftl-sub{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-size:11.5px;color:var(--mute)}
+.ftl-sub .rf{color:#1a1408;background:var(--amber);border-radius:999px;padding:0 8px;font-weight:600;letter-spacing:.04em}
+@media (max-width:700px){.fz{padding:16px}.fzl-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -1262,7 +1301,7 @@ body.tg .eco-search{display:none}
     </section>
 
     <section data-blk="ecosystem">
-      <div class="sh"><h2>Whole ecosystem<span>by token status</span></h2></div>
+      <div class="sh"><h2>Whole ecosystem<span>friends first, then everything else we track</span></h2></div>
       <div class="habitats" id="habitats"></div>
     </section>
 
@@ -1623,11 +1662,35 @@ const HAB_GROUPS = [
   ['Tracked · Live token', p => !p.core && p.stage === 'post'],
   ['Tracked · Pre-TGE', p => !p.core && p.stage !== 'post'],
 ];
+// Friends: 하는 일별 줄(data.json lanes) + 크게·빛나게, 그 외 프로젝트는 작은 타일
+function sparkSVG(arr, up){
+  const v = (arr || []).filter(x => x != null); if (v.length < 3) return '';
+  const lo = Math.min(...v), hi = Math.max(...v), W = 74, H = 22, X = i => i / (v.length - 1) * W, Y = x => H - 2 - (x - lo) / (hi - lo || 1) * (H - 4);
+  return `<svg class="spk" viewBox="0 0 ${W} ${H}" aria-hidden="true"><path d="${v.map((x, i) => (i ? 'L' : 'M') + X(i).toFixed(1) + ' ' + Y(x).toFixed(1)).join('')}" class="${up ? 'u' : 'd'}"/></svg>`;
+}
+function friendTile(p, i){
+  const sh = (BOOT.shots || {})[p.name], oi = SNAP.fund && SNAP.fund.oi && SNAP.fund.oi.venues[p.name], r = refOf(p.name);
+  const main = p.ticker && p.price != null
+    ? `<span class="pv">${price(p.price)}</span>${pct(p.ch24)}${sparkSVG(p.spark, (p.ch7 || 0) >= 0)}`
+    : `<span class="pv st">${esc(p.status && p.status !== 'Pre-TGE' ? p.status : 'Pre-TGE')}</span>`;
+  const sub = oi && oi.total ? `OI ${usd(oi.total)}` : p.vol30 ? `30d vol ${usd(p.vol30)}` : p.tvl ? `TVL ${usd(p.tvl)}` : '';
+  return `<a class="ftl" href="${deepHref(p)}" style="--d:${(i * .7).toFixed(1)}s">
+    <div class="ftl-th">${sh ? `<img src="${esc(sh.file)}" alt="" loading="lazy">` : ''}</div>
+    <div class="ftl-bd">${logo(p)}<div class="ftl-n"><b>${esc(p.name)}</b><small>${esc(p.ticker ? '$' + p.ticker : '')}${p.ticker && p.home ? ' · ' : ''}${esc(p.home || '')}</small></div></div>
+    <p class="ftl-w">${esc((p.keywords || []).slice(0, 2).join(' · ') || p.what || '')}</p>
+    <div class="ftl-m"><div class="ftl-main">${main}</div>${sub || r ? `<div class="ftl-sub">${sub ? `<span>${sub}</span>` : ''}${r ? `<span class="rf">REF ${esc(r.code || 'link')}</span>` : ''}</div>` : ''}</div>
+  </a>`;
+}
 function renderHabitats(){
-  const groups = HAB_GROUPS.map(([h, f]) => [h, SNAP.projects.filter(f).sort((a,b) => a.name.localeCompare(b.name))]).filter(([, ps]) => ps.length);
-  $('habitats').innerHTML = groups.map(([h, ps]) => {
-    return `<div class="hab"><h3>${esc(h)}<span>${ps.length}</span></h3><div class="hg">${ps.map(p => `<a class="chipp${p.core ? ' fr' : ''}" href="${deepHref(p)}">${logo(p)}<span class="tx"><span class="n">${esc(p.name)}${p.ticker ? `<em>$${esc(p.ticker)}</em>` : ''}</span><span class="k">${esc((p.keywords || [])[0] || p.home || '')}</span></span>${p.ticker && p.ch24 != null ? `<span class="c">${pct(p.ch24)}</span>` : ''}</a>`).join('')}</div></div>`;
-  }).join('');
+  const fr = clients(), lanes = (BOOT.config.lanes || []).map(l => ({...l, ps:l.members.map(byName).filter(p => p && p.core)}));
+  const placed = new Set(lanes.flatMap(l => l.ps.map(p => p.name))), rest = fr.filter(p => !placed.has(p.name));
+  if (rest.length) lanes.push({title:'More friends', sub:'', ps:rest});
+  let k = 0;
+  const friendsHTML = `<div class="fz"><div class="fz-h"><h3>Friends<span>${fr.length}</span></h3><p>The projects we build with — grouped by what you can do on them.</p></div>
+    ${lanes.filter(l => l.ps.length).map(l => `<div class="fzl"><div class="fzl-h"><b>${esc(l.title)}</b>${l.sub ? `<span>${esc(l.sub)}</span>` : ''}</div><div class="fzl-g">${l.ps.map(p => friendTile(p, k++)).join('')}</div></div>`).join('')}</div>`;
+  const tracked = [['Tracked · Live token', p => !p.core && p.stage === 'post'], ['Tracked · Pre-TGE', p => !p.core && p.stage !== 'post']]
+    .map(([h, f]) => [h, SNAP.projects.filter(f).sort((a, b) => a.name.localeCompare(b.name))]).filter(([, ps]) => ps.length);
+  $('habitats').innerHTML = friendsHTML + tracked.map(([h, ps]) => `<div class="hab"><h3>${esc(h)}<span>${ps.length}</span></h3><div class="hg">${ps.map(p => `<a class="chipp" href="${deepHref(p)}">${logo(p)}<span class="tx"><span class="n">${esc(p.name)}${p.ticker ? `<em>$${esc(p.ticker)}</em>` : ''}</span><span class="k">${esc((p.keywords || [])[0] || p.home || '')}</span></span>${p.ticker && p.ch24 != null ? `<span class="c">${pct(p.ch24)}</span>` : ''}</a>`).join('')}</div></div>`).join('');
 }
 
 // ── 콘텐츠 ──
