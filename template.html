@@ -604,7 +604,7 @@ body.sharing .wrap,body.sharing .ticker,body.sharing .bgart{display:none}
 .cl .wt{font-size:12.5px;color:var(--ink2);line-height:1.45;min-height:36px}
 .cl .home{font-size:11px;color:var(--mute);margin-top:auto}
 
-/* 생태계 전체 (체인별) */
+/* 생태계 전체 (토큰 상태별) */
 .habitats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 32px}
 .hab h3{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);font-weight:500;padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:6px;display:flex;justify-content:space-between}
 .hab h3 span{color:var(--mute);letter-spacing:.04em}
@@ -1200,7 +1200,7 @@ body.intro #ticker{visibility:hidden}
     </section>
 
     <section data-blk="ecosystem">
-      <div class="sh"><h2>Whole ecosystem<span>by home chain</span></h2></div>
+      <div class="sh"><h2>Whole ecosystem<span>by token status</span></h2></div>
       <div class="habitats" id="habitats"></div>
     </section>
 
@@ -1551,15 +1551,19 @@ function renderClients(){
   $('clientsN').textContent = `${cs.length}`;
   $('clients').innerHTML = cs.map(p => `<a class="cl ${p.stage !== 'post' ? 'pre' : ''}" href="${deepHref(p)}">
     <div class="hd">${logo(p)}<div><div class="nm">${esc(p.name)}</div><div class="tk">${esc(tick(p))}</div></div></div>
-    <div class="wt">${esc(p.what)}</div>${kwHTML(p, true)}<div class="home">${esc(p.home)}${p.lineage ? ' · ' + esc(p.lineage) : ''}</div></a>`).join('');
+    <div class="wt">${esc(p.what)}</div>${kwHTML(p, true)}${p.lineage ? `<div class="home">${esc(p.lineage)}</div>` : ''}</a>`).join('');
 }
 
-// ── 생태계 전체: 체인별 ──
-const HOME_ORDER = ['Derive Chain','Paradex','Hyperliquid','Base','Arbitrum','Ethereum','Solana','Other'];
+// ── 생태계 전체: 토큰 상태별 ──
+const HAB_GROUPS = [
+  ['Friends · Live token', p => p.core && p.stage === 'post'],
+  ['Friends · Pre-TGE', p => p.core && p.stage !== 'post'],
+  ['Tracked · Live token', p => !p.core && p.stage === 'post'],
+  ['Tracked · Pre-TGE', p => !p.core && p.stage !== 'post'],
+];
 function renderHabitats(){
-  const homes = [...new Set([...HOME_ORDER, ...SNAP.projects.map(p => p.home)])].filter(h => SNAP.projects.some(p => p.home === h));
-  $('habitats').innerHTML = homes.map(h => {
-    const ps = SNAP.projects.filter(p => p.home === h).sort((a,b) => (b.core - a.core) || a.name.localeCompare(b.name));
+  const groups = HAB_GROUPS.map(([h, f]) => [h, SNAP.projects.filter(f).sort((a,b) => a.name.localeCompare(b.name))]).filter(([, ps]) => ps.length);
+  $('habitats').innerHTML = groups.map(([h, ps]) => {
     return `<div class="hab"><h3>${esc(h)}<span>${ps.length}</span></h3>${ps.map(p => `<a class="chipp" href="${deepHref(p)}">${logo(p)}<span class="n${p.core ? ' core' : ''}">${esc(p.name)}</span><span class="t">${esc(p.ticker ? '$' + p.ticker : '')}</span><span class="k">${esc((p.keywords || [])[0] || '')}</span></a>`).join('')}</div>`;
   }).join('');
 }
@@ -1612,11 +1616,11 @@ function deepCard(p){
   return `<a class="dc${p.core ? ' fr' : ''}${sh ? '' : ' ns'}" href="${deepHref(p)}">${sh ? `<div class="th"><img src="${esc(sh.file)}" alt="" loading="lazy"></div>` : ''}
     <div class="hd">${logo(p)}<div><b>${esc(p.name)}</b><small>${esc(p.ticker ? '$' + p.ticker : (p.status || 'Pre-TGE'))}</small></div>${p.ticker && p.ch24 != null ? `<span class="ch">${pct(p.ch24)}</span>` : ''}</div>
     ${p.core ? `<p>${esc(p.what || '')}</p>` : ''}
-    <div class="ft"><span>${esc(p.home || '')}</span>${has ? `<em>NOTES${d.updated ? ' · ' + new Date(d.updated).toLocaleDateString('en-US', {month:'short', day:'numeric'}) : ''}</em>` : ''}<i>→</i></div></a>`;
+    <div class="ft"><span></span>${has ? `<em>NOTES${d.updated ? ' · ' + new Date(d.updated).toLocaleDateString('en-US', {month:'short', day:'numeric'}) : ''}</em>` : ''}<i>→</i></div></a>`;
 }
 function renderDeepIndex(){
   const q = $('q').value.trim().toLowerCase();
-  const hit = p => !q || [p.name, p.ticker, p.home, p.what, ...(p.keywords || [])].join(' ').toLowerCase().includes(q);
+  const hit = p => !q || [p.name, p.ticker, p.what, ...(p.keywords || [])].join(' ').toLowerCase().includes(q);
   const cs = clients().filter(hit), os = others().filter(hit).sort((a,b) => a.name.localeCompare(b.name));
   $('dixF').innerHTML = cs.map(deepCard).join('') || '<p class="empty">No match.</p>';
   $('dixO').innerHTML = os.map(deepCard).join('') || '<p class="empty">No match.</p>';
@@ -1671,7 +1675,6 @@ function renderDeep(p){
     (p.llama || []).length && `<a href="https://defillama.com/protocol/${esc(p.llama[0].replace('parent#', ''))}" target="_blank" rel="noopener">DefiLlama</a>`,
     p.cg && `<a href="https://www.coingecko.com/en/coins/${esc(p.cg)}" target="_blank" rel="noopener">CoinGecko</a>`,
   ].filter(Boolean).join('');
-  const peers = all.filter(x => x.home === p.home && x !== p);
   const items = sortContent(CONTENT.filter(c => (c.projects || []).includes(p.name)));
   const blocks = [
     d.writeup && ['__WU__', fmtWriteup(d.writeup), 1],
@@ -1690,7 +1693,7 @@ function renderDeep(p){
         ${logo(p)}
       </div>
       <div>
-        <div class="dd-kicker"><span>Options ecosystem</span><span>${esc(p.home)}</span></div>
+        <div class="dd-kicker"><span>Options ecosystem</span></div>
         <h2 class="dd-name">${esc(p.name)}</h2>
         <div class="dd-tk">${p.ticker ? '$' + esc(p.ticker) : ''}<span class="st ${p.stage !== 'post' ? 'pre' : ''}">${p.stage === 'post' ? 'Listed' : esc(p.status || 'Pre-TGE')}</span></div>
         ${kwHTML(p)}
@@ -1712,8 +1715,6 @@ function renderDeep(p){
 
     <section style="margin-top:44px"><div class="sh"><h2 style="font-size:26px">Content<span>${items.length || ''}</span></h2></div>
       <div class="feed">${items.length ? items.map(contentCard).join('') : '<p class="empty">No content linked yet.</p>'}</div></section>
-
-    ${peers.length ? `<section style="margin-top:40px"><div class="sh"><h2 style="font-size:26px">Same chain<span>${esc(p.home)}</span></h2></div><div class="peers">${peers.map(x => `<a href="${deepHref(x)}">${logo(x)}${esc(x.name)}</a>`).join('')}</div></section>` : ''}
 
     <nav class="pager"><a href="${deepHref(prev)}">← ${esc(prev.name)}</a><a href="#/deep">ALL PROJECTS</a><a href="${deepHref(next)}">${esc(next.name)} →</a></nav>`;
 
@@ -2515,7 +2516,7 @@ function oracleCard(p, i, tag){
   const v = SNAP.fund && SNAP.fund.venues.find(x => x.name === p.name), n = v && v.notional;
   const ch = n && n.prev30 ? (n.d30 / n.prev30 - 1) * 100 : null;
   const links = [p.pointsUrl && `<a href="${esc(p.pointsUrl)}" target="_blank" rel="noopener" style="color:var(--amber)">POINTS ↗</a>`, p.site && `<a href="${esc(p.site)}" target="_blank" rel="noopener">APP ↗</a>`, p.x && `<a href="https://x.com/${esc(p.x)}" target="_blank" rel="noopener">X ↗</a>`, (p.llama || []).length && `<a href="${esc(llamaUrl(p) || '#')}" target="_blank" rel="noopener">DEFILLAMA ↗</a>`].filter(Boolean).join('');
-  return `<article class="oc"><div class="code"><span>ρ-${String(i + 1).padStart(2, '0')} · ${tag}</span><em>${esc(p.home || '')}</em></div>
+  return `<article class="oc"><div class="code"><span>ρ-${String(i + 1).padStart(2, '0')} · ${tag}</span></div>
     <div class="hd">${logo(p)}<div><div class="nm">${esc(p.name)}</div><span class="st">${esc(p.status || 'Pre-TGE')}</span></div></div>
     <div class="pts${p.points ? '' : ' none'}">${p.points ? esc(p.points) : 'No public points program yet'}</div>
     <div class="wt">${esc(p.what)}</div>

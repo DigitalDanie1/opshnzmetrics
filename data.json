@@ -2,11 +2,6 @@
   "headline": "This week: Hunch joins the Friends — plain-English options on Derive.",
   "relations": [
     {
-      "a": "Dream",
-      "b": "Derive",
-      "label": "Built on Derive Chain"
-    },
-    {
       "a": "Odette",
       "b": "Thetanuts",
       "label": "First V4 partner"
@@ -79,7 +74,7 @@
         },
         {
           "name": "Paradex",
-          "why": "Perpetual options that never expire, alongside perps"
+          "why": "Dated options alongside perps and spot"
         },
         {
           "name": "Aevo",
@@ -166,7 +161,6 @@
       "origin": "Lyra",
       "keywords": [
         "Options + perps orderbook",
-        "Own appchain",
         "Ex-Lyra",
         "#1 onchain options"
       ],
@@ -179,7 +173,7 @@
       "stage": "post",
       "core": true,
       "lineage": "Paradigm / Deribit",
-      "what": "Perpetual (no-expiry) options + perps on a Starknet appchain",
+      "what": "Options, perps & spot — dated options replaced its original perpetual options",
       "cg": "paradex",
       "llama": [
         "parent#paradex"
@@ -189,8 +183,7 @@
       "home": "Paradex",
       "origin": "Paradigm",
       "keywords": [
-        "Perpetual options",
-        "Starknet appchain",
+        "Dated options",
         "Paradigm-incubated",
         "Perps"
       ],
@@ -228,8 +221,7 @@
       "keywords": [
         "Altcoin options",
         "V4 RFQ",
-        "Option vaults",
-        "Base"
+        "Option vaults"
       ],
       "note": "",
       "deep": {
@@ -345,7 +337,7 @@
       "name": "Dream",
       "stage": "pre",
       "core": true,
-      "lineage": "Built on Derive Chain",
+      "lineage": "",
       "what": "Mobile trading app with BTC, ETH & HYPE options",
       "status": "Beta · points",
       "points": "Points on every trade, 2× on options",
@@ -355,13 +347,12 @@
       ],
       "site": "https://dreamos.app",
       "x": "dreaming",
-      "home": "Derive Chain",
+      "home": "Other",
       "origin": "",
       "keywords": [
         "Mobile app",
         "Points",
-        "HYPE options",
-        "Derive Chain"
+        "HYPE options"
       ],
       "note": "",
       "deep": {
@@ -397,8 +388,7 @@
       "keywords": [
         "Stock & ETF options",
         "24/7",
-        "Non-custodial",
-        "Base"
+        "Non-custodial"
       ],
       "note": "",
       "app": "https://callput.app"
@@ -446,7 +436,6 @@
       "logo": "logos/olive.jpg",
       "keywords": [
         "Options + perps + futures",
-        "Solana",
         "Points",
         "Season 1 airdrop"
       ],
@@ -494,8 +483,7 @@
       "keywords": [
         "Volatility index",
         "BVIV / EVIV",
-        "Vol perps",
-        "Hyperliquid"
+        "Vol perps"
       ],
       "note": "",
       "deep": {
@@ -564,8 +552,7 @@
       "keywords": [
         "Covered-call vaults",
         "Fixed yield",
-        "RFQ",
-        "Hyperliquid"
+        "RFQ"
       ],
       "note": "",
       "status": "Points · v12",
@@ -633,8 +620,7 @@
       "site": "https://deri.io",
       "x": "DeriProtocol",
       "keywords": [
-        "Risk exchange",
-        "Multichain"
+        "Risk exchange"
       ],
       "note": ""
     },
@@ -676,7 +662,6 @@
       "site": "",
       "x": "Katana_HQ",
       "keywords": [
-        "Solana",
         "Option vaults",
         "Automated strategies"
       ],
@@ -805,7 +790,6 @@
       "site": "",
       "x": "DualFinance",
       "keywords": [
-        "Solana",
         "Option incentives"
       ],
       "note": ""
@@ -868,7 +852,6 @@
       "site": "",
       "x": "CarmineOptions",
       "keywords": [
-        "Starknet",
         "Options AMM"
       ],
       "note": ""
@@ -952,7 +935,6 @@
       "site": "",
       "x": "oddz_finance",
       "keywords": [
-        "Multichain",
         "Early generation"
       ],
       "note": ""
@@ -973,8 +955,7 @@
       "site": "https://prodigy.fi",
       "x": "ProdigyFi",
       "keywords": [
-        "Real yield",
-        "Hyperliquid"
+        "Real yield"
       ],
       "note": "",
       "isNew": false
@@ -995,8 +976,7 @@
       "site": "",
       "x": "jaspervault",
       "keywords": [
-        "P2P options",
-        "Multichain"
+        "P2P options"
       ],
       "note": ""
     },
@@ -1081,8 +1061,7 @@
       "site": "",
       "x": "IthacaProtocol",
       "keywords": [
-        "Composable options",
-        "Arbitrum"
+        "Composable options"
       ],
       "note": ""
     },
@@ -1144,8 +1123,7 @@
       "site": "https://smilee.finance",
       "x": "SmileeFinance",
       "keywords": [
-        "Impermanent gain",
-        "Arbitrum"
+        "Impermanent gain"
       ],
       "note": ""
     },
@@ -1165,8 +1143,7 @@
       "site": "",
       "x": "stochastic_fin",
       "keywords": [
-        "Permissionless options",
-        "Base AMM"
+        "Permissionless options"
       ],
       "note": "",
       "isNew": false
