@@ -1,0 +1,562 @@
+{
+ "Derive": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [
+   {
+    "date": "2026-02",
+    "round": "Strategic (DRV tokens)",
+    "amount": null,
+    "lead": [
+     "Variant"
+    ],
+    "as": null,
+    "src": "https://insights.derive.xyz/variant-invests-in-derive-to-build-the-volatility-layer-onchain/",
+    "agg": false
+   }
+  ],
+  "vcs": [
+   "Variant",
+   "Framework Ventures",
+   "GSR"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "derive.xyz",
+    "url": "https://www.derive.xyz",
+    "agg": false
+   },
+   {
+    "label": "insights.derive.xyz",
+    "url": "https://insights.derive.xyz/variant-invests-in-derive-to-build-the-volatility-layer-onchain/",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Trusted by:"
+ },
+ "Paradex": {
+  "total": null,
+  "totalNote": "",
+  "incubator": "Paradigm",
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "Paradigm",
+   "Jump Capital",
+   "Dragonfly Capital",
+   "Digital Currency Group",
+   "Optiver",
+   "QCP Capital",
+   "Nexo",
+   "IMC",
+   "GSR",
+   "Akuna Capital",
+   "Vectr",
+   "Amber",
+   "CMT Digital",
+   "Avon Ventures"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "paradex.trade",
+    "url": "https://www.paradex.trade/",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Backed by The Best"
+ },
+ "Aevo": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "Paradigm",
+   "Coinbase",
+   "Dragonfly",
+   "Nascent",
+   "Scalar Capital",
+   "Ethereal Ventures",
+   "Robot Ventures",
+   "Alliance"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "aevo.xyz",
+    "url": "https://www.aevo.xyz/",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Backed By The Best Investors In The Space"
+ },
+ "GammaSwap": {
+  "total": 1700000,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [
+   {
+    "date": "2023-02",
+    "round": "Seed (private, 'strongly oversubscribed')",
+    "amount": 1700000,
+    "lead": [],
+    "as": null,
+    "src": "https://gammaswap.com/blog/gammaswap-closes-1-7m-seed-round-to-revolutionize-defi-impermanent-gains",
+    "agg": false
+   }
+  ],
+  "vcs": [
+   "Skycatcher Crypto",
+   "Space Whale Capital",
+   "Modular Capital",
+   "Portico Ventures",
+   "Ouroboros Capital",
+   "Owl Ventures",
+   "RenGen",
+   "Manifold Trading"
+  ],
+  "angels": [
+   {
+    "name": "coinflipcanada",
+    "note": "Core Team @ GMX."
+   },
+   {
+    "name": "quattro",
+    "note": "Core Team @ GMX. Advising on Tokenomics."
+   },
+   {
+    "name": "bizyugo",
+    "note": "2nd largest wallet on DeBank. 1st on Degen Score."
+   },
+   {
+    "name": "0x_d24",
+    "note": "Started in TradFi / Tech M&A. Now DeFi Native Investor."
+   },
+   {
+    "name": "Dan",
+    "note": "Co-Founder at Rysk. Prev Core Team at Opyn (Squeeth)"
+   },
+   {
+    "name": "Phil Huang",
+    "note": "Co-Founder of DeFi Conference. Managing Partner at Orchard Street Capital."
+   },
+   {
+    "name": "Vae Victis",
+    "note": "Crypto since 2013. DeFi Native Angel & Advisor."
+   }
+  ],
+  "reported": [],
+  "sources": [
+   {
+    "label": "gammaswap.com",
+    "url": "https://gammaswap.com/blog/gammaswap-closes-1-7m-seed-round-to-revolutionize-defi-impermanent-gains",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Investors & Partners"
+ },
+ "3Jane": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "Paradigm",
+   "Wintermute Ventures",
+   "Coinbase Ventures"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "3jane.xyz",
+    "url": "https://www.3jane.xyz/",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Backed By"
+ },
+ "Volmex": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "CMS Holdings",
+   "Robot Ventures",
+   "Avenir Group",
+   "D64 Ventures",
+   "IOSG Ventures",
+   "DeFi Technologies",
+   "4RC",
+   "Magnus Capital"
+  ],
+  "angels": [
+   {
+    "name": "Anatoly Yakovenko",
+    "note": "Solana Labs"
+   },
+   {
+    "name": "Sandeep Nailwal",
+    "note": "Polygon"
+   }
+  ],
+  "reported": [],
+  "sources": [
+   {
+    "label": "volmex.finance",
+    "url": "https://volmex.finance",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Backed by leading crypto investors"
+ },
+ "Rysk": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "Archetype",
+   "Lemniscap",
+   "Coinbase Ventures",
+   "Encode",
+   "Ascensive Assets",
+   "HASHCib",
+   "Yunt Capital",
+   "Manifold"
+  ],
+  "angels": [
+   {
+    "name": "Evan Van Ness",
+    "note": "early believers"
+   }
+  ],
+  "reported": [],
+  "sources": [
+   {
+    "label": "docs.rysk.finance",
+    "url": "https://docs.rysk.finance/why-rysk",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Why Rysk?"
+ },
+ "Panoptic": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "Uniswap",
+   "Coinbase Ventures",
+   "Jane Street",
+   "Greenfield Capital",
+   "HashKey Capital",
+   "Keyrock",
+   "Gumi Cryptos Capital",
+   "SevenX Ventures"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "panoptic.xyz",
+    "url": "https://panoptic.xyz",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Backed By (subtitle: Institutional conviction.)"
+ },
+ "Deri": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "FBG Capital",
+   "BIXIN Ventures",
+   "Lotus Capital",
+   "LD Capital",
+   "Kryptos Research",
+   "AKG Ventures",
+   "Binance Labs",
+   "GSR",
+   "WOO Network",
+   "QCP Capital",
+   "TRON",
+   "CryptoDormFund"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "deri.io",
+    "url": "https://deri.io/",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "BACKED BY"
+ },
+ "Opyn": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "Paradigm",
+   "Dragonfly",
+   "VersionOne",
+   "Uncorrelated",
+   "Robot Ventures",
+   "1kx",
+   "Coinbase",
+   "Coinfund",
+   "A Capital Partners"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "opyn.co",
+    "url": "https://www.opyn.co",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Backed by the best. Proud to be supported by the best investors in crypto."
+ },
+ "Typus": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "Mysten Labs",
+   "Assembly Partners",
+   "Hyperithm",
+   "Soft Holdings"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "typus.finance",
+    "url": "https://typus.finance",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "BACKED BY"
+ },
+ "Opium": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "HashKey Capital",
+   "Galaxy Digital",
+   "CMS",
+   "Rockaway Blockchain Fund",
+   "QSN",
+   "LAUNCHub Ventures",
+   "Alameda Research",
+   "FBG",
+   "Zee Prime Capital",
+   "SevenX Ventures",
+   "QCP Capital"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "opium.network",
+    "url": "https://opium.network",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Backed and contributed by"
+ },
+ "Oddz": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "TRGC",
+   "Woodstock",
+   "Krypital Group",
+   "AU21 Capital",
+   "NGC Ventures",
+   "GBV",
+   "x21",
+   "Exnetwork Capital",
+   "Altonomy",
+   "Ames"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "oddz.fi",
+    "url": "https://oddz.fi",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Backers"
+ },
+ "Ithaca": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "Wintermute",
+   "Cumberland",
+   "Room40 Ventures",
+   "Ghaf Capital Partners"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "ithacaprotocol.io",
+    "url": "https://www.ithacaprotocol.io/",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Investors"
+ },
+ "Antimatter": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [],
+  "angels": [
+   {
+    "name": "Tekin Salimi",
+    "note": ""
+   },
+   {
+    "name": "Justin Sun",
+    "note": ""
+   },
+   {
+    "name": "Brian Lee",
+    "note": ""
+   }
+  ],
+  "reported": [],
+  "sources": [
+   {
+    "label": "antimatter.finance",
+    "url": "https://antimatter.finance",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Backed by"
+ },
+ "Smilee": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "Dialectic",
+   "Synergis Capital",
+   "New Order",
+   "DeWhales Capital",
+   "Outlier Ventures",
+   "Concave",
+   "Owl Ventures",
+   "Yunt Capital",
+   "GTS Ventures",
+   "Multisig Ventures"
+  ],
+  "angels": [
+   {
+    "name": "0xSami",
+    "note": ""
+   },
+   {
+    "name": "Marc Zeller",
+    "note": ""
+   },
+   {
+    "name": "Barry Fried",
+    "note": ""
+   },
+   {
+    "name": "Slappjakke",
+    "note": ""
+   }
+  ],
+  "reported": [],
+  "sources": [
+   {
+    "label": "smilee.finance",
+    "url": "https://smilee.finance",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Backed By"
+ },
+ "Omen": {
+  "total": null,
+  "totalNote": "",
+  "incubator": null,
+  "summary": null,
+  "rounds": [],
+  "vcs": [
+   "Susa Ventures"
+  ],
+  "angels": [],
+  "reported": [],
+  "sources": [
+   {
+    "label": "omen.trade",
+    "url": "https://omen.trade",
+    "agg": false
+   }
+  ],
+  "level": "confirmed",
+  "heading": "Backed by"
+ }
+}
