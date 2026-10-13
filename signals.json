@@ -71,8 +71,15 @@
  {
   "d": "2026-10-13",
   "kind": "vol",
-  "text": "BVIV 38.9 (−1.9% 24h) — BTC implied vol easing",
+  "text": "BVIV 39.3 (−0.5% 24h) — BTC implied vol easing",
   "href": "#/deep/Volmex",
   "key": "BVIV"
+ },
+ {
+  "d": "2026-10-13",
+  "kind": "move",
+  "text": "$AEVO −8.3% in 24h",
+  "href": "#/deep/Aevo",
+  "key": "$AEVO"
  }
 ]
