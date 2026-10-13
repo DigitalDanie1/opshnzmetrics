@@ -173,7 +173,7 @@
       "stage": "post",
       "core": true,
       "lineage": "Paradigm / Deribit",
-      "what": "Options, perps & spot — dated options replaced its original perpetual options",
+      "what": "Options, Perps and Spot built on a quantum resistant ZKVM (Paradex Chain)",
       "cg": "paradex",
       "llama": [
         "parent#paradex"
@@ -184,6 +184,7 @@
       "origin": "Paradigm",
       "keywords": [
         "Dated options",
+        "Spot",
         "Paradigm-incubated",
         "Perps"
       ],
@@ -473,7 +474,7 @@
       "lineage": "",
       "origin": "",
       "home": "Hyperliquid",
-      "what": "Implied-volatility indices (BVIV, EVIV) — BVIV perps now trade on Hyperliquid",
+      "what": "Benchmark volatility indices — BVIV, the “VIX for Bitcoin” — now expanding into compute and prediction-market indices",
       "status": "Pre-TGE",
       "cg": "",
       "llama": [],
@@ -483,14 +484,17 @@
       "cumVolApi": "https://rest-v1.volmex.finance/public/total-volume",
       "keywords": [
         "Volatility index",
+        "VIX for Bitcoin",
         "BVIV / EVIV",
         "Vol perps"
       ],
       "note": "",
       "deep": {
-        "thesis": "",
+        "thesis": "The benchmark index company behind BVIV — the “VIX for Bitcoin”",
         "catalysts": [
-          "BVIV Index perpetual futures went live on Hyperliquid (Sep 29, 2026) — trade BTC 30-day implied vol directly"
+          "BVIV Index perpetual live on Hyperliquid HIP-3 (Sep 29, 2026) — trade BTC 30-day implied vol directly",
+          "BVIV integrated into Polymarket, Hyperliquid, Bloomberg Terminal, TradingView, Bybit, Raydium and Bitfinex",
+          "Expanding into compute indices and prediction-market indices"
         ],
         "risks": [],
         "timeline": [
@@ -498,9 +502,11 @@
             "date": "2026-09-29",
             "text": "BVIV perps live on Hyperliquid"
           }
-        ]
+        ],
+        "writeup": "Volmex is the premier benchmark index company that created the leading Bitcoin volatility index — **BVIV, known as the “VIX for Bitcoin”** — and is now expanding into compute indices, prediction-market indices and more.\n\n**Where BVIV is used:** Polymarket, Hyperliquid, Bloomberg Terminal, TradingView, Bybit, Raydium, Bitfinex and others.\n\n**Team:** from Staked (acquired by Kraken), IMC Trading, RBC and more.\n**Backers:** Anatoly Yakovenko (founder of Solana), Sandeep Nailwal (founder of Polygon), Robot Ventures and more.\n\n**How to use the BVIV perp on Hyperliquid (HIP-3)** — BVIV is 30-day BTC implied volatility:\n• Speculate on BTC implied volatility\n• Hedge or diversify spot BTC\n• Mean-reversion strategies\n• Arbitrage against other BVIV Index perpetuals or options\n\nTrade it: https://app.hyperliquid.xyz/trade/mkts:BVIV\nWebsite: https://volmex.finance",
+        "updated": "2026-10-13"
       },
-      "app": "https://volmex.finance"
+      "app": "https://app.hyperliquid.xyz/trade/mkts:BVIV"
     },
     {
       "ticker": "",
