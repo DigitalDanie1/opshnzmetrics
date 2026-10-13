@@ -1142,6 +1142,23 @@ body.intro #ticker{visibility:hidden}
 .dn-a .c{grid-area:c;font-size:10.5px;letter-spacing:.1em;color:#1a1408;background:var(--amber);border-radius:8px;padding:8px 12px}
 .it-foot{align-items:center}
 @media (max-width:640px){.tip .l{display:none}.dn-a{grid-template-columns:1fr auto}}
+/* ── Ecosystem 검색 ── */
+.eco-search{position:relative;display:flex;align-items:center;gap:10px;margin:22px 0 4px;padding:0 14px;height:52px;border:1px solid var(--line2);border-radius:14px;background:rgba(18,19,16,.9);color:var(--mute);transition:border-color .2s;z-index:6}
+.eco-search:focus-within{border-color:var(--amber);color:var(--amber)}
+.eco-search input{all:unset;flex:1;min-width:0;font-size:15px;color:var(--ink)}
+.eco-search input::placeholder{color:var(--mute)}
+.eco-search kbd{font-family:var(--mono);font-size:11px;color:var(--mute);border:1px solid var(--line2);border-radius:5px;padding:1px 7px}
+.eco-res{position:absolute;left:-1px;right:-1px;top:calc(100% + 6px);background:#121310;border:1px solid var(--line2);border-radius:14px;padding:6px;box-shadow:0 24px 60px -20px rgba(0,0,0,.9);max-height:min(460px,60vh);overflow:auto}
+.er{display:grid;grid-template-columns:34px minmax(150px,220px) 1fr auto;gap:12px;align-items:center;padding:9px 10px;border-radius:9px;color:var(--ink)}
+.er.on{background:rgba(242,181,68,.1);box-shadow:inset 2px 0 0 var(--amber)}
+.er img,.er .logo-ph{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.er .n b{display:block;font-size:14.5px;font-weight:600}
+.er .n small{font-size:11.5px;color:var(--amber)}
+.er .w{font-size:12.5px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.er .c{font-size:12px}
+.er-none{padding:12px;font-size:13px;color:var(--mute)}
+body.tg .eco-search{display:none}
+@media (max-width:700px){.er{grid-template-columns:30px 1fr auto}.er .w{display:none}.eco-search kbd{display:none}}
 </style>
 </head>
 <body>
@@ -1217,6 +1234,12 @@ body.intro #ticker{visibility:hidden}
   <p class="sub" id="sub" hidden></p>
 
   <main id="v-overview">
+    <div class="eco-search" role="search">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5.2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M11 11l3.6 3.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <input id="ecoQ" type="search" placeholder="Find a project — name, ticker, chain or keyword" autocomplete="off" spellcheck="false" aria-label="Find a project" aria-controls="ecoRes" aria-expanded="false">
+      <kbd>/</kbd>
+      <div class="eco-res" id="ecoRes" role="listbox" hidden></div>
+    </div>
     <p class="headline" id="headline"></p>
     <section data-blk="finder" class="finder">
       <div class="sh"><h2>What do you want to do?<span>pick a goal — we’ll point you to the right projects</span></h2></div>
@@ -2798,7 +2821,7 @@ function route(){
 }
 addEventListener('hashchange', route);
 // 키보드: / 로 검색
-addEventListener('keydown', e => { if (e.key === '/' && document.activeElement.tagName !== 'INPUT') { e.preventDefault(); if ($('v-deep').hidden || current) location.hash = '#/deep'; setTimeout(() => $('q').focus(), 0); } });
+addEventListener('keydown', e => { if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.body.dataset.view === 'overview') { e.preventDefault(); $('ecoQ').focus(); return; } if (e.key === '/' && document.activeElement.tagName !== 'INPUT') { e.preventDefault(); if ($('v-deep').hidden || current) location.hash = '#/deep'; setTimeout(() => $('q').focus(), 0); } });
 
 // 새로고침: 같은 collect() 로 지금 시세를 다시 받는다 (TVL·로고는 직전 것 유지)
 $('refresh').addEventListener('click', async e => {
@@ -2873,6 +2896,41 @@ document.addEventListener('click', async e => {
   try { await navigator.clipboard.writeText(b.dataset.addr); } catch { const t = document.createElement('textarea'); t.value = b.dataset.addr; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); }
   const c = b.querySelector('.c'); if (c) { c.textContent = 'COPIED ✓'; setTimeout(() => c.textContent = 'COPY', 1600); }
 }, true);
+// ════════════════ Ecosystem 검색: 이름·티커·체인·키워드로 바로 찾아 딥다이브로 ════════════════
+let ecoSel = 0, ecoHits = [];
+function ecoSearch(q){
+  q = q.trim().toLowerCase();
+  if (!q) return [];
+  const words = q.split(/\s+/);
+  return SNAP.projects.map(p => {
+    const name = p.name.toLowerCase(), tk = (p.ticker || '').toLowerCase(), hay = [p.name, p.ticker, p.home, p.what, p.status, p.lineage, ...(p.keywords || [])].join(' ').toLowerCase();
+    if (!words.every(w => hay.includes(w))) return null;
+    const score = (name === q || tk === q ? 100 : 0) + (name.startsWith(q) || tk.startsWith(q) ? 50 : 0) + (name.includes(q) ? 20 : 0) + (p.core ? 5 : 0) + Math.min(5, (p.vol30 || 0) / 1e8);
+    return {p, score};
+  }).filter(Boolean).sort((a, b) => b.score - a.score).slice(0, 8).map(x => x.p);
+}
+function renderEcoRes(){
+  const box = $('ecoRes'), q = $('ecoQ').value;
+  ecoHits = ecoSearch(q);
+  const open = !!q.trim();
+  box.hidden = !open; $('ecoQ').setAttribute('aria-expanded', open);
+  if (!open) return;
+  if (ecoSel >= ecoHits.length) ecoSel = 0;
+  box.innerHTML = ecoHits.length ? ecoHits.map((p, i) => `<a class="er${i === ecoSel ? ' on' : ''}" role="option" aria-selected="${i === ecoSel}" href="${deepHref(p)}" data-i="${i}">${logo(p)}
+      <span class="n"><b>${esc(p.name)}</b><small>${esc(p.ticker ? '$' + p.ticker : (p.status || 'Pre-TGE'))} · ${esc(p.home || '')}</small></span>
+      <span class="w">${esc(p.what || '')}</span>${p.ticker && p.ch24 != null ? `<span class="c">${pct(p.ch24)}</span>` : '<span class="c"></span>'}</a>`).join('')
+    : `<p class="er-none">No project matches “${esc(q.trim())}”.</p>`;
+}
+$('ecoQ').addEventListener('input', () => { ecoSel = 0; renderEcoRes(); });
+$('ecoQ').addEventListener('focus', renderEcoRes);
+$('ecoQ').addEventListener('keydown', e => {
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); if (!ecoHits.length) return; ecoSel = (ecoSel + (e.key === 'ArrowDown' ? 1 : -1) + ecoHits.length) % ecoHits.length; renderEcoRes(); }
+  else if (e.key === 'Enter') { e.preventDefault(); e.stopPropagation(); const p = ecoHits[ecoSel]; if (p) { $('ecoQ').value = ''; renderEcoRes(); location.hash = deepHref(p); } }
+  else if (e.key === 'Escape') { $('ecoQ').value = ''; renderEcoRes(); $('ecoQ').blur(); }
+});
+$('ecoRes').addEventListener('mousemove', e => { const a = e.target.closest('[data-i]'); if (a && +a.dataset.i !== ecoSel) { ecoSel = +a.dataset.i; $('ecoRes').querySelectorAll('.er').forEach((x, i) => { x.classList.toggle('on', i === ecoSel); x.setAttribute('aria-selected', i === ecoSel); }); } });
+$('ecoRes').addEventListener('click', () => { $('ecoQ').value = ''; setTimeout(renderEcoRes, 0); });
+document.addEventListener('click', e => { if (!e.target.closest('.eco-search') && !$('ecoRes').hidden) { $('ecoRes').hidden = true; $('ecoQ').setAttribute('aria-expanded', 'false'); } });
 function renderSubscribe(){
   const h = (BOOT.config.telegram || '').replace(/^@|^https?:\/\/t\.me\//, '');
   const top = $('subTop'); if (top) { top.hidden = !h; if (h) top.href = 'https://t.me/' + h; }
