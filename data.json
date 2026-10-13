@@ -18,7 +18,8 @@
     }
   ],
   "ignore": [
-    "parent#ribbon-finance"
+    "parent#ribbon-finance",
+    "volmex"
   ],
   "telegram": "",
   "goals": [
@@ -486,9 +487,7 @@
       "what": "Implied-volatility indices (BVIV, EVIV) — BVIV perps now trade on Hyperliquid",
       "status": "Pre-TGE",
       "cg": "",
-      "llama": [
-        "volmex"
-      ],
+      "llama": [],
       "site": "https://volmex.finance",
       "x": "volmexfinance",
       "logo": "logos/volmex.jpg",
