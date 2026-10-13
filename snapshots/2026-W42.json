@@ -953,7 +953,10 @@
    "prem30": null,
    "volSlugs": [],
    "tvl": null,
-   "since": null
+   "since": null,
+   "cumVolApi": "https://rest-v1.volmex.finance/public/total-volume",
+   "cumVol": 101796626.7372783,
+   "cumVolAt": "2026-10-13T02:51:56.777Z"
   },
   {
    "ticker": "",

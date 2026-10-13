@@ -480,6 +480,7 @@
       "site": "https://volmex.finance",
       "x": "volmexfinance",
       "logo": "logos/volmex.jpg",
+      "cumVolApi": "https://rest-v1.volmex.finance/public/total-volume",
       "keywords": [
         "Volatility index",
         "BVIV / EVIV",

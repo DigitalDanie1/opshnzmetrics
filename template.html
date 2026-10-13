@@ -1745,6 +1745,7 @@ function glanceHTML(p){
     p.ticker && p.price != null && ['Price', price(p.price), pct(p.ch24) + ' 24h', 'cg'],
     p.vol30 > 0 && ['30d options volume', usd(p.vol30), vr >= 0 ? `#${vr + 1} of ${ranked.length} onchain` : '', 'dl'],
     p.tvl > 0 && ['TVL', usd(p.tvl), '', 'dl'],
+    p.cumVol > 0 && ['Cumulative volume', usd(p.cumVol), 'all-time notional · Volmex API', 'api'],
     oi && oi.total > 0 && ['Open interest', usd(oi.total), Object.entries(oi.byU || {}).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([u]) => u).join(' · '), 'api'],
     dv >= 0 && ['BTC + ETH OI rank', `#${dv + 1} of ${V.length}`, 'all venues incl. CEX', 'dm'],
   ].filter(Boolean);
@@ -1759,10 +1760,11 @@ async function renderMarket(p){
   const box = $('mkt'); box.dataset.done = 1;
   const circ = p.mcap && p.fdv ? p.mcap/p.fdv*100 : null;
   const fromAth = p.price && p.ath ? (p.price/p.ath - 1)*100 : null;
+  const tvlCell = p.cumVol > 0 ? ['Cumulative volume', usd(p.cumVol), 'api'] : ['TVL', usd(p.tvl), 'dl'];
   const st = p.stage === 'post' ? [
     ['Price', price(p.price), 'cg'], ['24h', pct(p.ch24), 'cg'], ['7d', pct(p.ch7), 'cg'], ['30d', pct(p.ch30), 'cg'], ['From ATH', pct(fromAth), 'cg'],
-    ['Market cap', usd(p.mcap), 'cg'], ['FDV', usd(p.fdv), 'cg'], ['Circulating', circ == null ? '—' : circ.toFixed(0) + '%', 'cg'], ['30d options volume', usd(p.vol30), 'dl'], ['TVL', usd(p.tvl), 'dl'],
-  ] : [['30d options volume', usd(p.vol30), 'dl'], ['7d options volume', usd(p.vol7), 'dl'], ['30d premium', usd(p.prem30), 'dl'], ['TVL', usd(p.tvl), 'dl']];
+    ['Market cap', usd(p.mcap), 'cg'], ['FDV', usd(p.fdv), 'cg'], ['Circulating', circ == null ? '—' : circ.toFixed(0) + '%', 'cg'], ['30d options volume', usd(p.vol30), 'dl'], tvlCell,
+  ] : [['30d options volume', usd(p.vol30), 'dl'], ['7d options volume', usd(p.vol7), 'dl'], ['30d premium', usd(p.prem30), 'dl'], tvlCell];
   box.innerHTML = `<div class="srcline" style="margin:0 0 16px">${srcBadges((p.cg ? 'CoinGecko ' : '') + 'DefiLlama')}</div><div class="stats">${st.map(([k,v,src]) => `<div><div class="k">${k}<i class="srct ${src}">${src.toUpperCase()}</i></div><div class="v">${v}</div></div>`).join('')}</div>
     ${p.cg ? `<div class="chart" id="cPrice"><div class="hd"><h4>Price <a class="srct cg" href="${esc(cgUrl(p) || '#')}" target="_blank" rel="noopener">CoinGecko ↗</a></h4><div class="r" id="rng"><button data-d="30" aria-pressed="false">30D</button><button data-d="90" aria-pressed="true">90D</button><button data-d="365" aria-pressed="false">1Y</button></div></div><div class="msg">Loading…</div></div>` : ''}
     ${(p.volSlugs || []).length ? `<div class="chart" id="cVol"><div class="hd"><h4>Weekly options volume <a class="srct dl" href="${esc(llamaUrl(p) || 'https://defillama.com/options')}" target="_blank" rel="noopener">DefiLlama ↗</a></h4><span class="muted" style="font-size:11.5px">notional, summed across protocol versions</span></div><div class="msg">Loading…</div></div>` : ''}`;
@@ -2521,7 +2523,7 @@ function oracleCard(p, i, tag){
     <div class="pts${p.points ? '' : ' none'}">${p.points ? esc(p.points) : 'No public points program yet'}</div>
     <div class="wt">${esc(p.what)}</div>
     ${refBox(refOf(p.name))}
-    <div class="mx"><div>30d volume <i class="srct dl">DL</i><b>${usd(p.vol30)}</b></div><div>TVL <i class="srct dl">DL</i><b>${usd(p.tvl)}</b></div><div>vs prior 30d<b>${ch == null ? '—' : pct(ch)}</b></div></div>
+    <div class="mx"><div>30d volume <i class="srct dl">DL</i><b>${usd(p.vol30)}</b></div>${p.cumVol > 0 ? `<div>Cumulative vol <i class="srct api">API</i><b>${usd(p.cumVol)}</b></div>` : `<div>TVL <i class="srct dl">DL</i><b>${usd(p.tvl)}</b></div>`}<div>vs prior 30d<b>${ch == null ? '—' : pct(ch)}</b></div></div>
     <div class="lk">${links}<a class="dd" href="${deepHref(p)}">DEEP DIVE →</a></div></article>`;
 }
 // 추천 코드: refs.json (코드나 링크가 있는 것만 보인다)

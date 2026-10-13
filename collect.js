@@ -47,6 +47,9 @@ async function collect(data, now = new Date(), opts = {}) {
     getJSON(LLAMA_PREM),
     opts.prev ? Promise.resolve(null) : getJSON(LLAMA_PROTOCOLS),
   ]);
+  // 누적 명목 거래량(cumVolApi) — 프로젝트가 직접 공개하는 API. 동기 map 전에 병렬로 받아 둔다
+  const cumVolOf = {};
+  await Promise.all(data.projects.filter(p => p.cumVolApi).map(async p => { cumVolOf[p.name] = await getJSON(p.cumVolApi); }));
   const cg = cgParts.every(Boolean) ? cgParts.flat() : null;
   const byCg = Object.fromEntries((cg || []).map(c => [c.id, c]));
 
@@ -112,6 +115,8 @@ async function collect(data, now = new Date(), opts = {}) {
       prem30: prem ? (keys.map(k => premOf[k]).find(v => v != null) ?? null) : (prev.prem30 ?? null),
       volSlugs: vg.flatMap(g => g.members),
       tvl,
+      // 누적 거래량: s==='ok' 이고 유한한 숫자일 때만. 실패하면 직전 스냅샷 값을 이어받는다 (tvl 과 같은 방식)
+      ...(p.cumVolApi ? (() => { const j = cumVolOf[p.name], ok = j && j.s === 'ok' && Number.isFinite(j.data); return { cumVol: ok ? j.data : (prev.cumVol ?? null), cumVolAt: ok ? (j.updatedAt ?? null) : (prev.cumVolAt ?? null) }; })() : {}),
       // 처음 등장: data.json 의 since(YYYY-MM) 가 우선, 없으면 DefiLlama 등록일
       since: p.since || (() => { const t = keys.map(k => listedOf[k]).filter(Boolean); return t.length ? new Date(Math.min(...t) * 1000).toISOString().slice(0, 7) : (prev.since || null); })(),
     };
