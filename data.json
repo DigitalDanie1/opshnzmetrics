@@ -1140,35 +1140,7 @@
         "totalNote": "",
         "incubator": null,
         "summary": null,
-        "rounds": [
-          {
-            "date": "2021-03",
-            "round": "Seed",
-            "amount": null,
-            "lead": [],
-            "as": null,
-            "src": "https://www.cbinsights.com/company/volmex-finance/financials",
-            "agg": true
-          },
-          {
-            "date": "2022-01",
-            "round": "Private token sale",
-            "amount": 150000,
-            "lead": [],
-            "as": null,
-            "src": "https://alphagrowth.io/volmex/company",
-            "agg": true
-          },
-          {
-            "date": "2022-09",
-            "round": "Pre-seed",
-            "amount": null,
-            "lead": [],
-            "as": null,
-            "src": "https://alphagrowth.io/volmex/company",
-            "agg": true
-          }
-        ],
+        "rounds": [],
         "vcs": [
           "Robot Ventures",
           "CMS Holdings",
@@ -1177,10 +1149,7 @@
           "IOSG Ventures",
           "DeFi Technologies",
           "4RC",
-          "Magnus Capital",
-          "Orthogonal Trading",
-          "LedgerPrime",
-          "Alameda Research"
+          "Magnus Capital"
         ],
         "angels": [
           {
@@ -1200,24 +1169,9 @@
             "agg": false
           },
           {
-            "label": "Volmex",
+            "label": "volmex.finance",
             "url": "https://volmex.finance",
             "agg": false
-          },
-          {
-            "label": "The Block",
-            "url": "https://www.theblock.co/post/171294/alameda-backed-volmex-labs-launches-bitcoin-and-ether-volatility-indexes-exclusive",
-            "agg": false
-          },
-          {
-            "label": "AlphaGrowth",
-            "url": "https://alphagrowth.io/volmex/company",
-            "agg": true
-          },
-          {
-            "label": "CB Insights",
-            "url": "https://www.cbinsights.com/company/volmex-finance/financials",
-            "agg": true
           }
         ],
         "level": "confirmed"
