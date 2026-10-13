@@ -201,7 +201,7 @@
             "round": "Angel",
             "amount": null,
             "lead": [],
-            "as": "Lyra",
+            "as": null,
             "src": "https://www.chaincatcher.com/en/article/2142980",
             "agg": true
           },
@@ -212,7 +212,7 @@
             "lead": [
               "Variant"
             ],
-            "as": "Lyra",
+            "as": null,
             "src": "https://insights.derive.xyz/variant-invests-in-derive-to-build-the-volatility-layer-onchain/",
             "agg": false
           }
@@ -544,7 +544,7 @@
             "lead": [
               "Binance Labs"
             ],
-            "as": "Ribbon",
+            "as": null,
             "src": "https://www.coindesk.com/markets/2024/05/21/crypto-derivatives-dex-aevos-token-jumps-10-as-binance-labs-discloses-investment",
             "agg": false
           }
