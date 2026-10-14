@@ -81,5 +81,12 @@
   "text": "$AEVO −8.3% in 24h",
   "href": "#/deep/Aevo",
   "key": "$AEVO"
+ },
+ {
+  "d": "2026-10-14",
+  "kind": "vol",
+  "text": "BVIV 40.0 (+2.5% 24h) — BTC implied vol ticking up",
+  "href": "#/deep/Volmex",
+  "key": "BVIV"
  }
 ]
