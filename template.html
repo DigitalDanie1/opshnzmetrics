@@ -1223,6 +1223,107 @@ body.tg .eco-search{display:none}
 .ftl-sub{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-size:11.5px;color:var(--mute)}
 .ftl-sub .rf{color:#1a1408;background:var(--amber);border-radius:999px;padding:0 8px;font-weight:600;letter-spacing:.04em}
 @media (max-width:700px){.fz{padding:16px}.fzl-g{grid-template-columns:1fr}}
+/* ── Friends: trading card deck (.deck / .tcard) ── */
+.deck{display:flex;flex-direction:column;gap:34px;--cw:230px;--ov:12px}
+.deck-g{min-width:0}
+.deck-h{display:flex;align-items:baseline;gap:12px;margin-bottom:22px}
+.deck-h b{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);font-weight:700;white-space:nowrap}
+.deck-h span{font-size:12.5px;color:var(--mute);min-width:0}
+.deck-h i{flex:1;height:1px;background:linear-gradient(90deg,var(--line2),transparent);align-self:center;min-width:24px}
+.deck-h em{font-style:normal;font-size:11px;letter-spacing:.08em;color:var(--mute);white-space:nowrap}
+.deck-row{display:flex;flex-wrap:wrap;gap:40px 0;padding:14px 0 6px var(--ov);max-width:calc(var(--per,5)*(var(--cw) - var(--ov)) + var(--ov))}
+.tcard{--r:0deg;--y:0px;--foil:linear-gradient(135deg,#8a5a12,#f2b544 22%,#fff0b8 38%,#f2b544 52%,#a8701a 70%,#f7cf7a 88%,#8a5a12);--acc:#f2b544;--tint:rgba(242,181,68,.10);--f:0;
+  position:relative;flex:none;width:var(--cw);aspect-ratio:5/7;margin-left:calc(var(--ov)*-1);font-size:calc(var(--cw)/22);line-height:1.25;perspective:1100px;cursor:pointer;outline:none;
+  transform:translateY(var(--y)) rotate(var(--r));transform-origin:50% 100%;transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:1;-webkit-tap-highlight-color:transparent}
+.tcard.teal{--foil:linear-gradient(135deg,#0d4a45,#2fbfb0 25%,#aef3ea 40%,#2fbfb0 55%,#14756c 78%,#58d6c8);--acc:#4fd8c8;--tint:rgba(79,216,200,.09)}
+.tcard.silver{--foil:linear-gradient(135deg,#55585c,#c8ccd0 25%,#f4f6f8 40%,#b4b9be 58%,#6d7176 80%,#d8dce0);--acc:#c9cdd2;--tint:rgba(201,205,210,.07)}
+.tcard::after{content:"";position:absolute;left:0;right:0;top:100%;height:22px}
+.tcard:hover,.tcard:focus-within,.tcard.flip{z-index:10}
+.tcard:focus-visible{box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--amber);border-radius:14px}
+@media (hover:hover){.tcard:hover{transform:translateY(-14px) rotate(0deg) scale(1.04)}}
+.tcard:focus-visible,.tcard.flip,.tcard:focus-within{transform:translateY(-14px) rotate(0deg) scale(1.04)}
+.tc-in{position:absolute;inset:0;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;transition:transform .6s cubic-bezier(.3,.7,.2,1);transform:rotateY(calc(var(--f)*180deg))}
+.tcard.flip,.tcard:has(.tc-back :focus-visible){--f:1}
+@media (hover:hover){.tcard:hover{--f:1}}
+.tc-f{position:absolute;inset:0;border-radius:14px;padding:3px;background:var(--foil);backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;box-shadow:0 14px 26px -16px rgba(0,0,0,.9),0 2px 6px rgba(0,0,0,.6);transition:box-shadow .35s}
+.tcard:hover .tc-f,.tcard.flip .tc-f,.tcard:focus-visible .tc-f{box-shadow:0 26px 40px -18px rgba(0,0,0,.95),0 0 28px -6px var(--acc)}
+.tc-b{position:relative;height:100%;border-radius:11px;overflow:hidden;background:radial-gradient(120% 80% at 50% 0%,var(--tint),transparent 60%),linear-gradient(172deg,#1b1a14,#0d0d0a 70%);display:flex;flex-direction:column;padding:.8em .8em .7em;min-width:0}
+.tc-back{transform:rotateY(180deg);visibility:hidden;transition:visibility 0s .3s}
+.tcard.flip .tc-back,.tcard:has(.tc-back :focus-visible) .tc-back{visibility:visible;transition-delay:0s}
+@media (hover:hover){.tcard:hover .tc-back{visibility:visible;transition-delay:0s}}
+.tcard:not(:last-child) .tc-front .tc-b{padding-right:calc(var(--ov) + 1.5em)}
+@media (max-width:759px){.tcard:not(:last-child) .tc-front .tc-b{padding-right:.8em}}
+.tcard:not(:last-child) .tc-front .tc-top{padding-right:.8em}
+@media (max-width:759px){.tcard:not(:last-child) .tc-front .tc-top{padding-right:0}}
+.tc-top{display:flex;align-items:baseline;gap:.6em;justify-content:space-between;min-width:0}
+.tc-nm{font-size:1.28em;font-weight:800;text-transform:uppercase;letter-spacing:-.02em;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.tc-tk{font-size:1em;font-weight:700;color:var(--acc);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:48%;flex:none;letter-spacing:0}
+.tc-art{position:relative;margin-top:.6em;flex:1 1 0;min-height:0}
+.tc-win{position:absolute;inset:0;border-radius:6px;overflow:hidden;border:1px solid color-mix(in srgb,var(--acc) 55%,#000);box-shadow:inset 0 0 0 1px rgba(0,0,0,.6),inset 0 -26px 30px -18px rgba(0,0,0,.65);background:radial-gradient(70% 70% at 50% 45%,color-mix(in srgb,var(--acc) 22%,#14130f),#0b0b09)}
+.tc-win img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.tc-win .tc-big{position:absolute;left:50%;top:50%;width:5.6em;height:5.6em;transform:translate(-50%,-50%);border-radius:50%;object-fit:cover}
+.tc-rar{position:absolute;top:.5em;right:.5em;z-index:2;font-size:.78em;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#17120a;background:var(--foil);border-radius:999px;padding:.25em .8em;box-shadow:0 1px 4px rgba(0,0,0,.6)}
+.tc-badge{position:absolute;left:.7em;bottom:-1.9em;width:3.7em;height:3.7em;z-index:3;border-radius:50%;background:#0d0d0a;padding:.22em;box-shadow:0 0 0 .16em var(--acc),0 4px 10px rgba(0,0,0,.7)}
+.tc-badge img,.tc-badge .logo-ph{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;background:var(--panel2)}
+.tc-type{margin-top:.55em;padding-left:5.6em;height:2.6em;font-size:.82em;font-variant:small-caps;text-transform:lowercase;letter-spacing:.07em;color:var(--ink2);font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tc-stats{margin-top:.55em;border:1px solid var(--line2);border-radius:6px;background:rgba(0,0,0,.35);padding:.15em .7em}
+.tc-st{display:flex;justify-content:space-between;align-items:baseline;gap:.8em;padding:.38em 0;min-width:0}
+.tc-st+.tc-st{border-top:1px solid var(--line)}
+.tc-st small{font-size:.78em;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:600;white-space:nowrap}
+.tc-st b{font-size:1.08em;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;text-align:right}
+.tc-st b.dim{color:var(--mute);font-weight:500}
+.tc-st b .up,.tc-st b .down,.tc-st b .flat,.tc-st b .muted{font-size:.88em;margin-left:.45em;font-weight:600}
+.tc-ft{margin-top:.55em;display:flex;justify-content:space-between;font-size:.74em;letter-spacing:.1em;color:var(--mute);font-weight:600;text-transform:uppercase}
+.tc-sheen{position:absolute;inset:0;pointer-events:none;border-radius:11px;mix-blend-mode:color-dodge;opacity:.28;background:linear-gradient(112deg,transparent 18%,rgba(255,255,255,.55) 32%,rgba(255,196,110,.5) 42%,rgba(120,210,255,.45) 52%,rgba(255,120,210,.4) 60%,transparent 74%) 130% 0/260% 100% no-repeat}
+.tcard.gold .tc-sheen{animation:tcSheen 8s ease-in-out infinite}
+.tcard.gold:hover .tc-sheen{animation-duration:1.7s;opacity:.4}
+@keyframes tcSheen{from{background-position:130% 0}to{background-position:-40% 0}}
+/* back */
+.tc-back .tc-b{background:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='86' height='56'%3E%3Ctext x='4' y='34' font-family='Syne,Arial,sans-serif' font-weight='800' font-size='13' letter-spacing='3' fill='%23f2b544' fill-opacity='.075' transform='rotate(-24 40 28)'%3EOPSHNZ%3C/text%3E%3C/svg%3E"),
+  radial-gradient(120% 80% at 50% 0%,var(--tint),transparent 60%),linear-gradient(172deg,#17160f,#0b0b09 70%);gap:.55em;overflow-y:auto;scrollbar-width:none}
+.tc-back .tc-b::-webkit-scrollbar{display:none}
+.tc-bk-h{font-size:1.28em;font-weight:800;text-transform:uppercase;letter-spacing:-.02em;color:var(--acc);line-height:1.1}
+.tc-what{font-size:.98em;line-height:1.4;color:var(--ink2);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.tc-lab{font-size:.76em;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);font-weight:700;margin-bottom:.35em}
+.tc-chips{display:flex;flex-wrap:wrap;gap:.35em}
+.tc-chips span{font-size:.86em;color:var(--ink2);border:1px solid var(--line2);border-radius:999px;padding:.12em .65em;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis;background:rgba(0,0,0,.25)}
+.tc-chips.bkd span{border-color:color-mix(in srgb,var(--acc) 40%,transparent);color:var(--ink)}
+.tc-back .refw{font-size:.9em}
+.tc-back .ref{padding:.45em .55em;gap:.5em}
+.tc-back .ref b{font-size:1.15em}
+.tc-back .ref span,.tc-back .ref button,.tc-back .ref a{font-size:.78em}
+.tc-back .ref button,.tc-back .ref a{padding:.3em .6em}
+.tc-back .perk{font-size:.86em;padding:.45em .6em;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.tc-go{margin-top:auto;display:block;text-align:center;font-size:.92em;font-weight:800;letter-spacing:.14em;color:#17120a;background:var(--foil);border-radius:6px;padding:.6em 0;flex:none}
+.tc-go:hover{filter:brightness(1.12)}
+.tc-go:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media (max-width:759px){
+  .deck{--cw:min(72vw,300px);gap:26px}
+  .deck-h{flex-wrap:wrap;row-gap:2px}
+  .deck-h i{display:none}
+  .deck-h em{margin-left:auto}
+  .deck-h span{flex-basis:100%;order:3}
+  .deck-row{max-width:none;flex-wrap:nowrap;gap:14px;margin:0 -16px;padding:18px 16px 10px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding:0 16px;scrollbar-width:none}
+  .deck-row::-webkit-scrollbar{display:none}
+  .tcard{margin-left:0;--r:0deg!important;--y:0px!important;scroll-snap-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  .tcard{--r:0deg!important;--y:0px!important;transition:none;transform:none!important;perspective:none}
+  .tc-in{transform:none!important;transition:none}
+  .tc-f{transition:opacity .25s}
+  .tc-back{transform:none;visibility:visible!important;opacity:0}
+  .tc-front{opacity:1}
+  .tcard.flip .tc-back,.tcard:has(.tc-back :focus-visible) .tc-back{opacity:1}
+  .tcard.flip .tc-front,.tcard:has(.tc-back :focus-visible) .tc-front{opacity:0}
+  .tc-back{pointer-events:none}
+  .tcard.flip .tc-back,.tcard:has(.tc-back :focus-visible) .tc-back{pointer-events:auto}
+  .tc-sheen{display:none}
+}
+@media (prefers-reduced-motion:reduce) and (hover:hover){
+  .tcard:hover .tc-back{opacity:1;pointer-events:auto}
+  .tcard:hover .tc-front{opacity:0}
+}
 </style>
 </head>
 <body>
@@ -1318,7 +1419,7 @@ body.tg .eco-search{display:none}
 
     <section data-blk="friends">
       <div class="sh"><h2>Friends<span id="clientsN"></span></h2></div>
-      <div class="clients" id="clients"></div>
+      <div class="deck" id="clients"></div>
     </section>
 
     <section data-blk="ecosystem">
@@ -1675,14 +1776,71 @@ function loop(now){
   raf = requestAnimationFrame(loop);
 }
 
-// ── 고객사 카드 ──
+// ── Friends: trading card deck — lane별 부채꼴, 호버/탭하면 뒤집힘 ──
+const TC_ROT = [-3.5, 2.5, -2, 3.5, -3, 1.5, -1.5, 4];
+const tcRarity = p => p.stage === 'post' ? ['gold', 'Listed'] : p.points ? ['teal', 'Points'] : ['silver', 'Pre-TGE'];
+function tcCard(p, lane, num, total, gi){
+  const [rc, rl] = tcRarity(p), r = refOf(p.name);
+  const sh = (BOOT.shots || {})[p.name], oi = SNAP.fund && SNAP.fund.oi && SNAP.fund.oi.venues && SNAP.fund.oi.venues[p.name];
+  const rot = TC_ROT[gi % TC_ROT.length], pad = n => String(n).padStart(2, '0');
+  const third = p.ticker && p.price != null
+    ? `<small>$${esc(p.ticker)}</small><b>${price(p.price)}${pct(p.ch24)}</b>`
+    : p.points ? `<small>Points</small><b title="${esc(p.points)}">${esc(p.points)}</b>`
+    : p.status ? `<small>Status</small><b title="${esc(p.status)}">${esc(p.status)}</b>`
+    : `<small>Stage</small><b>Pre-TGE</b>`;
+  const num2 = v => v ? `<b>${usd(v)}</b>` : `<b class="dim">—</b>`;
+  const type = lane + (p.lineage ? ' · ' + p.lineage : '');
+  const bk = p.backers && p.backers.level !== 'none' ? (p.backers.vcs || []).slice(0, 4) : [];
+  const kws = (p.keywords || []).slice(0, 4);
+  return `<div class="tcard ${rc}" tabindex="0" role="group" aria-label="${esc(p.name)} card, ${esc(rl)}. Press Enter to flip." style="--r:${rot}deg;--y:${(Math.abs(rot) * 1.4).toFixed(1)}px">
+    <div class="tc-in">
+      <div class="tc-f tc-front"><div class="tc-b">
+        <div class="tc-top"><span class="tc-nm" title="${esc(p.name)}">${esc(p.name)}</span><span class="tc-tk">${esc(p.ticker ? '$' + p.ticker : p.status && p.status !== 'Pre-TGE' ? p.status : '')}</span></div>
+        <div class="tc-art"><div class="tc-win">${sh ? `<img src="${esc(sh.file)}" alt="" loading="lazy">` : `<span class="tc-big">${logo(p)}</span>`}</div><span class="tc-rar">${esc(rl)}</span><div class="tc-badge">${logo(p)}</div></div>
+        <div class="tc-type" title="${esc(type)}">${esc(type)}</div>
+        <div class="tc-stats">
+          <div class="tc-st"><small>Vol 30d</small>${num2(p.vol30)}</div>
+          <div class="tc-st"><small>Open int.</small>${num2(oi && oi.total)}</div>
+          <div class="tc-st">${third}</div>
+        </div>
+        <div class="tc-ft"><span>#${pad(num)} / ${pad(total)}</span><span>OPSHNZ · 2026</span></div>
+        <div class="tc-sheen"></div>
+      </div></div>
+      <div class="tc-f tc-back"><div class="tc-b">
+        <div class="tc-bk-h">${esc(p.name)}</div>
+        <p class="tc-what">${esc(p.what || '')}</p>
+        ${kws.length ? `<div class="tc-chips">${kws.map(k => `<span>${esc(k)}</span>`).join('')}</div>` : ''}
+        ${bk.length ? `<div><div class="tc-lab">Backed by</div><div class="tc-chips bkd">${bk.map(v => `<span>${esc(v)}</span>`).join('')}</div></div>` : ''}
+        ${refBox(r)}
+        <a class="tc-go" href="${esc(deepHref(p))}">DEEP DIVE →</a>
+        <div class="tc-sheen"></div>
+      </div></div>
+    </div></div>`;
+}
 function renderClients(){
   const cs = clients();
   $('clientsN').textContent = `${cs.length}`;
-  $('clients').innerHTML = cs.map(p => `<a class="cl ${p.stage !== 'post' ? 'pre' : ''}" href="${deepHref(p)}">
-    <div class="hd">${logo(p)}<div><div class="nm">${esc(p.name)}</div><div class="tk">${esc(tick(p))}</div></div></div>
-    <div class="wt">${esc(p.what)}</div>${kwHTML(p, true)}${p.lineage ? `<div class="home">${esc(p.lineage)}</div>` : ''}</a>`).join('');
+  const lanes = (BOOT.config.lanes || []).map(l => ({...l, ps: (l.members || []).map(byName).filter(p => p && p.core)}));
+  const placed = new Set(lanes.flatMap(l => l.ps.map(p => p.name))), rest = cs.filter(p => !placed.has(p.name));
+  if (rest.length) lanes.push({title: 'More friends', sub: '', ps: rest});
+  const groups = lanes.filter(l => l.ps.length), total = groups.reduce((a, l) => a + l.ps.length, 0);
+  let n = 0;
+  $('clients').innerHTML = groups.map(l => `<div class="deck-g"><div class="deck-h"><b>${esc(l.title)}</b>${l.sub ? `<span>${esc(l.sub)}</span>` : ''}<i></i><em>${l.ps.length} ${l.ps.length === 1 ? 'card' : 'cards'}</em></div>
+    <div class="deck-row" style="--per:${Math.ceil(l.ps.length / Math.ceil(l.ps.length / 5))}">${l.ps.map((p, gi) => tcCard(p, l.title, ++n, total, gi)).join('')}</div></div>`).join('');
 }
+(() => {
+  const root = $('clients'); if (!root || root.dataset.tc) return; root.dataset.tc = '1';
+  const hov = () => matchMedia('(hover:hover)').matches;
+  const toggle = c => { const on = !c.classList.contains('flip'); root.querySelectorAll('.tcard.flip').forEach(x => x.classList.remove('flip')); c.classList.toggle('flip', on); };
+  root.addEventListener('click', e => { if (e.target.closest('a,button') || hov()) return; const c = e.target.closest('.tcard'); if (c) toggle(c); });
+  root.addEventListener('keydown', e => {
+    const c = e.target.closest('.tcard'); if (!c) return;
+    if (e.target === c && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); toggle(c); }
+    else if (e.key === 'Escape' && c.classList.contains('flip')) { c.classList.remove('flip'); c.focus(); }
+  });
+  root.addEventListener('focusout', e => { const c = e.target.closest('.tcard'); if (c && !c.contains(e.relatedTarget)) c.classList.remove('flip'); });
+  document.addEventListener('click', e => { if (!e.target.closest('.tcard')) root.querySelectorAll('.tcard.flip').forEach(x => x.classList.remove('flip')); });
+})();
 
 // ── 생태계 전체: 토큰 상태별 ──
 const HAB_GROUPS = [
