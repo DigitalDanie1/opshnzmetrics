@@ -260,6 +260,14 @@ body.tg #orrery *{animation:none!important}
 .fgrid{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-top:12px}
 .card h3{font-size:16px;font-weight:600;letter-spacing:-.01em}
 .card h3 small{display:block;font-size:12px;font-weight:400;color:var(--mute);margin-top:3px}
+.soonb{display:inline-block;vertical-align:2px;margin-left:8px;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.12em;color:#1a1408;background:var(--amber);border-radius:999px;padding:2px 8px}
+.card.soon .soon-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0 12px}
+.card.soon .soon-g>div{border:1px dashed var(--line2);border-radius:10px;padding:12px}
+.card.soon .soon-g b{display:block;font-size:13px;color:var(--amber);margin-bottom:4px}
+.card.soon .soon-g p{font-size:12.5px;color:var(--ink2);line-height:1.5;margin:0}
+.card.soon .soon-t{opacity:.45}
+@media (max-width:760px){.card.soon .soon-g{grid-template-columns:1fr}}
+.subnav .pgrow{display:none}
 .legend2{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:11.5px;color:var(--ink2)}
 .legend2 span{display:inline-flex;align-items:center;gap:6px}
 .legend2 i{width:9px;height:9px;border-radius:2px;display:inline-block}
@@ -423,6 +431,13 @@ body.tg .crumbbar{margin:-40px -40px 0;padding:22px 40px 0}
   .subnav a.sb:hover{color:var(--ink)}
   .subnav a.sb:last-of-type{margin-bottom:10px}
   .subnav a.sb[aria-current=true]{background:rgba(242,181,68,.1);color:var(--amber);border-left-color:var(--amber);font-weight:600}
+  .subnav .pgrow{display:flex;align-items:center;border-top:1px solid var(--line)}
+  .subnav .pgrow:first-child{border-top:0}
+  .subnav .pgrow .pg{flex:1;border-top:0}
+  .subnav .pgf{background:none;border:0;color:var(--amber);font-size:17px;line-height:1;cursor:pointer;padding:8px 10px;transition:transform .2s}
+  .subnav .pgf:hover{color:var(--ink)}
+  .subnav.folded .pgf{transform:rotate(-90deg)}
+  .subnav.folded a.sb{display:none}
 }
 .fgrid.solo{grid-template-columns:1fr}
 body.tg .subnav{display:none}
@@ -1343,6 +1358,14 @@ body.tg .eco-search{display:none}
       <div class="card" data-blk="trades"><h3>Largest trades · 24h<small>Paradex options fills, by notional</small></h3><div id="ltBody"></div><div class="cf" id="ltF"></div></div>
     </div>
     <div class="card" style="margin-top:12px" data-blk="venues"><h3 id="fdTableT"></h3><div class="tbl-x"><table class="vt" id="fdTable"></table></div><div class="cf" id="fdTableF"></div></div>
+    <div class="card soon" style="margin-top:12px" data-blk="comps"><h3>Derive comps <span class="soonb">COMING SOON</span><small>Every venue measured against Derive — are the fundamentals and the token keeping up?</small></h3>
+      <div class="soon-g">
+        <div><b>Fundamentals vs Derive</b><p>30d volume, premium, open interest and TVL as a multiple of Derive (Derive = 1.00×).</p></div>
+        <div><b>Valuation vs $DRV</b><p>FDV ÷ 30d volume and FDV ÷ annualised premium — who is cheap or rich for the business they actually do.</p></div>
+        <div><b>Token vs fundamentals</b><p>Token price and 7d / 30d move against $DRV, next to the change in each venue’s share of onchain volume.</p></div>
+      </div>
+      <div class="tbl-x"><table class="vt soon-t"><thead><tr><th>Project</th><th>Volume ×</th><th>OI ×</th><th>Premium ×</th><th>FDV / 30d vol</th><th>30d vs $DRV</th></tr></thead><tbody><tr><td>Derive</td><td>1.00×</td><td>1.00×</td><td>1.00×</td><td>—</td><td>—</td></tr><tr><td>Paradex</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr><tr><td>Aevo</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr></tbody></table></div>
+    </div>
   </main>
 
   <main id="v-race" hidden>
@@ -2288,18 +2311,23 @@ $('fdKind').addEventListener('click', e => { const b = e.target.closest('button'
 // ── 큰 정보별 탭 ──
 const SUBS = {
   overview:[['finder','Start here'],['planets','Planet map'],['friends','Friends'],['ecosystem','Whole ecosystem'],['live','Live points'],['pretge','Pre-TGE friends'],['codes','My ref codes'],['watch','Watchlist'],['content','Content'],['log','Weekly log']],
-  fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['cex','Onchain vs CEX'],['underlying','By underlying'],['trades','Largest trades'],['venues','Venues'],['track','Race'],['standings','Standings']],
+  fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['cex','Onchain vs CEX'],['underlying','By underlying'],['trades','Largest trades'],['venues','Venues'],['track','Race'],['standings','Standings'],['comps','Derive comps']],
   strategy:[['now','Market now'],['log','Sentiment log'],['plays','Today’s plays'],['macro','Macro playbook']],
 };
 const PAGES = [['strategy','01 Sentiment & Strategy'],['fundamentals','02 Option Fundamental'],['overview','03 Ecosystem Overview'],['deep','04 Deep Dive'],['new','05 New Projects'],['guide','06 Strategy Guide']];
 const VIEWS = {overview:['v-overview','v-oracle'], fundamentals:['v-fund','v-race'], strategy:['v-strat'], deep:['v-deep'], new:['v-new'], guide:['v-guide']};
+let SUBFOLD = (() => { try { return localStorage.getItem('opshnz-subfold') === '1'; } catch { return false; } })();
 function renderSubnav(page, sub){
   const nav = $('subnav'); if (!nav) return;
   // 딥다이브는 Friends 하나하나가 탭
   const items = page === 'deep' ? clients().map(p => [encodeURIComponent(p.name), p.name]) : (SUBS[page] || []);
   nav.hidden = page === 'home';
-  nav.innerHTML = PAGES.map(([pg, label]) => `<a class="pg${pg === page ? ' on' : ''}" href="#/${pg}">${label}</a>` +
+  nav.innerHTML = PAGES.map(([pg, label]) => (pg === page && items.length ? `<div class="pgrow"><a class="pg on" href="#/${pg}">${label}</a><button class="pgf" type="button" aria-expanded="${!SUBFOLD}" title="Collapse / expand">⌄</button></div>` : `<a class="pg${pg === page ? ' on' : ''}" href="#/${pg}">${label}</a>`) +
     (pg === page && items.length ? [['all', pg === 'deep' ? 'All projects' : 'All'], ...items].map(([k, l], i) => `<a class="sb" href="#/${pg}${k === 'all' ? '' : '/' + k}" aria-current="${(sub || 'all') === k}">${pg === 'deep' && k !== 'all' && byName(l) ? `<span class="lg">${logo(byName(l))}</span>` : `<span class="k">${String(i).padStart(2,'0')}</span>`}${esc(l)}</a>`).join('') : '')).join('');
+  // 왼쪽 목록 접기/펴기 (이 브라우저에만 기억)
+  nav.classList.toggle('folded', SUBFOLD);
+  const fb = nav.querySelector('.pgf');
+  if (fb) fb.onclick = e => { e.preventDefault(); SUBFOLD = !SUBFOLD; try { localStorage.setItem('opshnz-subfold', SUBFOLD ? '1' : ''); } catch {} nav.classList.toggle('folded', SUBFOLD); fb.setAttribute('aria-expanded', String(!SUBFOLD)); };
   // 페이지에 속한 화면만 켜고, 고른 덩어리만 보이기 (덩어리가 하나도 없는 화면은 통째로 숨김)
   const pick = !!sub && sub !== 'all' && page !== 'deep';
   for (const [pg, ids] of Object.entries(VIEWS)) for (const id of ids) {
