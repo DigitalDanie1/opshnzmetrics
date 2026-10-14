@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" width="28" height="28">
+  <!-- The mark from the sidebar: five stacked bars, teal through orange.
+       Drawn on the app's own near-black so it keeps its shape in a browser tab
+       against either a light or a dark tab strip. -->
+  <rect width="28" height="28" rx="6" fill="#0a0a0c"/>
+  <rect x="4" y="3.5" width="20" height="2.6" rx="1.3" fill="#14b8a6"/>
+  <rect x="1" y="8.5" width="26" height="2.6" rx="1.3" fill="#3b82f6"/>
+  <rect x="8" y="13.5" width="15" height="2.6" rx="1.3" fill="#3b82f6"/>
+  <rect x="2" y="18.5" width="23" height="2.6" rx="1.3" fill="#d946ef"/>
+  <rect x="10" y="23.5" width="12" height="2.6" rx="1.3" fill="#f97316"/>
+</svg>

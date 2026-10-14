@@ -2143,6 +2143,190 @@
         "totalNote": "",
         "incubator": null
       }
+    },
+    {
+      "ticker": "",
+      "name": "Tacticalls",
+      "stage": "pre",
+      "core": false,
+      "lineage": "Powered by Derive",
+      "origin": "",
+      "home": "Other",
+      "what": "Social options app — follow real traders, copy their bets, or place your own in three taps; live crypto options on Derive",
+      "status": "Live",
+      "cg": "",
+      "llama": [],
+      "site": "https://tacticalls.xyz",
+      "x": "tacticallsXYZ",
+      "logo": "logos/tacticalls.svg",
+      "keywords": [
+        "Social trading",
+        "Copy bets",
+        "No options jargon"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "",
+        "catalysts": [],
+        "risks": [],
+        "timeline": []
+      },
+      "app": "https://tacticalls.xyz",
+      "since": "2026-10",
+      "isNew": true,
+      "backers": {
+        "level": "none",
+        "summary": null,
+        "rounds": [],
+        "vcs": [],
+        "angels": [],
+        "reported": [],
+        "sources": [],
+        "total": null,
+        "totalNote": "",
+        "incubator": null
+      }
+    },
+    {
+      "ticker": "",
+      "name": "Heat",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Onchain derivatives terminal — pick direction, target and date for options strategies, plus a social feed and copy trading",
+      "status": "Live",
+      "cg": "",
+      "llama": [],
+      "site": "https://www.useheat.xyz",
+      "x": "",
+      "logo": "logos/heat.svg",
+      "keywords": [
+        "Options terminal",
+        "Strategies",
+        "Copy trading",
+        "RFQ"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "",
+        "catalysts": [],
+        "risks": [],
+        "timeline": []
+      },
+      "app": "https://www.useheat.xyz",
+      "since": "2026-10",
+      "isNew": true,
+      "backers": {
+        "level": "none",
+        "summary": null,
+        "rounds": [],
+        "vcs": [],
+        "angels": [],
+        "reported": [],
+        "sources": [],
+        "total": null,
+        "totalNote": "",
+        "incubator": null
+      }
+    },
+    {
+      "ticker": "",
+      "name": "HARDCORE",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Automated tail-risk options vault — buys far out-of-the-money strangles and holds them for extreme moves, up or down",
+      "status": "Launches Nov 11, 2026",
+      "cg": "",
+      "llama": [],
+      "site": "https://hardcore.finance",
+      "x": "JoinHARDCORE",
+      "logo": "logos/hardcore.png",
+      "keywords": [
+        "Tail-risk vault",
+        "Long strangles",
+        "RFQ",
+        "$HARD"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "",
+        "catalysts": [
+          "Vault launch Nov 11, 2026",
+          "$HARD token: 80% of protocol fees go to buybacks"
+        ],
+        "risks": [
+          "Premium decays in flat markets — the vault loses when no extreme move comes"
+        ],
+        "timeline": [
+          {
+            "date": "2026-11-11",
+            "text": "HARDCORE Vault launch (scheduled, 14:00 UTC)"
+          }
+        ]
+      },
+      "app": "https://hardcore.finance",
+      "since": "2026-10",
+      "isNew": true,
+      "backers": {
+        "level": "none",
+        "summary": null,
+        "rounds": [],
+        "vcs": [],
+        "angels": [],
+        "reported": [],
+        "sources": [],
+        "total": null,
+        "totalNote": "",
+        "incubator": null
+      }
+    },
+    {
+      "ticker": "",
+      "name": "Optivi",
+      "stage": "pre",
+      "core": false,
+      "lineage": "Powered by Derive",
+      "origin": "",
+      "home": "Other",
+      "what": "Options made simple — a perp-DEX-style interface on Derive for BTC, ETH, SOL, HYPE and more, self-custodial and settled onchain",
+      "status": "Private beta",
+      "cg": "",
+      "llama": [],
+      "site": "https://optivi.xyz",
+      "x": "optivixyz",
+      "logo": "logos/optivi.png",
+      "keywords": [
+        "Options UI",
+        "Perp-style",
+        "Self-custody"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "",
+        "catalysts": [],
+        "risks": [],
+        "timeline": []
+      },
+      "app": "https://optivi.xyz",
+      "since": "2026-10",
+      "isNew": true,
+      "backers": {
+        "level": "none",
+        "summary": null,
+        "rounds": [],
+        "vcs": [],
+        "angels": [],
+        "reported": [],
+        "sources": [],
+        "total": null,
+        "totalNote": "",
+        "incubator": null
+      }
     }
   ]
 }
