@@ -1223,66 +1223,6 @@ body.tg .eco-search{display:none}
 .ftl-sub{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-size:11.5px;color:var(--mute)}
 .ftl-sub .rf{color:#1a1408;background:var(--amber);border-radius:999px;padding:0 8px;font-weight:600;letter-spacing:.04em}
 @media (max-width:700px){.fz{padding:16px}.fzl-g{grid-template-columns:1fr}}
-/* ── Friends: "Me and my bros" (.bros) ── */
-.bros{--ink:#111;background:#f4f1ea;color:var(--ink);border-radius:18px;padding:44px 48px 36px;position:relative}
-.bros-h{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:56px;line-height:.95;letter-spacing:-.035em;color:#111}
-.bros-sub{margin-top:10px;font-family:"Syne",system-ui,sans-serif;font-size:13px;color:#555;letter-spacing:.02em}
-.bros-sub .bt{display:none}
-@media (hover:none){.bros-sub .bh{display:none}.bros-sub .bt{display:inline}}
-.bros-photo{isolation:isolate;margin-top:8px}
-.bros-row{display:flex;justify-content:center;align-items:flex-end}
-.bros-row.bf{margin-top:4px;transform:translateX(var(--sh,0px))}
-.bro{position:relative;display:block;flex:none;width:120px;margin:0 -9px;--s:1;--t:0deg;color:#111;text-align:center;transform:scale(var(--s));transform-origin:50% 100%;transition:transform .25s cubic-bezier(.2,.8,.2,1);outline:none;-webkit-tap-highlight-color:transparent}
-.bros-row.bb .bro{--s:.84}
-.bro-in{display:block;animation:broBob 3s ease-in-out infinite;animation-delay:calc(var(--i)*-.37s)}
-@keyframes broBob{50%{transform:translateY(-2px)}}
-.bro-hd{position:relative;z-index:2;display:block;width:64px;height:64px;margin:0 auto -10px;border-radius:50%;border:3px solid #111;background:#fff;overflow:hidden;transform:rotate(var(--t));transform-origin:50% 100%;box-shadow:0 2px 0 rgba(0,0,0,.12)}
-.bro-hd img,.bro-hd .logo-ph{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;background:#e6e2d8}
-.bro-hd .bro-i{display:grid;place-items:center;width:100%;height:100%;font:800 26px "Helvetica Neue",Arial,sans-serif;color:#111}
-.bro-svg{display:block;width:120px;height:250px;position:relative;z-index:1}
-.bro-cap{display:block;margin-top:-2px;font-family:"Syne",system-ui,sans-serif;font-size:12px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#111;white-space:nowrap;position:relative;z-index:3;text-shadow:0 0 3px #f4f1ea,0 0 3px #f4f1ea,0 0 6px #f4f1ea}
-.bro-bub{position:absolute;z-index:5;left:50%;bottom:calc(100% - 2px);width:220px;padding:10px 12px 11px;background:#fff;border:2px solid #111;border-radius:14px;text-align:left;pointer-events:none;opacity:0;visibility:hidden;--bx:-50%;transform:translateX(var(--bx)) translateY(8px) scale(.88);transform-origin:50% 100%;transition:opacity .15s,transform .2s cubic-bezier(.2,.9,.3,1.3),visibility 0s .2s;font-family:"Syne",system-ui,sans-serif;text-transform:none;letter-spacing:0;box-shadow:3px 3px 0 #111}
-.bro-bub::after{content:"";position:absolute;left:calc(50% - 8px);bottom:-9px;width:14px;height:14px;background:#fff;border:solid #111;border-width:0 2px 2px 0;transform:rotate(45deg) skew(8deg,8deg)}
-.bro-bub b{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:800;text-transform:uppercase;line-height:1.2;color:#111}
-.bro-bub b i{font-style:normal;color:#8a6a1c;font-weight:700;white-space:nowrap}
-.bro-bub em{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-style:normal;font-size:12px;line-height:1.35;color:#333;margin-top:4px;white-space:normal}
-.bro-bub .bs{display:block;margin-top:6px;font:600 11px ui-monospace,SFMono-Regular,Menlo,monospace;color:#111;letter-spacing:0;white-space:normal}
-.bro-bub u{display:block;margin-top:6px;text-decoration:none;font-size:11.5px;font-weight:800;color:#111;text-align:right}
-.bros-row .bro:first-child .bro-bub{left:-6px;--bx:0px}
-.bros-row .bro:first-child .bro-bub::after{left:62px}
-.bros-row .bro:last-child .bro-bub{left:auto;right:-6px;--bx:0px}
-.bros-row .bro:last-child .bro-bub::after{left:auto;right:62px}
-.bros-row .bro:only-child .bro-bub{left:50%;right:auto;--bx:-50%}
-.bros-row .bro:only-child .bro-bub::after{left:calc(50% - 8px);right:auto}
-@media (min-width:760px){
-  .bro:focus-visible{z-index:40;transform:translateY(-10px) scale(calc(var(--s)*1.06))}
-  .bro:focus-visible .bro-bub{opacity:1;visibility:visible;transform:translateX(var(--bx));transition-delay:0s}
-  .bro:focus-visible .bro-cap{text-decoration:underline;text-underline-offset:3px}
-}
-@media (min-width:760px) and (hover:hover){
-  .bro:hover{z-index:40;transform:translateY(-10px) scale(calc(var(--s)*1.06))}
-  .bro:hover .bro-bub{opacity:1;visibility:visible;transform:translateX(var(--bx));transition-delay:0s}
-  .bro:hover .bro-cap{text-decoration:underline;text-underline-offset:3px}
-}
-.bros-leg{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 18px;margin-top:30px;padding-top:16px;border-top:1px dashed rgba(0,0,0,.25);font-family:"Syne",system-ui,sans-serif;font-size:12px;color:#555}
-.bros-leg>span:first-child{font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#111}
-.bros-leg i{display:inline-block;width:9px;height:15px;margin-right:6px;vertical-align:-3px;background:var(--c);clip-path:polygon(25% 0,75% 0,60% 22%,100% 85%,50% 100%,0 85%,40% 22%);border:0}
-.bros-leg span.k{white-space:nowrap}
-@media (max-width:759px){
-  .bros{padding:26px 16px 24px}
-  .bros-h{font-size:34px}
-  .bros-photo{margin:0 -16px 0;padding:0 16px 6px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding:0 16px;scrollbar-width:none}
-  .bros-photo::-webkit-scrollbar{display:none}
-  .bros-row{justify-content:flex-start;width:max-content}
-  .bro{--s:.9;margin:0 -6px;scroll-snap-align:center}
-  .bro-bub{display:none}
-  .bros-leg{margin-top:18px}
-}
-@media (prefers-reduced-motion:reduce){
-  .bro-in{animation:none}
-  .bro,.bro:hover,.bro:focus-visible{transition:none;transform:scale(var(--s))}
-  .bro-bub{transform:translateX(var(--bx));transition:opacity .15s}
-}
 </style>
 </head>
 <body>
@@ -1378,7 +1318,7 @@ body.tg .eco-search{display:none}
 
     <section data-blk="friends">
       <div class="sh"><h2>Friends<span id="clientsN"></span></h2></div>
-      <div class="bros" id="clients"></div>
+      <div class="clients" id="clients"></div>
     </section>
 
     <section data-blk="ecosystem">
@@ -1735,61 +1675,14 @@ function loop(now){
   raf = requestAnimationFrame(loop);
 }
 
-// ── Friends: "Me and my bros" — 로고가 머리인 검정 슈트 크루 ──
-const BRO_TIE = {trade:'#f2b544', earn:'#2fbf9b', bets:'#ff5fa2', vol:'#8b7bff'}, BRO_OTHER = '#111';
-const BRO_POSE = [0, 1, 2, 1, 0, 2, 1, 0, 2], BRO_TILT = [-8, 5, -3, 8, -6, 2, 7, -4];
-function broSVG(pose, tie){
-  const sk = '#d8b08c', ln = '#2c2c2c';
-  const torso = `<path d="M28 18 Q60 7 92 18 L98 68 L96 122 Q60 129 24 122 L22 68 Z" fill="#111" stroke="${ln}"/>`;
-  const front = `<path d="M46 11 L56 14 L51 25 Z M74 11 L64 14 L69 25 Z" fill="#ececec"/><path d="M47 12 L60 54 L73 12 L66 9 L54 9 Z" fill="#fff" stroke="#d6d6d6" stroke-width=".8"/>
-    <path d="M44 11 L60 62 L47 88 M76 11 L60 62 L73 88" fill="none" stroke="#3a3a3a" stroke-width="1.6" stroke-linecap="round"/><path d="M60 62 L60 123 M32 101 H46 M74 101 H88" stroke="#333" stroke-width="1.2" fill="none"/><circle cx="57.5" cy="94" r="1.8" fill="#333"/>
-    <path d="M70 47 L80 47 L79 53 L71 53 Z" fill="#fff"/>
-    <path d="M56.5 16 L63.5 16 L62.5 25 L57.5 25 Z M57.5 25 L62.5 25 L65.5 68 L60 77 L54.5 68 Z" fill="${tie}" stroke="#555" stroke-width=".7" stroke-linejoin="round"/>`;
-  const neck = `<rect x="53" y="-2" width="14" height="18" rx="5" fill="${sk}"/>`;
-  let body;
-  if (pose === 2) {
-    body = `<g fill="#151515" stroke="${ln}" stroke-linejoin="round"><polygon points="36,112 58,112 56,222 33,222"/><polygon points="62,112 84,112 87,222 64,222"/></g>
-      <path d="M47 130 L45 216 M73 130 L75 216" stroke="#333" fill="none"/><g fill="#050505" stroke="#333"><rect x="28" y="219" width="32" height="14" rx="7"/><rect x="61" y="219" width="32" height="14" rx="7"/></g>
-      ${neck}${torso}<g fill="#111" stroke="${ln}" stroke-linejoin="round"><polygon points="27,19 41,22 37,62 50,100 38,112 13,66"/><polygon points="93,19 79,22 83,62 70,100 82,112 107,66"/></g>${front}`;
-  } else {
-    body = `<g transform="${pose === 1 ? 'translate(120 0) scale(-1 1)' : ''}"><g fill="#151515" stroke="${ln}" stroke-linejoin="round"><polygon points="63,112 86,112 91,211 69,211"/><polygon points="34,112 58,112 55,225 31,225"/></g>
-      <path d="M47 130 L44 220 M75 130 L80 206" stroke="#333" fill="none"/><g fill="#050505" stroke="#333"><rect x="68" y="208" width="29" height="12" rx="6"/><rect x="25" y="222" width="33" height="14" rx="7"/></g><path d="M31 227 H50 M73 212 H90" stroke="#555" stroke-width="1.2" stroke-linecap="round"/>
-      ${neck}${torso}<g fill="#111" stroke="${ln}" stroke-linejoin="round"><path d="M27 19 L41 22 L35 112 L19 110 Z"/><path d="M93 19 L79 22 L85 112 L101 110 Z"/></g>
-      <path d="M19.6 106 L35.4 108 L35 112 L19 110 Z M100.4 106 L84.6 108 L85 112 L101 110 Z" fill="#fff"/><ellipse cx="27" cy="120" rx="6.5" ry="8.5" fill="${sk}" stroke="#a98763" stroke-width=".6"/><ellipse cx="93" cy="120" rx="6.5" ry="8.5" fill="${sk}" stroke="#a98763" stroke-width=".6"/>${front}</g>`;
-  }
-  return `<svg class="bro-svg" viewBox="0 0 120 250" aria-hidden="true"><ellipse cx="60" cy="238" rx="40" ry="6" fill="rgba(0,0,0,.18)"/>${body}</svg>`;
-}
-function broHTML(p, i, lane){
-  const oi = SNAP.fund && SNAP.fund.oi && SNAP.fund.oi.venues && SNAP.fund.oi.venues[p.name];
-  const st = [p.vol30 ? `VOL 30D ${usd(p.vol30)}` : '', oi && oi.total ? `OI ${usd(oi.total)}` : ''].filter(Boolean).join(' · ');
-  const head = p.logo ? logo(p) : `<span class="bro-i">${esc((p.name || '?').trim().charAt(0).toUpperCase())}</span>`;
-  const tag = p.ticker ? '$' + p.ticker : p.status || 'Pre-TGE';
-  return `<a class="bro" href="${esc(deepHref(p))}" aria-label="${esc(p.name)} — deep dive" style="--i:${i};--t:${BRO_TILT[i % BRO_TILT.length]}deg">
-    <span class="bro-in"><span class="bro-hd">${head}</span>${broSVG(BRO_POSE[i % BRO_POSE.length], lane.color)}<span class="bro-cap">${esc(p.name)}</span></span>
-    <span class="bro-bub"><b><span>${esc(p.name)}</span><i>${esc(tag)}</i></b><em>${esc(p.what || '')}</em>${st ? `<span class="bs">${esc(st)}</span>` : ''}<u>deep dive →</u></span></a>`;
-}
-let broSig = '';
+// ── 고객사 카드 ──
 function renderClients(){
   const cs = clients();
   $('clientsN').textContent = `${cs.length}`;
-  const lanes = (BOOT.config.lanes || []).map(l => ({...l, color: BRO_TIE[l.id] || BRO_OTHER, ps: (l.members || []).map(byName).filter(p => p && p.core)}));
-  const placed = new Set(lanes.flatMap(l => l.ps.map(p => p.name))), rest = cs.filter(p => !placed.has(p.name));
-  if (rest.length) lanes.push({title: 'More friends', color: BRO_OTHER, ps: rest});
-  const crew = lanes.flatMap(l => l.ps.map(p => [p, l]));
-  const mobile = matchMedia('(max-width:759px)').matches;
-  const perRow = mobile ? crew.length : Math.max(3, Math.floor((Math.min(innerWidth, 1240) - 56 - 96 - 20) / 102));
-  const sig = [mobile, perRow, crew.length].join();
-  if (sig === broSig && $('clients').firstChild) return; broSig = sig;
-  let photos = '';
-  if (mobile) photos = `<div class="bros-photo"><div class="bros-row">${crew.map(([p, l], i) => broHTML(p, i, l)).join('')}</div></div>`;
-  else for (let s = 0; s < crew.length; s += perRow * 2) {
-    const ch = crew.slice(s, s + perRow * 2).map((x, j) => [...x, s + j]), bk = ch.filter((_, j) => j % 2 === 0), fr = ch.filter((_, j) => j % 2);
-    photos += `<div class="bros-photo"><div class="bros-row bb">${bk.map(([p, l, i]) => broHTML(p, i, l)).join('')}</div><div class="bros-row bf" style="--sh:${bk.length === fr.length ? 51 : 0}px">${fr.map(([p, l, i]) => broHTML(p, i, l)).join('')}</div></div>`;
-  }
-  $('clients').innerHTML = `<div class="bros-h">Me and my bros</div><div class="bros-sub">OPSHNZ friends · <span class="bh">hover</span><span class="bt">tap</span> a bro</div>${photos}
-    <div class="bros-leg"><span>Tie colour = what they do</span>${lanes.filter(l => l.ps.length).map(l => `<span class="k"><i style="--c:${l.color}"></i>${esc(l.title)}</span>`).join('')}</div>`;
+  $('clients').innerHTML = cs.map(p => `<a class="cl ${p.stage !== 'post' ? 'pre' : ''}" href="${deepHref(p)}">
+    <div class="hd">${logo(p)}<div><div class="nm">${esc(p.name)}</div><div class="tk">${esc(tick(p))}</div></div></div>
+    <div class="wt">${esc(p.what)}</div>${kwHTML(p, true)}${p.lineage ? `<div class="home">${esc(p.lineage)}</div>` : ''}</a>`).join('');
 }
-addEventListener('resize', () => { clearTimeout(renderClients.t); renderClients.t = setTimeout(renderClients, 120); });
 
 // ── 생태계 전체: 토큰 상태별 ──
 const HAB_GROUPS = [
