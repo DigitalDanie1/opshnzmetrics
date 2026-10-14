@@ -2342,6 +2342,64 @@
         "totalNote": "",
         "incubator": null
       }
+    },
+    {
+      "ticker": "",
+      "name": "Split Markets",
+      "stage": "pre",
+      "core": false,
+      "lineage": "Routes to Paradex & Derive",
+      "origin": "",
+      "home": "Other",
+      "what": "One onchain trading desk — Up/Down options, custom BTC options with Paradex RFQ, perps, funding arbitrage and vaults across venues",
+      "status": "Live",
+      "cg": "",
+      "llama": [],
+      "site": "https://split.markets",
+      "x": "splitmarkets",
+      "logo": "logos/split-markets.png",
+      "keywords": [
+        "Up/Down options",
+        "Options + perps",
+        "Funding arb",
+        "AI Co-Pilot"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "",
+        "catalysts": [
+          "Compose: build BTC options trades and get competitive quotes from multiple market makers via Paradex RFQ",
+          "Up/Down — short-horizon UP or DOWN from one ticket",
+          "Funding arbitrage, automated execution and vaults across Hyperliquid, Lighter, Variational, dYdX and more",
+          "Trade replays for options traders"
+        ],
+        "risks": [],
+        "timeline": [
+          {
+            "date": "2026-10-13",
+            "text": "Compose with Paradex RFQ execution"
+          },
+          {
+            "date": "2026-10-10",
+            "text": "New look and new website"
+          }
+        ]
+      },
+      "app": "https://split.markets/updown",
+      "isNew": true,
+      "since": "2026-10",
+      "backers": {
+        "level": "none",
+        "summary": null,
+        "rounds": [],
+        "vcs": [],
+        "angels": [],
+        "reported": [],
+        "sources": [],
+        "total": null,
+        "totalNote": "",
+        "incubator": null
+      }
     }
   ]
 }

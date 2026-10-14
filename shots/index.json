@@ -208,5 +208,12 @@
     "at": "2026-10-14T07:00:02.906Z",
     "kb": 81,
     "hid": 0
+  },
+  "Split Markets": {
+    "file": "shots/split-markets.jpg",
+    "url": "https://split.markets/updown",
+    "at": "2026-10-14T07:04:23.224Z",
+    "kb": 100,
+    "hid": 0
   }
 }
