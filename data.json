@@ -2170,7 +2170,12 @@
       "note": "",
       "deep": {
         "thesis": "",
-        "catalysts": [],
+        "catalysts": [
+          "Bets in three taps: Quick flip, This week or Moonshot",
+          "Follow real traders and copy their bets from the live feed and leaderboard",
+          "Expert, Terminal, Strategy and AI-trading views for advanced users",
+          "BTC, ETH, SOL, XRP, HYPE and more markets"
+        ],
         "risks": [],
         "timeline": []
       },
@@ -2195,7 +2200,7 @@
       "name": "Heat",
       "stage": "pre",
       "core": true,
-      "lineage": "",
+      "lineage": "Powered by Derive",
       "origin": "",
       "home": "Other",
       "what": "Onchain derivatives terminal — pick direction, target and date for options strategies, plus a social feed and copy trading",
@@ -2214,7 +2219,11 @@
       "note": "",
       "deep": {
         "thesis": "",
-        "catalysts": [],
+        "catalysts": [
+          "Simple mode: pick Up, Down or Volatile, a target price and a date",
+          "Custom mode for multi-leg strategies, priced by RFQ",
+          "Leaderboard, live feed and chats — see and copy what other traders bet"
+        ],
         "risks": [],
         "timeline": []
       },
@@ -2311,7 +2320,10 @@
       "note": "",
       "deep": {
         "thesis": "",
-        "catalysts": [],
+        "catalysts": [
+          "Private beta — request access on optivi.xyz",
+          "Self-custodial, settles through Derive; max loss is the premium paid"
+        ],
         "risks": [],
         "timeline": []
       },

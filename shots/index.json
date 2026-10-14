@@ -180,5 +180,33 @@
     "at": "2026-10-13T07:41:44.325Z",
     "kb": 80,
     "hid": 0
+  },
+  "Heat": {
+    "file": "shots/heat.jpg",
+    "url": "https://www.useheat.xyz",
+    "at": "2026-10-14T06:59:48.526Z",
+    "kb": 114,
+    "hid": 0
+  },
+  "Tacticalls": {
+    "file": "shots/tacticalls.jpg",
+    "url": "https://tacticalls.xyz",
+    "at": "2026-10-14T06:59:48.538Z",
+    "kb": 96,
+    "hid": 0
+  },
+  "HARDCORE": {
+    "file": "shots/hardcore.jpg",
+    "url": "https://hardcore.finance",
+    "at": "2026-10-14T06:59:48.540Z",
+    "kb": 121,
+    "hid": 0
+  },
+  "Optivi": {
+    "file": "shots/optivi.jpg",
+    "url": "https://optivi.xyz",
+    "at": "2026-10-14T07:00:02.906Z",
+    "kb": 81,
+    "hid": 0
   }
 }
