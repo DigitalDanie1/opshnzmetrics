@@ -421,7 +421,9 @@ body.tg .crumbbar{margin:-40px -40px 0;padding:22px 40px 0}
 .subnav a.sb .lg{display:inline-flex;vertical-align:-3px;margin-right:7px}
 .subnav a.sb .lg img,.subnav a.sb .lg .logo-ph{width:16px;height:16px;border-radius:50%;object-fit:cover;display:block;background:var(--panel2)}
 @media (min-width:1640px){
-  .subnav{position:fixed;left:max(16px,calc((100vw - 1240px)/2 - 268px));top:120px;width:236px;flex-direction:column;gap:2px;margin:0;z-index:4}
+  .subnav{position:fixed;left:max(16px,calc((100vw - 1240px)/2 - 268px));top:120px;width:236px;flex-direction:column;gap:2px;margin:0;z-index:4;flex-wrap:nowrap;max-height:calc(100vh - 140px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(242,181,68,.35) transparent;padding-right:4px}
+  .subnav::-webkit-scrollbar{width:6px}
+  .subnav::-webkit-scrollbar-thumb{background:rgba(242,181,68,.35);border-radius:3px}
   .subnav .pg{display:block;font-family:var(--mono);font-size:13.5px;font-weight:600;letter-spacing:.06em;color:var(--ink2);padding:12px 10px;text-transform:uppercase;border-top:1px solid var(--line)}
   .subnav .pg:first-child{border-top:0}
   .subnav .pg.on{padding-bottom:8px}
