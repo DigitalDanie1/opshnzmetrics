@@ -110,7 +110,8 @@
         "Aevo",
         "Hypercall",
         "Olive",
-        "Joyride"
+        "Joyride",
+        "Heat"
       ]
     },
     {
@@ -130,7 +131,8 @@
       "members": [
         "Dream",
         "Hunch",
-        "CallPut"
+        "CallPut",
+        "Tacticalls"
       ]
     },
     {
@@ -139,7 +141,8 @@
       "sub": "Vol indices & perpetual options",
       "members": [
         "Volmex",
-        "GammaSwap"
+        "GammaSwap",
+        "HARDCORE"
       ]
     }
   ],
@@ -2148,7 +2151,7 @@
       "ticker": "",
       "name": "Tacticalls",
       "stage": "pre",
-      "core": false,
+      "core": true,
       "lineage": "Powered by Derive",
       "origin": "",
       "home": "Other",
@@ -2191,7 +2194,7 @@
       "ticker": "",
       "name": "Heat",
       "stage": "pre",
-      "core": false,
+      "core": true,
       "lineage": "",
       "origin": "",
       "home": "Other",
@@ -2235,7 +2238,7 @@
       "ticker": "",
       "name": "HARDCORE",
       "stage": "pre",
-      "core": false,
+      "core": true,
       "lineage": "",
       "origin": "",
       "home": "Other",
