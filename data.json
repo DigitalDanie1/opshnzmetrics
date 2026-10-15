@@ -158,7 +158,8 @@
         "risk": "Maximum expiry loss: net premium paid. Maximum expiry gain: strike gap minus premium.",
         "example": "Illustration only: spot 100; buy 100 put / sell 95 put for a net 2. Expiry break-even 98; max loss 2; max gain 3.",
         "source": "https://prd-web.optionseducation.org/strategies/all-strategies/bear-put-spread",
-        "if": "Hot CPI or a hawkish Fed"
+        "if": "Hot CPI or a hawkish Fed",
+        "kind": "bear"
       },
       {
         "then": "Bull call spread · trade a confirmed breakout",
@@ -169,7 +170,8 @@
         "risk": "Maximum expiry loss: net premium paid. Maximum expiry gain: strike gap minus premium.",
         "example": "Illustration only: spot 100; buy 100 call / sell 105 call for a net 2. Expiry break-even 102; max loss 2; max gain 3.",
         "source": "https://www.optionseducation.org/videolibrary/debit-and-credit-verticals",
-        "if": "Soft data or a dovish Fed — and price confirms"
+        "if": "Soft data or a dovish Fed — and price confirms",
+        "kind": "bull"
       },
       {
         "then": "Iron condor · sell a range with capped risk",
@@ -180,7 +182,8 @@
         "risk": "Maximum expiry gain: credit received. Maximum expiry loss: wider wing gap minus credit.",
         "example": "Illustration only: buy 90 put / sell 95 put / sell 105 call / buy 110 call for a net 1 credit. Expiry break-evens 94 and 106; max loss 4; max gain 1.",
         "source": "https://www.optionseducation.org/strategies/all-strategies/short-condor",
-        "if": "Event passes; price stays inside its range"
+        "if": "Event passes; price stays inside its range",
+        "kind": "condor"
       },
       {
         "then": "Long straddle · buy movement only if fairly priced",
@@ -191,7 +194,8 @@
         "risk": "Maximum expiry loss: total premium paid. Upside gain is uncapped; downside gain is capped by the underlying reaching zero.",
         "example": "Illustration only: strike 100; pay 3 for the call + 3 for the put. Expiry break-evens 94 and 106; max loss 6. Earlier profit depends on volatility and time remaining.",
         "source": "https://prd-web.optionseducation.org/strategies/all-strategies/long-straddle",
-        "if": "More large moves expected; direction unclear"
+        "if": "More large moves expected; direction unclear",
+        "kind": "straddle"
       }
     ],
     "macroNow": {

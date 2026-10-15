@@ -1534,6 +1534,39 @@ b,strong,th{font-weight:600}
 .tp-last{fill:var(--ink);font-size:11px;font-family:var(--sans)}
 .tp-n{font-size:11px;color:var(--mute)}
 @media (max-width:980px){.mn-g{grid-template-columns:minmax(0,1fr)}}
+/* 시나리오 실시간 */
+.sc-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font-size:12.5px;color:var(--ink2);margin:0 0 12px;padding:10px 14px;border:1px solid var(--line2);border-radius:12px;background:rgba(10,11,9,.6)}
+.sc-bar b{color:var(--ink);font-weight:600}
+.sc-dot{width:8px;height:8px;border-radius:50%;background:var(--up);box-shadow:0 0 0 3px rgba(114,220,143,.15)}
+.sc-dot.off{background:var(--mute);box-shadow:none}
+.sc-evs{display:flex;flex-wrap:wrap;gap:6px;margin-left:auto}
+.sc-evs span{font-size:11px;padding:3px 9px;border:1px solid var(--line2);border-radius:999px;color:var(--ink2)}
+.sc-evs span.hot{color:var(--down);border-color:rgba(255,128,119,.4)}
+.sc-evs span.soft{color:var(--up);border-color:rgba(114,220,143,.4)}
+.sc-evs span.nx{color:var(--ink);border-color:var(--ink2)}
+.sc-st{display:block;margin-top:12px}
+.sc-st i{display:inline-block;font-style:normal;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid var(--line2);color:var(--mute)}
+.sc-st i.go{background:var(--amber);border-color:var(--amber);color:#1a1408;font-weight:600}
+.sc-st i.wait{color:var(--ink);border-color:var(--ink2)}
+.scen article[data-st=go]{border-color:rgba(242,181,68,.55)}
+.scen article[data-st=off]{opacity:.62}
+.scen article[data-st=off]:hover{opacity:1}
+.sc-live{margin-top:14px}
+.sc-live small{display:block;font-size:11px;letter-spacing:.08em;color:var(--mute);margin-bottom:6px}
+.sc-live ul{list-style:none;display:grid;gap:4px}
+.sc-live li{font-size:14px;line-height:1.5;color:var(--ink2);padding-left:12px;position:relative}
+.sc-live li::before{content:"";position:absolute;left:0;top:.65em;width:4px;height:4px;border-radius:50%;background:var(--mute)}
+.scen .then .sc-live li b{display:inline;font-size:inherit;line-height:inherit;color:var(--ink);font-weight:600}
+.scen .then .sc-ex>b{display:block;font-size:14px;font-weight:500}
+.sc-ex{margin-top:12px;padding:12px 14px;border:1px solid var(--line2);border-radius:10px;display:grid;gap:4px}
+.sc-ex span{font-size:11px;letter-spacing:.06em;color:var(--mute)}
+.sc-ex>b{font-size:14px;font-weight:500;color:var(--ink)}
+.sc-ex i{font-style:normal;font-size:12.5px;color:var(--ink2);display:flex;justify-content:space-between;gap:10px}
+.sc-ex i em{font-style:normal;color:var(--ink)}
+.sc-na{font-size:12.5px;color:var(--mute);margin-top:10px}
+.sc-how{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
+.sc-how summary{cursor:pointer;font-size:12.5px;color:var(--ink2)}
+.sc-how summary:hover{color:var(--ink)}
 /* Trader views: Traders / Institutions */
 .tvt{display:grid;gap:16px}
 .tvt-card{position:relative;padding:26px;border:1px solid var(--line2);border-radius:16px;background:rgba(14,15,12,.94);max-width:860px}
@@ -2949,8 +2982,8 @@ function tapeHTML(events){
     g += `<text class="tp-last" x="${W - R + 6}" y="${Y(last) + 4}">${f(last)}</text>`;
     return `<figure class="tp"><figcaption><b>${name}</b><span>${sub}</span><em class="${ch < 0 ? 'dn' : 'up'}">${ch >= 0 ? '+' : '−'}${Math.abs(ch).toFixed(1)}% since CPI</em></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${name} hourly candles with CPI and PPI release times">${g}</svg></figure>`;
   };
-  const at = new Date(T.at).toLocaleString('en-US', {timeZone:'Asia/Seoul', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12:false});
-  return `<aside class="mn-tape">${one(T.BTC, 'BTC', 'BTC / USDT · 1h', 0)}${one(T.NQ, 'NASDAQ 100', 'NQ futures · 1h', 0)}<p class="tp-n">Dashed line = price just before CPI · times in KST · as of ${at} KST</p></aside>`;
+  const kt = t => new Date(t).toLocaleString('en-US', {timeZone:'Asia/Seoul', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12:false});
+  return `<aside class="mn-tape">${one(T.BTC, 'BTC', T.btcLive ? 'BTC / USDT · 1h · live' : 'BTC / USDT · 1h', 0)}${one(T.NQ, 'NASDAQ 100', 'NQ futures · 1h', 0)}<p class="tp-n">Dashed line = price just before CPI · times in KST · ${T.btcLive ? `BTC live (${kt(T.btcLive)}) · NASDAQ as of ${kt(T.at)}` : `as of ${kt(T.at)}`} KST</p></aside>`;
 }
 function renderStrategy(){
   renderMacroNow();
@@ -2990,7 +3023,7 @@ function renderStrategy(){
   // ── 매크로 플레이북 (시황판단 틀): 한 줄 판단 → 기본·상방·하방 시나리오 → 근거(F/I/A/C) → 틀리는 조건 → 관찰판 → 이벤트별 대응 ──
   const M = SNAP.macro || [], now = Date.now(), cfg = BOOT.config.strategy || {};
   const note = cfg.note ? `<div class="mview"><h4>MY VIEW · 0XDEFIDANIEL</h4><p>${esc(cfg.note)}</p></div>` : '';
-  const sc = (cfg.scenarios || []).map(x => `<article><div class="if"><small>IF</small>${esc(x.if)}</div><div class="then"><small>STRATEGY</small><b>${esc(x.then)}</b><p>${esc(x.how || '')}</p><dl>${[['ENTRY / SKIP', x.entry], ['BUILD', x.legs], ['EXIT', x.exit], ['RISK', x.risk], ['EXAMPLE', x.example]].filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>${x.source && /^https:\/\//.test(x.source) ? `<a class="sc-source" href="${esc(x.source)}" target="_blank" rel="noopener">Strategy mechanics · OIC ↗</a>` : ''}</div></article>`).join('');
+  const sc = (cfg.scenarios || []).map(x => `<article data-k="${esc(x.kind || '')}"><div class="if"><small>IF</small>${esc(x.if)}<span class="sc-st" data-st></span></div><div class="then"><small>STRATEGY</small><b>${esc(x.then)}</b><p>${esc(x.how || '')}</p><div class="sc-live" data-live></div><details class="sc-how"><summary>Entry, build, exit and risk</summary><dl>${[['ENTRY / SKIP', x.entry], ['BUILD', x.legs], ['EXIT', x.exit], ['RISK', x.risk], ['ILLUSTRATION', x.example]].filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>${x.source && /^https:\/\//.test(x.source) ? `<a class="sc-source" href="${esc(x.source)}" target="_blank" rel="noopener">Strategy mechanics · OIC ↗</a>` : ''}</details></div></article>`).join('');
   let book = '';
   if (A && A.putWall && A.callWall) {
     const X = sentiment(A), score = X ? X.score : 0, longG = !A.gamma || A.gamma.regime !== 'short_gamma', pctl = A.ivPct ? A.ivPct.percentile : 50;
@@ -3037,8 +3070,109 @@ function renderStrategy(){
       </div>
       <div class="mb-box mb-watch"><h4>WATCH BOARD</h4>${watch.map(([w, t, d]) => `<div><time>${esc(w)}</time><b>${esc(t)}</b><span>${esc(d)}</span></div>`).join('')}${soon.length ? '' : '<p class="lg">No US high-impact releases left in the next 7 days.</p>'}</div>`;
   }
-  $('stMacro').innerHTML = `${note}${book}${sc ? `<h4 class="mb-h">IF MACRO SURPRISES · WHAT TO TRADE</h4><p class="mb-note">Conditional setups, not live trade signals. Tenors and exits are illustrative rules, not backtested. Examples use normalized spot 100, equal-size linear options and expiry payoffs before fees or slippage. Confirm settlement, collateral and liquidation rules for the actual contract; payoff caps assume all legs remain intact.</p><div class="scen">${sc}</div>` : ''}`;
+  $('stMacro').innerHTML = `${note}${book}${sc ? `<h4 class="mb-h">IF MACRO SURPRISES · WHAT TO TRADE</h4><div class="sc-bar" id="scBar"><span class="sc-dot"></span>Loading live market…</div><p class="mb-note">Conditional setups, not live trade signals. Tenors and exits are illustrative rules, not backtested. Status, checks and live examples refresh every minute from Derivatives Monkey (12 venues) and Deribit top-of-book quotes (buy at ask, sell at bid), before fees or slippage. Confirm settlement, collateral and liquidation rules for the actual contract; payoff caps assume all legs remain intact.</p><div class="scen">${sc}</div>` : ''}`;
   renderSentLog();
+  scLive();
+}
+
+// ════════════════ 시나리오 실시간: 이벤트 결과 + 옵션 시장(Derivatives Monkey) + Deribit 호가 ════════════════
+// 1분마다 다시 읽어서, 각 시나리오가 지금 '진입 가능 / 대기 / 해당 없음' 인지와 실제 행사가·가격 예시를 보여준다
+let scTimer = 0, scBusy = false, scSrc = null, scAgain = false;
+const SC_J = async u => { try { const r = await fetch(u, {cache:'no-store'}); return r.ok ? await r.json() : null; } catch { return null; } };
+const scUsd = v => v == null || !isFinite(v) ? '—' : '$' + Math.round(v).toLocaleString('en-US');
+const scPct = v => (v >= 0 ? '+' : '−') + Math.abs(v).toFixed(1) + '%';
+const untilS = ms => { const m = Math.max(0, Math.round(ms / 6e4)); return m < 60 ? `${m}m` : m < 2880 ? `${Math.floor(m / 60)}h ${m % 60}m` : `${Math.round(m / 1440)}d`; };
+function scEvents(now){
+  // 캘린더 → 발표 시각별 묶음 (CPI · PPI · Retail Sales · Warsh …), 결과는 macroNow 실제치로 판정
+  const M = SNAP.macro || [], F = ((BOOT.config.strategy || {}).macroNow || {}).facts || [], g = {};
+  const short = x => x.replace(/^Core /, '').replace(/ [my]\/[my]$/, '').replace('Fed Chairman ', '').replace(' Speaks', ' speaks');
+  for (const e of M) { const t = Date.parse(e.date); if (!t) continue; g[t + '|' + short(e.title)] = 1; }
+  return Object.keys(g).map(key => {
+    let [t, label] = key.split('|'); t = +t;
+    const day = new Date(t).toLocaleDateString('en-US', {timeZone:'America/New_York', month:'short', day:'numeric'});
+    const fs = F.filter(f => f.d === day && (f.k.startsWith(label) || f.k.startsWith('Core ' + label)));
+    const hot = fs.filter(f => parseFloat(f.a) > parseFloat(f.e)).length, soft = fs.filter(f => parseFloat(f.a) < parseFloat(f.e)).length;
+    return {t, label, past: t <= now, tone: !fs.length ? '' : hot > soft ? 'hot' : soft > hot ? 'soft' : 'inline'};
+  }).sort((a, b) => a.t - b.t);
+}
+function scChain(book){
+  // Deribit 옵션 요약 → 만기별 {strike: {C, P}} (USD 가격: 매수=ask, 매도=bid, 없으면 mark)
+  const by = {};
+  for (const o of (book && book.result) || []) {
+    const m = /^[A-Z]+-(\d{1,2})([A-Z]{3})(\d{2})-(\d+)-([CP])$/.exec(o.instrument_name); if (!m) continue;
+    const exp = Date.UTC(2000 + +m[3], 'JANFEBMARAPRMAYJUNJULAUGSEPOCTNOVDEC'.indexOf(m[2]) / 3, +m[1], 8), u = o.underlying_price || o.estimated_delivery_price;
+    const q = x => x ? x * u : null, e = by[exp] = by[exp] || {exp, k: {}};
+    (e.k[+m[4]] = e.k[+m[4]] || {})[m[5]] = {ask: q(o.ask_price) ?? q(o.mark_price), bid: q(o.bid_price) ?? q(o.mark_price), iv: o.mark_iv};
+  }
+  return Object.values(by);
+}
+async function scLive(){
+  const bar = $('scBar'); if (!bar) return; if (scBusy) { scAgain = true; return; }
+  clearTimeout(scTimer); scTimer = setTimeout(() => { if (document.body.dataset.view === 'strategy' && !document.hidden) scLive(); else scTimer = setTimeout(scLive, 6e4); }, 6e4);
+  scBusy = true; const asset = stAsset, a = asset.toLowerCase(), cur = ['BTC', 'ETH'].includes(asset) ? asset : null;
+  if (!scSrc) scSrc = await SC_J('https://www.derivativesmonkey.com/api/market/sources-all');
+  const src = ((scSrc && scSrc.assets && scSrc.assets[a]) || {}).sources || [];
+  const [ms, book, kl] = await Promise.all([src.length ? SC_J(`https://www.derivativesmonkey.com/api/market/market-summary?asset=${a}&sources=${src.join(',')}`) : null, cur ? SC_J(`https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=${cur}&kind=option`) : null, SC_J('https://data-api.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&limit=96')]);
+  if (Array.isArray(kl) && kl.length && SNAP.tape) { SNAP.tape = {...SNAP.tape, BTC: kl.map(r => [r[0], +r[1], +r[2], +r[3], +r[4]]), btcLive: Date.now()}; renderMacroNow(); }
+  scBusy = false; if (!$('scBar')) return; if (asset !== stAsset || scAgain) { scAgain = false; if (asset !== stAsset) return scLive(); }
+  const A = (SNAP.dm && SNAP.dm.assets[asset]) || {}, now = Date.now(), live = !!(ms && ms.spot);
+  const K = {
+    S: live ? ms.spot.value : A.spot, pw: live ? ms.put_wall && ms.put_wall.strike : A.putWall && A.putWall.strike, cw: live ? ms.call_wall && ms.call_wall.strike : A.callWall && A.callWall.strike,
+    iv: live ? ms.atm_iv_30d && ms.atm_iv_30d.value : A.iv30, rv: live ? ms.rv && ms.rv.value : A.rv && A.rv.value, pct: live ? ms.iv_percentile && ms.iv_percentile.percentile : A.ivPct && A.ivPct.percentile,
+  };
+  if (!K.S) { $('scBar').innerHTML = '<span class="sc-dot off"></span>Live market unavailable — showing the playbook only.'; return; }
+  const EV = scEvents(now), past = EV.filter(e => e.past && now - e.t < 7 * 864e5), next = EV.find(e => !e.past);
+  const tones = past.map(e => e.tone).filter(Boolean), tone = tones.includes('hot') && !tones.includes('soft') ? 'hot' : tones.includes('soft') && !tones.includes('hot') ? 'soft' : tones.length ? 'mixed' : '';
+  const tape = SNAP.tape && SNAP.tape[asset], first = past.find(e => e.tone);
+  const pre = tape && first ? ((tape.find(r => r[0] + 36e5 > first.t) || [])[1]) : null;
+  const vrp = K.iv != null && K.rv != null ? K.iv - K.rv : null, soon = next && next.t - now < 72 * 36e5;
+  // 만기: 7~21일 중 14일에 가장 가까운 것
+  const chain = scChain(book).filter(e => { const d = (e.exp - now) / 864e5; return d >= 6 && d <= 24; }).sort((x, y) => Math.abs((x.exp - now) / 864e5 - 14) - Math.abs((y.exp - now) / 864e5 - 14))[0];
+  const ks = chain ? Object.keys(chain.k).map(Number).sort((x, y) => x - y) : [];
+  const near = (v, side, need) => { let b = null; for (const k of ks) { const o = chain.k[k][side]; if (!o || o[need] == null) continue; if (b == null || Math.abs(k - v) < Math.abs(b - v)) b = k; } return b; };
+  const px = (k, side, how) => chain.k[k] && chain.k[k][side] ? chain.k[k][side][how] : null;
+  const expS = chain ? new Date(chain.exp).toLocaleDateString('en-US', {timeZone:'UTC', month:'short', day:'numeric'}) : '';
+  const f0 = v => Math.round(v).toLocaleString('en-US'), dist = (v, ref) => scPct((v / ref - 1) * 100);
+  const ex = (legs, lines) => `<div class="sc-ex"><span>LIVE EXAMPLE · Deribit ${expS} expiry · per 1 ${asset}</span><b>${legs}</b>${lines.map(([k, v]) => `<i>${k} <em>${v}</em></i>`).join('')}</div>`;
+  const R = {};
+  // 하락 (풋 스프레드)
+  { const sup = K.pw && K.pw < K.S * 1.02 ? K.pw : null, broke = sup && K.S < sup * .995;
+    const st = tone === 'soft' ? ['off', 'Not triggered'] : broke ? ['go', 'Entry condition met'] : tone === 'hot' ? ['wait', 'Triggered · waiting for a break'] : ['wait', 'Waiting for the data'];
+    const chk = [tone === 'hot' ? `Data came in <b>hot</b> (${past.filter(e => e.tone === 'hot').map(e => e.label).join(', ')}).` : tone === 'soft' ? 'Data came in soft — the hawkish trigger did not fire.' : 'No decisive data yet.',
+      sup ? (broke ? `${asset} ${scUsd(K.S)} is <b>below</b> the ${scUsd(sup)} put wall (${dist(K.S, sup)}).` : `${asset} ${scUsd(K.S)} is still ${dist(K.S, sup)} above the ${scUsd(sup)} put wall — no breakdown yet.`) : '',
+      next ? `Next test: ${esc(next.label)} in ${untilS(next.t - now)}.` : ''];
+    let e = ''; if (chain) { const k1 = near(K.S, 'P', 'ask'), k2 = near(K.S * .95, 'P', 'bid'); if (k1 && k2 && k2 < k1) { const d = px(k1, 'P', 'ask') - px(k2, 'P', 'bid'); e = ex(`Buy ${f0(k1)} put · sell ${f0(k2)} put`, [['Cost', scUsd(d)], ['Break-even', scUsd(k1 - d)], ['Max gain', scUsd(k1 - k2 - d)]]); } }
+    R.bear = [st, chk, e]; }
+  // 상승 (콜 스프레드)
+  { const res = pre && pre > K.S ? pre : K.cw, over = res && K.S > res * 1.005;
+    const st = tone === 'hot' ? ['off', 'Not triggered'] : tone === 'soft' && over ? ['go', 'Entry condition met'] : ['wait', tone === 'soft' ? 'Triggered · waiting for a breakout' : 'Waiting for the data'];
+    const chk = [tone === 'hot' ? 'Data came in hot — the dovish trigger did not fire.' : tone === 'soft' ? 'Data came in <b>soft</b>.' : 'No decisive data yet.',
+      res ? `Needs a reclaim of ${scUsd(res)}${pre && res === pre ? ' (price just before CPI)' : ' (call wall)'} — now ${dist(K.S, res)} away.` : '',
+      next && tone === 'hot' ? `Only a dovish surprise at ${esc(next.label)} (in ${untilS(next.t - now)}) would reopen it.` : ''];
+    let e = ''; if (chain) { const k1 = near(K.S, 'C', 'ask'), tgt = K.cw && K.cw > K.S * 1.03 && K.cw < K.S * 1.12 ? K.cw : K.S * 1.05, k2 = near(tgt, 'C', 'bid'); if (k1 && k2 && k2 > k1) { const d = px(k1, 'C', 'ask') - px(k2, 'C', 'bid'); e = ex(`Buy ${f0(k1)} call · sell ${f0(k2)} call`, [['Cost', scUsd(d)], ['Break-even', scUsd(k1 + d)], ['Max gain', scUsd(k2 - k1 - d)]]); } }
+    R.bull = [st, chk, e]; }
+  // 박스 (아이언 콘도르)
+  { const inR = K.pw && K.cw && K.S > K.pw && K.S < K.cw;
+    const st = soon ? ['wait', 'Wait for the event'] : vrp != null && vrp <= 0 ? ['off', 'Skip · premium not rich'] : inR ? ['go', 'Setup live'] : ['off', 'Skip · price outside range'];
+    const chk = [K.pw && K.cw ? `Range ${scUsd(K.pw)}–${scUsd(K.cw)} (put wall to call wall); ${asset} ${scUsd(K.S)} is ${inR ? '<b>inside</b>' : '<b>outside</b>'}.` : '',
+      vrp != null ? `Options price ${K.iv.toFixed(1)}% vol vs ${K.rv.toFixed(1)}% realized — premium is ${vrp > 2 ? '<b>rich</b>' : vrp > 0 ? 'only slightly rich' : '<b>not rich</b>'} (${vrp >= 0 ? '+' : '−'}${Math.abs(vrp).toFixed(1)} pts).` : '',
+      soon ? `${esc(next.label)} in ${untilS(next.t - now)} — don’t sell premium into an event.` : ''];
+    let e = ''; if (chain && K.pw && K.cw) { const sp = near(Math.min(K.pw, K.S * .97), 'P', 'bid'), sc2 = near(Math.max(K.cw, K.S * 1.03), 'C', 'bid'), bp = sp && near(sp - K.S * .05, 'P', 'ask'), bc = sc2 && near(sc2 + K.S * .05, 'C', 'ask');
+      if (sp && sc2 && bp && bc && bp < sp && bc > sc2) { const cr = px(sp, 'P', 'bid') + px(sc2, 'C', 'bid') - px(bp, 'P', 'ask') - px(bc, 'C', 'ask'); e = ex(`Sell ${f0(sp)}P / ${f0(sc2)}C · buy ${f0(bp)}P / ${f0(bc)}C`, [['Credit', scUsd(cr)], ['Break-evens', `${scUsd(sp - cr)} / ${scUsd(sc2 + cr)}`], ['Max loss', scUsd(Math.max(sp - bp, bc - sc2) - cr)]]); } }
+    R.condor = [st, chk, e]; }
+  // 큰 움직임 (스트래들)
+  { const st = vrp == null ? ['wait', 'Checking'] : vrp <= 1 ? ['go', 'Fairly priced'] : vrp > 4 ? ['off', 'Skip · panic premium'] : ['wait', 'Slightly rich'];
+    const chk = [vrp != null ? `Options price ${K.iv.toFixed(1)}% vol; ${asset} is actually moving ${K.rv.toFixed(1)}% — movement is ${vrp <= 1 ? '<b>not overpriced</b>' : 'priced above what it realizes'}.` : '',
+      K.pct != null ? `Vol is at the ${Math.round(K.pct)}th percentile of the past year — expensive vs history${vrp != null && vrp <= 1 ? ', fair vs current moves' : ''}.` : '',
+      next ? `${esc(next.label)} in ${untilS(next.t - now)} — the next catalyst.` : ''];
+    let e = ''; if (chain) { const k = near(K.S, 'C', 'ask'); if (k && px(k, 'P', 'ask') != null) { const c = px(k, 'C', 'ask') + px(k, 'P', 'ask'); e = ex(`Buy ${f0(k)} call + ${f0(k)} put`, [['Cost', scUsd(c)], ['Break-evens', `${scUsd(k - c)} / ${scUsd(k + c)}`], ['Needs a move of', '±' + (c / K.S * 100).toFixed(1) + '%']]); } }
+    R.straddle = [st, chk, e]; }
+  document.querySelectorAll('.scen article[data-k]').forEach(el => { const r = R[el.dataset.k]; if (!r) return; const [[c, t], chk, e] = r;
+    el.dataset.st = c; el.querySelector('[data-st]').innerHTML = `<i class="${c}">${t}</i>`;
+    el.querySelector('[data-live]').innerHTML = `<small>LIVE CHECK</small><ul>${chk.filter(Boolean).map(x => `<li>${x}</li>`).join('')}</ul>${e || (cur ? '' : `<p class="sc-na">Live strike pricing is available for BTC and ETH (Deribit).</p>`)}`; });
+  const t = new Date().toLocaleTimeString('en-US', {timeZone:'Asia/Seoul', hour:'2-digit', minute:'2-digit', hour12:false});
+  $('scBar').innerHTML = `<span class="sc-dot${live ? '' : ' off'}"></span><b>${live ? 'LIVE' : 'SNAPSHOT'}</b> ${asset} ${scUsd(K.S)} · IV ${K.iv != null ? K.iv.toFixed(1) + '%' : '—'} · updated ${t} KST · refreshes every minute
+    <span class="sc-evs">${past.map(e => `<span class="${e.tone}">${esc(e.label)}${e.tone ? ' · ' + e.tone.toUpperCase() : ' · released'}</span>`).join('')}${next ? `<span class="nx">NEXT ${esc(next.label)} · in ${untilS(next.t - now)}</span>` : ''}</span>`;
 }
 
 function traderViewWindow(config, now=Date.now()) {
