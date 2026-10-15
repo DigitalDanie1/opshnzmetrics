@@ -20,7 +20,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
 <style>
 :root{
@@ -626,146 +625,129 @@ body.sharing .wrap,body.sharing .ticker,body.sharing .bgart{display:none}
 
 .logo-ph{width:40px;height:40px;border-radius:50%;object-fit:cover;background:var(--panel2);flex:none;display:inline-block}
 
-/* ── Friends: Options Metro · line strips (.mtr) ── */
-.mtr{--mh:clamp(520px,calc(100vh - 140px),980px);--u:calc(var(--mh)/100);--gold:#f2b544;--led:#ffa51f;--tcard:#10110d;--mline:rgba(236,231,220,.13);--dim:rgba(236,231,220,.6);
-  --ds:clamp(13px,calc(var(--u)*2.7),23px);--bh:clamp(7px,calc(var(--u)*1.8),14px);--by:calc(var(--u)*11.8);--lg:clamp(17px,calc(var(--u)*3.4),30px);--lf:clamp(9.5px,calc(var(--u)*1.62),13.5px);
-  --tw:clamp(38px,calc(var(--u)*8),60px);--th:calc(var(--tw)*.75);
-  position:relative;height:var(--mh);display:flex;flex-direction:column;gap:calc(var(--u)*.8);font-family:'Overpass',var(--sans);color:var(--ink)}
-.mtr button{cursor:pointer}
-.mtr img,.mtr .logo-ph{display:block}
-/* LED bar */
-.mtr-led{flex:none;display:flex;align-items:center;gap:12px;margin:5px 6px 0;padding:calc(var(--u)*.9) 14px;background:#050403;border:1.5px solid #2c2a22;border-radius:12px;box-shadow:0 0 0 4px #131410,0 0 0 5px rgba(236,231,220,.1),inset 0 0 26px rgba(0,0,0,.9);overflow:hidden}
-.mtr-lw{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;min-height:28px}
-.mtr-lcd{position:relative;max-width:100%;background-image:radial-gradient(circle closest-side,#2a1b06 0 58%,transparent 63%);background-size:var(--p) var(--p)}
-.mtr-lcd svg{position:absolute;left:0;top:0;display:block}
-.mtr-lit{filter:drop-shadow(0 0 2.5px rgba(255,165,31,.85))}
-.mtr-pp{flex:none;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1.5px solid rgba(242,181,68,.55);background:rgba(242,181,68,.08);color:var(--gold);transition:background .2s,border-color .2s}
-.mtr-pp:hover{background:rgba(242,181,68,.2);border-color:var(--gold)}
-.mtr-pp svg{display:block}
-.mtr-pp .pl{display:none}
-.mtr.paused .mtr-pp .ps{display:none}
-.mtr.paused .mtr-pp .pl{display:block}
-.mtr button:focus-visible,.mtr a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-/* header row */
-.mtr-hd{flex:none;display:flex;align-items:center;gap:18px;min-height:calc(var(--u)*3.6)}
-.mtr-hd h2{font-family:var(--serif);font-weight:700;font-size:clamp(11.5px,calc(var(--u)*2.15),15px);letter-spacing:.14em;white-space:nowrap;line-height:1}
-.mtr-hd h2 b{color:var(--gold);font-weight:800}
-.mtr-sp{flex:1}
-.mtr-k{display:flex;align-items:center;gap:7px;font-size:clamp(9.5px,calc(var(--u)*1.9),11.5px);font-weight:700;letter-spacing:.16em;color:var(--dim);text-transform:uppercase;white-space:nowrap}
-.mtr-xi{display:inline-grid;place-items:center;flex:none;width:18px;height:18px;border-radius:50%;background:var(--gold);color:#0a0b09}
-.mtr-xi svg{display:block}
-.mtr-sh{min-width:150px;border:1.5px solid rgba(242,181,68,.6);background:transparent;color:var(--gold);border-radius:99px;padding:calc(var(--u)*.8) 14px;font-size:12px;font-weight:800;letter-spacing:.05em;white-space:nowrap;line-height:1.2;transition:background .2s,color .2s}
-.mtr-sh:hover{background:rgba(242,181,68,.12)}
-.mtr-sh.ok{background:var(--gold);color:#0a0b09}
-/* strips */
-.mtr-ls{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;gap:calc(var(--u)*.7)}
-.mtr-l{position:relative;margin:0;flex:1 1 0;min-height:0;display:flex;align-items:stretch;background:var(--tcard);border:1px solid var(--mline);border-radius:14px;overflow:hidden}
-.mtr-l:first-child{flex-grow:1.2}
-.mtr-l::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c)}
-.mtr-lh{flex:none;width:clamp(150px,15.5%,190px);padding:0 8px 0 20px;display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*.9)}
-.mtr-top{display:flex;align-items:center;gap:9px}
-.mtr-rd{flex:none;display:grid;place-items:center;width:clamp(26px,calc(var(--u)*4.8),44px);aspect-ratio:1;border-radius:50%;background:var(--c);color:#0a0b09;font-family:var(--serif);font-weight:800;font-size:clamp(13px,calc(var(--u)*2.5),22px);box-shadow:0 0 20px color-mix(in srgb,var(--c) 45%,transparent)}
-.mtr-tt{min-width:0;display:flex;flex-direction:column;gap:3px}
-.mtr-tt h3{font-family:var(--serif);font-weight:800;font-size:clamp(11px,calc(var(--u)*2.1),16px);letter-spacing:.04em;text-transform:uppercase;line-height:1.05}
-.mtr-n{font-size:clamp(8.5px,calc(var(--u)*1.6),11px);font-weight:800;letter-spacing:.18em;color:var(--c);white-space:nowrap}
-.mtr-lh p{font-size:clamp(9.5px,calc(var(--u)*1.8),11.5px);color:var(--dim);line-height:1.3;font-weight:500}
-.mtr-tk{position:relative;flex:1;min-width:0;margin-right:calc(var(--bh)*1.2);container-type:inline-size}
-.mtr-bar{position:absolute;left:0;right:calc(var(--bh)*-1.2);top:calc(var(--by) - var(--bh)/2);height:var(--bh);background:var(--c);box-shadow:0 0 16px color-mix(in srgb,var(--c) 40%,transparent)}
-.mtr-bar::after{content:"";position:absolute;right:-1px;top:calc(var(--bh)*-.55);border-left:calc(var(--bh)*1.2) solid var(--c);border-top:calc(var(--bh)*1.05) solid transparent;border-bottom:calc(var(--bh)*1.05) solid transparent}
-.mtr-pass{position:absolute;left:0;top:0;bottom:0;width:var(--pw,0px);background:#3a3427;transition:width 1.2s cubic-bezier(.45,0,.2,1)}
-.mtr-ch{position:absolute;left:var(--x);top:var(--by);transform:translate(-50%,-50%);font-weight:800;font-size:calc(var(--bh)*1.15);line-height:1;color:#0a0b09;opacity:.5;pointer-events:none;transition:color .4s}
-.mtr-ch.past{color:#ece7dc}
-.mtr-sn{position:absolute;top:0;bottom:0;left:var(--x);width:calc(var(--u)*13);margin-left:calc(var(--u)*-6.5);padding:0;border:0;background:none;color:inherit;text-align:center;-webkit-tap-highlight-color:transparent}
-.mtr-dot{position:absolute;left:50%;top:var(--by);width:var(--ds);height:var(--ds);margin:calc(var(--ds)/-2) 0 0 calc(var(--ds)/-2);border-radius:50%;background:#fff;border:calc(var(--ds)*.2) solid #0a0b09;box-shadow:0 0 0 calc(var(--ds)*.12) var(--c);transition:transform .35s cubic-bezier(.3,1.4,.5,1),background .3s,box-shadow .3s}
-.mtr-sn.hub .mtr-dot{box-shadow:0 0 0 calc(var(--ds)*.14) var(--gold),0 0 18px rgba(242,181,68,.55)}
-.mtr-sn.past .mtr-dot{background:#4b4a42;box-shadow:0 0 0 calc(var(--ds)*.12) color-mix(in srgb,var(--c) 45%,#000)}
-.mtr-sn.cur .mtr-dot{transform:scale(1.45);box-shadow:0 0 0 calc(var(--ds)*.14) var(--c),0 0 24px 5px color-mix(in srgb,var(--c) 55%,transparent)}
-.mtr-sn.nx .mtr-dot{transform:scale(1.3);box-shadow:0 0 0 calc(var(--ds)*.14) var(--led),0 0 22px 5px rgba(255,165,31,.5)}
-.mtr-xb{position:absolute;left:calc(50% + var(--ds)*.35);top:calc(var(--by) - var(--ds)*1.15);width:calc(var(--ds)*.95);height:calc(var(--ds)*.95);border-radius:50%;background:var(--gold);color:#0a0b09;display:grid;place-items:center;border:2px solid var(--tcard);z-index:2}
-.mtr-xb svg{width:70%;height:70%;display:block}
-.mtr-lab{position:absolute;left:calc(50% + 3px);bottom:calc(100% - var(--by) + var(--ds)*.9);transform-origin:0 100%;transform:rotate(-45deg);white-space:nowrap;font-weight:800;font-size:var(--lf);letter-spacing:.02em;text-transform:uppercase;line-height:1;padding-bottom:4px;color:rgba(236,231,220,.82);transition:color .3s,text-shadow .3s}
-.mtr-sn.cur .mtr-lab{color:#fff;text-shadow:0 0 14px color-mix(in srgb,var(--c) 70%,transparent)}
-.mtr-sn.nx .mtr-lab{color:var(--led)}
-.mtr-lg{position:absolute;left:50%;top:calc(var(--by) + var(--ds)*.75 + var(--u)*.25);width:var(--lg);height:var(--lg);margin-left:calc(var(--lg)/-2);border-radius:50%;overflow:hidden;border:2px solid var(--c);background:#000}
-.mtr-lg img,.mtr-lg .logo-ph{width:100%;height:100%;object-fit:cover;background:#1b1c18}
-.mtr-sb{position:absolute;left:50%;top:calc(var(--by) + var(--ds)*.75 + var(--u)*.25 + var(--lg) + var(--u)*.15);width:max-content;max-width:max(70px,calc(100cqw/var(--n) - 8px));transform:translateX(-50%);font-size:clamp(8.5px,calc(var(--u)*1.65),10.5px);font-weight:700;letter-spacing:.05em;line-height:1.15;text-transform:uppercase;color:var(--dim);text-align:center;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;transition:color .3s}
-.mtr-sn.past .mtr-lab,.mtr-sn.past .mtr-lg,.mtr-sn.past .mtr-sb{opacity:.5}
-.mtr-sn.cur .mtr-sb{color:var(--ink)}
-.mtr-chips{display:none}
-.mtr-tp{position:absolute;left:var(--x);transform:translateX(-50%);top:calc(var(--by) + var(--ds)*.75 + var(--u)*.25 + var(--lg) + var(--u)*.15 + var(--u)*1.9 + var(--u)*.45);display:flex;align-items:center;gap:6px;height:calc(var(--u)*2.9);padding:0 10px 0 4px;border:1.5px solid var(--gold);border-radius:99px;background:rgba(242,181,68,.1);color:var(--gold);font-size:clamp(9.5px,calc(var(--u)*1.85),11.5px);font-weight:800;letter-spacing:.03em;white-space:nowrap;pointer-events:none}
-.mtr-tp .mtr-xi{width:calc(var(--u)*2.1);height:calc(var(--u)*2.1);min-width:13px;min-height:13px}
-/* the defidaniel train */
-.mtr-tr{position:absolute;left:0;top:0;width:var(--tw);height:var(--th);z-index:6;pointer-events:none;transition:transform 1.2s cubic-bezier(.45,0,.2,1);will-change:transform}
-.mtr-car{position:absolute;inset:0;filter:drop-shadow(0 2px 4px rgba(0,0,0,.55));transition:transform .25s}
-.mtr-car svg{display:block;width:100%;height:100%}
-.mtr-sign{position:absolute;left:50%;bottom:calc(var(--th)*.9);transform:translateX(-50%);padding:2px 5px 1px;border-radius:4px;background:#0a0b09;border:1px solid var(--gold);color:var(--led);font-size:clamp(6.5px,calc(var(--u)*1.25),8.5px);font-weight:800;letter-spacing:.12em;white-space:nowrap;line-height:1.2;text-shadow:0 0 5px rgba(255,165,31,.7)}
-.mtr-tf{position:absolute;left:50%;top:calc(var(--th)*-.5);transform:translate(-50%,0) scale(.6);padding:2px 8px;border-radius:99px;background:var(--gold);color:#0a0b09;font-size:10px;font-weight:800;letter-spacing:.08em;white-space:nowrap;opacity:0;box-shadow:0 0 16px rgba(242,181,68,.7)}
-.mtr-tr.fl .mtr-tf{animation:mtrFlash 1s ease-out both}
-/* station card */
-.mtr-card{position:absolute;left:0;top:0;z-index:8;width:clamp(230px,calc(var(--u)*43),290px);padding:calc(var(--u)*1.1) 11px calc(var(--u)*1);border-radius:12px;background:rgba(14,15,11,.97);border:1px solid var(--c);box-shadow:0 14px 34px -10px #000,0 0 0 1px rgba(0,0,0,.4),0 0 26px -8px var(--c);display:flex;flex-direction:column;gap:calc(var(--u)*.8);opacity:0;visibility:hidden;transform:translateY(5px) scale(.97);transition:opacity .2s,transform .2s,visibility 0s .2s}
-.mtr-card.on{opacity:1;visibility:visible;transform:none;transition-delay:0s}
-.mtr-ch2{display:flex;align-items:center;gap:8px}
-.mtr-cl{flex:none;width:clamp(22px,calc(var(--u)*4.2),30px);height:clamp(22px,calc(var(--u)*4.2),30px);border-radius:50%;overflow:hidden;border:2px solid var(--c);background:#000}
-.mtr-cl img,.mtr-cl .logo-ph{width:100%;height:100%;object-fit:cover;background:#1b1c18}
-.mtr-ct{min-width:0;flex:1;line-height:1.15}
-.mtr-ct b{display:block;font-size:13.5px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mtr-ct small{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--c);text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mtr-cd-l{flex:none;font-size:9px;font-weight:800;letter-spacing:.14em;color:#0a0b09;background:var(--c);border-radius:99px;padding:2px 7px}
-.mtr-card p{font-size:11.5px;line-height:1.32;color:var(--ink2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.mtr-cf{display:flex;align-items:center;gap:6px}
-.mtr-cf span{display:inline-flex;align-items:baseline;gap:5px;border-radius:99px;padding:2px 8px;background:rgba(236,231,220,.07);border:1px solid var(--mline);font-size:10.5px;font-weight:700;white-space:nowrap}
-.mtr-cf em{font-style:normal;font-size:8.5px;letter-spacing:.1em;color:var(--mute)}
-.mtr-cf b{font-weight:800;color:var(--ink)}
-.mtr-cf a{margin-left:auto;flex:none;font-size:11px;font-weight:800;color:#0a0b09;background:var(--c);border-radius:99px;padding:3px 10px;white-space:nowrap;transition:filter .2s}
-.mtr-cf a:hover{filter:brightness(1.12)}
+/* ── Friends: the Friends Chain (.chn) — a friends list laid out like an options chain ── */
+.chn{--cu:#3fd68a;--cd:#ff5d5d;--cm:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;--cmute:rgba(236,231,220,.46);
+  --cols:minmax(92px,1.1fr) minmax(60px,.75fr) minmax(70px,.8fr) minmax(170px,2fr) minmax(78px,.85fr) minmax(160px,1.9fr) minmax(54px,.6fr);
+  display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start;font-family:var(--cm);color:var(--ink)}
+:where(.chn) button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:inherit}
+.chn img,.chn .logo-ph{display:block}
+.chn button:focus-visible,.chn a:focus-visible,.chn-row:focus-visible{outline:2px solid var(--amber);outline-offset:-2px}
+.chn-main{min-width:0}
+.chn-hd{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 24px;flex-wrap:wrap;padding:6px 0 14px}
+.chn-t{font-family:var(--serif);font-weight:800;font-size:30px;letter-spacing:-.01em;line-height:1;margin:0}
+.chn-t span{color:var(--amber)}
+.chn-meta{display:flex;gap:22px;font-size:10.5px;letter-spacing:.12em;color:var(--cmute);white-space:nowrap}
+.chn-meta b{display:block;color:var(--ink);font-size:15px;letter-spacing:0;margin-top:4px;font-weight:600}
+.chn-tabs{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
+.chn-tab{display:flex;gap:9px;align-items:center;padding:9px 16px 8px;border:1px solid var(--line);border-radius:6px;font-size:11.5px;letter-spacing:.12em;font-weight:600;color:var(--cmute);background:rgba(255,255,255,.015)}
+.chn-tab i{font-style:normal;font-size:10px;font-weight:500;opacity:.8}
+.chn-tab .chn-d{width:7px;height:7px;border-radius:50%;flex:none}
+.chn-tab:hover{color:var(--ink);border-color:var(--line2)}
+.chn-tab.on{color:#0a0b09;background:var(--amber);border-color:var(--amber)}
+.chn-tab.on i{opacity:.7}
+.chn-sp{flex:1}
+.chn-note{font-size:10px;letter-spacing:.12em;color:var(--cmute)}
+.chn-box{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:rgba(10,11,9,.7)}
+.chn-scroll{overflow-x:auto;scrollbar-width:thin}
+.chn-tbl{min-width:690px}
+.chn-g{display:grid;grid-template-columns:var(--cols)}
+.chn-grp{height:26px;font-size:10.5px;letter-spacing:.26em;font-weight:700}
+.chn-grp>div{display:flex;align-items:center;justify-content:center;height:100%}
+.chn-grp .chn-gc{grid-column:span 3;background:linear-gradient(90deg,rgba(63,214,138,.22),rgba(63,214,138,.08));color:var(--cu)}
+.chn-grp .chn-gs{background:#17150e;color:var(--amber);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.chn-grp .chn-gp{grid-column:span 3;background:linear-gradient(270deg,rgba(255,93,93,.22),rgba(255,93,93,.08));color:var(--cd)}
+.chn-col>div{height:28px;display:flex;align-items:center;font-size:9.5px;letter-spacing:.16em;color:var(--cmute);border-bottom:1px solid var(--line);border-top:1px solid var(--line);background:rgba(255,255,255,.02)}
+.chn-col .chn-r,.chn-row .chn-r{justify-content:flex-end;padding-right:14px}
+.chn-col .chn-c{justify-content:center;color:var(--amber)}
+.chn-col .chn-l,.chn-row .chn-l{padding-left:14px}
+.chn-row{position:relative;height:40px;border-bottom:1px solid rgba(236,231,220,.045);cursor:pointer}
+.chn-row>div{display:flex;align-items:center;height:100%;position:relative;font-size:12.5px;font-weight:500;min-width:0}
+.chn-row::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:rgba(242,181,68,0)}
+.chn-row:hover::after{background:rgba(242,181,68,.07)}
+.chn-row.chn-sel{z-index:3;outline:1.5px solid var(--amber);outline-offset:-1.5px;box-shadow:0 0 0 1px rgba(242,181,68,.25),0 0 28px rgba(242,181,68,.18)}
+.chn-row.chn-sel::after{background:rgba(242,181,68,.10)}
+.chn-row.chn-sel::before{content:"▸";position:absolute;left:3px;top:50%;transform:translateY(-50%);color:var(--amber);font-size:11px;z-index:4}
+.chn-row.chn-sel .chn-mid{background:#241c0a}
+.chn-row .chn-mid{background:#11100a;border-left:1px solid var(--line);border-right:1px solid var(--line);padding-left:18px;gap:11px}
+.chn-row .chn-mid img,.chn-row .chn-mid .logo-ph{width:22px;height:22px;border-radius:6px;object-fit:cover;background:#1b1a14;flex:none}
+.chn-row .chn-nm{font-family:var(--serif);font-weight:700;font-size:16px;letter-spacing:.005em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chn-row.chn-itm .chn-cc{background:rgba(63,214,138,var(--a))}
+.chn-row.chn-otm .chn-pp{background:rgba(255,93,93,var(--a))}
+.chn .chn-nil{color:rgba(236,231,220,.22)}
+.chn .chn-cu{color:var(--cu)}.chn .chn-cd{color:var(--cd)}
+.chn-row .chn-vol .chn-bar{position:absolute;right:0;top:9px;bottom:9px;background:linear-gradient(270deg,rgba(63,214,138,.42),rgba(63,214,138,.08));border-right:2px solid var(--cu)}
+.chn-row .chn-vol span,.chn-row .chn-oi span,.chn-row .chn-ch span{position:relative}
+.chn-row .chn-ch.chn-up{background:rgba(63,214,138,.14)}.chn-row .chn-ch.chn-dn{background:rgba(255,93,93,.14)}
+.chn-row .chn-rl{gap:8px;font-size:11px;letter-spacing:.06em;font-weight:600}
+.chn-row .chn-rl i{width:8px;height:8px;border-radius:2px;display:block;flex:none}
+.chn-row .chn-st{font-size:11px;color:rgba(236,231,220,.78)}
+.chn-row .chn-st span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chn-row .chn-tok{font-weight:700;letter-spacing:.06em;font-size:12px}
+.chn-atm{position:relative;height:30px;display:grid;grid-template-columns:var(--cols)}
+.chn-atm::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(242,181,68,.06),rgba(242,181,68,0))}
+.chn-atm .chn-dash{position:absolute;left:0;right:0;top:50%;border-top:1.5px dashed rgba(242,181,68,.7)}
+.chn-atm .chn-lab{grid-column:4;z-index:2;display:flex;align-items:center;justify-content:center;height:100%}
+.chn-atm .chn-lab span{background:var(--amber);color:#0a0b09;font-weight:700;font-size:10.5px;letter-spacing:.14em;padding:5px 12px;border-radius:4px;box-shadow:0 0 24px rgba(242,181,68,.45);white-space:nowrap}
+.chn-atm .chn-tl{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:9px;letter-spacing:.14em;color:var(--amber);background:#0c0c08;padding:0 6px;z-index:2}
+.chn-atm .chn-tl.chn-tr{left:auto;right:14px}
+.chn-foot{margin-top:12px;display:flex;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;font-size:10.5px;color:var(--cmute);letter-spacing:.06em}
+.chn-foot em{font-style:normal;color:var(--amber)}
+/* order ticket */
+.chn-ticket{position:sticky;top:48px;margin-top:61px;display:flex;flex-direction:column;border:1px solid rgba(242,181,68,.35);border-radius:12px;background:linear-gradient(180deg,#14120a,#0d0d09);box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(242,181,68,.07);overflow:hidden;min-width:0}
+.chn-th{display:flex;justify-content:space-between;padding:12px 18px;font-size:10px;letter-spacing:.2em;color:var(--cmute);border-bottom:1px solid var(--line)}
+.chn-th b{color:var(--amber);font-weight:700}
+.chn-id{display:flex;gap:14px;align-items:center;padding:22px 18px 10px}
+.chn-id img,.chn-id .logo-ph{width:56px;height:56px;border-radius:14px;object-fit:cover;background:#1b1a14;box-shadow:0 0 0 1px var(--line);flex:none}
+.chn-id div{min-width:0}
+.chn-id h3{font-family:var(--serif);font-weight:800;font-size:30px;line-height:1;letter-spacing:-.01em;margin:0;overflow-wrap:anywhere}
+.chn-lane{display:flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:.08em;font-weight:600;margin-top:8px}
+.chn-lane i{width:8px;height:8px;border-radius:2px;flex:none}
+.chn-what{padding:8px 18px 18px;font-size:13px;line-height:1.6;color:rgba(236,231,220,.8)}
+.chn-px{padding:12px 18px 8px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.chn-px small{font-size:10px;letter-spacing:.16em;color:var(--cmute);display:block;margin-bottom:5px}
+.chn-px .chn-big{font-family:var(--serif);font-weight:700;font-size:28px;line-height:1.1}
+.chn-px .chn-big.chn-s{font-size:20px;text-align:right}
+.chn-stats{margin:12px 18px 0;border-top:1px solid var(--line)}
+.chn-stats .chn-r{display:flex;justify-content:space-between;gap:14px;padding:13px 0;font-size:12.5px;border-bottom:1px dashed rgba(236,231,220,.09)}
+.chn-stats .chn-r span{color:var(--cmute);font-size:10px;letter-spacing:.14em;align-self:center;flex:none}
+.chn-stats .chn-r b{font-weight:600;text-align:right;min-width:0;overflow-wrap:anywhere}
+.chn-sl{padding:22px 18px 0}
+.chn-sl small{font-size:10px;letter-spacing:.16em;color:var(--cmute);display:block;margin-bottom:12px}
+.chn-chips{display:flex;flex-wrap:wrap;gap:7px}
+.chn-chip{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:20px;padding:4px 10px 4px 4px;font-size:10.5px;color:rgba(236,231,220,.8);background:rgba(255,255,255,.02)}
+.chn-chip:hover{border-color:rgba(242,181,68,.55);color:var(--ink)}
+.chn-chip img,.chn-chip .logo-ph{width:18px;height:18px;border-radius:50%;object-fit:cover}
+.chn-refx{margin:18px 18px 0}
+.chn-go{margin:22px 18px 8px;min-height:64px;border-radius:8px;background:linear-gradient(180deg,#46e096,#2fbf7b);color:#04150c;font-weight:800;font-size:15px;letter-spacing:.14em;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 0 36px rgba(63,214,138,.35),inset 0 1px 0 rgba(255,255,255,.35);border:0}
+.chn-go:hover{filter:brightness(1.08)}
+.chn-go:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.chn-ts{display:flex;justify-content:space-between;gap:10px;padding:6px 18px 18px;font-size:9.5px;letter-spacing:.12em;color:var(--cmute)}
 @media (prefers-reduced-motion:no-preference){
-  .mtr-sn.cur .mtr-dot{animation:mtrPulse 1.5s ease-out infinite}
+  .chn-tab,.chn-chip,.chn-row::after,.chn-go{transition:background .15s,color .15s,border-color .15s,filter .15s}
 }
-@keyframes mtrPulse{0%{box-shadow:0 0 0 calc(var(--ds)*.14) var(--c),0 0 24px 5px color-mix(in srgb,var(--c) 55%,transparent),0 0 0 calc(var(--ds)*.14) color-mix(in srgb,var(--c) 70%,transparent)}100%{box-shadow:0 0 0 calc(var(--ds)*.14) var(--c),0 0 24px 5px color-mix(in srgb,var(--c) 55%,transparent),0 0 0 calc(var(--ds)*.9) transparent}}
-@keyframes mtrFlash{0%{opacity:0;transform:translate(-50%,6px) scale(.6)}18%{opacity:1;transform:translate(-50%,0) scale(1)}75%{opacity:1}100%{opacity:0;transform:translate(-50%,-6px) scale(1)}}
-/* mobile: every line becomes a vertical list */
+@media (min-width:1101px){
+  .chn-t{font-size:23px}
+  .chn-meta{gap:18px}
+}
+@media (max-width:1100px){
+  .chn{grid-template-columns:minmax(0,1fr)}
+  .chn-ticket{position:static;margin-top:0}
+}
 @media (max-width:759px){
-  .mtr{--u:6.2px;--ds:18px;--bh:9px;--lg:28px;--tw:30px;height:auto;gap:10px}
-  .mtr-led{margin:4px 4px 0;padding:11px 12px 10px;border-radius:12px}
-  .mtr-lw{gap:7px}
-  .mtr-hd{flex-wrap:wrap;gap:8px;min-height:0}
-  .mtr-hd h2{font-size:12.5px;letter-spacing:.1em}
-  .mtr-k{display:none}
-  .mtr-sp{display:none}
-  .mtr-hd{justify-content:space-between}
-  .mtr-sh{min-width:0;padding:6px 12px;font-size:11px}
-  .mtr-ls{flex:none;gap:8px}
-  .mtr-l,.mtr-l:first-child{display:block;flex:none;padding:10px 12px 6px 14px;overflow:visible}
-  .mtr-l::before{display:none}
-  .mtr-lh{width:auto;padding:0;flex-direction:row;gap:10px;margin-bottom:2px}
-  .mtr-lh p{display:none}
-  .mtr-top{flex:1}
-  .mtr-rd{width:30px;font-size:15px}
-  .mtr-tt{flex:1;flex-direction:row;align-items:center;justify-content:space-between;gap:8px}
-  .mtr-tt h3{font-size:13px;white-space:nowrap}
-  .mtr-n{font-size:10px;letter-spacing:.14em}
-  .mtr-tk{margin:0;padding:30px 0 4px;container-type:normal}
-  .mtr-bar{left:0;right:auto;width:var(--bh);top:36px;bottom:8px;height:auto;border-radius:3px}
-  .mtr-bar::after{display:none}
-  .mtr-pass{left:0;right:0;top:0;bottom:auto;width:auto;height:var(--pw,0px)}
-  .mtr-ch{display:none}
-  .mtr-sn{position:relative;left:auto;top:auto;bottom:auto;display:grid;grid-template-columns:28px minmax(0,1fr) auto;grid-template-areas:"lg lab chip" "lg sb chip";align-items:center;column-gap:11px;width:100%;height:46px;margin:0;padding:0 0 0 30px;text-align:left}
-  .mtr-dot{left:calc(var(--bh)/2);top:50%}
-  .mtr-xb{display:none}
-  .mtr-lab{position:static;grid-area:lab;transform:none;padding:0;align-self:end;font-size:14px;overflow:hidden;text-overflow:ellipsis}
-  .mtr-lg{position:static;grid-area:lg;margin:0;width:28px;height:28px}
-  .mtr-sb{position:static;grid-area:sb;transform:none;width:auto;max-width:none;text-align:left;align-self:start;margin-top:2px;font-size:9.5px;-webkit-line-clamp:1;display:block;white-space:nowrap;text-overflow:ellipsis}
-  .mtr-sn.nx .mtr-lab{color:var(--led)}
-  .mtr-chips{grid-area:chip;display:flex;gap:6px}
-  .mtr-chips i{display:none;align-items:center;gap:4px;font-style:normal;font-size:10px;font-weight:800;letter-spacing:.03em;white-space:nowrap;border-radius:99px;padding:3px 8px}
-  .mtr-chips i.x{display:flex;color:var(--gold);border:1.5px solid var(--gold);background:rgba(242,181,68,.1);padding:2px 8px 2px 4px}
-  .mtr-chips i.x .mtr-xi{width:14px;height:14px}
-  .mtr-sn.nx .mtr-chips i.n{display:flex;color:#0a0b09;background:var(--led)}
-  .mtr-tp{position:static;transform:none;height:auto;margin:0 0 4px 30px;padding:3px 10px 3px 5px;display:inline-flex;font-size:10.5px}
-  .mtr-tp .mtr-xi{width:14px;height:14px;min-width:0;min-height:0}
-  .mtr-sign{left:100%;bottom:auto;top:50%;transform:translateY(-50%);margin-left:6px;font-size:8px;background:var(--gold);color:#0a0b09;border-color:var(--gold);text-shadow:none}
-  .mtr-tf{top:auto;bottom:calc(100% + 2px);left:50%}
-  .mtr-card{width:min(300px,calc(100vw - 60px))}
+  .chn{--cols:92px 78px 176px 84px 138px}
+  .chn-tbl{min-width:620px}
+  .chn-grp .chn-gc,.chn-grp .chn-gp{grid-column:span 2}
+  .chn-row .chn-oi,.chn-row .chn-tok,.chn-col .chn-oi,.chn-col .chn-tok{display:none}
+  .chn-row .chn-mid{position:sticky;left:0;z-index:2;box-shadow:8px 0 10px -6px rgba(0,0,0,.7);padding-left:14px}
+  .chn-col .chn-c,.chn-grp .chn-gs{position:sticky;left:0;z-index:2}
+  .chn-col .chn-c{background:#14150f}
+  .chn-atm .chn-lab{grid-column:3}
+  .chn-atm .chn-lab span{letter-spacing:.06em;font-size:9.5px;padding:5px 8px}
+  .chn-atm .chn-tl.chn-tr,.chn-note,.chn-sp{display:none}
+  .chn-t{font-size:clamp(20px,6.4vw,30px)}
+  .chn-meta{gap:18px}
+  .chn-tabs{gap:6px}
+  .chn-tab{padding:8px 12px 7px}
 }
 
 /* 생태계 전체 (토큰 상태별) */
@@ -1448,7 +1430,7 @@ body.tg .eco-search{display:none}
     </section>
 
     <section data-blk="friends">
-      <div class="mtr" id="clients"></div>
+      <div class="chn" id="clients"></div>
     </section>
 
     <section data-blk="ecosystem">
@@ -1805,301 +1787,108 @@ function loop(now){
   raf = requestAnimationFrame(loop);
 }
 
-// ── Friends: OPSHNZ Options Metro · line strips ──
-// One station per friend, one strip per lane. A train driven by defidaniel tours every station;
-// transfers come only from real data (relations + "Powered by / Settles on" lineage).
-const MTR_COL = {trade:'#f2b544', earn:'#2fbf9b', bets:'#ff5fa2', vol:'#8b7bff'};
-const MTR_SPARE = ['#f2b544', '#2fbf9b', '#ff5fa2', '#8b7bff', '#6ec3ff'];
-const MTR_ORDER = {trade:['Joyride', 'Olive', 'Derive', 'Paradex', 'Aevo', 'Hypercall', 'Heat'], bets:['Dream', 'CallPut', 'Hunch', 'Tacticalls']};
-const MTR_DWELL = 2600, MTR_RIDE = 1200, MTR_HOP = 480, MTR_HOLD = 8000;
-const MTR_MQ = {rm:matchMedia('(prefers-reduced-motion: reduce)'), mob:matchMedia('(max-width: 759px)')};
-const MTR = {el:null, S:[], L:[], hub:null, from:[], cur:0, nxt:-1, phase:'dwell', paused:false, vis:false, armed:false, seq:0, tm:0, hov:-1, hovTm:0, cardI:-1, shareTm:0, io:null, ro:null, wired:false, msg:null, cols:null, ledSig:''};
-const mtrXI = (c = '#0a0b09') => `<svg viewBox="0 0 18 18" fill="none" stroke="${c}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11M11 3l3 3-3 3M15 12H4M7 9l-3 3 3 3"/></svg>`;
-const mtrTrainSvg = `<svg viewBox="0 0 64 48" aria-hidden="true"><defs><linearGradient id="mtrTg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff6dc"/><stop offset="1" stop-color="#f2b544"/></linearGradient></defs><rect x="3" y="5" width="58" height="32" rx="11" fill="url(#mtrTg)" stroke="#0a0b09" stroke-width="3"/><rect x="9" y="11" width="12" height="11" rx="3" fill="#0a0b09"/><rect x="26" y="11" width="12" height="11" rx="3" fill="#0a0b09"/><rect x="43" y="11" width="12" height="11" rx="3" fill="#0a0b09"/><rect x="3" y="27" width="58" height="4" fill="#0a0b09" opacity=".85"/><circle cx="14" cy="42" r="4" fill="#0a0b09"/><circle cx="50" cy="42" r="4" fill="#0a0b09"/><circle cx="55" cy="30" r="2" fill="#fff"/></svg>`;
-// 5x7 dot-matrix glyphs (lit pixels only; the unlit grid is a CSS radial-gradient)
-const MTR_GLYPH = {
-  A:['.###.','#...#','#...#','#####','#...#','#...#','#...#'], B:['####.','#...#','#...#','####.','#...#','#...#','####.'],
-  C:['.###.','#...#','#....','#....','#....','#...#','.###.'], D:['####.','#...#','#...#','#...#','#...#','#...#','####.'],
-  E:['#####','#....','#....','####.','#....','#....','#####'], F:['#####','#....','#....','####.','#....','#....','#....'],
-  G:['.###.','#...#','#....','#.###','#...#','#...#','.###.'], H:['#...#','#...#','#...#','#####','#...#','#...#','#...#'],
-  I:['.###.','..#..','..#..','..#..','..#..','..#..','.###.'], J:['..###','...#.','...#.','...#.','...#.','#..#.','.##..'],
-  K:['#...#','#..#.','#.#..','##...','#.#..','#..#.','#...#'], L:['#....','#....','#....','#....','#....','#....','#####'],
-  M:['#...#','##.##','#.#.#','#.#.#','#...#','#...#','#...#'], N:['#...#','##..#','#.#.#','#..##','#...#','#...#','#...#'],
-  O:['.###.','#...#','#...#','#...#','#...#','#...#','.###.'], P:['####.','#...#','#...#','####.','#....','#....','#....'],
-  Q:['.###.','#...#','#...#','#...#','#.#.#','#..#.','.##.#'], R:['####.','#...#','#...#','####.','#.#..','#..#.','#...#'],
-  S:['.####','#....','#....','.###.','....#','....#','####.'], T:['#####','..#..','..#..','..#..','..#..','..#..','..#..'],
-  U:['#...#','#...#','#...#','#...#','#...#','#...#','.###.'], V:['#...#','#...#','#...#','#...#','#...#','.#.#.','..#..'],
-  W:['#...#','#...#','#...#','#.#.#','#.#.#','##.##','#...#'], X:['#...#','#...#','.#.#.','..#..','.#.#.','#...#','#...#'],
-  Y:['#...#','#...#','.#.#.','..#..','..#..','..#..','..#..'], Z:['#####','....#','...#.','..#..','.#...','#....','#####'],
-  0:['.###.','#...#','#..##','#.#.#','##..#','#...#','.###.'], 1:['..#..','.##..','..#..','..#..','..#..','..#..','.###.'],
-  2:['.###.','#...#','....#','...#.','..#..','.#...','#####'], 3:['#####','...#.','..#..','...#.','....#','#...#','.###.'],
-  4:['...#.','..##.','.#.#.','#..#.','#####','...#.','...#.'], 5:['#####','#....','####.','....#','....#','#...#','.###.'],
-  6:['.###.','#....','#....','####.','#...#','#...#','.###.'], 7:['#####','....#','...#.','..#..','.#...','.#...','.#...'],
-  8:['.###.','#...#','#...#','.###.','#...#','#...#','.###.'], 9:['.###.','#...#','#...#','.####','....#','....#','.###.'],
-  ':':['.','.','#','.','#','.','.'], '·':['...','...','...','.#.','...','...','...'], '-':['.....','.....','.....','#####','.....','.....','.....'],
-  '.':['.','.','.','.','.','.','#'], ' ':['...','...','...','...','...','...','...'],
-  '>':['.#...','..#..','...#.','....#','...#.','..#..','.#...']
-};
-const mtrGlyph = ch => MTR_GLYPH[ch] || MTR_GLYPH[' '];
-const mtrCols = t => [...t].reduce((n, ch) => n + mtrGlyph(ch)[0].length + 1, 0);
-const mtrReduced = () => MTR_MQ.rm.matches;
-const mtrMobile = () => MTR_MQ.mob.matches;
-const mtrCanRun = () => MTR.vis && !document.hidden && !MTR.paused && !mtrReduced() && MTR.S.length > 1;
-const mtrOI = p => { const o = SNAP.fund && SNAP.fund.oi && SNAP.fund.oi.venues && SNAP.fund.oi.venues[p.name]; return o && o.total > 0 ? o.total : null; };
-const mtrSub = (p, hub) => hub && p.vol30 > 0 ? 'Interchange · ' + usd(p.vol30) : hub ? 'Interchange'
-  : p.vol30 > 0 ? 'VOL ' + usd(p.vol30) : (p.status || p.points || p.lineage || (p.stage === 'post' ? 'Live token' : 'Pre-TGE'));
-// Only real transfers: a friend that settles on / is powered by another friend (snapshot relations + lineage)
-function mtrTransfers(){
-  const core = new Map(clients().map(p => [p.name, p])), into = new Map();
-  const add = (a, b) => { if (a === b || !core.has(a) || !core.has(b)) return; if (!into.has(b)) into.set(b, []); if (!into.get(b).includes(a)) into.get(b).push(a); };
-  for (const r of (SNAP.relations || BOOT.config.relations || [])) if (r) add(r.a, r.b);
-  for (const p of core.values()) { const m = /^(powered by|settles on|built on)\s+(.+)$/i.exec((p.lineage || '').trim()); if (m) add(p.name, m[2].trim()); }
-  let hub = null; for (const [b, a] of into) if (!hub || a.length > into.get(hub).length) hub = b;
-  return hub ? {hub, from:into.get(hub)} : {hub:null, from:[]};
+// ── Friends: the Friends Chain ──
+// A friends list laid out like an options chain: CALLS = activity, strike = the friend, PUTS = what it is. Rows sorted by 30d volume.
+// An order ticket on the right shows the selected friend. Everything comes from clients(), BOOT.config.lanes and the snapshot.
+const CH_COL = {trade:'#f2b544', earn:'#2fbf9b', bets:'#ff5fa2', vol:'#8b7bff'};
+const CH_SPARE = ['#f2b544', '#2fbf9b', '#ff5fa2', '#8b7bff', '#6ec3ff'];
+const CH = {sel:null, lane:'all', m:null, wired:false};
+const chOI = p => { const o = SNAP.fund && SNAP.fund.oi && SNAP.fund.oi.venues && SNAP.fund.oi.venues[p.name]; return o && o.total > 0 ? o.total : null; };
+const chDir = v => v == null || isNaN(v) ? '' : v > .05 ? 'chn-up' : v < -.05 ? 'chn-dn' : '';
+const chCls = v => ({'chn-up':'chn-cu', 'chn-dn':'chn-cd'}[chDir(v)] || '');
+const chDot = c => `<i style="background:${c}"></i>`;
+function chModel(){
+  const pool = clients(), seen = new Set();
+  const lanes = (BOOT.config.lanes || []).map((l, k) => {
+    const ps = (l.members || []).map(n => pool.find(p => p.name === n)).filter(p => p && !seen.has(p.name) && seen.add(p.name));
+    return {id:l.id || 'l' + k, title:l.title || '', code:String(l.id || (l.title || '').split(' ')[0]).toUpperCase(), color:CH_COL[l.id] || CH_SPARE[k % CH_SPARE.length], ps};
+  }).filter(l => l.ps.length);
+  const more = {id:'more', title:'More friends', code:'MORE', color:'#8f8b80', ps:[]};
+  const laneOf = new Map(); lanes.forEach(l => l.ps.forEach(p => laneOf.set(p.name, l)));
+  const all = pool.map(p => ({p, lane:laneOf.get(p.name) || more, vol:p.vol30 > 0 ? p.vol30 : null, oi:chOI(p)}))
+    .sort((a, b) => (b.vol ?? -1) - (a.vol ?? -1));
+  const maxL = Math.log10(Math.max(1e5, ...all.map(r => r.vol || 0)));
+  return {lanes, all, maxL, nVol:all.filter(r => r.vol != null).length};
 }
-function mtrModel(){
-  const pool = clients(), seen = new Set(), L = [], S = [], tr = mtrTransfers();
-  const lanes = (BOOT.config.lanes || []).map(l => {
-    const mem = l.members || [], pref = MTR_ORDER[l.id] || [];
-    const names = [...pref.filter(n => mem.includes(n)), ...mem.filter(n => !pref.includes(n))];
-    return {id:l.id, title:l.title, sub:l.sub || '', ps:names.map(n => pool.find(p => p.name === n)).filter(p => p && !seen.has(p.name) && seen.add(p.name))};
+const chVisible = () => CH.lane === 'all' ? CH.m.all : CH.m.all.filter(r => r.lane.id === CH.lane);
+function chRowsHtml(){
+  const rows = chVisible(), m = CH.m, nData = rows.filter(r => r.vol != null).length;
+  let h = '';
+  rows.forEach((r, i) => {
+    const p = r.p, itm = r.vol != null;
+    if (i === nData) h += `<div class="chn-atm"><div class="chn-dash"></div><span class="chn-tl">▲ ITM</span><span class="chn-tl chn-tr">ITM ▼</span><div class="chn-lab"><span>▸ YOU ARE HERE · OPSHNZ</span></div></div>`;
+    const a = itm ? (i < 2 ? .30 : i < 4 ? .19 : .09) : .05 + (i - nData) * .011;
+    const bar = itm ? Math.max(6, Math.min(100, (Math.log10(r.vol) - 4) / (m.maxL - 4) * 100)) : 0;
+    h += `<div class="chn-g chn-row ${itm ? 'chn-itm' : 'chn-otm'}${p.name === CH.sel ? ' chn-sel' : ''}" role="button" tabindex="0" aria-pressed="${p.name === CH.sel}" data-n="${esc(p.name)}" style="--a:${a.toFixed(3)}">
+      <div class="chn-cc chn-r chn-vol">${itm ? `<div class="chn-bar" style="width:${bar.toFixed(1)}%" title="bar = 30d volume, log scale"></div>` : ''}<span class="${itm ? '' : 'chn-nil'}">${usd(r.vol)}</span></div>
+      <div class="chn-cc chn-r chn-oi"><span class="${r.oi != null ? '' : 'chn-nil'}">${usd(r.oi)}</span></div>
+      <div class="chn-cc chn-r chn-ch ${chDir(p.ch24)}"><span class="${chCls(p.ch24) || 'chn-nil'}">${pctTxt(p.ch24)}</span></div>
+      <div class="chn-mid">${logo(p)}<span class="chn-nm">${esc(p.name)}</span></div>
+      <div class="chn-pp chn-l chn-rl" style="color:${r.lane.color}">${chDot(r.lane.color)}${esc(r.lane.code)}</div>
+      <div class="chn-pp chn-l chn-st">${p.status ? `<span>${esc(p.status)}</span>` : '<span class="chn-nil">—</span>'}</div>
+      <div class="chn-pp chn-r chn-tok${p.ticker ? '' : ' chn-nil'}">${esc(p.ticker || '—')}</div>
+    </div>`;
   });
-  const rest = pool.filter(p => !seen.has(p.name)); if (rest.length) lanes.push({id:'more', title:'More friends', sub:'', ps:rest});
-  lanes.filter(l => l.ps.length).forEach(l => {
-    const k = L.length; L.push({...l, k, n:l.ps.length, letter:String.fromCharCode(65 + k), color:MTR_COL[l.id] || MTR_SPARE[k % MTR_SPARE.length]});
-    l.ps.forEach((p, pos) => S.push({i:S.length, k, pos, p, name:p.name, hub:p.name === tr.hub, xf:tr.from.includes(p.name)}));
-  });
-  Object.assign(MTR, {S, L, hub:tr.hub, from:tr.from});
+  if (nData === rows.length && rows.length) h += `<div class="chn-atm"><div class="chn-dash"></div><span class="chn-tl">▲ ITM</span><span class="chn-tl chn-tr">ITM ▼</span><div class="chn-lab"><span>▸ YOU ARE HERE · OPSHNZ</span></div></div>`;
+  return h;
 }
-// ── LED text ──
-const mtrMsg = (kind, s) => {
-  const L = MTR.L[s.k];
-  if (kind === 'xfer') return {a:('Transfer to line ' + L.letter).toUpperCase(), b:L.title.toUpperCase(), sep:' · '};
-  if (kind === 'next') return {a:'NEXT STATION:', b:s.name.toUpperCase() + ' >>', sep:' '};
-  return {a:'NOW AT:', b:s.name.toUpperCase(), sep:' '};
-};
-function mtrLedCols(){
-  const all = [];
-  MTR.S.forEach(s => { all.push(mtrMsg('now', s), mtrMsg('next', s)); });
-  MTR.S.filter(s => s.pos === 0).forEach(s => all.push(mtrMsg('xfer', s)));
-  return {one:Math.max(...all.map(m => mtrCols(m.a + m.sep + m.b))), a:Math.max(...all.map(m => mtrCols(m.a))), b:Math.max(...all.map(m => mtrCols(m.b)))};
+function chTicketHtml(){
+  const r = CH.m.all.find(x => x.p.name === CH.sel); if (!r) return '';
+  const p = r.p, L = r.lane, dash = '—';
+  const row = (k, v, c) => `<div class="chn-r"><span>${k}</span><b class="${c || ''}">${v}</b></div>`;
+  const same = CH.m.all.filter(x => x.lane === L && x !== r);
+  return `<div class="chn-th"><span>ORDER TICKET</span><b>${esc(p.ticker || '')}</b></div>
+    <div class="chn-id">${logo(p)}<div><h3>${esc(p.name)}</h3><div class="chn-lane" style="color:${L.color}">${chDot(L.color)}${esc(L.code)} · ${esc(L.title.toUpperCase())}</div></div></div>
+    <div class="chn-what">${esc(p.what || '')}</div>
+    <div class="chn-px"><div><small>PRICE</small><div class="chn-big">${p.price != null ? price(p.price) : dash}</div></div><div><small style="text-align:right">24H</small><div class="chn-big chn-s ${chCls(p.ch24)}">${pctTxt(p.ch24)}</div></div></div>
+    <div class="chn-stats">${row('VOL 30D', usd(r.vol))}${row('OPEN INTEREST', usd(r.oi))}${row('7D', pctTxt(p.ch7), chCls(p.ch7))}${row('TOKEN', esc(p.ticker || dash))}${row('STATUS', esc(p.status || dash))}${row('LINEAGE', esc(p.lineage || dash))}</div>
+    ${same.length ? `<div class="chn-sl"><small>SAME LANE · ${esc(L.code)}</small><div class="chn-chips">${same.map(x => `<button type="button" class="chn-chip" data-n="${esc(x.p.name)}">${logo(x.p)}<span>${esc(x.p.name)}</span></button>`).join('')}</div></div>` : ''}
+    ${refBox(refOf(p.name)) ? `<div class="chn-refx">${refBox(refOf(p.name))}</div>` : ''}
+    <a class="chn-go" href="${deepHref(p)}">OPEN DEEP DIVE <span style="font-size:18px">→</span></a>
+    <div class="chn-ts"><span>${esc(p.name.toUpperCase())} · ${esc(p.ticker || dash)}</span><span>LANE · ${esc(L.code)}</span></div>`;
 }
-function mtrLcd(text, fill, op, p, W, off){
-  const nc = Math.floor(W / p); let lit = '', col = off;
-  for (const seg of text) for (const ch of seg.t) {
-    const g = mtrGlyph(ch);
-    for (let c = 0; c < g[0].length; c++, col++) for (let r = 0; r < 7; r++) if (g[r][c] === '#' && col < nc) lit += `<circle cx="${((col + .5) * p).toFixed(2)}" cy="${((r + .5) * p).toFixed(2)}" r="${(p * .38).toFixed(2)}" fill="${seg.fill}" opacity="${seg.op}"/>`;
-    col++;
-  }
-  return `<div class="mtr-lcd" style="--p:${p}px;width:${nc * p}px;height:${7 * p}px"><svg width="${nc * p}" height="${7 * p}" viewBox="0 0 ${nc * p} ${7 * p}"><g class="mtr-lit">${lit}</g></svg></div>`;
+function chSelect(name){
+  CH.sel = name;
+  document.querySelectorAll('#chnRows .chn-row').forEach(el => { const on = el.dataset.n === name; el.classList.toggle('chn-sel', on); el.setAttribute('aria-pressed', on); });
+  $('chnTicket').innerHTML = chTicketHtml();
 }
-function mtrLedPaint(){
-  const lw = MTR.el && MTR.el.querySelector('.mtr-lw'); if (!lw || !MTR.cols) return;
-  const W = Math.floor(lw.clientWidth), H = MTR.el.getBoundingClientRect().height; if (W < 60 || H < 50) return;
-  const m = MTR.msg || mtrMsg('now', MTR.S[MTR.cur]), mob = mtrMobile(), c = MTR.cols;
-  const dim = {fill:'#ff9a1a', op:.78}, hot = {fill:'#ffc844', op:1};
-  const sig = [m.a, m.b, W, Math.round(H), mob].join('|'); if (sig === MTR.ledSig) return; MTR.ledSig = sig;
-  let html;
-  if (mob) {
-    const p1 = Math.floor(Math.min(4.4, W / (c.a + 3)) * 10) / 10, p2 = Math.floor(Math.min(7.6, W / (c.b + 3)) * 10) / 10;
-    html = mtrLcd([{t:m.a, ...dim}], 0, 0, p1, W, 1) + mtrLcd([{t:m.b, ...hot}], 0, 0, p2, W, 1);
-  } else {
-    const p = Math.floor(Math.min(Math.max(4, Math.min(8, H / 100 * .95)), W / (c.one + 4)) * 10) / 10;
-    html = mtrLcd([{t:m.a + m.sep, ...dim}, {t:m.b, ...hot}], 0, 0, p, W, 2);
-  }
-  lw.innerHTML = html;
-  lw.setAttribute('aria-label', (m.a + m.sep + m.b).replace(/>>/, '').trim());
-}
-function mtrLed(kind, s){ MTR.msg = mtrMsg(kind, s); mtrLedPaint(); }
-// ── markup ──
-function mtrBuild(el){
-  const {L, S} = MTR;
-  const strips = L.map(l => {
-    const sts = S.filter(s => s.k === l.k), x = pos => ((pos + .5) / l.n * 100).toFixed(3) + '%';
-    return `<section class="mtr-l" style="--c:${l.color};--n:${l.n}" data-k="${l.k}" aria-label="Line ${l.letter} · ${esc(l.title)}">
-      <div class="mtr-lh"><div class="mtr-top"><span class="mtr-rd">${l.letter}</span><div class="mtr-tt"><h3>${esc(l.title)}</h3><b class="mtr-n">${l.n} STATION${l.n === 1 ? '' : 'S'}</b></div></div>${l.sub ? `<p>${esc(l.sub)}</p>` : ''}</div>
-      <div class="mtr-tk"><div class="mtr-bar"><i class="mtr-pass"></i></div>
-        ${sts.slice(1).map(s => `<i class="mtr-ch" data-p="${s.pos - 1}" style="--x:${((s.pos) / l.n * 100).toFixed(3)}%" aria-hidden="true">›</i>`).join('')}
-        ${sts.map(s => { const p = s.p, sub = mtrSub(p, s.hub);
-          return `<button class="mtr-sn${s.hub ? ' hub' : ''}${s.xf ? ' xf' : ''}" type="button" data-i="${s.i}" style="--x:${x(s.pos)}" aria-label="${esc(p.name)} — ${esc(sub)} — line ${l.letter}">
-            <i class="mtr-dot"></i>${s.xf ? `<span class="mtr-xb" title="Transfer · ${esc(MTR.hub)}">${mtrXI()}</span>` : ''}
-            <span class="mtr-lab">${esc(p.name)}</span><span class="mtr-lg">${logo(p)}</span><span class="mtr-sb" title="${esc(sub)}">${esc(sub)}</span>
-            <span class="mtr-chips">${s.xf ? `<i class="x"><span class="mtr-xi">${mtrXI()}</span>${esc(MTR.hub)}</i>` : ''}<i class="n">NEXT</i></span></button>${s.hub && MTR.from.length ? `<div class="mtr-tp" style="--x:${x(s.pos)}"><span class="mtr-xi">${mtrXI()}</span>${esc(MTR.from.join(' · '))}</div>` : ''}`; }).join('')}
-      </div></section>`;
-  }).join('');
-  const pp = `<button class="mtr-pp" type="button" aria-label="Pause the tour" title="Pause / resume the tour"><svg class="ps" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><rect x="2" y="1.5" width="3" height="9" rx=".6"/><rect x="7" y="1.5" width="3" height="9" rx=".6"/></svg><svg class="pl" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M3 1.6v8.8L10.4 6z"/></svg></button>`;
-  el.innerHTML = `<div class="mtr-led" role="img" aria-label="Next station display"><div class="mtr-lw"></div>${pp}</div>
-    <div class="mtr-hd"><h2>OPSHNZ <b>OPTIONS</b> METRO · LINE STRIPS</h2><span class="mtr-sp"></span>${MTR.hub ? `<span class="mtr-k"><span class="mtr-xi">${mtrXI()}</span>Transfer · settles on ${esc(MTR.hub)}</span>` : ''}<button class="mtr-sh" type="button">Share your station ↗</button></div>
-    <div class="mtr-ls">${strips}<div class="mtr-tr" aria-hidden="true"><div class="mtr-sign">0XDEFIDANIEL</div><div class="mtr-car">${mtrTrainSvg}</div><div class="mtr-tf">⇄ TRANSFER</div></div><div class="mtr-card" aria-label="Station card"></div></div>`;
-  MTR.tr = el.querySelector('.mtr-tr'); MTR.car = el.querySelector('.mtr-car'); MTR.card = el.querySelector('.mtr-card'); MTR.ls = el.querySelector('.mtr-ls');
-}
-// ── geometry (everything measured from the DOM, relative to .mtr-ls) ──
-const mtrBtn = i => MTR.ls.querySelector(`.mtr-sn[data-i="${i}"]`);
-function mtrMeasure(i){
-  const s = MTR.S[i], b = mtrBtn(i), lane = b.closest('.mtr-l'), bar = lane.querySelector('.mtr-bar'), O = MTR.ls.getBoundingClientRect(),
-    br = b.getBoundingClientRect(), ba = bar.getBoundingClientRect(), lr = lane.getBoundingClientRect(), tk = lane.querySelector('.mtr-tk').getBoundingClientRect(), mob = mtrMobile();
-  const ds = b.querySelector('.mtr-dot').offsetWidth;
-  return {s, mob, r:ds * .73, cx:(mob ? ba.left + ba.width / 2 : br.left + br.width / 2) - O.left, cy:(mob ? br.top + br.height / 2 : ba.top + ba.height / 2) - O.top,
-    row:{t:br.top - O.top, b:br.bottom - O.top}, strip:{l:lr.left - O.left, t:lr.top - O.top, r:lr.right - O.left, b:lr.bottom - O.top}, tkL:tk.left - O.left, tkW:tk.width, barT:ba.top - O.top};
-}
-function mtrTrainXY(m){
-  const tw = MTR.tr.offsetWidth, th = MTR.tr.offsetHeight;
-  return m.mob ? {x:m.cx - tw / 2, y:m.cy - m.r - 2 - th, w:tw, h:th} : {x:m.cx - m.r - 4 - tw, y:m.cy - th * .4375, w:tw, h:th};
-}
-function mtrTrainTo(x, y, ms, face){
-  MTR.tr.style.transitionDuration = ms + 'ms';
-  MTR.tr.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0)`;
-  if (face) MTR.car.style.transform = `scaleX(${face})`;
-}
-// the part of a lane the train has already covered (px along the track)
-function mtrPass(k, px, ms){
-  MTR.ls.querySelectorAll('.mtr-pass').forEach(e => {
-    const on = +e.closest('.mtr-l').dataset.k === k;
-    e.style.transitionDuration = (ms == null ? 0 : ms) + 'ms'; e.style.setProperty('--pw', on ? Math.max(0, px).toFixed(1) + 'px' : '0px');
-  });
-}
-const mtrPassPx = m => m.mob ? m.cy - m.barT : m.cx - m.tkL - m.r - 4 - MTR.tr.offsetWidth / 2;
-// ── paint state classes for the current phase ──
-function mtrPaint(){
-  const {S} = MTR, cs = S[MTR.cur]; if (!cs) return;
-  const mv = MTR.phase === 'move', nx = mv ? S[MTR.nxt] : null, ref = nx && nx.k === cs.k ? nx : cs, incl = mv && ref === cs;
-  const past = s => s.k === ref.k && (incl ? s.pos <= ref.pos : s.pos < ref.pos);
-  MTR.ls.querySelectorAll('.mtr-sn').forEach(b => { const s = S[+b.dataset.i];
-    b.classList.toggle('cur', !mv && s === cs); b.classList.toggle('nx', !!nx && s === nx); b.classList.toggle('past', past(s) && s !== nx);
-    if (!mv && s === cs) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); });
-  MTR.ls.querySelectorAll('.mtr-ch').forEach(c => { const k = +c.closest('.mtr-l').dataset.k; c.classList.toggle('past', k === ref.k && +c.dataset.p < (incl ? ref.pos : ref.pos)); });
-  MTR.el.classList.toggle('paused', MTR.paused);
-  const pp = MTR.el.querySelector('.mtr-pp'); if (pp) { pp.setAttribute('aria-label', MTR.paused ? 'Resume the tour' : 'Pause the tour'); pp.setAttribute('aria-pressed', String(MTR.paused)); }
-  mtrCardSync();
-}
-// ── station card ──
-function mtrChips(p){
-  const c = [], oi = mtrOI(p);
-  if (p.vol30 > 0) c.push(['VOL 30D', esc(usd(p.vol30))]);
-  if (oi) c.push(['OI', esc(usd(oi))]);
-  if (p.price != null && p.ch24 != null) c.push(['24H', `${esc(price(p.price))} ${pct(p.ch24)}`]);
-  if (!c.length) c.push(['STATUS', esc(p.status || (p.stage === 'post' ? 'Live token' : 'Pre-TGE'))]);
-  return c.slice(0, 2);
-}
-function mtrCardHtml(s){
-  const p = s.p, L = MTR.L[s.k];
-  return `<div class="mtr-ch2"><span class="mtr-cl">${logo(p)}</span><div class="mtr-ct"><b>${esc(p.name)}</b><small>${esc(p.ticker ? '$' + p.ticker : (p.status || (p.stage === 'post' ? 'Live token' : 'Pre-TGE')))}</small></div><span class="mtr-cd-l">LINE ${L.letter}</span></div>
-    <p>${esc(p.what || '')}</p>
-    <div class="mtr-cf">${mtrChips(p).map(c => `<span><em>${esc(c[0])}</em><b>${c[1]}</b></span>`).join('')}<a href="${deepHref(p)}">Deep dive →</a></div>`;
-}
-function mtrShowCard(i){
-  const card = MTR.card; if (!card) return;
-  if (i < 0) { card.classList.remove('on'); return; }
-  const s = MTR.S[i]; if (!MTR.ls.offsetWidth) return;
-  if (MTR.cardI !== i) { card.innerHTML = mtrCardHtml(s); MTR.cardI = i; }
-  card.style.setProperty('--c', MTR.L[s.k].color);
-  const m = mtrMeasure(i), w = card.offsetWidth, h = card.offsetHeight, st = m.strip, tr = mtrTrainXY(m), clamp = (v, a, b) => Math.max(a, Math.min(b, v));
-  let x, y;
-  if (m.mob) { x = st.l + (st.r - st.l - w) / 2; y = m.row.b + 4; if (y + h > st.b - 4) y = m.row.t - h - 4; }
-  else {
-    const here = i === MTR.cur && MTR.phase === 'dwell', at = MTR.S[MTR.cur] && mtrMeasure(MTR.cur), tn = at && MTR.phase === 'dwell' && at.s.k === s.k ? mtrTrainXY(at) : null;
-    const hit = cx => tn && cx < tn.x + tn.w + 4 && cx + w > tn.x - 4;       // keep the card off the parked train
-    const R = m.cx + m.r + 14, Lf = (here ? tr.x - 8 : m.cx - m.r - 14) - w;
-    x = R + w <= st.r - 6 && !hit(R) ? R : Lf >= st.l + 6 && !hit(Lf) ? Lf : R + w > st.r - 6 ? Lf : R;
-    y = m.cy - h / 2;
-  }
-  x = clamp(x, st.l + 6, st.r - w - 6); y = clamp(y, st.t + 5, st.b - h - 5);
-  card.style.left = x.toFixed(1) + 'px'; card.style.top = y.toFixed(1) + 'px'; card.classList.add('on');
-}
-function mtrCardSync(){ mtrShowCard(MTR.hov >= 0 ? MTR.hov : (MTR.phase === 'dwell' ? MTR.cur : -1)); }
-// ── travel ──
-const mtrWait = (ms, t) => new Promise(r => setTimeout(() => r(MTR.seq === t), ms));
-function mtrPlace(i){
-  if (!MTR.ls || !MTR.ls.offsetWidth) return;
-  const m = mtrMeasure(i), t = mtrTrainXY(m);
-  mtrTrainTo(t.x, t.y, 0); mtrPass(m.s.k, mtrPassPx(m), 0);
-  void MTR.tr.offsetWidth;
-}
-function mtrSchedule(ms){
-  clearTimeout(MTR.tm); MTR.armed = false;
-  if (!mtrCanRun()) return;
-  MTR.armed = true;
-  MTR.tm = setTimeout(() => { MTR.armed = false; if (mtrCanRun() && MTR.phase === 'dwell') mtrGo((MTR.cur + 1) % MTR.S.length, false); }, ms);
-}
-function mtrSync(){
-  if (mtrCanRun() && MTR.phase === 'dwell' && !MTR.armed) mtrSchedule(1400);
-  else if (!mtrCanRun() && MTR.armed) { clearTimeout(MTR.tm); MTR.armed = false; }
-}
-async function mtrGo(to, manual){
-  const S = MTR.S, t = ++MTR.seq; clearTimeout(MTR.tm); MTR.armed = false;
-  if (!S[to] || !MTR.ls.offsetWidth) return;
-  if (mtrReduced()) { MTR.cur = to; MTR.phase = 'dwell'; MTR.nxt = -1; MTR.msg = null; mtrLed('now', S[to]); mtrPaint(); mtrPlace(to); return; }
-  const from = S[MTR.cur], dest = S[to];
-  if (to === MTR.cur && MTR.phase === 'dwell') { if (manual) mtrSchedule(MTR_HOLD); return; }
-  const mf = mtrMeasure(from.i), md = mtrMeasure(to), tf = mtrTrainXY(mf), td = mtrTrainXY(md), cross = from.k !== dest.k;
-  MTR.phase = 'move'; MTR.nxt = to; mtrLed(cross ? 'xfer' : 'next', cross ? S.find(s => s.k === dest.k && s.pos === 0) : dest); mtrPaint();
-  if (cross) {
-    MTR.tr.classList.remove('fl'); void MTR.tr.offsetWidth; MTR.tr.classList.add('fl');
-    mtrPass(from.k, mf.tkW, 450);
-    const dx = td.x - tf.x, hop = md.mob || Math.abs(dx) < 2 ? MTR_HOP * 1.7 : MTR_HOP;
-    mtrTrainTo(tf.x, td.y, hop, dx < 0 ? -1 : 1);
-    if (!await mtrWait(hop + 60, t)) return;
-    if (!md.mob && Math.abs(dx) >= 2) { mtrPass(dest.k, 0, 0); void MTR.tr.offsetWidth; mtrTrainTo(td.x, td.y, MTR_RIDE, dx < 0 ? -1 : 1); mtrPass(dest.k, mtrPassPx(md), MTR_RIDE); if (!await mtrWait(MTR_RIDE + 50, t)) return; }
-    else mtrPass(dest.k, mtrPassPx(md), 0);
-  } else {
-    const hops = Math.abs(dest.pos - from.pos), ms = MTR_RIDE + Math.min(900, (hops - 1) * 180);
-    mtrTrainTo(td.x, td.y, ms, md.mob ? 0 : (td.x < tf.x ? -1 : 1)); mtrPass(dest.k, mtrPassPx(md), ms);
-    if (!await mtrWait(ms + 50, t)) return;
-  }
-  MTR.cur = to; MTR.nxt = -1; MTR.phase = 'dwell'; mtrLed('now', dest); mtrPaint();
-  mtrSchedule(manual ? MTR_HOLD : MTR_DWELL);
-}
-// full layout pass: LED, train, pass-bar and card (on resize / when the section becomes visible)
-function mtrLayout(){
-  if (!MTR.el || !MTR.S.length) return;
-  mtrLedPaint();
-  if (MTR.phase === 'dwell') { mtrPlace(MTR.cur); mtrCardSync(); }
-}
-function mtrReset(){
-  if (!MTR.el || !MTR.S.length) return;
-  MTR.seq++; clearTimeout(MTR.tm); MTR.armed = false; MTR.phase = 'dwell'; MTR.nxt = -1; MTR.hov = -1; MTR.cardI = -1; MTR.ledSig = '';
-  if (mtrReduced()) { const h = MTR.S.findIndex(s => s.hub); MTR.cur = h >= 0 ? h : 0; }
-  MTR.msg = mtrMsg('now', MTR.S[MTR.cur]); MTR.tr.classList.remove('fl');
-  mtrPaint(); mtrLayout(); mtrSync();
-}
-async function mtrShare(btn){
-  const s = MTR.S[MTR.cur]; if (!s) return;
-  const url = location.origin + location.pathname + deepHref(s.p);
-  try { await navigator.clipboard.writeText(url); }
-  catch { const ta = document.createElement('textarea'); ta.value = url; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;left:-9999px;top:0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch {} ta.remove(); }
-  btn.textContent = 'Copied ✓'; btn.classList.add('ok'); clearTimeout(MTR.shareTm);
-  MTR.shareTm = setTimeout(() => { btn.textContent = 'Share your station ↗'; btn.classList.remove('ok'); }, 1400);
-}
-function mtrWire(el){
-  if (MTR.wired) return; MTR.wired = true;
-  const leave = () => { clearTimeout(MTR.hovTm); MTR.hovTm = setTimeout(() => { MTR.hov = -1; mtrCardSync(); }, 220); };
-  const hit = t => t.closest && (t.closest('.mtr-sn') || t.closest('.mtr-card'));
-  el.addEventListener('click', e => {
-    const b = e.target.closest('.mtr-sn'); if (b) { mtrGo(+b.dataset.i, true); return; }
-    const pp = e.target.closest('.mtr-pp'); if (pp) { MTR.paused = !MTR.paused; mtrPaint(); if (MTR.paused) mtrSync(); else if (MTR.phase === 'dwell') mtrSchedule(900); return; }
-    const sh = e.target.closest('.mtr-sh'); if (sh) mtrShare(sh);
-  });
-  el.addEventListener('pointerover', e => { if (e.pointerType === 'touch') return; const b = e.target.closest('.mtr-sn'); if (b) { clearTimeout(MTR.hovTm); MTR.hov = +b.dataset.i; mtrCardSync(); } else if (e.target.closest('.mtr-card')) clearTimeout(MTR.hovTm); });
-  el.addEventListener('pointerout', e => { if (e.pointerType === 'touch' || !hit(e.target) || hit(e.relatedTarget || document.body)) return; leave(); });
-  el.addEventListener('focusin', e => { const b = e.target.closest('.mtr-sn'); if (b) { clearTimeout(MTR.hovTm); MTR.hov = +b.dataset.i; mtrCardSync(); } });
-  el.addEventListener('focusout', e => { if (hit(e.target) && !hit(e.relatedTarget || document.body)) leave(); });
-  document.addEventListener('visibilitychange', mtrSync);
-  MTR_MQ.rm.addEventListener('change', mtrReset);
-  MTR_MQ.mob.addEventListener('change', () => { MTR.ledSig = ''; mtrLayout(); });
+function chLane(id){
+  CH.lane = id;
+  document.querySelectorAll('#chnTabs .chn-tab').forEach(b => { const on = b.dataset.l === id; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); });
+  const rows = chVisible();
+  if (rows.length && !rows.some(r => r.p.name === CH.sel)) CH.sel = rows[0].p.name;
+  $('chnRows').innerHTML = chRowsHtml();
+  $('chnTicket').innerHTML = chTicketHtml();
 }
 function renderClients(){
   const el = $('clients'); if (!el) return;
-  const keep = MTR.S[MTR.cur] && MTR.S[MTR.cur].name;
-  MTR.seq++; clearTimeout(MTR.tm); clearTimeout(MTR.hovTm); MTR.armed = false;
-  if (MTR.io) MTR.io.disconnect(); if (MTR.ro) MTR.ro.disconnect();
-  MTR.el = el; mtrModel();
-  if (!MTR.S.length) { el.innerHTML = ''; return; }
-  const k = MTR.S.findIndex(s => s.name === keep); MTR.cur = k >= 0 ? k : 0;
-  MTR.cols = mtrLedCols(); mtrBuild(el); mtrWire(el);
-  MTR.io = new IntersectionObserver(es => { MTR.vis = es[es.length - 1].isIntersecting; if (MTR.vis) mtrLayout(); mtrSync(); }, {threshold:.08});
-  MTR.io.observe(el);
-  MTR.ro = new ResizeObserver(mtrLayout); MTR.ro.observe(el);
-  mtrReset();
+  const m = CH.m = chModel();
+  if (!m.all.length) { el.innerHTML = ''; return; }
+  if (!m.all.some(r => r.p.name === CH.sel)) CH.sel = (m.all.find(r => r.p.name === 'Paradex') || m.all[0]).p.name;
+  if (CH.lane !== 'all' && !m.lanes.some(l => l.id === CH.lane)) CH.lane = 'all';
+  const n = m.all.length;
+  const tab = (id, label, c, col) => `<button type="button" class="chn-tab${CH.lane === id ? ' on' : ''}" data-l="${esc(id)}" aria-pressed="${CH.lane === id}">${col ? `<span class="chn-d" style="background:${col}"></span>` : ''}${esc(label)}<i>${c}</i></button>`;
+  el.innerHTML = `<div class="chn-main">
+    <div class="chn-hd"><h2 class="chn-t">OPSHNZ-FRIENDS <span>· EXP 2026</span></h2>
+      <div class="chn-meta"><div>FRIENDS<b>${n}</b></div><div>LANES<b>${m.lanes.length}</b></div><div>WITH 30D VOL<b>${m.nVol} / ${n}</b></div></div></div>
+    <div class="chn-tabs" id="chnTabs">${m.lanes.map(l => tab(l.id, l.code, l.ps.length, l.color)).join('')}${tab('all', 'ALL', n)}<div class="chn-sp"></div><div class="chn-note">EXPIRY = LANE</div></div>
+    <div class="chn-box"><div class="chn-scroll"><div class="chn-tbl">
+      <div class="chn-g chn-grp"><div class="chn-gc">CALLS</div><div class="chn-gs">FRIEND · STRIKE</div><div class="chn-gp">PUTS</div></div>
+      <div class="chn-g chn-col"><div class="chn-r">VOL 30D</div><div class="chn-r chn-oi">OI</div><div class="chn-r">24H %</div><div class="chn-c">NAME</div><div class="chn-l">LANE</div><div class="chn-l">STATUS</div><div class="chn-r chn-tok">TOKEN</div></div>
+      <div id="chnRows">${chRowsHtml()}</div>
+    </div></div></div>
+    <div class="chn-foot"><span>not an actual options chain — just our friends</span><span>sorted by <em>VOL 30D</em> ↓ · deep ITM = most volume</span></div>
+  </div><aside class="chn-ticket" id="chnTicket" aria-label="Order ticket">${chTicketHtml()}</aside>`;
+  if (CH.wired) return; CH.wired = true;
+  el.addEventListener('click', e => {
+    const t = e.target.closest('.chn-tab'); if (t) { chLane(t.dataset.l); return; }
+    const c = e.target.closest('.chn-chip'); if (c) { chSelect(c.dataset.n); return; }
+    const r = e.target.closest('.chn-row'); if (r) chSelect(r.dataset.n);
+  });
+  el.addEventListener('keydown', e => {
+    const r = e.target.closest('.chn-row');
+    if (r && e.target === r && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); chSelect(r.dataset.n); }
+  });
 }
 
 // ── 생태계 전체: 토큰 상태별 ──
