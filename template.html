@@ -1526,7 +1526,19 @@ b,strong,th{font-weight:600}
 .tvt-h:hover{color:var(--amber)}
 .tvt-f{font-size:12.5px;color:var(--mute)}
 .tvt-r{font-size:14px;color:var(--ink2);margin-top:4px}
-.tvt-why{font-size:16px;line-height:1.6;color:var(--ink);margin:20px 0 14px;max-width:68ch}
+.tvt-why{font-size:14px;line-height:1.6;color:var(--ink2);margin:20px 0 12px;max-width:68ch}
+.tvt-view{margin-top:22px;padding:20px 22px;border:1px solid var(--line2);border-radius:12px;background:rgba(10,11,9,.55)}
+.tvt-vh{display:flex;justify-content:space-between;gap:12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.tvt-key{font-size:18px;line-height:1.45;color:var(--ink);margin:12px 0 16px;max-width:60ch}
+.tvt-st{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:16px}
+.tvt-st div{padding:10px 12px;border:1px solid var(--line);border-radius:10px}
+.tvt-st small{display:block;font-size:11px;color:var(--mute)}
+.tvt-st b{display:block;font-size:18px;font-weight:500;margin-top:2px}
+.tvt-st .dn b{color:var(--down)}.tvt-st .up b{color:var(--up)}
+.tvt-view>p{font-size:14px;line-height:1.7;color:var(--ink2);margin-bottom:10px;max-width:72ch}
+.tvt-src{display:inline-block;margin-top:4px;font-size:12.5px;color:var(--ink);border-bottom:1px solid var(--line2)}
+.tvt-src:hover{color:var(--amber);border-bottom-color:var(--amber)}
+@media (max-width:640px){.tvt-st{grid-template-columns:repeat(2,minmax(0,1fr))}.tvt-view{padding:16px}}
 .tvt-tags{display:flex;gap:6px;flex-wrap:wrap}
 .tvt-tags span{font-size:12.5px;color:var(--ink2);border:1px solid var(--line2);border-radius:999px;padding:3px 10px}
 .tvt-card h4{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:500;margin:24px 0 8px}
@@ -2998,11 +3010,15 @@ function renderTraders(){
     ${t.featured?'<span class="tvt-badge">Featured trader · No. 1</span>':''}
     <div class="tvt-id"><img src="${safe(t.avatar)}" alt="" width="72" height="72" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('i'),{textContent:'${esc((t.name||'?')[0])}'}))">
       <div><h3>${esc(t.name)}</h3><a class="tvt-h" href="${safe(t.x)}" target="_blank" rel="noopener">@${esc(t.handle)}</a>${t.followers?`<span class="tvt-f">${esc(t.followers)} followers</span>`:''}<p class="tvt-r">${esc(t.role || '')}</p></div></div>
-    <p class="tvt-why">${esc(t.why || '')}</p>
+    ${t.view?`<section class="tvt-view"><div class="tvt-vh"><span>${esc(t.view.asset || '')} · ${esc(t.view.title)}</span><time>${d(t.view.date)}</time></div>
+      ${t.view.key?`<p class="tvt-key">${esc(t.view.key)}</p>`:''}
+      ${(t.view.stats || []).length?`<div class="tvt-st">${t.view.stats.map(([k,v,c])=>`<div${c?` class="${c==='dn'?'dn':'up'}"`:''}><small>${esc(k)}</small><b>${esc(v)}</b></div>`).join('')}</div>`:''}
+      ${(t.view.paras || []).map(x=>`<p>${esc(x)}</p>`).join('')}
+      <a class="tvt-src" href="${safe(t.view.url)}" target="_blank" rel="noopener">Data &amp; analysis by @${esc(t.handle)} ↗</a></section>`:''}
+    ${t.why?`<p class="tvt-why">${esc(t.why)}</p>`:''}
     ${(t.focus || []).length?`<div class="tvt-tags">${t.focus.map(f=>`<span>${esc(f)}</span>`).join('')}</div>`:''}
     ${(t.posts || []).length?`<h4>Recent posts</h4><ol class="tvt-posts">${t.posts.map(x=>`<li><time>${d(x.date)}</time><div><b>${esc(x.title)}</b><p>${esc(x.text)}</p></div><a href="${safe(x.url)}" target="_blank" rel="noopener">Post ↗</a></li>`).join('')}</ol>`:''}
     <div class="tvt-act"><a class="go" href="${safe(t.x)}" target="_blank" rel="noopener">Follow on X ↗</a>${t.site?`<a href="${safe(t.site)}" target="_blank" rel="noopener">${esc(t.site.replace(/^https:\/\/(www\.)?/,'').replace(/\/$/,''))} ↗</a>`:''}</div>
-    <p class="tvt-note">Posts are paraphrased with links to the originals · not our trading signal.</p>
   </article>`).join('') : '<p class="empty">No featured traders yet.</p>';
 }
 function renderTraderViews(){
