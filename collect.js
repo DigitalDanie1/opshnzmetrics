@@ -469,6 +469,23 @@ async function majorsHistory() {
   return Object.keys(out).length ? out : null;
 }
 
+// 매크로 패널 옆 차트: BTC · 나스닥100 선물 1시간봉 (최근 4일). 바이낸스는 미국 IP 차단이라 공개 미러 사용
+async function macroTape() {
+  const out = {};
+  const bk = await getJSON('https://data-api.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&limit=96', 3);
+  if (Array.isArray(bk)) out.BTC = bk.map(r => [r[0], +(+r[1]).toFixed(1), +(+r[2]).toFixed(1), +(+r[3]).toFixed(1), +(+r[4]).toFixed(1)]);
+  try {
+    const r = await fetch('https://query1.finance.yahoo.com/v8/finance/chart/NQ=F?interval=60m&range=5d', { headers: { 'user-agent': 'Mozilla/5.0' } });
+    const j = r.ok ? await r.json() : null, c = j && j.chart && j.chart.result && j.chart.result[0];
+    if (c) {
+      const q = c.indicators.quote[0], rows = [];
+      c.timestamp.forEach((t, i) => { if ([q.open[i], q.high[i], q.low[i], q.close[i]].every(v => v != null)) rows.push([t * 1000, +q.open[i].toFixed(2), +q.high[i].toFixed(2), +q.low[i].toFixed(2), +q.close[i].toFixed(2)]); });
+      out.NQ = rows.filter(r => r[0] % 36e5 === 0).slice(-96);
+    }
+  } catch {}
+  return Object.keys(out).length ? { at: Date.now(), ...out } : null;
+}
+
 // 원본 페이지: DefiLlama 지표는 프로토콜 페이지, CoinGecko 지표는 코인 페이지
 function llamaUrl(p) {
   const s = (p.volSlugs || [])[0] || (p.llama || []).find(k => !k.startsWith('parent#')) || ((p.llama || [])[0] || '').replace('parent#', '');
@@ -476,7 +493,7 @@ function llamaUrl(p) {
 }
 const cgUrl = p => p.cg ? `https://www.coingecko.com/en/coins/${p.cg}` : null;
 
-if (typeof module !== 'undefined') module.exports = { collect, history: projectHistory, isoWeek, grandPrix, rivals, raceSeries, fundamentals, openInterest, venueExtras, dmMarket, macroWeek, sentiScore, sentiInputs, sentiVerdict, majorsHistory, RACES, llamaUrl, cgUrl };
+if (typeof module !== 'undefined') module.exports = { collect, history: projectHistory, isoWeek, grandPrix, rivals, raceSeries, fundamentals, openInterest, venueExtras, dmMarket, macroWeek, sentiScore, sentiInputs, sentiVerdict, majorsHistory, macroTape, RACES, llamaUrl, cgUrl };
 
 // Source-specific financial coverage; parent token economics and options adapters stay separate.
 async function benchmarkFinancials(data) {

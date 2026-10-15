@@ -294,6 +294,16 @@
           "CNBC",
           "https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html"
         ]
+      ],
+      "events": [
+        [
+          "CPI",
+          "2026-10-14T12:30:00Z"
+        ],
+        [
+          "PPI",
+          "2026-10-15T12:30:00Z"
+        ]
       ]
     }
   },

@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
-const { collect, grandPrix, raceSeries, fundamentals, openInterest, venueExtras, dmMarket, macroWeek, sentiScore, sentiInputs, sentiVerdict, majorsHistory } = require('./collect.js');
+const { collect, grandPrix, raceSeries, fundamentals, openInterest, venueExtras, dmMarket, macroWeek, sentiScore, sentiInputs, sentiVerdict, majorsHistory, macroTape } = require('./collect.js');
 const DRY = process.argv.includes('--dry');
 // --auto: 예약 실행용. 매번 빌드하고, 텔레그램은 월요일(KST)에만, 봇이 없으면 조용히 건너뛴다
 const AUTO = process.argv.includes('--auto');
@@ -40,6 +40,7 @@ snap.dm = await dmMarket();
 snap.macro = await macroWeek();
 console.log(`✓ 매크로 일정 ${snap.macro ? snap.macro.length + '건' : '실패'}`);
 snap.majorsHist = await majorsHistory();
+snap.tape = await macroTape();
 
 // 옵션 심리 일지 (sentiment.json): 자산별 하루 한 줄. 처음엔 지난 7일을 스큐만으로 채운다(partial)
 {
