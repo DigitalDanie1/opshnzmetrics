@@ -116,28 +116,28 @@
  {
   "d": "2026-10-15",
   "kind": "move",
-  "text": "$DRV −15.7% in 24h",
+  "text": "$DRV −14.9% in 24h",
   "href": "#/deep/Derive",
   "key": "$DRV"
  },
  {
   "d": "2026-10-15",
   "kind": "move",
-  "text": "$DIME −19.7% in 24h",
+  "text": "$DIME −19.4% in 24h",
   "href": "#/deep/Paradex",
   "key": "$DIME"
  },
  {
   "d": "2026-10-15",
   "kind": "move",
-  "text": "$SYN −11.7% in 24h",
+  "text": "$SYN −10.3% in 24h",
   "href": "#/deep/Hypercall",
   "key": "$SYN"
  },
  {
   "d": "2026-10-15",
   "kind": "vol",
-  "text": "BVIV 40.7 (+1.7% 24h) — BTC implied vol ticking up",
+  "text": "BVIV 41.2 (+3.1% 24h) — BTC implied vol ticking up",
   "href": "#/deep/Volmex",
   "key": "BVIV"
  },
