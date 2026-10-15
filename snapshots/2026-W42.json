@@ -5,7 +5,7 @@
   "prices": true,
   "volume": true
  },
- "headline": "This week: Hunch joins the Friends — plain-English options on Derive.",
+ "headline": "This week: Derive V3 goes live, Dream V2 ships on iOS & Android, Heat and HARDCORE launch, and Split Markets routes options through Paradex RFQ.",
  "relations": [
   {
    "a": "Odette",
@@ -61,7 +61,7 @@
     "Ex-Lyra",
     "#1 onchain options"
    ],
-   "note": "",
+   "note": "Derive V3 went live: Ethereum custody, ZK margin and settlement, no-code vaults",
    "app": "https://www.derive.xyz/options/eth",
    "backers": {
     "total": null,
@@ -194,7 +194,7 @@
     "parent#paradex"
    ],
    "site": "https://www.paradex.trade",
-   "x": "tradeparadex",
+   "x": "paradex",
    "home": "Paradex",
    "origin": "Paradigm",
    "keywords": [
@@ -203,7 +203,7 @@
     "Paradigm-incubated",
     "Perps"
    ],
-   "note": "",
+   "note": "Options live on Split Markets via Paradex RFQ; XP Season 3 ended after Week 35",
    "deep": {
     "thesis": "",
     "catalysts": [],
@@ -474,7 +474,7 @@
     "Pre-launch perps",
     "Own rollup"
    ],
-   "note": "",
+   "note": "More than 27m $AEVO staked, 27.6m in October, up from 26m in September",
    "app": "https://app.aevo.xyz/option/eth",
    "backers": {
     "total": null,
@@ -716,7 +716,7 @@
     "gammaswap-classic"
    ],
    "site": "https://gammaswap.com",
-   "x": "",
+   "x": "GammaSwapLabs",
    "home": "Arbitrum",
    "origin": "",
    "keywords": [
@@ -899,7 +899,7 @@
     "Points",
     "HYPE options"
    ],
-   "note": "",
+   "note": "Dream V2 live on iOS and Android; added NEAR, TAO, DOGE options; reports $40M+ notional volume",
    "deep": {
     "thesis": "",
     "catalysts": [
@@ -1074,7 +1074,7 @@
     "Points",
     "Season 1 airdrop"
    ],
-   "note": "",
+   "note": "Added 10 markets incl. HYPE, XRP, AAPL; Seeker holders get 1.25x points",
    "app": "https://olive.exchange",
    "isNew": true,
    "backers": {
@@ -1125,7 +1125,7 @@
     "Unsecured credit",
     "Option vaults"
    ],
-   "note": "",
+   "note": "Launched credit scores with Cred Protocol; LCC passed $10M total value promised",
    "app": "https://app.3jane.xyz",
    "backers": {
     "total": null,
@@ -1603,7 +1603,7 @@
    "keywords": [
     "Risk exchange"
    ],
-   "note": "",
+   "note": "Published September monthly report; Upscale trading tournament runs to Oct 21",
    "backers": {
     "total": null,
     "totalNote": "",
@@ -1902,7 +1902,7 @@
     "DAO",
     "Onchain settlement"
    ],
-   "note": "",
+   "note": "Weekly burn report: 8,904 RCH burned in the prior week",
    "backers": {
     "level": "none",
     "summary": null,
@@ -2392,7 +2392,7 @@
     "CLAMM",
     "Ex-Dopex"
    ],
-   "note": "",
+   "note": "Outlined Stryke on Robinhood Chain: crypto and tokenized-stock options; SYK staking moving there",
    "backers": {
     "level": "none",
     "summary": null,
@@ -2889,7 +2889,7 @@
    "keywords": [
     "P2P options"
    ],
-   "note": "",
+   "note": "Launched Jasper AI Signals (chart entry and risk markers) for VIP members",
    "backers": {
     "level": "none",
     "summary": null,
@@ -3044,7 +3044,7 @@
     "Covered calls",
     "Cash-secured puts"
    ],
-   "note": "",
+   "note": "Acquired by VS Group; trading resumed on HyperEVM, Season 1 points frozen",
    "isNew": false,
    "backers": {
     "level": "none",
@@ -3649,7 +3649,7 @@
    "status": "Just launched",
    "since": "2026-10",
    "isNew": true,
-   "note": "",
+   "note": "Published fractional-options manifesto at omen.trade/manifesto; trading platform not yet public",
    "deep": {
     "thesis": "",
     "catalysts": [],
@@ -3719,7 +3719,7 @@
     "Covered calls",
     "Stock lending"
    ],
-   "note": "",
+   "note": "Launched NVDA Printer weekly covered-call vault on Robinhood Chain; week-1 premium 447.68 USDG",
    "auto": true,
    "backers": {
     "level": "none",
@@ -3892,7 +3892,7 @@
     "Copy trading",
     "RFQ"
    ],
-   "note": "",
+   "note": "Went live: chart-based options trading via Derive RFQ; USDC deposits from 4 chains",
    "deep": {
     "thesis": "",
     "catalysts": [
@@ -3955,7 +3955,7 @@
     "RFQ",
     "$HARD"
    ],
-   "note": "",
+   "note": "Introduced HARDCORE Vault, an automated vault buying far out-of-the-money tail-risk options",
    "deep": {
     "thesis": "",
     "catalysts": [
@@ -4085,7 +4085,7 @@
     "Funding arb",
     "AI Co-Pilot"
    ],
-   "note": "",
+   "note": "Launched Compose, a Yes/No options trade builder; Paradex RFQ execution added",
    "deep": {
     "thesis": "",
     "catalysts": [
