@@ -2964,11 +2964,12 @@ function renderMacroNow(){
 }
 // 매크로 패널 옆: BTC · 나스닥100 선물 1시간봉 + 발표 시점
 function tapeHTML(events){
-  const T = SNAP.tape; if (!T || !(T.BTC || T.NQ)) return '';
+  const T = SNAP.tape; if (!T) return ''; const C = T[stAsset] ? stAsset : 'BTC'; if (!(T[C] || T.NQ)) return '';
   const ev = events.map(([k, t]) => [k, Date.parse(t)]).filter(e => e[1]), t0 = ev.length ? ev[0][1] - 24 * 36e5 : 0;
   const kst = t => new Date(t + 9 * 36e5);
-  const one = (rows, name, sub, dp) => {
+  const one = (rows, name, sub) => {
     rows = (rows || []).filter(r => r[0] >= t0); if (rows.length < 6) return '';
+    const lp = rows[rows.length - 1][4], dp = lp < 10 ? 3 : lp < 100 ? 2 : lp < 1000 ? 1 : 0;
     const W = 420, H = 168, L = 6, R = 54, TP = 14, B = 20, x0 = rows[0][0], x1 = rows[rows.length - 1][0] + 36e5;
     const lo = Math.min(...rows.map(r => r[3])), hi = Math.max(...rows.map(r => r[2])), pad = (hi - lo) * .08 || 1;
     const X = t => L + (t - x0) / (x1 - x0) * (W - L - R), Y = v => TP + (hi + pad - v) / (hi - lo + 2 * pad) * (H - TP - B), bw = Math.max(1.5, (W - L - R) / rows.length * .62);
@@ -2979,11 +2980,12 @@ function tapeHTML(events){
     g += `<line class="tp-pre" x1="${L}" x2="${W - R}" y1="${Y(pre)}" y2="${Y(pre)}"/><text class="tp-ax" x="${W - R + 6}" y="${Y(pre) + 4}">${f(pre)}</text>`;
     g += rows.map(([t, o, h, l, c]) => { const up = c >= o, cx = X(t + 18e5); return `<g class="${up ? 'tp-u' : 'tp-d'}"><line x1="${cx}" x2="${cx}" y1="${Y(h)}" y2="${Y(l)}"/><rect x="${cx - bw / 2}" y="${Y(Math.max(o, c))}" width="${bw}" height="${Math.max(1, Math.abs(Y(o) - Y(c)))}"/></g>`; }).join('');
     g += ev.filter(([, t]) => t >= x0 && t <= x1).map(([k, t]) => `<line class="tp-ev" x1="${X(t)}" x2="${X(t)}" y1="${TP - 4}" y2="${H - B}"/><text class="tp-evl" x="${X(t) + 4}" y="${TP + 6}">${esc(k)}</text>`).join('');
-    g += `<text class="tp-last" x="${W - R + 6}" y="${Y(last) + 4}">${f(last)}</text>`;
-    return `<figure class="tp"><figcaption><b>${name}</b><span>${sub}</span><em class="${ch < 0 ? 'dn' : 'up'}">${ch >= 0 ? '+' : '−'}${Math.abs(ch).toFixed(1)}% since CPI</em></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${name} hourly candles with CPI and PPI release times">${g}</svg></figure>`;
+    let yl = Y(last); const yp = Y(pre); if (Math.abs(yl - yp) < 13) yl = yp + (yl >= yp ? 13 : -13);
+    g += `<text class="tp-last" x="${W - R + 6}" y="${yl + 4}">${f(last)}</text>`;
+    return `<figure class="tp"><figcaption><b>${name}</b><span>${sub}</span><em class="${ch < 0 ? 'dn' : 'up'}">${ch >= 0 ? '+' : '−'}${Math.abs(ch).toFixed(1)}% since CPI</em></figcaption><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${name} hourly candles with macro release times">${g}</svg></figure>`;
   };
   const kt = t => new Date(t).toLocaleString('en-US', {timeZone:'Asia/Seoul', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12:false});
-  return `<aside class="mn-tape">${one(T.BTC, 'BTC', T.btcLive ? 'BTC / USDT · 1h · live' : 'BTC / USDT · 1h', 0)}${one(T.NQ, 'NASDAQ 100', 'NQ futures · 1h', 0)}<p class="tp-n">Dashed line = price just before CPI · times in KST · ${T.btcLive ? `BTC live (${kt(T.btcLive)}) · NASDAQ as of ${kt(T.at)}` : `as of ${kt(T.at)}`} KST</p></aside>`;
+  return `<aside class="mn-tape">${one(T[C], C, `${C} / USDT · 1h${T.live && T.live[C] ? ' · live' : ''}`)}${one(T.NQ, 'NASDAQ 100', 'NQ futures · 1h')}<p class="tp-n">Dashed line = price just before CPI · times in KST · ${T.live && T.live[C] ? `${C} live (${kt(T.live[C])}) · NASDAQ as of ${kt(T.at)}` : `as of ${kt(T.at)}`} KST</p></aside>`;
 }
 function renderStrategy(){
   renderMacroNow();
@@ -3112,8 +3114,8 @@ async function scLive(){
   scBusy = true; const asset = stAsset, a = asset.toLowerCase(), cur = ['BTC', 'ETH'].includes(asset) ? asset : null;
   if (!scSrc) scSrc = await SC_J('https://www.derivativesmonkey.com/api/market/sources-all');
   const src = ((scSrc && scSrc.assets && scSrc.assets[a]) || {}).sources || [];
-  const [ms, book, kl] = await Promise.all([src.length ? SC_J(`https://www.derivativesmonkey.com/api/market/market-summary?asset=${a}&sources=${src.join(',')}`) : null, cur ? SC_J(`https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=${cur}&kind=option`) : null, SC_J('https://data-api.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&limit=96')]);
-  if (Array.isArray(kl) && kl.length && SNAP.tape) { SNAP.tape = {...SNAP.tape, BTC: kl.map(r => [r[0], +r[1], +r[2], +r[3], +r[4]]), btcLive: Date.now()}; renderMacroNow(); }
+  const [ms, book, kl] = await Promise.all([src.length ? SC_J(`https://www.derivativesmonkey.com/api/market/market-summary?asset=${a}&sources=${src.join(',')}`) : null, cur ? SC_J(`https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=${cur}&kind=option`) : null, SC_J(`https://data-api.binance.vision/api/v3/klines?symbol=${asset}USDT&interval=1h&limit=96`)]);
+  if (Array.isArray(kl) && kl.length && SNAP.tape && asset === stAsset) { SNAP.tape = {...SNAP.tape, [asset]: kl.map(r => [r[0], +r[1], +r[2], +r[3], +r[4]]), live: {...(SNAP.tape.live || {}), [asset]: Date.now()}}; renderMacroNow(); }
   scBusy = false; if (!$('scBar')) return; if (asset !== stAsset || scAgain) { scAgain = false; if (asset !== stAsset) return scLive(); }
   const A = (SNAP.dm && SNAP.dm.assets[asset]) || {}, now = Date.now(), live = !!(ms && ms.spot);
   const K = {

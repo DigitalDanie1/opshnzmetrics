@@ -469,11 +469,13 @@ async function majorsHistory() {
   return Object.keys(out).length ? out : null;
 }
 
-// 매크로 패널 옆 차트: BTC · 나스닥100 선물 1시간봉 (최근 4일). 바이낸스는 미국 IP 차단이라 공개 미러 사용
+// 매크로 패널 옆 차트: 크립토 5종 · 나스닥100 선물 1시간봉 (최근 4일). 바이낸스는 미국 IP 차단이라 공개 미러 사용
 async function macroTape() {
   const out = {};
-  const bk = await getJSON('https://data-api.binance.vision/api/v3/klines?symbol=BTCUSDT&interval=1h&limit=96', 3);
-  if (Array.isArray(bk)) out.BTC = bk.map(r => [r[0], +(+r[1]).toFixed(1), +(+r[2]).toFixed(1), +(+r[3]).toFixed(1), +(+r[4]).toFixed(1)]);
+  for (const t of ['BTC', 'ETH', 'SOL', 'HYPE', 'ZEC']) {
+    const bk = await getJSON(`https://data-api.binance.vision/api/v3/klines?symbol=${t}USDT&interval=1h&limit=96`, 3);
+    if (Array.isArray(bk)) out[t] = bk.map(r => [r[0], ...r.slice(1, 5).map(v => +(+v).toPrecision(6))]);
+  }
   try {
     const r = await fetch('https://query1.finance.yahoo.com/v8/finance/chart/NQ=F?interval=60m&range=5d', { headers: { 'user-agent': 'Mozilla/5.0' } });
     const j = r.ok ? await r.json() : null, c = j && j.chart && j.chart.result && j.chart.result[0];
