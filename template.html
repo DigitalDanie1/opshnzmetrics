@@ -1492,6 +1492,7 @@ body.tg .eco-search{display:none}
       <a href="#/guide" data-r="guide"><span class="n">06</span> STRATEGY GUIDE <span class="go">→</span></a>
       <a href="#/launches" data-r="launches"><span class="n">07</span> PERP DEXS LAUNCHING OPTIONS <span class="go">→</span></a>
       <a href="#/compare" data-r="compare"><span class="n">08</span> COMPARE TO DERIBIT <span class="go">→</span></a>
+      <a href="#/trader-views" data-r="trader-views"><span class="n">09</span> TRADER VIEWS <span class="go">→</span></a>
     </nav>
   </header>
   </section>
@@ -1499,7 +1500,7 @@ body.tg .eco-search{display:none}
     <a class="brand home-btn" href="#/" title="Back to the first screen"><svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><path d="M1.5 6.6 7 2l5.5 4.6M3.2 5.4V12h7.6V5.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>HOME</a>
     <span class="bc"><a href="#/home">DASHBOARD</a><i>/</i><b id="bcHere">OVERVIEW</b></span>
     <nav class="cnav" aria-label="Views">
-      <a data-r="strategy" href="#/strategy">01 SENTIMENT &amp; STRATEGY</a><a data-r="fundamentals" href="#/fundamentals">02 OPTION FUNDAMENTAL</a><a data-r="overview" href="#/overview">03 ECOSYSTEM OVERVIEW</a><a data-r="deep" href="#/deep">04 DEEP DIVE</a><a data-r="new" href="#/new">05 NEW PROJECTS</a><a data-r="guide" href="#/guide">06 STRATEGY GUIDE</a><a data-r="launches" href="#/launches">07 PERP DEXS LAUNCHING OPTIONS</a><a data-r="compare" href="#/compare">08 COMPARE TO DERIBIT</a>
+      <a data-r="strategy" href="#/strategy">01 SENTIMENT &amp; STRATEGY</a><a data-r="fundamentals" href="#/fundamentals">02 OPTION FUNDAMENTAL</a><a data-r="overview" href="#/overview">03 ECOSYSTEM OVERVIEW</a><a data-r="deep" href="#/deep">04 DEEP DIVE</a><a data-r="new" href="#/new">05 NEW PROJECTS</a><a data-r="guide" href="#/guide">06 STRATEGY GUIDE</a><a data-r="launches" href="#/launches">07 PERP DEXS LAUNCHING OPTIONS</a><a data-r="compare" href="#/compare">08 COMPARE TO DERIBIT</a><a data-r="trader-views" href="#/trader-views">09 TRADER VIEWS</a>
     </nav>
   </div>
   <nav class="subnav" id="subnav" aria-label="Sections" hidden></nav>
@@ -1636,6 +1637,10 @@ body.tg .eco-search{display:none}
     <div class="rp-ctl" id="rpCtl" hidden><button id="rpPlay" aria-label="Play">▶</button><input type="range" id="rpScrub" min="0" max="1000" value="0" aria-label="Replay position"></div></div>
   </main>
 
+  <main id="v-trader-views" hidden><div class="gp-head"><div><h2>Trader <em>views</em></h2><p>What options desks and researchers are watching · original sources, dates and attributed summaries.</p></div></div>
+    <section data-blk="views" id="traderViewsSection"><div class="seg" id="tvAsset" role="group" aria-label="Filter trader views by asset"></div><p class="bench-note" id="tvAsOf"></p><div id="tvCards" class="tv-grid"></div><details class="bench-details"><summary>Source coverage &amp; older views</summary><div id="tvCoverage" class="bench-note"></div><div id="tvArchive"></div></details></section>
+  </main>
+
   <main id="v-strat" hidden>
     <div class="fd-head">
       <div><h2>Sentiment <em>&amp; strategy</em></h2><p>Step 1 — read what the options market thinks, then what to play and how to react when macro moves.</p><p class="gp-src" id="stSrc"></p></div>
@@ -1645,7 +1650,7 @@ body.tg .eco-search{display:none}
     <section data-blk="log"><div class="sh"><h2>Sentiment log<span>what options said — day by day, and what price did next</span></h2>
       <div class="seg" id="slMode" role="group" aria-label="Period"><button data-m="daily" aria-pressed="true">Daily</button><button data-m="weekly" aria-pressed="false">Weekly</button><button data-m="monthly" aria-pressed="false">Monthly</button></div></div><div id="stLog"></div></section>
     <section data-blk="plays"><div class="sh"><h2>Today’s plays<span>what fits the market right now</span></h2></div><div id="stPlays"></div></section>
-    <section data-blk="views" id="traderViewsSection"><div class="sh"><h2>Trader views<span>What options desks and researchers are watching · attributed summaries</span></h2></div><p class="bench-note" id="tvAsOf"></p><div id="tvCards" class="tv-grid"></div><details class="bench-details"><summary>Source coverage &amp; older views</summary><div id="tvCoverage" class="bench-note"></div><div id="tvArchive"></div></details></section>
+
     <section data-blk="macro"><div class="sh"><h2>Macro playbook<span>scenarios, what would prove them wrong, and what to watch</span></h2></div><div id="stMacro"></div></section>
     <p class="cap">Plain-English reading of public data, rebuilt daily — not financial advice.</p>
   </main>
@@ -2625,10 +2630,10 @@ const SUBS = {
   compare:[],
   overview:[['finder','Start here'],['planets','Planet map'],['friends','Friends'],['ecosystem','Whole ecosystem'],['live','Live points'],['pretge','Pre-TGE friends'],['codes','My ref codes'],['watch','Watchlist'],['content','Content'],['log','Weekly log']],
   fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['underlying','By underlying'],['trades','Largest trades'],['venues','Venues'],['track','Race'],['comps','Derive comps']],
-  strategy:[['now','Market now'],['log','Sentiment log'],['plays','Today’s plays'],['views','Trader views'],['macro','Macro playbook']],
+  strategy:[['now','Market now'],['log','Sentiment log'],['plays','Today’s plays'],['macro','Macro playbook']],
 };
-const PAGES = [['strategy','01 Sentiment & Strategy'],['fundamentals','02 Option Fundamental'],['overview','03 Ecosystem Overview'],['deep','04 Deep Dive'],['new','05 New Projects'],['guide','06 Strategy Guide'],['launches','07 Perp DEXs Launching Options'],['compare','08 Compare to Deribit']];
-const VIEWS = {overview:['v-overview','v-oracle'], fundamentals:['v-fund','v-race'], strategy:['v-strat'], deep:['v-deep'], new:['v-new'], guide:['v-guide'], compare:['v-compare'], launches:['v-launches']};
+const PAGES = [['strategy','01 Sentiment & Strategy'],['fundamentals','02 Option Fundamental'],['overview','03 Ecosystem Overview'],['deep','04 Deep Dive'],['new','05 New Projects'],['guide','06 Strategy Guide'],['launches','07 Perp DEXs Launching Options'],['compare','08 Compare to Deribit'],['trader-views','09 Trader Views']];
+const VIEWS = {overview:['v-overview','v-oracle'], fundamentals:['v-fund','v-race'], strategy:['v-strat'], deep:['v-deep'], new:['v-new'], guide:['v-guide'], compare:['v-compare'], launches:['v-launches'], 'trader-views':['v-trader-views']};
 let SUBFOLD = (() => { try { return localStorage.getItem('opshnz-subfold') === '1'; } catch { return false; } })();
 function renderSubnav(page, sub){
   const nav = $('subnav'); if (!nav) return;
@@ -2786,7 +2791,6 @@ function renderStrategy(){
       <div class="mb-box mb-watch"><h4>WATCH BOARD</h4>${watch.map(([w, t, d]) => `<div><time>${esc(w)}</time><b>${esc(t)}</b><span>${esc(d)}</span></div>`).join('')}${soon.length ? '' : '<p class="lg">No US high-impact releases left in the next 7 days.</p>'}</div>`;
   }
   $('stMacro').innerHTML = `${note}${book}${sc ? `<h4 class="mb-h">IF MACRO SURPRISES · WHAT TO TRADE</h4><p class="mb-note">Conditional setups, not live trade signals. Tenors and exits are illustrative rules, not backtested. Examples use normalized spot 100, equal-size linear options and expiry payoffs before fees or slippage. Confirm settlement, collateral and liquidation rules for the actual contract; payoff caps assume all legs remain intact.</p><div class="scen">${sc}</div>` : ''}`;
-  renderTraderViews();
   renderSentLog();
 }
 
@@ -2797,11 +2801,15 @@ function traderViewWindow(config, now=Date.now()) {
   const date=v=>Date.parse(v.date+'T00:00:00+09:00');
   return {current:unique.filter(v=>date(v)<=now && now-date(v)<days*864e5).sort((a,b)=>b.date.localeCompare(a.date)), older:unique.filter(v=>date(v)<=now && now-date(v)>=days*864e5).sort((a,b)=>b.date.localeCompare(a.date))};
 }
+let traderViewAsset = 'ALL';
 function renderTraderViews(){
-  const cfg=BOOT.config.traderViews || {}, {current,older}=traderViewWindow(cfg), visible=current.filter(v=>!(v.assets || []).length || v.assets.includes(stAsset));
+  const cfg=BOOT.config.traderViews || {}, {current,older}=traderViewWindow(cfg), visible=current.filter(v=>traderViewAsset === 'ALL' || !(v.assets || []).length || v.assets.includes(traderViewAsset));
   const card=(v,old=false)=>`<article class="tv-card"><div class="tv-top"><b>${esc(v.publisher)}</b><time datetime="${esc(v.date)}">${esc(v.date)}</time></div><div class="tv-tags"><span>${esc((v.assets || []).join(' / ') || 'Market')}</span><span>${esc(v.stance || 'Market view')}</span>${old?'<span>HISTORICAL</span>':''}</div><h3>${esc(v.title || v.publisher)}</h3><p>${esc(v.view)}</p><div class="tv-foot"><span>${esc(v.author || v.publisher)} · ${esc(v.horizon || 'Horizon not specified')}<br>${esc(v.type || 'Published view')} · paraphrased, not our trading signal</span><a href="${esc(v.url)}" target="_blank" rel="noopener">Read original ↗</a></div></article>`;
-  $('tvAsOf').textContent=`${stAsset} · last 7 days · source check ${cfg.checkedAt ? new Date(cfg.checkedAt).toLocaleDateString('en-CA',{timeZone:'Asia/Seoul'}) : 'not yet completed'} · refreshed weekly on Monday 09:00 KST. Views can disagree and describe different observation windows.`;
-  $('tvCards').innerHTML=visible.length ? visible.map(v=>card(v)).join('') : '<p class="empty">No fresh, verified '+esc(stAsset)+' options view in the last 7 days. Older commentary is kept below, not presented as current.</p>';
+  const assets=['ALL',...new Set([...current,...older].flatMap(v=>v.assets || []))];
+  $('tvAsset').innerHTML=assets.map(a=>`<button type="button" data-tv-asset="${esc(a)}" aria-pressed="${a===traderViewAsset}">${a==='ALL'?'All assets':esc(a)}</button>`).join('');
+  $('tvAsset').querySelectorAll('[data-tv-asset]').forEach(b=>b.onclick=()=>{traderViewAsset=b.dataset.tvAsset;renderTraderViews();});
+  $('tvAsOf').textContent=`${traderViewAsset==='ALL'?'All assets':traderViewAsset} · last 7 days · source check ${cfg.checkedAt ? new Date(cfg.checkedAt).toLocaleDateString('en-CA',{timeZone:'Asia/Seoul'}) : 'not yet completed'} · refreshed weekly on Monday 09:00 KST. Views can disagree and describe different observation windows.`;
+  $('tvCards').innerHTML=visible.length ? visible.map(v=>card(v)).join('') : '<p class="empty">No fresh, verified '+esc(traderViewAsset==='ALL'?'market':traderViewAsset)+' options view in the last 7 days. Older commentary is kept below, not presented as current.</p>';
   $('tvCoverage').innerHTML=(cfg.sources || []).map(s=>`<p><a href="${/^https:\/\//.test(s.url || '')?esc(s.url):'#'}" target="_blank" rel="noopener"><b>${esc(s.name)}</b> ↗</a> — ${esc(s.status || 'Not checked')}</p>`).join('');
   $('tvArchive').innerHTML=older.length?'<h3>Older views · not current</h3><div class="tv-grid">'+older.slice(0,12).map(v=>card(v,true)).join('')+'</div>':'<p class="bench-note">No older views archived yet.</p>';
 }
@@ -3430,24 +3438,25 @@ $('benchExport').onclick = () => {
 };
 
 // ════════════════ 라우팅 ════════════════
-const OLD = [[/^#\/compare\/launches$/, '#/launches'], [/^#\/fundamentals\/cex$/, '#/fundamentals/share'], [/^#\/fundamentals\/standings$/, '#/compare/benchmark'], [/^#\/race\/standings$/, '#/compare/benchmark'], [/^#\/race(\/track)?$/, '#/fundamentals/track'], [/^#\/oracle\/friends$/, '#/overview/pretge'], [/^#\/oracle\/farms$/, '#/overview'], [/^#\/oracle(\/(codes|live|watch))?$/, '#/overview$1'],
+const OLD = [[/^#\/strategy\/views$/, '#/trader-views'], [/^#\/compare\/launches$/, '#/launches'], [/^#\/fundamentals\/cex$/, '#/fundamentals/share'], [/^#\/fundamentals\/standings$/, '#/compare/benchmark'], [/^#\/race\/standings$/, '#/compare/benchmark'], [/^#\/race(\/track)?$/, '#/fundamentals/track'], [/^#\/oracle\/friends$/, '#/overview/pretge'], [/^#\/oracle\/farms$/, '#/overview'], [/^#\/oracle(\/(codes|live|watch))?$/, '#/overview$1'],
   [/^#\/strategy\/friends$/, '#/overview/pretge'], [/^#\/strategy\/(codes|live|watch|finder)$/, '#/overview/$1'], [/^#\/strategy\/(regime|playbook)$/, '#/strategy']];
 function route(){
   let h = decodeURIComponent(location.hash);
   // 옛 주소(Race·Oracle)는 새 구조로
   for (const [re, to] of OLD) if (re.test(h)) { location.replace(h.replace(re, to)); return; }
   // 주소가 없으면 랜딩(Home). 텔레그램 캡처(#tg·#tgmap)는 Overview
-  const page = TG ? 'overview' : h.startsWith('#/launches') ? 'launches' : h.startsWith('#/compare') ? 'compare' : h.startsWith('#/deep') ? 'deep' : h.startsWith('#/fundamentals') ? 'fundamentals' : h.startsWith('#/strategy') ? 'strategy' : h.startsWith('#/overview') ? 'overview' : h.startsWith('#/new') ? 'new' : h.startsWith('#/guide') ? 'guide' : 'home';
+  const page = TG ? 'overview' : h.startsWith('#/trader-views') ? 'trader-views' : h.startsWith('#/launches') ? 'launches' : h.startsWith('#/compare') ? 'compare' : h.startsWith('#/deep') ? 'deep' : h.startsWith('#/fundamentals') ? 'fundamentals' : h.startsWith('#/strategy') ? 'strategy' : h.startsWith('#/overview') ? 'overview' : h.startsWith('#/new') ? 'new' : h.startsWith('#/guide') ? 'guide' : 'home';
   const home = page === 'home';
   $('v-home').hidden = !home; $('crumb').hidden = home;
   document.body.dataset.view = page;
   let sub = !home && !TG ? (h.split('/')[2] || '').split('?')[0] : '';
   if (page === 'compare') sub = '';
-  let bc = {launches:'PERP DEXS LAUNCHING OPTIONS', compare:'COMPARE TO DERIBIT', overview:'ECOSYSTEM OVERVIEW', fundamentals:'OPTION FUNDAMENTAL', strategy:'SENTIMENT', deep:'DEEP DIVE', new:'NEW PROJECTS', guide:'STRATEGY GUIDE'}[page] || '';
+  let bc = {'trader-views':'TRADER VIEWS', launches:'PERP DEXS LAUNCHING OPTIONS', compare:'COMPARE TO DERIBIT', overview:'ECOSYSTEM OVERVIEW', fundamentals:'OPTION FUNDAMENTAL', strategy:'SENTIMENT', deep:'DEEP DIVE', new:'NEW PROJECTS', guide:'STRATEGY GUIDE'}[page] || '';
   if (page === 'fundamentals') {
     if (!$('v-fund').dataset.on) { $('v-fund').dataset.on = 1; renderFund(); }
     if (!$('v-race').dataset.on) { $('v-race').dataset.on = 1; renderRaceChips(); renderRaceSeason(); runRace(); }
   } else { cancelAnimationFrame(rpRaf); rpPlaying = false; }
+  if (page === 'trader-views') renderTraderViews();
   if (page === 'launches') renderLaunchWatch();
   if (page === 'compare') { renderBenchmark(); renderComparisonAnalytics(); }
   if (page === 'guide' && !$('v-guide').dataset.on) { $('v-guide').dataset.on = 1; renderGuide(); }
