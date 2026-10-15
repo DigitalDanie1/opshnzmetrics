@@ -150,43 +150,48 @@
     "note": "",
     "scenarios": [
       {
-        "if": "Hot CPI or a hawkish Fed",
-        "then": "Protect the downside",
-        "how": "Buy puts or put spreads before the print — implied vol jumps after a surprise, so buy early, not after.",
-        "friends": [
-          "Derive",
-          "Paradex",
-          "Aevo"
-        ]
+        "then": "Bear put spread · trade a confirmed breakdown",
+        "how": "A hawkish surprise is a trigger to reassess, not an automatic sell signal.",
+        "entry": "After the release, wait for price to break support and fail to reclaim it. Skip if price holds support or put premiums have already jumped beyond your budget.",
+        "legs": "Buy a put near spot; sell a lower-strike put near your downside target. Use equal size, the same underlying and expiry, typically 7–21 days out.",
+        "exit": "Close both legs near the lower strike, on a reclaim of broken support, or before expiry. A price stop is an exit plan, not a guaranteed fill.",
+        "risk": "Maximum expiry loss: net premium paid. Maximum expiry gain: strike gap minus premium.",
+        "example": "Illustration only: spot 100; buy 100 put / sell 95 put for a net 2. Expiry break-even 98; max loss 2; max gain 3.",
+        "source": "https://prd-web.optionseducation.org/strategies/all-strategies/bear-put-spread",
+        "if": "Hot CPI or a hawkish Fed"
       },
       {
-        "if": "Soft data or a rate cut",
-        "then": "Lean long with calls",
-        "how": "Call spreads keep the cost down; selling puts into strength also works.",
-        "friends": [
-          "Derive",
-          "Paradex",
-          "Hunch"
-        ]
+        "then": "Bull call spread · trade a confirmed breakout",
+        "how": "A rate cut can also signal weaker growth. Use the price reaction to confirm the bullish thesis.",
+        "entry": "Wait for price to break resistance and hold a retest. Skip a rejected breakout or a spread whose cost leaves too little upside to your target.",
+        "legs": "Buy a call near spot; sell a higher-strike call near your upside target. Use equal size, the same underlying and expiry, typically 7–21 days out.",
+        "exit": "Close both legs near the upper strike, if price loses the breakout level, or before expiry.",
+        "risk": "Maximum expiry loss: net premium paid. Maximum expiry gain: strike gap minus premium.",
+        "example": "Illustration only: spot 100; buy 100 call / sell 105 call for a net 2. Expiry break-even 102; max loss 2; max gain 3.",
+        "source": "https://www.optionseducation.org/videolibrary/debit-and-credit-verticals",
+        "if": "Soft data or a dovish Fed — and price confirms"
       },
       {
-        "if": "Big event, then nothing happens",
-        "then": "Sell premium after the event",
-        "how": "Implied vol usually drops right after FOMC or CPI (vol crush) — vaults and covered calls collect it.",
-        "friends": [
-          "Thetanuts",
-          "Rysk",
-          "3Jane"
-        ]
+        "then": "Iron condor · sell a range with capped risk",
+        "how": "Consider only while option premiums remain rich versus your expected movement. Selling after volatility has already collapsed misses that repricing.",
+        "entry": "After the release, mark the range and confirm it is holding. Skip an active breakout, thin quotes, or a credit too small for the risk.",
+        "legs": "Sell a put below the range and a call above it; buy a lower put and a higher call as protection. Use equal size, one underlying and one expiry, typically 7–14 days out.",
+        "exit": "Example rule: close all four legs when half the opening credit is captured, when the range breaks, or before expiry. This rule is illustrative, not backtested.",
+        "risk": "Maximum expiry gain: credit received. Maximum expiry loss: wider wing gap minus credit.",
+        "example": "Illustration only: buy 90 put / sell 95 put / sell 105 call / buy 110 call for a net 1 credit. Expiry break-evens 94 and 106; max loss 4; max gain 1.",
+        "source": "https://www.optionseducation.org/strategies/all-strategies/short-condor",
+        "if": "Event passes; price stays inside its range"
       },
       {
-        "if": "Shock headline or liquidation cascade",
-        "then": "Own volatility, not direction",
-        "how": "Short-dated puts reprice fastest; BVIV / EVIV perps let you trade the fear itself.",
-        "friends": [
-          "Volmex",
-          "GammaSwap"
-        ]
+        "then": "Long straddle · buy movement only if fairly priced",
+        "how": "A shock alone is not a reason to buy volatility. The remaining move must justify the price of both options.",
+        "entry": "Compare the combined premium with your expected remaining move. Skip if panic premiums already price in that move; staying flat is a valid decision.",
+        "legs": "Buy a call and a put at the same strike near spot, with equal size, the same underlying and expiry, typically 7–14 days out.",
+        "exit": "Close both legs when the expected move arrives, if the catalyst fades, or before expiry. Time decay and falling implied volatility can hurt even after a price move.",
+        "risk": "Maximum expiry loss: total premium paid. Upside gain is uncapped; downside gain is capped by the underlying reaching zero.",
+        "example": "Illustration only: strike 100; pay 3 for the call + 3 for the put. Expiry break-evens 94 and 106; max loss 6. Earlier profit depends on volatility and time remaining.",
+        "source": "https://prd-web.optionseducation.org/strategies/all-strategies/long-straddle",
+        "if": "More large moves expected; direction unclear"
       }
     ]
   },
@@ -2401,5 +2406,41 @@
         "incubator": null
       }
     }
-  ]
+  ],
+  "benchmark": {
+    "reviewedAt": "2026-10-15",
+    "anchors": [
+      {
+        "id": "closing",
+        "label": "Closing consideration · Aug 2025",
+        "value": 4300000000,
+        "source": "https://www.sec.gov/Archives/edgar/data/1679788/000167978826000054/coin-20260331.htm"
+      },
+      {
+        "id": "announcement",
+        "label": "Announced deal · May 2025",
+        "value": 2900000000,
+        "source": "https://www.coinbase.com/en-gb/blog/coinbase-to-acquire-deribit-becoming-the-most-comprehensive-global-crypto-derivatives-platform"
+      }
+    ],
+    "entrants": [
+      {
+        "name": "Lighter",
+        "cg": "lighter",
+        "stage": "Launch unverified",
+        "detail": "Perps venue under watch. Reviewed official introduction does not establish a live options product or launch date. Binary options, if launched, need separate treatment from vanilla options.",
+        "source": "https://docs.lighter.xyz/",
+        "next": "Official product specification, live options markets and options-only API metrics.",
+        "logo": "logos/lighter.png"
+      },
+      {
+        "name": "Variational",
+        "stage": "Pro documented · not live",
+        "detail": "Official Pro documentation describes customizable OTC non-linear derivatives and states Pro is not live. Omni perps activity is excluded from options metrics.",
+        "source": "https://docs.variational.io/pro/about-pro",
+        "next": "Pro launch confirmation, executed options notional and outstanding options positions.",
+        "logo": "logos/variational.png"
+      }
+    ]
+  }
 }

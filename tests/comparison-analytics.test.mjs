@@ -1,0 +1,16 @@
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+const html=fs.readFileSync(new URL('../template.html',import.meta.url),'utf8');
+const source=html.slice(html.indexOf('function comparisonAnnualYield('),html.indexOf('function comparisonScatter('));
+const ctx=vm.createContext({});vm.runInContext(source,ctx);
+assert.equal(ctx.comparisonAnnualYield(300,36500),.1);
+assert.equal(ctx.comparisonAnnualYield(0,100),0);
+assert.equal(ctx.comparisonAnnualYield(-1,100),null);
+assert.equal(ctx.comparisonAnnualYield(null,100),null);
+assert.equal(ctx.comparisonAnnualYield(1,0),null);
+const [lo,hi]=ctx.comparisonLogDomain([0,-1,null,100,10000]);assert.ok(lo<2 && hi>4);
+const [el,eh]=ctx.comparisonLogDomain([]);assert.ok(eh>el);
+const collect=fs.readFileSync(new URL('../collect.js',import.meta.url),'utf8'), fn=collect.slice(collect.indexOf('async function benchmarkFinancials('));
+const financialContext=vm.createContext({getJSON:async url=>({protocols:[{slug:'test-options',name:'Test Options',parentProtocol:'parent#test',total30d:url.includes('Holders')?0:100},{slug:'test-perps',name:'Test Perps',parentProtocol:'parent#test',total30d:url.includes('Holders')?10:200}]}),Date,Set,Promise});
+vm.runInContext(fn,financialContext);const result=await financialContext.benchmarkFinancials({projects:[{name:'Test',llama:['parent#test','test-options']}]});
+assert.equal(result.projects.Test.fees,300);assert.equal(result.projects.Test.optionsFees,100);assert.equal(result.projects.Test.holders,10);assert.equal(result.projects.Test.holdersAdapters.length,2);
+console.log('Analytics: annualization, zero/missing/negative handling, log domains, parent deduplication and options/protocol separation passed.');

@@ -1,0 +1,236 @@
+{
+  "at": "2026-10-15T03:05:38.557221+00:00",
+  "period": "Provider rolling last 30 days",
+  "scope": "Protocol-wide for holders; explicitly named options adapters for chart fee rings",
+  "projects": {
+    "Derive": {
+      "holders": 0,
+      "holdersAdapters": [
+        "derive-v2",
+        "derive-options",
+        "derive-v3-perps",
+        "derive-v3-options",
+        "derive-v3-spot"
+      ],
+      "revenue": 540926.07,
+      "revenueAdapters": [
+        "derive-v2",
+        "derive-options",
+        "derive-v3-perps",
+        "derive-v3-options",
+        "derive-v3-spot"
+      ],
+      "optionsRevenue": 458571,
+      "fees": 677065.07,
+      "feesAdapters": [
+        "derive-v2",
+        "derive-options",
+        "derive-v3-perps",
+        "derive-v3-options",
+        "derive-v3-spot"
+      ],
+      "optionsFees": 496339,
+      "optionsAdapters": [
+        "derive-options",
+        "derive-v3-options"
+      ]
+    },
+    "Paradex": {
+      "holders": 5472,
+      "holdersAdapters": [
+        "paradex-perps"
+      ],
+      "revenue": null,
+      "revenueAdapters": [],
+      "optionsRevenue": null,
+      "fees": 52729.85,
+      "feesAdapters": [
+        "paradex-perps",
+        "paradex-spot",
+        "paradex-options"
+      ],
+      "optionsFees": 25216,
+      "optionsAdapters": [
+        "paradex-options"
+      ]
+    },
+    "Dream": {
+      "holders": null,
+      "holdersAdapters": [],
+      "revenue": 7541.05,
+      "revenueAdapters": [
+        "dream"
+      ],
+      "optionsRevenue": null,
+      "fees": 8021.05,
+      "feesAdapters": [
+        "dream"
+      ],
+      "optionsFees": null,
+      "optionsAdapters": []
+    },
+    "CallPut": {
+      "holders": null,
+      "holdersAdapters": [],
+      "revenue": 14457.859999999999,
+      "revenueAdapters": [
+        "callput"
+      ],
+      "optionsRevenue": null,
+      "fees": 14457.859999999999,
+      "feesAdapters": [
+        "callput"
+      ],
+      "optionsFees": null,
+      "optionsAdapters": []
+    },
+    "Panoptic": {
+      "holders": null,
+      "holdersAdapters": [],
+      "revenue": 4556.75,
+      "revenueAdapters": [
+        "panoptic-v2"
+      ],
+      "optionsRevenue": null,
+      "fees": 4556.75,
+      "feesAdapters": [
+        "panoptic-v2"
+      ],
+      "optionsFees": null,
+      "optionsAdapters": []
+    },
+    "Hegic": {
+      "holders": -70224.97,
+      "holdersAdapters": [
+        "hegic"
+      ],
+      "revenue": -70224.97,
+      "revenueAdapters": [
+        "hegic"
+      ],
+      "optionsRevenue": null,
+      "fees": -70224.97,
+      "feesAdapters": [
+        "hegic"
+      ],
+      "optionsFees": null,
+      "optionsAdapters": []
+    },
+    "Katana": {
+      "holders": null,
+      "holdersAdapters": [],
+      "revenue": 0,
+      "revenueAdapters": [
+        "katana"
+      ],
+      "optionsRevenue": null,
+      "fees": 5979.599999999999,
+      "feesAdapters": [
+        "katana"
+      ],
+      "optionsFees": null,
+      "optionsAdapters": []
+    },
+    "SOFA.org": {
+      "holders": null,
+      "holdersAdapters": [],
+      "revenue": 4992.8099999999995,
+      "revenueAdapters": [
+        "sofa.org"
+      ],
+      "optionsRevenue": null,
+      "fees": 4992.8099999999995,
+      "feesAdapters": [
+        "sofa.org"
+      ],
+      "optionsFees": null,
+      "optionsAdapters": []
+    },
+    "Typus": {
+      "holders": 0,
+      "holdersAdapters": [
+        "typus-perp"
+      ],
+      "revenue": 2.67,
+      "revenueAdapters": [
+        "typus-perp"
+      ],
+      "optionsRevenue": null,
+      "fees": 4.319999999999999,
+      "feesAdapters": [
+        "typus-perp"
+      ],
+      "optionsFees": null,
+      "optionsAdapters": []
+    },
+    "Kyan": {
+      "holders": null,
+      "holdersAdapters": [],
+      "revenue": 0,
+      "revenueAdapters": [
+        "kyan-blue-perps"
+      ],
+      "optionsRevenue": null,
+      "fees": 0,
+      "feesAdapters": [
+        "kyan-blue-perps"
+      ],
+      "optionsFees": null,
+      "optionsAdapters": []
+    },
+    "Stryke": {
+      "holders": null,
+      "holdersAdapters": [],
+      "revenue": 0,
+      "revenueAdapters": [
+        "stryke-clamm"
+      ],
+      "optionsRevenue": null,
+      "fees": 0,
+      "feesAdapters": [
+        "stryke-clamm"
+      ],
+      "optionsFees": null,
+      "optionsAdapters": []
+    },
+    "Stochastic": {
+      "holders": null,
+      "holdersAdapters": [],
+      "revenue": 21.9,
+      "revenueAdapters": [
+        "stochastic-finance"
+      ],
+      "optionsRevenue": null,
+      "fees": 21.9,
+      "feesAdapters": [
+        "stochastic-finance"
+      ],
+      "optionsFees": null,
+      "optionsAdapters": []
+    },
+    "HedgeHood": {
+      "holders": 0,
+      "holdersAdapters": [
+        "hedge-fun"
+      ],
+      "revenue": 159648.97,
+      "revenueAdapters": [
+        "hedge-fun",
+        "hedgehood-hedge"
+      ],
+      "optionsRevenue": null,
+      "fees": 183404.61,
+      "feesAdapters": [
+        "hedge-fun",
+        "hedgehood-hedge"
+      ],
+      "optionsFees": null,
+      "optionsAdapters": []
+    }
+  },
+  "sources": {
+    "holders": "https://api.llama.fi/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true&dataType=dailyHoldersRevenue",
+    "revenue": "https://api.llama.fi/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true&dataType=dailyRevenue",
+    "fees": "https://api.llama.fi/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true&dataType=dailyFees"
+  }
+}

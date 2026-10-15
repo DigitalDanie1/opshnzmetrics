@@ -38,14 +38,15 @@ const cleanName = n => n.replace(/\s+(V\d+(\.\d+)?|Options|Protocol|Finance)\b/g
 async function collect(data, now = new Date(), opts = {}) {
   // 기초자산(시그널 띠 가격용)도 함께
   const MAJORS = [['bitcoin', 'BTC'], ['ethereum', 'ETH'], ['hyperliquid', 'HYPE'], ['solana', 'SOL']];
-  const ids = [...new Set([...data.projects.map(p => p.cg).filter(Boolean), ...MAJORS.map(m => m[0])])];
+  const ids = [...new Set([...data.projects.map(p => p.cg).filter(Boolean), ...(data.benchmark?.entrants || []).map(p => p.cg).filter(Boolean), ...MAJORS.map(m => m[0])])];
   const chunks = [];
   for (let i = 0; i < ids.length; i += 50) chunks.push(ids.slice(i, i + 50));
-  const [cgParts, opt, prem, protos] = await Promise.all([
+  const [cgParts, opt, prem, protos, financials] = await Promise.all([
     Promise.all(chunks.map(c => getJSON(`${CG}?vs_currency=usd&ids=${c.join(',')}&sparkline=true&price_change_percentage=7d,30d`))),
     getJSON(LLAMA_OPT),
     getJSON(LLAMA_PREM),
     opts.prev ? Promise.resolve(null) : getJSON(LLAMA_PROTOCOLS),
+    benchmarkFinancials(data),
   ]);
   // 누적 명목 거래량(cumVolApi) — 프로젝트가 직접 공개하는 API. 동기 map 전에 병렬로 받아 둔다
   const cumVolOf = {};
@@ -135,6 +136,10 @@ async function collect(data, now = new Date(), opts = {}) {
     headline: data.headline || '',
     relations: data.relations || [],
     majors: MAJORS.map(([id, t]) => { const c = byCg[id]; return c ? { t, price: c.current_price, ch24: c.price_change_percentage_24h } : null; }).filter(Boolean),
+    benchmarkFinancials: financials,
+    benchmarkMarkets: Object.fromEntries((data.benchmark?.entrants || []).filter(p => p.cg).map(p => {
+      const c = byCg[p.cg]; return [p.name, c ? {mcap:c.market_cap ?? null, fdv:c.fully_diluted_valuation ?? null, at:now.toISOString(), source:`https://www.coingecko.com/en/coins/${p.cg}`} : null];
+    })),
     projects,
     market: {
       total30: opt ? opt.total30d : null,
@@ -158,7 +163,7 @@ function thin(arr, n) {
 }
 
 // ── 딥다이브용 히스토리 (브라우저에서 프로젝트를 열 때만 부른다) ───────────
-async function history(p) {
+async function projectHistory(p) {
   const [price, vols] = await Promise.all([
     p.cg ? getJSON(`https://api.coingecko.com/api/v3/coins/${p.cg}/market_chart?vs_currency=usd&days=365&interval=daily`) : null,
     Promise.all((p.volSlugs || []).map(s => getJSON(`https://api.llama.fi/summary/options/${s}?dataType=dailyNotionalVolume&excludeTotalDataChartBreakdown=true`))),
@@ -293,12 +298,13 @@ async function fundamentals(snap) {
   out.venues = Object.values(out.venues).map(v => ({ ...v, premium: v.premium || null, notional: v.notional || null }));
   // Deribit: 24시간 옵션 명목(계약 수 × 기초자산 가격)과 프리미엄(volume_usd)
   let dn = 0, dp = 0, ok = 0;
+  const currencies = [];
   for (const c of ['BTC', 'ETH', 'SOL', 'XRP']) {
     const j = await getJSON(`https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=${c}&kind=option`);
-    if (!j || !j.result) continue; ok++;
+    if (!j || !j.result) continue; ok++; currencies.push(c);
     for (const r of j.result) { dn += (r.volume || 0) * (r.underlying_price || r.estimated_delivery_price || 0); dp += r.volume_usd || 0; }
   }
-  out.deribit = ok ? { notional24: dn, premium24: dp } : null;
+  out.deribit = ok ? { notional24: dn, premium24: dp, currencies, coverageComplete: ok === 4 } : null;
   return out;
 }
 
@@ -466,4 +472,26 @@ function llamaUrl(p) {
 }
 const cgUrl = p => p.cg ? `https://www.coingecko.com/en/coins/${p.cg}` : null;
 
-if (typeof module !== 'undefined') module.exports = { collect, history, isoWeek, grandPrix, rivals, raceSeries, fundamentals, openInterest, venueExtras, dmMarket, macroWeek, sentiScore, sentiInputs, sentiVerdict, majorsHistory, RACES, llamaUrl, cgUrl };
+if (typeof module !== 'undefined') module.exports = { collect, history: projectHistory, isoWeek, grandPrix, rivals, raceSeries, fundamentals, openInterest, venueExtras, dmMarket, macroWeek, sentiScore, sentiInputs, sentiVerdict, majorsHistory, RACES, llamaUrl, cgUrl };
+
+// Source-specific financial coverage; parent token economics and options adapters stay separate.
+async function benchmarkFinancials(data) {
+  const metrics={holders:'dailyHoldersRevenue',revenue:'dailyRevenue',fees:'dailyFees'};
+  const sources=Object.fromEntries(Object.entries(metrics).map(([k,v])=>[k,`https://api.llama.fi/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true&dataType=${v}`]));
+  const responses=Object.fromEntries(await Promise.all(Object.entries(sources).map(async ([k,url])=>[k,await getJSON(url)])));
+  const projects={};
+  for(const p of data.projects){
+    const keys=new Set(p.llama || []), record={};
+    for(const [metric,j] of Object.entries(responses)){
+      const seen=new Set(), matches=(j?.protocols || []).filter(x=>(keys.has(x.slug)||keys.has(x.parentProtocol)) && !seen.has(x.slug) && seen.add(x.slug));
+      const present=matches.filter(x=>typeof x.total30d==='number' && Number.isFinite(x.total30d));
+      record[metric]=present.length?present.reduce((s,x)=>s+x.total30d,0):null;
+      record[metric+'Adapters']=present.map(x=>x.slug);
+      const options=present.filter(x=>/options/i.test(x.name));
+      if(metric==='fees'||metric==='revenue')record['options'+metric[0].toUpperCase()+metric.slice(1)]=options.length?options.reduce((s,x)=>s+x.total30d,0):null;
+      if(metric==='fees')record.optionsAdapters=options.map(x=>x.slug);
+    }
+    if(['holders','revenue','fees'].some(k=>record[k]!=null))projects[p.name]=record;
+  }
+  return {at:new Date().toISOString(),period:'Provider rolling last 30 days',scope:'Protocol-wide for holders; explicitly named options adapters for chart fee rings',projects,sources};
+}

@@ -941,6 +941,11 @@ body.maponly #v-overview > section:not(.sys){display:none}
 .scen .then{padding:18px}
 .scen .then b{display:block;font-size:15px;line-height:1.35}
 .scen .then p{font-size:12.5px;line-height:1.5;color:var(--ink2);margin-top:6px}
+.scen .then dl{margin:16px 0 0;display:grid;gap:6px}
+.scen .then dt{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--amber);margin-top:8px}
+.scen .then dd{margin:0;font-size:12.5px;line-height:1.6;color:var(--ink2);overflow-wrap:anywhere}
+.scen .sc-source{display:inline-block;margin-top:16px;font-size:11px;color:var(--ink2);text-decoration:underline;text-underline-offset:3px}
+
 .senti{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:12px;margin-bottom:22px}
 .senti .sg,.senti .sr{background:rgba(18,19,16,.86);border:1px solid var(--line2);padding:20px}
 .senti small{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--amber)}
@@ -1336,6 +1341,86 @@ body.tg .eco-search{display:none}
 .ftl-sub{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;font-size:11.5px;color:var(--mute)}
 .ftl-sub .rf{color:#1a1408;background:var(--amber);border-radius:999px;padding:0 8px;font-weight:600;letter-spacing:.04em}
 @media (max-width:700px){.fz{padding:16px}.fzl-g{grid-template-columns:1fr}}
+
+.bench-controls{display:flex;flex-wrap:wrap;gap:16px;margin:22px 0;align-items:end}
+.bench-controls label{display:grid;gap:7px;font:11px var(--mono);color:var(--ink2)}
+.bench-controls select,.bench-controls input{background:var(--bg);color:var(--ink);border:1px solid var(--line2);padding:10px;font:13px var(--sans);max-width:100%}
+.bench-controls button,.bench-link{background:var(--amber);color:#111;border:0;padding:11px 15px;cursor:pointer;font:12px var(--mono);text-decoration:none;display:inline-block}
+.bench-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+.bench-grid article{border:1px solid var(--line2);padding:24px;background:rgba(18,19,16,.86)}
+.bench-grid h3{font-size:22px;margin:8px 0 14px}.bench-grid p{font-size:13px;line-height:1.65;color:var(--ink2);margin:10px 0}
+.bench-status{color:var(--amber);font:10px var(--mono);letter-spacing:.06em}
+.bench-table{width:100%;border-collapse:collapse;min-width:940px;font-size:12px}
+.bench-table th,.bench-table td{padding:15px 12px;border-bottom:1px solid var(--line);text-align:right;vertical-align:top}
+.bench-table th{font:10px var(--mono);color:var(--ink2)}.bench-table th:first-child,.bench-table td:first-child{text-align:left}
+.bench-table td small{display:block;color:var(--ink2);font-size:10px;margin-top:6px}.bench-table .base{background:rgba(255,185,56,.07)}
+.bench-note{font-size:12px;line-height:1.75;color:var(--ink2);margin:14px 0}.bench-note a,.bench-grid a{color:var(--amber);text-decoration:underline}
+.bench-bars{display:grid;gap:16px;margin:20px 0}.bench-bar{display:grid;grid-template-columns:110px 1fr 70px;gap:12px;align-items:center;font-size:12px}.bench-track{background:var(--line);height:8px}.bench-track i{display:block;background:var(--amber);height:100%}
+@media(max-width:760px){.bench-grid{grid-template-columns:1fr}.bench-controls label{width:100%}.bench-bar{grid-template-columns:85px 1fr 60px}}
+
+
+.ms-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:18px 0;font-size:12px;color:var(--ink2)}
+.ms-top b{color:var(--ink);font-family:var(--mono)}
+.ms-assets{display:flex;gap:5px}.ms-assets button{padding:7px 12px;background:transparent;border:1px solid var(--line2);color:var(--ink2);font:11px var(--mono);cursor:pointer}
+.ms-assets button[aria-pressed=true]{color:#15120b;background:var(--amber);border-color:var(--amber)}
+.ms-split{display:flex;height:12px;overflow:hidden;border-radius:3px;margin-bottom:20px}.ms-split i:first-child{background:var(--amber)}.ms-split i:last-child{background:#86b6ff}
+.ms-groups{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.ms-group-head{display:flex;justify-content:space-between;gap:12px;align-items:end;padding-bottom:16px;border-bottom:1px solid var(--line2)}
+.ms-group-head small{display:block;font:10px var(--mono);letter-spacing:.08em;color:var(--ink2);margin-bottom:8px}.ms-group-head b{font:30px var(--mono);color:var(--amber)}.ms-group.cex .ms-group-head b{color:#86b6ff}
+.ms-value{font:15px var(--mono);text-align:right}.ms-value small{font:10px var(--mono);margin:6px 0 0}
+.ms-venue{display:grid;grid-template-columns:minmax(0,1fr) 65px 85px;gap:8px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.ms-name,.ms-name a{display:flex;align-items:center;gap:7px;font-size:12px}.ms-name img,.ms-name .logo-ph{width:20px;height:20px;border-radius:50%}
+.ms-venue>b{font:12px var(--mono);text-align:right}.ms-venue>span{font:11px var(--mono);text-align:right;color:var(--ink2)}
+.ms-track{grid-column:1/-1;background:rgba(255,255,255,.05);height:4px}.ms-track i{display:block;height:100%;background:var(--amber)}.cex .ms-track i{background:#86b6ff}
+.card:has(#fdShare){align-self:start}.fgrid:has(#fdShare){grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+.fgrid.solo:has(#fdShare){grid-template-columns:1fr}
+@media(max-width:1050px){.ms-groups{grid-template-columns:1fr;gap:24px}}
+@media(max-width:900px){.fgrid:has(#fdShare){grid-template-columns:1fr}}
+
+
+.bench-explain{max-width:780px;margin:20px 0 28px}.bench-explain h3{font-size:24px;line-height:1.3}.bench-explain p{color:var(--ink2);font-size:14px;line-height:1.7;margin-top:12px}.bench-explain b{color:var(--ink)}
+.bench-simple-control{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin:20px 0;font-size:12px;color:var(--ink2)}.bench-simple-control select{background:#151611;color:var(--ink);border:1px solid var(--line2);padding:10px;margin-left:8px}
+.bench-reference{display:flex;gap:16px 28px;align-items:center;flex-wrap:wrap;background:rgba(242,181,68,.07);padding:18px;border:1px solid var(--line2);font-size:13px}.bench-reference>b{font:10px var(--mono);color:var(--amber)}.bench-reference strong{margin-left:8px}.bench-reference small{width:100%;color:var(--ink2);font-size:11px}
+.bench-simple-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0}
+.bench-simple-cards article{padding:22px;border:1px solid var(--line2);background:rgba(15,16,13,.9)}.bench-simple-cards h3{font-size:23px;margin-bottom:22px}
+.bench-simple-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}.bench-simple-pair small{font:9px var(--mono);color:var(--ink2);display:block}.bench-simple-pair b{display:block;font:25px var(--mono);margin:9px 0}.bench-simple-pair span{font-size:11px;color:var(--ink2);line-height:1.5;display:block}
+.bench-simple-result{display:flex;gap:14px;align-items:center;border-top:1px solid var(--line2);margin-top:22px;padding-top:20px}.bench-simple-result strong{font:32px var(--mono);color:var(--amber)}.bench-simple-result span{font-size:12px;line-height:1.5;max-width:170px}
+.bench-simple-cards p{font-size:12px;color:var(--ink2);line-height:1.6;margin-top:12px}.bench-simple-source a{font-size:10px;text-decoration:underline}
+.bench-details{border-top:1px solid var(--line2);padding:17px 0;margin-top:12px}.bench-details summary{cursor:pointer;font-size:13px;color:var(--ink2)}.bench-details[open] summary{margin-bottom:20px;color:var(--ink)}
+@media(max-width:1050px){.bench-simple-cards{grid-template-columns:1fr}.bench-simple-pair b{font-size:28px}}
+
+
+.pulse-table-wrap{margin:20px 0;overflow-x:auto;border:1px solid var(--line2);background:rgba(12,13,10,.9)}
+.pulse-table{width:100%;min-width:940px;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+.pulse-table th{font:10px var(--mono);color:var(--ink2);padding:15px 16px;text-align:right;line-height:1.6;background:#171813;border-bottom:1px solid var(--line2)}
+.pulse-table th:first-child{text-align:left}.pulse-table td{padding:18px 16px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+.pulse-table td:first-child{text-align:left;min-width:150px}.pulse-table td:first-child>a{display:flex;align-items:center;gap:9px}.pulse-table img,.pulse-table .logo-ph{width:24px;height:24px;border-radius:50%}
+.pulse-table small{display:block;color:var(--ink2);font-size:10px;margin-top:7px}.pulse-table td:last-child>b{font:17px var(--mono);color:var(--amber)}
+.pulse-table tbody tr:hover{background:rgba(255,255,255,.035)}.pulse-table .pulse-reference{background:rgba(242,181,68,.08)}
+.pulse-help{padding:15px 18px;font-size:12px;color:var(--ink2);line-height:1.7;min-width:260px}.pulse-help summary{cursor:pointer}.pulse-help p{margin-top:12px;max-width:780px}
+
+
+.pulse-table-wrap{border:0;background:none;overflow:visible}.pulse-scroll{overflow-x:auto;border:1px solid var(--line2);background:rgba(12,13,10,.9)}
+.pulse-scroll .pulse-table{min-width:600px}.pulse-scroll .pulse-valuation{min-width:780px}.pulse-layer{font-size:19px;margin:28px 0 14px}.pulse-layer-note{font-size:12px;line-height:1.7;color:var(--ink2);max-width:850px;margin:-4px 0 16px}
+.pulse-read{border-left:3px solid var(--amber);padding:18px 22px;background:rgba(20,21,17,.9);margin-bottom:24px}.pulse-read small{font:10px var(--mono);color:var(--amber)}.pulse-read p{font-size:17px;line-height:1.7;margin:10px 0}.pulse-read span{font-size:12px;color:var(--ink2)}
+.pulse-table:not(.pulse-valuation) td:last-child>b{font:inherit;color:inherit}
+
+.launch-brand{display:flex;align-items:center;gap:12px}.launch-brand img{width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0}
+
+.comparison-focus{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:18px 0}.comparison-focus label{font-size:13px}.comparison-focus select{background:#171813;color:var(--ink);padding:10px;border:1px solid var(--line2);margin-left:10px}.comparison-focus>span{font-size:11px;color:var(--ink2);max-width:520px;line-height:1.6}
+.comparison-panel{margin:22px 0;padding:24px;border:1px solid var(--line2);background:rgba(13,14,11,.94)}.comparison-panel-head{display:flex;justify-content:space-between;align-items:start;gap:20px;flex-wrap:wrap}.comparison-panel h2{font-size:25px;line-height:1.3}.comparison-panel-head p{font-size:13px;color:var(--ink2);margin-top:9px;line-height:1.6}.comparison-badge{font:12px var(--mono);color:var(--amber);border:1px solid var(--line2);padding:12px;max-width:310px;line-height:1.6}
+.comparison-plot-scroll{overflow-x:auto;margin-top:24px}.comparison-scatter{display:block;width:100%;min-width:720px;height:auto;overflow:visible}.comparison-scatter text{fill:var(--ink2);font:11px var(--mono)}.comparison-scatter .chart-name{fill:var(--ink);font:12px var(--sans)}.comparison-scatter .chart-axis-title{fill:var(--ink);font:11px var(--mono)}.chart-grid{stroke:var(--line);stroke-width:1}.chart-guide{stroke:#8b9282;stroke-width:1;stroke-dasharray:4 7;opacity:.45}.chart-guide-label{opacity:.7;font-size:10px!important}
+.chart-point-outer{fill:#8495a533;stroke:#94a6b8;stroke-width:1.6}.chart-point-outer.unknown{fill:none;stroke-dasharray:3 3}.chart-point-inner{fill:#91a4b6;opacity:.8}.chart-center{fill:var(--ink)}.chart-halo{fill:none;stroke:var(--amber);stroke-width:2}.chart-label-line{fill:none;stroke:#819080;opacity:.5}.comparison-point{cursor:pointer;outline:none}.comparison-point.selected .chart-name,.comparison-point:focus .chart-name{fill:var(--amber);font-weight:bold}.comparison-point.selected .chart-point-outer,.comparison-point:focus .chart-point-outer{stroke:var(--amber)}.comparison-point:focus .chart-center{fill:var(--amber)}
+.comparison-read{padding:13px 16px;min-height:48px;background:rgba(255,255,255,.025);font-size:12px;line-height:1.7;color:var(--ink2);border-left:2px solid var(--line2)}
+.token-leaders{margin-top:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}.token-leader{display:grid;grid-template-columns:36px minmax(80px,1fr) 150px 130px;gap:12px;align-items:center;padding:16px 8px;width:100%;text-align:left;color:var(--ink);background:none;border:0;border-bottom:1px solid var(--line2);cursor:pointer}.token-leader.selected{background:rgba(242,181,68,.09);box-shadow:inset 3px 0 var(--amber)}.token-leader small{display:block;font:9px var(--mono);color:var(--ink2);margin-bottom:7px}.token-leader b{font-size:13px}.token-rank{font:12px var(--mono);color:var(--ink2)}.token-leader-name{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.token-leader-name img,.token-leader-name .logo-ph{width:25px;height:25px;border-radius:50%}.token-leader-name small{width:100%;margin:0;padding-left:33px}#holderReturnTable td:first-child img{display:inline-block;vertical-align:middle;margin-right:6px}#holderReturnTable tr.selected{background:rgba(242,181,68,.08)}
+@media(max-width:1350px){.token-leaders{grid-template-columns:1fr}}
+@media(max-width:760px){.comparison-panel{padding:16px}.comparison-focus label,.comparison-focus select{display:block;width:100%;margin-left:0}.comparison-focus select{margin-top:8px}.token-leader{grid-template-columns:30px 1fr 1fr}.token-leader>span:last-child{grid-column:3}.comparison-panel h2{font-size:22px}}
+
+
+.fair-hero{background:rgba(15,16,12,.95);border:1px solid var(--line2);padding:28px;margin:22px 0}.fair-hero h3{font-size:32px;line-height:1.35;max-width:850px;margin:16px 0 24px}.fair-hero h3 em{color:var(--amber);font-style:normal}.fair-values{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.fair-values small{font:10px var(--mono);color:var(--ink2);display:block}.fair-values b{display:block;font:32px var(--mono);margin:12px 0;color:var(--amber)}.fair-values span{font-size:12px;color:var(--ink2);line-height:1.6;display:block}.fair-table td:nth-child(3){color:var(--amber)}
+@media(max-width:760px){.fair-values{grid-template-columns:1fr}.fair-hero{padding:20px}.fair-hero h3{font-size:26px}}
+
+.deribit-fundamentals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}.deribit-fundamentals article{border:1px solid var(--line2);background:rgba(17,18,14,.94);padding:20px}.deribit-fundamentals small{font:10px var(--mono);color:var(--ink2);line-height:1.6;display:block}.deribit-fundamentals b{display:block;font:29px var(--mono);color:var(--amber);margin:12px 0}.deribit-fundamentals span{font-size:11px;color:var(--ink2)}@media(max-width:760px){.deribit-fundamentals{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -1397,6 +1482,8 @@ body.tg .eco-search{display:none}
       <a href="#/deep" data-r="deep"><span class="n">04</span> DEEP DIVE<span class="n" id="ddn"></span> <span class="go">→</span></a>
       <a href="#/new" data-r="new"><span class="n">05</span> NEW PROJECTS <span class="go">→</span></a>
       <a href="#/guide" data-r="guide"><span class="n">06</span> STRATEGY GUIDE <span class="go">→</span></a>
+      <a href="#/launches" data-r="launches"><span class="n">07</span> PERP DEXS LAUNCHING OPTIONS <span class="go">→</span></a>
+      <a href="#/compare" data-r="compare"><span class="n">08</span> COMPARE TO DERIBIT <span class="go">→</span></a>
     </nav>
   </header>
   </section>
@@ -1404,11 +1491,57 @@ body.tg .eco-search{display:none}
     <a class="brand home-btn" href="#/" title="Back to the first screen"><svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><path d="M1.5 6.6 7 2l5.5 4.6M3.2 5.4V12h7.6V5.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>HOME</a>
     <span class="bc"><a href="#/home">DASHBOARD</a><i>/</i><b id="bcHere">OVERVIEW</b></span>
     <nav class="cnav" aria-label="Views">
-      <a data-r="strategy" href="#/strategy">01 SENTIMENT &amp; STRATEGY</a><a data-r="fundamentals" href="#/fundamentals">02 OPTION FUNDAMENTAL</a><a data-r="overview" href="#/overview">03 ECOSYSTEM OVERVIEW</a><a data-r="deep" href="#/deep">04 DEEP DIVE</a><a data-r="new" href="#/new">05 NEW PROJECTS</a><a data-r="guide" href="#/guide">06 STRATEGY GUIDE</a>
+      <a data-r="strategy" href="#/strategy">01 SENTIMENT &amp; STRATEGY</a><a data-r="fundamentals" href="#/fundamentals">02 OPTION FUNDAMENTAL</a><a data-r="overview" href="#/overview">03 ECOSYSTEM OVERVIEW</a><a data-r="deep" href="#/deep">04 DEEP DIVE</a><a data-r="new" href="#/new">05 NEW PROJECTS</a><a data-r="guide" href="#/guide">06 STRATEGY GUIDE</a><a data-r="launches" href="#/launches">07 PERP DEXS LAUNCHING OPTIONS</a><a data-r="compare" href="#/compare">08 COMPARE TO DERIBIT</a>
     </nav>
   </div>
   <nav class="subnav" id="subnav" aria-label="Sections" hidden></nav>
   <p class="sub" id="sub" hidden></p>
+
+
+  <main id="v-launches" hidden>
+    <div class="gp-head"><div><h2>Perp DEXs <em>launching options</em></h2><p>Lighter · Variational · launch evidence and options traction versus Deribit.</p></div></div>
+    <section data-blk="launches"><div class="sh"><h2>Perp DEXs launching options<span>Launch watch · evidence first</span></h2></div><div id="benchLaunches" class="bench-grid"></div><p class="bench-note">Unverified launches are tracked candidates, not confirmed launches. Unreported activity is N/A, never zero. Perps volume is excluded.</p></section>
+  </main>
+
+  <main id="v-compare" hidden>
+    <div class="gp-head"><div><h2>Compare to <em>Deribit</em></h2><p>What would each token be worth at Deribit’s valuation multiple?</p></div></div>
+
+    <section data-blk="benchmark">
+      <div class="bench-explain"><h3>Same business multiple. What token valuation?</h3><p>Compare options premiums, notional volume and open interest. Apply Deribit’s value per unit of each fundamental to the token project.</p></div>
+    <div class="comparison-focus"><label>Choose a token <select id="compareFocus"></select></label><span id="comparisonDates"></span></div>
+      <div class="bench-simple-control"><label>Fundamental <select id="benchMetric"><option value="premium">Option premium volume · 24h</option><option value="volume">Options notional volume · 24h</option><option value="oi">Options open interest · BTC + ETH</option></select></label><label>Compare using <select id="benchSimpleBasis"><option value="fdv">Total token value · FDV</option><option value="mcap">Circulating token value · market cap</option></select></label><span id="benchSimpleScope"></span></div>
+      <details class="bench-details"><summary>Deribit benchmark inputs</summary><div id="benchReference" class="bench-reference"></div></details>
+      <div id="benchFundamentals"></div>
+      <div id="benchSimpleCards" class="pulse-table-wrap" aria-live="polite"></div>
+      <p class="bench-note">This compares scale, not fair value. Tokens and company equity have different rights. Other businesses, growth and token cash flows can explain a gap.</p>
+      <details class="bench-details"><summary>Adjust assumptions</summary>
+      <div class="bench-controls">
+        <label>VALUATION BASIS<select id="benchBasis"><option value="fdv">Fully diluted valuation</option><option value="mcap">Circulating market cap</option></select></label>
+
+        <label>DERIBIT ANCHOR<select id="benchAnchor"></select></label>
+        <label>PROJECT COVERAGE<select id="benchCoverage"><option value="active">Options activity reported</option><option value="all">All projects with token data</option></select></label>
+        <label>OPTIONS ATTRIBUTION · SCENARIO %<input id="benchAllocation" type="number" min="1" max="100" step="1" value="100"></label>
+        <button id="benchReset" type="button">RESET</button>
+      </div>
+      </details>
+      <details class="bench-details"><summary>Full data, calculations &amp; export</summary>
+      <button id="benchExport" type="button">EXPORT CSV</button>
+      <p id="benchAsOf" class="bench-note"></p><p id="benchSummary" class="bench-note" aria-live="polite"></p>
+      <div class="tbl-x"><table class="bench-table"><thead><tr><th>PROJECT / SCOPE</th><th>MARKET CAP</th><th>FDV</th><th>OPTIONS ACTIVITY</th><th>% OF DERIBIT</th><th>RELATIVE MULTIPLE</th><th>PARITY ACTIVITY / CHANGE</th></tr></thead><tbody id="benchRows"></tbody></table></div>
+      <h3 style="margin-top:28px">Options footprint · Deribit = 100%</h3><div id="benchBars" class="bench-bars"></div>
+      <p class="bench-note">Above 1× = higher valuation per unit of activity; below 1× = lower. This is a relative screen, not a fair-value estimate. Different growth, margins, incentives and token rights can justify a gap.</p>
+      </details>
+    </section>
+    <details id="comparisonExtra" class="bench-details"><summary>Explore positioning, OI rankings &amp; holder returns</summary>
+    <section data-blk="positioning" class="comparison-panel"><div class="comparison-panel-head"><div><h2>Positioning field</h2><p>Where token projects sit by options activity and valuation.</p></div><div id="positioningModes" class="ms-assets" role="group" aria-label="Positioning mode"><button type="button" data-position-mode="activity" aria-pressed="true">Activity</button><button type="button" data-position-mode="valuation" aria-pressed="false">Valuation</button></div></div><div class="comparison-plot-scroll" id="positioningPlot"></div><p class="comparison-read" id="positioningRead" aria-live="polite"></p>
+      <details class="bench-details"><summary>Read the circles, scope &amp; source inputs</summary><p class="bench-note">Both axes use logarithmic USD scales. OI covers BTC + ETH; 24h options volume can include additional underlyings, so diagonal turnover guides are indicative. Outer circle area represents reported 30d options fees; filled area represents reported options revenue when available and no greater than fees. A dashed marker means fees are missing; no filled center means revenue is unavailable. The small center dot only marks the coordinate. Financial snapshots more than 48h from token data are excluded from encodings. A high turnover is not automatically better.</p><div class="tbl-x"><table id="chartInputTable" class="pulse-table"></table></div><p class="bench-note">OI: direct venue API fallback where the shared feed is missing, otherwise <a href="https://www.derivativesmonkey.com/btc/custom" target="_blank" rel="noopener">Derivatives Monkey ↗</a> · options volume: <a href="https://defillama.com/options" target="_blank" rel="noopener">DefiLlama ↗</a> · fees / revenue: explicitly named options adapters from the <a href="https://api.llama.fi/overview/fees?dataType=dailyFees" target="_blank" rel="noopener">DefiLlama fees API ↗</a>. Empty or nonpositive coordinates cannot be drawn on log axes and remain in this table.</p></details>
+    </section>
+    <section data-blk="token-oi" class="comparison-panel"><div class="comparison-panel-head"><div><h2>Options Open Interest Leaderboard</h2><p>Token projects ranked by actual reported options OI.</p></div><b id="oiPosition" class="comparison-badge"></b></div><div id="tokenOILeaders" class="token-leaders"></div><p class="bench-note" id="oiCoverage"></p></section>
+    <section data-blk="holder-return" class="comparison-panel"><div class="comparison-panel-head"><div><h2>What a buyer pays per dollar returned</h2><p>30d token-holder return versus circulating market cap · protocol-wide.</p></div></div><p class="bench-note" id="holderReturnSummary"></p><div class="comparison-plot-scroll" id="holderReturnPlot"></div><p class="comparison-read" id="holderReturnRead" aria-live="polite"></p><details class="bench-details"><summary>All token projects · reported values, zeros &amp; missing data</summary><div class="tbl-x"><table id="holderReturnTable" class="pulse-table"></table></div><p class="bench-note">Source: <a href="https://api.llama.fi/overview/fees?dataType=dailyHoldersRevenue" target="_blank" rel="noopener">DefiLlama dailyHoldersRevenue ↗</a>. Provider-reported 30d sums may include buybacks, distributions or accounting adjustments. Zero is reported as zero; a missing series is N/A. Negative values need reconciliation and are not treated as a negative cash dividend. The annualized ratio is not an expected investor return. Other products can contribute: do not read this as an options-only yield.</p></details></section>
+
+    </details>
+    <section data-blk="method"><details class="bench-details"><summary>Method &amp; sources</summary><div id="benchMethod" class="bench-note"></div></details></section>
+  </main>
 
   <main id="v-overview">
     <div class="eco-search" role="search">
@@ -1418,6 +1551,7 @@ body.tg .eco-search{display:none}
       <div class="eco-res" id="ecoRes" role="listbox" hidden></div>
     </div>
     <p class="headline" id="headline"></p>
+    <section data-blk="launches"><div class="sh"><h2>Perp DEXs launching options<span>Lighter · Variational · track the move from plans to real options activity</span></h2></div><p class="bench-note">Launch evidence and options-only results, measured against Deribit.</p><a class="bench-link" href="#/launches">TRACK THE CHALLENGERS →</a></section>
     <section data-blk="finder" class="finder">
       <div class="sh"><h2>What do you want to do?<span>pick a goal — we’ll point you to the right projects</span></h2></div>
       <div class="goals" id="goals" role="tablist"></div>
@@ -1464,7 +1598,6 @@ body.tg .eco-search{display:none}
       <div class="card" data-blk="share"><h3 id="fdShareT"></h3><div id="fdShare"></div><div class="cf" id="fdShareF"></div></div>
     </div>
     <div class="card" style="margin-top:12px" id="oiCard" data-blk="oi"><h3 id="oiT"></h3><div id="oiBody"></div><div class="legend2" id="oiLegend"></div><div class="cf" id="oiF"></div></div>
-    <div class="card" style="margin-top:12px" data-blk="cex" id="cexCard"><h3>Onchain vs CEX · options open interest<small>BTC + ETH, every venue on one yardstick</small></h3><div id="cexBody"></div><div class="cf" id="cexF"></div></div>
     <div class="fgrid" style="margin-top:12px" id="exGrid">
       <div class="card" data-blk="underlying"><h3>24h options volume by underlying<small>notional · straight from each venue’s public API</small></h3><div id="vuBody"></div><div class="legend2" id="vuLegend"></div><div class="cf" id="vuF"></div></div>
       <div class="card" data-blk="trades"><h3>Largest trades · 24h<small>Paradex options fills, by notional</small></h3><div id="ltBody"></div><div class="cf" id="ltF"></div></div>
@@ -1493,12 +1626,6 @@ body.tg .eco-search{display:none}
     <div class="srcline" id="raceSrc"></div>
     <div class="track" id="track"></div>
     <div class="rp-ctl" id="rpCtl" hidden><button id="rpPlay" aria-label="Play">▶</button><input type="range" id="rpScrub" min="0" max="1000" value="0" aria-label="Replay position"></div></div>
-    <section data-blk="standings">
-      <div class="sh"><h2>Standings<span id="gpNote"></span></h2></div>
-      <div class="podium" id="podium"></div>
-      <div class="tbl-x"><table class="standings" id="standings"></table></div>
-      <p class="cap">F1 scoring per race: 25 · 18 · 15 · 12 · 10 · 8 · 6 · 4 · 2 · 1. No data = no start — projects without a token skip the token races, and projects DefiLlama doesn’t track yet skip the volume races. <i class="srct dl">DL</i> = DefiLlama, <i class="srct cg">CG</i> = CoinGecko.</p>
-    </section>
   </main>
 
   <main id="v-strat" hidden>
@@ -2162,7 +2289,7 @@ async function renderMarket(p){
     ${p.cg ? `<div class="chart" id="cPrice"><div class="hd"><h4>Price <a class="srct cg" href="${esc(cgUrl(p) || '#')}" target="_blank" rel="noopener">CoinGecko ↗</a></h4><div class="r" id="rng"><button data-d="30" aria-pressed="false">30D</button><button data-d="90" aria-pressed="true">90D</button><button data-d="365" aria-pressed="false">1Y</button></div></div><div class="msg">Loading…</div></div>` : ''}
     ${(p.volSlugs || []).length ? `<div class="chart" id="cVol"><div class="hd"><h4>Weekly options volume <a class="srct dl" href="${esc(llamaUrl(p) || 'https://defillama.com/options')}" target="_blank" rel="noopener">DefiLlama ↗</a></h4><span class="muted" style="font-size:11.5px">notional, summed across protocol versions</span></div><div class="msg">Loading…</div></div>` : ''}`;
   if (!p.cg && !(p.volSlugs || []).length) return;
-  const h = HIST[p.name] || (HIST[p.name] = await history(p));
+  const h = HIST[p.name] || (HIST[p.name] = await projectHistory(p));
   if (current !== p) return;
   let days = 90;
   const drawPrice = () => {
@@ -2260,7 +2387,7 @@ function renderRaceChips(){
     + (SNAP.race ? REPLAYS.map(r => `<button class="rc rp" data-id="${r.id}" aria-pressed="${raceId === r.id}">▶ ${r.label} replay</button>`).join('') : '');
 }
 $('raceChips').addEventListener('click', e => { const b = e.target.closest('.rc'); if (!b) return; raceId = b.dataset.id; renderRaceChips(); runRace(); });
-$('gpClass').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; gpClass = b.dataset.k; for (const x of $('gpClass').children) x.setAttribute('aria-pressed', x === b); runRace(); renderStandings(); });
+$('gpClass').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; gpClass = b.dataset.k; for (const x of $('gpClass').children) x.setAttribute('aria-pressed', x === b); runRace(); renderRaceSeason(); });
 
 function laneFor(p){
   let L = lanes.get(p.name);
@@ -2380,29 +2507,9 @@ function addZero(track, x){
   track.appendChild(z);
 }
 
-function renderStandings(){
-  const racers = gpRacers(), gp = grandPrix(racers);
-  const by = n => racers.find(p => p.name === n);
-  const ranked = gp.table.filter(t => t.starts), waiting = gp.table.filter(t => !t.starts);
-  $('gpSeason').textContent = `${SNAP.week} season · ${RACES.length} races · ${racers.length} teams on the grid`;
-  $('gpNote').textContent = gpClass === 'clients' ? 'friends' : 'friends + top 5 rivals';
-  const pod = [1, 0, 2].map(i => ranked[i]).map((t, k) => {
-    if (!t) return '<div></div>';
-    const p = by(t.name), place = [2, 1, 3][k], c = ['#cfcabd', '#f2b544', '#c98a5a'][k];
-    return `<a class="pod" href="${deepHref(p)}" style="--c:${c}">${logo(p)}<div class="n">${esc(p.name)}</div><div class="pt">${t.pts} pts · ${t.wins} ${t.wins === 1 ? 'win' : 'wins'}</div><div class="blk2" style="height:${[92, 128, 70][k]}px">${place}</div></a>`;
-  }).join('');
-  $('podium').innerHTML = pod;
-  const head = `<tr><th>#</th><th>Team</th><th>Pts</th><th>Wins</th>${RACES.map((r, i) => `<th title="${esc(r.label)} — ${esc(r.src)}">R${i+1}<br><span style="font-size:10px">${esc(r.label)}</span><br>${/^DefiLlama/.test(r.src) ? '<i class="srct dl">DL</i>' : '<i class="srct cg">CG</i>'}</th>`).join('')}</tr>`;
-  const row = (t, i) => {
-    const p = by(t.name);
-    return `<tr class="${p.core ? '' : 'rv'} ${t.starts ? '' : 'wait'}"><td class="num">${t.starts ? i + 1 : '—'}</td>
-      <td class="who2"><a href="${deepHref(p)}">${logo(p)}<span>${esc(p.name)} <small>${esc(p.ticker ? '$' + p.ticker : 'Pre-TGE')}${p.core ? '' : ' · rival'}</small></span></a></td>
-      <td class="pts">${t.starts ? t.pts : 'Awaiting data'}</td><td class="num">${t.wins || ''}</td>
-      ${RACES.map(r => { const pos = t.results[r.id]; return `<td><span class="pc ${pos ? (pos <= 3 ? 'p' + pos : '') : 'na'}">${pos ? 'P' + pos : '—'}</span></td>`; }).join('')}</tr>`;
-  };
-  $('standings').innerHTML = head + ranked.map(row).join('') + waiting.map(row).join('');
+function renderRaceSeason(){
+  $('gpSeason').textContent = `${SNAP.week} season · ${RACES.length} races · ${gpRacers().length} teams on the grid`;
 }
-
 
 // ════════════════ 펀더멘털 (DefiLlama) ════════════════
 let fdKind = 'premium', fdAll = false;
@@ -2466,18 +2573,7 @@ function renderFund(){
   $('fdLegend').innerHTML = [...tops, 'Other'].map(n => `<span><i style="background:${n === 'Other' ? OTHER : col(n)}"></i>${esc(n)}</span>`).join('');
   $('fdStackF').innerHTML = footer();
 
-  // 점유율 도넛
-  const tot30 = vs.reduce((a, v) => a + v[k].d30, 0) || 1;
-  const segs = [...tops.map(n => vs.find(v => v.name === n)).filter(Boolean).map(v => ({v, n:v.name, x:v[k].d30})), {n:'Other', x:vs.filter(v => !tops.includes(v.name)).reduce((a, v) => a + v[k].d30, 0)}].filter(s => s.x > 0);
-  let a0 = -Math.PI/2; const R0 = 84, R1 = 58;
-  const arcs = segs.map(sg => { const a1 = a0 + sg.x / tot30 * Math.PI * 2, big = a1 - a0 > Math.PI ? 1 : 0, gap = .012;
-    const P = (r, a) => `${(95 + r*Math.cos(a)).toFixed(2)},${(95 + r*Math.sin(a)).toFixed(2)}`;
-    const d = `M${P(R0, a0 + gap)} A${R0},${R0} 0 ${big} 1 ${P(R0, a1 - gap)} L${P(R1, a1 - gap)} A${R1},${R1} 0 ${big} 0 ${P(R1, a0 + gap)}Z`; a0 = a1;
-    return `<path d="${d}" fill="${sg.n === 'Other' ? OTHER : col(sg.n)}" data-tip="${esc(sg.n)} · ${(sg.x / tot30 * 100).toFixed(1)}% · ${usd(sg.x)}"/>`; }).join('');
-  $('fdShareT').innerHTML = `Market share<small>${KL[k].toLowerCase()} · last 30d</small>`;
-  $('fdShare').innerHTML = `<svg class="donut" viewBox="0 0 190 190">${arcs}<text x="95" y="92" text-anchor="middle" style="font-family:var(--mono);font-size:19px;fill:var(--ink)">${usd(tot30)}</text><text x="95" y="110" text-anchor="middle" style="font-size:10.5px;fill:var(--mute)">30d total</text></svg>
-    <div class="share-list">${vs.slice(0, 8).map(v => `<a href="${esc(v.url)}" target="_blank" rel="noopener" title="Open on DefiLlama"><i style="background:${tops.includes(v.name) ? col(v.name) : OTHER}"></i>${logo(v)}<span>${esc(v.name)}</span><b>${(v[k].d30 / tot30 * 100).toFixed(v[k].d30 / tot30 < .01 ? 2 : 1)}%</b></a>`).join('')}</div>`;
-  $('fdShareF').innerHTML = footer();
+  renderMarketShare();
 
   // 거래소 표
   const mx30 = vs.length ? vs[0][k].d30 : 1;
@@ -2517,12 +2613,13 @@ $('fdKind').addEventListener('click', e => { const b = e.target.closest('button'
 
 // ── 큰 정보별 탭 ──
 const SUBS = {
-  overview:[['finder','Start here'],['planets','Planet map'],['friends','Friends'],['ecosystem','Whole ecosystem'],['live','Live points'],['pretge','Pre-TGE friends'],['codes','My ref codes'],['watch','Watchlist'],['content','Content'],['log','Weekly log']],
-  fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['cex','Onchain vs CEX'],['underlying','By underlying'],['trades','Largest trades'],['venues','Venues'],['track','Race'],['standings','Standings'],['comps','Derive comps']],
+  compare:[],
+  overview:[['launches','Perp DEXs launching options'],['finder','Start here'],['planets','Planet map'],['friends','Friends'],['ecosystem','Whole ecosystem'],['live','Live points'],['pretge','Pre-TGE friends'],['codes','My ref codes'],['watch','Watchlist'],['content','Content'],['log','Weekly log']],
+  fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['underlying','By underlying'],['trades','Largest trades'],['venues','Venues'],['track','Race'],['comps','Derive comps']],
   strategy:[['now','Market now'],['log','Sentiment log'],['plays','Today’s plays'],['macro','Macro playbook']],
 };
-const PAGES = [['strategy','01 Sentiment & Strategy'],['fundamentals','02 Option Fundamental'],['overview','03 Ecosystem Overview'],['deep','04 Deep Dive'],['new','05 New Projects'],['guide','06 Strategy Guide']];
-const VIEWS = {overview:['v-overview','v-oracle'], fundamentals:['v-fund','v-race'], strategy:['v-strat'], deep:['v-deep'], new:['v-new'], guide:['v-guide']};
+const PAGES = [['strategy','01 Sentiment & Strategy'],['fundamentals','02 Option Fundamental'],['overview','03 Ecosystem Overview'],['deep','04 Deep Dive'],['new','05 New Projects'],['guide','06 Strategy Guide'],['launches','07 Perp DEXs Launching Options'],['compare','08 Compare to Deribit']];
+const VIEWS = {overview:['v-overview','v-oracle'], fundamentals:['v-fund','v-race'], strategy:['v-strat'], deep:['v-deep'], new:['v-new'], guide:['v-guide'], compare:['v-compare'], launches:['v-launches']};
 let SUBFOLD = (() => { try { return localStorage.getItem('opshnz-subfold') === '1'; } catch { return false; } })();
 function renderSubnav(page, sub){
   const nav = $('subnav'); if (!nav) return;
@@ -2632,7 +2729,7 @@ function renderStrategy(){
   // ── 매크로 플레이북 (시황판단 틀): 한 줄 판단 → 기본·상방·하방 시나리오 → 근거(F/I/A/C) → 틀리는 조건 → 관찰판 → 이벤트별 대응 ──
   const M = SNAP.macro || [], now = Date.now(), cfg = BOOT.config.strategy || {};
   const note = cfg.note ? `<div class="mview"><h4>MY VIEW · 0XDEFIDANIEL</h4><p>${esc(cfg.note)}</p></div>` : '';
-  const sc = (cfg.scenarios || []).map(x => `<article><div class="if"><small>IF</small>${esc(x.if)}</div><div class="then"><small>THEN</small><b>${esc(x.then)}</b><p>${esc(x.how || '')}</p>${(x.friends || []).length ? `<div class="fls"><span>WHERE</span>${friendChips(x.friends)}</div>` : ''}</div></article>`).join('');
+  const sc = (cfg.scenarios || []).map(x => `<article><div class="if"><small>IF</small>${esc(x.if)}</div><div class="then"><small>STRATEGY</small><b>${esc(x.then)}</b><p>${esc(x.how || '')}</p><dl>${[['ENTRY / SKIP', x.entry], ['BUILD', x.legs], ['EXIT', x.exit], ['RISK', x.risk], ['EXAMPLE', x.example]].filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>${x.source && /^https:\/\//.test(x.source) ? `<a class="sc-source" href="${esc(x.source)}" target="_blank" rel="noopener">Strategy mechanics · OIC ↗</a>` : ''}</div></article>`).join('');
   let book = '';
   if (A && A.putWall && A.callWall) {
     const X = sentiment(A), score = X ? X.score : 0, longG = !A.gamma || A.gamma.regime !== 'short_gamma', pctl = A.ivPct ? A.ivPct.percentile : 50;
@@ -2679,7 +2776,7 @@ function renderStrategy(){
       </div>
       <div class="mb-box mb-watch"><h4>WATCH BOARD</h4>${watch.map(([w, t, d]) => `<div><time>${esc(w)}</time><b>${esc(t)}</b><span>${esc(d)}</span></div>`).join('')}${soon.length ? '' : '<p class="lg">No US high-impact releases left in the next 7 days.</p>'}</div>`;
   }
-  $('stMacro').innerHTML = `${note}${book}${sc ? `<h4 class="mb-h">IF MACRO SURPRISES</h4><div class="scen">${sc}</div>` : ''}`;
+  $('stMacro').innerHTML = `${note}${book}${sc ? `<h4 class="mb-h">IF MACRO SURPRISES · WHAT TO TRADE</h4><p class="mb-note">Conditional setups, not live trade signals. Tenors and exits are illustrative rules, not backtested. Examples use normalized spot 100, equal-size linear options and expiry payoffs before fees or slippage. Confirm settlement, collateral and liquidation rules for the actual contract; payoff caps assume all legs remain intact.</p><div class="scen">${sc}</div>` : ''}`;
   renderSentLog();
 }
 // ════════════════ 옵션 심리 일지: 일간 · 주간 · 월간 ════════════════
@@ -2757,17 +2854,30 @@ $('slMode').addEventListener('click', e => { const b = e.target.closest('button'
 $('stAsset').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; stAsset = b.dataset.a; for (const x of $('stAsset').children) x.setAttribute('aria-pressed', x === b); renderStrategy(); });
 
 // 온체인 vs CEX 미결제약정 (Option Fundamental)
-function renderCex(){
-  const V = (SNAP.dm && SNAP.dm.venues) || [];
-  if (!V.length) { $('cexCard').dataset.empty = '1'; return; }
-  const tot = V.reduce((a, v) => a + v.total, 0), on = V.filter(v => ONCHAIN.has(v.venue)).reduce((a, v) => a + v.total, 0);
-  const floor = 1e5, lmax = Math.log10(V[0].total / floor), W = v => Math.max(0, Math.log10(Math.max(v, floor) / floor) / lmax * 100);
-  const missing = Object.keys(DMV).filter(k => !V.some(v => v.venue === k)).map(k => DMV[k]);
-  $('cexBody').innerHTML = `<div class="cx-sum"><div><b>${usd(on)}</b><span>onchain</span></div><div><b>${usd(tot - on)}</b><span>CEX</span></div><div><b>${(on / tot * 100).toFixed(1)}%</b><span>onchain share</span></div></div>
-    <div class="cx">${V.map((v, i) => { const p = byName(DMV[v.venue]), fr = p && p.core, w = W(v.total);
-      return `<div class="r${fr ? ' fr' : ''}"><span class="i">${String(i + 1).padStart(2, '0')}</span><span class="n">${p ? `<a href="${deepHref(p)}">${logo(p)}${esc(DMV[v.venue])}</a>` : `<img src="logos/cex/${v.venue}.jpg" alt="" loading="lazy" onerror="this.outerHTML='<span class=&quot;logo-ph&quot;></span>'">${esc(DMV[v.venue])}`}${ONCHAIN.has(v.venue) ? '<em>ONCHAIN</em>' : ''}</span>
-        <span class="b"><i class="btc" style="width:${(w * v.btc / v.total).toFixed(2)}%"></i><i class="eth" style="width:${(w * v.eth / v.total).toFixed(2)}%"></i></span><span class="v">${usd(v.total)}</span></div>`; }).join('')}</div>`;
-  $('cexF').innerHTML = `<span><i class="sw btc"></i>BTC <i class="sw eth"></i>ETH · bars on a log scale · Paradex halved (its feed counts both sides)${missing.length ? ' · not reported by this feed: ' + esc(missing.join(', ')) : ''}</span><a class="srct" href="${dmLink('btc')}" target="_blank" rel="noopener">Derivatives Monkey ↗</a>`;
+let marketShareAsset = 'all';
+function marketShareRows(venues, asset = 'all') {
+  return venues.map(v => ({...v, value:asset === 'BTC' ? v.btc : asset === 'ETH' ? v.eth : v.total}))
+    .filter(v => typeof v.value === 'number' && Number.isFinite(v.value) && v.value >= 0)
+    .sort((a,b) => b.value-a.value);
+}
+function renderMarketShare(){
+  const venues = SNAP.dm?.venues || [], rows = marketShareRows(venues, marketShareAsset);
+  const total = rows.reduce((s,v) => s+v.value,0), on = rows.filter(v => ONCHAIN.has(v.venue)).reduce((s,v) => s+v.value,0), cex=total-on;
+  $('fdShareT').innerHTML = 'Market share<small>Onchain vs CEX · options open interest · USD</small>';
+  if (!(total > 0)) { $('fdShare').innerHTML='<p class="empty">Comparable options open-interest data unavailable.</p>'; $('fdShareF').innerHTML=''; return; }
+  const pct = v => v > 0 && v/total*100 < .01 ? '<0.01%' : (v/total*100).toFixed(2)+'%';
+  const group = (isOn, value) => {
+    const groupRows=rows.filter(v => ONCHAIN.has(v.venue) === isOn);
+    return `<section class="ms-group ${isOn ? 'onchain' : 'cex'}"><div class="ms-group-head"><div><small>${isOn ? 'ONCHAIN' : 'CEX'}</small><b>${pct(value)}</b></div><div class="ms-value">${usd(value)}<small>${groupRows.length} reporting venues</small></div></div>
+      <div class="ms-venues">${groupRows.map(v => { const p=byName(DMV[v.venue]), name=DMV[v.venue] || v.venue;return `<div class="ms-venue"><div class="ms-name">${p ? `<a href="${deepHref(p)}">${logo(p)}${esc(name)}</a>` : esc(name)}</div><b>${pct(v.value)}</b><span>${usd(v.value)}</span><div class="ms-track"><i style="width:${(v.value/total*100).toFixed(4)}%"></i></div></div>`; }).join('')}</div></section>`;
+  };
+  $('fdShare').innerHTML = `<div class="ms-top"><div class="ms-assets" role="group" aria-label="Market share underlying">${[['all','BTC + ETH'],['BTC','BTC'],['ETH','ETH']].map(([k,n]) => `<button type="button" data-ms="${k}" aria-pressed="${marketShareAsset === k}">${n}</button>`).join('')}</div><span>Total reported OI <b>${usd(total)}</b></span></div>
+    <div class="ms-split" role="img" aria-label="Onchain ${pct(on)}, CEX ${pct(cex)} of reported options open interest"><i style="width:${on/total*100}%"></i><i style="width:${cex/total*100}%"></i></div>
+    <div class="ms-groups">${group(true,on)}${group(false,cex)}</div>`;
+  $('fdShare').querySelectorAll('[data-ms]').forEach(b => b.onclick=() => {marketShareAsset=b.dataset.ms;renderMarketShare();});
+  const absent=Object.keys(DMV).filter(k => !venues.some(v => v.venue === k)).map(k => DMV[k]);
+  const at=new Date(SNAP.dm.at).toISOString().replace('T',' ').slice(0,16)+' UTC';
+  $('fdShareF').innerHTML=`<span>Every percentage uses total reported ${marketShareAsset === 'all' ? 'BTC + ETH' : marketShareAsset} options OI as its denominator. Bars use a linear scale. Snapshot ${at}. This panel is independent of the premium / notional volume selector.${absent.length ? ' Missing venues: '+esc(absent.join(', '))+'.' : ''} Share is of covered venues, not the whole global market; missing data is excluded, not zero. Paradex OI is normalized to one side by the collector.</span><a class="srct" href="${dmLink('btc')}" target="_blank" rel="noopener">Derivatives Monkey ↗</a>`;
 }
 
 // ════════════════ New projects: 2025 년 이후 처음 나온(또는 DefiLlama 에 처음 올라온) 옵션 프로젝트 ════════════════
@@ -3066,18 +3176,13 @@ function renderEx(){
   }
 }
 
-// ════════════════ 공유 카드 (#share/podium · movers · signals) ════════════════
+// ════════════════ 공유 카드 (#share/movers · signals) ════════════════
 function renderShare(kind){
   document.body.classList.add('sharing');
   const el = $('share'); el.hidden = false;
   const top = `<div class="sh-top"><span>◇ KOREAN OPSHNZ</span><span>${SNAP.week.replace('-', ' · ')}</span></div>`;
   const foot = `<div class="sh-foot"><span>OPSHNZ ECOSYSTEM · MADE BY A KOREAN</span><span>@0XDEFIDANIEL</span></div>`;
-  if (kind === 'podium') {
-    const t = grandPrix(clients()).table.filter(x => x.starts);
-    const pod = [1, 0, 2].map(i => t[i]).map((x, k) => { if (!x) return '<div></div>'; const p = byName(x.name), c = ['#cfcabd', '#f2b544', '#c98a5a'][k];
-      return `<div class="pod" style="--c:${c}">${logo(p)}<div class="n">${esc(p.name)}</div><div class="pt">${x.pts} pts · ${x.wins} ${x.wins === 1 ? 'win' : 'wins'}</div><div class="blk2" style="height:${[120, 168, 92][k]}px">${[2, 1, 3][k]}</div></div>`; }).join('');
-    el.innerHTML = top + `<div class="sh-title">FUNDAMENTALS GRAND PRIX<small>7 races · volume, premium, TVL, market cap, turnover, momentum, supply — F1 scoring</small></div><div class="sh-pod">${pod}</div>` + foot;
-  } else if (kind === 'movers') {
+  if (kind === 'movers') {
     const ps = clients().filter(p => p.ch7 != null).sort((a, b) => b.ch7 - a.ch7);
     const half = Math.min(4, Math.ceil(ps.length / 2));   // 토큰이 적으면 반씩 — 위아래에 같은 이름이 겹치지 않게
     const row = p => `<div class="r">${logo(p)}<div><b>${esc(p.name)}</b><small>$${esc(p.ticker)}</small></div><span class="${p.ch7 >= 0 ? 'up' : 'down'}">${pctTxt(p.ch7)}</span></div>`;
@@ -3089,24 +3194,233 @@ function renderShare(kind){
   }
 }
 
+let comparisonFocus = 'Derive', positioningMode = 'activity';
+function comparisonTokenRows() {
+  const finance=SNAP.benchmarkFinancials || {}, f=SNAP.fund || {}, oi=SNAP.dm?.venues || [];
+  const key=n=>n.toLowerCase().replace(/[^a-z0-9]/g,'');
+  return SNAP.projects.filter(p=>p.ticker && (p.mcap > 0 || p.fdv > 0)).map(p=>{
+    const v=(f.venues || []).find(v=>key(v.name)===key(p.name)), o=oi.find(v=>key(v.venue)===key(p.name)), q=finance.projects?.[p.name] || {};
+    const fallback=f.oi?.venues?.[p.name]?.byU;
+    const fallbackOI=fallback && (typeof fallback.BTC==='number'||typeof fallback.ETH==='number') ? (fallback.BTC || 0)+(fallback.ETH || 0) : null;
+    const aligned=Math.abs(Date.parse(finance.at)-Date.parse(SNAP.at))<=48*3600e3;
+    return {...p, oi:o?.total ?? fallbackOI, oiSource:o ? 'Derivatives Monkey' : fallbackOI!=null ? 'Venue API via existing collector' : null, optionVolume24:v?.notional?.d24 ?? null, finance:q, financeAligned:aligned,
+      optionsFees:aligned ? q.optionsFees ?? null : null, optionsRevenue:aligned ? q.optionsRevenue ?? null : null,
+      holders:q.holders ?? null};
+  });
+}
+function comparisonAnnualYield(holders, mcap) {
+  return typeof holders === 'number' && Number.isFinite(holders) && holders >= 0 && mcap > 0 ? holders*365/30/mcap : null;
+}
+function comparisonLogDomain(values) {
+  const positive=values.filter(v=>typeof v==='number' && Number.isFinite(v) && v>0);
+  if(!positive.length)return [0,1];
+  let lo=Math.floor(Math.log10(Math.min(...positive))-.2), hi=Math.ceil(Math.log10(Math.max(...positive))+.2);
+  if(hi<=lo)hi=lo+1;
+  return [lo,hi];
+}
+function comparisonScatter(points, options) {
+  const W=1020,H=520,L=90,R=180,T=48,B=70, xEnd=W-R,yEnd=H-B;
+  const xd=comparisonLogDomain(points.map(p=>p.x)), yd=comparisonLogDomain(points.map(p=>p.y));
+  const X=v=>L+(Math.log10(v)-xd[0])/(xd[1]-xd[0])*(xEnd-L), Y=v=>yEnd-(Math.log10(v)-yd[0])/(yd[1]-yd[0])*(yEnd-T);
+  const tick=(d,axis)=>{
+    let s='';for(let n=d[0];n<=d[1];n++) {const v=10**n, pos=axis==='x'?X(v):Y(v);
+      s+=axis==='x'?`<line x1="${pos}" y1="${T}" x2="${pos}" y2="${yEnd}" class="chart-grid"/><text x="${pos}" y="${yEnd+24}" text-anchor="middle">${usd(v)}</text>`:`<line x1="${L}" y1="${pos}" x2="${xEnd}" y2="${pos}" class="chart-grid"/><text x="${L-12}" y="${pos+4}" text-anchor="end">${usd(v)}</text>`;
+    }return s;
+  };
+  let guides='';
+  for(const g of options.guides || []) {
+    // Each guide is y = x * slope in raw USD units.
+    const lo=Math.max(10**xd[0],10**yd[0]/g.slope), hi=Math.min(10**xd[1],10**yd[1]/g.slope);
+    if(!(hi>lo))continue;
+    guides+=`<line x1="${X(lo)}" y1="${Y(lo*g.slope)}" x2="${X(hi)}" y2="${Y(hi*g.slope)}" class="chart-guide"/><text x="${X(hi)-5}" y="${Y(hi*g.slope)-7}" text-anchor="end" class="chart-guide-label">${esc(g.label)}</text>`;
+  }
+  const maxFee=Math.max(1,...points.map(p=>p.fees || 0)), labels=[];
+  const marks=[...points].sort((a,b)=>b.y-a.y).map(p=>{
+    const x=X(p.x), y=Y(p.y), selected=p.name===comparisonFocus;
+    const rr=options.feeSize && p.fees>0 ? 32*Math.sqrt(p.fees/maxFee) : 8;
+    const hasRevenue=p.fees>0 && typeof p.revenue==='number' && p.revenue>=0 && p.revenue<=p.fees;
+    const inner=hasRevenue ? rr*Math.sqrt(p.revenue/p.fees) : null;
+    let ly=y, candidates=[0,24,-24,48,-48,72,-72];
+    for(const offset of candidates){const candidate=Math.max(T+10,Math.min(yEnd-8,y+offset));if(!labels.some(a=>Math.abs(a.y-candidate)<21 && Math.abs(a.x-(x+rr+10))<145)){ly=candidate;break;}}
+    const lx=x+rr+10;labels.push({x:lx,y:ly});
+    const label=p.name.length>20?p.name.slice(0,18)+'…':p.name;
+    return `<g class="comparison-point${selected?' selected':''}" tabindex="0" role="button" aria-label="${esc(p.name+': '+options.xLabel+' '+usd(p.x)+', '+options.yLabel+' '+usd(p.y))}" data-chart-name="${esc(p.name)}" data-chart-x="${p.x}" data-chart-y="${p.y}" data-chart-fees="${p.fees ?? ''}" data-chart-revenue="${p.revenue ?? ''}">
+      ${selected?`<circle cx="${x}" cy="${y}" r="${Math.max(rr,8)+6}" class="chart-halo"/>`:''}
+      <circle cx="${x}" cy="${y}" r="${rr}" class="chart-point-outer${options.feeSize && !(p.fees>0)?' unknown':''}"/>
+      ${inner!=null?`<circle cx="${x}" cy="${y}" r="${inner}" class="chart-point-inner"/>`:''}
+      <circle cx="${x}" cy="${y}" r="3" class="chart-center"/>
+      <path d="M${x+rr},${y} L${lx-5},${ly-4}" class="chart-label-line"/>
+      ${p.logo?`<image href="${esc(p.logo)}" x="${lx}" y="${ly-15}" width="17" height="17"/>`:''}
+      <text x="${lx+(p.logo?23:0)}" y="${ly}" class="chart-name">${esc(label)}</text></g>`;
+  }).join('');
+  const empty=points.length?'':`<text x="${W/2}" y="${H/2}" text-anchor="middle">No positive comparable observations to plot.</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(options.title)}" class="comparison-scatter"><text x="${L}" y="22" class="chart-axis-title">${esc(options.yLabel)} ↑</text>${tick(xd,'x')}${tick(yd,'y')}${guides}${marks}${empty}<text x="${xEnd}" y="${H-15}" text-anchor="end" class="chart-axis-title">${esc(options.xLabel)} →</text></svg>`;
+}
+function wireComparisonPlot(id, readId, options) {
+  const read=$ (readId), def=read.textContent;
+  $(id).querySelectorAll('[data-chart-name]').forEach(g=>{
+    const describe=()=>{const parts=[g.dataset.chartName,options.xLabel+': '+usd(+g.dataset.chartX),options.yLabel+': '+usd(+g.dataset.chartY)];if(options.feeSize){parts.push(g.dataset.chartFees!==''?'30d options fees: '+usd(+g.dataset.chartFees):'30d options fees: not reported');parts.push(g.dataset.chartRevenue!==''?'30d options revenue: '+usd(+g.dataset.chartRevenue):'30d options revenue: not reported');}read.textContent=parts.join(' · ');};
+    g.addEventListener('mouseenter',describe);g.addEventListener('focus',describe);g.addEventListener('mouseleave',()=>read.textContent=def);
+    g.addEventListener('click',()=>{comparisonFocus=g.dataset.chartName;renderComparisonAnalytics();});
+    g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();comparisonFocus=g.dataset.chartName;renderComparisonAnalytics();}});
+  });
+}
+function renderComparisonAnalytics() {
+  const rows=comparisonTokenRows(), selected=rows.find(r=>r.name===comparisonFocus);
+  const q=new URLSearchParams(location.hash.split('?')[1] || '');
+  if(!$('compareFocus').dataset.ready) {if(rows.some(r=>r.name===q.get('project')))comparisonFocus=q.get('project');$('compareFocus').dataset.ready='1';}
+  $('compareFocus').innerHTML=rows.map(r=>`<option value="${esc(r.name)}">${esc(r.name)}${r.ticker?' · $'+esc(r.ticker):''}</option>`).join('');$('compareFocus').value=comparisonFocus;
+  const finance=SNAP.benchmarkFinancials;
+  $('comparisonDates').textContent=`Options and token snapshot: ${SNAP.at.slice(0,10)} · financial data fetched: ${finance?.at?.slice(0,10) || 'unavailable'} · ${rows.length} projects with token valuations. No live-data claim.`;
+  const fieldRows=rows.filter(r=>r.oi>0 && (positioningMode==='activity'?r.optionVolume24>0:r.mcap>0));
+  const opts={title:positioningMode==='activity'?'Options OI versus 24h volume':'Options OI versus token market cap',xLabel:positioningMode==='activity'?'24H OPTIONS VOLUME · USD':'TOKEN MARKET CAP · USD',yLabel:'OPTIONS OI · BTC + ETH · USD',feeSize:true,guides:positioningMode==='activity'?[.1,1,10].map(turn=>({slope:1/turn,label:turn+'× daily turnover'})):[]};
+  $('positioningPlot').innerHTML=comparisonScatter(fieldRows.map(r=>({name:r.name,x:positioningMode==='activity'?r.optionVolume24:r.mcap,y:r.oi,fees:r.optionsFees,revenue:r.optionsRevenue,logo:r.logo})),opts);
+  $('positioningRead').textContent=`${fieldRows.length} of ${rows.length} token projects have both axes. Hover or keyboard-focus a point for exact values. Dashed equal-size markers mean options fees are unavailable; reported fee circles use area proportional to fees.`;
+  wireComparisonPlot('positioningPlot','positioningRead',opts);
+  $('positioningModes').querySelectorAll('[data-position-mode]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.positionMode===positioningMode));
+  const oiRows=rows.filter(r=>r.oi!=null && r.oi>=0).sort((a,b)=>b.oi-a.oi), total=oiRows.reduce((a,r)=>a+r.oi,0), rank=oiRows.findIndex(r=>r.name===comparisonFocus);
+  $('oiPosition').textContent=rank>=0?`${comparisonFocus}: #${rank+1} of ${oiRows.length} token projects with reported OI`:`${comparisonFocus}: no comparable options OI in this feed`;
+  $('tokenOILeaders').innerHTML=oiRows.map((r,i)=>`<button type="button" class="token-leader${r.name===comparisonFocus?' selected':''}" data-select-project="${esc(r.name)}"><span class="token-rank">#${i+1}</span><span class="token-leader-name">${logo(r)}<b>${esc(r.name)}</b><small>$${esc(r.ticker)}</small></span><span><small>OI · ${total>0?(r.oi/total*100).toFixed(2):'0'}% of covered tokens</small><b>${usd(r.oi)}</b></span><span><small>24H OPTIONS VOLUME</small><b>${r.optionVolume24!=null?usd(r.optionVolume24):'N/A'}</b></span></button>`).join('') || '<p class="empty">No reported options OI for token projects.</p>';
+  $('tokenOILeaders').querySelectorAll('[data-select-project]').forEach(b=>b.onclick=()=>{comparisonFocus=b.dataset.selectProject;renderComparisonAnalytics();});
+  $('oiCoverage').textContent=`Ranked by reported BTC + ETH options OI. Shares use only the ${oiRows.length} covered token projects as denominator; Deribit is a separate CEX benchmark. Missing OI: ${rows.filter(r=>r.oi==null).map(r=>r.name).join(', ') || 'none'}. No points or synthetic F1 scoring.`;
+  const yieldRows=rows.filter(r=>r.holders>0 && r.mcap>0 && r.financeAligned), yields=yieldRows.map(r=>comparisonAnnualYield(r.holders,r.mcap)).sort((a,b)=>a-b);
+  const median=yields.length>=3?(yields.length%2?yields[Math.floor(yields.length/2)]:(yields[yields.length/2-1]+yields[yields.length/2])/2):null;
+  $('holderReturnSummary').textContent=median!=null?`${yieldRows.length} comparable positive observations · median annualized holder-return / market-cap ratio ${(median*100).toFixed(2)}%.`:`${yieldRows.length} positive observation${yieldRows.length===1?'':'s'} available. Too few comparable observations to claim a peer median or fair valuation.`;
+  const ho={title:'30-day holder return versus circulating market cap',xLabel:'30D HOLDER RETURN · USD',yLabel:'CIRCULATING MARKET CAP · USD',feeSize:false,guides:[.001,.01,.1,1].map(rate=>({slope:365/30/rate,label:(rate*100)+'% annualized'}))};
+  $('holderReturnPlot').innerHTML=comparisonScatter(yieldRows.map(r=>({name:r.name,x:r.holders,y:r.mcap,logo:r.logo})),ho);
+  $('holderReturnRead').textContent='Protocol-wide holder return, not options-only profit or a cash dividend. Annualized ratio = 30d holder return × 365 / 30 ÷ market cap; it is not a forecast.';
+  wireComparisonPlot('holderReturnPlot','holderReturnRead',ho);
+  $('holderReturnTable').innerHTML=`<thead><tr><th>Token project</th><th>30d holder return</th><th>Market cap</th><th>Annualized ratio</th><th>Coverage / source</th></tr></thead><tbody>${rows.map(r=>{const ann=comparisonAnnualYield(r.holders,r.mcap);return `<tr class="${r.name===comparisonFocus?'selected':''}"><td>${logo(r)} ${esc(r.name)}</td><td>${r.holders!=null?usd(r.holders):'N/A'}</td><td>${usd(r.mcap)}</td><td>${ann!=null&&r.financeAligned?(ann*100).toFixed(3)+'%':'N/A'}</td><td>${r.holders==null?'Not published in matched feed':r.holders<0?'Negative provider value · excluded from log plot':r.holders===0?'Provider reports zero · excluded from log plot':!r.financeAligned?'Market and financial snapshots >48h apart': 'Protocol-wide · positive'}${r.holders!=null?` · <a href="https://defillama.com/protocol/${esc(r.finance.holdersAdapters?.[0] || '')}" target="_blank" rel="noopener">Adapter ↗</a>`:''}</td></tr>`;}).join('')}</tbody>`;
+  $('chartInputTable').innerHTML=`<thead><tr><th>Project</th><th>BTC + ETH OI</th><th>24h options volume</th><th>30d options fees</th><th>30d options revenue</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(r.name)}</td><td>${r.oi!=null?usd(r.oi):'N/A'}</td><td>${r.optionVolume24!=null?usd(r.optionVolume24):'N/A'}</td><td>${r.optionsFees!=null?usd(r.optionsFees):'N/A'}</td><td>${r.optionsRevenue!=null?usd(r.optionsRevenue):'N/A'}</td></tr>`).join('')}</tbody>`;
+}
+$('compareFocus').oninput=()=>{comparisonFocus=$('compareFocus').value;const q=new URLSearchParams(location.hash.split('?')[1]||'');q.set('project',comparisonFocus);history.replaceState(null,'',location.pathname+location.search+'#/compare?'+q);renderComparisonAnalytics();renderBenchmark();};
+$('positioningModes').onclick=e=>{const b=e.target.closest('[data-position-mode]');if(b){positioningMode=b.dataset.positionMode;renderComparisonAnalytics();}};
+
+// A token valuation/activity screen, never an enterprise-value or revenue multiple.
+function benchmarkCalculation(valuation, activity, anchor, baseline, allocation = 1) {
+  const finite = x => typeof x === 'number' && Number.isFinite(x);
+  if (![valuation, activity, anchor, baseline, allocation].every(finite) || valuation <= 0 || activity <= 0 || anchor <= 0 || baseline <= 0 || allocation <= 0 || allocation > 1) return null;
+  const share = activity / baseline, valueShare = valuation * allocation / anchor;
+  return {share, multiple:valueShare / share, parity:baseline * valueShare, change:(valueShare / share - 1) * 100};
+}
+function benchmarkState() {
+  const c = BOOT.config.benchmark || {}, f = SNAP.fund || {}, entrants = c.entrants || [];
+  const basis = $('benchBasis').value, metric = $('benchMetric').value;
+  const anchor = (c.anchors || []).find(a => a.id === $('benchAnchor').value) || (c.anchors || [])[0];
+  const allocation = Number($('benchAllocation').value) / 100;
+  const oi = (SNAP.dm && SNAP.dm.venues) || [], baseOI = oi.find(v => v.venue === 'deribit');
+  const baseline = metric === 'oi' ? baseOI?.total : metric === 'premium' ? f.deribit?.premium24 : f.deribit?.notional24;
+  const activityAt = metric === 'oi' ? SNAP.dm?.at : f.at;
+  const key = n => n.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const candidates = [...SNAP.projects, ...entrants.filter(e => !SNAP.projects.some(p => p.name === e.name))];
+  const rows = candidates.map(p => {
+    const launch = entrants.find(e => e.name === p.name), market = SNAP.benchmarkMarkets?.[p.name];
+    const v = (f.venues || []).find(v => key(v.name) === key(p.name)), interest = oi.find(v => key(v.venue) === key(p.name));
+    const mcap = market?.mcap ?? p.mcap ?? null, fdv = market?.fdv ?? p.fdv ?? null;
+    const fallback= f.oi?.venues?.[p.name]?.byU;
+    const fallbackOI=fallback && (typeof fallback.BTC==='number'||typeof fallback.ETH==='number') ? (fallback.BTC || 0)+(fallback.ETH || 0) : null;
+    const activity = metric === 'oi' ? interest?.total ?? fallbackOI : metric === 'premium' ? v?.premium?.d24 ?? null : v?.notional?.d24 ?? null;
+    const marketAt = market?.at || SNAP.at, aligned = Number.isFinite(Date.parse(marketAt)) && Number.isFinite(new Date(activityAt).getTime()) && Math.abs(Date.parse(marketAt) - new Date(activityAt).getTime()) <= 48 * 3600e3;
+    const calc = aligned && !(metric !== 'oi' && f.deribit?.coverageComplete === false) ? benchmarkCalculation(basis === 'fdv' ? fdv : mcap, activity, anchor?.value, baseline, allocation) : null;
+    const source = metric === 'oi' ? dmLink('btc') : v?.url || 'https://defillama.com/options';
+    return {name:p.name, mcap, fdv, activity, share: typeof activity === 'number' && baseline > 0 ? activity / baseline : null, calc, source, marketAt, launch, marketSource:market?.source || (p.cg ? `https://www.coingecko.com/en/coins/${p.cg}` : null)};
+  }).filter(r => r.mcap != null || r.fdv != null);
+  rows.sort((a,b) => Number(!!b.launch) - Number(!!a.launch) || (b.calc?.multiple ?? -1) - (a.calc?.multiple ?? -1) || a.name.localeCompare(b.name));
+  return {c, f, anchor, allocation, basis, metric, baseline, activityAt, rows};
+}
+function renderLaunchWatch(){
+  const c = BOOT.config.benchmark || {};
+  $('benchLaunches').innerHTML = (c.entrants || []).map(e => { const v = (SNAP.dm?.venues || []).find(v => v.venue.toLowerCase() === e.name.toLowerCase()), d = (SNAP.dm?.venues || []).find(v => v.venue === 'deribit'); const share = v && d?.total > 0 ? v.total / d.total : null; return `<article><span class="bench-status">${esc(e.stage.toUpperCase())}</span><h3 class="launch-brand">${e.logo ? `<img src="${esc(e.logo)}" alt="${esc(e.name)} logo" width="40" height="40">` : ''}${esc(e.name)}</h3><p>${esc(e.detail)}</p><p><b>BTC + ETH options OI versus Deribit:</b> ${share != null ? (share * 100).toFixed(2) + '% of activity' : 'N/A · no verified comparable feed in this snapshot'}</p><p><b>Next evidence:</b> ${esc(e.next)}</p><a href="${esc(e.source)}" target="_blank" rel="noopener">Official evidence ↗</a><p>Launch evidence checked ${esc(c.reviewedAt)} · <a href="#/compare">View benchmark →</a></p></article>`; }).join('');
+}
+
+function renderBenchmark() {
+  const c = BOOT.config.benchmark || {}, select = $('benchAnchor');
+  if (!select.options.length) select.innerHTML = (c.anchors || []).map(a => `<option value="${esc(a.id)}">${esc(a.label)}</option>`).join('');
+  if (!select.dataset.initialized) {
+    const q = new URLSearchParams(location.hash.split('?')[1] || '');
+    for (const [param, id] of [['basis','benchBasis'],['metric','benchMetric'],['anchor','benchAnchor'],['coverage','benchCoverage']]) {
+      const v=q.get(param); if (v && [...$(id).options].some(o => o.value === v)) $(id).value=v;
+    }
+    const pct=Number(q.get('allocation')); if (pct>=1 && pct<=100) $('benchAllocation').value=String(pct);
+    select.dataset.initialized='1';
+  }
+  const s = benchmarkState(), {rows, anchor, baseline, metric, basis, allocation, activityAt} = s;
+  if (!anchor) { $('benchSummary').textContent = 'Benchmark configuration unavailable.'; return; }
+  const money = v => typeof v === 'number' && Number.isFinite(v) ? usd(v) : 'N/A';
+  const time = v => v != null && Number.isFinite(new Date(v).getTime()) ? new Date(v).toISOString().replace('T',' ').slice(0,16) + ' UTC' : 'Unavailable';
+  const activityLabel = metric === 'oi' ? 'BTC + ETH options OI' : metric === 'premium' ? '24h option premium volume' : '24h options notional';
+
+  $('benchAsOf').textContent = `Market-cap / FDV snapshot: ${time(SNAP.at)} · ${activityLabel}: ${time(activityAt)} · historical anchor: ${money(anchor.value)}. ${Date.now() - new Date(activityAt).getTime() > 48 * 3600e3 ? 'Activity snapshot is over 48 hours old. ' : ''}${metric !== 'oi' && s.f.deribit?.coverageComplete === false ? 'Partial Deribit coverage: multiples are disabled. ' : ''}${metric !== 'oi' ? 'Indicative: venue asset universes and rolling 24h cutoffs differ. Deribit requested BTC, ETH, SOL and XRP; older snapshots do not record response coverage.' : 'Same BTC + ETH feed for all OI comparisons; Paradex is normalized to one side by the existing collector.'}`;
+  $('benchSimpleBasis').value = basis;
+  const fmtShare = n => n > 0 && n < .01 ? '&lt;0.01%' : n.toFixed(2)+'%';
+  const shortMetric = metric === 'oi' ? 'options OI' : '24h options volume';
+  $('benchSimpleScope').textContent = `${metric === 'oi' ? 'BTC + ETH open options positions (USD)' : metric === 'premium' ? '24h premiums paid for options (USD), not exchange revenue' : '24h underlying notional traded (USD), not premium'} · snapshot ${time(activityAt).slice(0,10)}`;
+  $('benchReference').innerHTML = `<b>DERIBIT · THE 100% REFERENCE</b><span>${activityLabel} <strong>${money(baseline)}</strong></span><span>Historical deal value <strong>${money(anchor.value)}</strong></span><small>Deal value is an acquisition benchmark, not today’s market cap.</small>`;
+  const comparable = rows.filter(r => r.calc).sort((a,b) => b.activity-a.activity);
+  const selectedLabel = basis === 'fdv' ? 'FDV' : 'market cap';
+  const ranked=rows.filter(r=>r.calc).sort((a,b)=>b.activity-a.activity);
+  const desired=new URLSearchParams(location.hash.split('?')[1] || '').get('project') || comparisonFocus;
+  const lead=rows.some(r=>r.name===desired) ? ranked.find(r=>r.name===desired) : ranked[0];
+  const valuation=r=>(basis === 'fdv' ? r.fdv : r.mcap)*allocation;
+  const tokenPrice=r=>SNAP.projects.find(p=>p.name===r.name)?.price;
+  const equivalent=r=>valuation(r)/r.calc.multiple;
+  const project=SNAP.projects.find(p=>p.name===desired), fv=(s.f.venues || []).find(v=>v.name===desired), io=(SNAP.dm?.venues || []).find(v=>v.venue.toLowerCase()===desired.toLowerCase()), backup=s.f.oi?.venues?.[desired]?.byU;
+  const ownOI=io?.total ?? (backup && (typeof backup.BTC==='number'||typeof backup.ETH==='number') ? (backup.BTC||0)+(backup.ETH||0) : null);
+  const fundamentals=[['premium','Option premium volume · 24h',s.f.deribit?.premium24,fv?.premium?.d24],['volume','Options notional volume · 24h',s.f.deribit?.notional24,fv?.notional?.d24],['oi','Options open interest · BTC + ETH',(SNAP.dm?.venues || []).find(v=>v.venue==='deribit')?.total,ownOI]];
+  const current=project ? (basis==='fdv'?project.fdv:project.mcap)*allocation : null;
+  $('benchFundamentals').innerHTML=`<div class="deribit-fundamentals">${fundamentals.map(([id,label,base])=>`<article><small>DERIBIT · ${label.toUpperCase()}</small><b>${money(base)}</b><span>${money(anchor.value)} historical deal value</span></article>`).join('')}</div><h3 class="pulse-layer">${esc(desired)} vs Deribit · three fundamental checks</h3><div class="pulse-scroll"><table class="pulse-table"><thead><tr><th>Fundamental</th><th>Deribit</th><th>${esc(desired)}</th><th>Deribit-implied ${selectedLabel}</th><th>Current / implied</th></tr></thead><tbody>${fundamentals.map(([id,label,base,own])=>{const aligned= Math.abs(new Date(id==='oi'?SNAP.dm?.at:s.f.at).getTime()-Date.parse(SNAP.at))<=48*3600e3;const c=aligned && !(id!=='oi'&&s.f.deribit?.coverageComplete===false)?benchmarkCalculation(current,own,anchor.value,base):null;return `<tr class="${id===metric?'pulse-reference':''}"><td>${label}</td><td>${money(base)}</td><td>${money(own)}</td><td>${c?money(current/c.multiple):'N/A'}</td><td>${c?'<b>'+c.multiple.toFixed(2)+'×</b>':'N/A'}</td></tr>`;}).join('')}</tbody></table></div><p class="bench-note">Premium volume is the price paid for options, not the exchange’s fees or revenue. Both volume comparisons use 24h observations; asset coverage and rolling cutoffs can differ, so treat them as indicative. A single day is not a normalized annual earnings base. Different fundamentals can imply different valuations.</p>`;
+  const hero=lead ? `<div class="fair-hero"><span class="bench-status">${esc(lead.name.toUpperCase())} · ${selectedLabel.toUpperCase()} / ${activityLabel.toUpperCase()}</span><h3>${esc(lead.name)} trades at <em>${lead.calc.multiple.toFixed(2)}×</em> Deribit’s multiple.</h3><div class="fair-values"><div><small>DERIBIT-IMPLIED ${selectedLabel.toUpperCase()}</small><b>${money(equivalent(lead))}</b><span>At the same valuation per $1 of ${activityLabel}</span></div><div><small>CURRENT ${selectedLabel.toUpperCase()}</small><b>${money(valuation(lead))}</b><span>${lead.calc.multiple>=1?((lead.calc.multiple-1)*100).toFixed(0)+'% above':((1-lead.calc.multiple)*100).toFixed(0)+'% below'} benchmark-implied value</span></div><div><small>IMPLIED TOKEN PRICE</small><b>${tokenPrice(lead)>0?price(tokenPrice(lead)/lead.calc.multiple):'N/A'}</b><span>${tokenPrice(lead)>0?'Current '+price(tokenPrice(lead)):'Price unavailable'} · holding supply constant</span></div></div></div>`:`<p class="empty">${esc(desired)}: insufficient comparable options data to calculate a Deribit-implied value. Choose a covered token below.</p>`;
+  const unavailable=rows.filter(r=>!r.calc);
+  $('benchSimpleCards').innerHTML=hero+`<p class="bench-note"><b>“5× Deribit” means 5× the valuation for the same options activity.</b> Deribit-implied value is a conditional benchmark, not a verified fair price. Token cash-flow rights, growth and other products can justify a different value.${allocation!==1?' Custom scenario: '+(allocation*100).toFixed(0)+'% of token value attributed to options.':''}</p>
+    <div class="pulse-scroll"><table class="pulse-table fair-table"><thead><tr><th>Token project</th><th>Current ${selectedLabel}</th><th>Deribit-implied ${selectedLabel}</th><th>vs Deribit</th><th>Implied token price</th></tr></thead><tbody>${ranked.map(r=>{const p=byName(r.name);return `<tr class="${r.name===lead?.name?'pulse-reference':''}"><td>${p?`<a href="${deepHref(p)}">${logo(p)}<b>${esc(r.name)}</b></a>`:esc(r.name)}</td><td>${money(valuation(r))}</td><td><b>${money(equivalent(r))}</b></td><td><b>${r.calc.multiple.toFixed(2)}×</b><small>${r.calc.multiple>=1?'More expensive':'Cheaper'} per unit of options activity</small></td><td>${tokenPrice(r)>0?price(tokenPrice(r)/r.calc.multiple):'N/A'}</td></tr>`;}).join('')}</tbody></table></div>
+    <details class="pulse-help"><summary>How this is calculated · ${unavailable.length} tokens without sufficient inputs</summary><p><b>Implied valuation</b> = Deribit acquisition value × project options activity ÷ Deribit options activity. <b>Relative multiple</b> = current token valuation ÷ implied valuation. <b>Implied price</b> = current token price ÷ relative multiple, assuming unchanged supply.</p><p>OI compares outstanding BTC + ETH options positions. The optional 24h volume comparison is indicative because underlyings and rolling cutoffs differ. Deribit’s acquisition covers the whole company, including other products, while tokens have different economic rights.</p><p>Unable to value from matched inputs: ${unavailable.map(r=>esc(r.name)).join(', ')||'none'}. Missing data does not imply a zero valuation.</p></details>`;
+
+  const valid = rows.filter(r => r.calc);
+  $('benchSummary').textContent = `${valid.length} projects have usable valuation and activity inputs. ${basis === 'fdv' ? 'FDV' : 'Market cap'} × ${Number.isFinite(allocation) ? (allocation * 100).toFixed(0) : 'invalid'}% options attribution is a user scenario applied to all project rows; Deribit stays at 100%. Missing inputs are N/A. Revenue / earnings comparisons are unavailable: premium turnover is not exchange revenue.`;
+  $('benchRows').innerHTML = `<tr class="base"><td><b>Deribit</b><small>Historical equity acquisition anchor</small></td><td>N/A<small>No standalone listed token</small></td><td>N/A<small>Anchor: ${money(anchor.value)}</small></td><td>${money(baseline)}</td><td>${baseline > 0 ? '100%' : 'N/A'}</td><td>${baseline > 0 ? '1.00×' : 'N/A'}</td><td>Reference</td></tr>` + rows.map(r => `<tr><td><b>${esc(r.name)}</b><small>${r.launch ? esc(r.launch.stage) : 'Whole token value / options-only activity'}</small></td><td>${r.marketSource ? `<a href="${esc(r.marketSource)}" target="_blank" rel="noopener">${money(r.mcap)}</a>` : money(r.mcap)}</td><td>${money(r.fdv)}</td><td><a href="${esc(r.source)}" target="_blank" rel="noopener">${money(r.activity)}</a></td><td>${r.share != null ? (r.share * 100).toFixed(3) + '%' : 'N/A'}</td><td>${r.calc ? `<b>${r.calc.multiple.toFixed(2)}×</b><small>${r.calc.multiple >= 1 ? 'Premium' : 'Discount'} per unit of activity</small>` : 'N/A'}</td><td>${r.calc ? `${money(r.calc.parity)}<small>${r.calc.change > 0 ? '+' : ''}${r.calc.change.toFixed(0)}% from current activity</small>` : 'N/A'}</td></tr>`).join('');
+  const bars = rows.filter(r => r.activity != null && r.activity > 0 && baseline > 0).sort((a,b) => b.activity-a.activity).slice(0,8), max = Math.max(baseline || 0,...bars.map(r => r.activity));
+  $('benchBars').innerHTML = baseline > 0 ? [{name:'Deribit', activity:baseline},...bars].map(r => `<div class="bench-bar"><span>${esc(r.name)}</span><div class="bench-track"><i style="width:${(r.activity / max * 100).toFixed(3)}%"></i></div><b>${(r.activity / baseline * 100).toFixed(3)}%</b></div>`).join('') : '<p class="bench-note">No valid Deribit activity denominator.</p>';
+  $('benchMethod').innerHTML = `<p><b>Relative multiple</b> = (selected project token valuation × options attribution ÷ Deribit deal anchor) ÷ (project options activity ÷ Deribit options activity). Above 1× means a premium per unit of activity, below 1× a discount. <b>Parity activity</b> = Deribit activity × attributed token valuation ÷ deal anchor. Change = parity activity ÷ actual activity − 1. Negative change means current activity already exceeds this mechanical parity level; it is not a forecast.</p>
+    <p><b>Anchor:</b> <a href="${esc(anchor.source)}" target="_blank" rel="noopener">${esc(anchor.label)} · ${money(anchor.value)} ↗</a>. $2.9B was the announced stock-and-cash transaction value; approximately $4.3B is the later reported closing consideration. Neither is a current Deribit market cap or an enterprise value. Deribit also operates futures and perpetuals; using all consideration against options-only activity is an explicit proxy.</p>
+    <p><b>Economic rights:</b> a token does not necessarily own the business or receive its cash flows. Token dilution, fee distribution, buybacks, incentives, margins and other products are not normalized here. The attribution control is a sensitivity assumption, not a measured segment allocation. No automatic undervalued / overvalued investment verdict is produced.</p>
+    <p><b>Metric scope:</b> OI is outstanding BTC + ETH options notional in USD, not revenue or traded volume. Volume is rolling 24h options notional, not premium, fees or perps volume. Volume comparisons are indicative because asset coverage and observation times differ. Missing or zero activity produces no valuation multiple. Inputs more than 48 hours apart produce no multiple.</p>
+    <p><b>Sources:</b> <a href="https://www.coingecko.com" target="_blank" rel="noopener">CoinGecko</a> token values · <a href="${dmLink('btc')}" target="_blank" rel="noopener">Derivatives Monkey</a> BTC + ETH OI · <a href="https://defillama.com/options" target="_blank" rel="noopener">DefiLlama</a> venue notional · <a href="https://docs.deribit.com/" target="_blank" rel="noopener">Deribit public API</a> benchmark 24h notional. Existing snapshot inputs are reused, not presented as newly fetched observations. See linked row sources and CSV for unrounded inputs and dates.</p>`;
+}
+$('benchSimpleBasis').oninput = () => { $('benchBasis').value=$('benchSimpleBasis').value; benchmarkURL(); renderBenchmark(); };
+function benchmarkURL() {
+  const q=new URLSearchParams({basis:$('benchBasis').value,metric:$('benchMetric').value,anchor:$('benchAnchor').value,allocation:$('benchAllocation').value,coverage:$('benchCoverage').value,project:comparisonFocus});
+  history.replaceState(null,'',location.pathname+location.search+'#/compare?'+q.toString());
+}
+for (const id of ['benchBasis','benchMetric','benchAnchor','benchAllocation','benchCoverage']) $(id).addEventListener('input', () => { benchmarkURL(); renderBenchmark(); });
+$('benchReset').onclick = () => { $('benchBasis').value='fdv'; $('benchMetric').value='premium'; $('benchAnchor').value='closing'; $('benchAllocation').value='100'; $('benchCoverage').value='active'; benchmarkURL(); renderBenchmark(); };
+$('benchExport').onclick = () => {
+  const s = benchmarkState(), fields = ['project','mcap_usd','fdv_usd','activity_usd','activity_type','activity_at','market_at','basis','options_attribution','anchor_usd','anchor_source','share_of_deribit','relative_multiple','parity_activity','required_change_pct','activity_source','market_source'];
+  const body = s.rows.map(r => [r.name,r.mcap,r.fdv,r.activity,s.metric,s.activityAt,r.marketAt,s.basis,s.allocation,s.anchor.value,s.anchor.source,r.share,r.calc?.multiple,r.calc?.parity,r.calc?.change,r.source,r.marketSource]);
+  const csv = [fields,...body].map(r => r.map(v => '"'+String(v ?? '').replace(/"/g,'""')+'"').join(',')).join('\n');
+  const url = URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})), a=document.createElement('a'); a.href=url;a.download='opshnz-compare-to-deribit.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+};
+
 // ════════════════ 라우팅 ════════════════
-const OLD = [[/^#\/race\/standings$/, '#/fundamentals/standings'], [/^#\/race(\/track)?$/, '#/fundamentals/track'], [/^#\/oracle\/friends$/, '#/overview/pretge'], [/^#\/oracle\/farms$/, '#/overview'], [/^#\/oracle(\/(codes|live|watch))?$/, '#/overview$1'],
+const OLD = [[/^#\/compare\/launches$/, '#/launches'], [/^#\/fundamentals\/cex$/, '#/fundamentals/share'], [/^#\/fundamentals\/standings$/, '#/compare/benchmark'], [/^#\/race\/standings$/, '#/compare/benchmark'], [/^#\/race(\/track)?$/, '#/fundamentals/track'], [/^#\/oracle\/friends$/, '#/overview/pretge'], [/^#\/oracle\/farms$/, '#/overview'], [/^#\/oracle(\/(codes|live|watch))?$/, '#/overview$1'],
   [/^#\/strategy\/friends$/, '#/overview/pretge'], [/^#\/strategy\/(codes|live|watch|finder)$/, '#/overview/$1'], [/^#\/strategy\/(regime|playbook)$/, '#/strategy']];
 function route(){
   let h = decodeURIComponent(location.hash);
   // 옛 주소(Race·Oracle)는 새 구조로
   for (const [re, to] of OLD) if (re.test(h)) { location.replace(h.replace(re, to)); return; }
   // 주소가 없으면 랜딩(Home). 텔레그램 캡처(#tg·#tgmap)는 Overview
-  const page = TG ? 'overview' : h.startsWith('#/deep') ? 'deep' : h.startsWith('#/fundamentals') ? 'fundamentals' : h.startsWith('#/strategy') ? 'strategy' : h.startsWith('#/overview') ? 'overview' : h.startsWith('#/new') ? 'new' : h.startsWith('#/guide') ? 'guide' : 'home';
+  const page = TG ? 'overview' : h.startsWith('#/launches') ? 'launches' : h.startsWith('#/compare') ? 'compare' : h.startsWith('#/deep') ? 'deep' : h.startsWith('#/fundamentals') ? 'fundamentals' : h.startsWith('#/strategy') ? 'strategy' : h.startsWith('#/overview') ? 'overview' : h.startsWith('#/new') ? 'new' : h.startsWith('#/guide') ? 'guide' : 'home';
   const home = page === 'home';
   $('v-home').hidden = !home; $('crumb').hidden = home;
   document.body.dataset.view = page;
-  let sub = !home && !TG ? (h.split('/')[2] || '') : '';
-  let bc = {overview:'ECOSYSTEM OVERVIEW', fundamentals:'OPTION FUNDAMENTAL', strategy:'SENTIMENT', deep:'DEEP DIVE', new:'NEW PROJECTS', guide:'STRATEGY GUIDE'}[page] || '';
+  let sub = !home && !TG ? (h.split('/')[2] || '').split('?')[0] : '';
+  if (page === 'compare') sub = '';
+  let bc = {launches:'PERP DEXS LAUNCHING OPTIONS', compare:'COMPARE TO DERIBIT', overview:'ECOSYSTEM OVERVIEW', fundamentals:'OPTION FUNDAMENTAL', strategy:'SENTIMENT', deep:'DEEP DIVE', new:'NEW PROJECTS', guide:'STRATEGY GUIDE'}[page] || '';
   if (page === 'fundamentals') {
-    if (!$('v-fund').dataset.on) { $('v-fund').dataset.on = 1; renderFund(); renderCex(); }
-    if (!$('v-race').dataset.on) { $('v-race').dataset.on = 1; renderRaceChips(); renderStandings(); runRace(); }
+    if (!$('v-fund').dataset.on) { $('v-fund').dataset.on = 1; renderFund(); }
+    if (!$('v-race').dataset.on) { $('v-race').dataset.on = 1; renderRaceChips(); renderRaceSeason(); runRace(); }
   } else { cancelAnimationFrame(rpRaf); rpPlaying = false; }
+  if (page === 'launches') renderLaunchWatch();
+  if (page === 'compare') { renderBenchmark(); renderComparisonAnalytics(); }
   if (page === 'guide' && !$('v-guide').dataset.on) { $('v-guide').dataset.on = 1; renderGuide(); }
   if (page === 'new' && !$('v-new').dataset.on) { $('v-new').dataset.on = 1; renderNew(); }
   if (page === 'strategy' && !$('v-strat').dataset.on) { $('v-strat').dataset.on = 1; renderStrategy(); }
@@ -3123,6 +3437,7 @@ function route(){
   $('bcHere').innerHTML = bc;
   document.querySelectorAll('[data-r]').forEach(a => a.setAttribute('aria-current', a.dataset.r === page ? 'page' : 'false'));
   if (home || (sub && page !== 'deep')) scrollTo({top:0});
+  if (page === 'compare' && ['positioning','token-oi','holder-return'].includes(sub)) $('comparisonExtra').open=true;
   renderSubnav(page, sub);   // 각 페이지를 그린 뒤에 덩어리 필터를 건다
   hideTip(); paused = false;
   if (!TG) { if (isIntroHash(location.hash)) showIntro(); else hideIntro(); }
@@ -3313,6 +3628,7 @@ function enterSite(){
   setTimeout(() => { el.hidden = true; el.classList.remove('zoom', 'theta', 'split'); (IT.anims || []).forEach(a => a.cancel()); pl.style.transform = ''; IT.speed = 1; cancelAnimationFrame(IT.raf); IT.leaving = false; }, 2450);
 }
 function renderAll(){
+  if (location.hash === '#share/podium') { location.replace('#/compare/benchmark'); }
   if (location.hash.startsWith('#share/')) { renderShare(location.hash.slice(7)); return; }
   renderHead(); renderTicker(); renderSubscribe(); renderFinder(); buildSurface(); buildOrrery(); renderClients(); renderHabitats(); renderFeed(); renderLog();
   delete $('v-race').dataset.on; delete $('v-fund').dataset.on; delete $('v-strat').dataset.on; delete $('v-oracle').dataset.on; delete $('v-new').dataset.on; delete $('v-guide').dataset.on;

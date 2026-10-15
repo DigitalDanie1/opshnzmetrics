@@ -15,6 +15,7 @@ export function rebuild() {
   const files = fs.readdirSync(snapDir).filter(f => /^\d{4}-W\d{2}\.json$/.test(f)).sort();
   if (!files.length) throw new Error('스냅샷이 없습니다. 먼저 node publish.mjs --dry');
   const snap = JSON.parse(fs.readFileSync(path.join(snapDir, files[files.length - 1]), 'utf8'));
+  if (fs.existsSync(path.join(DIR, 'benchmark-financials.json'))) { const f = read('benchmark-financials.json'); if (!snap.benchmarkFinancials || Date.parse(f.at) > Date.parse(snap.benchmarkFinancials.at)) snap.benchmarkFinancials = f; }
   const byName = Object.fromEntries(data.projects.map(p => [p.name, p]));
   // 사람이 지울 수 있는 칸만 지운다. 로고·체인 같은 건 data.json 에 없으면 스냅샷 값(자동 수집)을 그대로 둔다
   const ERASABLE = new Set(['note', 'deep', 'points', 'pointsUrl', 'status']);
