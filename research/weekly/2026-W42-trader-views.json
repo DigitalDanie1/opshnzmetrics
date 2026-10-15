@@ -1,0 +1,79 @@
+{
+  "scope": "Initial Trader views feature, not a full project-news rerun",
+  "checkedAt": "2026-10-15T09:18:03.288919+00:00",
+  "views": {
+    "checkedAt": "2026-10-15T09:18:03.288919+00:00",
+    "windowDays": 7,
+    "sources": [
+      {
+        "name": "QCP Capital",
+        "url": "https://www.qcpgroup.com/topic/market-updates/",
+        "status": "Verified a dated market view from Oct 12."
+      },
+      {
+        "name": "Greeks.live",
+        "url": "https://www.greeks.live/",
+        "status": "Public page did not expose a readable dated view in this check; official social posts need verification."
+      },
+      {
+        "name": "Deribit Insights",
+        "url": "https://insights.deribit.com/industry/",
+        "status": "Latest readable industry and option-flow pages checked; no qualifying last-7-day view verified."
+      },
+      {
+        "name": "Block Scholes",
+        "url": "https://www.blockscholes.com/resource-centre",
+        "status": "Research index checked; no qualifying last-7-day market view verified."
+      },
+      {
+        "name": "Glassnode",
+        "url": "https://research.glassnode.com/",
+        "status": "Verified options commentary in the Oct 12 Market Pulse."
+      },
+      {
+        "name": "Amberdata",
+        "url": "https://blog.amberdata.io/tag/featured",
+        "status": "Public index checked; no qualifying last-7-day options view verified."
+      },
+      {
+        "name": "Volmex",
+        "url": "https://blog.volmex.finance/",
+        "status": "Public blog checked; no qualifying last-7-day market view verified."
+      }
+    ],
+    "items": [
+      {
+        "id": "qcp-2026-10-12",
+        "publisher": "QCP Capital",
+        "author": "QCP desk",
+        "date": "2026-10-12",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Near term / end October",
+        "stance": "Range / breakout watch",
+        "title": "Less defensive options positioning, with a breakout still priced in",
+        "view": "QCP sees firmer implied volatility and a smaller put premium as BTC holds its range. The desk highlights end-October call-butterfly positioning and inflation data as potential catalysts.",
+        "url": "https://www.qcpgroup.com/insights/qcp-market-colour-51/",
+        "type": "Desk commentary"
+      },
+      {
+        "id": "glassnode-2026-10-12",
+        "publisher": "Glassnode",
+        "author": "Frederik Theissen",
+        "date": "2026-10-12",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Week to 11 October",
+        "stance": "Downside protection",
+        "title": "Protection demand rises while options positions expand",
+        "view": "Glassnode reports higher put-versus-call skew and rising options open interest, interpreting the move as increased demand for downside hedges. Its volatility-spread measure also moved closer to zero.",
+        "url": "https://research.glassnode.com/btc-market-pulse-week-42-2026/",
+        "type": "Research view"
+      }
+    ],
+    "archive": []
+  },
+  "projectNews": "Existing W42 project notes preserved; scheduled Monday task reviews every current project."
+}

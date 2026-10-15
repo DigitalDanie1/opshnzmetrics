@@ -1426,6 +1426,9 @@ body.tg .eco-search{display:none}
 .compare-brand>img,.compare-brand>.logo-ph{width:28px!important;height:28px!important;object-fit:contain;border-radius:50%;flex-shrink:0}.compare-brand>span{font-size:inherit!important;color:inherit!important}
 .compare-matchup{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.compare-matchup .compare-vs{font:11px var(--mono);color:var(--mute)}.fair-hero>.compare-matchup{margin-bottom:20px}.fair-hero>.compare-matchup .compare-brand{font-size:20px!important}.fair-hero>.compare-matchup img{width:38px!important;height:38px!important}.deribit-fundamentals article>.compare-brand{margin-bottom:14px}.pulse-table th .compare-brand{justify-content:flex-end}.pulse-layer.compare-matchup{margin-top:26px}
 
+
+.tv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.tv-card{padding:23px;border:1px solid var(--line2);background:rgba(14,15,12,.94)}.tv-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.tv-top b{font-size:16px}.tv-top time{font:10px var(--mono);color:var(--ink2)}.tv-tags{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.tv-tags span{font:10px var(--mono);padding:5px 7px;border:1px solid var(--line2);color:var(--amber)}.tv-card h3{font-size:19px;line-height:1.45;margin:12px 0}.tv-card>p{font-size:13px;line-height:1.75;color:var(--ink2)}.tv-foot{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:14px;border-top:1px solid var(--line);padding-top:17px;margin-top:20px}.tv-foot span{font-size:10px;line-height:1.7;color:var(--ink2)}.tv-foot a,#tvCoverage a{color:var(--amber);font-size:12px;text-decoration:underline}#tvCoverage p{margin:9px 0}@media(max-width:760px){.tv-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -1642,6 +1645,7 @@ body.tg .eco-search{display:none}
     <section data-blk="log"><div class="sh"><h2>Sentiment log<span>what options said — day by day, and what price did next</span></h2>
       <div class="seg" id="slMode" role="group" aria-label="Period"><button data-m="daily" aria-pressed="true">Daily</button><button data-m="weekly" aria-pressed="false">Weekly</button><button data-m="monthly" aria-pressed="false">Monthly</button></div></div><div id="stLog"></div></section>
     <section data-blk="plays"><div class="sh"><h2>Today’s plays<span>what fits the market right now</span></h2></div><div id="stPlays"></div></section>
+    <section data-blk="views" id="traderViewsSection"><div class="sh"><h2>Trader views<span>What options desks and researchers are watching · attributed summaries</span></h2></div><p class="bench-note" id="tvAsOf"></p><div id="tvCards" class="tv-grid"></div><details class="bench-details"><summary>Source coverage &amp; older views</summary><div id="tvCoverage" class="bench-note"></div><div id="tvArchive"></div></details></section>
     <section data-blk="macro"><div class="sh"><h2>Macro playbook<span>scenarios, what would prove them wrong, and what to watch</span></h2></div><div id="stMacro"></div></section>
     <p class="cap">Plain-English reading of public data, rebuilt daily — not financial advice.</p>
   </main>
@@ -2621,7 +2625,7 @@ const SUBS = {
   compare:[],
   overview:[['finder','Start here'],['planets','Planet map'],['friends','Friends'],['ecosystem','Whole ecosystem'],['live','Live points'],['pretge','Pre-TGE friends'],['codes','My ref codes'],['watch','Watchlist'],['content','Content'],['log','Weekly log']],
   fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['underlying','By underlying'],['trades','Largest trades'],['venues','Venues'],['track','Race'],['comps','Derive comps']],
-  strategy:[['now','Market now'],['log','Sentiment log'],['plays','Today’s plays'],['macro','Macro playbook']],
+  strategy:[['now','Market now'],['log','Sentiment log'],['plays','Today’s plays'],['views','Trader views'],['macro','Macro playbook']],
 };
 const PAGES = [['strategy','01 Sentiment & Strategy'],['fundamentals','02 Option Fundamental'],['overview','03 Ecosystem Overview'],['deep','04 Deep Dive'],['new','05 New Projects'],['guide','06 Strategy Guide'],['launches','07 Perp DEXs Launching Options'],['compare','08 Compare to Deribit']];
 const VIEWS = {overview:['v-overview','v-oracle'], fundamentals:['v-fund','v-race'], strategy:['v-strat'], deep:['v-deep'], new:['v-new'], guide:['v-guide'], compare:['v-compare'], launches:['v-launches']};
@@ -2782,8 +2786,26 @@ function renderStrategy(){
       <div class="mb-box mb-watch"><h4>WATCH BOARD</h4>${watch.map(([w, t, d]) => `<div><time>${esc(w)}</time><b>${esc(t)}</b><span>${esc(d)}</span></div>`).join('')}${soon.length ? '' : '<p class="lg">No US high-impact releases left in the next 7 days.</p>'}</div>`;
   }
   $('stMacro').innerHTML = `${note}${book}${sc ? `<h4 class="mb-h">IF MACRO SURPRISES · WHAT TO TRADE</h4><p class="mb-note">Conditional setups, not live trade signals. Tenors and exits are illustrative rules, not backtested. Examples use normalized spot 100, equal-size linear options and expiry payoffs before fees or slippage. Confirm settlement, collateral and liquidation rules for the actual contract; payoff caps assume all legs remain intact.</p><div class="scen">${sc}</div>` : ''}`;
+  renderTraderViews();
   renderSentLog();
 }
+
+function traderViewWindow(config, now=Date.now()) {
+  const days=7, valid=v=>v && /^https:\/\//.test(v.url || '') && /^\d{4}-\d{2}-\d{2}$/.test(v.date || '') && v.publisher && v.view;
+  const all=[...(config?.items || []),...(config?.archive || [])].filter(valid), seen=new Set();
+  const unique=all.filter(v=>!seen.has(v.id || v.url) && seen.add(v.id || v.url));
+  const date=v=>Date.parse(v.date+'T00:00:00+09:00');
+  return {current:unique.filter(v=>date(v)<=now && now-date(v)<days*864e5).sort((a,b)=>b.date.localeCompare(a.date)), older:unique.filter(v=>date(v)<=now && now-date(v)>=days*864e5).sort((a,b)=>b.date.localeCompare(a.date))};
+}
+function renderTraderViews(){
+  const cfg=BOOT.config.traderViews || {}, {current,older}=traderViewWindow(cfg), visible=current.filter(v=>!(v.assets || []).length || v.assets.includes(stAsset));
+  const card=(v,old=false)=>`<article class="tv-card"><div class="tv-top"><b>${esc(v.publisher)}</b><time datetime="${esc(v.date)}">${esc(v.date)}</time></div><div class="tv-tags"><span>${esc((v.assets || []).join(' / ') || 'Market')}</span><span>${esc(v.stance || 'Market view')}</span>${old?'<span>HISTORICAL</span>':''}</div><h3>${esc(v.title || v.publisher)}</h3><p>${esc(v.view)}</p><div class="tv-foot"><span>${esc(v.author || v.publisher)} · ${esc(v.horizon || 'Horizon not specified')}<br>${esc(v.type || 'Published view')} · paraphrased, not our trading signal</span><a href="${esc(v.url)}" target="_blank" rel="noopener">Read original ↗</a></div></article>`;
+  $('tvAsOf').textContent=`${stAsset} · last 7 days · source check ${cfg.checkedAt ? new Date(cfg.checkedAt).toLocaleDateString('en-CA',{timeZone:'Asia/Seoul'}) : 'not yet completed'} · refreshed weekly on Monday 09:00 KST. Views can disagree and describe different observation windows.`;
+  $('tvCards').innerHTML=visible.length ? visible.map(v=>card(v)).join('') : '<p class="empty">No fresh, verified '+esc(stAsset)+' options view in the last 7 days. Older commentary is kept below, not presented as current.</p>';
+  $('tvCoverage').innerHTML=(cfg.sources || []).map(s=>`<p><a href="${/^https:\/\//.test(s.url || '')?esc(s.url):'#'}" target="_blank" rel="noopener"><b>${esc(s.name)}</b> ↗</a> — ${esc(s.status || 'Not checked')}</p>`).join('');
+  $('tvArchive').innerHTML=older.length?'<h3>Older views · not current</h3><div class="tv-grid">'+older.slice(0,12).map(v=>card(v,true)).join('')+'</div>':'<p class="bench-note">No older views archived yet.</p>';
+}
+
 // ════════════════ 옵션 심리 일지: 일간 · 주간 · 월간 ════════════════
 let slMode = 'daily';
 const VCLS = v => /BULL/.test(v) ? 'bull' : /BEAR/.test(v) ? 'bear' : 'flat';
