@@ -1430,6 +1430,43 @@ body.tg .eco-search{display:none}
 
 .tv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.tv-card{padding:23px;border:1px solid var(--line2);background:rgba(14,15,12,.94)}.tv-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.tv-top b{font-size:16px}.tv-top time{font:10px var(--mono);color:var(--ink2)}.tv-tags{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.tv-tags span{font:10px var(--mono);padding:5px 7px;border:1px solid var(--line2);color:var(--amber)}.tv-card h3{font-size:19px;line-height:1.45;margin:12px 0}.tv-card>p{font-size:13px;line-height:1.75;color:var(--ink2)}.tv-foot{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:14px;border-top:1px solid var(--line);padding-top:17px;margin-top:20px}.tv-foot span{font-size:10px;line-height:1.7;color:var(--ink2)}.tv-foot a,#tvCoverage a{color:var(--amber);font-size:12px;text-decoration:underline}#tvCoverage p{margin:9px 0}@media(max-width:760px){.tv-grid{grid-template-columns:1fr}}
 
+/* ── Deep dive 개선 ── */
+.dx-bar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px;padding:10px;border:1px solid var(--line2);border-radius:14px;background:rgba(18,19,16,.85)}
+.dx-f{display:flex;flex-wrap:wrap;gap:6px}
+.dx-f button{all:unset;cursor:pointer;font-size:12.5px;color:var(--ink2);padding:7px 13px;border-radius:999px;border:1px solid var(--line2);transition:all .2s}
+.dx-f button:hover{color:var(--ink);border-color:rgba(242,181,68,.5)}
+.dx-f button[aria-pressed=true]{color:#1a1408;background:var(--amber);border-color:var(--amber);font-weight:600}
+.dx-f button:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.dx-s{font-size:12px;color:var(--mute);display:flex;align-items:center;gap:8px}
+.dx-s select{font:inherit;font-size:12.5px;color:var(--ink);background:var(--panel);border:1px solid var(--line2);border-radius:8px;padding:6px 10px}
+.dpage{max-width:1240px}
+.dd-toc{position:sticky;top:0;z-index:5;display:flex;gap:6px;flex-wrap:wrap;padding:10px 0;margin:18px 0 4px;background:linear-gradient(180deg,rgba(10,11,9,.96) 70%,rgba(10,11,9,0));backdrop-filter:blur(4px)}
+.dd-toc button{all:unset;cursor:pointer;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);border:1px solid var(--line2);border-radius:999px;padding:6px 12px}
+.dd-toc button:hover{color:var(--amber);border-color:rgba(242,181,68,.55)}
+.dd-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px;align-items:start}
+.dd-sec{padding:22px 0;border-top:1px solid var(--line);scroll-margin-top:70px}
+.dd-sec:first-child{border-top:0;padding-top:8px}
+.dd-h{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);font-weight:600;margin-bottom:14px}
+.dd-sec .shot{margin:0}
+.dd-sec .mkt{margin-top:0}
+.dd-sec .blocks{margin-top:0}
+.dd-sec .bk{margin:0}
+.dd-peer-sub{font-size:12.5px;color:var(--mute);margin-bottom:6px}
+.vt.peers tr.me td{background:rgba(242,181,68,.08)}
+.vt.peers tr.me td.vn a{color:var(--amber)}
+.vt.peers td.tk{font-size:12px;color:var(--mute);text-align:left}
+.dd-side{position:relative}
+.dd-sticky{position:sticky;top:64px;padding:16px;border:1px solid rgba(242,181,68,.25);border-radius:16px;background:radial-gradient(120% 60% at 0 0,rgba(242,181,68,.08),transparent 60%),rgba(16,17,14,.92)}
+.dd-sticky h4{font-size:10.5px;letter-spacing:.12em;color:var(--amber);font-weight:600;margin:16px 0 8px}
+.dd-sticky h4:first-child{margin-top:0}
+.dd-sticky .glance{grid-template-columns:1fr;margin:0;border-radius:10px;overflow:hidden}
+.dd-sticky .glance > div{padding:10px 12px}
+.dd-sticky .glance .v{font-size:19px}
+.dd-sl{display:flex;flex-wrap:wrap;gap:6px}
+.dd-sl a{font-size:12px;color:var(--ink2);border:1px solid var(--line2);border-radius:999px;padding:4px 10px}
+.dd-sl a:hover{color:var(--amber);border-color:rgba(242,181,68,.5)}
+.dd-sl a.open{color:#1a1408;background:var(--amber);border-color:var(--amber);font-weight:600}
+@media (max-width:1000px){.dd-grid{grid-template-columns:1fr}.dd-side{order:-1}.dd-sticky{position:static}}
 </style>
 </head>
 <body>
@@ -1689,7 +1726,8 @@ body.tg .eco-search{display:none}
         <div><h2>Deep <em>dive</em></h2><p>One page per project — thesis, timeline, notes, market data and content.</p></div>
         <input id="q" class="dsearch" type="search" placeholder="Search name · ticker · keyword   ( / )" aria-label="Search projects">
       </div>
-      <section style="margin-top:26px"><div class="sh"><h2>Friends<span id="dixFN"></span></h2></div><div class="dgrid" id="dixF"></div></section>
+      <div class="dx-bar" id="dxBar"></div>
+      <section style="margin-top:22px"><div class="sh"><h2>Friends<span id="dixFN"></span></h2></div><div class="dgrid" id="dixF"></div></section>
       <section><div class="sh"><h2>Other options projects<span id="dixON"></span></h2></div><div class="dgrid sm" id="dixO"></div></section>
     </div>
     <article id="dd" class="dpage" hidden></article>
@@ -2113,22 +2151,45 @@ function renderLog(){
 
 // ════════════════ 딥다이브 ════════════════
 let current = null;
+// 카드에 붙일 숫자 하나: OI > 30일 거래량 > TVL > 상태
+function deepMetric(p){
+  const oi = SNAP.fund && SNAP.fund.oi && SNAP.fund.oi.venues[p.name];
+  if (oi && oi.total > 0) return `OI ${usd(oi.total)}`;
+  if (p.vol30 > 0) return `30d vol ${usd(p.vol30)}`;
+  if (p.tvl > 0) return `TVL ${usd(p.tvl)}`;
+  return '';
+}
 function deepCard(p){
   const d = p.deep || {}, has = !!(d.writeup || d.thesis);
-  const sh = (BOOT.shots || {})[p.name];
+  const sh = (BOOT.shots || {})[p.name], m = deepMetric(p);
   return `<a class="dc${p.core ? ' fr' : ''}${sh ? '' : ' ns'}" href="${deepHref(p)}">${sh ? `<div class="th"><img src="${esc(sh.file)}" alt="" loading="lazy"></div>` : ''}
     <div class="hd">${logo(p)}<div><b>${esc(p.name)}</b><small>${esc(p.ticker ? '$' + p.ticker : (p.status || 'Pre-TGE'))}</small></div>${p.ticker && p.ch24 != null ? `<span class="ch">${pct(p.ch24)}</span>` : ''}</div>
     ${p.core ? `<p>${esc(p.what || '')}</p>` : ''}
-    <div class="ft"><span></span>${has ? `<em>NOTES${d.updated ? ' · ' + new Date(d.updated).toLocaleDateString('en-US', {month:'short', day:'numeric'}) : ''}</em>` : ''}<i>→</i></div></a>`;
+    <div class="ft"><span>${esc(m || p.home || '')}</span>${has ? `<em>NOTES${d.updated ? ' · ' + new Date(d.updated).toLocaleDateString('en-US', {month:'short', day:'numeric'}) : ''}</em>` : ''}<i>→</i></div></a>`;
 }
+// 목록 도구줄: 무엇을 하는 곳인지(lanes) · 토큰 상태 · 정렬
+let DX = {f:'all', sort:'activity'};
+const laneOf = p => ((BOOT.config.lanes || []).find(l => l.members.includes(p.name)) || {}).id;
+const activity = p => { const oi = SNAP.fund && SNAP.fund.oi && SNAP.fund.oi.venues[p.name]; return Math.max(p.vol30 || 0, (oi && oi.total) || 0, p.tvl || 0); };
 function renderDeepIndex(){
   const q = $('q').value.trim().toLowerCase();
-  const hit = p => !q || [p.name, p.ticker, p.what, ...(p.keywords || [])].join(' ').toLowerCase().includes(q);
-  const cs = clients().filter(hit), os = others().filter(hit).sort((a,b) => a.name.localeCompare(b.name));
+  const lanes = BOOT.config.lanes || [];
+  const F = [['all', 'All'], ...lanes.map(l => [l.id, l.title]), ['live', 'Live token'], ['pre', 'Pre-TGE']];
+  const S = [['activity', 'Most active'], ['move', 'Biggest 24h move'], ['az', 'A–Z']];
+  $('dxBar').innerHTML = `<div class="dx-f">${F.map(([k, l]) => `<button data-dxf="${k}" aria-pressed="${DX.f === k}">${esc(l)}</button>`).join('')}</div>
+    <label class="dx-s">Sort <select id="dxSort">${S.map(([k, l]) => `<option value="${k}"${DX.sort === k ? ' selected' : ''}>${l}</option>`).join('')}</select></label>`;
+  const hit = p => (!q || [p.name, p.ticker, p.what, p.home, ...(p.keywords || [])].join(' ').toLowerCase().includes(q))
+    && (DX.f === 'all' || (DX.f === 'live' ? p.stage === 'post' : DX.f === 'pre' ? p.stage !== 'post' : laneOf(p) === DX.f));
+  const sorter = DX.sort === 'az' ? (a, b) => a.name.localeCompare(b.name) : DX.sort === 'move' ? (a, b) => Math.abs(b.ch24 || 0) - Math.abs(a.ch24 || 0) : (a, b) => activity(b) - activity(a) || a.name.localeCompare(b.name);
+  const laneF = lanes.some(l => l.id === DX.f);
+  const cs = clients().filter(hit).sort(sorter), os = laneF ? [] : others().filter(hit).sort(sorter);
   $('dixF').innerHTML = cs.map(deepCard).join('') || '<p class="empty">No match.</p>';
   $('dixO').innerHTML = os.map(deepCard).join('') || '<p class="empty">No match.</p>';
   $('dixFN').textContent = cs.length; $('dixON').textContent = os.length;
+  $('dixO').closest('section').hidden = laneF;
 }
+document.addEventListener('click', e => { const b = e.target.closest('[data-dxf]'); if (!b) return; DX.f = b.dataset.dxf; renderDeepIndex(); });
+document.addEventListener('change', e => { if (e.target.id === 'dxSort') { DX.sort = e.target.value; renderDeepIndex(); } });
 $('q').addEventListener('input', renderDeepIndex);
 $('q').addEventListener('keydown', e => { if (e.key === 'Enter') { const a = $('ddIdx').querySelector('.dc'); if (a) location.hash = a.getAttribute('href'); } });
 
@@ -2202,35 +2263,55 @@ function renderDeep(p){
         ${kwHTML(p)}
         <p class="dd-what">${esc(p.what)}</p>
         <div class="dd-links">${links}</div>
-        ${refOf(p.name) ? `<div class="dd-ref">${refBox(refOf(p.name))}</div>` : ''}
         ${EDITOR_KEY ? `<button class="edit-btn" id="ddEditBtn">✎ EDIT THIS PAGE</button> <span class="muted" id="ddSaved" style="font-size:12px;margin-left:8px"></span>` : ''}
       </div>
     </div>
     ${p.origin || p.lineage ? `<div class="lineage">Lineage ${p.origin ? `<span class="o">${esc(p.origin)}</span><span class="ar">→</span>` : ''}<span class="me">${esc(p.name)}</span>${p.lineage && !p.origin ? `<span class="muted">· ${esc(p.lineage)}</span>` : ''}</div>` : ''}
 
-    ${glanceHTML(p)}
-    ${backersHTML(p)}
-    ${shotHTML(p)}
-    <button class="reveal" id="reveal" aria-expanded="false" aria-controls="mkt">${p.stage === 'post' ? 'Show token price action' : 'Show market data'} <span class="chev">⌄</span></button>
-    <div class="mkt" id="mkt" hidden></div>
-
-    <div id="ddEdit"></div>
-    ${blocks.length ? `<div class="blocks">${blocks.map(([h, body, wide]) => h === '__WU__' ? `<div class="wu"><h4>NOTES BY 0XDEFIDANIEL<span>${d.updated ? 'updated ' + new Date(d.updated).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : ''}</span></h4><div class="tx">${body}</div></div>` : `<div class="blk${wide ? ' wide' : ''}"><h4>${h}</h4>${body}</div>`).join('')}</div>` : ''}
-
-    <section style="margin-top:44px"><div class="sh"><h2 style="font-size:26px">Content<span>${items.length || ''}</span></h2></div>
-      <div class="feed">${items.length ? items.map(contentCard).join('') : '<p class="empty">No content linked yet.</p>'}</div></section>
+    ${(() => {
+      const sh = SHOTS[p.name], bk = backersHTML(p), peers = peersHTML(p);
+      const notes = blocks.length ? `<div class="blocks">${blocks.map(([h, body, wide]) => h === '__WU__' ? `<div class="wu"><h4>NOTES BY 0XDEFIDANIEL<span>${d.updated ? 'updated ' + new Date(d.updated).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : ''}</span></h4><div class="tx">${body}</div></div>` : `<div class="blk${wide ? ' wide' : ''}"><h4>${h}</h4>${body}</div>`).join('')}</div>` : '';
+      const secs = [
+        sh && ['ddProduct', 'Product', shotHTML(p)],
+        ['ddMarket', p.stage === 'post' ? 'Market' : 'Activity', `<div class="mkt" id="mkt"><p class="muted" style="font-size:12.5px">Loading charts…</p></div>`],
+        peers && ['ddPeers', 'Compared with peers', peers],
+        notes && ['ddNotes', 'Notes', notes],
+        bk && ['ddBackers', 'Backers', bk],
+        items.length && ['ddContent', 'Content', `<div class="feed">${items.map(contentCard).join('')}</div>`],
+      ].filter(Boolean);
+      return `<nav class="dd-toc" aria-label="On this page">${secs.map(([id, t]) => `<button data-goto="${id}">${t}</button>`).join('')}</nav>
+      <div class="dd-grid">
+        <div class="dd-main"><div id="ddEdit"></div>${secs.map(([id, t, body]) => `<section class="dd-sec" id="${id}"><h3 class="dd-h">${t}</h3>${body}</section>`).join('')}</div>
+        <aside class="dd-side"><div class="dd-sticky"><h4>AT A GLANCE</h4>${glanceHTML(p) || '<p class="muted" style="font-size:12.5px">No live numbers yet.</p>'}
+          ${refOf(p.name) ? `<h4>MY REF</h4>${refBox(refOf(p.name))}` : ''}
+          <h4>LINKS</h4><div class="dd-sl">${links}${(p.app || p.site) ? `<a class="open" href="${esc(p.app || p.site)}" target="_blank" rel="noopener">Open app ↗</a>` : ''}</div></div></aside>
+      </div>`;
+    })()}
 
     <nav class="pager"><a href="${deepHref(prev)}">← ${esc(prev.name)}</a><a href="#/deep">ALL PROJECTS</a><a href="${deepHref(next)}">${esc(next.name)} →</a></nav>`;
 
   if ($('ddEditBtn')) $('ddEditBtn').onclick = () => openEditor(p);
-  $('reveal').addEventListener('click', () => {
-    const open = $('reveal').getAttribute('aria-expanded') !== 'true';
-    $('reveal').setAttribute('aria-expanded', open);
-    $('mkt').hidden = !open;
-    if (open && !$('mkt').dataset.done) renderMarket(p);
-  });
+  // 차트는 화면에 들어올 때 불러온다 (CoinGecko·DefiLlama 호출 아끼기)
+  const mk = $('ddMarket');
+  if (mk && 'IntersectionObserver' in window) { const io = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) { io.disconnect(); if (!$('mkt').dataset.done) renderMarket(p); } }, {rootMargin:'200px'}); io.observe(mk); }
+  else if (mk) renderMarket(p);
 }
 
+// 같은 줄(lanes) 또는 같은 체인의 프로젝트와 나란히 비교
+function peersHTML(p){
+  const lane = (BOOT.config.lanes || []).find(l => l.members.includes(p.name));
+  let ps = lane ? lane.members.map(byName).filter(Boolean) : SNAP.projects.filter(x => x.home && x.home === p.home);
+  if (!ps.includes(p)) ps.push(p);
+  ps = ps.sort((a, b) => activity(b) - activity(a)).slice(0, 7);
+  if (ps.length < 2) return '';
+  const oiOf = x => { const o = SNAP.fund && SNAP.fund.oi && SNAP.fund.oi.venues[x.name]; return o && o.total > 0 ? o.total : null; };
+  const cell = v => v ? usd(v) : '<span class="muted">—</span>';
+  return `<p class="dd-peer-sub">${lane ? esc(lane.title) + ' — ' + esc(lane.sub || '') : 'Other options projects on ' + esc(p.home)}</p>
+    <div class="tbl-x"><table class="vt peers"><tr><th>Project</th><th></th><th>24h</th><th>30d volume</th><th>TVL</th><th>Open interest</th></tr>
+    ${ps.map(x => `<tr class="${x === p ? 'me' : ''}"><td class="vn"><a href="${deepHref(x)}">${logo(x)}${esc(x.name)}</a></td><td class="tk">${esc(x.ticker ? '$' + x.ticker : (x.status || 'Pre-TGE'))}</td>
+      <td>${x.ticker && x.ch24 != null ? pct(x.ch24) : '<span class="muted">—</span>'}</td><td>${cell(x.vol30)}</td><td>${cell(x.tvl)}</td><td>${cell(oiOf(x))}</td></tr>`).join('')}</table></div>`;
+}
+document.addEventListener('click', e => { const b = e.target.closest('[data-goto]'); if (!b) return; const t = $(b.dataset.goto); if (t) t.scrollIntoView({behavior:'smooth', block:'start'}); });
 // 후원자(투자자·엔젤): data.json 의 backers. 큐레이션된 값만 그린다 (라운드·출처 표시, 집계 사이트는 AGG)
 const bkUsd = v => v == null ? '' : v >= 1e6 ? '$' + +(v / 1e6).toFixed(2) + 'M' : v >= 1e3 ? '$' + +(v / 1e3).toFixed(0) + 'K' : '$' + v;
 const bkAgg = '<i class="srct api" title="Aggregator source">AGG</i>';
