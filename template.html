@@ -1567,6 +1567,53 @@ b,strong,th{font-weight:600}
 .sc-how{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
 .sc-how summary{cursor:pointer;font-size:12.5px;color:var(--ink2)}
 .sc-how summary:hover{color:var(--ink)}
+/* Deep 압축: 첫 화면에 숫자 */
+body[data-view=deep] .subnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+body[data-view=deep] .subnav a.sb{flex:none;white-space:nowrap}
+#ddEdit:empty+.dd-sec{border-top:0;padding-top:4px}
+.dd-sec{padding:18px 0}
+.dd-hero.dd-c{display:block;padding:6px 0 18px}
+.dd-id{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.dd-id>img,.dd-id>.logo-ph{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none}
+.dd-c .dd-name{font-size:32px;line-height:1.1;margin:0}
+.dd-c .dd-tk{font-size:12.5px;margin-top:2px}
+.dd-lin{color:var(--mute)}
+.dd-c .dd-links{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.dd-c .dd-links a{font-size:12.5px;padding:5px 11px;border:1px solid var(--line2);border-radius:999px;color:var(--ink2)}
+.dd-c .dd-links a:hover{color:var(--ink);border-color:var(--ink2)}
+.dd-c .dd-links a.open{background:var(--amber);border-color:var(--amber);color:#1a1408}
+.dd-c .dd-what{font-size:16px;color:var(--ink);margin:12px 0 8px}
+.dd-c .kw{margin-top:0}
+.dd-stats{margin-top:14px}
+.dd-stats .glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;margin:0;border:1px solid var(--line2);border-radius:12px;overflow:hidden}
+.dd-stats .glance>div{padding:12px 14px;border-right:1px solid var(--line)}
+.dd-stats .glance .v{font-size:22px}
+.dd-ref{margin-top:12px;max-width:520px}
+.dd-c+.dd-toc{margin-top:6px}
+.dd-sec .shot{margin-top:8px}
+.dd-sec .shot img{max-height:360px;width:100%;object-fit:cover;object-position:top}
+/* 시나리오 압축 카드 */
+.scen{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))!important;gap:10px}
+.scen article{display:flex!important;flex-direction:column;gap:8px;padding:16px;grid-template-columns:none}
+.scen article header{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.scen article header b{font-size:16px;font-weight:500}
+.scen article .sc-st{margin:0}
+.sc-if{font-size:12.5px;color:var(--mute);line-height:1.45}
+.sc-key{font-size:14px;line-height:1.5;color:var(--ink2)}
+.sc-key b{color:var(--ink);font-weight:600}
+.scen .sc-live{margin-top:0}
+.scen .sc-ex{margin-top:2px;padding:10px 12px;gap:2px}
+.scen .sc-ex>b{font-size:14px;font-weight:500;color:var(--ink)}
+.scen .sc-ex span{font-size:12.5px;letter-spacing:0;color:var(--ink2)}
+.scen .sc-ex span em{font-style:normal;color:var(--ink)}
+.scen .sc-ex small{font-size:11px;color:var(--mute)}
+.scen .sc-how{margin-top:auto;padding-top:8px}
+.scen .sc-how ul{list-style:none;display:grid;gap:4px;margin:10px 0}
+.scen .sc-how li,.scen .sc-how p{font-size:12.5px;line-height:1.55;color:var(--ink2)}
+.scen .sc-how li b{font-weight:600;color:var(--ink)}
+.scen .sc-how dl{display:grid;gap:4px;margin-top:8px}
+.scen .sc-how dt{font-size:11px;color:var(--mute);margin-top:6px;letter-spacing:.06em;text-transform:uppercase}
+.scen .sc-how dd{font-size:12.5px;line-height:1.55;color:var(--ink2);margin:0}
 /* Trader views: Traders / Institutions */
 .tvt{display:grid;gap:16px}
 .tvt-card{position:relative;padding:26px;border:1px solid var(--line2);border-radius:16px;background:rgba(14,15,12,.94);max-width:860px}
@@ -2405,41 +2452,30 @@ function renderDeep(p){
   ].filter(Boolean);
 
   $('dd').innerHTML = `
-    <div class="dd-hero">
-      <div class="dd-planet ${p.stage !== 'post' ? 'pre' : ''}">
-        <svg viewBox="0 0 150 150" width="150" height="150" aria-hidden="true"><g class="spin"><ellipse cx="75" cy="75" rx="72" ry="72" stroke-dasharray="2 5"/><circle class="moon" cx="75" cy="3" r="3.5"/></g></svg>
-        ${logo(p)}
-      </div>
-      <div>
-        <div class="dd-kicker"><span>Options ecosystem</span></div>
-        <h2 class="dd-name">${esc(p.name)}</h2>
-        <div class="dd-tk">${p.ticker ? '$' + esc(p.ticker) : ''}<span class="st ${p.stage !== 'post' ? 'pre' : ''}">${p.stage === 'post' ? 'Listed' : esc(p.status || 'Pre-TGE')}</span></div>
-        ${kwHTML(p)}
-        <p class="dd-what">${esc(p.what)}</p>
-        <div class="dd-links">${links}</div>
-        ${EDITOR_KEY ? `<button class="edit-btn" id="ddEditBtn">✎ EDIT THIS PAGE</button> <span class="muted" id="ddSaved" style="font-size:12.5px;margin-left:8px"></span>` : ''}
-      </div>
+    <div class="dd-hero dd-c">
+      <div class="dd-id">${logo(p)}<div><h2 class="dd-name">${esc(p.name)}</h2>
+        <div class="dd-tk">${p.ticker ? '$' + esc(p.ticker) : ''}<span class="st ${p.stage !== 'post' ? 'pre' : ''}">${p.stage === 'post' ? 'Listed' : esc(p.status || 'Pre-TGE')}</span>${p.origin ? `<span class="dd-lin">from ${esc(p.origin)}</span>` : ''}</div></div>
+        <div class="dd-links">${links}${(p.app || p.site) ? `<a class="open" href="${esc(p.app || p.site)}" target="_blank" rel="noopener">Open app ↗</a>` : ''}</div></div>
+      <p class="dd-what">${esc(p.what)}</p>
+      ${kwHTML(p)}
+      ${EDITOR_KEY ? `<button class="edit-btn" id="ddEditBtn">✎ EDIT THIS PAGE</button> <span class="muted" id="ddSaved" style="font-size:12.5px;margin-left:8px"></span>` : ''}
+      ${glanceHTML(p) ? `<div class="dd-stats">${glanceHTML(p)}</div>` : ''}
+      ${refOf(p.name) ? `<div class="dd-ref">${refBox(refOf(p.name))}</div>` : ''}
     </div>
-    ${p.origin || p.lineage ? `<div class="lineage">Lineage ${p.origin ? `<span class="o">${esc(p.origin)}</span><span class="ar">→</span>` : ''}<span class="me">${esc(p.name)}</span>${p.lineage && !p.origin ? `<span class="muted">· ${esc(p.lineage)}</span>` : ''}</div>` : ''}
 
     ${(() => {
       const sh = SHOTS[p.name], bk = backersHTML(p), peers = peersHTML(p);
       const notes = blocks.length ? `<div class="blocks">${blocks.map(([h, body, wide]) => h === '__WU__' ? `<div class="wu"><h4>NOTES BY 0XDEFIDANIEL<span>${d.updated ? 'updated ' + new Date(d.updated).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : ''}</span></h4><div class="tx">${body}</div></div>` : `<div class="blk${wide ? ' wide' : ''}"><h4>${h}</h4>${body}</div>`).join('')}</div>` : '';
       const secs = [
-        sh && ['ddProduct', 'Product', shotHTML(p)],
         ['ddMarket', p.stage === 'post' ? 'Market' : 'Activity', `<div class="mkt" id="mkt"><p class="muted" style="font-size:12.5px">Loading charts…</p></div>`],
+        sh && ['ddProduct', 'Product', shotHTML(p)],
         peers && ['ddPeers', 'Compared with peers', peers],
         notes && ['ddNotes', 'Notes', notes],
         bk && ['ddBackers', 'Backers', bk],
         items.length && ['ddContent', 'Content', `<div class="feed">${items.map(contentCard).join('')}</div>`],
       ].filter(Boolean);
       return `<nav class="dd-toc" aria-label="On this page">${secs.map(([id, t]) => `<button data-goto="${id}">${t}</button>`).join('')}</nav>
-      <div class="dd-grid">
-        <div class="dd-main"><div id="ddEdit"></div>${secs.map(([id, t, body]) => `<section class="dd-sec" id="${id}"><h3 class="dd-h">${t}</h3>${body}</section>`).join('')}</div>
-        <aside class="dd-side"><div class="dd-sticky"><h4>AT A GLANCE</h4>${glanceHTML(p) || '<p class="muted" style="font-size:12.5px">No live numbers yet.</p>'}
-          ${refOf(p.name) ? `<h4>MY REF</h4>${refBox(refOf(p.name))}` : ''}
-          <h4>LINKS</h4><div class="dd-sl">${links}${(p.app || p.site) ? `<a class="open" href="${esc(p.app || p.site)}" target="_blank" rel="noopener">Open app ↗</a>` : ''}</div></div></aside>
-      </div>`;
+      <div class="dd-main"><div id="ddEdit"></div>${secs.map(([id, t, body]) => `<section class="dd-sec" id="${id}"><h3 class="dd-h">${t}</h3>${body}</section>`).join('')}</div>`;
     })()}
 
     <nav class="pager"><a href="${deepHref(prev)}">← ${esc(prev.name)}</a><a href="#/deep">ALL PROJECTS</a><a href="${deepHref(next)}">${esc(next.name)} →</a></nav>`;
@@ -3025,7 +3061,7 @@ function renderStrategy(){
   // ── 매크로 플레이북 (시황판단 틀): 한 줄 판단 → 기본·상방·하방 시나리오 → 근거(F/I/A/C) → 틀리는 조건 → 관찰판 → 이벤트별 대응 ──
   const M = SNAP.macro || [], now = Date.now(), cfg = BOOT.config.strategy || {};
   const note = cfg.note ? `<div class="mview"><h4>MY VIEW · 0XDEFIDANIEL</h4><p>${esc(cfg.note)}</p></div>` : '';
-  const sc = (cfg.scenarios || []).map(x => `<article data-k="${esc(x.kind || '')}"><div class="if"><small>IF</small>${esc(x.if)}<span class="sc-st" data-st></span></div><div class="then"><small>STRATEGY</small><b>${esc(x.then)}</b><p>${esc(x.how || '')}</p><div class="sc-live" data-live></div><details class="sc-how"><summary>Entry, build, exit and risk</summary><dl>${[['ENTRY / SKIP', x.entry], ['BUILD', x.legs], ['EXIT', x.exit], ['RISK', x.risk], ['ILLUSTRATION', x.example]].filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>${x.source && /^https:\/\//.test(x.source) ? `<a class="sc-source" href="${esc(x.source)}" target="_blank" rel="noopener">Strategy mechanics · OIC ↗</a>` : ''}</details></div></article>`).join('');
+  const sc = (cfg.scenarios || []).map(x => { const [nm, sub] = (x.then || '').split(' · '); return `<article data-k="${esc(x.kind || '')}"><header><span class="sc-st" data-st></span><b>${esc(nm)}</b></header><p class="sc-if">If ${esc((x.if || '').replace(/^./, c => c.toLowerCase()))}${sub ? ' → ' + esc(sub) : ''}</p><div class="sc-live" data-live></div><details class="sc-how"><summary>Why &amp; how</summary><div data-more></div><p>${esc(x.how || '')}</p><dl>${[['Entry / skip', x.entry], ['Build', x.legs], ['Exit', x.exit], ['Risk', x.risk]].filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>${x.source && /^https:\/\//.test(x.source) ? `<a class="sc-source" href="${esc(x.source)}" target="_blank" rel="noopener">Strategy mechanics · OIC ↗</a>` : ''}</details></article>`; }).join('');
   let book = '';
   if (A && A.putWall && A.callWall) {
     const X = sentiment(A), score = X ? X.score : 0, longG = !A.gamma || A.gamma.regime !== 'short_gamma', pctl = A.ivPct ? A.ivPct.percentile : 50;
@@ -3072,7 +3108,7 @@ function renderStrategy(){
       </div>
       <div class="mb-box mb-watch"><h4>WATCH BOARD</h4>${watch.map(([w, t, d]) => `<div><time>${esc(w)}</time><b>${esc(t)}</b><span>${esc(d)}</span></div>`).join('')}${soon.length ? '' : '<p class="lg">No US high-impact releases left in the next 7 days.</p>'}</div>`;
   }
-  $('stMacro').innerHTML = `${note}${book}${sc ? `<h4 class="mb-h">IF MACRO SURPRISES · WHAT TO TRADE</h4><div class="sc-bar" id="scBar"><span class="sc-dot"></span>Loading live market…</div><p class="mb-note">Conditional setups, not live trade signals. Tenors and exits are illustrative rules, not backtested. Status, checks and live examples refresh every minute from Derivatives Monkey (12 venues) and Deribit top-of-book quotes (buy at ask, sell at bid), before fees or slippage. Confirm settlement, collateral and liquidation rules for the actual contract; payoff caps assume all legs remain intact.</p><div class="scen">${sc}</div>` : ''}`;
+  $('stMacro').innerHTML = `${note}${book}${sc ? `<h4 class="mb-h">IF MACRO SURPRISES · WHAT TO TRADE</h4><div class="sc-bar" id="scBar"><span class="sc-dot"></span>Loading live market…</div><p class="mb-note">Refreshes every minute · Derivatives Monkey + Deribit quotes (buy at ask, sell at bid) · conditional setups, not trade signals.</p><div class="scen">${sc}</div>` : ''}`;
   renderSentLog();
   scLive();
 }
@@ -3080,6 +3116,7 @@ function renderStrategy(){
 // ════════════════ 시나리오 실시간: 이벤트 결과 + 옵션 시장(Derivatives Monkey) + Deribit 호가 ════════════════
 // 1분마다 다시 읽어서, 각 시나리오가 지금 '진입 가능 / 대기 / 해당 없음' 인지와 실제 행사가·가격 예시를 보여준다
 let scTimer = 0, scBusy = false, scSrc = null, scAgain = false;
+const SC_KEY = {bear:1, bull:1, condor:2, straddle:0};
 const SC_J = async u => { try { const r = await fetch(u, {cache:'no-store'}); return r.ok ? await r.json() : null; } catch { return null; } };
 const scUsd = v => v == null || !isFinite(v) ? '—' : '$' + Math.round(v).toLocaleString('en-US');
 const scPct = v => (v >= 0 ? '+' : '−') + Math.abs(v).toFixed(1) + '%';
@@ -3135,7 +3172,7 @@ async function scLive(){
   const px = (k, side, how) => chain.k[k] && chain.k[k][side] ? chain.k[k][side][how] : null;
   const expS = chain ? new Date(chain.exp).toLocaleDateString('en-US', {timeZone:'UTC', month:'short', day:'numeric'}) : '';
   const f0 = v => Math.round(v).toLocaleString('en-US'), dist = (v, ref) => scPct((v / ref - 1) * 100);
-  const ex = (legs, lines) => `<div class="sc-ex"><span>LIVE EXAMPLE · Deribit ${expS} expiry · per 1 ${asset}</span><b>${legs}</b>${lines.map(([k, v]) => `<i>${k} <em>${v}</em></i>`).join('')}</div>`;
+  const ex = (legs, lines) => `<div class="sc-ex"><b>${legs}</b><span>${lines.map(([k, v]) => `${k} <em>${v}</em>`).join(' · ')}</span><small>Deribit ${expS} · per 1 ${asset} · live quotes</small></div>`;
   const R = {};
   // 하락 (풋 스프레드)
   { const sup = K.pw && K.pw < K.S * 1.02 ? K.pw : null, broke = sup && K.S < sup * .995;
@@ -3171,7 +3208,9 @@ async function scLive(){
     R.straddle = [st, chk, e]; }
   document.querySelectorAll('.scen article[data-k]').forEach(el => { const r = R[el.dataset.k]; if (!r) return; const [[c, t], chk, e] = r;
     el.dataset.st = c; el.querySelector('[data-st]').innerHTML = `<i class="${c}">${t}</i>`;
-    el.querySelector('[data-live]').innerHTML = `<small>LIVE CHECK</small><ul>${chk.filter(Boolean).map(x => `<li>${x}</li>`).join('')}</ul>${e || (cur ? '' : `<p class="sc-na">Live strike pricing is available for BTC and ETH (Deribit).</p>`)}`; });
+    const c2 = chk.filter(Boolean), key = (el.dataset.k === 'condor' ? chk[soon ? 2 : 1] : chk[SC_KEY[el.dataset.k] ?? 0]) || c2[0] || '';
+    el.querySelector('[data-live]').innerHTML = `<p class="sc-key">${key}</p>${e || (cur ? '' : `<p class="sc-na">Live strikes: BTC and ETH only.</p>`)}`;
+    el.querySelector('[data-more]').innerHTML = `<ul>${c2.filter(x => x !== key).map(x => `<li>${x}</li>`).join('')}</ul>`; });
   const t = new Date().toLocaleTimeString('en-US', {timeZone:'Asia/Seoul', hour:'2-digit', minute:'2-digit', hour12:false});
   $('scBar').innerHTML = `<span class="sc-dot${live ? '' : ' off'}"></span><b>${live ? 'LIVE' : 'SNAPSHOT'}</b> ${asset} ${scUsd(K.S)} · IV ${K.iv != null ? K.iv.toFixed(1) + '%' : '—'} · updated ${t} KST · refreshes every minute
     <span class="sc-evs">${past.map(e => `<span class="${e.tone}">${esc(e.label)}${e.tone ? ' · ' + e.tone.toUpperCase() : ' · released'}</span>`).join('')}${next ? `<span class="nx">NEXT ${esc(next.label)} · in ${untilS(next.t - now)}</span>` : ''}</span>`;
