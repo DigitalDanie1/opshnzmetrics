@@ -213,7 +213,7 @@
           "e": "0.2%",
           "p": "0.3%",
           "d": "Oct 14",
-          "hot": true
+          "hot": false
         },
         {
           "k": "Core CPI y/y",
@@ -221,7 +221,7 @@
           "e": "2.5%",
           "p": "2.4%",
           "d": "Oct 14",
-          "hot": true
+          "hot": false
         },
         {
           "k": "PPI m/m",
@@ -237,7 +237,7 @@
           "e": "5.5%",
           "p": "",
           "d": "Oct 15",
-          "hot": true
+          "hot": false
         },
         {
           "k": "Core PPI y/y",
@@ -245,7 +245,7 @@
           "e": "4.4%",
           "p": "",
           "d": "Oct 15",
-          "hot": true
+          "hot": false
         }
       ],
       "read": [
@@ -2618,5 +2618,45 @@
       }
     ],
     "archive": []
-  }
+  },
+  "traders": [
+    {
+      "id": "derivativemonky",
+      "name": "Derivatives Monkey",
+      "handle": "derivativemonky",
+      "featured": true,
+      "x": "https://x.com/derivativemonky",
+      "site": "https://www.derivativesmonkey.com",
+      "avatar": "https://pbs.twimg.com/profile_images/1931658889608531968/CTiBcqaJ_400x400.jpg",
+      "followers": "6.9K",
+      "role": "Options trader · builder of derivativesmonkey.com",
+      "why": "Runs a free crypto options analytics platform (no login, no payment) covering sentiment, volatility, skew and flows across 12 venues. It is the market data behind our Sentiment page.",
+      "focus": [
+        "BTC",
+        "ETH",
+        "Vol & skew",
+        "Options flow"
+      ],
+      "posts": [
+        {
+          "date": "2026-10-15",
+          "title": "IV climbing into CPI",
+          "text": "Shared a read that BTC implied vol rose from 33.5% to 36.9% in a week into CPI, with $40.2M of premium sold across calls and puts in 24h.",
+          "url": "https://x.com/derivativemonky/status/2110460704264429691"
+        },
+        {
+          "date": "2026-10-15",
+          "title": "Platform update",
+          "text": "Market summary reworked, charting greatly improved, and the IBIT section upgraded ahead of more TradFi pairs.",
+          "url": "https://x.com/derivativemonky/status/2110490594292433248"
+        },
+        {
+          "date": "2026-06-04",
+          "title": "Launched derivativesmonkey.com",
+          "text": "Free crypto options analytics, no login or payment required.",
+          "url": "https://x.com/derivativemonky/status/2062535278888440165"
+        }
+      ]
+    }
+  ]
 }
