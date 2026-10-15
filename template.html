@@ -1567,6 +1567,14 @@ b,strong,th{font-weight:600}
 .sc-how{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
 .sc-how summary{cursor:pointer;font-size:12.5px;color:var(--ink2)}
 .sc-how summary:hover{color:var(--ink)}
+/* 홈 카드: 모바일에선 겹치지 않게 2열 격자 */
+@media (max-width:640px){
+  #mStage{display:grid!important;grid-template-columns:1fr 1fr;gap:8px}
+  #mStage>svg,#mStage>canvas,#mStage #volsurf{grid-column:1/-1}
+  #mStage .spec{position:relative;left:auto!important;top:auto!important;transform:none;margin:0!important;min-width:0}
+  #mStage .spec b{white-space:normal}
+  #mStage .spec::after{display:none}
+}
 /* Deep 압축: 첫 화면에 숫자 */
 body[data-view=deep] .subnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
 body[data-view=deep] .subnav a.sb{flex:none;white-space:nowrap}
@@ -1661,7 +1669,6 @@ body[data-view=deep] .subnav a.sb{flex:none;white-space:nowrap}
 .dd-main,.dd-side,.dd-grid>*{min-width:0}
 #ltBody{overflow-x:auto}
 #v-guide .gv{grid-template-columns:minmax(0,1fr)}#v-guide .gvq>*{min-width:0}@media (max-width:760px){#v-guide .gvq{grid-template-columns:minmax(0,1fr)}}.gvt{box-sizing:border-box}.gvt span{min-width:0;overflow-wrap:anywhere}
-#v-home{overflow-x:clip}
 @media (max-width:640px){.crumbbar .bc{white-space:normal}}
 /* 읽기: 본문 줄간격과 줄 길이 */
 p{line-height:1.6}
@@ -3215,6 +3222,22 @@ async function scLive(){
   $('scBar').innerHTML = `<span class="sc-dot${live ? '' : ' off'}"></span><b>${live ? 'LIVE' : 'SNAPSHOT'}</b> ${asset} ${scUsd(K.S)} · IV ${K.iv != null ? K.iv.toFixed(1) + '%' : '—'} · updated ${t} KST · refreshes every minute
     <span class="sc-evs">${past.map(e => `<span class="${e.tone}">${esc(e.label)}${e.tone ? ' · ' + e.tone.toUpperCase() : ' · released'}</span>`).join('')}${next ? `<span class="nx">NEXT ${esc(next.label)} · in ${untilS(next.t - now)}</span>` : ''}</span>`;
 }
+
+// 홈 카드: 화면(스테이지) 밖으로 나가면 안쪽으로 당긴다 (잘라내지 않고)
+function fitSpecs(){
+  const st = $('mStage'); if (!st || $('v-home').hidden) return;
+  if (matchMedia('(max-width:640px)').matches) { st.querySelectorAll('.spec').forEach(el => el.style.marginLeft = ''); return; }
+  const W = st.getBoundingClientRect(), pad = 8;
+  st.querySelectorAll('.spec').forEach(el => {
+    el.style.marginLeft = '0px'; const r = el.getBoundingClientRect();
+    const dx = r.left < W.left + pad ? W.left + pad - r.left : r.right > W.right - pad ? W.right - pad - r.right : 0;
+    if (dx) el.style.marginLeft = dx + 'px';
+  });
+}
+addEventListener('resize', () => requestAnimationFrame(fitSpecs));
+addEventListener('hashchange', () => setTimeout(fitSpecs, 50));
+addEventListener('load', () => setTimeout(fitSpecs, 50));
+document.fonts && document.fonts.ready.then(() => fitSpecs());
 
 function traderViewWindow(config, now=Date.now()) {
   const days=7, valid=v=>v && /^https:\/\//.test(v.url || '') && /^\d{4}-\d{2}-\d{2}$/.test(v.date || '') && v.publisher && v.view;
