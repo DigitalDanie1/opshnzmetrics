@@ -1467,6 +1467,30 @@ body.tg .eco-search{display:none}
 .dd-sl a:hover{color:var(--amber);border-color:rgba(242,181,68,.5)}
 .dd-sl a.open{color:#1a1408;background:var(--amber);border-color:var(--amber);font-weight:600}
 @media (max-width:1000px){.dd-grid{grid-template-columns:1fr}.dd-side{order:-1}.dd-sticky{position:static}}
+/* ── 지금 가장 큰 매크로 이슈 ── */
+.mn-wrap{margin-top:22px}
+.mn{position:relative;padding:20px 22px;border-radius:18px;border:1px solid rgba(255,128,119,.4);background:radial-gradient(120% 90% at 0 0,rgba(255,128,119,.12),transparent 55%),rgba(16,15,13,.94);box-shadow:0 24px 60px -30px rgba(255,128,119,.35)}
+.mn-h{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.mn-tag{font-size:11px;font-weight:700;letter-spacing:.12em;color:#1a0b0a;background:var(--down);border-radius:999px;padding:3px 10px}
+.mn-h small{font-size:12px;color:var(--mute);letter-spacing:.04em}
+.mn h3{font-size:clamp(20px,2.2vw,28px);font-weight:600;line-height:1.25;letter-spacing:-.01em;margin:12px 0 16px;max-width:1000px}
+.mn-f{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.mn-f > div{padding:12px 14px;border:1px solid var(--line2);border-radius:12px;background:rgba(10,11,9,.6)}
+.mn-f > div.hot{border-color:rgba(255,128,119,.45)}
+.mn-f span{display:block;font-size:12px;color:var(--ink2)}.mn-f span em{font-style:normal;color:var(--mute);font-size:11px}
+.mn-f b{display:block;font-size:24px;font-weight:600;margin:4px 0 2px;color:var(--ink)}
+.mn-f .hot b{color:var(--down)}
+.mn-f small{font-size:12px;color:var(--mute)}
+.mn-two{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;margin-top:18px}
+.mn-r h4{font-size:11px;letter-spacing:.12em;color:var(--amber);font-weight:600;margin:0 0 8px}
+.mn-r h4:not(:first-child){margin-top:14px}
+.mn-r p{font-size:14px;line-height:1.55;color:var(--ink2);margin-bottom:8px}
+.mn-r p i{font-style:normal;display:inline-block;min-width:70px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-right:8px;color:var(--mute)}
+.mn-r p i.t-c{color:var(--amber)}.mn-r p i.t-a{color:#86b6ff}
+.mn-w time{display:inline-block;min-width:150px;font-size:12.5px;color:var(--amber)}
+.mn-src{margin-top:14px;font-size:12px;color:var(--mute);display:flex;gap:12px;flex-wrap:wrap}
+.mn-src a{color:var(--ink2);border-bottom:1px solid var(--line2)}
+@media (max-width:800px){.mn-two{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -1684,6 +1708,7 @@ body.tg .eco-search{display:none}
       <div><h2>Sentiment <em>&amp; strategy</em></h2><p>Step 1 — read what the options market thinks, then what to play and how to react when macro moves.</p><p class="gp-src" id="stSrc"></p></div>
       <div class="seg" id="stAsset" role="group" aria-label="Asset"></div>
     </div>
+    <section data-blk="now" id="macroNow" class="mn-wrap" hidden></section>
     <section data-blk="now" style="margin-top:22px"><div class="sh"><h2>Market now<span id="stWhen"></span></h2></div><div id="stNow"></div></section>
     <section data-blk="log"><div class="sh"><h2>Sentiment log<span>what options said — day by day, and what price did next</span></h2>
       <div class="seg" id="slMode" role="group" aria-label="Period"><button data-m="daily" aria-pressed="true">Daily</button><button data-m="weekly" aria-pressed="false">Weekly</button><button data-m="monthly" aria-pressed="false">Monthly</button></div></div><div id="stLog"></div></section>
@@ -2788,7 +2813,25 @@ function sentiHTML(A){
 }
 let stAsset = 'BTC';
 const kRound = v => v >= 1000 ? '$' + (v / 1000).toFixed(v >= 1e4 ? 0 : 1) + 'k' : Number.isInteger(+v) ? '$' + v : k$(v);
+// 지금 가장 큰 매크로 이슈 (data.json strategy.macroNow — 발표 직후 손으로 갱신, 출처 표기)
+function renderMacroNow(){
+  const M = (BOOT.config.strategy || {}).macroNow, box = $('macroNow'); if (!box) return;
+  if (!M) { box.hidden = true; return; }
+  box.hidden = false;
+  const tag = t => ({F:'fact', I:'read', A:'assumes', C:'if / then'}[t] || t);
+  box.innerHTML = `<div class="mn">
+    <div class="mn-h"><span class="mn-tag">${esc(M.tag || 'MACRO')}</span><small>Biggest macro story · ${esc(new Date(M.asOf + 'T12:00:00Z').toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}))}</small></div>
+    <h3>${esc(M.title)}</h3>
+    <div class="mn-f">${(M.facts || []).map(f => `<div class="${f.hot ? 'hot' : ''}"><span>${esc(f.k)} <em>${esc(f.d || '')}</em></span><b>${esc(f.a)}</b><small>exp ${esc(f.e || '—')}${f.p ? ' · prev ' + esc(f.p) : ''}</small></div>`).join('')}</div>
+    <div class="mn-two">
+      <div class="mn-r"><h4>WHAT IT MEANS</h4>${(M.read || []).map(([t, x]) => `<p><i class="t-${t.toLowerCase()}">${tag(t)}</i>${esc(x)}</p>`).join('')}</div>
+      <div class="mn-r"><h4>FOR OPTIONS</h4><p>${esc(M.options || '')}</p><h4>WATCH NEXT</h4>${(M.watch || []).map(([w, t]) => `<p class="mn-w"><time>${esc(w)}</time>${esc(t)}</p>`).join('')}</div>
+    </div>
+    <div class="mn-src">Sources ${(M.sources || []).map(([l, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(l)} ↗</a>`).join('')}</div>
+  </div>`;
+}
 function renderStrategy(){
+  renderMacroNow();
   const AS = Object.keys((SNAP.dm && SNAP.dm.assets) || {BTC:1, ETH:1}), order = ['BTC', 'ETH', 'SOL', 'HYPE', 'ZEC'];
   AS.sort((x, y) => (order.indexOf(x) + 1 || 99) - (order.indexOf(y) + 1 || 99));
   if (!AS.includes(stAsset)) stAsset = AS[0] || 'BTC';

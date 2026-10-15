@@ -193,7 +193,109 @@
         "source": "https://prd-web.optionseducation.org/strategies/all-strategies/long-straddle",
         "if": "More large moves expected; direction unclear"
       }
-    ]
+    ],
+    "macroNow": {
+      "tag": "HOT INFLATION",
+      "title": "US inflation came in hot — CPI 3.7%, and producer prices jumped the most since 2022",
+      "asOf": "2026-10-15",
+      "facts": [
+        {
+          "k": "CPI y/y",
+          "a": "3.7%",
+          "e": "3.6%",
+          "p": "3.4%",
+          "d": "Oct 14",
+          "hot": true
+        },
+        {
+          "k": "Core CPI m/m",
+          "a": "0.3%",
+          "e": "0.2%",
+          "p": "0.3%",
+          "d": "Oct 14",
+          "hot": true
+        },
+        {
+          "k": "Core CPI y/y",
+          "a": "2.6%",
+          "e": "2.5%",
+          "p": "2.4%",
+          "d": "Oct 14",
+          "hot": true
+        },
+        {
+          "k": "PPI m/m",
+          "a": "1.3%",
+          "e": "0.6%",
+          "p": "0.4%",
+          "d": "Oct 15",
+          "hot": true
+        },
+        {
+          "k": "PPI y/y",
+          "a": "6.3%",
+          "e": "5.5%",
+          "p": "",
+          "d": "Oct 15",
+          "hot": true
+        },
+        {
+          "k": "Core PPI y/y",
+          "a": "5.0%",
+          "e": "4.4%",
+          "p": "",
+          "d": "Oct 15",
+          "hot": true
+        }
+      ],
+      "read": [
+        [
+          "F",
+          "Energy drove it: gasoline +9.1% in CPI, +20.3% at the producer level (BLS)."
+        ],
+        [
+          "I",
+          "Higher-for-longer rates are back on the table — rate-cut hopes get pushed out."
+        ],
+        [
+          "A",
+          "The Fed treats this as an energy shock, not a broad price spiral — core CPI is only 2.6%."
+        ],
+        [
+          "C",
+          "If Fed Chair Warsh sounds hawkish (Oct 16, 12:30 KST), BTC is likely to test the $80k put wall; a calm, look-through tone keeps the range."
+        ]
+      ],
+      "options": "Options were already expensive before the print (87th percentile) and puts cost more than calls — the market had paid for protection, so the shock is partly priced.",
+      "watch": [
+        [
+          "Oct 16 · 12:30 KST",
+          "Fed Chair Warsh speaks"
+        ],
+        [
+          "Daily",
+          "BTC close vs the $80k put wall"
+        ],
+        [
+          "Daily",
+          "14d skew — puts vs calls"
+        ]
+      ],
+      "sources": [
+        [
+          "BLS CPI",
+          "https://www.bls.gov/news.release/cpi.nr0.htm"
+        ],
+        [
+          "BLS PPI",
+          "https://www.bls.gov/news.release/ppi.nr0.htm"
+        ],
+        [
+          "CNBC",
+          "https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html"
+        ]
+      ]
+    }
   },
   "projects": [
     {
@@ -1114,7 +1216,7 @@
       "llama": [
         "odette"
       ],
-      "site": "",
+      "site": "https://odette.fi",
       "x": "odetteonchain",
       "keywords": [
         "0DTE",
@@ -1148,7 +1250,7 @@
       "llama": [
         "katana"
       ],
-      "site": "",
+      "site": "https://app.katana.so",
       "x": "Katana_HQ",
       "keywords": [
         "Option vaults",
@@ -1232,7 +1334,7 @@
       "llama": [
         "sofa.org"
       ],
-      "site": "",
+      "site": "https://www.sofa.org",
       "x": "SOFAorgDAO",
       "keywords": [
         "Structured products",
@@ -1377,7 +1479,7 @@
       "llama": [
         "dual-finance"
       ],
-      "site": "",
+      "site": "https://beta.dual.finance",
       "x": "DualFinance",
       "keywords": [
         "Option incentives"
@@ -1409,7 +1511,7 @@
       "llama": [
         "tymio"
       ],
-      "site": "",
+      "site": "https://tymio.com",
       "x": "TYMIOapp",
       "keywords": [
         "Time-limit orders",
@@ -1475,7 +1577,7 @@
       "llama": [
         "carmine-options"
       ],
-      "site": "",
+      "site": "https://carmine.finance",
       "x": "CarmineOptions",
       "keywords": [
         "Options AMM"
@@ -1507,7 +1609,7 @@
       "llama": [
         "lien"
       ],
-      "site": "",
+      "site": "https://lien.finance",
       "x": "LienFinance",
       "keywords": [
         "Early generation",
@@ -1540,7 +1642,7 @@
       "llama": [
         "zomma-protocol"
       ],
-      "site": "",
+      "site": "https://zomma.pro",
       "x": "ZommaProtocol",
       "keywords": [
         "zkSync",
@@ -1573,7 +1675,7 @@
       "llama": [
         "opium"
       ],
-      "site": "",
+      "site": "https://app.opium.finance",
       "x": "Opium_Network",
       "keywords": [
         "Generic derivatives",
@@ -1625,7 +1727,7 @@
       "llama": [
         "oddz"
       ],
-      "site": "",
+      "site": "https://www.oddz.fi",
       "x": "oddz_finance",
       "keywords": [
         "Early generation"
@@ -1708,7 +1810,7 @@
       "llama": [
         "jasper-vault"
       ],
-      "site": "",
+      "site": "https://www.jaspervault.io",
       "x": "jaspervault",
       "keywords": [
         "P2P options"
@@ -1740,7 +1842,7 @@
       "llama": [
         "margin-zero"
       ],
-      "site": "",
+      "site": "https://www.marginzero.xyz",
       "x": "marginzero_xyz",
       "keywords": [
         "Sonic",
@@ -1774,7 +1876,7 @@
       "llama": [
         "ton-hedge"
       ],
-      "site": "",
+      "site": "https://tonhedge.com/options",
       "x": "tonhedge",
       "keywords": [
         "TON",
@@ -1807,7 +1909,7 @@
       "llama": [
         "hypersurface"
       ],
-      "site": "",
+      "site": "https://app.hypersurface.io",
       "x": "hypersurfaceX",
       "keywords": [
         "Covered calls",
@@ -1841,7 +1943,7 @@
       "llama": [
         "ithaca-protocol"
       ],
-      "site": "",
+      "site": "https://app.ithacaprotocol.io",
       "x": "IthacaProtocol",
       "keywords": [
         "Composable options"
@@ -1885,7 +1987,7 @@
       "llama": [
         "auctus"
       ],
-      "site": "",
+      "site": "https://auctus.org",
       "x": "AuctusOptions",
       "keywords": [
         "Early generation",
@@ -1918,7 +2020,7 @@
       "llama": [
         "antimatter"
       ],
-      "site": "",
+      "site": "https://antimatter.finance",
       "x": "antimatterdefi",
       "keywords": [
         "Dual investment",
@@ -2038,7 +2140,7 @@
       "llama": [
         "stochastic-finance"
       ],
-      "site": "",
+      "site": "https://stochastic.finance",
       "x": "stochastic_fin",
       "keywords": [
         "Permissionless options"

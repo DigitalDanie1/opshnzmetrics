@@ -75,12 +75,14 @@ async function collect(data, now = new Date(), opts = {}) {
   for (const p of (prem && prem.protocols) || []) for (const k of [p.slug, p.parentProtocol].filter(Boolean)) premOf[k] = (premOf[k] || 0) + (p.total30d || 0);
 
   // TVL·로고: protocols 를 부모/slug 로 묶어 합산
-  const tvlOf = {}, logoOf = {}, listedOf = {};
+  const tvlOf = {}, logoOf = {}, listedOf = {}, urlOf = {}, twOf = {};
   for (const p of protos || []) {
     if (p.deadUrl || p.rugged) continue;
     for (const k of [p.slug, p.parentProtocol].filter(Boolean)) {
       tvlOf[k] = (tvlOf[k] || 0) + (p.tvl || 0);
       if (!logoOf[k]) logoOf[k] = p.logo;
+      if (!urlOf[k] && p.url) urlOf[k] = p.url.replace(/\/$/, '');   // 공식 웹사이트·X 계정 (data.json 에 없을 때만 씀)
+      if (!twOf[k] && p.twitter) twOf[k] = p.twitter;
       if (p.listedAt && (!listedOf[k] || p.listedAt < listedOf[k])) listedOf[k] = p.listedAt;   // 부모는 자식 중 가장 이른 등록일
     }
   }
@@ -116,6 +118,8 @@ async function collect(data, now = new Date(), opts = {}) {
       prem30: prem ? (keys.map(k => premOf[k]).find(v => v != null) ?? null) : (prev.prem30 ?? null),
       volSlugs: vg.flatMap(g => g.members),
       tvl,
+      site: p.site || keys.map(k => urlOf[k]).find(Boolean) || prev.site || '',
+      x: p.x || keys.map(k => twOf[k]).find(Boolean) || prev.x || '',
       // 누적 거래량: s==='ok', 유한한 숫자, failed 소스 없음일 때만(일부 소스가 빠진 응답은 합계가 낮게 나온다). 실패하면 직전 스냅샷 값을 이어받는다 (tvl 과 같은 방식)
       ...(p.cumVolApi ? (() => { const j = cumVolOf[p.name], ok = j && j.s === 'ok' && Number.isFinite(j.data) && !(j.failed || []).length; return { cumVol: ok ? j.data : (prev.cumVol ?? null), cumVolAt: ok ? (j.updatedAt ?? null) : (prev.cumVolAt ?? null) }; })() : {}),
       // 처음 등장: data.json 의 since(YYYY-MM) 가 우선, 없으면 DefiLlama 등록일
