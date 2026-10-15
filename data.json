@@ -2234,6 +2234,217 @@
       }
     },
     {
+      "ticker": "GAGE",
+      "name": "Gage",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "No-liquidation, fixed-cost loans on Robinhood Chain — the borrower can walk away at expiry, so every loan carries an embedded put",
+      "cg": "gage",
+      "llama": [
+        "gage"
+      ],
+      "site": "https://gage.cash",
+      "app": "https://gage.cash",
+      "x": "gagedotcash",
+      "logo": "logos/gage.png",
+      "keywords": [
+        "Embedded put",
+        "No liquidation",
+        "Tokenized stocks",
+        "Robinhood Chain"
+      ],
+      "status": "Live · V2",
+      "since": "2026-09",
+      "isNew": true,
+      "note": "V2 live: 7- or 21-day loans against tokenized stocks, memes and Robinhood-ecosystem tokens; lenders and Earn vaults collect the fixed cost",
+      "deep": {
+        "thesis": "Options in loan form. Pledging NVDA for USDG with the right to walk away at expiry is economically a put struck at the reclaim cap: the borrower is long the put, lenders are short it and earn the fixed cost as premium. No oracle and no liquidation in the deal path — the decision happens only at expiry.",
+        "catalysts": [
+          "V2 engine live with Earn vaults run by curators",
+          "Robinhood Chain stock tokens as collateral"
+        ],
+        "risks": [
+          "Lenders take the collateral if the borrower walks — a short-put payoff",
+          "Thin onchain exit liquidity for memes and small tokens",
+          "Early-stage protocol on a new chain"
+        ],
+        "timeline": [
+          {
+            "date": "2026-10-16",
+            "text": "New Earn vault curator JollyDinger (stock-token liquidity); 54.2M sGAGE burned"
+          },
+          {
+            "date": "2026-10-02",
+            "text": "“The everything credit layer”, powered by $GAGE"
+          },
+          {
+            "date": "2026-09-10",
+            "text": "Listed on DefiLlama (Robinhood Chain)"
+          }
+        ],
+        "writeup": ""
+      },
+      "backers": {
+        "total": null,
+        "totalNote": "",
+        "incubator": null,
+        "summary": null,
+        "rounds": [],
+        "vcs": [],
+        "angels": [],
+        "reported": [],
+        "sources": [
+          {
+            "label": "docs.gage.cash",
+            "url": "https://docs.gage.cash",
+            "agg": false
+          }
+        ],
+        "level": "none"
+      }
+    },
+    {
+      "ticker": null,
+      "name": "SuperVega",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Touch options on Starknet — pick a price target and a date; if price touches it, you get paid. Defined cost, no liquidation",
+      "cg": null,
+      "llama": [],
+      "site": "https://supervega.app",
+      "app": "https://supervega.app",
+      "x": "SuperVegaXYZ",
+      "logo": "logos/supervega.jpg",
+      "keywords": [
+        "Touch options",
+        "No liquidation",
+        "Starknet",
+        "Copy trades"
+      ],
+      "status": "Public beta",
+      "since": "2026-08",
+      "isNew": true,
+      "note": "BTC, ETH, ZEC and STRK touch options; one-click trade sharing so followers can copy a position (Oct 13)",
+      "deep": {
+        "thesis": "Barrier-style payoffs for retail: a one-touch option settles the moment price taps the strike, so a flash wick pays out instead of liquidating you — the opposite of perps.",
+        "catalysts": [
+          "STRK volatility — the only venue listing STRK options, per the team",
+          "Social copy-trading links"
+        ],
+        "risks": [
+          "Touch options are priced off volatility; premiums can be rich in fast markets",
+          "Early beta on Starknet"
+        ],
+        "timeline": [
+          {
+            "date": "2026-10-13",
+            "text": "Shareable trades: followers copy a position from a link"
+          },
+          {
+            "date": "2026-08-03",
+            "text": "Public beta live on Starknet (works with EVM wallets and social login)"
+          }
+        ],
+        "writeup": ""
+      },
+      "backers": {
+        "total": null,
+        "totalNote": "",
+        "incubator": null,
+        "summary": null,
+        "rounds": [],
+        "vcs": [],
+        "angels": [],
+        "reported": [],
+        "sources": [
+          {
+            "label": "supervega.app",
+            "url": "https://supervega.app",
+            "agg": false
+          }
+        ],
+        "level": "none"
+      }
+    },
+    {
+      "ticker": "SFI",
+      "name": "Saffron",
+      "stage": "post",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Fixed vs variable yield on Uniswap LPs — LPs lock a fixed rate, traders buy the future fee stream (a leveraged bet on volume and volatility)",
+      "cg": "saffron-finance",
+      "llama": [
+        "saffron-vaults"
+      ],
+      "site": "https://saffron.finance",
+      "app": "https://app.saffron.finance",
+      "x": "Saffron",
+      "logo": "logos/saffron.jpg",
+      "keywords": [
+        "Fixed yield",
+        "Yield trading",
+        "Uniswap LPs",
+        "Robinhood Chain"
+      ],
+      "status": "Live",
+      "since": "2026-07",
+      "isNew": true,
+      "note": "Saffron Vaults on 9 chains incl. Robinhood Chain; tokenized-stock pools such as MSTR/USDG (70% fixed APR, per the team); SFI relisted on Indodax Oct 8",
+      "deep": {
+        "thesis": "Not an options venue, but options-adjacent: Uniswap LP fees rise with trading volume and volatility, so buying the variable side is a long-volatility-style trade, and the fixed side sells that exposure for a known rate.",
+        "catalysts": [
+          "Tokenized-stock pools on Robinhood Chain",
+          "SFI relisted on Indodax (Oct 8, 2026)"
+        ],
+        "risks": [
+          "Variable side loses if volume dries up",
+          "Impermanent loss on the underlying Uniswap pools"
+        ],
+        "timeline": [
+          {
+            "date": "2026-10-09",
+            "text": "MSTR/USDG vault earned 70% fixed APR; WORM/PLTR up to 900% (team figures)"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "SFI relisted on Indodax"
+          },
+          {
+            "date": "2026-07-28",
+            "text": "Saffron Vaults listed on DefiLlama"
+          }
+        ],
+        "writeup": ""
+      },
+      "backers": {
+        "total": null,
+        "totalNote": "",
+        "incubator": null,
+        "summary": null,
+        "rounds": [],
+        "vcs": [],
+        "angels": [],
+        "reported": [],
+        "sources": [
+          {
+            "label": "docs.saffron.finance",
+            "url": "https://docs.saffron.finance",
+            "agg": false
+          }
+        ],
+        "level": "none"
+      }
+    },
+    {
       "ticker": "",
       "name": "HedgeHood",
       "stage": "post",

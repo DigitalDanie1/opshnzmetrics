@@ -37,16 +37,16 @@
   },
   {
    "d": "2026-10-09",
-   "score": -0.346,
+   "score": -0.249,
    "verdict": "LEANING BEARISH",
-   "rr": -1.385,
+   "rr": -0.994,
    "partial": true
   },
   {
    "d": "2026-10-10",
-   "score": -0.646,
+   "score": -0.597,
    "verdict": "BEARISH",
-   "rr": -2.584,
+   "rr": -2.388,
    "partial": true
   },
   {
@@ -108,6 +108,18 @@
    "flowP": -1579064,
    "near": -5.336,
    "spot": 81249.288
+  },
+  {
+   "d": "2026-10-16",
+   "score": -0.261,
+   "verdict": "LEANING BEARISH",
+   "rr": -2.5,
+   "rr7": -1.921,
+   "pc": 0.728,
+   "flowC": -2215085,
+   "flowP": -1859153,
+   "near": -3.304,
+   "spot": 82414.308
   }
  ],
  "ETH": [
@@ -148,16 +160,16 @@
   },
   {
    "d": "2026-10-09",
-   "score": -0.848,
+   "score": -0.86,
    "verdict": "BEARISH",
-   "rr": -3.39,
+   "rr": -3.44,
    "partial": true
   },
   {
    "d": "2026-10-10",
-   "score": -0.862,
+   "score": -0.971,
    "verdict": "BEARISH",
-   "rr": -3.45,
+   "rr": -3.885,
    "partial": true
   },
   {
@@ -219,6 +231,18 @@
    "flowP": 2069537,
    "near": -7.4,
    "spot": 2374.483
+  },
+  {
+   "d": "2026-10-16",
+   "score": -0.26,
+   "verdict": "LEANING BEARISH",
+   "rr": -3.4,
+   "rr7": -3.704,
+   "pc": 0.516,
+   "flowC": 77822,
+   "flowP": 1610580,
+   "near": -4.414,
+   "spot": 2454.751
   }
  ],
  "HYPE": [
@@ -259,16 +283,16 @@
   },
   {
    "d": "2026-10-09",
-   "score": -0.673,
+   "score": -0.881,
    "verdict": "BEARISH",
-   "rr": -2.691,
+   "rr": -3.525,
    "partial": true
   },
   {
    "d": "2026-10-10",
-   "score": 0.157,
-   "verdict": "LEANING BULLISH",
-   "rr": 0.627,
+   "score": -0.015,
+   "verdict": "NEUTRAL",
+   "rr": -0.059,
    "partial": true
   },
   {
@@ -330,6 +354,18 @@
    "flowP": -156796,
    "near": -6.008,
    "spot": 80.187
+  },
+  {
+   "d": "2026-10-16",
+   "score": 0.631,
+   "verdict": "BULLISH",
+   "rr": 1.369,
+   "rr7": -0.694,
+   "pc": 0.47,
+   "flowC": 90830,
+   "flowP": -32220,
+   "near": 3.137,
+   "spot": 81.988
   }
  ],
  "ZEC": [
@@ -372,14 +408,14 @@
    "d": "2026-10-09",
    "score": 1,
    "verdict": "BULLISH",
-   "rr": 4.844,
+   "rr": 6.899,
    "partial": true
   },
   {
    "d": "2026-10-10",
    "score": 1,
    "verdict": "BULLISH",
-   "rr": 4.852,
+   "rr": 4.554,
    "partial": true
   },
   {
@@ -441,6 +477,18 @@
    "flowP": 3709,
    "near": null,
    "spot": 1108.367
+  },
+  {
+   "d": "2026-10-16",
+   "score": 0.211,
+   "verdict": "LEANING BULLISH",
+   "rr": 8.989,
+   "rr7": 10.573,
+   "pc": 0.782,
+   "flowC": -39421,
+   "flowP": 10152,
+   "near": 0.546,
+   "spot": 1243.628
   }
  ],
  "SOL": [
@@ -481,16 +529,16 @@
   },
   {
    "d": "2026-10-09",
-   "score": 0.322,
-   "verdict": "LEANING BULLISH",
-   "rr": 1.286,
+   "score": 0.062,
+   "verdict": "NEUTRAL",
+   "rr": 0.248,
    "partial": true
   },
   {
    "d": "2026-10-10",
-   "score": 0.349,
+   "score": 0.199,
    "verdict": "LEANING BULLISH",
-   "rr": 1.395,
+   "rr": 0.794,
    "partial": true
   },
   {
@@ -552,6 +600,18 @@
    "flowP": 51391,
    "near": -2.271,
    "spot": 103.112
+  },
+  {
+   "d": "2026-10-16",
+   "score": -0.005,
+   "verdict": "NEUTRAL",
+   "rr": 0.325,
+   "rr7": -0.452,
+   "pc": 0.734,
+   "flowC": -57270,
+   "flowP": 49205,
+   "near": -0.32,
+   "spot": 106.186
   }
  ]
 }

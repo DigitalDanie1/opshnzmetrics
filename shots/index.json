@@ -341,5 +341,26 @@
     "at": "2026-10-15T18:30:13.251Z",
     "kb": 106,
     "hid": 0
+  },
+  "Gage": {
+    "file": "shots/gage.jpg",
+    "url": "https://gage.cash",
+    "at": "2026-10-15T19:02:13.239Z",
+    "kb": 66,
+    "hid": 0
+  },
+  "Saffron": {
+    "file": "shots/saffron.jpg",
+    "url": "https://app.saffron.finance",
+    "at": "2026-10-15T19:03:47.721Z",
+    "kb": 58,
+    "hid": 2
+  },
+  "SuperVega": {
+    "file": "shots/supervega.jpg",
+    "url": "https://supervega.app",
+    "at": "2026-10-15T19:03:47.744Z",
+    "kb": 81,
+    "hid": 0
   }
 }
