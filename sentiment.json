@@ -30,23 +30,23 @@
   },
   {
    "d": "2026-10-08",
-   "score": -0.587,
+   "score": -0.562,
    "verdict": "BEARISH",
-   "rr": -2.348,
+   "rr": -2.247,
    "partial": true
   },
   {
    "d": "2026-10-09",
-   "score": -0.048,
-   "verdict": "NEUTRAL",
-   "rr": -0.191,
+   "score": -0.146,
+   "verdict": "LEANING BEARISH",
+   "rr": -0.585,
    "partial": true
   },
   {
    "d": "2026-10-10",
-   "score": -0.603,
+   "score": -0.6,
    "verdict": "BEARISH",
-   "rr": -2.411,
+   "rr": -2.4,
    "partial": true
   },
   {
@@ -96,6 +96,18 @@
    "flowP": -1102014,
    "near": -1.189,
    "spot": 83412.597
+  },
+  {
+   "d": "2026-10-15",
+   "score": -0.326,
+   "verdict": "LEANING BEARISH",
+   "rr": -3.2,
+   "rr7": -2.103,
+   "pc": 0.731,
+   "flowC": 468544,
+   "flowP": -1305978,
+   "near": -3.896,
+   "spot": 80759.739
   }
  ],
  "ETH": [
@@ -129,23 +141,23 @@
   },
   {
    "d": "2026-10-08",
-   "score": -0.666,
+   "score": -0.803,
    "verdict": "BEARISH",
-   "rr": -2.663,
+   "rr": -3.211,
    "partial": true
   },
   {
    "d": "2026-10-09",
-   "score": -0.593,
+   "score": -0.868,
    "verdict": "BEARISH",
-   "rr": -2.371,
+   "rr": -3.472,
    "partial": true
   },
   {
    "d": "2026-10-10",
-   "score": -0.904,
+   "score": -0.917,
    "verdict": "BEARISH",
-   "rr": -3.616,
+   "rr": -3.67,
    "partial": true
   },
   {
@@ -195,6 +207,18 @@
    "flowP": -954010,
    "near": -0.217,
    "spot": 2505.634
+  },
+  {
+   "d": "2026-10-15",
+   "score": -0.271,
+   "verdict": "LEANING BEARISH",
+   "rr": -2.774,
+   "rr7": -2.659,
+   "pc": 0.51,
+   "flowC": -267734,
+   "flowP": 2689521,
+   "near": -6.151,
+   "spot": 2356.552
   }
  ],
  "HYPE": [
@@ -228,23 +252,23 @@
   },
   {
    "d": "2026-10-08",
-   "score": 0.619,
+   "score": 0.952,
    "verdict": "BULLISH",
-   "rr": 2.476,
+   "rr": 3.808,
    "partial": true
   },
   {
    "d": "2026-10-09",
-   "score": -0.237,
-   "verdict": "LEANING BEARISH",
-   "rr": -0.948,
+   "score": -0.405,
+   "verdict": "BEARISH",
+   "rr": -1.621,
    "partial": true
   },
   {
    "d": "2026-10-10",
-   "score": -0.134,
-   "verdict": "LEANING BEARISH",
-   "rr": -0.535,
+   "score": 0.063,
+   "verdict": "NEUTRAL",
+   "rr": 0.251,
    "partial": true
   },
   {
@@ -294,6 +318,18 @@
    "flowP": -3650,
    "near": -2.285,
    "spot": 81.35
+  },
+  {
+   "d": "2026-10-15",
+   "score": 0.175,
+   "verdict": "LEANING BULLISH",
+   "rr": 0.456,
+   "rr7": 0.586,
+   "pc": 0.471,
+   "flowC": -16623,
+   "flowP": -112895,
+   "near": -5.138,
+   "spot": 79.826
   }
  ],
  "ZEC": [
@@ -329,21 +365,21 @@
    "d": "2026-10-08",
    "score": 1,
    "verdict": "BULLISH",
-   "rr": 11.533,
+   "rr": 11.277,
    "partial": true
   },
   {
    "d": "2026-10-09",
    "score": 1,
    "verdict": "BULLISH",
-   "rr": 8.013,
+   "rr": 10.551,
    "partial": true
   },
   {
    "d": "2026-10-10",
    "score": 1,
    "verdict": "BULLISH",
-   "rr": 5.053,
+   "rr": 4.799,
    "partial": true
   },
   {
@@ -393,6 +429,18 @@
    "flowP": 2630,
    "near": 0.52,
    "spot": 1241.561
+  },
+  {
+   "d": "2026-10-15",
+   "score": 0.092,
+   "verdict": "NEUTRAL",
+   "rr": 6.235,
+   "rr7": 14.758,
+   "pc": 0.751,
+   "flowC": -35143,
+   "flowP": 3709,
+   "near": null,
+   "spot": 1088.148
   }
  ],
  "SOL": [
@@ -426,23 +474,23 @@
   },
   {
    "d": "2026-10-08",
-   "score": 0.325,
-   "verdict": "LEANING BULLISH",
-   "rr": 1.3,
+   "score": 0.079,
+   "verdict": "NEUTRAL",
+   "rr": 0.316,
    "partial": true
   },
   {
    "d": "2026-10-09",
-   "score": 0.251,
+   "score": 0.189,
    "verdict": "LEANING BULLISH",
-   "rr": 1.004,
+   "rr": 0.756,
    "partial": true
   },
   {
    "d": "2026-10-10",
-   "score": 0.41,
-   "verdict": "BULLISH",
-   "rr": 1.64,
+   "score": 0.247,
+   "verdict": "LEANING BULLISH",
+   "rr": 0.988,
    "partial": true
   },
   {
@@ -492,6 +540,18 @@
    "flowP": 763,
    "near": -3.656,
    "spot": 106.99
+  },
+  {
+   "d": "2026-10-15",
+   "score": -0.124,
+   "verdict": "LEANING BEARISH",
+   "rr": 0.247,
+   "rr7": 0.25,
+   "pc": 0.766,
+   "flowC": -40900,
+   "flowP": 51930,
+   "near": -6.982,
+   "spot": 101.547
   }
  ]
 }
