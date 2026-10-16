@@ -2129,6 +2129,11 @@ p{line-height:1.6}
 <script>
 const BOOT = /*__DATA__*/null;
 let SNAP = BOOT.snapshot;
+// 사이트에서 지운 프로젝트는 시장 데이터(거래소별 목록)에서도 숨긴다 — 합계는 시장 전체라 그대로 둔다
+(() => { const IG = (BOOT.config.ignore || []).filter(x => !/^parent#|^[a-z0-9-]+$/.test(x)), V = SNAP && SNAP.fund && SNAP.fund.venues; if (!V || !IG.length) return;
+  const gone = n => IG.some(x => n === x || n.startsWith(x + ' '));   // 'Typus DOV' 같은 변형 이름도
+  if (Array.isArray(V)) SNAP.fund.venues = V.filter(v => !gone(v.name)); else for (const k of Object.keys(V)) if (gone(k)) delete V[k];
+  const oi = SNAP.fund.oi && SNAP.fund.oi.venues; if (oi) for (const k of Object.keys(oi)) if (gone(k)) delete oi[k]; })();
 const HISTORY = BOOT.history, CONTENT = (BOOT.content && BOOT.content.items) || [];
 const $ = id => document.getElementById(id);
 const TG = location.hash === '#tg' || location.hash === '#tgmap';
