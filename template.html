@@ -888,6 +888,13 @@ footer button{all:unset;cursor:pointer;color:var(--ink);border-bottom:1px solid 
   #orrery{overflow-x:auto;margin:0 -16px;padding:0 16px;scrollbar-width:none}
   #orrery svg{width:980px;max-width:none}
   .pan{display:block}
+  /* 폰: 지도를 화면폭에 다 맞추고(가로 스크롤 없음), 겹치는 이름표 대신 로고를 키운다 */
+  @media (max-width:640px){
+    #orrery{overflow:visible;margin:0;padding:0}
+    #orrery svg{width:100%}
+    #orrery .pl .nm,#orrery .pl .tk{display:none}
+    .pan{display:none}
+  }
   .habitats,.feed{grid-template-columns:1fr}
   .deep{grid-template-columns:1fr;gap:20px}
   .rail{position:static;max-height:none}
@@ -2162,6 +2169,12 @@ function buildOrrery(){
   if (!reduce) raf = requestAnimationFrame(loop);
 }
 
+// 폰(≤640px)에서는 지도를 화면폭에 맞추므로 행성을 키워 로고가 보이고 탭하기 쉽게
+let PHONE_K = 1;
+const phoneMQ = matchMedia('(max-width:640px)');
+const setPhoneK = () => { PHONE_K = phoneMQ.matches ? 1.8 : 1; if (sys && sys.bodies) place(sys.t || 0); };
+phoneMQ.addEventListener('change', setPhoneK);
+PHONE_K = phoneMQ.matches ? 1.8 : 1;
 function place(t){
   const {bodies, sun, svg, tether} = sys;
   for (const b of bodies) {
@@ -2170,7 +2183,7 @@ function place(t){
     b.x = CX + b.orb.rx*f*Math.cos(a);
     b.y = CY + b.orb.ry*f*Math.sin(a);
     const depth = (Math.sin(a) + 1) / 2;            // 0 = 뒤(위), 1 = 앞(아래)
-    const s = b.kind === 'pl' ? .84 + .26*depth : .8 + .3*depth;
+    const s = (b.kind === 'pl' ? .84 + .26*depth : .8 + .3*depth) * (b.kind === 'pl' ? PHONE_K : PHONE_K * .8);
     b.g.setAttribute('transform', `translate(${b.x.toFixed(2)},${b.y.toFixed(2)}) scale(${s.toFixed(4)})`);
     b.g.style.opacity = b.kind === 'pl' ? (.8 + .2*depth).toFixed(2) : (.45 + .4*depth).toFixed(2);
   }
