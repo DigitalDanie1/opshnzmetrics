@@ -1609,6 +1609,58 @@ b,strong,th{font-weight:600}
 .mb-box .why:last-child{border-bottom:0}
 .mb-box .why small{display:block;font-size:12.5px;color:var(--mute)}
 .mb-box .why p{font-size:14px;line-height:1.5;color:var(--ink);margin-top:2px}
+/* ── 모바일: 가로로 밀 것 줄이기 + 첫 화면에 핵심 ── */
+.mnav,.subsel{display:none}
+@media (max-width:640px){
+  .crumbbar{display:flex!important;align-items:center;gap:10px;padding:10px 16px!important;margin:-24px -16px 0!important;flex-wrap:nowrap}
+  .crumbbar .home-btn{font-size:0;padding:8px;gap:0;flex:none}
+  .crumbbar .home-btn svg{width:15px;height:15px}
+  .crumbbar .bc{flex:1;min-width:0;font-size:18px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0!important}
+  .crumbbar .bc>a,.crumbbar .bc>i,.crumbbar .bc b>a,.crumbbar .bc b>i{display:none}
+  .crumbbar .cnav{display:none!important}
+  .mnav{display:block;position:relative;flex:none}
+  .mnav summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:12.5px;padding:7px 12px;border:1px solid var(--line2);border-radius:999px;color:var(--ink)}
+  .mnav summary::-webkit-details-marker{display:none}
+  .mnav[open] summary{border-color:var(--amber);color:var(--amber)}
+  .mnav-g{position:absolute;right:0;top:calc(100% + 8px);z-index:30;width:min(320px,calc(100vw - 32px));display:grid;gap:2px;padding:8px;background:rgba(16,17,14,.98);border:1px solid var(--line2);border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.7)}
+  .mnav-g a{display:block;padding:10px 12px;border-radius:10px;font-size:14px;color:var(--ink2);border:0!important;opacity:1!important}
+  .mnav-g a[aria-current=page]{background:rgba(242,181,68,.12);color:var(--amber)}
+  .subnav{position:static!important;width:auto!important;max-height:none!important;display:block!important;margin:10px 0 0!important;overflow:visible!important}
+  .subnav a.sb,.subnav .pgrow,.subnav .pg{display:none!important}
+  .subsel{display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--line2);border-radius:12px;background:rgba(10,11,9,.6)}
+  .subsel span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);flex:none}
+  .subsel select{flex:1;min-width:0;background:transparent;border:0;color:var(--ink);font:inherit;font-size:14px;padding:4px 0}
+  .gp-head h2,#v-strat h2.stt,.dd-ix h2{font-size:26px!important}
+  .gp-head p,#stSrc,#v-strat h2+p,.dd-toc{display:none!important}
+  .mn{padding:16px!important}
+  .mn h3{font-size:20px!important;margin:10px 0 12px!important}
+  .mn-f{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important}
+  .mn-f>div{padding:8px 9px!important}
+  .mn-f span{font-size:11px!important}.mn-f span em{display:none}
+  .mn-f b{font-size:19px!important;margin:2px 0 0!important}
+  .mn-f small{font-size:11px!important}
+  .dd-c .kw{display:none}
+  .dd-c .dd-links a{font-size:12.5px;padding:4px 10px}
+  /* 표 → 카드 */
+  table.mcard,table.mcard tbody{display:block;width:100%!important;min-width:0!important}
+  table.mcard thead,table.mcard tr.mc-h{display:none!important}
+  .lt{table-layout:fixed}.lt td{white-space:normal!important;overflow-wrap:anywhere}
+  table.mcard tr{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;padding:12px 2px;border-bottom:1px solid var(--line)}
+  table.mcard td{display:block;padding:0!important;border:0!important;text-align:left!important;white-space:normal!important;min-width:0}
+  table.mcard td::before{content:attr(data-l);display:block;font-size:11px;color:var(--mute);letter-spacing:.04em}
+  table.mcard td.mc-t{grid-column:1/-1;font-size:16px}
+  table.mcard td.mc-t::before,table.mcard td.mc-x{display:none}
+  .tbl-x,.pulse-scroll{overflow-x:visible!important}
+  .comparison-plot-scroll{overflow-x:visible!important}
+  .comparison-plot-scroll svg{min-width:0!important;width:100%!important;height:auto}
+  .chn{--cols:minmax(0,.95fr) minmax(0,.75fr) minmax(0,1.7fr) minmax(0,.9fr)!important}
+  .chn-scroll{overflow-x:visible!important}.chn-tbl{min-width:0!important}
+  .chn-row .chn-st,.chn-col>div:nth-child(6){display:none!important}
+  .chn-grp .chn-gp{grid-column:span 1!important}
+  .chn-row .chn-mid{position:static!important;box-shadow:none!important;padding-left:10px!important}
+  .chn-col .chn-c,.chn-grp .chn-gs{position:static!important}
+  .chn-row .chn-nm{font-size:14px}
+}
 /* Deep 압축: 첫 화면에 숫자 */
 body[data-view=deep] .subnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
 body[data-view=deep] .subnav a.sb{flex:none;white-space:nowrap}
@@ -1777,6 +1829,7 @@ p{line-height:1.6}
   <div class="crumbbar" id="crumb" hidden>
     <a class="brand home-btn" href="#/" title="Back to the first screen"><svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><path d="M1.5 6.6 7 2l5.5 4.6M3.2 5.4V12h7.6V5.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>HOME</a>
     <span class="bc"><a href="#/home">DASHBOARD</a><i>/</i><b id="bcHere">OVERVIEW</b></span>
+    <details class="mnav" id="mnav"><summary><span id="mnavCur">Pages</span><i aria-hidden="true">▾</i></summary><div class="mnav-g" id="mnavG"></div></details>
     <nav class="cnav" aria-label="Views">
       <a data-r="strategy" href="#/strategy">01 SENTIMENT &amp; STRATEGY</a><a data-r="fundamentals" href="#/fundamentals">02 OPTION FUNDAMENTAL</a><a data-r="overview" href="#/overview">03 ECOSYSTEM OVERVIEW</a><a data-r="deep" href="#/deep">04 DEEP DIVE</a><a data-r="new" href="#/new">05 NEW PROJECTS</a><a data-r="guide" href="#/guide">06 STRATEGY GUIDE</a><a data-r="launches" href="#/launches">07 PERP DEXS LAUNCHING OPTIONS</a><a data-r="compare" href="#/compare">08 COMPARE TO DERIBIT</a><a data-r="trader-views" href="#/trader-views">09 TRADER VIEWS</a>
     </nav>
@@ -2962,6 +3015,14 @@ function renderSubnav(page, sub){
   nav.hidden = page === 'home';
   nav.innerHTML = PAGES.map(([pg, label]) => (pg === page && items.length ? `<div class="pgrow"><a class="pg on" href="#/${pg}">${label}</a><button class="pgf" type="button" aria-expanded="${!SUBFOLD}" title="Collapse / expand">⌄</button></div>` : `<a class="pg${pg === page ? ' on' : ''}" href="#/${pg}">${label}</a>`) +
     (pg === page && items.length ? [...(page === 'overview' || page === 'trader-views' ? [] : [['all', pg === 'deep' ? 'All projects' : 'All']]), ...items].map(([k, l], i) => `<a class="sb" href="#/${pg}${k === 'all' ? '' : '/' + k}" aria-current="${(sub || 'all') === k}">${pg === 'deep' && k !== 'all' && byName(l) ? `<span class="lg">${logo(byName(l))}</span>` : `<span class="k">${String(i + (page === 'overview' ? 1 : 0)).padStart(2,'0')}</span>`}${esc(l)}</a>`).join('') : '')).join('');
+  // 모바일: 칩 대신 선택 목록 하나 (가로로 밀 필요 없게)
+  if (items.length) {
+    const opts = [...(page === 'overview' || page === 'trader-views' ? [] : [['all', page === 'deep' ? 'All projects' : 'All sections']]), ...items];
+    const curK = page === 'deep' ? (sub || (current && !current.core ? '__cur' : 'all')) : (sub || 'all');
+    if (curK === '__cur') opts.splice(1, 0, ['__cur', current.name]);
+    nav.insertAdjacentHTML('afterbegin', `<label class="subsel"><span>${page === 'deep' ? 'Project' : 'Section'}</span><select aria-label="${page === 'deep' ? 'Switch project' : 'Jump to section'}">${opts.map(([k, l]) => `<option value="${k}"${k === curK ? ' selected' : ''}>${esc(l)}</option>`).join('')}</select></label>`);
+    nav.querySelector('.subsel select').onchange = e => { const k = e.target.value; if (k !== '__cur') location.hash = `#/${page}${k === 'all' ? '' : '/' + k}`; };
+  }
   // 왼쪽 목록 접기/펴기 (이 브라우저에만 기억)
   nav.classList.toggle('folded', SUBFOLD);
   const fb = nav.querySelector('.pgf');
@@ -3283,6 +3344,28 @@ addEventListener('resize', () => requestAnimationFrame(fitSpecs));
 addEventListener('hashchange', () => setTimeout(fitSpecs, 50));
 addEventListener('load', () => setTimeout(fitSpecs, 50));
 document.fonts && document.fonts.ready.then(() => fitSpecs());
+
+// 모바일: 넓은 표를 행마다 카드로 세운다 (머리글을 각 칸의 이름표로)
+const MQ = matchMedia('(max-width:640px)');
+function cardify(){
+  if (!MQ.matches) return;
+  document.querySelectorAll('table').forEach(t => {
+    if (t.dataset.mc === '1' || t.closest('.chn,.tp,svg')) return;
+    const box = t.closest('.tbl-x,.pulse-scroll,#ltBody') || t.parentElement;
+    if (t.scrollWidth <= box.clientWidth + 4 && !t.closest('.tbl-x,.pulse-scroll')) return;
+    const hr = t.querySelector('thead tr') || [...t.rows].find(r => r.querySelector('th') && !r.querySelector('td'));
+    if (!hr) return;
+    const hs = [...hr.children].map(th => th.innerText.replace(/\s+/g, ' ').trim());
+    let ti = hs.findIndex(h => h && h !== '#'); if (ti < 0) ti = 0;
+    hr.classList.add('mc-h');
+    [...t.rows].filter(r => r !== hr && !r.closest('thead')).forEach(tr => [...tr.children].forEach((td, i) => {
+      td.dataset.l = hs[i] || ''; if (i === ti) td.classList.add('mc-t'); if (hs[i] === '#' || hs[i] === '') td.classList.add('mc-x');
+    }));
+    t.dataset.mc = '1'; t.classList.add('mcard');
+  });
+}
+let mcT = 0; new MutationObserver(() => { clearTimeout(mcT); mcT = setTimeout(cardify, 120); }).observe(document.body, {childList:true, subtree:true});
+MQ.addEventListener && MQ.addEventListener('change', () => location.reload());
 
 function traderViewWindow(config, now=Date.now()) {
   const days=7, valid=v=>v && /^https:\/\//.test(v.url || '') && /^\d{4}-\d{2}-\d{2}$/.test(v.date || '') && v.publisher && v.view;
@@ -3983,6 +4066,8 @@ function route(){
     } else { if (current) scrollTo({top:0}); current = null; renderDeepIndex(); sub = ''; }
   }
   $('bcHere').innerHTML = bc;
+  if ($('mnavG') && !$('mnavG').childElementCount) $('mnavG').innerHTML = document.querySelector('.crumbbar .cnav').innerHTML;
+  if ($('mnav')) { $('mnav').open = false; const cur = (PAGES.find(([pg]) => pg === page) || [, ''])[1]; $('mnavCur').textContent = 'Menu'; }
   document.querySelectorAll('[data-r]').forEach(a => a.setAttribute('aria-current', a.dataset.r === page ? 'page' : 'false'));
   if (home || (sub && page !== 'deep')) scrollTo({top:0});
   if (page === 'compare' && ['positioning','token-oi','holder-return'].includes(sub)) $('comparisonExtra').open=true;
