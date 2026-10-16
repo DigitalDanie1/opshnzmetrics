@@ -61,6 +61,43 @@ const server = http.createServer(async (req, res) => {
       } catch (e) { res.writeHead(400, { 'content-type': 'application/json' }).end(JSON.stringify({ ok: false, error: e.message })); }
       return;
     }
+    if (url.pathname === '/api/take' && req.method === 'POST') {
+      let body = ''; for await (const c of req) { body += c; if (body.length > 1e5) { res.writeHead(413).end(); return; } }
+      try {
+        const { action, entry = {} } = JSON.parse(body);
+        const file = path.join(DIR, 'data.json');
+        const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+        const list = data.myTake = data.myTake || [];
+        const str = (v, n) => String(v ?? '').trim().slice(0, n);
+        let label = '';
+        if (action === 'delete') {
+          const i = list.findIndex(x => x.id === entry.id); if (i < 0) throw new Error('no such take');
+          label = list[i].title; list.splice(i, 1);
+        } else {
+          const t = {
+            id: action === 'update' && entry.id ? str(entry.id, 40) : Date.now().toString(36),
+            date: /^\d{4}-\d{2}-\d{2}$/.test(entry.date || '') ? entry.date : new Date(Date.now() + 9 * 36e5).toISOString().slice(0, 10),
+            title: str(entry.title, 140), body: str(entry.body, 8000),
+            stance: ['bull', 'bear', 'neutral', 'watch'].includes(entry.stance) ? entry.stance : '',
+            assets: (Array.isArray(entry.assets) ? entry.assets : []).map(a => str(a, 12).toUpperCase().replace(/[^A-Z0-9.$-]/g, '')).filter(Boolean).slice(0, 6),
+            at: new Date().toISOString(),
+          };
+          if (!t.title) throw new Error('title is required');
+          const i = list.findIndex(x => x.id === t.id);
+          if (action === 'update' && i < 0) throw new Error('no such take');
+          if (i >= 0) list[i] = t; else list.unshift(t);
+          label = t.title;
+        }
+        list.sort((a, b) => (b.date || '').localeCompare(a.date || '') || (b.at || '').localeCompare(a.at || ''));
+        fs.writeFileSync(file + '.bak', fs.readFileSync(file));   // 직전 1개만 백업
+        fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
+        rebuild();
+        console.log(`✓ my take ${action} · ${label}`);
+        pushToGitHub(`my take: ${action} — ${label.slice(0, 60)}`);
+        res.writeHead(200, { 'content-type': 'application/json' }).end(JSON.stringify({ ok: true, myTake: list }));
+      } catch (e) { res.writeHead(400, { 'content-type': 'application/json' }).end(JSON.stringify({ ok: false, error: e.message })); }
+      return;
+    }
     res.writeHead(404).end(); return;
   }
   // 정적 파일 (폴더 밖으로 못 나가게)
