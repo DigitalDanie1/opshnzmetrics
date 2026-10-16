@@ -1412,6 +1412,17 @@ body.tg .eco-search{display:none}
 .pulse-scroll .pulse-table{min-width:600px}.pulse-scroll .pulse-valuation{min-width:780px}.pulse-layer{font-size:18px;margin:28px 0 14px}.pulse-layer-note{font-size:12.5px;line-height:1.7;color:var(--ink2);max-width:850px;margin:-4px 0 16px}
 .pulse-read{border-left:3px solid var(--amber);padding:18px 22px;background:rgba(20,21,17,.9);margin-bottom:24px}.pulse-read small{font:11px var(--mono);color:var(--amber)}.pulse-read p{font-size:18px;line-height:1.7;margin:10px 0}.pulse-read span{font-size:12.5px;color:var(--ink2)}
 .pulse-table:not(.pulse-valuation) td:last-child>b{font:inherit;color:inherit}
+/* Compare 페이지 표: 글자·숫자 크게 (작아서 안 보인다는 요청) */
+#v-compare .pulse-table{font-size:17px}
+#v-compare .pulse-table th,#v-compare .bench-table th{font-size:13px;color:var(--ink)}
+#v-compare .pulse-table small,#v-compare .bench-table td small{font-size:13px}
+#v-compare .pulse-table td:last-child>b{font-size:21px}
+#v-compare .pulse-table img,#v-compare .pulse-table .logo-ph{width:28px;height:28px}
+#v-compare .bench-table{font-size:16px}
+@media (max-width:640px){
+  #v-compare .pulse-table{font-size:16px}
+  #v-compare .pulse-table td,#v-compare .pulse-table th{padding:14px 12px}
+}
 
 .launch-brand{display:flex;align-items:center;gap:12px}.launch-brand img{width:40px;height:40px;object-fit:contain;border-radius:9px;flex-shrink:0}
 
@@ -1594,6 +1605,10 @@ b,strong,th{font-weight:600}
   #mStage{overflow:hidden}
   #v-home #mStage #volsurf{width:180%;max-width:none;margin:-4% 0 4% -40%}
 }
+.mb-box .why{padding:9px 0;border-bottom:1px solid var(--line)}
+.mb-box .why:last-child{border-bottom:0}
+.mb-box .why small{display:block;font-size:12.5px;color:var(--mute)}
+.mb-box .why p{font-size:14px;line-height:1.5;color:var(--ink);margin-top:2px}
 /* Deep 압축: 첫 화면에 숫자 */
 body[data-view=deep] .subnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
 body[data-view=deep] .subnav a.sb{flex:none;white-space:nowrap}
@@ -3111,11 +3126,16 @@ function renderStrategy(){
       ['Down', `Break below ${kRound(lo)}`, down, `Hot data / risk-off; the put-heavy skew gets paid`, `Slide to the put wall, then through it as hedging accelerates`, `Put skew steepens, vol jumps off a low base`, `${stAsset} reclaims ${flip ? k$(flip) : 'the flip'}`, 'bear'],
       ['Up', `Break above ${kRound(hi)}`, up, `Soft data or a squeeze of the call-heavy positioning`, `Grind to the call wall, then squeeze through it`, `Skew flips back toward calls, vol rises modestly`, `Rejection back below ${flip ? k$(flip) : 'the flip'}`, 'bull'],
     ];
+    const sk = A.senti && A.senti.rr, sk7 = A.senti && A.senti.rr7, pcR = A.pc && A.pc.ratio;
     const FIAC = [
-      ['F', `14d skew ${A.senti && A.senti.rr != null ? (A.senti.rr > 0 ? '+' : '') + A.senti.rr.toFixed(1) : '—'} vol${A.senti && A.senti.rr7 != null ? ` (was ${(A.senti.rr7 > 0 ? '+' : '') + A.senti.rr7.toFixed(1)} a week ago)` : ''}`, 'I', A.senti && A.senti.rr < 0 ? 'Traders are paying up for downside protection' : 'Traders are paying up for upside'],
-      ['F', `Put/call open interest ${A.pc ? A.pc.ratio.toFixed(2) : '—'}`, 'I', A.pc && A.pc.ratio < 1 ? 'Positioning is still net long calls' : 'Positioning leans to puts'],
-      ['F', `Implied vol at the ${ord(pctl)} percentile of the year`, 'C', pctl < 25 ? 'Owning options before a catalyst has good asymmetry' : pctl > 75 ? 'Selling premium is better paid than usual' : 'No strong edge on price alone'],
-      ['F', `Dealers ${longG ? 'long' : 'short'} gamma${flip ? `, flip at ${k$(flip)}` : ''}`, 'A', longG ? `Moves stay damped while ${stAsset} holds above the flip` : 'Moves can extend once they start'],
+      [sk != null ? `${sk < 0 ? 'Puts' : 'Calls'} cost ${Math.abs(sk).toFixed(1)} vol more than ${sk < 0 ? 'calls' : 'puts'} (14-day)${sk7 != null ? ` · a week ago ${sk7 < 0 ? 'puts' : 'calls'} +${Math.abs(sk7).toFixed(1)}` : ''}` : '14-day skew unavailable',
+        sk != null && sk < 0 ? 'Traders are paying extra for crash insurance.' : 'Traders are paying extra for upside.'],
+      [pcR ? `${pcR.toFixed(2)} puts open for every call` : 'Put/call ratio unavailable',
+        pcR && pcR < 1 ? 'Most open bets are still calls — people haven’t given up on upside.' : 'More puts than calls — positioning is defensive.'],
+      [`Options are pricier than ${Math.round(pctl)}% of the past year`,
+        pctl > 75 ? 'Selling options pays more than usual — but big moves are expected.' : pctl < 25 ? 'Buying options is cheap — good before a big event.' : 'Price alone gives no edge either way.'],
+      [`Dealers are ${longG ? 'long' : 'short'} gamma${flip ? ` · key level ${k$(flip)}` : ''}`,
+        longG ? `While ${stAsset} stays above ${flip ? k$(flip) : 'the key level'}, dealer hedging tends to calm moves. Below it, moves can speed up.` : 'Dealer hedging can make moves bigger once they start.'],
     ];
     const wrong = [
       [`Skew turns positive again`, `14d calls-vs-puts price back above 0 — the bearish lean is gone`],
@@ -3134,8 +3154,8 @@ function renderStrategy(){
         <dl><dt>Trigger</dt><dd>${esc(trig)}</dd><dt>Path</dt><dd>${esc(path)}</dd><dt>Options</dt><dd>${esc(opt)}</dd><dt>Wrong if</dt><dd>${esc(inval)}</dd></dl></article>`).join('')}</div>
       <p class="mb-note">Probabilities are a rule-of-thumb from today’s options positioning and the macro calendar, shown as ranges — not a forecast.</p>
       <div class="mb-two">
-        <div class="mb-box"><h4>WHY · fact → read</h4>${FIAC.map(([t1, a, t2, b]) => `<div class="fr"><span class="tg">${t1}</span><span>${esc(a)}</span><span class="ar">→</span><span class="tg ${t2.toLowerCase()}">${t2}</span><span>${esc(b)}</span></div>`).join('')}
-          <p class="lg">F fact · I interpretation · A assumption · C conditional conclusion</p></div>
+        <div class="mb-box"><h4>WHY THIS CALL</h4>${FIAC.map(([d, m]) => `<div class="why"><small>${esc(d)}</small><p>${esc(m)}</p></div>`).join('')}
+          </div>
         <div class="mb-box"><h4>WHAT WOULD MAKE THIS WRONG</h4>${wrong.map(([a, b], i) => `<div class="wr"><span class="n">${i + 1}</span><div><b>${esc(a)}</b><p>${esc(b)}</p></div></div>`).join('')}</div>
       </div>
       <div class="mb-box mb-watch"><h4>WATCH BOARD</h4>${watch.map(([w, t, d]) => `<div><time>${esc(w)}</time><b>${esc(t)}</b><span>${esc(d)}</span></div>`).join('')}${soon.length ? '' : '<p class="lg">No US high-impact releases left in the next 7 days.</p>'}</div>`;
