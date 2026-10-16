@@ -1711,6 +1711,39 @@ a.tk-mini:hover span{color:var(--amber)}
 .dd-cols .vt.peers{width:100%}
 .dd-cols .vt.peers td,.dd-cols .vt.peers th{padding-top:7px!important;padding-bottom:7px!important}
 @media (max-width:1000px){.dd-cols{grid-template-columns:minmax(0,1fr)}}
+/* Whole ecosystem: 좌표평면 */
+.eq-lg{display:flex;flex-wrap:wrap;gap:16px;margin:4px 0 12px;font-size:12.5px;color:var(--ink2);align-items:center}
+.eq-lg i{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-3px;margin-right:6px;border:1.4px solid #8f8b80;background:#1b1a14}
+.eq-lg i.f{border:2px solid #f2b544;box-shadow:0 0 0 3px rgba(242,181,68,.16)}
+.eq-lg i.s{border-color:#bdb8ab}.eq-lg i.d{border-color:#bdb8ab;border-style:dashed}
+.eq-box{border:1px solid var(--line2);border-radius:16px;background:rgba(14,15,12,.92);padding:10px}
+.eq-svg{display:block;width:100%;height:auto}
+.eq-gr{stroke:rgba(236,231,220,.07);stroke-dasharray:2 4}
+.eq-ax{stroke:var(--ink2);stroke-width:1.4}
+.eq-axl{fill:var(--ink);font-size:13px;font-weight:600;letter-spacing:.06em;font-family:var(--sans)}
+.eq-qt{fill:rgba(236,231,220,.3);font-size:20px;font-weight:500;font-family:var(--sans)}
+.eq-qs{fill:rgba(236,231,220,.32);font-size:12px;font-family:var(--sans)}
+.eq-lb{fill:var(--ink2);font-size:12px;font-family:var(--sans)}
+.eq-lb.f{fill:#fff;font-weight:600}.eq-lb.big{font-size:14px}
+.eq-in{fill:var(--ink);font-size:11px;font-weight:600}
+a.eq-pt:hover .eq-lb{fill:var(--amber)}
+a.eq-pt:hover .eq-ring{stroke:var(--amber);stroke-dasharray:none}
+.eq-list{display:none}
+.eq-un{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:12px}
+.eq-un small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-right:6px}
+.eq-c{display:inline-flex;align-items:center;gap:7px;padding:4px 10px 4px 4px;border:1.4px solid #8f8b80;border-radius:999px;font-size:12.5px;color:var(--ink)}
+.eq-c img,.eq-c .logo-ph{width:20px;height:20px;border-radius:50%;object-fit:cover}
+.eq-c.f{border:2px solid #f2b544;box-shadow:0 0 12px rgba(242,181,68,.15)}
+.eq-c.pre{border-style:dashed}
+.eq-note{margin-top:10px;font-size:12.5px;color:var(--mute)}
+@media (max-width:640px){
+  .eq-box{display:none}
+  .eq-list{display:grid;gap:10px}
+  .eq-q{border:1px solid var(--line2);border-radius:14px;padding:12px;background:rgba(14,15,12,.92)}
+  .eq-q h4{font-size:14px;font-weight:600;margin-bottom:8px}
+  .eq-q h4 small{display:block;font-size:11px;color:var(--mute);font-weight:400}
+  .eq-q>div{display:flex;flex-wrap:wrap;gap:6px}
+}
 /* Deep 압축: 첫 화면에 숫자 */
 body[data-view=deep] .subnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
 body[data-view=deep] .subnav a.sb{flex:none;white-space:nowrap}
@@ -1959,8 +1992,8 @@ p{line-height:1.6}
     </section>
 
     <section data-blk="ecosystem">
-      <div class="sh"><h2>Whole ecosystem<span>friends first, then everything else we track</span></h2></div>
-      <div class="habitats" id="habitats"></div>
+      <div class="sh"><h2>Whole ecosystem<span>simple ↔ professional · trade it yourself ↕ let it earn for you</span></h2></div>
+      <div class="eq" id="habitats"></div>
     </section>
 
     <section data-blk="content">
@@ -2453,15 +2486,46 @@ function friendTile(p, i){
   </a>`;
 }
 function renderHabitats(){
-  const fr = clients(), lanes = (BOOT.config.lanes || []).map(l => ({...l, ps:l.members.map(byName).filter(p => p && p.core)}));
-  const placed = new Set(lanes.flatMap(l => l.ps.map(p => p.name))), rest = fr.filter(p => !placed.has(p.name));
-  if (rest.length) lanes.push({title:'More friends', sub:'', ps:rest});
-  let k = 0;
-  const friendsHTML = `<div class="fz"><div class="fz-h"><h3>Friends<span>${fr.length}</span></h3><p>The projects we build with — grouped by what you can do on them.</p></div>
-    ${lanes.filter(l => l.ps.length).map(l => `<div class="fzl"><div class="fzl-h"><b>${esc(l.title)}</b>${l.sub ? `<span>${esc(l.sub)}</span>` : ''}</div><div class="fzl-g">${l.ps.map(p => friendTile(p, k++)).join('')}</div></div>`).join('')}</div>`;
-  const tracked = [['Tracked · Live token', p => !p.core && p.stage === 'post'], ['Tracked · Pre-TGE', p => !p.core && p.stage !== 'post']]
-    .map(([h, f]) => [h, SNAP.projects.filter(f).sort((a, b) => a.name.localeCompare(b.name))]).filter(([, ps]) => ps.length);
-  $('habitats').innerHTML = friendsHTML + tracked.map(([h, ps]) => `<div class="hab"><h3>${esc(h)}<span>${ps.length}</span></h3><div class="hg">${ps.map(p => `<a class="chipp" href="${deepHref(p)}">${logo(p)}<span class="tx"><span class="n">${esc(p.name)}${p.ticker ? `<em>$${esc(p.ticker)}</em>` : ''}</span><span class="k">${esc((p.keywords || [])[0] || p.home || '')}</span></span>${p.ticker && p.ch24 != null ? `<span class="c">${pct(p.ch24)}</span>` : ''}</a>`).join('')}</div></div>`).join('');
+  // 좌표평면: x = 쉬움(-) ↔ 전문가(+), y = 맡겨두고 수익(-) ↔ 직접 거래(+). 위치는 data.json ecoMap
+  const XY = BOOT.config.ecoMap || {}, all = SNAP.projects;
+  const pts0 = all.filter(p => XY[p.name]).map(p => ({p, n:p.name, f:!!p.core, pre:p.stage !== 'post', xy:XY[p.name], m:Math.max(p.vol30 || 0, (p.tvl || 0) * 3)}));
+  const unplaced = all.filter(p => !XY[p.name]);
+  const W = 1200, H = 820, L = 70, R = 40, T = 50, B = 60, cx = L + (W - L - R) / 2, cy = T + (H - T - B) / 2, sx = (W - L - R) / 12.6, sy = (H - T - B) / 12.6;
+  const X = x => cx + x * sx, Y = y => cy - y * sy;
+  const QD = [['I', 'Pro trading', 'orderbooks, RFQ, vol indices', 1, 1], ['II', 'Simple bets', 'pick a direction, a target, a date', -1, 1], ['III', 'One-click yield', 'deposit and let it sell options', -1, -1], ['IV', 'Structured & LP', 'build, underwrite, provide liquidity', 1, -1]];
+  let g = '';
+  for (let i = -6; i <= 6; i++) if (i) g += `<line class="eq-gr" x1="${X(i)}" x2="${X(i)}" y1="${T}" y2="${H - B}"/><line class="eq-gr" y1="${Y(i)}" y2="${Y(i)}" x1="${L}" x2="${W - R}"/>`;
+  const OB = [];
+  const QP = {I:[W - R - 14, T + 26, 'end'], II:[L + 14, T + 26, 'start'], III:[L + 14, H - B - 30, 'start'], IV:[W - R - 14, H - B - 30, 'end']};
+  g += QD.map(([n, t, s]) => { const [x, y, a] = QP[n], w = Math.max((n + ' · ' + t).length * 12.5, s.length * 6.6); OB.push({x:a === 'end' ? x - w : x, y:y - 22, w, h:44});
+    return `<text class="eq-qt" x="${x}" y="${y}" text-anchor="${a}">${n} · ${t}</text><text class="eq-qs" x="${x}" y="${y + 18}" text-anchor="${a}">${s}</text>`; }).join('');
+  OB.push({x:W - R - 150, y:cy - 26, w:150, h:20}, {x:L, y:cy - 26, w:90, h:20}, {x:cx + 8, y:T - 18, w:190, h:20}, {x:cx + 8, y:H - B + 4, w:200, h:20});
+  g += `<defs><marker id="eqAr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#bdb8ab"/></marker></defs>
+    <line class="eq-ax" x1="${L - 10}" x2="${W - R + 6}" y1="${cy}" y2="${cy}" marker-start="url(#eqAr)" marker-end="url(#eqAr)"/><line class="eq-ax" y1="${T - 12}" y2="${H - B + 10}" x1="${cx}" x2="${cx}" marker-start="url(#eqAr)" marker-end="url(#eqAr)"/>
+    <text class="eq-axl" x="${W - R}" y="${cy - 12}" text-anchor="end">PROFESSIONAL →</text><text class="eq-axl" x="${L}" y="${cy - 12}">← SIMPLE</text>
+    <text class="eq-axl" x="${cx + 12}" y="${T - 2}">↑ TRADE IT YOURSELF</text><text class="eq-axl" x="${cx + 12}" y="${H - B + 20}">↓ LET IT EARN FOR YOU</text><circle cx="${cx}" cy="${cy}" r="3.5" fill="var(--amber)"/>`;
+  const pts = pts0.map((q, i) => ({...q, i, x:X(q.xy[0]), y:Y(q.xy[1]), r:q.m > 0 ? Math.max(11, Math.min(26, (Math.log10(q.m) - 4) * 3.6)) : 11}));
+  const fz = q => q.m >= 5e7 ? 14 : 12, labs = pts.map(q => ({q, w:q.n.length * (fz(q) === 14 ? 8.2 : 7) + 4, h:fz(q) + 2, x:q.x + q.r + 5, y:q.y - (fz(q) + 2) / 2}));
+  const hit = (a, b) => a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h;
+  const dotHit = (l, q) => { const nx = Math.max(l.x, Math.min(q.x, l.x + l.w)), ny = Math.max(l.y, Math.min(q.y, l.y + l.h)); return (nx - q.x) ** 2 + (ny - q.y) ** 2 < (q.r + 2) ** 2; };
+  const cand = l => { const q = l.q, h = l.h; return [[q.x + q.r + 5, q.y - h / 2], [q.x - q.r - 5 - l.w, q.y - h / 2], [q.x - l.w / 2, q.y - q.r - 4 - h], [q.x - l.w / 2, q.y + q.r + 4], [q.x + q.r + 4, q.y - q.r - h], [q.x + q.r + 4, q.y + q.r], [q.x - q.r - 4 - l.w, q.y - q.r - h], [q.x - q.r - 4 - l.w, q.y + q.r]]; };
+  const cost = (l, i) => { let c = 0; labs.forEach((o, j) => { if (j !== i && hit(l, o)) c += 10; }); pts.forEach(q => { if (dotHit(l, q)) c += 6; }); OB.forEach(o => { if (hit(l, o)) c += 9; }); if (l.x < L || l.x + l.w > W - R || l.y < T || l.y + l.h > H - B) c += 8; return c; };
+  for (let it = 0; it < 6; it++) labs.forEach((l, i) => { let best = null, bc = 1e9; for (const [x, y] of cand(l)) { const c = cost({...l, x, y}, i); if (c < bc) { bc = c; best = [x, y]; } } l.x = best[0]; l.y = best[1]; });
+  const met = p => p.vol30 ? usd(p.vol30) + ' 30d volume' : p.tvl ? usd(p.tvl) + ' TVL' : '';
+  g += '<defs>' + pts.map(q => `<clipPath id="eqC${q.i}"><circle cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="${(q.r - 1.5).toFixed(1)}"/></clipPath>`).join('') + '</defs>';
+  g += [...pts].sort((a, b) => b.r - a.r).map(q => { const l = labs[q.i], d = 2 * (q.r - 1.5), c = q.f ? '#f2b544' : '#8f8b80', X0 = q.x.toFixed(1), Y0 = q.y.toFixed(1);
+    const img = q.p.logo ? `<image href="${esc(q.p.logo)}" x="${(q.x - q.r + 1.5).toFixed(1)}" y="${(q.y - q.r + 1.5).toFixed(1)}" width="${d.toFixed(1)}" height="${d.toFixed(1)}" clip-path="url(#eqC${q.i})" preserveAspectRatio="xMidYMid slice"/>` : `<text x="${X0}" y="${(q.y + 4).toFixed(1)}" text-anchor="middle" class="eq-in">${esc(q.n[0])}</text>`;
+    return `<a class="eq-pt" href="${deepHref(q.p)}"><title>${esc(q.n + (met(q.p) ? ' · ' + met(q.p) : '') + ' — ' + (q.p.what || ''))}</title>${q.f ? `<circle cx="${X0}" cy="${Y0}" r="${(q.r + 5).toFixed(1)}" fill="rgba(242,181,68,.16)"/>` : ''}<circle cx="${X0}" cy="${Y0}" r="${q.r.toFixed(1)}" fill="#1b1a14"/>${img}<circle class="eq-ring" cx="${X0}" cy="${Y0}" r="${q.r.toFixed(1)}" fill="none" stroke="${c}" stroke-width="${q.f ? 2 : 1.4}"${q.pre ? ' stroke-dasharray="3 2.5"' : ''}/><text class="eq-lb${q.f ? ' f' : ''}${q.m >= 5e7 ? ' big' : ''}" x="${l.x.toFixed(1)}" y="${(l.y + l.h - 3).toFixed(1)}">${esc(q.n)}</text></a>`; }).join('');
+  // 모바일: 사분면별 로고 목록
+  const qOf = q => q.xy[0] >= 0 ? (q.xy[1] >= 0 ? 'I' : 'IV') : (q.xy[1] >= 0 ? 'II' : 'III');
+  const chip = (p, f, pre) => `<a class="eq-c${f ? ' f' : ''}${pre ? ' pre' : ''}" href="${deepHref(p)}">${logo(p)}<span>${esc(p.name)}</span></a>`;
+  const list = QD.map(([n, t, s]) => { const qs = pts0.filter(q => qOf(q) === n).sort((a, b) => (b.f - a.f) || (b.m - a.m));
+    return `<div class="eq-q"><h4>${n} · ${t}<small>${s}</small></h4><div>${qs.map(q => chip(q.p, q.f, q.pre)).join('')}</div></div>`; }).join('');
+  $('habitats').innerHTML = `<div class="eq-lg"><span><i class="f"></i>Friend</span><span><i></i>Tracked</span><span><i class="s"></i>solid ring = live token</span><span><i class="d"></i>dashed ring = pre-TGE</span><span>bigger = more 30d volume or TVL</span></div>
+    <div class="eq-box"><svg class="eq-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Quadrant map of onchain options projects">${g}</svg></div>
+    <div class="eq-list">${list}</div>
+    ${unplaced.length ? `<div class="eq-un"><small>Not placed yet</small>${unplaced.map(p => chip(p, p.core, p.stage !== 'post')).join('')}</div>` : ''}
+    <p class="eq-note">Placement is our judgement from each project’s own description · hover a logo for details, click to open its page.</p>`;
 }
 
 // ── 콘텐츠 ──
@@ -3785,7 +3849,8 @@ function renderOracle(){
   $('orCodesN').textContent = rows.length || '';
   $('orCodes').innerHTML = rows.map(({p, r, tag}) => `<div class="cr">${logo(p)}<div class="n">${esc(p.name)}<small>${esc(tag)}</small></div>${refBox(r)}</div>`).join('');
   $('orCodesSec').dataset.empty = rows.length ? '' : '1';
-  const pre = SNAP.projects.filter(p => p.stage !== 'post');
+  const hidePre = new Set(BOOT.config.preTgeHide || []);
+  const pre = SNAP.projects.filter(p => p.stage !== 'post' && !hidePre.has(p.name));
   const live = pre.filter(p => p.points);
   const fr = pre.filter(p => p.core && !p.points);
   const watch = pre.filter(p => !p.core && !p.points).sort((a, b) => (b.vol30 || 0) - (a.vol30 || 0) || (b.tvl || 0) - (a.tvl || 0)).slice(0, 12);
