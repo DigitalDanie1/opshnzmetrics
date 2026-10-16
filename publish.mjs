@@ -148,6 +148,7 @@ function shoot(hash, png) {
   console.log('✓ 캡처', path.basename(png), `1080×${h}`);
   return png;
 }
+try { (await import('./og.mjs')).makeOg(); } catch (e) { console.warn('! 공유 이미지 실패:', e.message); }
 const pngMap = shoot('#tgmap', path.join(DIR, 'preview-map.png'));
 const png = shoot('#tg', path.join(DIR, 'preview.png'));
 // 공유용 카드(1200×675, X 에 바로 올리는 크기): 시상대 · 이번 주 상승/하락 · 시그널
