@@ -118,20 +118,6 @@
     "kb": 37,
     "hid": 1
   },
-  "Opyn": {
-    "file": "shots/opyn.jpg",
-    "url": "https://www.opyn.co",
-    "at": "2026-10-10T15:46:09.366Z",
-    "kb": 56,
-    "hid": 0
-  },
-  "Typus": {
-    "file": "shots/typus.jpg",
-    "url": "https://typus.finance",
-    "at": "2026-10-10T15:46:11.863Z",
-    "kb": 56,
-    "hid": 0
-  },
   "Toros": {
     "file": "shots/toros.jpg",
     "url": "https://chamberfi.com",
@@ -139,25 +125,11 @@
     "kb": 39,
     "hid": 0
   },
-  "Kyan": {
-    "file": "shots/kyan.jpg",
-    "url": "https://kyan.blue",
-    "at": "2026-10-10T15:46:21.245Z",
-    "kb": 73,
-    "hid": 0
-  },
   "Stryke": {
     "file": "shots/stryke.jpg",
     "url": "https://www.stryke.xyz",
     "at": "2026-10-10T15:46:22.706Z",
     "kb": 60,
-    "hid": 0
-  },
-  "Smilee": {
-    "file": "shots/smilee.jpg",
-    "url": "https://smilee.finance",
-    "at": "2026-10-10T15:46:32.378Z",
-    "kb": 86,
     "hid": 0
   },
   "Prodigy.Fi": {
@@ -202,13 +174,6 @@
     "kb": 121,
     "hid": 0
   },
-  "Optivi": {
-    "file": "shots/optivi.jpg",
-    "url": "https://optivi.xyz",
-    "at": "2026-10-14T07:00:02.906Z",
-    "kb": 81,
-    "hid": 0
-  },
   "Split Markets": {
     "file": "shots/split-markets.jpg",
     "url": "https://split.markets/updown",
@@ -230,81 +195,11 @@
     "kb": 69,
     "hid": 0
   },
-  "Katana": {
-    "file": "shots/katana.jpg",
-    "url": "https://app.katana.so",
-    "at": "2026-10-15T18:29:05.710Z",
-    "kb": 92,
-    "hid": 0
-  },
-  "Dual Finance": {
-    "file": "shots/dual-finance.jpg",
-    "url": "https://beta.dual.finance",
-    "at": "2026-10-15T18:29:15.272Z",
-    "kb": 73,
-    "hid": 0
-  },
-  "TYMIO": {
-    "file": "shots/tymio.jpg",
-    "url": "https://tymio.com",
-    "at": "2026-10-15T18:29:16.593Z",
-    "kb": 95,
-    "hid": 1
-  },
   "Carmine": {
     "file": "shots/carmine.jpg",
     "url": "https://carmine.finance",
     "at": "2026-10-15T18:29:16.597Z",
     "kb": 75,
-    "hid": 0
-  },
-  "Zomma": {
-    "file": "shots/zomma.jpg",
-    "url": "https://zomma.pro",
-    "at": "2026-10-15T18:29:28.365Z",
-    "kb": 125,
-    "hid": 0
-  },
-  "Lien": {
-    "file": "shots/lien.jpg",
-    "url": "https://lien.finance",
-    "at": "2026-10-15T18:29:30.431Z",
-    "kb": 65,
-    "hid": 0
-  },
-  "Opium": {
-    "file": "shots/opium.jpg",
-    "url": "https://app.opium.finance",
-    "at": "2026-10-15T18:29:36.961Z",
-    "kb": 103,
-    "hid": 1
-  },
-  "Oddz": {
-    "file": "shots/oddz.jpg",
-    "url": "https://www.oddz.fi",
-    "at": "2026-10-15T18:29:39.365Z",
-    "kb": 73,
-    "hid": 0
-  },
-  "Jasper Vault": {
-    "file": "shots/jasper-vault.jpg",
-    "url": "https://www.jaspervault.io",
-    "at": "2026-10-15T18:29:40.788Z",
-    "kb": 87,
-    "hid": 0
-  },
-  "Margin Zero": {
-    "file": "shots/margin-zero.jpg",
-    "url": "https://www.marginzero.xyz",
-    "at": "2026-10-15T18:29:47.610Z",
-    "kb": 36,
-    "hid": 0
-  },
-  "TON Hedge": {
-    "file": "shots/ton-hedge.jpg",
-    "url": "https://tonhedge.com/options",
-    "at": "2026-10-15T18:29:50.793Z",
-    "kb": 53,
     "hid": 0
   },
   "Hypersurface": {
@@ -313,27 +208,6 @@
     "at": "2026-10-15T18:29:54.098Z",
     "kb": 48,
     "hid": 1
-  },
-  "Ithaca": {
-    "file": "shots/ithaca.jpg",
-    "url": "https://app.ithacaprotocol.io",
-    "at": "2026-10-15T18:30:00.834Z",
-    "kb": 109,
-    "hid": 1
-  },
-  "Auctus": {
-    "file": "shots/auctus.jpg",
-    "url": "https://auctus.org",
-    "at": "2026-10-15T18:30:03.312Z",
-    "kb": 55,
-    "hid": 0
-  },
-  "Antimatter": {
-    "file": "shots/antimatter.jpg",
-    "url": "https://antimatter.finance",
-    "at": "2026-10-15T18:30:05.395Z",
-    "kb": 169,
-    "hid": 0
   },
   "Stochastic": {
     "file": "shots/stochastic.jpg",

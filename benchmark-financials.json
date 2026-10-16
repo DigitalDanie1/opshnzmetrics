@@ -116,21 +116,6 @@
       "optionsFees": null,
       "optionsAdapters": []
     },
-    "Katana": {
-      "holders": null,
-      "holdersAdapters": [],
-      "revenue": 0,
-      "revenueAdapters": [
-        "katana"
-      ],
-      "optionsRevenue": null,
-      "fees": 5979.599999999999,
-      "feesAdapters": [
-        "katana"
-      ],
-      "optionsFees": null,
-      "optionsAdapters": []
-    },
     "SOFA.org": {
       "holders": null,
       "holdersAdapters": [],
@@ -142,38 +127,6 @@
       "fees": 4992.8099999999995,
       "feesAdapters": [
         "sofa.org"
-      ],
-      "optionsFees": null,
-      "optionsAdapters": []
-    },
-    "Typus": {
-      "holders": 0,
-      "holdersAdapters": [
-        "typus-perp"
-      ],
-      "revenue": 2.67,
-      "revenueAdapters": [
-        "typus-perp"
-      ],
-      "optionsRevenue": null,
-      "fees": 4.319999999999999,
-      "feesAdapters": [
-        "typus-perp"
-      ],
-      "optionsFees": null,
-      "optionsAdapters": []
-    },
-    "Kyan": {
-      "holders": null,
-      "holdersAdapters": [],
-      "revenue": 0,
-      "revenueAdapters": [
-        "kyan-blue-perps"
-      ],
-      "optionsRevenue": null,
-      "fees": 0,
-      "feesAdapters": [
-        "kyan-blue-perps"
       ],
       "optionsFees": null,
       "optionsAdapters": []

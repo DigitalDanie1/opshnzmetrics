@@ -300,10 +300,10 @@ async function discover(cfg) {
   const added = [];
   for (const g of Object.values(G)) {
     if (g.tvl < 1e4 && !g.v30) continue;
-    if (known.has(g.k) || ignore.has(g.k) || g.m.some(m => known.has(m.slug))) continue;
+    if (known.has(g.k) || ignore.has(g.k) || g.m.some(m => known.has(m.slug) || ignore.has(m.slug))) continue;
     const par = parents[g.k] || {}, m = g.m.sort((a, b) => (b.tvl || 0) - (a.tvl || 0))[0];
     const name = (par.name || m.name).replace(/\s+(V\d+|Options|Protocol|Finance)$/i, '');
-    if (cfg.projects.some(p => p.name === name)) continue;
+    if (cfg.projects.some(p => p.name === name) || ignore.has(name)) continue;   // 지운 프로젝트는 다시 넣지 않는다
     const cg = par.gecko_id || g.m.map(x => x.gecko_id).find(Boolean) || '';
     cfg.projects.push({
       ticker: '', name, stage: cg ? 'post' : 'pre', core: false, lineage: '', origin: '',

@@ -150,14 +150,14 @@
  {
   "d": "2026-10-16",
   "kind": "move",
-  "text": "$DIME −12.2% in 24h",
+  "text": "$DIME +8.8% in 24h",
   "href": "#/deep/Paradex",
   "key": "$DIME"
  },
  {
   "d": "2026-10-16",
   "kind": "vol",
-  "text": "BVIV 40.8 (−0.5% 24h) — BTC implied vol easing",
+  "text": "BVIV 39.0 (−3.6% 24h) — BTC implied vol easing",
   "href": "#/deep/Volmex",
   "key": "BVIV"
  },
@@ -166,5 +166,19 @@
   "kind": "content",
   "text": "New article: Introducing HARDCORE Vault: Bet On the Moves Nobody Expects. Long 2σ-3σ Convexity With Tails.",
   "href": "https://x.com/JoinHARDCORE/status/2109947295642833395"
+ },
+ {
+  "d": "2026-10-16",
+  "kind": "move",
+  "text": "$DRV +10.0% in 24h",
+  "href": "#/deep/Derive",
+  "key": "$DRV"
+ },
+ {
+  "d": "2026-10-16",
+  "kind": "move",
+  "text": "$SYN +8.7% in 24h",
+  "href": "#/deep/Hypercall",
+  "key": "$SYN"
  }
 ]

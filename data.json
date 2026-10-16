@@ -14,7 +14,42 @@
   ],
   "ignore": [
     "parent#ribbon-finance",
-    "volmex"
+    "volmex",
+    "katana",
+    "Katana",
+    "parent#opyn",
+    "Opyn",
+    "parent#typus-finance",
+    "Typus",
+    "parent#premia",
+    "Kyan",
+    "dual-finance",
+    "Dual Finance",
+    "tymio",
+    "TYMIO",
+    "lien",
+    "Lien",
+    "zomma-protocol",
+    "Zomma",
+    "opium",
+    "Opium",
+    "oddz",
+    "Oddz",
+    "jasper-vault",
+    "Jasper Vault",
+    "margin-zero",
+    "Margin Zero",
+    "ton-hedge",
+    "TON Hedge",
+    "ithaca-protocol",
+    "Ithaca",
+    "auctus",
+    "Auctus",
+    "antimatter",
+    "Antimatter",
+    "parent#smilee-finance",
+    "Smilee",
+    "Optivi"
   ],
   "telegram": "",
   "goals": [
@@ -1253,90 +1288,6 @@
     },
     {
       "ticker": "",
-      "name": "Katana",
-      "stage": "pre",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Solana",
-      "what": "Automated options-strategy yield vaults on Solana",
-      "cg": "",
-      "llama": [
-        "katana"
-      ],
-      "site": "https://app.katana.so",
-      "x": "Katana_HQ",
-      "keywords": [
-        "Option vaults",
-        "Automated strategies"
-      ],
-      "note": "",
-      "backers": {
-        "level": "none",
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [],
-        "reported": [],
-        "sources": [],
-        "total": null,
-        "totalNote": "",
-        "incubator": null
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Opyn",
-      "stage": "pre",
-      "core": false,
-      "lineage": "OG",
-      "origin": "",
-      "home": "Ethereum",
-      "what": "The original DeFi options infrastructure (Gamma, Squeeth)",
-      "cg": "",
-      "llama": [
-        "parent#opyn"
-      ],
-      "site": "https://www.opyn.co",
-      "x": "opyn_",
-      "keywords": [
-        "Options infra",
-        "Squeeth",
-        "OG"
-      ],
-      "note": "",
-      "backers": {
-        "total": null,
-        "totalNote": "",
-        "incubator": null,
-        "summary": null,
-        "rounds": [],
-        "vcs": [
-          "Paradigm",
-          "Dragonfly",
-          "VersionOne",
-          "Uncorrelated",
-          "Robot Ventures",
-          "1kx",
-          "Coinbase",
-          "Coinfund",
-          "A Capital Partners"
-        ],
-        "angels": [],
-        "reported": [],
-        "sources": [
-          {
-            "label": "opyn.co",
-            "url": "https://www.opyn.co",
-            "agg": false
-          }
-        ],
-        "level": "confirmed",
-        "heading": "Backed by the best. Proud to be supported by the best investors in crypto."
-      }
-    },
-    {
-      "ticker": "",
       "name": "SOFA.org",
       "stage": "post",
       "core": false,
@@ -1371,51 +1322,6 @@
     },
     {
       "ticker": "",
-      "name": "Typus",
-      "stage": "post",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Other",
-      "what": "Options vaults (DOV) & derivatives on Sui",
-      "cg": "typus",
-      "llama": [
-        "parent#typus-finance"
-      ],
-      "site": "https://typus.finance",
-      "x": "TypusFinance",
-      "keywords": [
-        "Sui",
-        "Option vaults"
-      ],
-      "note": "",
-      "backers": {
-        "total": null,
-        "totalNote": "",
-        "incubator": null,
-        "summary": null,
-        "rounds": [],
-        "vcs": [
-          "Mysten Labs",
-          "Assembly Partners",
-          "Hyperithm",
-          "Soft Holdings"
-        ],
-        "angels": [],
-        "reported": [],
-        "sources": [
-          {
-            "label": "typus.finance",
-            "url": "https://typus.finance",
-            "agg": false
-          }
-        ],
-        "level": "confirmed",
-        "heading": "BACKED BY"
-      }
-    },
-    {
-      "ticker": "",
       "name": "Toros",
       "stage": "post",
       "core": false,
@@ -1432,104 +1338,6 @@
       "keywords": [
         "Leveraged vaults",
         "Ex-dHEDGE"
-      ],
-      "note": "",
-      "backers": {
-        "level": "none",
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [],
-        "reported": [],
-        "sources": [],
-        "total": null,
-        "totalNote": "",
-        "incubator": null
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Kyan",
-      "stage": "pre",
-      "core": false,
-      "lineage": "Ex-Premia",
-      "origin": "Premia",
-      "home": "Arbitrum",
-      "what": "Orderbook + RFQ options exchange",
-      "cg": "",
-      "llama": [
-        "parent#premia"
-      ],
-      "site": "https://kyan.blue",
-      "x": "KyanExchange",
-      "keywords": [
-        "Orderbook + RFQ",
-        "Ex-Premia"
-      ],
-      "note": "",
-      "backers": {
-        "level": "none",
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [],
-        "reported": [],
-        "sources": [],
-        "total": null,
-        "totalNote": "",
-        "incubator": null
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Dual Finance",
-      "stage": "post",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Solana",
-      "what": "Token incentives paid as options (staking options)",
-      "cg": "dual-finance",
-      "llama": [
-        "dual-finance"
-      ],
-      "site": "https://beta.dual.finance",
-      "x": "DualFinance",
-      "keywords": [
-        "Option incentives"
-      ],
-      "note": "",
-      "backers": {
-        "level": "none",
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [],
-        "reported": [],
-        "sources": [],
-        "total": null,
-        "totalNote": "",
-        "incubator": null
-      }
-    },
-    {
-      "ticker": "",
-      "name": "TYMIO",
-      "stage": "pre",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Arbitrum",
-      "what": "Options-style yield from time-limited limit orders",
-      "cg": "",
-      "llama": [
-        "tymio"
-      ],
-      "site": "https://tymio.com",
-      "x": "TYMIOapp",
-      "keywords": [
-        "Time-limit orders",
-        "Dual investment"
       ],
       "note": "",
       "backers": {
@@ -1612,174 +1420,6 @@
     },
     {
       "ticker": "",
-      "name": "Lien",
-      "stage": "post",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Ethereum",
-      "what": "Early protocol minting options & stablecoins from ETH",
-      "cg": "lien",
-      "llama": [
-        "lien"
-      ],
-      "site": "https://lien.finance",
-      "x": "LienFinance",
-      "keywords": [
-        "Early generation",
-        "ETH options"
-      ],
-      "note": "",
-      "backers": {
-        "level": "none",
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [],
-        "reported": [],
-        "sources": [],
-        "total": null,
-        "totalNote": "",
-        "incubator": null
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Zomma",
-      "stage": "pre",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Other",
-      "what": "Options protocol on zkSync",
-      "cg": "",
-      "llama": [
-        "zomma-protocol"
-      ],
-      "site": "https://zomma.pro",
-      "x": "ZommaProtocol",
-      "keywords": [
-        "zkSync",
-        "Options"
-      ],
-      "note": "",
-      "backers": {
-        "level": "none",
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [],
-        "reported": [],
-        "sources": [],
-        "total": null,
-        "totalNote": "",
-        "incubator": null
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Opium",
-      "stage": "post",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Ethereum",
-      "what": "General-purpose protocol to create and settle any derivative",
-      "cg": "opium",
-      "llama": [
-        "opium"
-      ],
-      "site": "https://app.opium.finance",
-      "x": "Opium_Network",
-      "keywords": [
-        "Generic derivatives",
-        "Early generation"
-      ],
-      "note": "",
-      "backers": {
-        "total": null,
-        "totalNote": "",
-        "incubator": null,
-        "summary": null,
-        "rounds": [],
-        "vcs": [
-          "HashKey Capital",
-          "Galaxy Digital",
-          "CMS",
-          "Rockaway Blockchain Fund",
-          "QSN",
-          "LAUNCHub Ventures",
-          "Alameda Research",
-          "FBG",
-          "Zee Prime Capital",
-          "SevenX Ventures",
-          "QCP Capital"
-        ],
-        "angels": [],
-        "reported": [],
-        "sources": [
-          {
-            "label": "opium.network",
-            "url": "https://opium.network",
-            "agg": false
-          }
-        ],
-        "level": "confirmed",
-        "heading": "Backed and contributed by"
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Oddz",
-      "stage": "post",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Other",
-      "what": "Multichain options & derivatives trading (early generation)",
-      "cg": "oddz",
-      "llama": [
-        "oddz"
-      ],
-      "site": "https://www.oddz.fi",
-      "x": "oddz_finance",
-      "keywords": [
-        "Early generation"
-      ],
-      "note": "",
-      "backers": {
-        "total": null,
-        "totalNote": "",
-        "incubator": null,
-        "summary": null,
-        "rounds": [],
-        "vcs": [
-          "TRGC",
-          "Woodstock",
-          "Krypital Group",
-          "AU21 Capital",
-          "NGC Ventures",
-          "GBV",
-          "x21",
-          "Exnetwork Capital",
-          "Altonomy",
-          "Ames"
-        ],
-        "angels": [],
-        "reported": [],
-        "sources": [
-          {
-            "label": "oddz.fi",
-            "url": "https://oddz.fi",
-            "agg": false
-          }
-        ],
-        "level": "confirmed",
-        "heading": "Backers"
-      }
-    },
-    {
-      "ticker": "",
       "name": "Prodigy.Fi",
       "stage": "pre",
       "core": false,
@@ -1798,105 +1438,6 @@
       ],
       "note": "",
       "isNew": false,
-      "backers": {
-        "level": "none",
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [],
-        "reported": [],
-        "sources": [],
-        "total": null,
-        "totalNote": "",
-        "incubator": null
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Jasper Vault",
-      "stage": "pre",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Arbitrum",
-      "what": "Peer-to-peer options, multichain",
-      "cg": "",
-      "llama": [
-        "jasper-vault"
-      ],
-      "site": "https://www.jaspervault.io",
-      "x": "jaspervault",
-      "keywords": [
-        "P2P options"
-      ],
-      "note": "Launched Jasper AI Signals (chart entry and risk markers) for VIP members",
-      "backers": {
-        "level": "none",
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [],
-        "reported": [],
-        "sources": [],
-        "total": null,
-        "totalNote": "",
-        "incubator": null
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Margin Zero",
-      "stage": "pre",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Other",
-      "what": "Oracle-less options + protected perps (Sonic)",
-      "cg": "",
-      "llama": [
-        "margin-zero"
-      ],
-      "site": "https://www.marginzero.xyz",
-      "x": "marginzero_xyz",
-      "keywords": [
-        "Sonic",
-        "Oracle-free"
-      ],
-      "note": "",
-      "isNew": false,
-      "backers": {
-        "level": "none",
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [],
-        "reported": [],
-        "sources": [],
-        "total": null,
-        "totalNote": "",
-        "incubator": null
-      }
-    },
-    {
-      "ticker": "",
-      "name": "TON Hedge",
-      "stage": "pre",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Other",
-      "what": "Options on TON",
-      "cg": "",
-      "llama": [
-        "ton-hedge"
-      ],
-      "site": "https://tonhedge.com/options",
-      "x": "tonhedge",
-      "keywords": [
-        "TON",
-        "Options"
-      ],
-      "note": "",
       "backers": {
         "level": "none",
         "summary": null,
@@ -1942,203 +1483,6 @@
         "total": null,
         "totalNote": "",
         "incubator": null
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Ithaca",
-      "stage": "post",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Arbitrum",
-      "what": "Composable options protocol",
-      "cg": "ithaca-protocol",
-      "llama": [
-        "ithaca-protocol"
-      ],
-      "site": "https://app.ithacaprotocol.io",
-      "x": "IthacaProtocol",
-      "keywords": [
-        "Composable options"
-      ],
-      "note": "",
-      "backers": {
-        "total": null,
-        "totalNote": "",
-        "incubator": null,
-        "summary": null,
-        "rounds": [],
-        "vcs": [
-          "Wintermute",
-          "Cumberland",
-          "Room40 Ventures",
-          "Ghaf Capital Partners"
-        ],
-        "angels": [],
-        "reported": [],
-        "sources": [
-          {
-            "label": "ithacaprotocol.io",
-            "url": "https://www.ithacaprotocol.io/",
-            "agg": false
-          }
-        ],
-        "level": "confirmed",
-        "heading": "Investors"
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Auctus",
-      "stage": "post",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Ethereum",
-      "what": "Onchain options (early generation)",
-      "cg": "auctus",
-      "llama": [
-        "auctus"
-      ],
-      "site": "https://auctus.org",
-      "x": "AuctusOptions",
-      "keywords": [
-        "Early generation",
-        "Onchain options"
-      ],
-      "note": "",
-      "backers": {
-        "level": "none",
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [],
-        "reported": [],
-        "sources": [],
-        "total": null,
-        "totalNote": "",
-        "incubator": null
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Antimatter",
-      "stage": "post",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Other",
-      "what": "Options-style derivatives: dual investment, bull/bear tokens",
-      "cg": "antimatter",
-      "llama": [
-        "antimatter"
-      ],
-      "site": "https://antimatter.finance",
-      "x": "antimatterdefi",
-      "keywords": [
-        "Dual investment",
-        "Bull/bear tokens"
-      ],
-      "note": "",
-      "backers": {
-        "total": null,
-        "totalNote": "",
-        "incubator": null,
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [
-          {
-            "name": "Tekin Salimi",
-            "note": ""
-          },
-          {
-            "name": "Justin Sun",
-            "note": ""
-          },
-          {
-            "name": "Brian Lee",
-            "note": ""
-          }
-        ],
-        "reported": [],
-        "sources": [
-          {
-            "label": "antimatter.finance",
-            "url": "https://antimatter.finance",
-            "agg": false
-          }
-        ],
-        "level": "confirmed",
-        "heading": "Backed by"
-      }
-    },
-    {
-      "ticker": "",
-      "name": "Smilee",
-      "stage": "post",
-      "core": false,
-      "lineage": "",
-      "origin": "",
-      "home": "Arbitrum",
-      "what": "Options built from impermanent gain (IG)",
-      "cg": "smilee",
-      "llama": [
-        "parent#smilee-finance"
-      ],
-      "site": "https://smilee.finance",
-      "x": "SmileeFinance",
-      "keywords": [
-        "Impermanent gain"
-      ],
-      "note": "",
-      "backers": {
-        "total": null,
-        "totalNote": "",
-        "incubator": null,
-        "summary": null,
-        "rounds": [],
-        "vcs": [
-          "Dialectic",
-          "Synergis Capital",
-          "New Order",
-          "DeWhales Capital",
-          "Outlier Ventures",
-          "Concave",
-          "Owl Ventures",
-          "Yunt Capital",
-          "GTS Ventures",
-          "Multisig Ventures"
-        ],
-        "angels": [
-          {
-            "name": "0xSami",
-            "note": ""
-          },
-          {
-            "name": "Marc Zeller",
-            "note": ""
-          },
-          {
-            "name": "Barry Fried",
-            "note": ""
-          },
-          {
-            "name": "Slappjakke",
-            "note": ""
-          }
-        ],
-        "reported": [],
-        "sources": [
-          {
-            "label": "smilee.finance",
-            "url": "https://smilee.finance",
-            "agg": false
-          }
-        ],
-        "level": "confirmed",
-        "heading": "Backed By"
       }
     },
     {
@@ -2631,52 +1975,6 @@
     },
     {
       "ticker": "",
-      "name": "Optivi",
-      "stage": "pre",
-      "core": false,
-      "lineage": "Powered by Derive",
-      "origin": "",
-      "home": "Other",
-      "what": "Options made simple — a perp-DEX-style interface on Derive for BTC, ETH, SOL, HYPE and more, self-custodial and settled onchain",
-      "status": "Private beta",
-      "cg": "",
-      "llama": [],
-      "site": "https://optivi.xyz",
-      "x": "optivixyz",
-      "logo": "logos/optivi.png",
-      "keywords": [
-        "Options UI",
-        "Perp-style",
-        "Self-custody"
-      ],
-      "note": "",
-      "deep": {
-        "thesis": "",
-        "catalysts": [
-          "Private beta — request access on optivi.xyz",
-          "Self-custodial, settles through Derive; max loss is the premium paid"
-        ],
-        "risks": [],
-        "timeline": []
-      },
-      "app": "https://optivi.xyz",
-      "since": "2026-10",
-      "isNew": true,
-      "backers": {
-        "level": "none",
-        "summary": null,
-        "rounds": [],
-        "vcs": [],
-        "angels": [],
-        "reported": [],
-        "sources": [],
-        "total": null,
-        "totalNote": "",
-        "incubator": null
-      }
-    },
-    {
-      "ticker": "",
       "name": "Split Markets",
       "stage": "pre",
       "core": false,
@@ -2914,10 +2212,6 @@
       -3,
       3.1
     ],
-    "Optivi": [
-      -2,
-      4.1
-    ],
     "Omen": [
       -2.6,
       1.9
@@ -2958,33 +2252,9 @@
       0.8,
       3.4
     ],
-    "Kyan": [
-      5,
-      2.7
-    ],
-    "Ithaca": [
-      5.6,
-      1.6
-    ],
     "Deri": [
       4.1,
       1.7
-    ],
-    "Jasper Vault": [
-      3.1,
-      1.1
-    ],
-    "Zomma": [
-      1.9,
-      1.5
-    ],
-    "TON Hedge": [
-      1,
-      2.1
-    ],
-    "Oddz": [
-      1.4,
-      0.6
     ],
     "Volmex": [
       5.4,
@@ -3002,10 +2272,6 @@
       3.2,
       -1.3
     ],
-    "Smilee": [
-      2.4,
-      -1.9
-    ],
     "Carmine": [
       1.6,
       -0.6
@@ -3018,26 +2284,6 @@
       2.3,
       0.4
     ],
-    "Margin Zero": [
-      3.3,
-      0.2
-    ],
-    "Opyn": [
-      5.6,
-      -0.4
-    ],
-    "Lien": [
-      0.9,
-      -2.4
-    ],
-    "Auctus": [
-      0.6,
-      0.9
-    ],
-    "Opium": [
-      5.7,
-      -2.3
-    ],
     "Thetanuts": [
       -1,
       -3.6
@@ -3049,14 +2295,6 @@
     "3Jane": [
       1.5,
       -4.1
-    ],
-    "Katana": [
-      -2.5,
-      -3.4
-    ],
-    "Typus": [
-      -1.9,
-      -2.6
     ],
     "Toros": [
       -1.1,
@@ -3074,17 +2312,9 @@
       3.6,
       -3.6
     ],
-    "TYMIO": [
-      -4.6,
-      -1.9
-    ],
     "HedgeHood": [
       -3.8,
       -1.1
-    ],
-    "Antimatter": [
-      -2.1,
-      -0.9
     ],
     "HARDCORE": [
       1.6,
@@ -3097,10 +2327,6 @@
     "Gage": [
       -0.6,
       -5.1
-    ],
-    "Dual Finance": [
-      0.4,
-      -3.1
     ]
   }
 }
