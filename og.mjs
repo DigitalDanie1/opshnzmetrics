@@ -48,24 +48,31 @@ body{position:relative;font-family:"Syne",system-ui,sans-serif;color:#ece7dc}
 .bg{position:absolute;inset:0;background:url("${file('assets/greek-bg.webp')}") center 25%/cover;filter:grayscale(1) sepia(.5) brightness(.55);opacity:.22}
 .vg{position:absolute;inset:0;background:radial-gradient(70% 90% at 78% 50%,rgba(242,181,68,.10),transparent 60%),linear-gradient(90deg,#0a0b09 0%,rgba(10,11,9,.82) 46%,rgba(10,11,9,.55) 100%)}
 .fr{position:absolute;inset:18px;border:1px solid rgba(242,181,68,.28)}
-.l{position:absolute;left:64px;top:66px;width:560px}
-.k{font-size:15px;letter-spacing:.22em;color:#f2b544;font-weight:600}
-h1{font-size:92px;line-height:.95;font-weight:700;letter-spacing:-.01em;margin:16px 0 18px}
-h2{font-size:33px;font-weight:500;line-height:1.22;color:#ece7dc}
+.l{position:absolute;left:64px;top:58px;width:570px}
+.k{font-size:14px;letter-spacing:.22em;color:#f2b544;font-weight:600;margin-top:6px}
+.brand{display:flex;align-items:center;gap:20px}
+.mark{width:96px;height:96px;border-radius:22px;box-shadow:0 0 0 1px rgba(242,181,68,.35),0 12px 40px rgba(242,181,68,.18)}
+h1{font-size:84px;line-height:.9;font-weight:700;letter-spacing:-.01em}
+h2{font-size:31px;font-weight:500;line-height:1.22;color:#ece7dc;margin-top:30px}
 h2 em{font-style:italic;color:#f2b544}
-.st{display:flex;gap:30px;margin-top:38px;align-items:flex-start}
+.st{display:flex;gap:30px;margin-top:30px;align-items:flex-start}
 .st div small{display:block;font-size:13px;letter-spacing:.1em;color:#8f8b80;font-weight:600;white-space:nowrap}
 .st div b{display:block;font-size:38px;font-weight:600;margin-top:4px}
-.ft{position:absolute;left:64px;bottom:50px;font-size:17px;color:#bdb8ab;letter-spacing:.04em}
-.ft b{color:#ece7dc;font-weight:600}
+.ft{position:absolute;left:64px;bottom:44px;display:flex;align-items:center;gap:16px}
+.ft .av{width:60px;height:60px;border-radius:50%;border:2px solid #f2b544;object-fit:cover}
+.ft small{display:block;font-size:12px;letter-spacing:.16em;color:#8f8b80;font-weight:600}
+.ft b{display:block;font-size:22px;font-weight:600;color:#ece7dc;line-height:1.2}
+.ft span{display:block;font-size:15px;color:#bdb8ab}
+.ft i{width:1px;height:46px;background:rgba(236,231,220,.2);margin:0 8px}
+.ft .site b{font-size:20px;color:#f2b544}
 .r{position:absolute;right:48px;top:84px}
 .ax{fill:#bdb8ab;font-size:12px;font-weight:600;letter-spacing:.1em;font-family:"Syne",sans-serif}
 </style></head><body><div class="bg"></div><div class="vg"></div><div class="fr"></div>
-<div class="l"><div class="k">ONCHAIN OPTIONS ECOSYSTEM</div><h1>OPSHNZ</h1>
+<div class="l"><div class="brand"><img class="mark" src="${file('apple-touch-icon.png')}" alt=""><div><h1>OPSHNZ</h1><div class="k">ONCHAIN OPTIONS ECOSYSTEM</div></div></div>
 <h2>Every onchain options protocol, <em>mapped</em> — and what the market thinks today.</h2>
 <div class="st"><div><small>PROJECTS</small><b>${P.length}</b></div><div><small>30D ONCHAIN VOLUME</small><b>${usd(vol)}</b></div>${verdict ? `<div><small>BTC OPTIONS</small><b style="color:${vcol};font-size:26px;line-height:1.45;white-space:nowrap">${esc(verdict)}</b></div>` : ''}</div></div>
 <div class="r">${svg}</div>
-<div class="ft"><b>opshnz.com</b> · updated ${esc(day)} · by @0xdefidaniel</div>
+<div class="ft"><img class="av" src="${file('assets/creator.jpg')}" alt=""><div><small>MADE BY</small><b>defi_daniel</b><span>@0xdefidaniel</span></div><i></i><div class="site"><b>opshnz.com</b><span>updated ${esc(day)}</span></div></div>
 </body></html>`;
   const tmp = path.join(DIR, 'og-card.html');
   fs.writeFileSync(tmp, html);
