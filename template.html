@@ -1696,6 +1696,21 @@ a.tk-mini p b{color:var(--ink);font-weight:600}
 a.tk-mini span{display:inline-block;margin-top:6px;font-size:12.5px;color:var(--ink2)}
 a.tk-mini:hover span{color:var(--amber)}
 @media (max-width:640px){.tk{padding:16px}.tk h3,.tk.tk-1 h3{font-size:20px}.tk p{font-size:15px}}
+/* Deep: 2단 · 촘촘하게 */
+.dd-cols{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:8px 32px;align-items:start;margin-top:6px}
+.dd-cols.one{grid-template-columns:minmax(0,1fr)}
+.dd-cols .dd-sec{padding:14px 0;margin:0!important;border-top:1px solid var(--line)}
+.dd-cols .dd-main>.dd-sec:first-of-type,.dd-cols .dd-aside>.dd-sec:first-child{border-top:0;padding-top:4px}
+.dd-cols .dd-h{margin-bottom:10px}
+.dd-cols .blocks{margin-top:0;gap:12px 20px}
+.dd-cols .blk{padding-top:10px}
+.dd-aside .shot img{max-height:240px;width:100%;object-fit:cover;object-position:top}
+.dd-aside .shot .bar{padding:6px 10px}
+.dd-aside .feed{grid-template-columns:1fr;gap:8px}
+.dd-aside .dd-sec{scroll-margin-top:70px}
+.dd-cols .vt.peers{width:100%}
+.dd-cols .vt.peers td,.dd-cols .vt.peers th{padding-top:7px!important;padding-bottom:7px!important}
+@media (max-width:1000px){.dd-cols{grid-template-columns:minmax(0,1fr)}}
 /* Deep 압축: 첫 화면에 숫자 */
 body[data-view=deep] .subnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
 body[data-view=deep] .subnav a.sb{flex:none;white-space:nowrap}
@@ -2606,15 +2621,18 @@ function renderDeep(p){
       const sh = SHOTS[p.name], bk = backersHTML(p), peers = peersHTML(p);
       const notes = blocks.length ? `<div class="blocks">${blocks.map(([h, body, wide]) => h === '__WU__' ? `<div class="wu"><h4>NOTES BY 0XDEFIDANIEL<span>${d.updated ? 'updated ' + new Date(d.updated).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : ''}</span></h4><div class="tx">${body}</div></div>` : `<div class="blk${wide ? ' wide' : ''}"><h4>${h}</h4>${body}</div>`).join('')}</div>` : '';
       const secs = [
-        ['ddMarket', p.stage === 'post' ? 'Market' : 'Activity', `<div class="mkt" id="mkt"><p class="muted" style="font-size:12.5px">Loading charts…</p></div>`],
+        (p.cg || p.vol30 > 0 || p.tvl > 0 || p.cumVol > 0 || p.price != null) && ['ddMarket', p.stage === 'post' ? 'Market' : 'Activity', `<div class="mkt" id="mkt"><p class="muted" style="font-size:12.5px">Loading charts…</p></div>`],
         sh && ['ddProduct', 'Product', shotHTML(p)],
         peers && ['ddPeers', 'Compared with peers', peers],
         notes && ['ddNotes', 'Notes', notes],
         bk && ['ddBackers', 'Backers', bk],
         items.length && ['ddContent', 'Content', `<div class="feed">${items.map(contentCard).join('')}</div>`],
       ].filter(Boolean);
-      return `<nav class="dd-toc" aria-label="On this page">${secs.map(([id, t]) => `<button data-goto="${id}">${t}</button>`).join('')}</nav>
-      <div class="dd-main"><div id="ddEdit"></div>${secs.map(([id, t, body]) => `<section class="dd-sec" id="${id}"><h3 class="dd-h">${t}</h3>${body}</section>`).join('')}</div>`;
+      const SIDE = ['ddProduct', 'ddContent'], sec = ([id, t, body]) => `<section class="dd-sec" id="${id}"><h3 class="dd-h">${t}</h3>${body}</section>`;
+      const main = secs.filter(([id]) => !SIDE.includes(id)), side = secs.filter(([id]) => SIDE.includes(id));
+      // 노트를 시장보다 먼저: 사전 출시 프로젝트는 노트가 핵심, 상장 프로젝트는 시장 숫자가 위 띠에 이미 있다
+      main.sort((a, b) => (a[0] === 'ddNotes' ? -1 : 0) - (b[0] === 'ddNotes' ? -1 : 0));
+      return `<div class="dd-cols${side.length && main.length ? '' : ' one'}"><div class="dd-main"><div id="ddEdit"></div>${main.map(sec).join('')}</div>${side.length ? `<aside class="dd-aside">${side.map(sec).join('')}</aside>` : ''}</div>`;
     })()}
 
     <nav class="pager"><a href="${deepHref(prev)}">← ${esc(prev.name)}</a><a href="#/deep">ALL PROJECTS</a><a href="${deepHref(next)}">${esc(next.name)} →</a></nav>`;
