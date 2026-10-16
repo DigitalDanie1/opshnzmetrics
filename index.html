@@ -1575,6 +1575,18 @@ b,strong,th{font-weight:600}
   #mStage .spec b{white-space:normal}
   #mStage .spec::after{display:none}
 }
+/* 모바일 전용: 홈 메뉴 정렬 · 세로선 제거 · 곡면 크게 (데스크톱 >900px 은 그대로) */
+@media (max-width:900px){
+  .mast{background:none}
+  .m-nav.tabs{column-gap:16px}
+  .m-nav.tabs a,.m-nav.tabs a:not(:first-child),.m-nav.tabs a:nth-child(3){display:flex;align-items:baseline;gap:0 8px;padding:14px 0 16px}
+  .m-nav.tabs a>.n:first-child{flex:0 0 18px}
+  .m-nav.tabs a .go{display:none}
+}
+@media (max-width:640px){
+  #mStage{overflow:hidden}
+  #v-home #mStage #volsurf{width:180%;max-width:none;margin:-4% 0 4% -40%}
+}
 /* Deep 압축: 첫 화면에 숫자 */
 body[data-view=deep] .subnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
 body[data-view=deep] .subnav a.sb{flex:none;white-space:nowrap}
