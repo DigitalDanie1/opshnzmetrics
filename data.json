@@ -146,7 +146,8 @@
         "Hypercall",
         "Olive",
         "Joyride",
-        "Heat"
+        "Heat",
+        "IVY"
       ]
     },
     {
@@ -2035,7 +2036,7 @@
       "ticker": null,
       "name": "IVY",
       "stage": "pre",
-      "core": false,
+      "core": true,
       "lineage": "",
       "origin": "",
       "home": "Other",
