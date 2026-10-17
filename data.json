@@ -2030,6 +2030,76 @@
         "totalNote": "",
         "incubator": null
       }
+    },
+    {
+      "ticker": null,
+      "name": "IVY",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Intent-based options for any token — state the outcome you want and IVY quotes the strike, expiry and price; long-tail assets included",
+      "cg": null,
+      "llama": [],
+      "site": "https://ivy.market",
+      "app": "https://ivy.market/early-access",
+      "x": "IvyMarkets",
+      "logo": "logos/ivy.jpg",
+      "keywords": [
+        "Intent-based",
+        "Long-tail tokens",
+        "Custom strikes",
+        "Name your APR"
+      ],
+      "status": "Waitlist",
+      "since": "2026-07",
+      "isNew": true,
+      "note": "Waitlist open; built by ex-Bridgewater and NYSE volatility traders for token issuers, desks and quants",
+      "deep": {
+        "thesis": "Most onchain options venues list a fixed menu of strikes and expiries, so long-tail tokens never get a market. IVY flips it: you state the outcome (or the minimum APR you want) and the protocol prices and opens that market — options for every token, not just BTC and ETH.",
+        "catalysts": [
+          "Early-access launch",
+          "Token issuers using it to create options on their own token"
+        ],
+        "risks": [
+          "Pre-launch — no live volume yet",
+          "Long-tail options can be thinly hedged and expensive"
+        ],
+        "timeline": [
+          {
+            "date": "2026-09-16",
+            "text": "Explains intent-based quoting: no side reveals its minimum"
+          },
+          {
+            "date": "2026-09-10",
+            "text": "Custom strikes and maturities instead of a pre-packaged chain"
+          },
+          {
+            "date": "2026-07-03",
+            "text": "“Introducing IVY — the options layer for every token”"
+          }
+        ],
+        "writeup": ""
+      },
+      "backers": {
+        "total": null,
+        "totalNote": "",
+        "incubator": null,
+        "summary": null,
+        "rounds": [],
+        "vcs": [],
+        "angels": [],
+        "reported": [],
+        "sources": [
+          {
+            "label": "ivy.market",
+            "url": "https://ivy.market",
+            "agg": false
+          }
+        ],
+        "level": "none"
+      }
     }
   ],
   "benchmark": {
@@ -2327,6 +2397,10 @@
     "Gage": [
       -0.6,
       -5.1
+    ],
+    "IVY": [
+      3.7,
+      1.9
     ]
   }
 }
