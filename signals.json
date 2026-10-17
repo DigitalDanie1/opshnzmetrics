@@ -180,5 +180,18 @@
   "text": "$SYN +8.5% in 24h",
   "href": "#/deep/Hypercall",
   "key": "$SYN"
+ },
+ {
+  "d": "2026-10-17",
+  "kind": "vol",
+  "text": "BVIV 39.8 (+2.6% 24h) — BTC implied vol ticking up",
+  "href": "#/deep/Volmex",
+  "key": "BVIV"
+ },
+ {
+  "d": "2026-10-17",
+  "kind": "content",
+  "text": "New article: Introducing HARDCORE Vault: Bet On the Moves Nobody Expects. Long 2σ-3σ Convexity With Tails.",
+  "href": "https://x.com/JoinHARDCORE/status/2109947295642833395"
  }
 ]
