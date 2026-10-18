@@ -420,7 +420,8 @@
             "src": {
               "label": "Bankless",
               "url": "https://www.bankless.com/podcast/crypto-is-ready-for-onchain-options-nick-forster-ceo-of-derive"
-            }
+            },
+            "img": "logos/founders/nickforster.jpg"
           },
           {
             "name": "Dominic Romanowski",
@@ -535,7 +536,9 @@
               "label": "iq.wiki",
               "url": "https://iq.wiki/wiki/anand-gomes",
               "agg": true
-            }
+            },
+            "x": "fiddybps1",
+            "img": "logos/founders/fiddybps1.jpg"
           }
         ],
         "note": "Incubated by Paradigm, the institutional derivatives network Gomes co-founded in 2018."
@@ -654,7 +657,9 @@
               "label": "Ante report",
               "url": "https://antelabs.notion.site/Ribbon-Aevo-dd617ca5cb0b4096aff22dcd12637b8b",
               "agg": true
-            }
+            },
+            "x": "juliankohtx",
+            "img": "logos/founders/juliankohtx.jpg"
           },
           {
             "name": "Ken Chan",
@@ -725,7 +730,9 @@
             "src": {
               "label": "Crypto Briefing",
               "url": "https://cryptobriefing.com/hypercall-sp500-options-volume-hyperliquid/"
-            }
+            },
+            "x": "trajan0x",
+            "img": "logos/founders/trajan0x.jpg"
           }
         ],
         "note": "Built by the Synapse team — that is why the token is SYN."
@@ -928,7 +935,9 @@
             "src": {
               "label": "LinkedIn",
               "url": "https://www.linkedin.com/in/domdosu/"
-            }
+            },
+            "x": "domdosu",
+            "img": "logos/founders/domdosu.jpg"
           }
         ],
         "note": "DreamOS team, based in New York and LA. Options run on Derive underneath."
@@ -1021,7 +1030,9 @@
               "label": "Wellfound",
               "url": "https://wellfound.com/company/joyride-exchange",
               "agg": true
-            }
+            },
+            "x": "matthewliu",
+            "img": "logos/founders/matthewliu.jpg"
           },
           {
             "name": "Josh Fraser",
@@ -1031,17 +1042,21 @@
               "label": "Wellfound",
               "url": "https://wellfound.com/company/joyride-exchange",
               "agg": true
-            }
+            },
+            "x": "joshfraser",
+            "img": "logos/founders/joshfraser.jpg"
           },
           {
             "name": "Micah Alcorn",
             "role": "Founding CEO",
-            "prev": "Former Director of Product at Origin Protocol",
+            "prev": "Previously COO at Origin Protocol",
             "src": {
               "label": "Wellfound",
               "url": "https://wellfound.com/company/joyride-exchange",
               "agg": true
-            }
+            },
+            "x": "micahalcorn",
+            "img": "logos/founders/micahalcorn.jpg"
           }
         ],
         "note": "Origin Protocol founders and early contributors, building in Denver."
@@ -1141,7 +1156,9 @@
             "src": {
               "label": "The Block",
               "url": "https://www.theblock.co/post/356872/paradigm-leads-5-million-seed-round-in-crypto-credit-startup-3jane"
-            }
+            },
+            "x": "_yakovsky",
+            "img": "logos/founders/_yakovsky.jpg"
           }
         ]
       }
@@ -1234,7 +1251,9 @@
               "label": "iq.wiki",
               "url": "https://iq.wiki/wiki/cole-kennelly",
               "agg": true
-            }
+            },
+            "x": "ColeGotTweets",
+            "img": "logos/founders/colegottweets.jpg"
           }
         ]
       }
@@ -1354,7 +1373,9 @@
             "src": {
               "label": "Hyperion DeFi release",
               "url": "https://www.barchart.com/story/news/18533/hyperion-defi-announces-institutional-volatility-income-vault-built-on-rysk-protocol"
-            }
+            },
+            "x": "DanDeFiEd",
+            "img": "logos/founders/dandefied.jpg"
           },
           {
             "name": "Dr Jib R.",
@@ -1363,7 +1384,10 @@
               "label": "CoinLaunch",
               "url": "https://coinlaunch.space/projects/rysk/",
               "agg": true
-            }
+            },
+            "x": "Jib0xD",
+            "img": "logos/founders/jib0xd.jpg",
+            "prev": "PhD in positioning and navigation"
           }
         ]
       }
@@ -1426,7 +1450,9 @@
             "src": {
               "label": "Panoptic blog",
               "url": "https://panoptic.xyz/blog/cornell-blockchain-conference-2023"
-            }
+            },
+            "x": "guil_lambert",
+            "img": "logos/founders/guil_lambert.jpg"
           }
         ]
       }

@@ -1072,35 +1072,46 @@ body.tg #v-oracle{display:none!important}
 .bk-src span.s{margin-right:4px}
 .bk-fn{margin-top:10px;font-size:11px;line-height:1.5;color:var(--mute)}
 .bk-fn a{border-bottom:1px solid var(--line2)}
-/* ── 파운더 ── */
-.fm{display:inline-grid;place-items:center;flex:none;width:52px;height:52px;border-radius:50%;font-size:18px;font-weight:500;letter-spacing:.02em;color:var(--amber);background:radial-gradient(circle at 30% 25%,rgba(242,181,68,.22),rgba(242,181,68,.04) 70%);box-shadow:inset 0 0 0 1px rgba(242,181,68,.55),0 0 22px -6px rgba(242,181,68,.45)}
-.fm.sm{width:26px;height:26px;font-size:11px;box-shadow:inset 0 0 0 1px rgba(242,181,68,.55),0 0 0 2px var(--bg)}
-.fd{position:relative;display:flex;flex-direction:column;gap:4px;min-width:0;padding:16px 16px 14px;border:1px solid var(--line2);border-radius:14px;background:linear-gradient(180deg,rgba(26,24,18,.9),rgba(14,14,11,.9));transition:border-color .25s,transform .25s}
-.fd:hover{border-color:rgba(242,181,68,.5);transform:translateY(-2px)}
-.fd-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:8px}
-.fd-p{display:inline-flex;align-items:center;gap:6px;min-width:0;padding:3px 9px 3px 3px;border:1px solid var(--line2);border-radius:999px;font-size:12.5px;color:var(--ink2);background:rgba(10,11,9,.6)}
-.fd-p:hover{color:var(--amber);border-color:rgba(242,181,68,.5)}
-.fd-p img,.fd-p .logo-ph{width:20px;height:20px;border-radius:50%;object-fit:cover}
-.fd-p span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fd h4{font-size:18px;font-weight:500;color:var(--ink);line-height:1.25;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
-.fd-anon{font-style:normal;font-size:11px;letter-spacing:.06em;color:var(--mute);border:1px solid var(--line2);border-radius:999px;padding:0 7px}
-.fd-role{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
-.fd p{font-size:14px;line-height:1.5;color:var(--ink2);margin-top:4px}
-.fd-f{margin-top:auto;padding-top:10px;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;font-size:11px;color:var(--mute)}
-.fd-f a{color:var(--ink2);border-bottom:1px solid var(--line2)}
-.fd-f a:hover{color:var(--amber)}
-.fd-f .fd-x{color:var(--amber);border:0}
-.fd-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:10px}
-.fd-note{margin-top:12px;font-size:14px;color:var(--ink2)}
+/* ── 파운더 (팀 카드) ── */
+.fm{display:inline-grid;place-items:center;flex:none;width:52px;height:52px;border-radius:50%;object-fit:cover;font-size:18px;font-weight:500;letter-spacing:.02em;color:var(--amber);background:radial-gradient(circle at 30% 25%,rgba(242,181,68,.22),rgba(242,181,68,.04) 70%);box-shadow:inset 0 0 0 1px rgba(242,181,68,.55)}
+img.fm{background:#0d0e0c;box-shadow:0 0 0 1px rgba(242,181,68,.55),0 0 18px -6px rgba(242,181,68,.5)}
+.fm.sm{width:26px;height:26px;font-size:11px;box-shadow:0 0 0 2px var(--bg),0 0 0 3px rgba(242,181,68,.5)}
+.fdt{display:flex;flex-direction:column;min-width:0;border:1px solid var(--line2);border-radius:16px;background:linear-gradient(180deg,rgba(26,24,18,.92),rgba(14,14,11,.92));overflow:hidden;transition:border-color .25s}
+.fdt:hover{border-color:rgba(242,181,68,.45)}
+.fdt-h{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);background:rgba(242,181,68,.04)}
+.fdt-h img,.fdt-h .logo-ph{width:32px;height:32px;border-radius:50%;object-fit:cover;flex:none}
+.fdt-h div{min-width:0;flex:1}
+.fdt-h b{display:block;font-size:16px;font-weight:600;color:var(--amber)}
+.fdt-h small{font-size:12.5px;color:var(--mute)}
+.fdt-go{color:var(--mute);transition:transform .2s,color .2s}
+.fdt-h:hover .fdt-go{color:var(--amber);transform:translateX(3px)}
+.fdt-p{list-style:none;margin:0;padding:6px 16px}
+.fdr{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line)}
+.fdr:first-child{border-top:0}
+.fd-face{flex:none;display:block;border-radius:50%;transition:transform .2s}
+a.fd-face:hover{transform:scale(1.05)}
+.fdr-t{min-width:0;display:flex;flex-direction:column;gap:2px;padding-top:2px}
+.fdr-t b{font-size:16px;font-weight:500;color:var(--ink);display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+.fd-role{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber)}
+.fdr-t p{font-size:12.5px;line-height:1.5;color:var(--ink2);margin-top:2px}
+.fd-x{font-size:12.5px;color:var(--mute);width:max-content}
+.fd-x:hover{color:var(--amber)}
+.fd-anon{font-style:normal;font-size:11px;letter-spacing:.06em;color:var(--mute);border:1px solid var(--line2);border-radius:999px;padding:0 7px;font-weight:400}
+.fdt .fd-note{margin:0;padding:0 16px 12px;font-size:12.5px;color:var(--mute)}
+.fd-src{margin-top:auto;padding:10px 16px 12px;border-top:1px solid var(--line);font-size:11px;color:var(--mute);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center}
+.fd-src a{color:var(--ink2);border-bottom:1px solid var(--line2)}
+.fd-src a:hover{color:var(--amber)}
+.fdt.sm .fm{width:40px;height:40px;font-size:14px}
+.fdt.sm .fdt-h b{color:var(--ink)}
 .fd-none p:first-child{font-size:14px;color:var(--ink2)}
+.dd-sec .fdt{max-width:640px}
+.dd-sec .fdt .fm{width:60px;height:60px}
 .fdw{border:1px solid rgba(242,181,68,.28);border-radius:20px;padding:22px;background:radial-gradient(120% 80% at 0% 0%,rgba(242,181,68,.09),transparent 60%),var(--panel)}
 .fdw-h{display:flex;align-items:baseline;gap:10px;margin-bottom:16px}
 .fdw-h b{font-size:32px;font-weight:500;color:var(--amber);line-height:1}
 .fdw-h span{font-size:14px;color:var(--ink2)}
-.fdw-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:12px}
-.fdw-g.sm{grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
-.fdw-g.sm .fm{width:40px;height:40px;font-size:14px;color:var(--ink2);background:rgba(236,231,220,.04);box-shadow:inset 0 0 0 1px var(--line2)}
-.fdw-g.sm .fd-role{color:var(--mute)}
+.fdw-g{columns:3 300px;column-gap:12px}
+.fdw-g>.fdt{break-inside:avoid;margin-bottom:12px}
 .fdw-anon{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
 .fdw-anon small,.fdw-t small{display:block;font-size:11px;letter-spacing:.08em;color:var(--mute);margin-bottom:10px}
 .fdw-anon p{font-size:12.5px;color:var(--mute);margin-top:10px}
@@ -1117,18 +1128,12 @@ body.tg #v-oracle{display:none!important}
 .dd-by-m{display:inline-flex}.dd-by-m .fm+.fm{margin-left:-7px}
 .dd-by-n{font-size:14px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 @media (max-width:640px){
-  .fdw{padding:16px;border-radius:16px}.dd-by-l{display:none}
+  .fdw{padding:14px;border-radius:16px}.dd-by-l{display:none}
   .fdw-h b{font-size:26px}
-  /* 휴대폰: 파운더 벽은 한 줄 목록 (모노그램 · 이름/역할 · 프로젝트) */
-  .fdw-g,.fdw-g.sm{grid-template-columns:1fr;gap:0}
-  .fdw .fd,.fdw-t .fd{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;padding:12px 0;border:0;border-top:1px solid var(--line);border-radius:0;background:none;transform:none}
-  .fdw-g .fd:first-child{border-top:0}
-  .fdw .fd .fd-top,.fdw-t .fd .fd-top{display:contents}
-  .fdw .fd .fm,.fdw-t .fd .fm{grid-row:1/4;width:40px;height:40px;font-size:14px}
-  .fdw .fd h4,.fdw-t .fd h4{font-size:16px}
-  .fdw .fd .fd-p,.fdw-t .fd .fd-p{grid-column:2;grid-row:3;justify-self:start;border:0;padding:0;background:none;font-size:12.5px}
-  .fdw .fd .fd-p img,.fdw-t .fd .fd-p img{width:16px;height:16px}
-  .fdw .fd>p,.fdw .fd .fd-f,.fdw-t .fd>p,.fdw-t .fd .fd-f{display:none}
+  .fdw-g>.fdt{margin-bottom:10px}
+  .fdt-h{padding:12px 14px}.fdt-p{padding:2px 14px}
+  .fdw .fm,.fdw-t .fm{width:44px;height:44px;font-size:14px}
+  .fdw .fdr-t p,.fdw-t .fdr-t p{display:none}
 }
 .shot{margin:26px 0 6px;border:1px solid var(--line2);border-radius:12px;overflow:hidden;background:#0d0e0c;box-shadow:0 40px 90px -40px rgba(0,0,0,.9)}
 .shot .bar{display:flex;align-items:center;gap:7px;padding:9px 12px;border-bottom:1px solid var(--line);background:var(--panel)}
@@ -2897,35 +2902,46 @@ function backersHTML(p){
 // 파운더: data.json 의 founders {people:[{name,role,prev,x,anon,src{label,url,agg}}], note}. 공개된 이름만, 출처와 함께
 const fdPeople = p => (p.founders && p.founders.people) || [];
 const fdInit = n => (n.replace(/^0x/i, '').match(/[A-Za-z0-9]+/g) || ['?']).slice(0, 2).map(w => w[0]).join('').toUpperCase();
-const fdMono = (f, cls) => `<span class="fm${cls ? ' ' + cls : ''}" aria-hidden="true">${esc(fdInit(f.name))}</span>`;
+const fdMono = (f, cls) => f.img ? `<img class="fm${cls ? ' ' + cls : ''}" src="${esc(f.img)}" alt="" loading="lazy" onerror="this.outerHTML='<span class=&quot;fm${cls ? ' ' + cls : ''}&quot;>${esc(fdInit(f.name))}</span>'">` : `<span class="fm${cls ? ' ' + cls : ''}" aria-hidden="true">${esc(fdInit(f.name))}</span>`;
 const fdSrc = s => { if (!s) return ''; const u = bkLink(s.url); return (u ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(s.label)} ↗</a>` : esc(s.label)) + (s.agg ? bkAgg : ''); };
 function fdShort(p){
   const ps = fdPeople(p); if (!ps.length) return '';
   return esc(ps[0].name) + (ps.length > 1 ? ` <span class="muted">+${ps.length - 1}</span>` : '');
 }
-// 딥다이브 히어로: 이름 한 줄 → 아래 Founders 섹션으로
+// 딥다이브 히어로: 얼굴 겹침 + 이름 → 아래 Founders 섹션으로
 function fdByLine(p){
   const ps = fdPeople(p); if (!ps.length) return '';
   return `<button type="button" class="dd-by" data-goto="ddFounders"><span class="dd-by-l">BUILT BY</span><span class="dd-by-m">${ps.slice(0, 4).map(f => fdMono(f, 'sm')).join('')}</span><span class="dd-by-n">${ps.slice(0, 2).map(f => esc(f.name)).join(', ')}${ps.length > 2 ? ` <span class="muted">+${ps.length - 2}</span>` : ''}</span></button>`;
 }
-function fdCard(f, p, big){
+// 한 사람 = 한 줄 (사진 · 이름 · 역할 · @핸들)
+function fdRow(f){
   const x = f.x ? `<a class="fd-x" href="https://x.com/${esc(f.x)}" target="_blank" rel="noopener noreferrer">@${esc(f.x)}</a>` : '';
-  return `<article class="fd${big ? ' big' : ''}">
-    <div class="fd-top">${fdMono(f)}${p ? `<a class="fd-p" href="${deepHref(p)}" title="${esc(p.name)} deep dive">${logo(p)}<span>${esc(p.name)}</span></a>` : ''}</div>
-    <h4>${esc(f.name)}${f.anon ? '<i class="fd-anon">PSEUDONYMOUS</i>' : ''}</h4>
-    <div class="fd-role">${esc(f.role || 'Founder')}</div>
-    ${f.prev ? `<p>${esc(f.prev)}</p>` : ''}
-    <div class="fd-f">${x}<span class="fd-s">${fdSrc(f.src)}</span></div>
+  const face = f.x ? `<a class="fd-face" href="https://x.com/${esc(f.x)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(f.name)} on X">${fdMono(f)}</a>` : `<span class="fd-face">${fdMono(f)}</span>`;
+  return `<li class="fdr">${face}<div class="fdr-t"><b>${esc(f.name)}${f.anon ? '<i class="fd-anon">PSEUDONYMOUS</i>' : ''}</b><span class="fd-role">${esc(f.role || 'Founder')}</span>${f.prev ? `<p>${esc(f.prev)}</p>` : ''}${x}</div></li>`;
+}
+// 출처는 팀 카드 아래 한 줄로 모은다 (같은 출처는 한 번만)
+function fdSources(ps){
+  const seen = new Set(), arr = [];
+  for (const f of ps) if (f.src && !seen.has(f.src.url || f.src.label)) { seen.add(f.src.url || f.src.label); arr.push(f.src); }
+  return arr.length ? `<div class="fd-src">Sources ${arr.map(fdSrc).join(' ')}</div>` : '';
+}
+// 팀 카드: 프로젝트 하나 = 카드 하나
+function fdTeam(p, opts = {}){
+  const ps = fdPeople(p), fd = p.founders || {};
+  const head = opts.head === false ? '' : `<a class="fdt-h" href="${deepHref(p)}">${logo(p)}<div><b>${esc(p.name)}</b><small>${ps.length ? ps.length + (ps.length > 1 ? ' founders' : ' founder') : 'team not public'}</small></div><span class="fdt-go">→</span></a>`;
+  return `<article class="fdt${opts.sm ? ' sm' : ''}">${head}
+    ${ps.length ? `<ul class="fdt-p">${ps.map(fdRow).join('')}</ul>` : ''}
+    ${fd.note ? `<p class="fd-note">${esc(fd.note)}</p>` : ''}
+    ${fdSources(ps)}
   </article>`;
 }
 function foundersHTML(p){
   const fd = p.founders; if (!fd) return '';
   const ps = fdPeople(p);
   if (!ps.length) return `<div class="fd-none"><p>${esc(fd.note || 'Founders have not been named publicly.')}</p><p class="bk-fn">Know the team? Tell <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p></div>`;
-  return `<div class="fd-g">${ps.map(f => fdCard(f, null, true)).join('')}</div>${fd.note ? `<p class="fd-note">${esc(fd.note)}</p>` : ''}
-    <p class="bk-fn">Only names the team or press have published. Sources marked AGG are data aggregators. Corrections: <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p>`;
+  return `${fdTeam(p, {head:false})}<p class="bk-fn">Only names the team, the founders’ own X profiles or press have published. AGG = data aggregator. Corrections: <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p>`;
 }
-// Overview → Founders: Friends 먼저(레인 순서), 그 다음 Tracked
+// Overview → Founders: Friends 팀 카드(레인 순서) → 이름 미공개 Friends → Tracked 팀 카드
 function renderFounders(){
   const el = $('founders'); if (!el) return;
   const laneOrder = (BOOT.config.lanes || []).flatMap(l => l.members);
@@ -2934,14 +2950,14 @@ function renderFounders(){
   const named = fr.filter(p => fdPeople(p).length), hidden = fr.filter(p => p.founders && !fdPeople(p).length);
   const tracked = others().filter(p => fdPeople(p).length);
   const nPeople = named.reduce((a, p) => a + fdPeople(p).length, 0);
-  el.innerHTML = `<div class="sh"><h2>Founders<span>the people building onchain options · published names only, every one sourced</span></h2></div>
+  el.innerHTML = `<div class="sh"><h2>Founders<span>the teams building onchain options · published names only, every one sourced</span></h2></div>
     <div class="fdw">
-      <div class="fdw-h"><b>${nPeople}</b><span>founders behind ${named.length} Friends</span></div>
-      <div class="fdw-g">${named.flatMap(p => fdPeople(p).map(f => fdCard(f, p))).join('')}</div>
+      <div class="fdw-h"><b>${nPeople}</b><span>founders · ${named.length} Friends teams</span></div>
+      <div class="fdw-g">${named.map(p => fdTeam(p)).join('')}</div>
       ${hidden.length ? `<div class="fdw-anon"><small>TEAM NOT PUBLIC YET</small><div class="fdw-chips">${hidden.map(p => `<a href="${deepHref(p)}">${logo(p)}<span>${esc(p.name)}</span></a>`).join('')}</div><p>These Friends haven’t published founder names. Know the team? Tell <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p></div>` : ''}
     </div>
-    ${tracked.length ? `<div class="fdw-t"><small>ALSO IN THE ECOSYSTEM</small><div class="fdw-g sm">${tracked.flatMap(p => fdPeople(p).map(f => fdCard(f, p))).join('')}</div></div>` : ''}
-    <p class="bk-fn" style="margin-top:14px">Sources marked AGG are data aggregators, not the project itself. Corrections: <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p>`;
+    ${tracked.length ? `<div class="fdw-t"><small>ALSO IN THE ECOSYSTEM</small><div class="fdw-g">${tracked.map(p => fdTeam(p, {sm:true})).join('')}</div></div>` : ''}
+    <p class="bk-fn" style="margin-top:14px">Photos from each founder’s public X profile. AGG = data aggregator, not the project itself. Corrections: <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p>`;
 }
 // 앱 화면 (shots.mjs 가 매주 찍는다)
 const SHOTS = BOOT.shots || {};
