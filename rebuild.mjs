@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const DIR = path.dirname(fileURLToPath(import.meta.url));
 // 스냅샷 위에 덮어쓸 "사람이 쓰는" 칸들
-const TEXT_FIELDS = ['what', 'keywords', 'note', 'deep', 'points', 'pointsUrl', 'status', 'lineage', 'origin', 'home', 'site', 'x', 'logo', 'core', 'app', 'since', 'isNew', 'backers'];
+const TEXT_FIELDS = ['what', 'keywords', 'note', 'deep', 'points', 'pointsUrl', 'status', 'lineage', 'origin', 'home', 'site', 'x', 'logo', 'core', 'app', 'since', 'isNew', 'backers', 'founders'];
 
 export function rebuild() {
   const read = f => JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8'));

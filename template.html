@@ -1072,6 +1072,64 @@ body.tg #v-oracle{display:none!important}
 .bk-src span.s{margin-right:4px}
 .bk-fn{margin-top:10px;font-size:11px;line-height:1.5;color:var(--mute)}
 .bk-fn a{border-bottom:1px solid var(--line2)}
+/* ── 파운더 ── */
+.fm{display:inline-grid;place-items:center;flex:none;width:52px;height:52px;border-radius:50%;font-size:18px;font-weight:500;letter-spacing:.02em;color:var(--amber);background:radial-gradient(circle at 30% 25%,rgba(242,181,68,.22),rgba(242,181,68,.04) 70%);box-shadow:inset 0 0 0 1px rgba(242,181,68,.55),0 0 22px -6px rgba(242,181,68,.45)}
+.fm.sm{width:26px;height:26px;font-size:11px;box-shadow:inset 0 0 0 1px rgba(242,181,68,.55),0 0 0 2px var(--bg)}
+.fd{position:relative;display:flex;flex-direction:column;gap:4px;min-width:0;padding:16px 16px 14px;border:1px solid var(--line2);border-radius:14px;background:linear-gradient(180deg,rgba(26,24,18,.9),rgba(14,14,11,.9));transition:border-color .25s,transform .25s}
+.fd:hover{border-color:rgba(242,181,68,.5);transform:translateY(-2px)}
+.fd-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:8px}
+.fd-p{display:inline-flex;align-items:center;gap:6px;min-width:0;padding:3px 9px 3px 3px;border:1px solid var(--line2);border-radius:999px;font-size:12.5px;color:var(--ink2);background:rgba(10,11,9,.6)}
+.fd-p:hover{color:var(--amber);border-color:rgba(242,181,68,.5)}
+.fd-p img,.fd-p .logo-ph{width:20px;height:20px;border-radius:50%;object-fit:cover}
+.fd-p span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fd h4{font-size:18px;font-weight:500;color:var(--ink);line-height:1.25;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+.fd-anon{font-style:normal;font-size:11px;letter-spacing:.06em;color:var(--mute);border:1px solid var(--line2);border-radius:999px;padding:0 7px}
+.fd-role{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber)}
+.fd p{font-size:14px;line-height:1.5;color:var(--ink2);margin-top:4px}
+.fd-f{margin-top:auto;padding-top:10px;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;font-size:11px;color:var(--mute)}
+.fd-f a{color:var(--ink2);border-bottom:1px solid var(--line2)}
+.fd-f a:hover{color:var(--amber)}
+.fd-f .fd-x{color:var(--amber);border:0}
+.fd-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:10px}
+.fd-note{margin-top:12px;font-size:14px;color:var(--ink2)}
+.fd-none p:first-child{font-size:14px;color:var(--ink2)}
+.fdw{border:1px solid rgba(242,181,68,.28);border-radius:20px;padding:22px;background:radial-gradient(120% 80% at 0% 0%,rgba(242,181,68,.09),transparent 60%),var(--panel)}
+.fdw-h{display:flex;align-items:baseline;gap:10px;margin-bottom:16px}
+.fdw-h b{font-size:32px;font-weight:500;color:var(--amber);line-height:1}
+.fdw-h span{font-size:14px;color:var(--ink2)}
+.fdw-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:12px}
+.fdw-g.sm{grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
+.fdw-g.sm .fm{width:40px;height:40px;font-size:14px;color:var(--ink2);background:rgba(236,231,220,.04);box-shadow:inset 0 0 0 1px var(--line2)}
+.fdw-g.sm .fd-role{color:var(--mute)}
+.fdw-anon{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.fdw-anon small,.fdw-t small{display:block;font-size:11px;letter-spacing:.08em;color:var(--mute);margin-bottom:10px}
+.fdw-anon p{font-size:12.5px;color:var(--mute);margin-top:10px}
+.fdw-anon p a{color:var(--ink2);border-bottom:1px solid var(--line2)}
+.fdw-chips{display:flex;flex-wrap:wrap;gap:8px}
+.fdw-chips a{display:inline-flex;align-items:center;gap:7px;padding:4px 12px 4px 4px;border:1px dashed var(--line2);border-radius:999px;font-size:14px;color:var(--ink2)}
+.fdw-chips a:hover{border-color:rgba(242,181,68,.5);color:var(--amber)}
+.fdw-chips img,.fdw-chips .logo-ph{width:24px;height:24px;border-radius:50%;object-fit:cover}
+.fdw-t{margin-top:22px}
+.dd-by{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:5px 14px 5px 6px;border:1px solid rgba(242,181,68,.4);border-radius:999px;background:var(--amber-dim);max-width:100%;box-sizing:border-box}
+.dd-by:hover{border-color:var(--amber)}
+.dd-by:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.dd-by-l{font-size:11px;letter-spacing:.08em;color:var(--amber);padding-left:6px}
+.dd-by-m{display:inline-flex}.dd-by-m .fm+.fm{margin-left:-7px}
+.dd-by-n{font-size:14px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+@media (max-width:640px){
+  .fdw{padding:16px;border-radius:16px}.dd-by-l{display:none}
+  .fdw-h b{font-size:26px}
+  /* 휴대폰: 파운더 벽은 한 줄 목록 (모노그램 · 이름/역할 · 프로젝트) */
+  .fdw-g,.fdw-g.sm{grid-template-columns:1fr;gap:0}
+  .fdw .fd,.fdw-t .fd{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:12px;row-gap:2px;align-items:center;padding:12px 0;border:0;border-top:1px solid var(--line);border-radius:0;background:none;transform:none}
+  .fdw-g .fd:first-child{border-top:0}
+  .fdw .fd .fd-top,.fdw-t .fd .fd-top{display:contents}
+  .fdw .fd .fm,.fdw-t .fd .fm{grid-row:1/4;width:40px;height:40px;font-size:14px}
+  .fdw .fd h4,.fdw-t .fd h4{font-size:16px}
+  .fdw .fd .fd-p,.fdw-t .fd .fd-p{grid-column:2;grid-row:3;justify-self:start;border:0;padding:0;background:none;font-size:12.5px}
+  .fdw .fd .fd-p img,.fdw-t .fd .fd-p img{width:16px;height:16px}
+  .fdw .fd>p,.fdw .fd .fd-f,.fdw-t .fd>p,.fdw-t .fd .fd-f{display:none}
+}
 .shot{margin:26px 0 6px;border:1px solid var(--line2);border-radius:12px;overflow:hidden;background:#0d0e0c;box-shadow:0 40px 90px -40px rgba(0,0,0,.9)}
 .shot .bar{display:flex;align-items:center;gap:7px;padding:9px 12px;border-bottom:1px solid var(--line);background:var(--panel)}
 .shot .bar i{width:9px;height:9px;border-radius:50%;background:rgba(236,231,220,.18);flex:none}
@@ -2063,6 +2121,8 @@ p{line-height:1.6}
       <div class="chn" id="clients"></div>
     </section>
 
+    <section data-blk="founders" id="founders"></section>
+
     <section data-blk="ecosystem">
       <div class="sh"><h2>Whole ecosystem<span>simple ↔ professional · trade it yourself ↕ let it earn for you</span></h2></div>
       <div class="eq" id="habitats"></div>
@@ -2487,7 +2547,7 @@ function chTicketHtml(){
     <div class="chn-id">${logo(p)}<div><h3>${esc(p.name)}</h3><div class="chn-lane" style="color:${L.color}">${chDot(L.color)}${esc(L.code)} · ${esc(L.title.toUpperCase())}</div></div></div>
     <div class="chn-what">${esc(p.what || '')}</div>
     <div class="chn-px"><div><small>PRICE</small><div class="chn-big">${p.price != null ? price(p.price) : dash}</div></div><div><small style="text-align:right">24H</small><div class="chn-big chn-s ${chCls(p.ch24)}">${pctTxt(p.ch24)}</div></div></div>
-    <div class="chn-stats">${row('VOL 30D', usd(r.vol))}${row('OPEN INTEREST', usd(r.oi))}${row('7D', pctTxt(p.ch7), chCls(p.ch7))}${row('TOKEN', esc(p.ticker || dash))}${row('STATUS', esc(p.status || dash))}${row('LINEAGE', esc(p.lineage || dash))}</div>
+    <div class="chn-stats">${row('VOL 30D', usd(r.vol))}${row('OPEN INTEREST', usd(r.oi))}${row('7D', pctTxt(p.ch7), chCls(p.ch7))}${row('TOKEN', esc(p.ticker || dash))}${row('STATUS', esc(p.status || dash))}${row('LINEAGE', esc(p.lineage || dash))}${row('BUILT BY', fdShort(p) || dash)}</div>
     ${same.length ? `<div class="chn-sl"><small>SAME LANE · ${esc(L.code)}</small><div class="chn-chips">${same.map(x => `<button type="button" class="chn-chip" data-n="${esc(x.p.name)}">${logo(x.p)}<span>${esc(x.p.name)}</span></button>`).join('')}</div></div>` : ''}
     ${refBox(refOf(p.name)) ? `<div class="chn-refx">${refBox(refOf(p.name))}</div>` : ''}
     <a class="chn-go" href="${deepHref(p)}">OPEN DEEP DIVE <span style="font-size:18px">→</span></a>
@@ -2754,15 +2814,17 @@ function renderDeep(p){
         <div class="dd-links">${links}${(p.app || p.site) ? `<a class="open" href="${esc(p.app || p.site)}" target="_blank" rel="noopener">Open app ↗</a>` : ''}</div></div>
       <p class="dd-what">${esc(p.what)}</p>
       ${kwHTML(p)}
+      ${fdByLine(p)}
       ${EDITOR_KEY ? `<button class="edit-btn" id="ddEditBtn">✎ EDIT THIS PAGE</button> <span class="muted" id="ddSaved" style="font-size:12.5px;margin-left:8px"></span>` : ''}
       ${glanceHTML(p) ? `<div class="dd-stats">${glanceHTML(p)}</div>` : ''}
       ${refOf(p.name) ? `<div class="dd-ref">${refBox(refOf(p.name))}</div>` : ''}
     </div>
 
     ${(() => {
-      const sh = SHOTS[p.name], bk = backersHTML(p), peers = peersHTML(p);
+      const sh = SHOTS[p.name], bk = backersHTML(p), fd = foundersHTML(p), peers = peersHTML(p);
       const notes = blocks.length ? `<div class="blocks">${blocks.map(([h, body, wide]) => h === '__WU__' ? `<div class="wu"><h4>NOTES BY 0XDEFIDANIEL<span>${d.updated ? 'updated ' + new Date(d.updated).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : ''}</span></h4><div class="tx">${body}</div></div>` : `<div class="blk${wide ? ' wide' : ''}"><h4>${h}</h4>${body}</div>`).join('')}</div>` : '';
       const secs = [
+        fd && ['ddFounders', 'Founders', fd],
         (p.cg || p.vol30 > 0 || p.tvl > 0 || p.cumVol > 0 || p.price != null) && ['ddMarket', p.stage === 'post' ? 'Market' : 'Activity', `<div class="mkt" id="mkt"><p class="muted" style="font-size:12.5px">Loading charts…</p></div>`],
         sh && ['ddProduct', 'Product', shotHTML(p)],
         peers && ['ddPeers', 'Compared with peers', peers],
@@ -2831,6 +2893,55 @@ function backersHTML(p){
     ${(b.sources || []).length ? `<div class="bk-src">Sources ${b.sources.map(s => { const u = bkLink(s.url); return (u ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a>` : `<span class="s">${esc(s.label)}</span>`) + (s.agg ? bkAgg : '') + ' '; }).join('')}</div>` : ''}
     <p class="bk-fn">Investors as listed on each project’s official website. Corrections: <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p>
   </section>`;
+}
+// 파운더: data.json 의 founders {people:[{name,role,prev,x,anon,src{label,url,agg}}], note}. 공개된 이름만, 출처와 함께
+const fdPeople = p => (p.founders && p.founders.people) || [];
+const fdInit = n => (n.replace(/^0x/i, '').match(/[A-Za-z0-9]+/g) || ['?']).slice(0, 2).map(w => w[0]).join('').toUpperCase();
+const fdMono = (f, cls) => `<span class="fm${cls ? ' ' + cls : ''}" aria-hidden="true">${esc(fdInit(f.name))}</span>`;
+const fdSrc = s => { if (!s) return ''; const u = bkLink(s.url); return (u ? `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(s.label)} ↗</a>` : esc(s.label)) + (s.agg ? bkAgg : ''); };
+function fdShort(p){
+  const ps = fdPeople(p); if (!ps.length) return '';
+  return esc(ps[0].name) + (ps.length > 1 ? ` <span class="muted">+${ps.length - 1}</span>` : '');
+}
+// 딥다이브 히어로: 이름 한 줄 → 아래 Founders 섹션으로
+function fdByLine(p){
+  const ps = fdPeople(p); if (!ps.length) return '';
+  return `<button type="button" class="dd-by" data-goto="ddFounders"><span class="dd-by-l">BUILT BY</span><span class="dd-by-m">${ps.slice(0, 4).map(f => fdMono(f, 'sm')).join('')}</span><span class="dd-by-n">${ps.slice(0, 2).map(f => esc(f.name)).join(', ')}${ps.length > 2 ? ` <span class="muted">+${ps.length - 2}</span>` : ''}</span></button>`;
+}
+function fdCard(f, p, big){
+  const x = f.x ? `<a class="fd-x" href="https://x.com/${esc(f.x)}" target="_blank" rel="noopener noreferrer">@${esc(f.x)}</a>` : '';
+  return `<article class="fd${big ? ' big' : ''}">
+    <div class="fd-top">${fdMono(f)}${p ? `<a class="fd-p" href="${deepHref(p)}" title="${esc(p.name)} deep dive">${logo(p)}<span>${esc(p.name)}</span></a>` : ''}</div>
+    <h4>${esc(f.name)}${f.anon ? '<i class="fd-anon">PSEUDONYMOUS</i>' : ''}</h4>
+    <div class="fd-role">${esc(f.role || 'Founder')}</div>
+    ${f.prev ? `<p>${esc(f.prev)}</p>` : ''}
+    <div class="fd-f">${x}<span class="fd-s">${fdSrc(f.src)}</span></div>
+  </article>`;
+}
+function foundersHTML(p){
+  const fd = p.founders; if (!fd) return '';
+  const ps = fdPeople(p);
+  if (!ps.length) return `<div class="fd-none"><p>${esc(fd.note || 'Founders have not been named publicly.')}</p><p class="bk-fn">Know the team? Tell <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p></div>`;
+  return `<div class="fd-g">${ps.map(f => fdCard(f, null, true)).join('')}</div>${fd.note ? `<p class="fd-note">${esc(fd.note)}</p>` : ''}
+    <p class="bk-fn">Only names the team or press have published. Sources marked AGG are data aggregators. Corrections: <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p>`;
+}
+// Overview → Founders: Friends 먼저(레인 순서), 그 다음 Tracked
+function renderFounders(){
+  const el = $('founders'); if (!el) return;
+  const laneOrder = (BOOT.config.lanes || []).flatMap(l => l.members);
+  const rank = p => { const i = laneOrder.indexOf(p.name); return i < 0 ? 999 : i; };
+  const fr = clients().slice().sort((a, b) => rank(a) - rank(b));
+  const named = fr.filter(p => fdPeople(p).length), hidden = fr.filter(p => p.founders && !fdPeople(p).length);
+  const tracked = others().filter(p => fdPeople(p).length);
+  const nPeople = named.reduce((a, p) => a + fdPeople(p).length, 0);
+  el.innerHTML = `<div class="sh"><h2>Founders<span>the people building onchain options · published names only, every one sourced</span></h2></div>
+    <div class="fdw">
+      <div class="fdw-h"><b>${nPeople}</b><span>founders behind ${named.length} Friends</span></div>
+      <div class="fdw-g">${named.flatMap(p => fdPeople(p).map(f => fdCard(f, p))).join('')}</div>
+      ${hidden.length ? `<div class="fdw-anon"><small>TEAM NOT PUBLIC YET</small><div class="fdw-chips">${hidden.map(p => `<a href="${deepHref(p)}">${logo(p)}<span>${esc(p.name)}</span></a>`).join('')}</div><p>These Friends haven’t published founder names. Know the team? Tell <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p></div>` : ''}
+    </div>
+    ${tracked.length ? `<div class="fdw-t"><small>ALSO IN THE ECOSYSTEM</small><div class="fdw-g sm">${tracked.flatMap(p => fdPeople(p).map(f => fdCard(f, p))).join('')}</div></div>` : ''}
+    <p class="bk-fn" style="margin-top:14px">Sources marked AGG are data aggregators, not the project itself. Corrections: <a href="https://x.com/0xdefidaniel" target="_blank" rel="noopener noreferrer">@0xdefidaniel</a></p>`;
 }
 // 앱 화면 (shots.mjs 가 매주 찍는다)
 const SHOTS = BOOT.shots || {};
@@ -3199,7 +3310,7 @@ $('fdKind').addEventListener('click', e => { const b = e.target.closest('button'
 // ── 큰 정보별 탭 ──
 const SUBS = {
   compare:[],
-  overview:[['finder','Start here'],['planets','Planet map'],['friends','Friends'],['ecosystem','Whole ecosystem'],['live','Live points'],['pretge','Pre-TGE friends'],['codes','My ref codes'],['watch','Watchlist'],['content','Content'],['log','Weekly log']],
+  overview:[['finder','Start here'],['planets','Planet map'],['friends','Friends'],['founders','Founders'],['ecosystem','Whole ecosystem'],['live','Live points'],['pretge','Pre-TGE friends'],['codes','My ref codes'],['watch','Watchlist'],['content','Content'],['log','Weekly log']],
   fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['underlying','By underlying'],['trades','Largest trades'],['venues','Venues'],['track','Race'],['comps','Derive comps']],
   'trader-views':[['traders','Traders'],['institutions','Institutions']],
   strategy:[['now','Market now'],['log','Sentiment log'],['plays','Today’s plays'],['macro','Macro playbook']],
@@ -4531,7 +4642,7 @@ function enterSite(){
 function renderAll(){
   if (location.hash === '#share/podium') { location.replace('#/compare/benchmark'); }
   if (location.hash.startsWith('#share/')) { renderShare(location.hash.slice(7)); return; }
-  renderHead(); renderTicker(); renderSubscribe(); renderFinder(); buildSurface(); buildOrrery(); renderClients(); renderHabitats(); renderFeed(); renderLog();
+  renderHead(); renderTicker(); renderSubscribe(); renderFinder(); buildSurface(); buildOrrery(); renderClients(); renderFounders(); renderHabitats(); renderFeed(); renderLog();
   delete $('v-race').dataset.on; delete $('v-fund').dataset.on; delete $('v-strat').dataset.on; delete $('v-oracle').dataset.on; delete $('v-new').dataset.on; delete $('v-guide').dataset.on;
   current = null; route();
   document.documentElement.dataset.h = Math.ceil(document.querySelector('.wrap').getBoundingClientRect().bottom + scrollY);
