@@ -1751,6 +1751,62 @@ a.eq-pt:hover .eq-ring{stroke:var(--amber);stroke-dasharray:none}
   .eq-q h4 small{display:block;font-size:11px;color:var(--mute);font-weight:400}
   .eq-q>div{display:flex;flex-wrap:wrap;gap:6px}
 }
+/* ── 모바일 앱 레이아웃 (웹과 다름): 하단 탭바 · 섹션 하나씩 · 촘촘한 목록 ── */
+.mtab,.msheet,.mnext{display:none}
+@media (max-width:640px){
+  body{padding-bottom:calc(74px + env(safe-area-inset-bottom))}
+  .mtab:not([hidden]){display:grid;grid-template-columns:repeat(6,1fr);position:fixed;left:0;right:0;bottom:0;z-index:60;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:rgba(12,13,10,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line2)}
+  .mtab a,.mtab button{all:unset;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 0;color:var(--mute);-webkit-tap-highlight-color:transparent}
+  .mtab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .mtab button svg{fill:currentColor;stroke:none}
+  .mtab span{font-size:11px;letter-spacing:.02em}
+  .mtab .on{color:var(--amber)}
+  .msheet:not([hidden]){display:block;position:fixed;inset:0;z-index:55;background:rgba(0,0,0,.5)}
+  .msheet-b{position:absolute;left:10px;right:10px;bottom:calc(80px + env(safe-area-inset-bottom));padding:10px;border:1px solid var(--line2);border-radius:18px;background:rgba(18,19,16,.98);box-shadow:0 30px 70px rgba(0,0,0,.7)}
+  .msheet-b small{display:block;font-size:11px;letter-spacing:.1em;color:var(--mute);padding:6px 10px}
+  .msheet-b a{display:flex;justify-content:space-between;padding:13px 10px;font-size:16px;color:var(--ink);border-top:1px solid var(--line)}
+  .msheet-b a i{font-style:normal;color:var(--mute)}
+  .msheet-b a[aria-current=page]{color:var(--amber)}
+  .mnav,.crumbbar .home-btn{display:none!important}
+  .crumbbar .bc{font-size:20px!important}
+  .ticker{height:28px;font-size:11px}
+  .mnext:not([hidden]){display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:stretch;margin:22px 0 6px}
+  .mnext a{display:flex;flex-direction:column;justify-content:center;padding:14px 16px;border:1px solid var(--line2);border-radius:14px;font-size:14px;color:var(--ink2)}
+  .mnext a.nx{text-align:right;align-items:flex-end;color:var(--ink);border-color:rgba(242,181,68,.5);background:rgba(242,181,68,.06)}
+  .mnext a.nx small{font-size:11px;letter-spacing:.1em;color:var(--amber)}
+  /* 홈: 숫자 3개 한 줄 + 버튼 전체폭 */
+  .m-info{grid-template-columns:repeat(3,1fr)!important;gap:8px!important;margin-top:18px!important}
+  .m-info>div{padding:10px!important;border:1px solid var(--line2);border-radius:12px;background:rgba(10,11,9,.6)}
+  .m-info>div p{display:none}
+  .m-info b{font-size:12.5px!important;line-height:1.35}
+  .m-info .cta{grid-column:1/-1;justify-content:space-between;padding:16px 18px!important;border-radius:14px}
+  /* 프로젝트 목록: 캡처 카드 → 한 줄 목록 */
+  #v-deep .dc,.nw{display:grid!important;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;padding:12px 14px!important;border-radius:14px;min-height:0!important}
+  #v-deep .dc .th,.nw .th{display:none!important}
+  #v-deep .dc .hd{grid-column:1/-1;display:flex;align-items:center;gap:10px;padding:0!important}
+  #v-deep .dc .hd img,#v-deep .dc .hd .logo-ph{width:34px!important;height:34px!important}
+  #v-deep .dc .hd b{font-size:16px}
+  #v-deep .dc .hd .ch{margin-left:auto}
+  #v-deep .dc>p{display:none}
+  #v-deep .dc{padding:10px 12px!important}
+  #v-deep .dc .hd>div{display:flex;align-items:baseline;gap:8px;min-width:0}
+  #v-deep .dc .hd>div small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #ddIdx h2+p,#v-new h2+p{display:none}
+  .dx-f button{padding:6px 12px!important;font-size:12.5px!important}
+  #v-deep .dc .ft{grid-column:1/-1;padding:4px 0 0 44px!important;border:0!important;font-size:12.5px}
+  #v-deep .dg,#v-deep .deep-grid,#v-deep .dgrid{gap:8px!important}
+  .nw .bd{display:contents}
+  .nw .hd{grid-column:1;display:flex;align-items:center;gap:10px}
+  .nw .hd img,.nw .hd .logo-ph{width:34px!important;height:34px!important}
+  .nw .wh{grid-column:1/-1;grid-row:auto;display:flex!important;align-items:center;gap:8px;flex-wrap:wrap;margin:6px 0 0 44px;font-size:12.5px!important;position:static!important;text-align:left}
+  .nw .wh b{font-size:11px!important;padding:2px 8px!important}
+  .nw .wh small{font-size:11px!important}
+  .nw .hd>div{min-width:0}
+  .nw>.bd>p{grid-column:1/-1;font-size:14px;margin:6px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .nw .kw2{display:none}
+  .nw .lk{grid-column:1/-1;margin-top:8px}
+  .nw .ref{grid-column:1/-1}
+}
 /* Deep 압축: 첫 화면에 숫자 */
 body[data-view=deep] .subnav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
 body[data-view=deep] .subnav a.sb{flex:none;white-space:nowrap}
@@ -1926,6 +1982,15 @@ p{line-height:1.6}
     </nav>
   </div>
   <nav class="subnav" id="subnav" aria-label="Sections" hidden></nav>
+  <nav class="mtab" id="mtab" aria-label="Main">
+    <a href="#/home" data-t="home"><svg viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7M6 9.5V20h12V9.5"/></svg><span>Home</span></a>
+    <a href="#/strategy" data-t="strategy"><svg viewBox="0 0 24 24"><path d="M3 13h4l2.5-6 4 11 2.5-5H21"/></svg><span>Sentiment</span></a>
+    <a href="#/fundamentals" data-t="fundamentals"><svg viewBox="0 0 24 24"><path d="M5 20V11M10 20V5M15 20v-7M20 20V8"/></svg><span>Data</span></a>
+    <a href="#/overview" data-t="overview"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><ellipse cx="12" cy="12" rx="9" ry="4.2"/></svg><span>Ecosystem</span></a>
+    <a href="#/deep" data-t="deep"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Projects</span></a>
+    <button type="button" data-t="more" id="mtabMore" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg><span>More</span></button>
+  </nav>
+  <div class="msheet" id="msheet" hidden><div class="msheet-b" id="msheetB"></div></div>
   <p class="sub" id="sub" hidden></p>
 
 
@@ -2122,6 +2187,7 @@ p{line-height:1.6}
     <article id="dd" class="dpage" hidden></article>
   </main>
 
+  <div class="mnext" id="mnext" hidden></div>
   <footer>
     <span id="src"></span>
     <button id="refresh">Refresh live prices</button>
@@ -3150,11 +3216,16 @@ function renderSubnav(page, sub){
     (pg === page && items.length ? [...(page === 'overview' || page === 'trader-views' ? [] : [['all', pg === 'deep' ? 'All projects' : 'All']]), ...items].map(([k, l], i) => `<a class="sb" href="#/${pg}${k === 'all' ? '' : '/' + k}" aria-current="${(sub || 'all') === k}">${pg === 'deep' && k !== 'all' && byName(l) ? `<span class="lg">${logo(byName(l))}</span>` : `<span class="k">${String(i + (page === 'overview' ? 1 : 0)).padStart(2,'0')}</span>`}${esc(l)}</a>`).join('') : '')).join('');
   // 모바일: 칩 대신 선택 목록 하나 (가로로 밀 필요 없게)
   if (items.length) {
-    const opts = [...(page === 'overview' || page === 'trader-views' ? [] : [['all', page === 'deep' ? 'All projects' : 'All sections']]), ...items];
+    const mob = matchMedia('(max-width:640px)').matches;
+    const opts = [...(page === 'overview' || page === 'trader-views' || (mob && page !== 'deep') ? [] : [['all', page === 'deep' ? 'All projects' : 'All sections']]), ...items];
     const curK = page === 'deep' ? (sub || (current && !current.core ? '__cur' : 'all')) : (sub || 'all');
     if (curK === '__cur') opts.splice(1, 0, ['__cur', current.name]);
     nav.insertAdjacentHTML('afterbegin', `<label class="subsel"><span>${page === 'deep' ? 'Project' : 'Section'}</span><select aria-label="${page === 'deep' ? 'Switch project' : 'Jump to section'}">${opts.map(([k, l]) => `<option value="${k}"${k === curK ? ' selected' : ''}>${esc(l)}</option>`).join('')}</select></label>`);
     nav.querySelector('.subsel select').onchange = e => { const k = e.target.value; if (k !== '__cur') location.hash = `#/${page}${k === 'all' ? '' : '/' + k}`; };
+    // 모바일: 섹션 끝에 '다음 섹션' (긴 스크롤 대신 한 섹션씩)
+    const mn = $('mnext'); if (mn) { const i = items.findIndex(([k]) => k === sub), nx = items[i + 1], pv = items[i - 1];
+      mn.hidden = !(mob && page !== 'deep' && i >= 0);
+      mn.innerHTML = mn.hidden ? '' : `${pv ? `<a class="pv" href="#/${page}/${pv[0]}">← ${esc(pv[1])}</a>` : '<span></span>'}${nx ? `<a class="nx" href="#/${page}/${nx[0]}"><small>NEXT</small>${esc(nx[1])} →</a>` : ''}`; }
   }
   // 왼쪽 목록 접기/펴기 (이 브라우저에만 기억)
   nav.classList.toggle('folded', SUBFOLD);
@@ -3547,6 +3618,15 @@ async function tkSave(payload){
     if ($('tkMsg')) $('tkMsg').textContent = 'Saved — pushing to opshnz.com (live in about a minute).';
   } catch (e) { if ($('tkMsg')) $('tkMsg').textContent = 'Not saved: ' + e.message; }
 }
+
+// 모바일 More 시트: 탭바에 없는 페이지들
+(() => {
+  const btn = $('mtabMore'), sh = $('msheet'); if (!btn || !sh) return;
+  const fill = () => { const main = new Set(['strategy', 'fundamentals', 'overview', 'deep']);
+    $('msheetB').innerHTML = '<small>MORE</small>' + PAGES.filter(([pg]) => !main.has(pg)).map(([pg, l]) => `<a href="#/${pg}" data-r="${pg}">${esc(l.replace(/^\d+ /, ''))}<i>→</i></a>`).join(''); };
+  btn.onclick = () => { if (sh.hidden) fill(); sh.hidden = !sh.hidden; btn.setAttribute('aria-expanded', String(!sh.hidden)); };
+  sh.onclick = e => { if (e.target === sh) { sh.hidden = true; btn.setAttribute('aria-expanded', 'false'); } };
+})();
 
 function traderViewWindow(config, now=Date.now()) {
   const days=7, valid=v=>v && /^https:\/\//.test(v.url || '') && /^\d{4}-\d{2}-\d{2}$/.test(v.date || '') && v.publisher && v.view;
@@ -4226,6 +4306,7 @@ function route(){
   let sub = !home && !TG ? (h.split('/')[2] || '').split('?')[0] : '';
   if (page === 'compare') sub = '';
   if (page === 'trader-views' && !['traders','institutions'].includes(sub)) sub = 'traders';
+  if (matchMedia('(max-width:640px)').matches && (SUBS[page] || []).length && (!sub || sub === 'all')) sub = SUBS[page][0][0];
   let bc = {'my-take':'MY TAKE', 'trader-views':'TRADER VIEWS', launches:'PERP DEXS LAUNCHING OPTIONS', compare:'COMPARE TO DERIBIT', overview:'ECOSYSTEM OVERVIEW', fundamentals:'OPTION FUNDAMENTAL', strategy:'SENTIMENT', deep:'DEEP DIVE', new:'NEW PROJECTS', guide:'STRATEGY GUIDE'}[page] || '';
   if (page === 'fundamentals') {
     if (!$('v-fund').dataset.on) { $('v-fund').dataset.on = 1; renderFund(); }
@@ -4249,6 +4330,10 @@ function route(){
     } else { if (current) scrollTo({top:0}); current = null; renderDeepIndex(); sub = ''; }
   }
   $('bcHere').innerHTML = bc;
+  if ($('mtab')) { const more = !['home', 'strategy', 'fundamentals', 'overview', 'deep'].includes(page);
+    $('mtab').hidden = !!TG || isIntroHash(location.hash);
+    $('mtab').querySelectorAll('[data-t]').forEach(a => a.classList.toggle('on', a.dataset.t === page || (a.dataset.t === 'more' && more)));
+    $('msheet').hidden = true; $('mtabMore').setAttribute('aria-expanded', 'false'); }
   if ($('mnavG') && !$('mnavG').childElementCount) $('mnavG').innerHTML = document.querySelector('.crumbbar .cnav').innerHTML;
   if ($('mnav')) { $('mnav').open = false; const cur = (PAGES.find(([pg]) => pg === page) || [, ''])[1]; $('mnavCur').textContent = 'Menu'; }
   document.querySelectorAll('[data-r]').forEach(a => a.setAttribute('aria-current', a.dataset.r === page ? 'page' : 'false'));
