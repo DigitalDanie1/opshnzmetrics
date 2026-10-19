@@ -1,5 +1,5 @@
 {
-  "headline": "This week: Derive V3 goes live, Dream V2 ships on iOS & Android, Heat and HARDCORE launch, and Split Markets routes options through Paradex RFQ.",
+  "headline": "This week · Oct 12–18: Derive adds HyperEVM deposits, Dream extends options to one year, Hedgehood launches Stock Yield v2, and Gage enables credit rollovers.",
   "relations": [
     {
       "a": "Odette",
@@ -368,7 +368,7 @@
         "Ex-Lyra",
         "#1 onchain options"
       ],
-      "note": "Derive V3 went live: Ethereum custody, ZK margin and settlement, no-code vaults",
+      "note": "Added direct USDC deposits from HyperEVM and PUMP options/perps; introduced Smart RFQ price protection.",
       "app": "https://www.derive.xyz/options/eth",
       "backers": {
         "total": null,
@@ -477,7 +477,7 @@
         "Paradigm-incubated",
         "Perps"
       ],
-      "note": "Options live on Split Markets via Paradex RFQ; XP Season 3 ended after Week 35",
+      "note": "Portfolio margin is invite-only; the team illustrated a BTC trade requiring $5,202 margin versus $16,420 on cross margin.",
       "deep": {
         "thesis": "",
         "catalysts": [],
@@ -617,7 +617,7 @@
         "Pre-launch perps",
         "Own rollup"
       ],
-      "note": "More than 27m $AEVO staked, 27.6m in October, up from 26m in September",
+      "note": "Outlined its projected 808,800 USDC year-end reward: 10M qualifying options/Perp Majors volume plus an active COMMANDER or LEGEND stake.",
       "app": "https://app.aevo.xyz/option/eth",
       "backers": {
         "total": null,
@@ -696,7 +696,7 @@
         "No liquidations",
         "SpaceX & S&P options"
       ],
-      "note": "",
+      "note": "Team reports $640M cumulative options notional since June, with 80% on US500 options; these are publisher-reported figures.",
       "deep": {
         "thesis": "The options layer on Hyperliquid — extends SYN utility instead of launching a new token",
         "catalysts": [
@@ -761,7 +761,7 @@
         "AMM liquidity",
         "OG"
       ],
-      "note": "",
+      "note": "Teased 0DTE digital options on TSLA for V2; the post describes an upcoming product, not a confirmed live launch.",
       "deep": {
         "thesis": "",
         "catalysts": [],
@@ -892,7 +892,7 @@
         "Points",
         "HYPE options"
       ],
-      "note": "Dream V2 live on iOS and Android; added NEAR, TAO, DOGE options; reports $40M+ notional volume",
+      "note": "Extended options expiries on all assets to one year, through October 15, 2027; distributed 100,000 Week 1 points.",
       "deep": {
         "thesis": "",
         "catalysts": [
@@ -965,7 +965,7 @@
         "24/7",
         "Non-custodial"
       ],
-      "note": "",
+      "note": "Announced that points and referral rebates are coming soon; no launch date stated.",
       "app": "https://callput.app",
       "backers": {
         "level": "none",
@@ -1005,7 +1005,7 @@
         "Non-custodial",
         "Self-custody"
       ],
-      "note": "",
+      "note": "Previewed its approaching closed alpha; no public launch date confirmed in the announcement.",
       "app": "https://joyride.exchange",
       "isNew": true,
       "backers": {
@@ -1083,7 +1083,7 @@
         "Points",
         "Season 1 airdrop"
       ],
-      "note": "Added 10 markets incl. HYPE, XRP, AAPL; Seeker holders get 1.25x points",
+      "note": "Season 0 leaderboard is live; the team says trading, liquidity provision and referrals earn points toward a 100M OLIVE allocation.",
       "app": "https://olive.exchange",
       "isNew": true,
       "backers": {
@@ -1122,7 +1122,7 @@
         "Unsecured credit",
         "Option vaults"
       ],
-      "note": "Launched credit scores with Cred Protocol; LCC passed $10M total value promised",
+      "note": "Launched promise looping on LCC, with commitments up to 6.25x net worth; team reports LCC passed $10M total value promised.",
       "app": "https://app.3jane.xyz",
       "backers": {
         "total": null,
@@ -1185,7 +1185,7 @@
         "BVIV / EVIV",
         "Vol perps"
       ],
-      "note": "",
+      "note": "Published BTC derivatives OI analysis: options represent about 58.9% including ETF options; this is a market-structure observation, not a new launch.",
       "deep": {
         "thesis": "The benchmark index company behind BVIV — the “VIX for Bitcoin”",
         "catalysts": [
@@ -1509,7 +1509,7 @@
       "keywords": [
         "Risk exchange"
       ],
-      "note": "Published September monthly report; Upscale trading tournament runs to Oct 21",
+      "note": "Published its September report and reminded traders that the tournament runs until October 21, 23:59 UTC.",
       "backers": {
         "total": null,
         "totalNote": "",
@@ -1578,7 +1578,7 @@
         "USDC cash-settled",
         "Thetanuts V4"
       ],
-      "note": "",
+      "note": "Published weekly trading leaderboard results with $500, $200 and $100 prizes for the top three traders.",
       "backers": {
         "level": "none",
         "summary": null,
@@ -1612,7 +1612,7 @@
         "DAO",
         "Onchain settlement"
       ],
-      "note": "Weekly burn report: 8,904 RCH burned in the prior week",
+      "note": "October 12 burn update reports 8,904 RCH burned for the preceding week; not a new burn total for October 12–18.",
       "backers": {
         "level": "none",
         "summary": null,
@@ -1712,7 +1712,7 @@
         "CLAMM",
         "Ex-Dopex"
       ],
-      "note": "Outlined Stryke on Robinhood Chain: crypto and tokenized-stock options; SYK staking moving there",
+      "note": "",
       "backers": {
         "level": "none",
         "summary": null,
@@ -1810,7 +1810,7 @@
         "Covered calls",
         "Cash-secured puts"
       ],
-      "note": "Acquired by VS Group; trading resumed on HyperEVM, Season 1 points frozen",
+      "note": "Announced acquisition by VS Group and resumption of trading on HyperEVM.",
       "isNew": false,
       "backers": {
         "level": "none",
@@ -1895,7 +1895,7 @@
       "status": "Just launched",
       "since": "2026-10",
       "isNew": true,
-      "note": "Published fractional-options manifesto at omen.trade/manifesto; trading platform not yet public",
+      "note": "",
       "deep": {
         "thesis": "",
         "catalysts": [],
@@ -1956,7 +1956,7 @@
       "status": "Live · V2",
       "since": "2026-09",
       "isNew": true,
-      "note": "V2 live: 7- or 21-day loans against tokenized stocks, memes and Robinhood-ecosystem tokens; lenders and Earn vaults collect the fixed cost",
+      "note": "Launched one-click and automatic credit rollovers, allowing borrowers to renew credit before expiry or on expiry day.",
       "deep": {
         "thesis": "Options in loan form. Pledging NVDA for USDG with the right to walk away at expiry is economically a put struck at the reclaim cap: the borrower is long the put, lenders are short it and earn the fixed cost as premium. No oracle and no liquidation in the deal path — the decision happens only at expiry.",
         "catalysts": [
@@ -2027,7 +2027,7 @@
       "status": "Public beta",
       "since": "2026-08",
       "isNew": true,
-      "note": "BTC, ETH, ZEC and STRK touch options; one-click trade sharing so followers can copy a position (Oct 13)",
+      "note": "Added one-click trade sharing/copy links; team reports $444K daily notional, including $365K STRK exposure from two traders.",
       "deep": {
         "thesis": "Barrier-style payoffs for retail: a one-touch option settles the moment price taps the strike, so a flash wick pays out instead of liquidating you — the opposite of perps.",
         "catalysts": [
@@ -2095,7 +2095,7 @@
       "status": "Live",
       "since": "2026-07",
       "isNew": true,
-      "note": "Saffron Vaults on 9 chains incl. Robinhood Chain; tokenized-stock pools such as MSTR/USDG (70% fixed APR, per the team); SFI relisted on Indodax Oct 8",
+      "note": "",
       "deep": {
         "thesis": "Not an options venue, but options-adjacent: Uniswap LP fees rise with trading volume and volatility, so buying the variable side is a long-volatility-style trade, and the fixed side sells that exposure for a known rate.",
         "catalysts": [
@@ -2161,7 +2161,7 @@
         "Covered calls",
         "Stock lending"
       ],
-      "note": "Launched NVDA Printer weekly covered-call vault on Robinhood Chain; week-1 premium 447.68 USDG",
+      "note": "Stock Yield v2 launched: seven stocks, eight funds and transferable ERC-20 shares; access opened to all depositors and HEDGE staking earns a share of fees.",
       "auto": true,
       "backers": {
         "level": "none",
@@ -2249,7 +2249,7 @@
         "Copy trading",
         "RFQ"
       ],
-      "note": "Went live: chart-based options trading via Derive RFQ; USDC deposits from 4 chains",
+      "note": "Announced its chart-based options interface is live, with trades routed through Derive RFQ.",
       "deep": {
         "thesis": "",
         "catalysts": [
@@ -2301,7 +2301,7 @@
         "RFQ",
         "$HARD"
       ],
-      "note": "Introduced HARDCORE Vault, an automated vault buying far out-of-the-money tail-risk options",
+      "note": "Introduced an automated vault buying far out-of-the-money options for extreme market moves in either direction.",
       "deep": {
         "thesis": "",
         "catalysts": [
@@ -2359,7 +2359,7 @@
         "Funding arb",
         "AI Co-Pilot"
       ],
-      "note": "Launched Compose, a Yes/No options trade builder; Paradex RFQ execution added",
+      "note": "Added a live options tape and trader leaderboard with verified P&L; simplified trade cards show fees and estimated payouts.",
       "deep": {
         "thesis": "",
         "catalysts": [
@@ -2420,7 +2420,7 @@
       "status": "Waitlist",
       "since": "2026-07",
       "isNew": true,
-      "note": "Waitlist open; built by ex-Bridgewater and NYSE volatility traders for token issuers, desks and quants",
+      "note": "",
       "deep": {
         "thesis": "Most onchain options venues list a fixed menu of strikes and expiries, so long-tail tokens never get a market. IVY flips it: you state the outcome (or the minimum APR you want) and the protocol prices and opens that market — options for every token, not just BTC and ETH.",
         "catalysts": [
@@ -2508,46 +2508,95 @@
     ]
   },
   "traderViews": {
-    "checkedAt": "2026-10-15T09:18:03.288919+00:00",
+    "checkedAt": "2026-10-19T02:16:50.795686+00:00",
     "windowDays": 7,
     "sources": [
       {
         "name": "QCP Capital",
         "url": "https://www.qcpgroup.com/topic/market-updates/",
-        "status": "Verified a dated market view from Oct 12."
+        "status": "Oct 16 market colour verified, but it discusses macro/AI credit rather than a fresh options view. Oct 12 options commentary retained in the historical archive after the seven-day display window."
       },
       {
         "name": "Greeks.live",
         "url": "https://www.greeks.live/",
-        "status": "Public page did not expose a readable dated view in this check; official social posts need verification."
+        "status": "Verified Oct 16 public official X commentary on low IV and rolling put protection; website itself has no readable research text."
       },
       {
         "name": "Deribit Insights",
         "url": "https://insights.deribit.com/industry/",
-        "status": "Latest readable industry and option-flow pages checked; no qualifying last-7-day view verified."
+        "status": "Official website, option-flow index and public X checked; latest visible X report is Sep 30. No qualifying Oct 12–18 options view verified."
       },
       {
         "name": "Block Scholes",
         "url": "https://www.blockscholes.com/resource-centre",
-        "status": "Research index checked; no qualifying last-7-day market view verified."
+        "status": "Verified Oct 13 BSIV commentary on official public X. Oct 16 premium macro report not used as an options view; no paywall bypassed."
       },
       {
         "name": "Glassnode",
         "url": "https://research.glassnode.com/",
-        "status": "Verified options commentary in the Oct 12 Market Pulse."
+        "status": "Oct 12 options pulse rechecked and kept in archive after the seven-day display window. Oct 14 Boxed In is on-chain/futures context, not a new options-specific view."
       },
       {
         "name": "Amberdata",
         "url": "https://blog.amberdata.io/tag/featured",
-        "status": "Public index checked; no qualifying last-7-day options view verified."
+        "status": "Public blog redirects to a Kaiko acquisition announcement; attempted AmberdataInc X URL returns 404. No fresh accessible Amberdata options view verified."
       },
       {
         "name": "Volmex",
         "url": "https://blog.volmex.finance/",
-        "status": "Public blog checked; no qualifying last-7-day market view verified."
+        "status": "Verified Oct 15 official X options-market structure analysis. Blog latest visible post is July 2025; not reused as current."
       }
     ],
     "items": [
+      {
+        "id": "greeks-2026-10-16",
+        "publisher": "Greeks.live",
+        "author": "Greeks.live",
+        "date": "2026-10-16",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Near term / monthly options",
+        "stance": "Downside protection",
+        "title": "Cheap implied volatility keeps put hedges relevant",
+        "view": "Greeks.live describes BTC implied volatility as unusually low and buyers as reluctant to pay for risk. After the weekly decline, the publisher still favours rolling monthly out-of-the-money put protection; it also notes gamma building around $80K puts.",
+        "url": "https://x.com/GreeksLive/status/2111026279692857722",
+        "type": "Options desk commentary"
+      },
+      {
+        "id": "blockscholes-2026-10-13",
+        "publisher": "Block Scholes",
+        "author": "Block Scholes",
+        "date": "2026-10-13",
+        "assets": [
+          "BTC",
+          "ETH",
+          "SOL"
+        ],
+        "horizon": "30-day implied volatility",
+        "stance": "Low vol / event repricing",
+        "title": "Volatility rose, but remains low by the publisher’s classification",
+        "view": "Block Scholes reports 30-day implied volatility of 38.8% for BTC, 54.8% for ETH and 60.5% for SOL, all higher over seven days. It classifies BTC and SOL volatility as low and ETH as below average, highlighting weekend repricing ahead of oil futures reopening.",
+        "url": "https://x.com/BlockScholes/status/2109962975566008538",
+        "type": "Volatility research"
+      },
+      {
+        "id": "volmex-2026-10-15",
+        "publisher": "Volmex",
+        "author": "Volmex",
+        "date": "2026-10-15",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Market structure / October 15 snapshot",
+        "stance": "Options market structure",
+        "title": "Options become central to Bitcoin risk positioning",
+        "view": "Volmex argues that options have become central to Bitcoin derivatives risk even though perpetuals trade more volume. Its October 15 snapshot attributes about 58.9% of combined BTC derivatives open interest to options, including US ETF options; this is its market-structure interpretation, not a directional forecast.",
+        "url": "https://x.com/volmexfinance/status/2110820754585538966",
+        "type": "Market-structure commentary"
+      }
+    ],
+    "archive": [
       {
         "id": "qcp-2026-10-12",
         "publisher": "QCP Capital",
@@ -2578,8 +2627,7 @@
         "url": "https://research.glassnode.com/btc-market-pulse-week-42-2026/",
         "type": "Research view"
       }
-    ],
-    "archive": []
+    ]
   },
   "traders": [
     {
