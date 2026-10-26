@@ -212,5 +212,25 @@
   "kind": "content",
   "text": "New article: Introducing HARDCORE Vault: Bet On the Moves Nobody Expects. Long 2σ-3σ Convexity With Tails.",
   "href": "https://x.com/JoinHARDCORE/status/2109947295642833395"
+ },
+ {
+  "d": "2026-10-26",
+  "kind": "new",
+  "text": "New options project spotted: Ace.Pro",
+  "href": "#/deep/Ace.Pro"
+ },
+ {
+  "d": "2026-10-26",
+  "kind": "move",
+  "text": "$DIME −9.9% in 24h",
+  "href": "#/deep/Paradex",
+  "key": "$DIME"
+ },
+ {
+  "d": "2026-10-26",
+  "kind": "vol",
+  "text": "BVIV 39.9 (−2.4% 24h) — BTC implied vol easing",
+  "href": "#/deep/Volmex",
+  "key": "BVIV"
  }
 ]

@@ -2469,6 +2469,25 @@
         "people": [],
         "note": "Founders have not been named publicly."
       }
+    },
+    {
+      "ticker": "",
+      "name": "Ace.Pro",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Hyperliquid",
+      "what": "Short-term directional options on HyperEVM",
+      "cg": "",
+      "llama": [
+        "ace.pro"
+      ],
+      "site": "https://ace.pro",
+      "x": "acedotpro",
+      "keywords": [],
+      "note": "",
+      "auto": true
     }
   ],
   "benchmark": {
