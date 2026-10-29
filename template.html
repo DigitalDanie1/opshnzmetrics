@@ -1657,10 +1657,20 @@ b,strong,th{font-weight:600}
 .sc-how summary:hover{color:var(--ink)}
 /* 홈 카드: 모바일에선 겹치지 않게 2열 격자 */
 @media (max-width:640px){
-  #mStage{display:grid!important;grid-template-columns:1fr 1fr;gap:8px}
+  #mStage{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
   #mStage>svg,#mStage>canvas,#mStage #volsurf{grid-column:1/-1}
-  #mStage .spec{position:relative;left:auto!important;top:auto!important;transform:none;margin:0!important;min-width:0}
-  #mStage .spec b{white-space:normal}
+  #mStage .spec{position:relative;left:auto!important;top:auto!important;transform:none;margin:0!important;min-width:0;min-height:108px;padding:12px 12px 22px;background:rgba(10,11,9,.86)}
+  #mStage .spec small{font-size:10px;letter-spacing:.04em;gap:4px;padding-right:22px;white-space:nowrap}
+  #mStage .spec b{white-space:normal;font-size:14px;line-height:1.4;margin-top:10px;padding-right:12px;text-wrap:balance}
+  #mStage .spec b::after{display:none}
+  #mStage .spec i{width:auto;height:auto;border:0;right:10px;bottom:7px;font-style:normal;color:var(--amber)}
+  #mStage .spec i::after{content:"→"}
+  #mStage .spec .learn{width:36px;height:36px;right:0;top:0;font-size:12px;border:0;background:transparent}
+  #mStage .spec .learn:focus-visible{outline:2px solid var(--amber);outline-offset:-4px}
+  #mStage .spec[href="#/strategy"]{border-color:rgba(242,181,68,.65);background:rgba(242,181,68,.06)}
+  #mStage .spec[href="#/strategy"] b{color:var(--amber)}
+  #mStage .spec[href="#/overview/live"]{grid-column:1/-1;min-height:80px}
+  #mStage .spec[href="#/overview/live"]>span{display:block;white-space:normal;font-size:12px;padding-right:24px}
   #mStage .spec::after{display:none}
 }
 /* 모바일 전용: 홈 메뉴 정렬 · 세로선 제거 · 곡면 크게 (데스크톱 >900px 은 그대로) */
@@ -1837,11 +1847,16 @@ a.eq-pt:hover .eq-ring{stroke:var(--amber);stroke-dasharray:none}
   .mnext a{display:flex;flex-direction:column;justify-content:center;padding:14px 16px;border:1px solid var(--line2);border-radius:14px;font-size:14px;color:var(--ink2)}
   .mnext a.nx{text-align:right;align-items:flex-end;color:var(--ink);border-color:rgba(242,181,68,.5);background:rgba(242,181,68,.06)}
   .mnext a.nx small{font-size:11px;letter-spacing:.1em;color:var(--amber)}
-  /* 홈: 숫자 3개 한 줄 + 버튼 전체폭 */
-  .m-info{grid-template-columns:repeat(3,1fr)!important;gap:8px!important;margin-top:18px!important}
-  .m-info>div{padding:10px!important;border:1px solid var(--line2);border-radius:12px;background:rgba(10,11,9,.6)}
+  /* 홈: 두 지표 + 줄바꿈 없는 별도 업데이트 행 */
+  .m-info{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;margin-top:16px!important}
+  .m-info>div{min-width:0;padding:12px 14px!important;border:1px solid var(--line2);border-radius:12px;background:rgba(10,11,9,.8)}
   .m-info>div p{display:none}
-  .m-info b{font-size:12.5px!important;line-height:1.35}
+  .m-info b{font-size:12px!important;line-height:1.4;letter-spacing:.04em}
+  .m-info .metric-value{display:block;font-size:26px;line-height:1.1;margin-bottom:5px;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+  .m-info .metric-label{color:var(--ink2);font-size:11px}
+  .m-info>div:nth-child(3){grid-column:1/-1;padding:8px 2px!important;border:0;border-radius:0;background:none}
+  .m-info #when{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11px!important;color:var(--mute)}
+  .m-info #when time{white-space:nowrap;color:var(--ink2)}
   .m-info .cta{grid-column:1/-1;justify-content:space-between;padding:16px 18px!important;border-radius:14px}
   /* 프로젝트 목록: 캡처 카드 → 한 줄 목록 */
   #v-deep .dc,.nw{display:grid!important;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;padding:12px 14px!important;border-radius:14px;min-height:0!important}
@@ -2004,11 +2019,11 @@ p{line-height:1.6}
     </div>
     <div class="m-stage" id="mStage">
       <svg id="volsurf" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid meet" aria-label="Implied volatility surface"></svg>
-      <a class="spec" href="#/overview" style="left:10.5%;top:44%" data-d="Delta moves with the underlying — see where every project sits and how it moved today"><small><span class="g">Δ</span> DELTA · STEP 03</small><b>ECOSYSTEM OVERVIEW</b><span>Planet map of the ecosystem</span><i></i><button class="learn" data-learn="delta" aria-label="Learn this Greek">?</button></a>
       <a class="spec" href="#/strategy" style="left:27%;top:6%" data-d="Gamma is acceleration — what to play in today’s market, and how to react when macro moves"><small><span class="g">Γ</span> GAMMA · STEP 01</small><b>SENTIMENT &amp; STRATEGY</b><span>Bull or bear? Start here</span><i></i><button class="learn" data-learn="gamma" aria-label="Learn this Greek">?</button></a>
+      <a class="spec" href="#/fundamentals" style="left:80.5%;top:58%" data-d="Vega is volatility — volume, premium, open interest and the fundamentals race"><small><span class="g">ν</span> VEGA · STEP 02</small><b>OPTION FUNDAMENTAL</b><span>Volume, premium, OI &amp; race</span><i></i><button class="learn" data-learn="vega" aria-label="Learn Vega">?</button></a>
+      <a class="spec" href="#/overview" style="left:10.5%;top:44%" data-d="Delta moves with the underlying — see where every project sits and how it moved today"><small><span class="g">Δ</span> DELTA · STEP 03</small><b>ECOSYSTEM OVERVIEW</b><span>Planet map of the ecosystem</span><i></i><button class="learn" data-learn="delta" aria-label="Learn this Greek">?</button></a>
       <a class="spec" href="#/deep" style="left:79%;top:9%" data-d="Theta is time — one page per project: history, timeline, notes and content"><small><span class="g">Θ</span> THETA · STEP 04</small><b>DEEP DIVE</b><span>One page per project</span><i></i><button class="learn" data-learn="theta" aria-label="Learn this Greek">?</button></a>
       <a class="spec" href="#/overview/live" style="left:47%;top:74%" data-d="Rho is yield — the points programs worth farming before their tokens launch"><small><span class="g">ρ</span> RHO · EXTRA</small><b>POINTS</b><span>Pre-TGE plays · in Overview</span><i></i><button class="learn" data-learn="rho" aria-label="Learn this Greek">?</button></a>
-      <a class="spec" href="#/fundamentals" style="left:80.5%;top:58%" data-d="Vega is volatility — volume, premium, open interest and the fundamentals race"><small><span class="g">ν</span> VEGA · STEP 02</small><b>OPTION FUNDAMENTAL</b><span>Volume, premium, OI &amp; race</span><i></i><button class="learn" data-learn="vega" aria-label="Learn Vega">?</button></a>
       <ul class="micro" style="left:4%;top:18%"><li>∂V/∂S</li><li>∂²V/∂S²</li><li>∂V/∂t</li><li>∂V/∂σ</li></ul>
       <ul class="micro" style="left:94%;top:44%"><li>strike ×</li><li>expiry ×</li><li>implied vol</li><li>surface</li></ul>
     </div>
@@ -2323,9 +2338,10 @@ const projTip = p => `<div><b>${esc(p.name)}</b><span class="t">${esc(tick(p))}<
 function renderHead(){
   const s = SNAP, d = new Date(s.at);
   if ($('wk')) $('wk').textContent = `W${s.week.slice(-2)} · ${s.week.slice(0,4)}`;
-  $('when').textContent = 'Updated ' + d.toLocaleDateString('en-US', {timeZone:'Asia/Seoul', year:'numeric', month:'short', day:'numeric'});
-  $('mFriends').textContent = `${clients().length} friends`;
-  $('mOthers').textContent = `${others().length} more projects`;
+  const updated = d.toLocaleDateString('en-US', {timeZone:'Asia/Seoul', year:'numeric', month:'short', day:'numeric'});
+  $('when').innerHTML = `<span>Updated</span> <time datetime="${d.toISOString()}">${updated}</time>`;
+  $('mFriends').innerHTML = `<span class="metric-value">${clients().length}</span> <span class="metric-label">friends</span>`;
+  $('mOthers').innerHTML = `<span class="metric-value">${others().length}</span> <span class="metric-label">more projects</span>`;
   $('headline').textContent = s.headline;
   $('headline').hidden = !s.headline;
   if ($('ddn')) $('ddn').textContent = s.projects.length;

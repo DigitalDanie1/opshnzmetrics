@@ -1,5 +1,5 @@
 {
-  "headline": "This week · Oct 19–25: Hypercall launches RFQ V2, Dream adds gold, Stryke CLAMM goes live on Robinhood, and Split Markets adds Lighter binary options.",
+  "headline": "Updated Oct 29: Fed holds at 3.75–4.00% in a 10–2 vote; Ace.Pro offers short-duration directional markets and liquidity vaults on HyperEVM.",
   "relations": [
     {
       "a": "Odette",
@@ -235,114 +235,82 @@
       }
     ],
     "macroNow": {
-      "tag": "HOT INFLATION",
-      "title": "US inflation came in hot — CPI 3.7%, and producer prices jumped the most since 2022",
-      "asOf": "2026-10-15",
+      "tag": "FED HOLDS · HAWKS DISSENT",
+      "title": "Fed holds at 3.75–4.00%; two members prefer a quarter-point hike",
+      "asOf": "2026-10-29",
       "facts": [
         {
-          "k": "CPI y/y",
-          "a": "3.7%",
-          "e": "3.6%",
-          "p": "3.4%",
-          "d": "Oct 14",
+          "k": "Fed Funds Rate",
+          "a": "3.75–4.00%",
+          "e": "",
+          "p": "3.75–4.00%",
+          "d": "Oct 28",
+          "hot": false
+        },
+        {
+          "k": "Vote split",
+          "a": "10-2 hold",
+          "e": "",
+          "p": "",
+          "d": "Oct 28",
           "hot": true
         },
         {
-          "k": "Core CPI m/m",
-          "a": "0.3%",
-          "e": "0.2%",
-          "p": "0.3%",
-          "d": "Oct 14",
-          "hot": false
-        },
-        {
-          "k": "Core CPI y/y",
-          "a": "2.6%",
-          "e": "2.5%",
-          "p": "2.4%",
-          "d": "Oct 14",
-          "hot": false
-        },
-        {
-          "k": "PPI m/m",
-          "a": "1.3%",
-          "e": "0.6%",
-          "p": "0.4%",
-          "d": "Oct 15",
+          "k": "Dissenters",
+          "a": "Cook & Hammack (+25bp)",
+          "e": "",
+          "p": "",
+          "d": "Oct 28",
           "hot": true
-        },
-        {
-          "k": "PPI y/y",
-          "a": "6.3%",
-          "e": "5.5%",
-          "p": "",
-          "d": "Oct 15",
-          "hot": false
-        },
-        {
-          "k": "Core PPI y/y",
-          "a": "5.0%",
-          "e": "4.4%",
-          "p": "",
-          "d": "Oct 15",
-          "hot": false
         }
       ],
       "read": [
         [
           "F",
-          "Energy drove it: gasoline +9.1% in CPI, +20.3% at the producer level (BLS)."
+          "The October 28 decision left rates unchanged. Cook and Hammack preferred a quarter-point increase."
         ],
         [
           "I",
-          "Higher-for-longer rates are back on the table — rate-cut hopes get pushed out."
+          "Hawkish dissent signals inflation concern; it does not determine the next decision."
         ],
         [
           "A",
-          "The Fed treats this as an energy shock, not a broad price spiral — core CPI is only 2.6%."
+          "Further inflation pressure could strengthen the case for tighter policy."
         ],
         [
           "C",
-          "If Fed Chair Warsh sounds hawkish (Oct 16, 12:30 KST), BTC is likely to test the $80k put wall; a calm, look-through tone keeps the range."
+          "Watch incoming data and December guidance before assuming a hike."
         ]
       ],
-      "options": "Options were already expensive before the print (87th percentile) and puts cost more than calls — the market had paid for protection, so the shock is partly priced.",
+      "options": "Compare current implied and realized volatility before choosing expiry or structure. Post-meeting volatility and expiry positioning are not verified in this editorial update.",
       "watch": [
         [
-          "Oct 16 · 12:30 KST",
-          "Fed Chair Warsh speaks"
+          "Dec 8–9",
+          "Next scheduled FOMC meeting"
         ],
         [
-          "Daily",
-          "BTC close vs the $80k put wall"
+          "Next releases",
+          "Inflation and employment data"
         ],
         [
-          "Daily",
-          "14d skew — puts vs calls"
+          "Live markets",
+          "Implied versus realized volatility"
         ]
       ],
       "sources": [
         [
-          "BLS CPI",
-          "https://www.bls.gov/news.release/cpi.nr0.htm"
+          "Fed statement",
+          "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
         ],
         [
-          "BLS PPI",
-          "https://www.bls.gov/news.release/ppi.nr0.htm"
-        ],
-        [
-          "CNBC",
-          "https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html"
+          "FOMC calendar",
+          "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
         ]
       ],
       "events": [
         [
-          "CPI",
-          "2026-10-14T12:30:00Z"
-        ],
-        [
-          "PPI",
-          "2026-10-15T12:30:00Z"
+          "FOMC",
+          "2026-10-28T18:00:00Z"
         ]
       ]
     }
@@ -2478,20 +2446,26 @@
       "lineage": "",
       "origin": "",
       "home": "Hyperliquid",
-      "what": "Short-term directional options on HyperEVM",
+      "what": "Short-duration price-direction markets and liquidity vaults on HyperEVM",
       "cg": "",
       "llama": [
         "ace.pro"
       ],
       "site": "https://ace.pro",
       "x": "acedotpro",
-      "keywords": [],
-      "note": "",
-      "auto": true
+      "keywords": [
+        "Directional markets",
+        "Short-duration rounds",
+        "Liquidity vaults",
+        "HyperEVM"
+      ],
+      "note": "Official docs describe directional market rounds and vault liquidity. Source: https://beta.ace.pro/docs",
+      "auto": true,
+      "app": "https://beta.ace.pro/"
     }
   ],
   "benchmark": {
-    "reviewedAt": "2026-10-15",
+    "reviewedAt": "2026-10-29",
     "anchors": [
       {
         "id": "closing",

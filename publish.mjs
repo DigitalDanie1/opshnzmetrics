@@ -142,7 +142,7 @@ console.log('✓ 빌드', out);
 const base = ['--headless=new', '--hide-scrollbars', '--force-device-scale-factor=2', '--virtual-time-budget=6000', ...(process.env.CI ? ['--no-sandbox'] : [])];
 function shoot(hash, png) {
   const url = 'file://' + out + hash;
-  const dom = execFileSync(CHROME, [...base, '--window-size=1080,1600', '--dump-dom', url], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+  const dom = execFileSync(CHROME, [...base, '--window-size=1080,1600', '--dump-dom', url], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 64 * 1024 * 1024 });
   const h = Math.min(4800, +(dom.match(/data-h="(\d+)"/) || [])[1] || 2400);
   execFileSync(CHROME, [...base, `--window-size=1080,${h}`, `--screenshot=${png}`, url], { stdio: 'ignore' });
   console.log('✓ 캡처', path.basename(png), `1080×${h}`);
