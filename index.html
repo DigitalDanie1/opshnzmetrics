@@ -2059,7 +2059,7 @@ p{line-height:1.6}
       <a href="#/launches" data-r="launches"><span class="n">07</span> PERP DEXS LAUNCHING OPTIONS <span class="go">→</span></a>
       <a href="#/compare" data-r="compare"><span class="n">08</span> COMPARE TO DERIBIT <span class="go">→</span></a>
       <a href="#/trader-views" data-r="trader-views"><span class="n">09</span> TRADER VIEWS <span class="go">→</span></a>
-      <a href="#/my-take" data-r="my-take"><span class="n">10</span> CURRENT CAMPAIGNS OR GIVEAWAYS <span class="go">→</span></a>
+      <a href="#/my-take" data-r="my-take"><span class="n">10</span> CURRENT CAMPAIGNS <span class="go">→</span></a>
     </nav>
   </header>
   </section>
@@ -2068,7 +2068,7 @@ p{line-height:1.6}
     <span class="bc"><a href="#/home">DASHBOARD</a><i>/</i><b id="bcHere">OVERVIEW</b></span>
     <details class="mnav" id="mnav"><summary><span id="mnavCur">Pages</span><i aria-hidden="true">▾</i></summary><div class="mnav-g" id="mnavG"></div></details>
     <nav class="cnav" aria-label="Views">
-      <a data-r="strategy" href="#/strategy">01 SENTIMENT &amp; STRATEGY</a><a data-r="fundamentals" href="#/fundamentals">02 OPTION FUNDAMENTAL</a><a data-r="overview" href="#/overview">03 ECOSYSTEM OVERVIEW</a><a data-r="deep" href="#/deep">04 DEEP DIVE</a><a data-r="new" href="#/new">05 NEW PROJECTS</a><a data-r="guide" href="#/guide">06 STRATEGY GUIDE</a><a data-r="launches" href="#/launches">07 PERP DEXS LAUNCHING OPTIONS</a><a data-r="compare" href="#/compare">08 COMPARE TO DERIBIT</a><a data-r="trader-views" href="#/trader-views">09 TRADER VIEWS</a><a data-r="my-take" href="#/my-take">10 CURRENT CAMPAIGNS OR GIVEAWAYS</a>
+      <a data-r="strategy" href="#/strategy">01 SENTIMENT &amp; STRATEGY</a><a data-r="fundamentals" href="#/fundamentals">02 OPTION FUNDAMENTAL</a><a data-r="overview" href="#/overview">03 ECOSYSTEM OVERVIEW</a><a data-r="deep" href="#/deep">04 DEEP DIVE</a><a data-r="new" href="#/new">05 NEW PROJECTS</a><a data-r="guide" href="#/guide">06 STRATEGY GUIDE</a><a data-r="launches" href="#/launches">07 PERP DEXS LAUNCHING OPTIONS</a><a data-r="compare" href="#/compare">08 COMPARE TO DERIBIT</a><a data-r="trader-views" href="#/trader-views">09 TRADER VIEWS</a><a data-r="my-take" href="#/my-take">10 CURRENT CAMPAIGNS</a>
     </nav>
   </div>
   <nav class="subnav" id="subnav" aria-label="Sections" hidden></nav>
@@ -2216,7 +2216,7 @@ p{line-height:1.6}
     <div class="rp-ctl" id="rpCtl" hidden><button id="rpPlay" aria-label="Play">▶</button><input type="range" id="rpScrub" min="0" max="1000" value="0" aria-label="Replay position"></div></div>
   </main>
 
-  <main id="v-take" hidden><div class="gp-head"><div><h2>Current campaigns <em>or giveaways</em></h2><p>Active campaigns. Upcoming rewards. Official links.</p></div></div>
+  <main id="v-take" hidden><div class="gp-head"><div><h2>Current <em>Campaigns</em></h2><p>Active campaigns. Upcoming rewards. Official links.</p></div></div>
     <div id="tkCompose"></div><div id="tkList" class="tk-list"></div>
   </main>
   <main id="v-trader-views" hidden><div class="gp-head"><div><h2>Trader <em>views</em></h2><p>Traders we follow, and what options desks and researchers are watching · original sources, dates and attributed summaries.</p></div></div>
@@ -3879,7 +3879,7 @@ const SUBS = {
   'trader-views':[['traders','Traders'],['institutions','Institutions']],
   strategy:[['now','Market now'],['log','Sentiment log'],['plays','Today’s plays'],['macro','Macro playbook']],
 };
-const PAGES = [['strategy','01 Sentiment & Strategy'],['fundamentals','02 Option Fundamental'],['overview','03 Ecosystem Overview'],['deep','04 Deep Dive'],['new','05 New Projects'],['guide','06 Strategy Guide'],['launches','07 Perp DEXs Launching Options'],['compare','08 Compare to Deribit'],['trader-views','09 Trader Views'],['my-take','10 Current campaigns or giveaways']];
+const PAGES = [['strategy','01 Sentiment & Strategy'],['fundamentals','02 Option Fundamental'],['overview','03 Ecosystem Overview'],['deep','04 Deep Dive'],['new','05 New Projects'],['guide','06 Strategy Guide'],['launches','07 Perp DEXs Launching Options'],['compare','08 Compare to Deribit'],['trader-views','09 Trader Views'],['my-take','10 Current Campaigns']];
 const VIEWS = {overview:['v-overview','v-oracle'], fundamentals:['v-fund','v-race'], strategy:['v-strat'], deep:['v-deep'], new:['v-new'], guide:['v-guide'], compare:['v-compare'], launches:['v-launches'], 'trader-views':['v-trader-views'], 'my-take':['v-take']};
 let SUBFOLD = (() => { try { return localStorage.getItem('opshnz-subfold') === '1'; } catch { return false; } })();
 function renderSubnav(page, sub){
@@ -4050,7 +4050,7 @@ function renderStrategy(){
   // ── 매크로 플레이북 (시황판단 틀): 한 줄 판단 → 기본·상방·하방 시나리오 → 근거(F/I/A/C) → 틀리는 조건 → 관찰판 → 이벤트별 대응 ──
   const M = SNAP.macro || [], now = Date.now(), cfg = BOOT.config.strategy || {};
   const lt = takes()[0];
-  const note = lt ? `<a class="mview tk-mini" href="#/my-take"><h4>CURRENT CAMPAIGNS OR GIVEAWAYS · 0XDEFIDANIEL · ${esc(tkDate(lt.date))}</h4><p><b>${esc(lt.title)}</b>${lt.body ? ' — ' + esc(lt.body.replace(/\s+/g, ' ').slice(0, 220)) + (lt.body.length > 220 ? '…' : '') : ''}</p><span>Read →</span></a>` : cfg.note ? `<div class="mview"><h4>MY VIEW · 0XDEFIDANIEL</h4><p>${esc(cfg.note)}</p></div>` : '';
+  const note = lt ? `<a class="mview tk-mini" href="#/my-take"><h4>CURRENT CAMPAIGNS · 0XDEFIDANIEL · ${esc(tkDate(lt.date))}</h4><p><b>${esc(lt.title)}</b>${lt.body ? ' — ' + esc(lt.body.replace(/\s+/g, ' ').slice(0, 220)) + (lt.body.length > 220 ? '…' : '') : ''}</p><span>Read →</span></a>` : cfg.note ? `<div class="mview"><h4>MY VIEW · 0XDEFIDANIEL</h4><p>${esc(cfg.note)}</p></div>` : '';
   const sc = (cfg.scenarios || []).map(x => { const [nm, sub] = (x.then || '').split(' · '); return `<article data-k="${esc(x.kind || '')}"><header><span class="sc-st" data-st></span><b>${esc(nm)}</b></header><p class="sc-if">If ${esc((x.if || '').replace(/^./, c => c.toLowerCase()))}${sub ? ' → ' + esc(sub) : ''}</p><div class="sc-live" data-live></div><details class="sc-how"><summary>Why &amp; how</summary><div data-more></div><p>${esc(x.how || '')}</p><dl>${[['Entry / skip', x.entry], ['Build', x.legs], ['Exit', x.exit], ['Risk', x.risk]].filter(([, v]) => v).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>${x.source && /^https:\/\//.test(x.source) ? `<a class="sc-source" href="${esc(x.source)}" target="_blank" rel="noopener">Strategy mechanics · OIC ↗</a>` : ''}</details></article>`; }).join('');
   let book = '';
   if (A && A.putWall && A.callWall) {
@@ -4994,7 +4994,7 @@ function route(){
   if (page === 'compare') sub = '';
   if (page === 'trader-views' && !['traders','institutions'].includes(sub)) sub = 'traders';
   if (matchMedia('(max-width:640px)').matches && (SUBS[page] || []).length && (!sub || sub === 'all')) sub = SUBS[page][0][0];
-  let bc = {'my-take':'CURRENT CAMPAIGNS OR GIVEAWAYS', 'trader-views':'TRADER VIEWS', launches:'PERP DEXS LAUNCHING OPTIONS', compare:'COMPARE TO DERIBIT', overview:'ECOSYSTEM OVERVIEW', fundamentals:'OPTION FUNDAMENTAL', strategy:'SENTIMENT', deep:'DEEP DIVE', new:'NEW PROJECTS', guide:'STRATEGY GUIDE'}[page] || '';
+  let bc = {'my-take':'CURRENT CAMPAIGNS', 'trader-views':'TRADER VIEWS', launches:'PERP DEXS LAUNCHING OPTIONS', compare:'COMPARE TO DERIBIT', overview:'ECOSYSTEM OVERVIEW', fundamentals:'OPTION FUNDAMENTAL', strategy:'SENTIMENT', deep:'DEEP DIVE', new:'NEW PROJECTS', guide:'STRATEGY GUIDE'}[page] || '';
   if (page === 'fundamentals') {
     if (!$('v-fund').dataset.on) { $('v-fund').dataset.on = 1; renderFund(); }
     if (!$('v-race').dataset.on) { $('v-race').dataset.on = 1; renderRaceChips(); renderRaceSeason(); runRace(); }
