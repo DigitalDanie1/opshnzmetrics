@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+const html=fs.readFileSync(new URL('../template.html',import.meta.url),'utf8');
+const ctx=vm.createContext({});vm.runInContext(html.slice(html.indexOf('function sortCampaigns('),html.indexOf("let campaignSort=")),ctx);
+const rows=[{id:'none',campaign:{publisher:'Project 10',startsAt:'2026-10-30'}},{id:'late',campaign:{publisher:'Project 2',startsAt:'2026-10-28',endsAt:'2026-11-12'}},{id:'early',campaign:{publisher:'Alpha',startsAt:'2026-10-29',endsAt:'2026-11-01'}}];
+const ids=mode=>Array.from(ctx.sortCampaigns(rows,mode),x=>x.id);
+assert.deepEqual(ids('deadline'),['early','late','none']);
+assert.deepEqual(ids('start'),['none','early','late']);
+assert.deepEqual(ids('project'),['early','late','none']);
+assert.equal(rows[0].id,'none');
+console.log('Campaign sort: deadline, missing deadline, start date, numeric project names and input preservation passed.');

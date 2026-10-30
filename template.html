@@ -2001,6 +2001,8 @@ p{line-height:1.6}
 /* Campaigns: compare side by side, expand rules only when needed. */
 .tk-list{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
 .tk{padding:20px;min-width:0}.campaign-heading{margin:16px 0;gap:12px}.campaign-logo{width:52px;height:52px;border-radius:13px}.tk .campaign-heading h3{font-size:21px;line-height:1.25}.campaign-meta{gap:7px;margin:12px 0}.campaign-meta span{font-size:11px;padding:4px 7px}.campaign-rewards{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:14px 0}.campaign-rewards div{padding:11px 12px}.campaign-rewards b{font-size:17px}.campaign-rewards small{margin-bottom:4px}.tk p.campaign-dates{font-size:13px;line-height:1.55;margin-bottom:12px}.tk p.campaign-summary{font-size:14px;line-height:1.5;margin-bottom:12px}.campaign-rules{border-top:1px solid var(--line2);padding-top:12px}.campaign-rules summary{cursor:pointer;font-size:13px;color:var(--ink2)}.campaign-rules[open] summary{margin-bottom:12px}.campaign-rules p{font-size:14px;line-height:1.6}.campaign-links{gap:7px;margin:16px 0 0}.campaign-links a{font-size:12px;padding:8px 10px}@media(min-width:1000px){.campaign-rewards{grid-template-columns:repeat(4,minmax(0,1fr))}.campaign-rewards b{font-size:15px;gap:5px}.campaign-rewards img{width:18px;height:18px}}@media(max-width:760px){.tk-list{grid-template-columns:1fr}.tk{padding:17px}}
+
+.campaign-sort{display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.1em;color:var(--mute)}.campaign-sort select{font:inherit;font-size:13px;letter-spacing:0;color:var(--ink);background:var(--panel);border:1px solid var(--line2);border-radius:8px;padding:10px 32px 10px 12px;cursor:pointer}.campaign-sort select:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 </style>
 </head>
 <body>
@@ -2222,7 +2224,7 @@ p{line-height:1.6}
     <div class="rp-ctl" id="rpCtl" hidden><button id="rpPlay" aria-label="Play">▶</button><input type="range" id="rpScrub" min="0" max="1000" value="0" aria-label="Replay position"></div></div>
   </main>
 
-  <main id="v-take" hidden><div class="gp-head"><div><h2>Current <em>Campaigns</em></h2><p>Active campaigns. Upcoming rewards. Official links.</p></div></div>
+  <main id="v-take" hidden><div class="gp-head"><div><h2>Current <em>Campaigns</em></h2><p>Active campaigns. Upcoming rewards. Official links.</p></div><label class="campaign-sort">SORT BY<select id="campaignSort" aria-label="Sort campaigns"><option value="deadline">Deadline · soonest</option><option value="start">Start date · newest</option><option value="project">Project · A–Z / 0–9</option></select></label></div>
     <div id="tkCompose"></div><div id="tkList" class="tk-list"></div>
   </main>
   <main id="v-trader-views" hidden><div class="gp-head"><div><h2>Trader <em>views</em></h2><p>Traders we follow, and what options desks and researchers are watching · original sources, dates and attributed summaries.</p></div></div>
@@ -3751,8 +3753,22 @@ function campaignLinks(c){
   const link=(u,label)=>/^https:\/\//.test(u||'')?`<a href="${esc(u)}" target="_blank" rel="noopener">${label} ↗</a>`:'';
   return `<div class="campaign-links">${link(c.url,'Open Cardinal')}${link(c.source,'Official rules')}${link(c.announcement,'X announcement')}</div>`;
 }
+function sortCampaigns(items, mode='deadline'){
+  const name=t=>t.campaign?.publisher || t.title || '';
+  const alpha=(a,b)=>name(a).localeCompare(name(b),'en',{numeric:true,sensitivity:'base'});
+  const date=(v,fallback)=>Number.isFinite(Date.parse(v))?Date.parse(v):fallback;
+  return [...items].sort((a,b)=>{
+    if(mode==='project') return alpha(a,b);
+    if(mode==='start') return date(b.campaign?.startsAt || b.date,-Infinity)-date(a.campaign?.startsAt || a.date,-Infinity) || alpha(a,b);
+    return date(a.campaign?.endsAt,Infinity)-date(b.campaign?.endsAt,Infinity) || alpha(a,b);
+  });
+}
+let campaignSort='deadline';
 function renderTake(){
-  const T = takes(), today = new Date(Date.now() + 9 * 36e5).toISOString().slice(0, 10);
+  const control=$('campaignSort');
+  control.value=campaignSort;
+  control.onchange=()=>{campaignSort=control.value;renderTake();};
+  const T = sortCampaigns(takes(),campaignSort), today = new Date(Date.now() + 9 * 36e5).toISOString().slice(0, 10);
   if (EDITOR_KEY) {
     const e = tkEditing ? T.find(x => x.id === tkEditing) || {} : {};
     $('tkCompose').innerHTML = `<form class="tk-form" id="tkForm">
