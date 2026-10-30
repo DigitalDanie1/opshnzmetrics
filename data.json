@@ -2782,7 +2782,10 @@
         "source": "https://blog.cardinal.trading/the-cardinal-competition/",
         "announcement": "https://x.com/cardinal_labs/status/2115731206558151033",
         "checkedAt": "2026-10-30",
-        "sourceNote": "Prizes and dates: official blog. Entry post and one-wallet rule: official X thread."
+        "sourceNote": "Prizes and dates: official blog. Entry post and one-wallet rule: official X thread.",
+        "logo": "logos/campaigns/cardinal.jpg",
+        "chainLogo": "logos/campaigns/arbitrum.webp",
+        "protocolLogo": "logos/auto/ddf350ab3656.png"
       }
     }
   ],
