@@ -1991,6 +1991,8 @@ p{line-height:1.6}
 .mn-r h4{margin-bottom:14px;letter-spacing:.1em}
 .mn-main>h3{max-width:28ch;line-height:1.2}
 .mn-two{gap:28px}
+
+.campaign-meta,.campaign-links{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 20px}.campaign-meta span{font-size:12px;border:1px solid var(--line2);padding:5px 10px;border-radius:6px}.campaign-meta span:first-child{color:var(--amber)}.campaign-rewards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:20px 0}.campaign-rewards div{padding:16px;background:var(--panel2);border:1px solid var(--line2);border-radius:10px}.campaign-rewards small{display:block;color:var(--mute);margin-bottom:6px}.campaign-rewards b{font-size:19px}.campaign-dates{color:var(--ink)}.campaign-dates small{color:var(--mute)}.campaign-links a{color:var(--amber);padding:9px 13px;border:1px solid var(--line2);border-radius:6px;text-decoration:none}@media(max-width:650px){.campaign-rewards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
@@ -3731,6 +3733,16 @@ const takes = () => [...(BOOT.config.myTake || [])].sort((a, b) => (b.date || ''
 const tkDate = d => d ? new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', {timeZone:'UTC', month:'short', day:'numeric', year:'numeric'}) : '';
 const tkBody = t => esc(t || '').split(/\n{2,}/).map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
 let tkEditing = null;
+function campaignDetails(c){
+  const end=Date.parse(c.endsAt), start=Date.parse(c.startsAt), now=Date.now();
+  const status=now>end?'ENDED':now<start?'UPCOMING':'ACTIVE';
+  const when=d=>new Date(d).toLocaleString('en-GB',{timeZone:'Asia/Seoul',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',hour12:false})+' KST';
+  return `<div class="campaign-meta"><span>${status}</span><span>${esc(c.network)}</span></div><div class="campaign-rewards">${(c.rewards||[]).map(([rank,reward])=>`<div><small>${esc(rank)}</small><b>${esc(reward)}</b></div>`).join('')}</div><p class="campaign-dates">${when(c.startsAt)} → ${when(c.endsAt)}<br><small>2026 · Test funds. Rankings determine prizes.</small></p>`;
+}
+function campaignLinks(c){
+  const link=(u,label)=>/^https:\/\//.test(u||'')?`<a href="${esc(u)}" target="_blank" rel="noopener">${label} ↗</a>`:'';
+  return `<div class="campaign-links">${link(c.url,'Open Cardinal')}${link(c.source,'Official rules')}${link(c.announcement,'X announcement')}</div>`;
+}
 function renderTake(){
   const T = takes(), today = new Date(Date.now() + 9 * 36e5).toISOString().slice(0, 10);
   if (EDITOR_KEY) {
@@ -3757,7 +3769,7 @@ function renderTake(){
   $('tkList').innerHTML = T.length ? T.map((t, i) => { const st = TK_ST[t.stance];
     return `<article class="tk${i === 0 ? ' tk-1' : ''}" id="take-${esc(t.id)}"><header><time>${esc(tkDate(t.date))}</time>${st ? `<span class="tk-st ${st[1]}">${st[0]}</span>` : ''}${(t.assets || []).map(a => `<span class="tk-a">${esc(a)}</span>`).join('')}
       ${EDITOR_KEY ? `<span class="tk-sp"></span><button data-ed="${esc(t.id)}">Edit</button><button data-del="${esc(t.id)}">Delete</button>` : ''}</header>
-      <h3>${esc(t.title)}</h3>${tkBody(t.body)}</article>`; }).join('')
+      <h3>${esc(t.title)}</h3>${t.campaign ? campaignDetails(t.campaign) : ''}${tkBody(t.body)}${t.campaign ? campaignLinks(t.campaign) : ''}</article>`; }).join('')
     : `<p class="empty">${EDITOR_KEY ? 'No campaigns yet. Add one above.' : 'No campaigns or giveaways listed yet.'}</p>`;
   $('tkList').querySelectorAll('[data-ed]').forEach(b => b.onclick = () => { tkEditing = b.dataset.ed; renderTake(); scrollTo({top: 0, behavior: 'smooth'}); });
   $('tkList').querySelectorAll('[data-del]').forEach(b => b.onclick = () => { if (confirm('Delete this campaign? This publishes the removal.')) tkSave({action: 'delete', entry: {id: b.dataset.del}}); });
