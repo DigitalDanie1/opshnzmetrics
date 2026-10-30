@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { captureDomHeight } from './capture.mjs';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 
@@ -142,22 +143,26 @@ console.log('✓ 빌드', out);
 const base = ['--headless=new', '--hide-scrollbars', '--force-device-scale-factor=2', '--virtual-time-budget=6000', ...(process.env.CI ? ['--no-sandbox'] : [])];
 function shoot(hash, png) {
   const url = 'file://' + out + hash;
-  const dom = execFileSync(CHROME, [...base, '--window-size=1080,1600', '--dump-dom', url], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'], maxBuffer: 64 * 1024 * 1024 });
-  const h = Math.min(4800, +(dom.match(/data-h="(\d+)"/) || [])[1] || 2400);
-  execFileSync(CHROME, [...base, `--window-size=1080,${h}`, `--screenshot=${png}`, url], { stdio: 'ignore' });
+  const h = captureDomHeight(CHROME, [...base, '--window-size=1080,1600', '--dump-dom', url]);
+  execFileSync(CHROME, [...base, `--window-size=1080,${h}`, `--screenshot=${png}`, url], { stdio: 'ignore', timeout: 60000 });
   console.log('✓ 캡처', path.basename(png), `1080×${h}`);
   return png;
 }
 try { (await import('./og.mjs')).makeOg(); } catch (e) { console.warn('! 공유 이미지 실패:', e.message); }
-const pngMap = shoot('#tgmap', path.join(DIR, 'preview-map.png'));
-const png = shoot('#tg', path.join(DIR, 'preview.png'));
+let pngMap, png;
+try {
+  pngMap = shoot('#tgmap', path.join(DIR, 'preview-map.png'));
+  png = shoot('#tg', path.join(DIR, 'preview.png'));
+} catch (e) { console.warn('! Preview capture failed; fresh site data will still publish:', e.message); }
 // 공유용 카드(1200×675, X 에 바로 올리는 크기): 시상대 · 이번 주 상승/하락 · 시그널
 const shareDir = path.join(DIR, 'share'); fs.mkdirSync(shareDir, { recursive: true });
 const shares = {};
 for (const k of ['podium', 'movers', 'signals']) {
   const f = path.join(shareDir, `${snap.week}-${k}.png`);
-  execFileSync(CHROME, [...base, '--window-size=1200,675', `--screenshot=${f}`, 'file://' + out + '#share/' + k], { stdio: 'ignore' });
-  shares[k] = f;
+  try {
+    execFileSync(CHROME, [...base, '--window-size=1200,675', `--screenshot=${f}`, 'file://' + out + '#share/' + k], { stdio: 'ignore', timeout: 60000 });
+    shares[k] = f;
+  } catch (e) { console.warn('! Optional share capture failed:', k, e.message); }
 }
 console.log('✓ 공유 카드', Object.keys(shares).join(' · '), '→ share/');
 
@@ -169,17 +174,17 @@ if (AUTO && !isMondayKST) { console.log('auto: 빌드만 (텔레그램은 월요
 if (!env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) { if (AUTO) { console.log('auto: 봇 미연결 — 빌드만'); process.exit(0); } fail('.env 에 봇이 없습니다. 먼저: node setup-bot.mjs <봇토큰>'); }
 
 const caption = `<b>Korean Opshnz · ${snap.week}</b>` + (snap.headline ? `\n${esc(snap.headline)}` : '');
-await tg('sendMediaGroup', { chat_id: env.TELEGRAM_CHAT_ID, media: JSON.stringify([
+if (pngMap && png) await tg('sendMediaGroup', { chat_id: env.TELEGRAM_CHAT_ID, media: JSON.stringify([
   { type: 'photo', media: 'attach://map', caption, parse_mode: 'HTML' },
   { type: 'photo', media: 'attach://full' },
 ]) }, { map: pngMap, full: png });
 await tg('sendMessage', { chat_id: env.TELEGRAM_CHAT_ID, text, parse_mode: 'HTML', disable_web_page_preview: true });
-await tg('sendMediaGroup', { chat_id: env.TELEGRAM_CHAT_ID, media: JSON.stringify([
+if (Object.keys(shares).length === 3) await tg('sendMediaGroup', { chat_id: env.TELEGRAM_CHAT_ID, media: JSON.stringify([
   { type: 'photo', media: 'attach://podium', caption: 'Share cards for X — this week', parse_mode: 'HTML' }, { type: 'photo', media: 'attach://movers' }, { type: 'photo', media: 'attach://signals' },
 ]) }, shares);
 console.log('✓ 텔레그램 발송 완료');
 // 공개 채널(.env TELEGRAM_CHANNEL=@이름): 봇이 채널 관리자여야 한다
-if (env.TELEGRAM_CHANNEL) {
+if (env.TELEGRAM_CHANNEL && Object.keys(shares).length === 3) {
   const pub = publicDigest(snap);
   await tg('sendMediaGroup', { chat_id: env.TELEGRAM_CHANNEL, media: JSON.stringify([
     { type: 'photo', media: 'attach://podium', caption: pub, parse_mode: 'HTML' }, { type: 'photo', media: 'attach://movers' }, { type: 'photo', media: 'attach://signals' },
@@ -279,7 +284,7 @@ function shortWhat(t) {
   return first.slice(0, 118).replace(/\s+\S*$/, '') + '…';
 }
 async function discover(cfg) {
-  const get = u => fetch(u).then(r => r.ok ? r.json() : null).catch(() => null);
+  const get = u => fetch(u, { signal: AbortSignal.timeout(20000) }).then(r => r.ok ? r.json() : null).catch(() => null);
   const [protos, opt, lite] = await Promise.all([
     get('https://api.llama.fi/protocols'),
     get('https://api.llama.fi/overview/options?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true&dataType=dailyNotionalVolume'),
@@ -332,7 +337,7 @@ async function localizeLogos(s) {
     const hit = fs.readdirSync(dir).find(f => f.startsWith(id + '.'));
     if (hit) { map[u] = `logos/auto/${hit}`; kept++; continue; }
     try {
-      const r = await fetch(u, { headers: { 'user-agent': 'Mozilla/5.0' } });
+      const r = await fetch(u, { signal: AbortSignal.timeout(20000), headers: { 'user-agent': 'Mozilla/5.0' } });
       if (!r.ok) throw new Error(r.status);
       const ct = r.headers.get('content-type') || '', ext = /png/.test(ct) ? 'png' : /webp/.test(ct) ? 'webp' : /svg/.test(ct) ? 'svg' : /gif/.test(ct) ? 'gif' : 'jpg';
       const buf = Buffer.from(await r.arrayBuffer());

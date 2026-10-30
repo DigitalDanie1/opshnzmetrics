@@ -9,7 +9,7 @@ const LLAMA_PROTOCOLS = 'https://api.llama.fi/protocols';   // 2.4MB(gzip). TVLÂ
 async function getJSON(url, tries = 3) {
   for (let i = 0; i < tries; i++) {
     try {
-      const r = await fetch(url, { headers: { accept: 'application/json' } });
+      const r = await fetch(url, { signal: AbortSignal.timeout(20000), headers: { accept: 'application/json' } });
       if (r.status === 429) throw new Error('429');
       if (!r.ok) return null;
       const t = await r.text();

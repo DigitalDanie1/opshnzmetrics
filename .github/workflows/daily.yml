@@ -40,6 +40,10 @@ jobs:
           if [ "${{ github.event.schedule }}" = "35 3 * * *" ] && git log -1 --format=%s | grep -q "daily build $today"; then run=0; fi
           echo "run=$run" >> "$GITHUB_OUTPUT"
 
+      - name: Validate collectors and build logic
+        if: steps.plan.outputs.run == '1'
+        run: node --test tests/*.mjs
+
       - name: Build (data → index.html, Telegram on Mondays if secrets are set)
         if: steps.plan.outputs.run == '1'
         env:

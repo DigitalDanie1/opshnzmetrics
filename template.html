@@ -3439,8 +3439,10 @@ function renderMacroNow(){
   const M = (BOOT.config.strategy || {}).macroNow, box = $('macroNow'); if (!box) return;
   if (!M) { box.hidden = true; return; }
   box.hidden = false;
+  const collectedAt = Date.parse(SNAP.at), stale = !Number.isFinite(collectedAt) || Date.now() - collectedAt > 36 * 3600e3;
+  const freshness = `<p role="status" style="color:${stale ? '#ff9b72' : 'var(--mute)'};margin-bottom:12px">${stale ? 'STALE MARKET DATA · ' : 'Market data collected · '}${Number.isFinite(collectedAt) ? new Date(collectedAt).toLocaleString('en-GB', {timeZone:'Asia/Seoul'}) + ' KST' : 'timestamp unavailable'} · Macro commentary checked separately below.</p>`;
   const tag = t => ({F:'fact', I:'read', A:'assumes', C:'if / then'}[t] || t);
-  box.innerHTML = `<div class="mn">
+  box.innerHTML = freshness + `<div class="mn">
     <div class="mn-h"><span class="mn-tag">${esc(M.tag || 'MACRO')}</span><small>Biggest macro story · ${esc(new Date(M.asOf + 'T12:00:00Z').toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}))}</small></div>
     <div class="mn-g"><div class="mn-main">
     <h3>${esc(M.title)}</h3>

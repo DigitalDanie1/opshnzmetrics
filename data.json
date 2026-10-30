@@ -235,9 +235,9 @@
       }
     ],
     "macroNow": {
-      "tag": "FED HOLDS · HAWKS DISSENT",
-      "title": "Fed holds at 3.75–4.00%; two members prefer a quarter-point hike",
-      "asOf": "2026-10-29",
+      "tag": "FED HOLD · GDP & PCE RELEASED",
+      "title": "Fed holds at 3.75–4.00%; Q3 GDP grows 3.4%, core PCE rises 0.3% m/m",
+      "asOf": "2026-10-30",
       "facts": [
         {
           "k": "Fed Funds Rate",
@@ -248,38 +248,42 @@
           "hot": false
         },
         {
-          "k": "Vote split",
-          "a": "10-2 hold",
+          "k": "Advance GDP q/q",
+          "a": "3.4%",
           "e": "",
           "p": "",
-          "d": "Oct 28",
-          "hot": true
+          "d": "Oct 29",
+          "hot": false
         },
         {
-          "k": "Dissenters",
-          "a": "Cook & Hammack (+25bp)",
+          "k": "Core PCE Price Index m/m",
+          "a": "0.3%",
+          "e": "",
+          "p": "0.3%",
+          "d": "Oct 29",
+          "hot": false
+        },
+        {
+          "k": "Core PCE y/y",
+          "a": "3.1%",
           "e": "",
           "p": "",
-          "d": "Oct 28",
-          "hot": true
+          "d": "Oct 29",
+          "hot": false
         }
       ],
       "read": [
         [
           "F",
-          "The October 28 decision left rates unchanged. Cook and Hammack preferred a quarter-point increase."
+          "The Fed held its target range on October 28 by a 10–2 vote. Cook and Hammack favoured a quarter-point increase."
+        ],
+        [
+          "F",
+          "BEA’s October 29 releases show Q3 real GDP growth of 3.4% annualized and September core PCE inflation of 0.3% monthly and 3.1% yearly."
         ],
         [
           "I",
-          "Hawkish dissent signals inflation concern; it does not determine the next decision."
-        ],
-        [
-          "A",
-          "Further inflation pressure could strengthen the case for tighter policy."
-        ],
-        [
-          "C",
-          "Watch incoming data and December guidance before assuming a hike."
+          "Growth remains firm while underlying inflation remains above the Fed’s 2% objective. These releases alone do not establish the next rate decision."
         ]
       ],
       "options": "Compare current implied and realized volatility before choosing expiry or structure. Post-meeting volatility and expiry positioning are not verified in this editorial update.",
@@ -299,12 +303,16 @@
       ],
       "sources": [
         [
-          "Fed statement",
+          "Fed · Oct 28",
           "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
         ],
         [
-          "FOMC calendar",
-          "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+          "BEA GDP · Oct 29",
+          "https://www.bea.gov/data/gdp/gross-domestic-product"
+        ],
+        [
+          "BEA PCE · Oct 29",
+          "https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026"
         ]
       ],
       "events": [
