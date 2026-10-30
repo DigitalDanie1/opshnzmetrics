@@ -2470,6 +2470,25 @@
       "note": "Official docs describe directional market rounds and vault liquidity. Source: https://beta.ace.pro/docs",
       "auto": true,
       "app": "https://beta.ace.pro/"
+    },
+    {
+      "ticker": "",
+      "name": "Olive Exchange",
+      "stage": "pre",
+      "core": false,
+      "lineage": "",
+      "origin": "",
+      "home": "Other",
+      "what": "Olive is a Solana derivatives exchange for vanilla options, exotic options, perpetuals and expiry futures, traded…",
+      "cg": "",
+      "llama": [
+        "parent#olive-exchange"
+      ],
+      "site": "",
+      "x": "Olive_Exchange",
+      "keywords": [],
+      "note": "",
+      "auto": true
     }
   ],
   "benchmark": {

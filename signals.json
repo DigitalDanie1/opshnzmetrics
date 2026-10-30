@@ -232,5 +232,32 @@
   "text": "BVIV 39.9 (−2.4% 24h) — BTC implied vol easing",
   "href": "#/deep/Volmex",
   "key": "BVIV"
+ },
+ {
+  "d": "2026-10-30",
+  "kind": "new",
+  "text": "New options project spotted: Olive Exchange",
+  "href": "#/deep/Olive%20Exchange"
+ },
+ {
+  "d": "2026-10-30",
+  "kind": "move",
+  "text": "$DRV −18.7% in 24h",
+  "href": "#/deep/Derive",
+  "key": "$DRV"
+ },
+ {
+  "d": "2026-10-30",
+  "kind": "move",
+  "text": "$SYN −8.7% in 24h",
+  "href": "#/deep/Hypercall",
+  "key": "$SYN"
+ },
+ {
+  "d": "2026-10-30",
+  "kind": "vol",
+  "text": "BVIV 42.4 (+5.4% 24h) — BTC implied vol spiking",
+  "href": "#/deep/Volmex",
+  "key": "BVIV"
  }
 ]
