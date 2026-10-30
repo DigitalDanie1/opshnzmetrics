@@ -2787,6 +2787,35 @@
         "chainLogo": "logos/campaigns/arbitrum.webp",
         "protocolLogo": "logos/auto/ddf350ab3656.png"
       }
+    },
+    {
+      "id": "dream-1k-10k-2026-10",
+      "date": "2026-10-28",
+      "title": "Dream $1K → $10K Trading Challenge",
+      "assets": [
+        "BTC"
+      ],
+      "body": "Start with $1,000 on Dream. Trade any available options.\n\nFirst to $9,000 in verified net trading profits wins $10,000.\n\nOnly realized profits count. All losses and fees are deducted. Open-position gains do not count.\n\nTop-ups may replace losses, but cannot lift your balance above $1,000. Trading profits can. Withdrawals do not reset progress.\n\nOnly trades after the competition starts qualify. Real funds are at risk.",
+      "campaign": {
+        "publisher": "Dream",
+        "logo": "logos/auto/4edd281815a0.webp",
+        "network": "Options trading · Real funds",
+        "startsAt": "2026-10-28T15:34:32.171000+00:00",
+        "statusLabel": "FIRST TO FINISH",
+        "rewards": [
+          [
+            "Winner",
+            "$10,000"
+          ]
+        ],
+        "scheduleNote": "No fixed deadline announced. First verified qualifier wins.",
+        "fundsNote": "Starts with $1,000. Target: $9,000 realized net profit.",
+        "url": "https://dreamos.app/",
+        "source": "https://x.com/dreaming/status/2115467263541215666",
+        "announcement": "https://x.com/dreaming/status/2115467256851578939",
+        "checkedAt": "2026-10-30",
+        "sourceNote": "Official announcement and rules thread. Winner status not independently confirmed."
+      }
     }
   ],
   "preTgeHide": [
