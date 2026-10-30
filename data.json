@@ -236,7 +236,7 @@
     ],
     "macroNow": {
       "tag": "FED HOLD · GDP & PCE RELEASED",
-      "title": "Fed holds at 3.75–4.00%; Q3 GDP grows 3.4%, core PCE rises 0.3% m/m",
+      "title": "Fed holds. Growth stays firm. Inflation persists.",
       "asOf": "2026-10-30",
       "facts": [
         {
@@ -275,30 +275,34 @@
       "read": [
         [
           "F",
-          "The Fed held its target range on October 28 by a 10–2 vote. Cook and Hammack favoured a quarter-point increase."
+          "Fed vote: 10–2 to hold. Two members preferred a hike."
         ],
         [
           "F",
-          "BEA’s October 29 releases show Q3 real GDP growth of 3.4% annualized and September core PCE inflation of 0.3% monthly and 3.1% yearly."
+          "Q3 GDP: +3.4% annualized."
+        ],
+        [
+          "F",
+          "Core PCE: +0.3% monthly. +3.1% yearly."
         ],
         [
           "I",
-          "Growth remains firm while underlying inflation remains above the Fed’s 2% objective. These releases alone do not establish the next rate decision."
+          "Inflation remains above 2%. The next rate move is uncertain."
         ]
       ],
-      "options": "Compare current implied and realized volatility before choosing expiry or structure. Post-meeting volatility and expiry positioning are not verified in this editorial update.",
+      "options": "Compare implied and realized volatility.\nThen choose your expiry.\nPost-Fed positioning remains unverified.",
       "watch": [
         [
           "Dec 8–9",
-          "Next scheduled FOMC meeting"
+          "Next FOMC"
         ],
         [
-          "Next releases",
-          "Inflation and employment data"
+          "Next data",
+          "Inflation & jobs"
         ],
         [
-          "Live markets",
-          "Implied versus realized volatility"
+          "Options",
+          "Implied vs. realized volatility"
         ]
       ],
       "sources": [

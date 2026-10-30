@@ -1983,6 +1983,14 @@ body[data-view=deep] .subnav a.sb{flex:none;white-space:nowrap}
 /* 읽기: 본문 줄간격과 줄 길이 */
 p{line-height:1.6}
 .mn-r p,.wu .tx,.dd-main p{max-width:72ch}
+
+/* Short reading blocks for macro commentary. */
+.mn-r p{font-size:15px;line-height:1.65;margin:0 0 14px;max-width:48ch}
+.mn-r p:has(>i){display:grid;grid-template-columns:62px 1fr;gap:10px}
+.mn-r p i{min-width:0;margin:3px 0 0;font-size:10px}
+.mn-r h4{margin-bottom:14px;letter-spacing:.1em}
+.mn-main>h3{max-width:28ch;line-height:1.2}
+.mn-two{gap:28px}
 </style>
 </head>
 <body>
@@ -2078,10 +2086,10 @@ p{line-height:1.6}
   </main>
 
   <main id="v-compare" hidden>
-    <div class="gp-head"><div><h2>Compare to <em>Deribit</em></h2><p>What would each token be worth at Deribit’s valuation multiple?</p></div></div>
+    <div class="gp-head"><div><h2>Compare to <em>Deribit</em></h2><p>Token valuations, benchmarked to Deribit.</p></div></div>
 
     <section data-blk="benchmark">
-      <div class="bench-explain"><h3>Same business multiple. What token valuation?</h3><p>Compare options premiums, notional volume and open interest. Apply Deribit’s value per unit of each fundamental to the token project.</p></div>
+      <div class="bench-explain"><h3>What is the Deribit-equivalent value?</h3><p>Pick an options metric. Apply Deribit’s multiple. Compare the token value.</p></div>
     <div class="comparison-focus"><label>Choose a token <select id="compareFocus"></select></label><span id="comparisonDates"></span></div>
       <div class="bench-simple-control"><label>Fundamental <select id="benchMetric"><option value="premium">Option premium volume · 24h</option><option value="volume">Options notional volume · 24h</option><option value="oi">Options open interest · BTC + ETH</option></select></label><label>Compare using <select id="benchSimpleBasis"><option value="fdv">Total token value · FDV</option><option value="mcap">Circulating token value · market cap</option></select></label><span id="benchSimpleScope"></span></div>
       <details class="bench-details"><summary>Deribit benchmark inputs</summary><div id="benchReference" class="bench-reference"></div></details>
@@ -2103,7 +2111,7 @@ p{line-height:1.6}
       <p id="benchAsOf" class="bench-note"></p><p id="benchSummary" class="bench-note" aria-live="polite"></p>
       <div class="tbl-x"><table class="bench-table"><thead><tr><th>PROJECT / SCOPE</th><th>MARKET CAP</th><th>FDV</th><th>OPTIONS ACTIVITY</th><th>% OF DERIBIT</th><th>RELATIVE MULTIPLE</th><th>PARITY ACTIVITY / CHANGE</th></tr></thead><tbody id="benchRows"></tbody></table></div>
       <h3 style="margin-top:28px">Options footprint · Deribit = 100%</h3><div id="benchBars" class="bench-bars"></div>
-      <p class="bench-note">Above 1× = higher valuation per unit of activity; below 1× = lower. This is a relative screen, not a fair-value estimate. Different growth, margins, incentives and token rights can justify a gap.</p>
+      <p class="bench-note">Above 1×: pricier than Deribit per unit of activity. Below 1×: cheaper. Growth, margins and token rights still matter.</p>
       </details>
     </section>
     <details id="comparisonExtra" class="bench-details"><summary>Explore positioning, OI rankings &amp; holder returns</summary>
@@ -3440,16 +3448,16 @@ function renderMacroNow(){
   if (!M) { box.hidden = true; return; }
   box.hidden = false;
   const collectedAt = Date.parse(SNAP.at), stale = !Number.isFinite(collectedAt) || Date.now() - collectedAt > 36 * 3600e3;
-  const freshness = `<p role="status" style="color:${stale ? '#ff9b72' : 'var(--mute)'};margin-bottom:12px">${stale ? 'STALE MARKET DATA · ' : 'Market data collected · '}${Number.isFinite(collectedAt) ? new Date(collectedAt).toLocaleString('en-GB', {timeZone:'Asia/Seoul'}) + ' KST' : 'timestamp unavailable'} · Macro commentary checked separately below.</p>`;
+  const freshness = `<p role="status" style="color:${stale ? '#ff9b72' : 'var(--mute)'};margin-bottom:12px">${stale ? 'STALE MARKET DATA · ' : 'Market data collected · '}${Number.isFinite(collectedAt) ? new Date(collectedAt).toLocaleString('en-GB', {timeZone:'Asia/Seoul'}) + ' KST' : 'timestamp unavailable'} · Macro checked separately.</p>`;
   const tag = t => ({F:'fact', I:'read', A:'assumes', C:'if / then'}[t] || t);
   box.innerHTML = freshness + `<div class="mn">
-    <div class="mn-h"><span class="mn-tag">${esc(M.tag || 'MACRO')}</span><small>Biggest macro story · ${esc(new Date(M.asOf + 'T12:00:00Z').toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}))}</small></div>
+    <div class="mn-h"><span class="mn-tag">${esc(M.tag || 'MACRO')}</span><small>Macro update · ${esc(new Date(M.asOf + 'T12:00:00Z').toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}))}</small></div>
     <div class="mn-g"><div class="mn-main">
     <h3>${esc(M.title)}</h3>
-    <div class="mn-f">${(M.facts || []).map(f => `<div class="${f.hot ? 'hot' : ''}"><span>${esc(f.k)} <em>${esc(f.d || '')}</em></span><b>${esc(f.a)}</b><small>exp ${esc(f.e || '—')}${f.p ? ' · prev ' + esc(f.p) : ''}</small></div>`).join('')}</div>
+    <div class="mn-f">${(M.facts || []).map(f => `<div class="${f.hot ? 'hot' : ''}"><span>${esc(f.k)} <em>${esc(f.d || '')}</em></span><b>${esc(f.a)}</b>${f.e || f.p ? `<small>${f.e ? 'Est. ' + esc(f.e) : ''}${f.e && f.p ? ' · ' : ''}${f.p ? 'Prev. ' + esc(f.p) : ''}</small>` : ''}</div>`).join('')}</div>
     <div class="mn-two">
       <div class="mn-r"><h4>WHAT IT MEANS</h4>${(M.read || []).map(([t, x]) => `<p><i class="t-${t.toLowerCase()}">${tag(t)}</i>${esc(x)}</p>`).join('')}</div>
-      <div class="mn-r"><h4>FOR OPTIONS</h4><p>${esc(M.options || '')}</p><h4>WATCH NEXT</h4>${(M.watch || []).map(([w, t]) => `<p class="mn-w"><time>${esc(w)}</time>${esc(t)}</p>`).join('')}</div>
+      <div class="mn-r"><h4>FOR OPTIONS</h4>${(M.options || '').split('\n').filter(Boolean).map(x => `<p>${esc(x)}</p>`).join('')}<h4>WATCH NEXT</h4>${(M.watch || []).map(([w, t]) => `<p class="mn-w"><time>${esc(w)}</time>${esc(t)}</p>`).join('')}</div>
     </div>
     <div class="mn-src">Sources ${(M.sources || []).map(([l, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(l)} ↗</a>`).join('')}</div>
     </div>${tapeHTML(M.events || [])}</div>
