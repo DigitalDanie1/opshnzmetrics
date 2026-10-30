@@ -158,7 +158,8 @@
       "members": [
         "Thetanuts",
         "Rysk",
-        "3Jane"
+        "3Jane",
+        "Acta"
       ]
     },
     {
@@ -2612,6 +2613,41 @@
           }
         ]
       }
+    },
+    {
+      "name": "Acta",
+      "ticker": "",
+      "stage": "pre",
+      "core": true,
+      "status": "Mainnet · per official site",
+      "lineage": "Options yield vaults",
+      "origin": "",
+      "home": "Solana",
+      "what": "Curated vaults on Acta’s options venue. Earn option premiums on assets you hold.",
+      "cg": "",
+      "llama": [],
+      "site": "https://acta.markets/",
+      "app": "https://acta.markets/earn",
+      "x": "acta_markets",
+      "logo": "logos/acta.svg",
+      "keywords": [
+        "Yield vaults",
+        "Solana",
+        "LSTs & stocks"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "Vaults earn premiums from trading desks. The site lists SOL and USDC vaults; tokenized-stock quoting is marked coming soon.",
+        "catalysts": [
+          "Tokenized-stock vault expansion."
+        ],
+        "risks": [
+          "Underlying assets can lose value. Upside may be capped by the vault’s agreed sale price.",
+          "Mainnet status is stated by the official site. Independent volume and TVL are not verified.",
+          "Displayed APRs are indicative, not guaranteed."
+        ],
+        "timeline": []
+      }
     }
   ],
   "benchmark": {
@@ -3090,6 +3126,10 @@
     "Optivi": [
       0.4,
       4.8
+    ],
+    "Acta": [
+      -0.2,
+      -3.5
     ]
   }
 }
