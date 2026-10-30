@@ -2493,6 +2493,83 @@
       "keywords": [],
       "note": "",
       "auto": true
+    },
+    {
+      "name": "Cardinal",
+      "ticker": "",
+      "stage": "pre",
+      "core": true,
+      "status": "Testnet live",
+      "lineage": "Built on Derive V3",
+      "origin": "",
+      "home": "Arbitrum Sepolia",
+      "what": "Yield Perps on BTC. Long, Short or Range. Testnet on Derive V3.",
+      "cg": "",
+      "llama": [],
+      "site": "https://cardinal.trading/",
+      "app": "https://cardinal.trading/",
+      "x": "cardinal_labs",
+      "logo": "logos/campaigns/cardinal.jpg",
+      "since": "2026-10",
+      "isNew": true,
+      "keywords": [
+        "Yield Perps",
+        "Derive V3",
+        "Testnet"
+      ],
+      "note": "Testnet competition runs Oct 29–Nov 12. First prize: 10,000 DRV.",
+      "deep": {
+        "thesis": "Earn while BTC meets your chosen price conditions. No expiry. Testnet only.",
+        "catalysts": [
+          "Testnet trading competition ends November 12, 09:00 UTC."
+        ],
+        "risks": [
+          "Testnet activity is not mainnet options volume.",
+          "Yield depends on price conditions and funding costs."
+        ],
+        "timeline": [
+          {
+            "date": "2026-10-26",
+            "text": "Introduced Cardinal and Yield Perps."
+          },
+          {
+            "date": "2026-10-29",
+            "text": "Arbitrum Sepolia competition launched."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bebop",
+      "ticker": "",
+      "stage": "pre",
+      "core": true,
+      "status": "Live · execution infrastructure",
+      "lineage": "RFQ + bopAMM",
+      "origin": "",
+      "home": "Multi-chain",
+      "what": "RFQ and swap execution. Routes market-maker liquidity across chains. Options trading not verified.",
+      "cg": "",
+      "llama": [],
+      "site": "https://bebop.xyz/",
+      "app": "https://trade.bebop.xyz/",
+      "x": "bebop_dex",
+      "logo": "logos/bebop.png",
+      "keywords": [
+        "Execution infrastructure",
+        "RFQ",
+        "bopAMM"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "Execution infrastructure for traders, apps and routers. RFQ connects market makers to takers.",
+        "catalysts": [],
+        "risks": [
+          "Official sources reviewed describe swaps and execution APIs. A live options product was not verified.",
+          "Swap volume must not be counted as options volume."
+        ],
+        "timeline": []
+      }
     }
   ],
   "benchmark": {
@@ -2959,6 +3036,14 @@
     "IVY": [
       3.7,
       1.9
+    ],
+    "Cardinal": [
+      0,
+      -2.5
+    ],
+    "Bebop": [
+      5.5,
+      -2.7
     ]
   }
 }

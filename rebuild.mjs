@@ -20,6 +20,9 @@ export function rebuild() {
   // 사람이 지울 수 있는 칸만 지운다. 로고·체인 같은 건 data.json 에 없으면 스냅샷 값(자동 수집)을 그대로 둔다
   const ERASABLE = new Set(['note', 'deep', 'points', 'pointsUrl', 'status']);
   snap.projects = snap.projects.map(p => { const c = byName[p.name]; if (!c) return p; const o = { ...p }; for (const k of TEXT_FIELDS) if (k in c) o[k] = c[k]; else if (ERASABLE.has(k)) delete o[k]; return o; });
+  // New editorial listings appear immediately; metrics stay unknown until collected.
+  const existing = new Set(snap.projects.map(p => p.name));
+  for (const p of data.projects) if (!existing.has(p.name)) snap.projects.push({...p, price:null, ch24:null, ch7:null, ch30:null, mcap:null, fdv:null, ath:null, athDate:null, rank:null, spark:[], vol30:null, vol7:null, prem30:null, volSlugs:[], tvl:null});
   snap.headline = data.headline || snap.headline;
   if (fs.existsSync(path.join(DIR, 'sentiment.json'))) snap.sentLog = read('sentiment.json');
   const history = files.map(f => JSON.parse(fs.readFileSync(path.join(snapDir, f), 'utf8')))
