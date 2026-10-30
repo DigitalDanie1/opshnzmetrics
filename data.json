@@ -147,7 +147,8 @@
         "Olive",
         "Joyride",
         "Heat",
-        "IVY"
+        "IVY",
+        "Optivi"
       ]
     },
     {
@@ -2570,6 +2571,47 @@
         ],
         "timeline": []
       }
+    },
+    {
+      "name": "Optivi",
+      "ticker": "",
+      "stage": "pre",
+      "core": true,
+      "status": "Invite-only beta",
+      "lineage": "Powered by Derive",
+      "origin": "",
+      "home": "Derive",
+      "what": "Simple options interface. Self-custody. Orders match and settle through Derive.",
+      "cg": "",
+      "llama": [],
+      "site": "https://optivi.xyz/",
+      "app": "https://optivi.xyz/",
+      "x": "optivixyz",
+      "logo": "logos/optivi.png",
+      "since": "2026-03",
+      "isNew": true,
+      "keywords": [
+        "Options interface",
+        "Derive",
+        "Invite-only beta"
+      ],
+      "note": "",
+      "deep": {
+        "thesis": "A broker interface for onchain options. Derive handles matching and settlement.",
+        "catalysts": [
+          "Beta access requires an invite code."
+        ],
+        "risks": [
+          "Private beta; access is restricted.",
+          "Routed activity must not be counted again as independent Derive options volume."
+        ],
+        "timeline": [
+          {
+            "date": "2026-03-30",
+            "text": "Official X announced the private beta."
+          }
+        ]
+      }
     }
   ],
   "benchmark": {
@@ -3044,6 +3086,10 @@
     "Bebop": [
       5.5,
       -2.7
+    ],
+    "Optivi": [
+      0.4,
+      4.8
     ]
   }
 }
