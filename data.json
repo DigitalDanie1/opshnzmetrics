@@ -2969,6 +2969,40 @@
         "checkedAt": "2026-10-30",
         "sourceNote": "Official announcement and rules thread. Winner status not independently confirmed."
       }
+    },
+    {
+      "id": "derive-kinetiq-road-to-expiry-2026",
+      "date": "2026-10-27",
+      "title": "Road to Expiry · Derive × Kinetiq",
+      "assets": [
+        "HYPE"
+      ],
+      "body": "Trade HYPE options expiring November 13. Rank by your best position’s realized ROI.\n\nLeaderboard entry:\n• At least $250 net premium paid or received.\n• Each leg: absolute delta 0.10–0.60 at entry.\n• Partly or fully close before expiry.\n• Post your official PnL card on X. Use #RoadToExpiry and tag @derivexyz and @kinetiq_xyz.\n\nNew-wallet bonus:\n• First 250 qualifying new wallets.\n• Open a qualifying multi-leg position.\n• No box spreads, conversions/reversals or risk-free trades.\n• One reward per person and wallet. Claims are reviewed after the competition.\n\nDerive verifies eligibility. Winners must prove wallet ownership. Trading uses real funds.",
+      "campaign": {
+        "publisher": "Derive",
+        "logo": "logos/auto/ddf350ab3656.png",
+        "partner": "Kinetiq",
+        "partnerLogo": "logos/campaigns/kinetiq.svg",
+        "network": "HYPE options · Real funds",
+        "startsAt": "2026-10-27T13:00:29.449000+00:00",
+        "endsAt": "2026-11-13T08:00:00Z",
+        "rewards": [
+          [
+            "Top 10 pool",
+            "250 kHYPE"
+          ],
+          [
+            "New-wallet bonus",
+            "1 kHYPE each"
+          ]
+        ],
+        "fundsNote": "November 13 expiry. Bonus limited to 250 qualifying new wallets.",
+        "url": "https://app.derive.xyz/road-to-expiry",
+        "source": "https://app.derive.xyz/road-to-expiry",
+        "announcement": "https://x.com/DeriveXYZ/status/2115066102200017136",
+        "checkedAt": "2026-10-30",
+        "sourceNote": "Official X announcement and expanded rules/claim panel on the Derive campaign page. Start timestamp is the public announcement."
+      }
     }
   ],
   "preTgeHide": [
