@@ -250,5 +250,26 @@
     "at": "2026-10-30T02:04:39.952Z",
     "kb": 44,
     "hid": 0
+  },
+  "Cardinal": {
+    "file": "shots/cardinal.jpg",
+    "url": "https://cardinal.trading/",
+    "at": "2026-10-30T07:04:02.892Z",
+    "kb": 51,
+    "hid": 0
+  },
+  "Acta": {
+    "file": "shots/acta.jpg",
+    "url": "https://acta.markets/earn",
+    "at": "2026-10-30T07:04:13.818Z",
+    "kb": 50,
+    "hid": 2
+  },
+  "Optivi": {
+    "file": "shots/optivi.jpg",
+    "url": "https://optivi.xyz/",
+    "at": "2026-10-30T07:04:14.884Z",
+    "kb": 68,
+    "hid": 0
   }
 }

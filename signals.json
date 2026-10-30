@@ -242,22 +242,46 @@
  {
   "d": "2026-10-30",
   "kind": "move",
-  "text": "$DRV −18.7% in 24h",
+  "text": "$DRV −9.5% in 24h",
   "href": "#/deep/Derive",
   "key": "$DRV"
  },
  {
   "d": "2026-10-30",
   "kind": "move",
-  "text": "$SYN −8.7% in 24h",
+  "text": "$SYN −8.3% in 24h",
   "href": "#/deep/Hypercall",
   "key": "$SYN"
  },
  {
   "d": "2026-10-30",
   "kind": "vol",
-  "text": "BVIV 42.4 (+5.4% 24h) — BTC implied vol spiking",
+  "text": "BVIV 40.0 (+3.1% 24h) — BTC implied vol ticking up",
   "href": "#/deep/Volmex",
   "key": "BVIV"
+ },
+ {
+  "d": "2026-10-30",
+  "kind": "friend",
+  "text": "Cardinal joins the Friends",
+  "href": "#/deep/Cardinal"
+ },
+ {
+  "d": "2026-10-30",
+  "kind": "friend",
+  "text": "Bebop joins the Friends",
+  "href": "#/deep/Bebop"
+ },
+ {
+  "d": "2026-10-30",
+  "kind": "friend",
+  "text": "Optivi joins the Friends",
+  "href": "#/deep/Optivi"
+ },
+ {
+  "d": "2026-10-30",
+  "kind": "friend",
+  "text": "Acta joins the Friends",
+  "href": "#/deep/Acta"
  }
 ]
