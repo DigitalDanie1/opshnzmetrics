@@ -283,5 +283,19 @@
   "kind": "friend",
   "text": "Acta joins the Friends",
   "href": "#/deep/Acta"
+ },
+ {
+  "d": "2026-10-31",
+  "kind": "move",
+  "text": "$DIME −9.1% in 24h",
+  "href": "#/deep/Paradex",
+  "key": "$DIME"
+ },
+ {
+  "d": "2026-10-31",
+  "kind": "vol",
+  "text": "BVIV 43.4 (+9.3% 24h) — BTC implied vol spiking",
+  "href": "#/deep/Volmex",
+  "key": "BVIV"
  }
 ]
