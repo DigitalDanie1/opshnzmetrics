@@ -35,5 +35,23 @@ const text = [
   '전체 소식 → https://opshnz.com/#/overview',
   '시장 관점 → https://opshnz.com/#/trader-views'
 ].join('\n');
-const sent = await api('sendMessage', {chat_id: chat, text, disable_web_page_preview:true});
-console.log(JSON.stringify({sent:true, bot:bot.username, messageId:sent.message_id, week:file}));
+const kinds = ['benchmark', 'movers', 'signals'];
+const images = kinds.map(kind => path.join(dir, 'share', `${file}-${kind}.png`));
+for (const image of images) {
+  if (!fs.existsSync(image) || Date.now() - fs.statSync(image).mtimeMs > 86400000)
+    throw new Error('Three fresh weekly images required: ' + path.basename(image));
+  if (!fs.readFileSync(image).subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])) && !fs.readFileSync(image).subarray(0,3).equals(Buffer.from([255,216,255])))
+    throw new Error('Invalid PNG: ' + path.basename(image));
+}
+const form = new FormData();
+form.set('chat_id', chat);
+form.set('media', JSON.stringify(kinds.map((kind,i) => ({type:'photo', media:`attach://${kind}`, ...(i===0 ? {caption:`OPSHNZ · ${period}\n벤치마크 · 가격 변화 · 시그널\nhttps://opshnz.com`} : {})}))));
+images.forEach((image,i) => form.set(kinds[i], new Blob([fs.readFileSync(image)], {type:fs.readFileSync(image)[0]===255?'image/jpeg':'image/png'}), path.basename(image)));
+const response = await fetch(`https://api.telegram.org/bot${token}/sendMediaGroup`, {method:'POST', body:form, signal:AbortSignal.timeout(60000)});
+const album = await response.json();
+if (!album.ok || album.result?.length !== 3) throw new Error(`Telegram image album failed (${album.error_code || response.status})`);
+console.log(JSON.stringify({imagesSent:3,messageIds:album.result.map(m=>m.message_id),week:file}));
+if (!process.argv.includes('--images-only')) {
+  const sent = await api('sendMessage', {chat_id: chat, text, disable_web_page_preview:true});
+  console.log(JSON.stringify({sent:true, bot:bot.username, messageId:sent.message_id, week:file}));
+}
