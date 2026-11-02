@@ -23,11 +23,17 @@ async function api(method, body) {
 const bot = await api('getMe', {});
 if (bot.username?.toLowerCase() !== 'wenojadaniel_options_bot') throw new Error('Bot identity mismatch; nothing sent.');
 const updated = research.projects.filter(p => p.note);
-const lines = [`OPSHNZ · ${file}`, research.week || file, `${research.projects.length}개 프로젝트 검토 · ${updated.length}개 소식 반영`, '', ...updated.map(p => `${p.name}: ${p.note}`), '', `Trader views ${research.traderViews.items.length}건`, ...research.traderViews.items.map(v => `${v.publisher}: ${v.title}\n${v.url}`), '', '출처별 확인 한계는 웹사이트 Source coverage에서 확인하세요.', 'https://opshnz.com/#/trader-views'];
-// Derive the calendar label from the research record on future runs.
 const c = research.coverage;
-if (c.from && c.toExclusive) lines[1] = `${c.from.slice(0,10)} ~ ${new Date(Date.parse(c.toExclusive)-86400000).toISOString().slice(0,10)} KST`;
-let text = lines.join('\n');
-if (text.length > 4000) text = lines.slice(0,4).join('\n') + '\n\n자세한 소식과 출처:\nhttps://opshnz.com/#/trader-views';
+const period = c.from && c.toExclusive
+  ? `${c.from.slice(5,10).replace('-', '/')}–${new Date(Date.parse(c.toExclusive)-86400000).toISOString().slice(5,10).replace('-', '/')} KST`
+  : file;
+const highlights = updated.slice(0, 3).map(p => `• ${p.name}: ${p.note}`);
+const text = [
+  `OPSHNZ 주간 업데이트 · ${period}`,
+  `${research.projects.length}개 검토 · 소식 ${updated.length}건 · Trader views ${research.traderViews.items.length}건`,
+  '', ...highlights, '',
+  '전체 소식 → https://opshnz.com/#/overview',
+  '시장 관점 → https://opshnz.com/#/trader-views'
+].join('\n');
 const sent = await api('sendMessage', {chat_id: chat, text, disable_web_page_preview:true});
 console.log(JSON.stringify({sent:true, bot:bot.username, messageId:sent.message_id, week:file}));
