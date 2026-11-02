@@ -1,0 +1,1180 @@
+{
+  "week": "2026-W45",
+  "checkedAt": "2026-11-02T02:02:50.637871+00:00",
+  "coverage": {
+    "timezone": "Asia/Seoul",
+    "from": "2026-10-26T00:00:00+09:00",
+    "toExclusive": "2026-11-02T00:00:00+09:00",
+    "projectCount": 41,
+    "method": "Public official websites, linked documentation/blogs and official X profiles. No authenticated or gated material accessed. Empty notes mean no qualifying update verified, not proof of inactivity. Olive and Olive Exchange are existing duplicate entries and both were preserved."
+  },
+  "previousHeadline": "Updated Oct 29: Fed holds at 3.75–4.00% in a 10–2 vote; Ace.Pro offers short-duration directional markets and liquidity vaults on HyperEVM.",
+  "headline": "This week: Toros launches options on Base. Derive adds LIT collateral. Block Scholes reports higher implied volatility.",
+  "projects": [
+    {
+      "name": "Derive",
+      "previousNote": "Weekly buyback #89 acquired 148,932 DRV at an average $0.40; the DAO reports 28,358,307 DRV bought back in total, funded with 50% of protocol fees.",
+      "note": "LIT is now accepted as collateral for options and perpetuals.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/DeriveXYZ/status/2116173307657793751",
+          "publishedAt": "2026-10-30T23:20:07.801000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://www.derive.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.derive.xyz/trading/managers-and-risk-universes",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.derive.xyz/trading/rfq",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/derivexyz",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Paradex",
+      "previousNote": "Released Theta Gang episode 3, discussing a $2.3B-notional Paradigm trade with guests from Thalex, Anchorage and Paradigm.",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://www.paradex.trade",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.paradex.trade/home",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://www.paradex.trade/blog",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/paradex",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Thetanuts",
+      "previousNote": "",
+      "note": "Teased a new DeFi product. Specifications and a launch date remain unannounced.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/ThetanutsFi/status/2114903252106145897",
+          "publishedAt": "2026-10-27T11:13:22.961000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://thetanuts.finance",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/ThetanutsFi",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Aevo",
+      "previousNote": "Team reports over 30M AEVO staked and 78M permanently burned; October’s 1M-token buyback brought fee-funded buybacks and burns to 9M year to date.",
+      "note": "Launched its affiliate program. The rewards dashboard now combines trading and staking estimates.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/aevoxyz/status/2116558118851317781",
+          "publishedAt": "2026-11-01T00:49:13.939000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://www.aevo.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://www.aevo.xyz/blog",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://www.aevo.xyz/docs",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/aevoxyz",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Hypercall",
+      "previousNote": "RFQ V2 launched: competing makers price anonymous packages of up to 10 legs, executed together with all-or-none fills.",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://hypercall.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.hypercall.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://insights.hypercall.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://twitter.com/synapseprotocol",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "GammaSwap",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://gammaswap.com",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://gammaswap.com/blog",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.gammaswap.com/",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/GammaSwapLabs",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Dream",
+      "previousNote": "Added gold (XAU) trading and reported cumulative notional volume above $100M; distributed 100,000 points for Week 2.",
+      "note": "The $1K-to-$10K trading challenge has finished. Week 3 points were distributed.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/dreaming/status/2115879481160131022",
+          "publishedAt": "2026-10-30T03:52:34.105000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://dreamos.app",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.dreamos.app",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/dreaming",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "CallPut",
+      "previousNote": "",
+      "note": "Launched on Robinhood Chain with tokenized-stock and ETF options.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/CallPutApp/status/2116148813673152572",
+          "publishedAt": "2026-10-30T21:42:47.980000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://callput.app",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.callput.app",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/CallPutApp",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Joyride",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://joyride.exchange",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.joyride.exchange",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/JoyrideExchange",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Olive",
+      "previousNote": "Launched in the Solana dApp Store for Seeker; added AMDx, ASML and JNJx markets/liquidity pools.",
+      "note": "Opened an AVGOx liquidity pool and related derivatives markets.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/Olive_Exchange/status/2116858213605966275",
+          "publishedAt": "2026-11-01T20:41:42.104000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://olive.exchange",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/Olive_Exchange",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "3Jane",
+      "previousNote": "Announced a new PT-USD3-17DEC2026 / USDC market and allocation from the Pendle × Wintermute High Yield USDC vault, the seventh Morpho vault accepting USD3 collateral.",
+      "note": "Launched the USD3 referral program.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/3janexyz/status/2115445879222210975",
+          "publishedAt": "2026-10-28T23:09:35.347000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://www.3jane.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.3jane.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.3jane.xyz/ccl/payments#aum-threshold",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/3janexyz",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Volmex",
+      "previousNote": "",
+      "note": "Shared Goldman Sachs research featuring the BVIV Bitcoin volatility index.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/volmexfinance/status/2115418834257444946",
+          "publishedAt": "2026-10-28T21:22:07.325000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://volmex.finance",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://volmex.finance/docs",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/arbelos-markets-and-b2c2-complete-first-bilateral-otc-option-transaction-on-bviv-index-bitcoin-volmex-implied-volatility-302163982.html",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/volmexfinance",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Hunch",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://www.hunch.cool",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://www.hunch.cool/docs",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Rysk",
+      "previousNote": "V12 activity update reports $1.4B capital in motion, $17.6M paid upfront and 44,783 covered-call/cash-secured-put executions; these are publisher-reported cumulative figures.",
+      "note": "Reported a new high in daily capital deployed on Ethereum mainnet.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/ryskfinance/status/2116534913029587452",
+          "publishedAt": "2026-10-31T23:17:01.240000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://app.rysk.finance",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/ryskfinance",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Panoptic",
+      "previousNote": "Introduced The DeFi Desk, a new podcast with STS Digital covering options and DeFi.",
+      "note": "Highlighted its three options-vault strategies and volUSDC deposits.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/Panoptic_xyz/status/2115464737148588241",
+          "publishedAt": "2026-10-29T00:24:31.427000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://panoptic.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://panoptic.xyz/docs/intro",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://panoptic.xyz/blog/lp-vips",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/Panoptic_xyz",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Hegic",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://www.hegic.co",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/HegicOptions",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Deri",
+      "previousNote": "Announced the conclusion of its trading tournaments, including Linea, Solana, Robinhood Chain and Base editions, with increased participant rewards.",
+      "note": "Trading-tournament rewards have been distributed through Upscale.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/DeriProtocol/status/2114972990454768117",
+          "publishedAt": "2026-10-27T15:50:29.879000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://deri.io",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/DeriProtocol",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Odette",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://odette.fi",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/odetteonchain",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "SOFA.org",
+      "previousNote": "October 19 update reports 10,391 RCH burned during the preceding week; the observation period is earlier than the publication week.",
+      "note": "Reported a weekly burn of 7,310 RCH.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/SOFAorgDAO/status/2114524340490518710",
+          "publishedAt": "2026-10-26T10:07:43.392000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://www.sofa.org",
+          "status": null,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://x.com/SOFAorgDAO",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Toros",
+      "previousNote": "",
+      "note": "Launched options on Base using Derive liquidity. Added 5% cashback for eligible Derive traders.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/torosfinance/status/2115615864347369880",
+          "publishedAt": "2026-10-29T10:25:02.959000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://chamberfi.com",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.chamberfi.com/security/audits",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.chamberfi.com/",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/torosfinance",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Stryke",
+      "previousNote": "CLAMM went live on Robinhood: LPs select price ranges and earn swap fees plus option premiums, while traders buy options against that liquidity.",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://www.stryke.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.premarket.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.stryke.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/stryke_xyz",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Carmine",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://carmine.finance",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/CarmineOptions",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Prodigy.Fi",
+      "previousNote": "Launched XAUT vaults on Ethereum, with entry from 10 USDC and user-selected buy/sell levels.",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://prodigy.fi",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/ProdigyFi",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Hypersurface",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://app.hypersurface.io",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/hypersurfaceX",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Stochastic",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://stochastic.finance",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://stochastic.finance/docs/",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://stochastic.finance/docs/core-concepts/",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/stochastic_fin",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Omen",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://omen.trade",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://omen.trade/blog",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://omen.trade/blog/fractional-options",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/omenapp",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Gage",
+      "previousNote": "Reported a burn of 38,682,841 sGAGE and cumulative buybacks of slightly over 5.4% of GAGE supply for $55,754.",
+      "note": "Published its second changelog and linked the Pashov audit report.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/gagedotcash/status/2116184215691870697",
+          "publishedAt": "2026-10-31T00:03:28.479000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://gage.cash",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.gage.cash",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/gagedotcash",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "SuperVega",
+      "previousNote": "Enabled private options trading through STRK20 Shadow Accounts, separating positions from the user’s main public wallet.",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://supervega.app",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/SuperVegaXYZ",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Saffron",
+      "previousNote": "SFI began trading on Kraken; the team also published its MiCAR white paper.",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://saffron.finance",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/Saffron",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "HedgeHood",
+      "previousNote": "Team reports about $100K Stock Yield TVL and completion of settlement #2; first-round HEDGE staking rewards are claimable.",
+      "note": "Opened week 3 deposits for its stock-yield funds. Previewed a wheel vault for next week.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/0xHedgehood/status/2116250289728590331",
+          "publishedAt": "2026-10-31T04:26:01.757000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://hedgehood.app",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/0xHedgehood",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Tacticalls",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://tacticalls.xyz",
+          "status": null,
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "url": "https://x.com/tacticallsXYZ",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Heat",
+      "previousNote": "",
+      "note": "Launched two-level referral rewards.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/heat_fi/status/2115806445614608804",
+          "publishedAt": "2026-10-29T23:02:21.074000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://www.useheat.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/heat_fi",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "HARDCORE",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://hardcore.finance",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/JoinHARDCORE",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Split Markets",
+      "previousNote": "Added Lighter binary options as Up/Down trades and opened the platform without invite codes; Copilot visualizes options levels on charts.",
+      "note": "Introduced trader-following and copy-trading features.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/splitmarkets/status/2115513008906727898",
+          "publishedAt": "2026-10-29T03:36:20.311000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://split.markets",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/splitmarkets",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "IVY",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://ivy.market",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/IvyMarkets",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Ace.Pro",
+      "previousNote": "Official docs describe directional market rounds and vault liquidity. Source: https://beta.ace.pro/docs",
+      "note": "Published feedback-award rules and rewarded verified bug reports.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/acedotpro/status/2116800010755166658",
+          "publishedAt": "2026-11-01T16:50:25.463000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://ace.pro",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://beta.ace.pro/docs",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://beta.ace.pro/docs/contracts",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/acedotpro",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Olive Exchange",
+      "previousNote": "",
+      "note": "Opened an AVGOx liquidity pool and related derivatives markets.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/Olive_Exchange/status/2116858213605966275",
+          "publishedAt": "2026-11-01T20:41:42.104000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://x.com/Olive_Exchange",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Cardinal",
+      "previousNote": "Testnet competition runs Oct 29–Nov 12. First prize: 10,000 DRV.",
+      "note": "Launched its testnet trading competition with a 10,000 DRV prize pool.",
+      "result": "Verified in-window official update",
+      "sources": [
+        {
+          "url": "https://x.com/cardinal_labs/status/2115731206558151033",
+          "publishedAt": "2026-10-29T18:03:22.685000+09:00",
+          "dateProvenance": "Official X post text and status timestamp"
+        }
+      ],
+      "checkedSources": [
+        {
+          "url": "https://cardinal.trading/",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/cardinal_labs",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Bebop",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://bebop.xyz/",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.bebop.xyz/home",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://bebop.xyz/blog",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/bebop_dex",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Optivi",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://optivi.xyz/",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.optivi.xyz",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://docs.optivi.xyz/guide-book",
+          "status": null,
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "url": "https://x.com/optivixyz",
+          "status": 200,
+          "error": null
+        }
+      ]
+    },
+    {
+      "name": "Acta",
+      "previousNote": "",
+      "note": "",
+      "result": "No qualifying dated project update verified in accessible official sources",
+      "sources": [],
+      "checkedSources": [
+        {
+          "url": "https://acta.markets/",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://beta.acta.markets/docs",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://github.com/acta-markets/web-app/tree/main/docs-site",
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://x.com/acta_markets",
+          "status": 200,
+          "error": null
+        }
+      ]
+    }
+  ],
+  "traderViews": {
+    "items": [
+      {
+        "id": "blockscholes-2026-10-30",
+        "publisher": "Block Scholes",
+        "author": "Block Scholes",
+        "date": "2026-10-30",
+        "assets": [
+          "BTC",
+          "ETH",
+          "SOL"
+        ],
+        "horizon": "30-day implied volatility",
+        "stance": "Volatility repricing",
+        "title": "ETH leads a rise in implied volatility",
+        "view": "Block Scholes reports 30-day implied volatility at 43.3% for BTC, 60.2% for ETH and 63.0% for SOL. All rose over seven days; ETH gained the most, at 5.3 points.",
+        "url": "https://x.com/BlockScholes/status/2116121916666675500",
+        "type": "Volatility research"
+      }
+    ],
+    "archivedNew": {
+      "id": "qcp-2026-10-26",
+      "publisher": "QCP Capital",
+      "author": "QCP Capital",
+      "date": "2026-10-26",
+      "assets": [
+        "BTC"
+      ],
+      "horizon": "Pre-Fed / through November",
+      "stance": "Downside hedging",
+      "title": "Short-tenor volatility rises ahead of the Fed",
+      "view": "QCP reported short-tenor implied volatility rising from about 30% to 35%. It observed demand for downside protection through November. This was a pre-Fed view.",
+      "url": "https://www.qcpgroup.com/insights/qcp-market-colour-55/",
+      "type": "Desk commentary"
+    },
+    "sources": [
+      {
+        "name": "QCP Capital",
+        "url": "https://www.qcpgroup.com/topic/market-updates/",
+        "status": "Oct 26 options view verified and archived: outside the live rolling window. Oct 30 article is macro commentary, with no new options view."
+      },
+      {
+        "name": "Greeks.live",
+        "url": "https://www.greeks.live/",
+        "status": "Official public X still shows Oct 22 as the latest visible view. No fresh options view verified."
+      },
+      {
+        "name": "Deribit Insights",
+        "url": "https://insights.deribit.com/industry/",
+        "status": "Oct 30 block-RFQ announcement is an exchange update, not a market view. No fresh options commentary verified."
+      },
+      {
+        "name": "Block Scholes",
+        "url": "https://www.blockscholes.com/resource-centre",
+        "status": "Oct 30 official BSIV commentary verified and included."
+      },
+      {
+        "name": "Glassnode",
+        "url": "https://research.glassnode.com/",
+        "status": "Oct 28 report discusses realized volatility; Oct 30 Strategy Watch covers September. Neither is presented as a fresh options-pricing view."
+      },
+      {
+        "name": "Amberdata",
+        "url": "https://blog.amberdata.io/tag/featured",
+        "status": "Public blog redirects to the Kaiko acquisition announcement. No fresh accessible options view verified."
+      },
+      {
+        "name": "Volmex",
+        "url": "https://blog.volmex.finance/",
+        "status": "Oct 28 post is fresh but quotes an Oct 16 volatility comparison. Excluded from current views to avoid presenting old market conditions as current."
+      }
+    ],
+    "excluded": [
+      {
+        "url": "https://x.com/volmexfinance/status/2115418834257444946",
+        "publishedAt": "2026-10-28",
+        "reason": "Fresh post, but underlying market observation is dated Oct 16."
+      },
+      {
+        "url": "https://research.glassnode.com/strategy-watch-09-2026/",
+        "publishedAt": "2026-10-30",
+        "reason": "September strategy performance; not current options commentary."
+      }
+    ]
+  },
+  "summary": {
+    "projectsReviewed": 41,
+    "projectsWithVerifiedUpdates": 20,
+    "notesChanged": 26,
+    "traderViewsAdded": 1
+  }
+}
