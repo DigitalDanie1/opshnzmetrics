@@ -308,14 +308,14 @@
  {
   "d": "2026-11-02",
   "kind": "move",
-  "text": "$DIME −9.3% in 24h",
+  "text": "$DIME −9.1% in 24h",
   "href": "#/deep/Paradex",
   "key": "$DIME"
  },
  {
   "d": "2026-11-02",
   "kind": "vol",
-  "text": "BVIV 40.6 (−3.0% 24h) — BTC implied vol easing",
+  "text": "BVIV 40.3 (−2.3% 24h) — BTC implied vol easing",
   "href": "#/deep/Volmex",
   "key": "BVIV"
  }
