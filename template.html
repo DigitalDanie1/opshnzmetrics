@@ -2215,10 +2215,11 @@ p{line-height:1.6}
     </div>
     <details class="fund-fold" data-blk="monthly"><summary>Monthly trend <span>12-month volume history</span></summary><div class="card stack"><h3 id="fdStackT"></h3><div id="fdStack"></div><div class="legend2" id="fdLegend"></div><div class="cf" id="fdStackF"></div></div></details>
     <details class="fund-fold" id="oiCard" data-blk="oi"><summary>Open interest <span>Positions by venue and asset</span></summary><div class="card"><h3 id="oiT"></h3><div id="oiBody"></div><div class="legend2" id="oiLegend"></div><div class="cf" id="oiF"></div></div></details>
-    <details class="fund-fold" id="exGrid"><summary>Trading detail <span>Underlying assets &amp; largest trades</span></summary><div class="fgrid">
+    <details class="fund-fold" id="exGrid"><summary>Trading detail <span>Underlying assets &amp; sampled trades</span></summary><div class="fgrid">
       <div class="card" data-blk="underlying"><h3>24h options volume by underlying<small>notional · straight from each venue’s public API</small></h3><div id="vuBody"></div><div class="legend2" id="vuLegend"></div><div class="cf" id="vuF"></div></div>
-      <div class="card" data-blk="trades"><h3>Largest trades · 24h<small>Paradex options fills, by notional</small></h3><div id="ltBody"></div><div class="cf" id="ltF"></div></div>
+      <div class="card" data-blk="trades"><h3>Sampled trades · 24h<small>Paradex · up to 100 fills from each of 20 active option markets</small></h3><div id="ltBody"></div><div class="cf" id="ltF"></div></div>
     </div></details>
+    <details class="fund-fold" data-blk="kpis"><summary>Data sources &amp; coverage <span>What is verified, missing or estimated</span></summary><div class="card" id="fdQuality"></div></details>
     <a class="fund-comp" data-blk="comps" href="#/compare">Compare token valuations to Deribit →</a>
   </main>
 
@@ -3301,7 +3302,7 @@ function renderFund(){
   const k = fdKind, T = F.totals[k], other = k === 'premium' ? 'notional' : 'premium';
   const vs = F.venues.filter(v => v[k] && (v[k].d30 || v[k].all)).sort((a, b) => b[k].d30 - a[k].d30);
   const clientSum = vs.filter(v => v.core).reduce((a, v) => a + v[k].d30, 0);
-  $('fdSub').textContent = `${vs.length} venues tracked by DefiLlama · ${KL[k].toLowerCase()} · ${SNAP.week}`;
+  $('fdSub').textContent = `${vs.length} venues · volume checked ${F.at.replace('T',' ').slice(0,16)} UTC`;
 
   // KPI
   const kpi = (title, kk) => { const t = F.totals[kk], ch = mom(t.d30, t.prev30); return `<div class="card"><div class="ck">${title} · last 30d</div><div class="cv">${usd(t.d30)}</div><div class="cd">${pct(ch)} vs prior 30d</div>${sparkAreaWrap(t.m, kk === 'premium' ? '#f2b544' : '#9a7cff')}<div class="cf"><span>All-time ${usd(t.all)} · ${llamaBadge()}</span></div></div>`; };
@@ -3314,15 +3315,16 @@ function renderFund(){
   const shareCard = `<div class="card"><div class="ck">Friends' share · ${KL[k].toLowerCase()}, 30d</div><div class="cv">${share.toFixed(1)}%</div><div class="cd">${vs.filter(v => v.core).length} friends with DefiLlama data · ${usd(clientSum)}</div>
     <div class="vsbar">${vs.filter(v => v.core).slice(0, 3).map(v => `<div><span>${esc(v.name)}</span><i style="width:${(v[k].d30 / (vs[0][k].d30 || 1) * 100).toFixed(1)}%;background:${VC[v.name] || 'var(--amber)'}"></i><b>${usd(v[k].d30)}</b></div>`).join('')}</div>
     <div class="cf"><span>${llamaBadge()}</span></div></div>`;
-  const oiRows = (SNAP.dm?.venues || []).filter(v=>ONCHAIN.has(v.venue) && typeof v.total === 'number');
+  const oiRows = marketShareVenues().filter(v=>ONCHAIN.has(v.venue) && typeof v.total === 'number');
   const oiTotal = oiRows.length ? oiRows.reduce((sum,v)=>sum+v.total,0) : null;
   const compactKpi = (label,value,caption) => `<div class="card"><div class="ck">${label}</div><div class="cv">${value}</div><div class="cd">${caption}</div></div>`;
-  $('fdKpis').innerHTML = compactKpi('Premium paid · 30d',usd(F.totals.premium.d30),'Options purchase value') + compactKpi('Notional traded · 30d',usd(F.totals.notional.d30),'Underlying exposure') + compactKpi('Open interest',oiTotal == null ? '—' : usd(oiTotal),'BTC + ETH · onchain venues') + compactKpi('Onchain / Deribit · 24h',D && D.notional24 > 0 ? (on24/D.notional24*100).toFixed(1)+'%' : '—','Notional volume ratio');
+  $('fdKpis').innerHTML = compactKpi('Premium paid · 30d',usd(F.totals.premium.d30),'Options purchase value') + compactKpi('Notional traded · 30d',usd(F.totals.notional.d30),'Underlying exposure') + compactKpi('Open interest',oiTotal == null ? '—' : usd(oiTotal),'BTC + ETH · onchain venues') + compactKpi('Onchain / Deribit · 24h',D && D.coverageComplete && D.notional24 > 0 ? (on24/D.notional24*100).toFixed(1)+'%' : '—','Indicative · provider cutoffs differ');
 
   // 월간 누적 막대 (상위 7 + 기타), 색은 거래소에 고정
-  const tops = [...vs].sort((a, b) => b[k].m.reduce((x, y) => x + y, 0) - a[k].m.reduce((x, y) => x + y, 0)).slice(0, 7).map(v => v.name);
+  const executionVenues=vs.filter(v=>!v.aggregateExcluded);
+  const tops = [...executionVenues].sort((a, b) => b[k].m.reduce((x, y) => x + y, 0) - a[k].m.reduce((x, y) => x + y, 0)).slice(0, 7).map(v => v.name);
   const col = n => VC[n] || ['#8fb8c9','#c98a5a','#b7d36b','#d08fb4'][tops.indexOf(n) % 4] || OTHER;
-  const rows = F.months.map((m, i) => { const seg = tops.map(n => ({n, v:(vs.find(x => x.name === n) || {})[k]?.m[i] || 0})); const rest = vs.filter(v => !tops.includes(v.name)).reduce((a, v) => a + v[k].m[i], 0); seg.push({n:'Other', v:rest}); return {m, seg, tot:seg.reduce((a, x) => a + x.v, 0)}; });
+  const rows = F.months.map((m, i) => { const seg = tops.map(n => ({n, v:(vs.find(x => x.name === n) || {})[k]?.m[i] || 0})); const rest = executionVenues.filter(v => !tops.includes(v.name)).reduce((a, v) => a + v[k].m[i], 0); seg.push({n:'Other', v:rest}); return {m, seg, tot:seg.reduce((a, x) => a + x.v, 0)}; });
   const W = 760, H = 380, L = 8, R = 64, Tp = 10, B = 26, mx = Math.max(...rows.map(r => r.tot), 1), bw = (W - L - R) / rows.length;
   const Y = v => (H - B) - v / mx * (H - B - Tp);
   let bars = '';
@@ -3338,39 +3340,38 @@ function renderFund(){
   $('fdStackF').innerHTML = footer();
 
   renderMarketShare();
+  const cov=F.oi?.coverage || {};
+  $('fdQuality').innerHTML = `<p>Volume: DefiLlama options adapters; official volume history has not been independently reconciled. Rolling 7d / 30d; daily provider cutoffs. Premium is cash paid for options, not exchange revenue.</p><p>OI: official APIs where complete; secondary feed otherwise. BTC + ETH only. Missing or stale feeds are excluded, never treated as zero.</p><p>Deribit comparison: provider 24h notional totals versus Deribit rolling 24h. Cutoffs and asset coverage differ; this is indicative, not a synchronized 30d market share.</p><p>Toros routes to Derive and is excluded from volume totals to avoid double counting. Dream: no verified standalone feed connected. Brokerage flow is not added to execution-venue totals until overlap is checked.</p><p>Official OI checks: ${Object.entries(cov).map(([n,c])=>esc(n)+': '+esc(c.status)).join(' · ') || 'No direct-feed status recorded'}.</p><p>Paradex: existing single-side normalization halves reported OI. This convention still needs independent verification.</p><p><a href="https://docs.derive.xyz/api-reference/market-data/publicget_tickers" target="_blank" rel="noopener">Derive V3 API ↗</a> · <a href="https://defillama.com/options" target="_blank" rel="noopener">Volume source ↗</a></p>`;
 
   // 거래소 표
   const mx30 = vs.length ? vs[0][k].d30 : 1;
   $('fdTableT').innerHTML = `Venues by ${KL[k].toLowerCase()}<small>Ranked by last 30 days · USD</small>`;
-  $('fdTable').innerHTML = `<tr><th>#</th><th>Venue</th><th>7D</th><th>30D</th><th>MoM</th><th>Trend 90D</th><th>All-time</th><th></th></tr>` +
-    vs.filter(v => fdAll || v[k].d30 > 0).map((v, i) => { const x = v[k], ch = mom(x.d30, x.prev30); return `<tr><td>${i + 1}</td><td class="vn"><a href="${esc(v.url)}" target="_blank" rel="noopener">${logo(v)}${esc(v.name)}</a></td>
+  $('fdTable').innerHTML = `<tr><th>#</th><th>Venue</th><th>7D</th><th>30D</th><th>30d change</th><th>Trend 90D</th><th>All-time</th><th></th></tr>` +
+    vs.filter(v => fdAll || v[k].d30 > 0).map((v, i) => { const x = v[k], ch = mom(x.d30, x.prev30); return `<tr><td>${i + 1}</td><td class="vn"><a href="${esc(v.url)}" target="_blank" rel="noopener">${logo(v)}${esc(v.name)}</a>${v.aggregateExcluded ? `<small class="muted">via ${esc(v.aggregateExcluded.executionVenue)} · excluded from totals</small>` : ''}</td>
       <td>${usd(x.d7)}</td><td><span class="bar30"><i style="width:${Math.max(2, x.d30 / mx30 * 90).toFixed(0)}px;background:${tops.includes(v.name) ? col(v.name) : OTHER}"></i>${usd(x.d30)}</span></td>
       <td>${ch == null ? '<span class="muted">—</span>' : `<span class="mom ${ch >= 0 ? 'up' : 'down'}">${ch >= 0 ? '+' : '−'}${Math.abs(ch).toFixed(1)}%</span>`}</td>
       <td>${sparkLine(x.w, tops.includes(v.name) ? col(v.name) : '#8f8b80')}</td><td>${usd(x.all)}</td><td><a class="go" href="${esc(v.url)}" target="_blank" rel="noopener" aria-label="Open ${esc(v.name)} on DefiLlama"><svg width="11" height="11" viewBox="0 0 11 11" aria-hidden="true"><path d="M3 8 8 3M4 3h4v4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></td></tr>`; }).join('');
   const dormant = vs.filter(v => !(v[k].d30 > 0)).length;
   if (dormant) $('fdTable').insertAdjacentHTML('beforeend', `<tr><td colspan="8" style="text-align:center;font-family:var(--sans)"><button class="reveal" id="fdMore" style="margin:4px 0">${fdAll ? 'Hide' : 'Show'} ${dormant} venues with no ${KL[k].toLowerCase()} in the last 30 days</button></td></tr>`);
   if ($('fdMore')) $('fdMore').onclick = () => { fdAll = !fdAll; renderFund(); };
-  $('fdTableF').innerHTML = footer(' · MoM = last 30 days vs the 30 days before');
+  $('fdTableF').innerHTML = `DefiLlama options adapters · rolling 30d vs prior 30d · checked ${esc(F.at.replace('T',' ').slice(0,16))} UTC`;
   renderOI();
   renderEx();
 }
 // 미결제약정: 거래소 공개 API 에서 직접 (계약 수 × 기초자산 가격), 기초자산별로 쪼갠다
 const UC = {BTC:'#f7931a', ETH:'#8a9bd8', HYPE:'#50d2c1', SOL:'#b07cff', ZEC:'#7d9c5a', XAUT:'#e5d38a'};
 function renderOI(){
-  const O = SNAP.fund && SNAP.fund.oi;
-  $('oiCard').dataset.empty = O ? '' : '1';
-  if (!O) return;
-  const vs = Object.entries(O.venues).map(([n, x]) => ({n, ...x, p:byName(n)})).sort((a, b) => b.total - a.total);
-  const tot = vs.reduce((a, v) => a + v.total, 0), mxv = vs[0].total;
-  const assets = [...new Set(vs.flatMap(v => Object.entries(v.byU).filter(([, x]) => x / tot > .004).map(([a]) => a)))].sort((a, b) => vs.reduce((t, v) => t + (v.byU[b] || 0), 0) - vs.reduce((t, v) => t + (v.byU[a] || 0), 0));
-  const colU = a => UC[a] || OTHER;
-  $('oiT').innerHTML = `Open interest · ${usd(tot)}<small>by venue and underlying · live from each venue's public API · contracts × underlying price</small>`;
-  const na = ['Rysk', 'Hypercall', 'CallPut'].filter(n => byName(n)).map(n => `<div class="row na"><a href="${deepHref(byName(n))}">${logo(byName(n))}${esc(n)}</a><div class="track2"></div><b>no public OI feed</b></div>`).join('');
-  $('oiBody').innerHTML = `<div class="oi">${vs.map(v => `<div class="row"><a href="${v.p ? deepHref(v.p) : '#'}">${v.p ? logo(v.p) : ''}${esc(v.n)}</a>
-    <div class="track2" style="width:${Math.max(1, v.total / mxv * 100).toFixed(1)}%">${Object.entries(v.byU).sort((a, b) => b[1] - a[1]).map(([a, x]) => `<i style="width:${(x / v.total * 100).toFixed(2)}%;background:${assets.includes(a) ? colU(a) : OTHER}" data-tip="${esc(v.n)} · ${esc(a)} ${usd(x)}"></i>`).join('')}</div>
-    <b>${usd(v.total)}</b></div>`).join('')}${na}</div>`;
-  $('oiLegend').innerHTML = [...assets.filter(a => UC[a]), 'Other'].map(a => `<span><i style="background:${a === 'Other' ? OTHER : colU(a)}"></i>${a}</span>`).join('');
-  $('oiF').innerHTML = `<span>Source ${Object.entries(O.sources).map(([n, u]) => `<a class="srct" style="color:var(--ink2);background:rgba(236,231,220,.08)" href="${esc(u)}" target="_blank" rel="noopener">${esc(n)} API ↗</a>`).join(' ')} · Paradex reports both sides, halved to single-side OI</span><span>as of ${asOf()}</span>`;
+  const rows=marketShareRows(marketShareVenues().filter(v=>ONCHAIN.has(v.venue)));
+  $('oiCard').dataset.empty = '';
+  if(!rows.length) { $('oiBody').innerHTML='<p class="empty">Fresh comparable OI unavailable. Missing feeds are not zero.</p>'; return; }
+  const total=rows.reduce((sum,v)=>sum+v.total,0), max=Math.max(...rows.map(v=>v.total),1);
+  $('oiT').innerHTML=`Open interest · ${usd(total)}<small>BTC + ETH only · same coverage as Market share</small>`;
+  $('oiBody').innerHTML='<div class="oi">'+rows.map(v=>{
+    const name=DMV[v.venue] || v.venue,p=byName(name);
+    return `<div class="row"><a href="${p?deepHref(p):'#'}">${p?logo(p):''}${esc(name)}</a><div class="track2" style="width:${v.total/max*100}%"><i style="width:${v.btc/v.total*100 || 0}%;background:${UC.BTC}"></i><i style="width:${v.eth/v.total*100 || 0}%;background:${UC.ETH}"></i></div><b>${usd(v.total)}</b></div><div class="bench-note">${esc(name)} · ${v.sourceKind} · ${esc(v.observedAt.replace('T',' ').slice(0,16))} UTC</div>`;
+  }).join('')+'</div>';
+  $('oiLegend').innerHTML='<span>BTC + ETH · one-sided notional OI</span>';
+  $('oiF').innerHTML='Official APIs where complete; secondary feed otherwise. Observations can differ in time. Data older than 36h and other assets are excluded.';
 }
 $('fdKind').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; fdKind = b.dataset.k; for (const x of $('fdKind').children) x.setAttribute('aria-pressed', x === b); renderFund(); });
 
@@ -3379,7 +3380,7 @@ $('fdKind').addEventListener('click', e => { const b = e.target.closest('button'
 const SUBS = {
   compare:[],
   overview:[['finder','Start here'],['planets','Planet map'],['friends','Friends'],['founders','Founders'],['ecosystem','Whole ecosystem'],['live','Live points'],['pretge','Pre-TGE friends'],['codes','My ref codes'],['watch','Watchlist'],['content','Content'],['log','Weekly log']],
-  fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['underlying','By underlying'],['trades','Largest trades'],['venues','Venues'],['track','Race'],['comps','Valuation benchmark']],
+  fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['underlying','By underlying'],['trades','Trade sample'],['venues','Venues'],['track','Race'],['comps','Valuation benchmark']],
   'trader-views':[['traders','Traders'],['institutions','Institutions']],
   strategy:[['now','Market now'],['log','Sentiment log'],['plays','Today’s plays'],['macro','Macro playbook']],
 };
@@ -3948,13 +3949,27 @@ $('stAsset').addEventListener('click', e => { const b = e.target.closest('button
 
 // 온체인 vs CEX 미결제약정 (Option Fundamental)
 let marketShareAsset = 'all';
+// Prefer validated official BTC+ETH snapshots; retain an explicitly labelled fallback.
+function marketShareVenues() {
+  const now=Date.now(), maxAge=36*3600000, dm=SNAP.dm;
+  const fresh=t=>Number.isFinite(Date.parse(t)) && now-Date.parse(t)<=maxAge && now-Date.parse(t)>=-60000;
+  const fallbackFresh=dm && Number.isFinite(Number(dm.venuesAt || dm.at)) && now-Number(dm.venuesAt || dm.at)<=maxAge && now-Number(dm.venuesAt || dm.at)>=-60000;
+  const rows=new Map((fallbackFresh ? dm.venues || [] : []).map(v=>[v.venue,{...v,sourceKind:'Secondary feed',observedAt:v.observedAt || new Date(Number(dm.venuesAt || dm.at)).toISOString()}]));
+  for(const [key,name] of Object.entries(DMV)) {
+    if(!ONCHAIN.has(key)) continue;
+    const v=SNAP.fund?.oi?.venues?.[name];
+    if(!v || !fresh(v.observedAt) || !['BTC','ETH'].every(a=>v.assetsComplete?.includes(a) && Number.isFinite(v.byU?.[a]))) continue;
+    rows.set(key,{venue:key,btc:v.byU.BTC,eth:v.byU.ETH,total:v.byU.BTC+v.byU.ETH,sourceKind:'Official API',observedAt:v.observedAt,source:v.source});
+  }
+  return [...rows.values()];
+}
 function marketShareRows(venues, asset = 'all') {
   return venues.map(v => ({...v, value:asset === 'BTC' ? v.btc : asset === 'ETH' ? v.eth : v.total}))
     .filter(v => typeof v.value === 'number' && Number.isFinite(v.value) && v.value >= 0)
     .sort((a,b) => b.value-a.value);
 }
 function renderMarketShare(){
-  const venues = SNAP.dm?.venues || [], rows = marketShareRows(venues, marketShareAsset);
+  const venues = marketShareVenues(), rows = marketShareRows(venues, marketShareAsset);
   const total = rows.reduce((s,v) => s+v.value,0), on = rows.filter(v => ONCHAIN.has(v.venue)).reduce((s,v) => s+v.value,0), cex=total-on;
   $('fdShareT').innerHTML = 'Market share<small>Onchain vs CEX · options open interest · USD</small>';
   if (!(total > 0)) { $('fdShare').innerHTML='<p class="empty">Comparable options open-interest data unavailable.</p>'; $('fdShareF').innerHTML=''; return; }
@@ -3968,9 +3983,9 @@ function renderMarketShare(){
     <div class="ms-split" role="img" aria-label="Onchain ${pct(on)}, CEX ${pct(cex)} of reported options open interest"><i style="width:${on/total*100}%"></i><i style="width:${cex/total*100}%"></i></div>
     <div class="ms-groups">${group(true,on)}${group(false,cex)}</div>`;
   $('fdShare').querySelectorAll('[data-ms]').forEach(b => b.onclick=() => {marketShareAsset=b.dataset.ms;renderMarketShare();});
-  const absent=Object.keys(DMV).filter(k => !venues.some(v => v.venue === k)).map(k => DMV[k]);
-  const at=new Date(SNAP.dm.at).toISOString().replace('T',' ').slice(0,16)+' UTC';
-  $('fdShareF').innerHTML=`<span>Every percentage uses total reported ${marketShareAsset === 'all' ? 'BTC + ETH' : marketShareAsset} options OI as its denominator. Bars use a linear scale. Snapshot ${at}. This panel is independent of the premium / notional volume selector.${absent.length ? ' Missing venues: '+esc(absent.join(', '))+'.' : ''} Share is of covered venues, not the whole global market; missing data is excluded, not zero. Paradex OI is normalized to one side by the collector.</span><a class="srct" href="${dmLink('btc')}" target="_blank" rel="noopener">Derivatives Monkey ↗</a>`;
+  const absent=Object.keys(DMV).filter(k => !rows.some(v => v.venue === k)).map(k => DMV[k]);
+  const at=(SNAP.dm?.venuesAt || SNAP.dm?.at) ? new Date(SNAP.dm.venuesAt || SNAP.dm.at).toISOString().replace('T',' ').slice(0,16)+' UTC' : 'unavailable';
+  $('fdShareF').innerHTML=`<span>Every percentage uses total reported ${marketShareAsset === 'all' ? 'BTC + ETH' : marketShareAsset} options OI as its denominator. Bars use a linear scale. Secondary feed ${at}; official observations may differ. This panel is independent of the premium / notional volume selector.${absent.length ? ' Missing venues: '+esc(absent.join(', '))+'.' : ''} Share is of covered venues, not the whole global market; missing data is excluded, not zero. Paradex OI is normalized to one side by the collector.</span><a class="srct" href="${dmLink('btc')}" target="_blank" rel="noopener">Derivatives Monkey ↗</a>`;
 }
 
 // ════════════════ New projects: 2025 년 이후 처음 나온(또는 DefiLlama 에 처음 올라온) 옵션 프로젝트 ════════════════
@@ -4246,28 +4261,14 @@ function renderEx(){
   const assets = [...new Set(vs.flatMap(v => Object.entries(v.u || {}).filter(([, x]) => x > 0).map(([a]) => a)))];
   const colU = a => (typeof UC !== 'undefined' && UC[a]) || OTHER;
   $('vuBody').innerHTML = `<div class="vu">${vs.map(v => { const t = tot(v);
-    if (!v.u || !t) return `<div class="row na"><a href="${v.p ? deepHref(v.p) : '#'}">${v.p ? logo(v.p) : ''}${v.n}</a><div class="track2"></div><b>${v.n === 'Derive' ? 'collecting — first diff tomorrow' : 'no data'}</b></div>`;
+    if (!v.u || !t) return `<div class="row na"><a href="${v.p ? deepHref(v.p) : '#'}">${v.p ? logo(v.p) : ''}${v.n}</a><div class="track2"></div><b>${v.n === 'Derive' ? 'API data unavailable' : 'no data'}</b></div>`;
     return `<div class="row"><a href="${deepHref(v.p)}">${logo(v.p)}${v.n}</a><div class="oi"><div class="track2" style="width:${Math.max(1, t / mx * 100).toFixed(1)}%">${Object.entries(v.u).filter(([, x]) => x > 0).sort((a, b) => b[1] - a[1]).map(([a, x]) => `<i style="width:${(x / t * 100).toFixed(2)}%;background:${colU(a)}" data-tip="${v.n} · ${a} ${usd(x)}"></i>`).join('')}</div></div><b>${usd(t)}</b></div>`; }).join('')}</div>`;
   $('vuLegend').innerHTML = assets.filter(a => UC[a]).map(a => `<span><i style="background:${colU(a)}"></i>${a}</span>`).join('') + '<span><i style="background:' + OTHER + '"></i>Other</span>';
-  $('vuF').innerHTML = `<span>Source <a class="srct" style="color:var(--ink2);background:rgba(236,231,220,.08)" href="https://docs.paradex.trade" target="_blank" rel="noopener">Paradex API ↗</a> <a class="srct" style="color:var(--ink2);background:rgba(236,231,220,.08)" href="https://api-docs.aevo.xyz" target="_blank" rel="noopener">Aevo API ↗</a> · Derive = day-over-day change in its cumulative volume${X.deriveSince ? ' since ' + X.deriveSince : ''}</span><span>as of ${asOf()}</span>`;
+  $('vuF').innerHTML = `<span>Source <a class="srct" style="color:var(--ink2);background:rgba(236,231,220,.08)" href="https://docs.paradex.trade" target="_blank" rel="noopener">Paradex API ↗</a> <a class="srct" style="color:var(--ink2);background:rgba(236,231,220,.08)" href="https://api-docs.aevo.xyz" target="_blank" rel="noopener">Aevo API ↗</a> · Derive unavailable when no verified feed exists</span><span>checked ${esc((X.observedAt || SNAP.fund.at || SNAP.at).replace('T',' ').slice(0,16))} UTC</span>`;
   $('ltBody').innerHTML = X.trades.length ? `<table class="lt">${X.trades.slice(0, 10).map(t => { const [u, , exp, k, cp] = t.market.split('-');
-    return `<tr><td class="${t.side === 'BUY' ? 'buy' : 'sell'}">${t.side === 'BUY' ? 'BUY' : 'SELL'}</td><td class="mk">${u} ${k} ${cp === 'C' ? 'CALL' : 'PUT'} · ${exp}</td><td class="n">${t.size.toLocaleString('en-US')}×</td><td class="n">${usd(t.notional)}</td><td class="n muted">${new Date(t.t).toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'})}</td></tr>`; }).join('')}</table>` : '<p class="empty">No large fills in the last 24h.</p>';
-  $('ltF').innerHTML = `<span>Source <a class="srct" style="color:var(--ink2);background:rgba(236,231,220,.08)" href="https://docs.paradex.trade" target="_blank" rel="noopener">Paradex API ↗</a> · notional = contracts × underlying · Derive & Aevo don’t publish public fills</span><span>as of ${asOf()}</span>`;
-  // OI 추이: 하루 한 점씩 쌓인다. 7일이 안 되면 선 대신 날짜별 표, 7일부터 선 그래프 (범례 아래에 붙인다 — 범례는 위 막대용)
-  const H = SNAP.fund.oiHist || [], card = $('oiCard');
-  if (card && !card.querySelector('.oih')) {
-    const pts = H.map(h => [Date.parse(h.d) / 1000, Object.values(h.oi).reduce((a, b) => a + b, 0)]);
-    let body;
-    if (pts.length >= 7) {
-      const ys = pts.map(p => p[1]), lo = Math.min(...ys), hi = Math.max(...ys), tight = (hi - lo) / hi < .02;
-      body = lineChart(pts, [], v => v >= 1e9 ? '$' + (v / 1e9).toFixed(tight ? 3 : 2) + 'B' : usd(v));
-    } else {
-      body = `<div class="oid">${pts.map(([t, v], i) => { const p = i ? pts[i - 1][1] : null, c = p ? (v / p - 1) * 100 : null;
-        return `<div><span>${new Date(t * 1000).toLocaleDateString('en-US', {timeZone:'UTC', month:'short', day:'numeric'})}</span><b>${usd(v)}</b><em>${c == null ? '' : pct(c)}</em></div>`; }).reverse().join('')}</div>
-        <p class="muted" style="font-size:12.5px;margin-top:8px">Logged once a day since ${H[0] ? new Date(H[0].d + 'T12:00:00Z').toLocaleDateString('en-US', {month:'short', day:'numeric'}) : 'today'} — the trend chart appears once a week of history is in.</p>`;
-    }
-    $('oiLegend').insertAdjacentHTML('afterend', `<div class="oih"><h4>Total open interest · daily · Derive + Paradex + Aevo</h4>${body}</div>`);
-  }
+    return `<tr><td class="${t.side === 'BUY' ? 'buy' : 'sell'}">${t.side === 'BUY' ? 'BUY' : 'SELL'}</td><td class="mk">${u} ${k} ${cp === 'C' ? 'CALL' : 'PUT'} · ${exp}</td><td class="n">${t.size.toLocaleString('en-US')}×</td><td class="n">${usd(t.notional)}</td><td class="n muted">${new Date(t.t).toLocaleTimeString('en-US', {hour:'2-digit', minute:'2-digit'})}</td></tr>`; }).join('')}</table>` : '<p class="empty">No verified trades available in this sample.</p>';
+  $('ltF').innerHTML = `<span>Source <a class="srct" style="color:var(--ink2);background:rgba(236,231,220,.08)" href="https://docs.paradex.trade" target="_blank" rel="noopener">Paradex API ↗</a> · notional = contracts × underlying · limited market sample, not a complete largest-trade ranking</span><span>checked ${esc((X.observedAt || SNAP.fund.at || SNAP.at).replace('T',' ').slice(0,16))} UTC</span>`;
+
 }
 
 // ════════════════ 공유 카드 (#share/movers · signals) ════════════════

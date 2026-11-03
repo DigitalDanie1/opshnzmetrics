@@ -1,0 +1,74 @@
+{
+  "checkedDate": "2026-11-03",
+  "opshnzSnapshotAt": "2026-11-02T11:37:03.779Z",
+  "sources": [
+    "https://www.onchaingreeks.xyz/",
+    "https://www.onchaingreeks.xyz/methodology",
+    "https://opshnz.com/#/fundamentals"
+  ],
+  "onchainGreeksObserved": {
+    "premium30d": 73730000,
+    "notional30d": 3628000000,
+    "oiAllUnderlyings": 1802000000,
+    "deribitNotional30d": 61600000000,
+    "ratio30dPct": 5.9,
+    "freshnessLabel": "20m ago"
+  },
+  "opshnz": {
+    "premium30d": 73500927.78999999,
+    "notional30d": 3993817231.0299997,
+    "deribitRatio24hPct": 2.6810927555086894
+  },
+  "venueComparisons": [
+    {
+      "venue": "Derive",
+      "opshnzPremium30d": 66150244,
+      "onchainGreeksPremium30dRounded": 65990000.0,
+      "differencePct": 0.2428307319290779
+    },
+    {
+      "venue": "Aevo",
+      "opshnzPremium30d": 3016973,
+      "onchainGreeksPremium30dRounded": 3150000.0,
+      "differencePct": -4.2230793650793625
+    },
+    {
+      "venue": "Paradex",
+      "opshnzPremium30d": 2371301,
+      "onchainGreeksPremium30dRounded": 2100000.0,
+      "differencePct": 12.919095238095245
+    },
+    {
+      "venue": "Rysk",
+      "opshnzPremium30d": 1057014,
+      "onchainGreeksPremium30dRounded": 1070000.0,
+      "differencePct": -1.213644859813079
+    },
+    {
+      "venue": "Dream",
+      "opshnzPremium30d": null,
+      "onchainGreeksPremium30dRounded": 889740,
+      "differencePct": null
+    },
+    {
+      "venue": "CallPut",
+      "opshnzPremium30d": 362807.97,
+      "onchainGreeksPremium30dRounded": 368240,
+      "differencePct": -1.4751330653921424
+    },
+    {
+      "venue": "Hypercall",
+      "opshnzPremium30d": 169041,
+      "onchainGreeksPremium30dRounded": 162260,
+      "differencePct": 4.179095279181566
+    }
+  ],
+  "caveats": [
+    "Different observation times, not synchronized source fetches. External figures rounded from UI.",
+    "Onchain Greeks initial counters were animated; final screenshot reconciles totals.",
+    "Onchain Greeks MoM = full calendar month. OPSHNZ MoM = rolling 30 days vs prior 30 days.",
+    "Onchain Greeks OI all venue underlyings; OPSHNZ market share BTC+ETH only.",
+    "OPSHNZ direct OI API collection lacks Derive in this snapshot; BTC+ETH KPI uses separate Derivatives Monkey feed.",
+    "Source methodology claims were inspected, but native trade tapes were not independently reconciled in this comparison."
+  ]
+}

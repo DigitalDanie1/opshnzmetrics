@@ -271,7 +271,7 @@ async function fundamentals(snap) {
   const now = new Date(), months = [];
   for (let i = 11; i >= 0; i--) { const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - i, 1)); months.push(d.toISOString().slice(0, 7)); }
   const wk0 = Math.floor(Date.now() / 1000) - 13 * 7 * 86400;
-  const out = { months, venues: {}, totals: {}, at: snap.at };
+  const out = { months, venues: {}, totals: {}, at: new Date().toISOString(), quality:{volumeSource:'https://api.llama.fi/overview/options',period:'Provider rolling windows with daily cutoffs; change = last 30d versus previous 30d',reconciliation:{}} };
   for (const k of Object.keys(kinds)) {
     const j = raw[k], byV = {};
     const v = name => byV[name] || (byV[name] = { m: months.map(() => 0), w: Array(13).fill(0) });
@@ -300,6 +300,19 @@ async function fundamentals(snap) {
     out.totals[k] = { d30: j.total30d, prev30: j.total60dto30d, all: j.totalAllTime, d24: j.total24h, m: tm };
   }
   out.venues = Object.values(out.venues).map(v => ({ ...v, premium: v.premium || null, notional: v.notional || null }));
+  // Toros explicitly routes its options to Derive. Show its row, but do not count the same execution twice.
+  const excluded=out.venues.filter(v=>v.name==='Toros' && out.venues.some(d=>d.name==='Derive' && d.premium && d.notional));
+  for(const v of excluded) v.aggregateExcluded={executionVenue:'Derive',source:'https://x.com/torosfinance/status/2114871699367739788'};
+  out.quality.excludedFromTotals=excluded.map(v=>({venue:v.name,...v.aggregateExcluded}));
+  for(const k of Object.keys(kinds)) {
+    const sum=out.venues.reduce((n,v)=>n+(v[k]?.d30 || 0),0), providerTotal=out.totals[k].d30;
+    out.quality.reconciliation[k]={venueSum30d:sum,providerTotal30d:providerTotal,difference:sum-providerTotal};
+    for(const key of ['d30','prev30','all','d24']) {
+      const subtract=excluded.reduce((n,v)=>n+(v[k]?.[key] || 0),0);
+      out.totals[k][key]=Math.max(0,out.totals[k][key]-subtract);
+    }
+    out.totals[k].m=out.totals[k].m.map((value,i)=>Math.max(0,value-excluded.reduce((n,v)=>n+(v[k]?.m?.[i] || 0),0)));
+  }
   // Deribit: 24시간 옵션 명목(계약 수 × 기초자산 가격)과 프리미엄(volume_usd)
   let dn = 0, dp = 0, ok = 0;
   const currencies = [];
@@ -314,30 +327,54 @@ async function fundamentals(snap) {
 
 // ── 미결제약정(OI): 거래소 공개 API 에서 직접 (계약 수 × 기초자산 가격) ───────
 async function postJSON(url, body) {
-  try { const r = await fetch(url, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) }); return r.ok ? await r.json() : null; } catch { return null; }
+  try { const r = await fetch(url, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body), signal: AbortSignal.timeout(20000) }); return r.ok ? await r.json() : null; } catch { return null; }
+}
+function finiteNonnegative(v) {
+  if(v === null || v === undefined || (typeof v === 'string' && !v.trim()) || typeof v === 'boolean') return null;
+  const n=Number(v); return Number.isFinite(n)&&n>=0 ? n : null;
+}
+function parseDeriveOptionOI(response, now = Date.now()) {
+  const tickers=response?.result?.tickers || response?.tickers;
+  if(!tickers || typeof tickers !== 'object' || Array.isArray(tickers) || !Object.keys(tickers).length) return null;
+  const byU={},seen=new Set();
+  for(const [name,t] of Object.entries(tickers)) {
+    if(!/^[A-Z0-9]+-\d{8}-[\d.]+-[CP]$/.test(name) || !t.option_pricing) return null;
+    const oi=finiteNonnegative(t.stats?.oi), price=finiteNonnegative(t.I);
+    if(oi===null || !(price>0) || !Number.isFinite(t.t) || t.t>now+60000 || now-t.t>3600000) return null;
+    const asset=name.split('-')[0]; byU[asset]=(byU[asset]||0)+oi*price; seen.add(asset);
+  }
+  if(!seen.has('BTC') || !seen.has('ETH')) return null;
+  return {total:Object.values(byU).reduce((a,b)=>a+b,0),byU,assetsComplete:[...seen]};
 }
 async function openInterest() {
   const venues = {}, dTot = {};
-  const add = (v, u, usdv) => { if (!usdv) return; const x = venues[v] || (venues[v] = { total: 0, byU: {} }); x.total += usdv; x.byU[u] = (x.byU[u] || 0) + usdv; };
-  // Derive: 통화별 statistics(open_interest = 계약 수) × 현물가
-  const cur = await postJSON('https://api.lyra.finance/public/get_all_currencies', {});
-  for (const c of ((cur && cur.result) || []).filter(c => (c.instrument_types || []).includes('option'))) {
-    const st = await postJSON('https://api.lyra.finance/public/statistics', { instrument_name: 'ALL', currency: c.currency, instrument_type: 'option' });
-    const r = (st && st.result) || {};
-    add('Derive', c.currency, (+r.open_interest || 0) * (+c.spot_price || 0));
-    if (r.total_notional_volume) dTot[c.currency] = +r.total_notional_volume;   // 누적 → 다음 실행과의 차이 = 24시간 거래량
-  }
+  const add = (v, u, usdv) => { if (!Number.isFinite(usdv) || usdv < 0) return; const x = venues[v] || (venues[v] = { total: 0, byU: {} }); x.total += usdv; x.byU[u] = (x.byU[u] || 0) + usdv; };
+  const at = new Date().toISOString(), coverage = {};
+  // V3 replaces legacy statistics/instrument_types. Only option tickers are accepted.
+  const deriveUrl = 'https://api.derive.xyz/v3/public/get_tickers';
+  const dr = await postJSON(deriveUrl, { instrument_type: 'option' });
+  const derive = parseDeriveOptionOI(dr, Date.parse(at));
+  if (derive) venues.Derive = {...derive, observedAt:at, source:deriveUrl, basis:'Option contracts × underlying index; one side'};
+  coverage.Derive = {status:derive ? 'available' : 'unavailable', url:deriveUrl, checkedAt:at,
+    reason:derive ? null : 'V3 response unavailable, stale or invalid; excluded from direct-API totals.'};
   // Paradex: 옵션 마켓(…-C / …-P)마다 open_interest × underlying_price.
   // Paradex 는 매수·매도 양쪽을 합친 값을 줘서 절반으로 나눠 한쪽 기준(Derive·Aevo 와 같은 기준)으로 맞춘다
   // (2026-10 확인: 합계가 onchaingreeks 의 Paradex OI 의 정확히 2배였다)
   const px = await getJSON('https://api.prod.paradex.trade/v1/markets/summary?market=ALL');
-  for (const m of ((px && px.results) || []).filter(m => /-[CP]$/.test(m.symbol))) add('Paradex', m.symbol.split('-')[0], (+m.open_interest || 0) * (+m.underlying_price || 0) / 2);
+  const pxAssets = new Set();
+  for (const m of ((px && px.results) || []).filter(m => /-[CP]$/.test(m.symbol))) { const asset=m.symbol.split('-')[0], oi=finiteNonnegative(m.open_interest), price=finiteNonnegative(m.underlying_price); if(oi !== null && price > 0) { add('Paradex', asset, oi*price/2); pxAssets.add(asset); } }
+  if(venues.Paradex) Object.assign(venues.Paradex,{observedAt:at,source:'https://api.prod.paradex.trade/v1/markets/summary?market=ALL',assetsComplete:[...pxAssets],basis:'Reported OI halved to single side (existing collector convention; not independently revalidated)'});
+  coverage.Paradex={status:pxAssets.has('BTC')&&pxAssets.has('ETH')?'available':'partial-or-unavailable',checkedAt:at};
   // Aevo: 자산별 statistics(open_interest.total = 계약 수) × index_price
+  const aevoAssets=[];
   for (const a of ['ETH', 'BTC', 'SOL', 'HYPE']) {
     const j = await getJSON(`https://api.aevo.xyz/statistics?asset=${a}&instrument_type=OPTION`, 1);
-    if (j && j.open_interest) add('Aevo', a, (+j.open_interest.total || 0) * (+j.index_price || 0));
+    const oi=finiteNonnegative(j?.open_interest?.total), price=finiteNonnegative(j?.index_price);
+    if (oi !== null && price > 0) { add('Aevo',a,oi*price); aevoAssets.push(a); }
   }
-  return Object.keys(venues).length ? { venues, dTot, sources: { Derive: 'https://docs.derive.xyz', Paradex: 'https://docs.paradex.trade', Aevo: 'https://api-docs.aevo.xyz' } } : null;
+  if(venues.Aevo) Object.assign(venues.Aevo,{observedAt:at,source:'https://api.aevo.xyz/statistics?instrument_type=OPTION',assetsComplete:aevoAssets,basis:'Per-asset OPTION statistics; contracts × index price'});
+  coverage.Aevo={status:aevoAssets.includes('BTC')&&aevoAssets.includes('ETH')?'available':'partial-or-unavailable',checkedAt:at};
+  return {at,coverage, venues, dTot, sources: { Derive: 'https://docs.derive.xyz', Paradex: 'https://docs.paradex.trade', Aevo: 'https://api-docs.aevo.xyz' } };
 }
 
 // ── 거래소 부가 데이터: 기초자산별 24시간 명목, 큰 거래(Paradex), 변동성 지수(BVIV·EVIV) ──
@@ -361,7 +398,7 @@ async function venueExtras() {
   const vol = {};
   const hl = await postJSON('https://api.hyperliquid.xyz/info', { type: 'metaAndAssetCtxs', dex: 'mkts' });
   if (hl && hl[0]) hl[0].universe.forEach((u, i) => { const m = /^mkts:(BVIV|EVIV)$/.exec(u.name); const c = hl[1][i]; if (m && c) vol[m[1]] = { px: +c.oraclePx || +c.markPx, prev: +c.prevDayPx, oi: +c.openInterest, vol24: +c.dayNtlVlm }; });
-  return { volU, trades: trades.slice(0, 15), vol };
+  return { observedAt:new Date().toISOString(), volU, trades: trades.slice(0, 15), vol };
 }
 
 // Derivatives Monkey 공개 API: 12개 거래소(CEX + 온체인) 옵션을 한 기준으로 모은 시장 상태
@@ -416,19 +453,28 @@ async function dmMarket() {
     };
     out.assets[a.toUpperCase()].senti = await dmSentiment(a, all);
   }
-  // 거래소별 OI (코인 수 × 현물가, BTC+ETH). Paradex 는 양쪽을 다 세서 ÷2
-  for (const s of DM_SRC) {
-    const row = { venue: s, btc: 0, eth: 0 };
-    for (const a of ['btc', 'eth']) {
-      const j = await getJSON(`${DM}/market-summary?asset=${a}&sources=${s}`, 1);
-      const oi = j && j.total_oi && j.total_oi.value, px = j && j.spot && j.spot.value;
-      if (oi && px) row[a] = oi * px / (s === 'paradex' ? 2 : 1);
-    }
-    row.total = row.btc + row.eth;
-    if (row.total > 0) out.venues.push(row);
-  }
-  out.venues.sort((a, b) => b.total - a.total);
+  const venueOI = await dmVenueOI();
+  out.venues=venueOI.venues; out.venuesAt=venueOI.at;
   return Object.keys(out.assets).length ? out : null;
+}
+
+// Missing asset responses remain null: never silently count a failed feed as zero.
+async function dmVenueOI() {
+  const venues=[], coverage={};
+  for(const source of DM_SRC) {
+    const row={venue:source,btc:null,eth:null};
+    await Promise.all(['btc','eth'].map(async asset=>{
+      const j=await getJSON(`${DM}/market-summary?asset=${asset}&sources=${source}`,1);
+      const oi=finiteNonnegative(j?.total_oi?.value),price=finiteNonnegative(j?.spot?.value);
+      if(oi !== null && price>0)row[asset]=oi*price/(source==='paradex'?2:1);
+    }));
+    row.total=row.btc !== null && row.eth !== null ? row.btc+row.eth : null;
+    row.observedAt=new Date().toISOString();
+    coverage[source]=row.total === null ? 'partial-or-unavailable' : 'available';
+    if(row.btc !== null || row.eth !== null) venues.push(row);
+  }
+  venues.sort((a,b)=>(b.total ?? -1)-(a.total ?? -1));
+  return {at:Date.now(),venues,coverage};
 }
 
 // 이번 주 미국 고영향 지표 (Forex Factory 공개 JSON — 이번 주만 제공, 월요일에 새 주)
@@ -495,7 +541,7 @@ function llamaUrl(p) {
 }
 const cgUrl = p => p.cg ? `https://www.coingecko.com/en/coins/${p.cg}` : null;
 
-if (typeof module !== 'undefined') module.exports = { collect, history: projectHistory, isoWeek, grandPrix, rivals, raceSeries, fundamentals, openInterest, venueExtras, dmMarket, macroWeek, sentiScore, sentiInputs, sentiVerdict, majorsHistory, macroTape, RACES, llamaUrl, cgUrl };
+if (typeof module !== 'undefined') module.exports = { collect, history: projectHistory, isoWeek, grandPrix, rivals, raceSeries, fundamentals, openInterest, parseDeriveOptionOI, finiteNonnegative, venueExtras, dmMarket, dmVenueOI, macroWeek, sentiScore, sentiInputs, sentiVerdict, majorsHistory, macroTape, RACES, llamaUrl, cgUrl };
 
 // Source-specific financial coverage; parent token economics and options adapters stay separate.
 async function benchmarkFinancials(data) {

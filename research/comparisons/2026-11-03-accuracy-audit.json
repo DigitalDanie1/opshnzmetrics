@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-11-03T08:03:37.196604+00:00",
+  "scope": "Fundamentals data accuracy: OI ingestion, source precedence, comparable asset coverage, rolling-volume reconciliation",
+  "sources": [
+    {
+      "url": "https://docs.derive.xyz/openapi.json",
+      "observations": "V3 get_tickers option filter, stats.oi and I; schema validated with tests. Live primary request rejected with HTTP 403 in this environment; not claimed live-validated."
+    },
+    {
+      "url": "https://docs.derive.xyz/migrating/breaking-changes",
+      "observations": "V3 removes instrument_types and legacy statistics collection is not suitable."
+    },
+    {
+      "url": "https://api.llama.fi/overview/options",
+      "observations": "Options-only adapter totals reconciled against sum of venues for premium and notional."
+    },
+    {
+      "url": "https://api.prod.paradex.trade/v1/markets/summary?market=ALL",
+      "observations": "Option instruments selected by C/P suffix. Existing 1/2 OI convention retained and explicitly disclosed as awaiting independent verification."
+    },
+    {
+      "url": "https://api.aevo.xyz/statistics?instrument_type=OPTION",
+      "observations": "Per-asset OPTION request. BTC and ETH responses complete in this run."
+    },
+    {
+      "url": "https://docs.dreamos.app",
+      "observations": "Public documentation was not readable in this environment. No verified standalone API integrated; no Dream volume added."
+    },
+    {
+      "url": "https://x.com/torosfinance/status/2114871699367739788",
+      "observations": "Official Toros launch announcement: routes through Derive order book and market makers. Toros own row retained but excluded from aggregate volume."
+    }
+  ],
+  "officialCoverage": {
+    "Derive": {
+      "status": "unavailable",
+      "url": "https://api.derive.xyz/v3/public/get_tickers",
+      "checkedAt": "2026-11-03T08:00:53.112Z",
+      "reason": "V3 response unavailable, stale or invalid; excluded from direct-API totals."
+    },
+    "Paradex": {
+      "status": "available",
+      "checkedAt": "2026-11-03T08:00:53.112Z"
+    },
+    "Aevo": {
+      "status": "available",
+      "checkedAt": "2026-11-03T08:00:53.112Z"
+    }
+  },
+  "secondaryCoverage": {
+    "deribit": "available",
+    "okx": "available",
+    "bybit": "available",
+    "binance": "available",
+    "bullish": "partial-or-unavailable",
+    "delta": "available",
+    "derive": "available",
+    "paradex": "available",
+    "aevo": "available",
+    "thalex": "available",
+    "callput": "available",
+    "hypercall": "available"
+  },
+  "volumeReconciliation": {
+    "premium": {
+      "venueSum30d": 72684274.90000002,
+      "providerTotal30d": 72684274.9,
+      "difference": 1.4901161193847656e-08
+    },
+    "notional": {
+      "venueSum30d": 3535358181.0299997,
+      "providerTotal30d": 3535358181.0299997,
+      "difference": 0
+    }
+  },
+  "limitations": [
+    "Not every native venue trade tape has been independently reconciled.",
+    "Derive V3 live response not available; schema fixture tests are not a live validation.",
+    "Paradex single-side factor not independently confirmed; disclosed.",
+    "Dream brokerage/execution overlap unresolved; no new aggregate added.",
+    "Mixed observation times remain labelled. No source older than 36h is accepted for comparable OI.",
+    "Excludes any venue without both BTC and ETH observations from combined OI; per-asset views may include partial venues."
+  ],
+  "knownBrokerExclusions": [
+    "Toros \u2192 Derive"
+  ]
+}
