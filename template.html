@@ -2005,6 +2005,24 @@ p{line-height:1.6}
 .campaign-sort{display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.1em;color:var(--mute)}.campaign-sort select{font:inherit;font-size:13px;letter-spacing:0;color:var(--ink);background:var(--panel);border:1px solid var(--line2);border-radius:8px;padding:10px 32px 10px 12px;cursor:pointer}.campaign-sort select:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
 .campaign-partner img{border-radius:0!important;width:65px;max-height:20px;object-fit:contain}
+
+/* Compact fundamentals: scale first, venue comparison second. */
+#v-fund .fd-head{margin-top:12px}#v-fund .fd-head h2{font-size:34px}
+#v-fund .fd-head .gp-src{font-size:12px;margin-top:5px}
+#v-fund .kpis4{margin-top:16px;gap:8px}#v-fund .kpis4 .card{padding:16px}
+#v-fund .kpis4 .cv{font-size:30px;margin:8px 0}#v-fund .kpis4 .ck{font-size:11px;letter-spacing:.04em}
+#v-fund .fgrid:has(#fdShare){grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+#v-fund .fgrid.solo:has(#fdShare){grid-template-columns:1fr}
+#v-fund .vt th:nth-child(6),#v-fund .vt td:nth-child(6),#v-fund .vt th:nth-child(7),#v-fund .vt td:nth-child(7){display:none}
+#v-fund .card:has(#fdTable) .tbl-x{max-height:440px;overflow:auto}#v-fund .vt th{position:sticky;top:0;background:#11130f;z-index:1}
+#v-fund .vt td{padding-top:9px;padding-bottom:9px}#v-fund h3{font-size:19px}
+.fund-fold{margin-top:10px;border:1px solid var(--line);background:rgba(12,14,11,.92)}
+.fund-fold>summary{cursor:pointer;padding:15px 18px;font-size:16px;color:var(--ink)}
+.fund-fold>summary span{margin-left:12px;font-size:12px;color:var(--mute)}
+.fund-fold>.card{border:0;margin:0}.fund-comp{display:block;padding:16px 0;color:var(--amber)}
+@media(max-width:900px){#v-fund .fgrid:has(#fdShare){grid-template-columns:1fr}}
+@media(max-width:520px){#v-fund .kpis4{grid-template-columns:1fr 1fr}#v-fund .kpis4 .cv{font-size:25px}.fund-fold>summary span{display:block;margin:4px 0 0}}
+
 </style>
 </head>
 <body>
@@ -2184,31 +2202,24 @@ p{line-height:1.6}
 
   <main id="v-fund" hidden>
     <div class="fd-head">
-      <div><h2>Onchain options <em>fundamentals</em></h2><p id="fdSub"></p><p class="gp-src">Volume &amp; premium from <b class="dlc">DefiLlama</b> · open interest straight from each venue’s public API · CEX comparison from the <b style="color:var(--ink)">Deribit</b> public API</p></div>
+      <div><h2>Onchain options <em>fundamentals</em></h2><p id="fdSub"></p><p class="gp-src">Premium = options paid for. Notional = underlying exposure.</p></div>
       <div class="seg" id="fdKind" role="group" aria-label="Metric">
-        <button data-k="premium" aria-pressed="true">Premium</button>
-        <button data-k="notional" aria-pressed="false">Notional</button>
+        <button data-k="premium" aria-pressed="true">Premium paid</button>
+        <button data-k="notional" aria-pressed="false">Notional traded</button>
       </div>
     </div>
     <div class="kpis4" id="fdKpis" data-blk="kpis"></div>
     <div class="fgrid">
-      <div class="card stack" data-blk="monthly"><h3 id="fdStackT"></h3><div id="fdStack"></div><div class="legend2" id="fdLegend"></div><div class="cf" id="fdStackF"></div></div>
+      <div class="card"  data-blk="venues"><h3 id="fdTableT"></h3><div class="tbl-x"><table class="vt" id="fdTable"></table></div><div class="cf" id="fdTableF"></div></div>
       <div class="card" data-blk="share"><h3 id="fdShareT"></h3><div id="fdShare"></div><div class="cf" id="fdShareF"></div></div>
     </div>
-    <div class="card" style="margin-top:12px" id="oiCard" data-blk="oi"><h3 id="oiT"></h3><div id="oiBody"></div><div class="legend2" id="oiLegend"></div><div class="cf" id="oiF"></div></div>
-    <div class="fgrid" style="margin-top:12px" id="exGrid">
+    <details class="fund-fold" data-blk="monthly"><summary>Monthly trend <span>12-month volume history</span></summary><div class="card stack"><h3 id="fdStackT"></h3><div id="fdStack"></div><div class="legend2" id="fdLegend"></div><div class="cf" id="fdStackF"></div></div></details>
+    <details class="fund-fold" id="oiCard" data-blk="oi"><summary>Open interest <span>Positions by venue and asset</span></summary><div class="card"><h3 id="oiT"></h3><div id="oiBody"></div><div class="legend2" id="oiLegend"></div><div class="cf" id="oiF"></div></div></details>
+    <details class="fund-fold" id="exGrid"><summary>Trading detail <span>Underlying assets &amp; largest trades</span></summary><div class="fgrid">
       <div class="card" data-blk="underlying"><h3>24h options volume by underlying<small>notional · straight from each venue’s public API</small></h3><div id="vuBody"></div><div class="legend2" id="vuLegend"></div><div class="cf" id="vuF"></div></div>
       <div class="card" data-blk="trades"><h3>Largest trades · 24h<small>Paradex options fills, by notional</small></h3><div id="ltBody"></div><div class="cf" id="ltF"></div></div>
-    </div>
-    <div class="card" style="margin-top:12px" data-blk="venues"><h3 id="fdTableT"></h3><div class="tbl-x"><table class="vt" id="fdTable"></table></div><div class="cf" id="fdTableF"></div></div>
-    <div class="card soon" style="margin-top:12px" data-blk="comps"><h3>Derive comps <span class="soonb">COMING SOON</span><small>Every venue measured against Derive — are the fundamentals and the token keeping up?</small></h3>
-      <div class="soon-g">
-        <div><b>Fundamentals vs Derive</b><p>30d volume, premium, open interest and TVL as a multiple of Derive (Derive = 1.00×).</p></div>
-        <div><b>Valuation vs $DRV</b><p>FDV ÷ 30d volume and FDV ÷ annualised premium — who is cheap or rich for the business they actually do.</p></div>
-        <div><b>Token vs fundamentals</b><p>Token price and 7d / 30d move against $DRV, next to the change in each venue’s share of onchain volume.</p></div>
-      </div>
-      <div class="tbl-x"><table class="vt soon-t"><thead><tr><th>Project</th><th>Volume ×</th><th>OI ×</th><th>Premium ×</th><th>FDV / 30d vol</th><th>30d vs $DRV</th></tr></thead><tbody><tr><td>Derive</td><td>1.00×</td><td>1.00×</td><td>1.00×</td><td>—</td><td>—</td></tr><tr><td>Paradex</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr><tr><td>Aevo</td><td>…</td><td>…</td><td>…</td><td>…</td><td>…</td></tr></tbody></table></div>
-    </div>
+    </div></details>
+    <a class="fund-comp" data-blk="comps" href="#/compare">Compare token valuations to Deribit →</a>
   </main>
 
   <main id="v-race" hidden>
@@ -3303,7 +3314,10 @@ function renderFund(){
   const shareCard = `<div class="card"><div class="ck">Friends' share · ${KL[k].toLowerCase()}, 30d</div><div class="cv">${share.toFixed(1)}%</div><div class="cd">${vs.filter(v => v.core).length} friends with DefiLlama data · ${usd(clientSum)}</div>
     <div class="vsbar">${vs.filter(v => v.core).slice(0, 3).map(v => `<div><span>${esc(v.name)}</span><i style="width:${(v[k].d30 / (vs[0][k].d30 || 1) * 100).toFixed(1)}%;background:${VC[v.name] || 'var(--amber)'}"></i><b>${usd(v[k].d30)}</b></div>`).join('')}</div>
     <div class="cf"><span>${llamaBadge()}</span></div></div>`;
-  $('fdKpis').innerHTML = kpi('Premium volume', 'premium') + kpi('Notional volume', 'notional') + vsCard + shareCard;
+  const oiRows = (SNAP.dm?.venues || []).filter(v=>ONCHAIN.has(v.venue) && typeof v.total === 'number');
+  const oiTotal = oiRows.length ? oiRows.reduce((sum,v)=>sum+v.total,0) : null;
+  const compactKpi = (label,value,caption) => `<div class="card"><div class="ck">${label}</div><div class="cv">${value}</div><div class="cd">${caption}</div></div>`;
+  $('fdKpis').innerHTML = compactKpi('Premium paid · 30d',usd(F.totals.premium.d30),'Options purchase value') + compactKpi('Notional traded · 30d',usd(F.totals.notional.d30),'Underlying exposure') + compactKpi('Open interest',oiTotal == null ? '—' : usd(oiTotal),'BTC + ETH · onchain venues') + compactKpi('Onchain / Deribit · 24h',D && D.notional24 > 0 ? (on24/D.notional24*100).toFixed(1)+'%' : '—','Notional volume ratio');
 
   // 월간 누적 막대 (상위 7 + 기타), 색은 거래소에 고정
   const tops = [...vs].sort((a, b) => b[k].m.reduce((x, y) => x + y, 0) - a[k].m.reduce((x, y) => x + y, 0)).slice(0, 7).map(v => v.name);
@@ -3327,7 +3341,7 @@ function renderFund(){
 
   // 거래소 표
   const mx30 = vs.length ? vs[0][k].d30 : 1;
-  $('fdTableT').innerHTML = `Venues by ${KL[k].toLowerCase()}<small>7D · 30D · month over month · 90-day weekly trend · all-time — click a venue to open it on DefiLlama</small>`;
+  $('fdTableT').innerHTML = `Venues by ${KL[k].toLowerCase()}<small>Ranked by last 30 days · USD</small>`;
   $('fdTable').innerHTML = `<tr><th>#</th><th>Venue</th><th>7D</th><th>30D</th><th>MoM</th><th>Trend 90D</th><th>All-time</th><th></th></tr>` +
     vs.filter(v => fdAll || v[k].d30 > 0).map((v, i) => { const x = v[k], ch = mom(x.d30, x.prev30); return `<tr><td>${i + 1}</td><td class="vn"><a href="${esc(v.url)}" target="_blank" rel="noopener">${logo(v)}${esc(v.name)}</a></td>
       <td>${usd(x.d7)}</td><td><span class="bar30"><i style="width:${Math.max(2, x.d30 / mx30 * 90).toFixed(0)}px;background:${tops.includes(v.name) ? col(v.name) : OTHER}"></i>${usd(x.d30)}</span></td>
@@ -3365,7 +3379,7 @@ $('fdKind').addEventListener('click', e => { const b = e.target.closest('button'
 const SUBS = {
   compare:[],
   overview:[['finder','Start here'],['planets','Planet map'],['friends','Friends'],['founders','Founders'],['ecosystem','Whole ecosystem'],['live','Live points'],['pretge','Pre-TGE friends'],['codes','My ref codes'],['watch','Watchlist'],['content','Content'],['log','Weekly log']],
-  fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['underlying','By underlying'],['trades','Largest trades'],['venues','Venues'],['track','Race'],['comps','Derive comps']],
+  fundamentals:[['kpis','Key numbers'],['monthly','Monthly volume'],['share','Market share'],['oi','Open interest'],['underlying','By underlying'],['trades','Largest trades'],['venues','Venues'],['track','Race'],['comps','Valuation benchmark']],
   'trader-views':[['traders','Traders'],['institutions','Institutions']],
   strategy:[['now','Market now'],['log','Sentiment log'],['plays','Today’s plays'],['macro','Macro playbook']],
 };
@@ -3402,10 +3416,10 @@ function renderSubnav(page, sub){
     const v = $(id); if (!v) continue;
     if (pg !== page) { v.hidden = true; continue; }
     const blks = [...v.querySelectorAll('[data-blk]')];
-    blks.forEach(el => { el.hidden = (pick && el.dataset.blk !== sub) || el.dataset.empty === '1'; });
-    v.hidden = pick && !blks.some(el => el.dataset.blk === sub);
+    blks.forEach(el => { el.hidden = (pick && el.dataset.blk !== sub) || el.dataset.empty === '1'; if (page === 'fundamentals' && el.tagName === 'DETAILS') el.open = pick && el.dataset.blk === sub; });
+    v.hidden = (pick && !blks.some(el => el.dataset.blk === sub)) || (page === 'fundamentals' && id === 'v-race' && !pick);
   }
-  const ex = $('exGrid'); if (ex) ex.hidden = ex.dataset.empty === '1' || (pick && !['underlying','trades'].includes(sub));
+  const ex = $('exGrid'); if (ex) { ex.hidden = ex.dataset.empty === '1' || (pick && !['underlying','trades'].includes(sub)); ex.open = pick && ['underlying','trades'].includes(sub); }
   document.querySelectorAll('.fgrid').forEach(fg => fg.classList.toggle('solo', page === 'fundamentals' && ['monthly','share','underlying','trades'].includes(sub)));
 }
 
