@@ -1,0 +1,1262 @@
+{
+  "week": "2026-W46",
+  "checkedAt": "2026-11-09T02:28:05Z",
+  "coverage": {
+    "timezone": "Asia/Seoul",
+    "startInclusive": "2026-11-02T00:00:00+09:00",
+    "endExclusive": "2026-11-09T00:00:00+09:00",
+    "projectCount": 41,
+    "limitations": "Public X timelines read without login via fxtwitter, paginated past the window start. Undated docs, promotional chatter, reposts, recurring reminders and vague teasers do not qualify. Empty notes mean no qualifying update was verified, not proof of inactivity. Olive and Olive Exchange are existing duplicate entries; both were preserved. No authentication or access controls bypassed."
+  },
+  "previousHeadline": "This week: Toros launches options on Base. Derive adds LIT collateral. Block Scholes reports higher implied volatility.",
+  "projects": [
+    {
+      "name": "Derive",
+      "sourcesChecked": [
+        {
+          "url": "https://www.derive.xyz",
+          "resolved": "https://www.derive.xyz/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/derivexyz",
+          "resolved": "https://x.com/derivexyz",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/derivexyz/status/2118349664827085017",
+          "publishedAt": "2026-11-05T23:28:11+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/derivexyz/status/2118004357773861027",
+          "publishedAt": "2026-11-05T00:36:04+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "LIT is now accepted as collateral for options and perpetuals.",
+      "note": "Partnered with Circuit AI on agent-based options trading; Chance integrated Derive into its upcoming terminal.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "Paradex",
+      "sourcesChecked": [
+        {
+          "url": "https://www.paradex.trade",
+          "resolved": "https://www.paradex.trade/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/paradex",
+          "resolved": "https://x.com/paradex",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/paradex/status/2118761255418872281",
+          "publishedAt": "2026-11-07T02:43:42+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/paradex/status/2117631325855273006",
+          "publishedAt": "2026-11-03T23:53:46+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "",
+      "note": "Said October was its biggest month for options; refreshed its paradex.trade landing page.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "Thetanuts",
+      "sourcesChecked": [
+        {
+          "url": "https://thetanuts.finance",
+          "resolved": "https://app.thetanuts.finance/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/ThetanutsFi",
+          "resolved": "https://x.com/ThetanutsFi",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "Teased a new DeFi product. Specifications and a launch date remain unannounced.",
+      "note": "",
+      "changed": true,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "Only a one-word reply."
+    },
+    {
+      "name": "Aevo",
+      "sourcesChecked": [
+        {
+          "url": "https://www.aevo.xyz",
+          "resolved": "https://www.aevo.xyz/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/aevoxyz",
+          "resolved": "https://x.com/aevoxyz",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/aevoxyz/status/2117337042598174851",
+          "publishedAt": "2026-11-03T04:24:23+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "Launched its affiliate program. The rewards dashboard now combines trading and staking estimates.",
+      "note": "Completed November's 1M AEVO buyback and burn, bringing 2026 monthly buybacks to 10M AEVO.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "Hypercall",
+      "sourcesChecked": [
+        {
+          "url": "https://hypercall.xyz",
+          "resolved": "https://hypercall.xyz/",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "No X handle on file; website checked, no dated update."
+    },
+    {
+      "name": "GammaSwap",
+      "sourcesChecked": [
+        {
+          "url": "https://gammaswap.com",
+          "resolved": "https://gammaswap.com/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/GammaSwapLabs",
+          "resolved": "https://x.com/GammaSwapLabs",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": []
+    },
+    {
+      "name": "Dream",
+      "sourcesChecked": [
+        {
+          "url": "https://dreamos.app",
+          "resolved": "https://dreamos.app/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/dreaming",
+          "resolved": "https://x.com/dreaming",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/dreaming/status/2117346008988340607",
+          "publishedAt": "2026-11-03T05:00:01+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/dreaming/status/2117610480034599080",
+          "publishedAt": "2026-11-03T22:30:56+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/dreaming/status/2118750266753470663",
+          "publishedAt": "2026-11-07T02:00:02+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "The $1K-to-$10K trading challenge has finished. Week 3 points were distributed.",
+      "note": "Listed ONDO options and extended BTC expiries out to November 2027. Distributed week 4 points.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "CallPut",
+      "sourcesChecked": [
+        {
+          "url": "https://callput.app",
+          "resolved": "https://callput.app/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/CallPutApp",
+          "resolved": "https://x.com/CallPutApp",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/CallPutApp/status/2118353751719465084",
+          "publishedAt": "2026-11-05T23:44:26+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "Launched on Robinhood Chain with tokenized-stock and ETF options.",
+      "note": "Launched CallPut Points, earned on trades and referrals.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "Joyride",
+      "sourcesChecked": [
+        {
+          "url": "https://joyride.exchange",
+          "resolved": "https://joyride.exchange/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/JoyrideExchange",
+          "resolved": "https://x.com/JoyrideExchange",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "Only market commentary and an undated 'coming soon' teaser."
+    },
+    {
+      "name": "Olive",
+      "sourcesChecked": [
+        {
+          "url": "https://olive.exchange",
+          "resolved": "https://olive.exchange/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/Olive_Exchange",
+          "resolved": "https://x.com/Olive_Exchange",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/Olive_Exchange/status/2117579475835863107",
+          "publishedAt": "2026-11-03T20:27:44+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/Olive_Exchange/status/2118256211170914443",
+          "publishedAt": "2026-11-05T17:16:50+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "Opened an AVGOx liquidity pool and related derivatives markets.",
+      "note": "Launched Olive Pro on the Solana Seeker phone, including SKR options on mobile.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "3Jane",
+      "sourcesChecked": [
+        {
+          "url": "https://www.3jane.xyz",
+          "resolved": "https://www.3jane.xyz/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/3janexyz",
+          "resolved": "https://x.com/3janexyz",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/3janexyz/status/2117624841050411120",
+          "publishedAt": "2026-11-03T23:28:00+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/3janexyz/status/2118741945325625386",
+          "publishedAt": "2026-11-07T01:26:58+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "Launched the USD3 referral program.",
+      "note": "Signed a $100M forward-flow agreement with Settle. Reported $20M in total USD3 promises.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "Volmex",
+      "sourcesChecked": [
+        {
+          "url": "https://volmex.finance",
+          "resolved": "https://volmex.finance/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/volmexfinance",
+          "resolved": "https://x.com/volmexfinance",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/volmexfinance/status/2118754918865482004",
+          "publishedAt": "2026-11-07T02:18:31+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "Shared Goldman Sachs research featuring the BVIV Bitcoin volatility index.",
+      "note": "BVIV and EVIV index-linked markets expiring Nov 30 went live on Polymarket.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "Hunch",
+      "sourcesChecked": [
+        {
+          "url": "https://www.hunch.cool",
+          "resolved": "https://www.hunch.cool/",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "No X handle on file; website checked, no dated update."
+    },
+    {
+      "name": "Rysk",
+      "sourcesChecked": [
+        {
+          "url": "https://app.rysk.finance",
+          "resolved": "https://app.rysk.finance/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/ryskfinance",
+          "resolved": "https://x.com/ryskfinance",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "Reported a new high in daily capital deployed on Ethereum mainnet.",
+      "note": "",
+      "changed": true,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "Only a greeting post."
+    },
+    {
+      "name": "Panoptic",
+      "sourcesChecked": [
+        {
+          "url": "https://panoptic.xyz",
+          "resolved": "https://panoptic.xyz/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/Panoptic_xyz",
+          "resolved": "https://x.com/Panoptic_xyz",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "Highlighted its three options-vault strategies and volUSDC deposits.",
+      "note": "",
+      "changed": true,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "Posts were educational threads on LP yield and on-chain vs Deribit IV. No product news."
+    },
+    {
+      "name": "Hegic",
+      "sourcesChecked": [
+        {
+          "url": "https://www.hegic.co",
+          "resolved": "https://www.hegic.co/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/HegicOptions",
+          "resolved": "https://x.com/HegicOptions",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": []
+    },
+    {
+      "name": "Deri",
+      "sourcesChecked": [
+        {
+          "url": "https://deri.io",
+          "resolved": "https://deri.io/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/DeriProtocol",
+          "resolved": "https://x.com/DeriProtocol",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "Trading-tournament rewards have been distributed through Upscale.",
+      "note": "",
+      "changed": true,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "Only a daily market report, an October monthly-report link and a risk-control explainer were posted. No new launch."
+    },
+    {
+      "name": "Odette",
+      "sourcesChecked": [
+        {
+          "url": "https://odette.fi",
+          "resolved": "https://odette.fi/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/odetteonchain",
+          "resolved": "https://x.com/odetteonchain",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/odetteonchain/status/2118350805229330794",
+          "publishedAt": "2026-11-05T23:32:43+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "",
+      "note": "Running a weekly trading competition with a $1,150 prize pool across the top 10 traders.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "SOFA.org",
+      "sourcesChecked": [
+        {
+          "url": "https://www.sofa.org",
+          "resolved": "https://www.sofa.org/",
+          "status": 403
+        },
+        {
+          "url": "https://x.com/SOFAorgDAO",
+          "resolved": "https://x.com/SOFAorgDAO",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/SOFAorgDAO/status/2117198258435138022",
+          "publishedAt": "2026-11-02T19:12:55+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "Reported a weekly burn of 7,310 RCH.",
+      "note": "Reported a weekly burn of 6,921 RCH.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": [
+        "Website returned 403 to automated fetch; X used."
+      ]
+    },
+    {
+      "name": "Toros",
+      "sourcesChecked": [
+        {
+          "url": "https://chamberfi.com",
+          "resolved": "https://chamberfi.com/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/torosfinance",
+          "resolved": "https://x.com/torosfinance",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "Launched options on Base using Derive liquidity. Added 5% cashback for eligible Derive traders.",
+      "note": "",
+      "changed": true,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "Posts promoted existing Base options and Derive cashback, both launched last week. No new update."
+    },
+    {
+      "name": "Stryke",
+      "sourcesChecked": [
+        {
+          "url": "https://www.stryke.xyz",
+          "resolved": "https://stryke.xyz/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/stryke_xyz",
+          "resolved": "https://x.com/stryke_xyz",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/stryke_xyz/status/2117353499600330981",
+          "publishedAt": "2026-11-03T05:29:47+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/stryke_xyz/status/2118437642765230563",
+          "publishedAt": "2026-11-06T05:17:47+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/stryke_xyz/status/2118037549855768601",
+          "publishedAt": "2026-11-05T02:47:57+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/stryke_xyz/status/2118374129548099862",
+          "publishedAt": "2026-11-06T01:05:24+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "",
+      "note": "Launched its new app on Robinhood Chain and Stryke Pro. Added SOL, gold, SpaceX, Meta and crude oil markets.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "Carmine",
+      "sourcesChecked": [
+        {
+          "url": "https://carmine.finance",
+          "resolved": "https://carmine.finance/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/CarmineOptions",
+          "resolved": "https://x.com/CarmineOptions",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": []
+    },
+    {
+      "name": "Prodigy.Fi",
+      "sourcesChecked": [
+        {
+          "url": "https://prodigy.fi",
+          "resolved": "https://app.prodigy.fi/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/ProdigyFi",
+          "resolved": "https://x.com/ProdigyFi",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "Posts promoted existing vaults. No new launch."
+    },
+    {
+      "name": "Hypersurface",
+      "sourcesChecked": [
+        {
+          "url": "https://app.hypersurface.io",
+          "resolved": "https://app.hypersurface.io/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/hypersurfaceX",
+          "resolved": "https://x.com/hypersurfaceX",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "Only a Spaces episode."
+    },
+    {
+      "name": "Stochastic",
+      "sourcesChecked": [
+        {
+          "url": "https://stochastic.finance",
+          "resolved": "https://stochastic.finance/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/stochastic_fin",
+          "resolved": "https://x.com/stochastic_fin",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": []
+    },
+    {
+      "name": "Omen",
+      "sourcesChecked": [
+        {
+          "url": "https://omen.trade",
+          "resolved": "https://omen.trade/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/omenapp",
+          "resolved": "https://x.com/omenapp",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/omenapp/status/2117643683453608314",
+          "publishedAt": "2026-11-04T00:42:52+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "",
+      "note": "Named as a partner on Chainlink's Asian equities effort. Options on those stocks are coming soon.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "Gage",
+      "sourcesChecked": [
+        {
+          "url": "https://gage.cash",
+          "resolved": "https://gage.cash/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/gagedotcash",
+          "resolved": "https://x.com/gagedotcash",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/gagedotcash/status/2118418449206796733",
+          "publishedAt": "2026-11-06T04:01:31+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/gagedotcash/status/2118785447086477810",
+          "publishedAt": "2026-11-07T04:19:50+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "Published its second changelog and linked the Pashov audit report.",
+      "note": "Shipped permissionless vault creation, Uniswap v4 rehypothecation and an open-source SDK. Supports 90+ collaterals.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "SuperVega",
+      "sourcesChecked": [
+        {
+          "url": "https://supervega.app",
+          "resolved": "https://supervega.app/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/SuperVegaXYZ",
+          "resolved": "https://x.com/SuperVegaXYZ",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": []
+    },
+    {
+      "name": "Saffron",
+      "sourcesChecked": [
+        {
+          "url": "https://saffron.finance",
+          "resolved": "https://saffron.finance/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/Saffron",
+          "resolved": "https://x.com/Saffron",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/Saffron/status/2118908346598334693",
+          "publishedAt": "2026-11-07T12:28:11+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/Saffron/status/2119090132070654033",
+          "publishedAt": "2026-11-08T00:30:32+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "",
+      "note": "Integrated with Montra. Set to go live on Elysium mainnet on November 9.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "HedgeHood",
+      "sourcesChecked": [
+        {
+          "url": "https://hedgehood.app",
+          "resolved": "https://hedgehood.app/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/0xHedgehood",
+          "resolved": "https://x.com/0xHedgehood",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/0xHedgehood/status/2117252798815355120",
+          "publishedAt": "2026-11-02T22:49:38+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/0xHedgehood/status/2118589142653444492",
+          "publishedAt": "2026-11-06T15:19:47+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/0xHedgehood/status/2117643328346792214",
+          "publishedAt": "2026-11-04T00:41:28+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/0xHedgehood/status/2119106148448215421",
+          "publishedAt": "2026-11-08T01:34:11+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "Opened week 3 deposits for its stock-yield funds. Previewed a wheel vault for next week.",
+      "note": "Took Stock Yield to BNB Chain and Base. Launched agent options trading and Loop leveraged longs.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "Tacticalls",
+      "sourcesChecked": [
+        {
+          "url": "https://tacticalls.xyz",
+          "resolved": "https://tacticalls.xyz/",
+          "status": 429
+        },
+        {
+          "url": "https://x.com/tacticallsXYZ",
+          "resolved": "https://x.com/tacticallsXYZ",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [
+        "Website returned 429 (rate limited); X checked."
+      ]
+    },
+    {
+      "name": "Heat",
+      "sourcesChecked": [
+        {
+          "url": "https://www.useheat.xyz",
+          "resolved": "https://useheat.xyz/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/heat_fi",
+          "resolved": "https://x.com/heat_fi",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "Launched two-level referral rewards.",
+      "note": "",
+      "changed": true,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": []
+    },
+    {
+      "name": "HARDCORE",
+      "sourcesChecked": [
+        {
+          "url": "https://hardcore.finance",
+          "resolved": "https://hardcore.finance/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/JoinHARDCORE",
+          "resolved": "https://x.com/JoinHARDCORE",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "Launch countdown teaser without product details; not a launch."
+    },
+    {
+      "name": "Split Markets",
+      "sourcesChecked": [
+        {
+          "url": "https://split.markets",
+          "resolved": "https://split.markets/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/splitmarkets",
+          "resolved": "https://x.com/splitmarkets",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/splitmarkets/status/2117287873221218608",
+          "publishedAt": "2026-11-03T01:09:00+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "Introduced trader-following and copy-trading features.",
+      "note": "Launched Split Live, combining large trades, positioning and odds-versus-options data.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "IVY",
+      "sourcesChecked": [
+        {
+          "url": "https://ivy.market",
+          "resolved": "https://ivy.market/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/IvyMarkets",
+          "resolved": "https://x.com/IvyMarkets",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": []
+    },
+    {
+      "name": "Ace.Pro",
+      "sourcesChecked": [
+        {
+          "url": "https://ace.pro",
+          "resolved": "https://ace.pro/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/acedotpro",
+          "resolved": "https://x.com/acedotpro",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "Published feedback-award rules and rewarded verified bug reports.",
+      "note": "",
+      "changed": true,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": []
+    },
+    {
+      "name": "Olive Exchange",
+      "sourcesChecked": [
+        {
+          "url": "https://x.com/Olive_Exchange",
+          "resolved": "https://x.com/Olive_Exchange",
+          "status": 200
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/Olive_Exchange/status/2117579475835863107",
+          "publishedAt": "2026-11-03T20:27:44+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        },
+        {
+          "url": "https://x.com/Olive_Exchange/status/2118256211170914443",
+          "publishedAt": "2026-11-05T17:16:50+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "Opened an AVGOx liquidity pool and related derivatives markets.",
+      "note": "Launched Olive Pro on the Solana Seeker phone, including SKR options on mobile.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "Cardinal",
+      "sourcesChecked": [
+        {
+          "url": "https://cardinal.trading/",
+          "resolved": "https://cardinal.trading/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/cardinal_labs",
+          "resolved": "https://x.com/cardinal_labs",
+          "status": 404
+        }
+      ],
+      "datedSources": [
+        {
+          "url": "https://x.com/cardinal_labs/status/2118843485658972477",
+          "publishedAt": "2026-11-07T08:10:27+09:00",
+          "dateBasis": "Public post timestamp; KST normalized from X snowflake ID",
+          "kind": "Official project announcement"
+        }
+      ],
+      "previousNote": "Launched its testnet trading competition with a 10,000 DRV prize pool.",
+      "note": "Testnet competition reached about 700 traders and $84B notional in Yield Perps. It ends November 12.",
+      "changed": true,
+      "status": "Verified in-window official update",
+      "coverageGaps": []
+    },
+    {
+      "name": "Bebop",
+      "sourcesChecked": [
+        {
+          "url": "https://bebop.xyz/",
+          "resolved": "https://bebop.xyz/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/bebop_dex",
+          "resolved": "https://x.com/bebop_dex",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": [],
+      "reviewFinding": "Only a media-only post with no text."
+    },
+    {
+      "name": "Optivi",
+      "sourcesChecked": [
+        {
+          "url": "https://optivi.xyz/",
+          "resolved": "https://optivi.xyz/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/optivixyz",
+          "resolved": "https://x.com/optivixyz",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": []
+    },
+    {
+      "name": "Acta",
+      "sourcesChecked": [
+        {
+          "url": "https://acta.markets/",
+          "resolved": "https://beta.acta.markets/",
+          "status": 200
+        },
+        {
+          "url": "https://x.com/acta_markets",
+          "resolved": "https://x.com/acta_markets",
+          "status": 200
+        }
+      ],
+      "datedSources": [],
+      "previousNote": "",
+      "note": "",
+      "changed": false,
+      "status": "No qualifying dated project news verified; note empty",
+      "coverageGaps": []
+    }
+  ],
+  "headline": "This week · Nov 2–8: 3Jane signs a $100M forward flow with Settle, Stryke launches on Robinhood Chain, Gage opens permissionless vaults, Dream lists ONDO options.",
+  "traderViews": {
+    "sources": [
+      {
+        "name": "QCP Capital",
+        "url": "https://www.qcpgroup.com/topic/market-updates/",
+        "status": "Nov 2 market colour verified and included (event vol, skew, put blocks). Nov 6 note is macro and equities only."
+      },
+      {
+        "name": "Greeks.live",
+        "url": "https://www.greeks.live/",
+        "status": "Nov 4 official X commentary on post-midterm IV verified and included. Nov 5 post is regulatory, not an options view."
+      },
+      {
+        "name": "Deribit Insights",
+        "url": "https://insights.deribit.com/industry/",
+        "status": "Nov 6 official expiry-positioning post included. Other posts were product, webinar or security updates. Insights feed has no new posts."
+      },
+      {
+        "name": "Block Scholes",
+        "url": "https://www.blockscholes.com/resource-centre",
+        "status": "Nov 6 BSIV and Nov 7 cross-exchange options volume verified on official X and included."
+      },
+      {
+        "name": "Glassnode",
+        "url": "https://research.glassnode.com/",
+        "status": "Week 45 BTC Market Pulse (Nov 2) verified and included. Other posts were on-chain or futures context."
+      },
+      {
+        "name": "Amberdata",
+        "url": "https://blog.amberdata.io/tag/featured",
+        "status": "Nothing usable this week. The blog still redirects to the Kaiko acquisition page, and the AmberdataAPI X profile returned 404."
+      },
+      {
+        "name": "Volmex",
+        "url": "https://blog.volmex.finance/",
+        "status": "Nothing usable this week. The Nov 7 Polymarket BVIV/EVIV listing is a product update, not a market view. The blog RSS has nothing new since 2025."
+      }
+    ],
+    "added": [
+      {
+        "id": "qcp-2026-11-02",
+        "publisher": "QCP Capital",
+        "author": "QCP Capital",
+        "date": "2026-11-02",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Midterm week / mid-November",
+        "stance": "Downside hedging",
+        "title": "Midterm event vol priced at 47 as downside skew stays bid",
+        "view": "QCP said the midterm event was priced at 47 vol and option flows were light. Some traders sold the 6 Nov 82k/85k call spread to fade upside. Downside skew stayed bid, which QCP linked mainly to the Binance hack. That news also drew two 1,000 BTC blocks of mid-November $74k puts.",
+        "url": "https://www.qcpgroup.com/insights/qcp-market-colour-57/",
+        "type": "Desk commentary"
+      },
+      {
+        "id": "glassnode-2026-11-02",
+        "publisher": "Glassnode",
+        "author": "Glassnode",
+        "date": "2026-11-02",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Near term",
+        "stance": "Protection buying",
+        "title": "Skew breaks above its high band as traders pay for protection",
+        "view": "Glassnode's week 45 Market Pulse reports that the BTC 25-delta skew moved above its high band. Implied volatility jumped with the drop, leaving the volatility spread well above its high band. Options open interest contracted after Friday's monthly expiry.",
+        "url": "https://research.glassnode.com/btc-market-pulse-week-45-2026/",
+        "type": "On-chain and options research"
+      },
+      {
+        "id": "greeks-2026-11-04",
+        "publisher": "Greeks.live",
+        "author": "Greeks.live",
+        "date": "2026-11-04",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Into year-end",
+        "stance": "Range-bound",
+        "title": "Post-election IV stabilises; little year-end move priced",
+        "view": "Greeks.live said implied volatility across major maturities rose about 1 point after the midterms, and the election-driven IV spike has largely stabilised. In its view, the options market does not expect any significant BTC move by year-end.",
+        "url": "https://x.com/GreeksLive/status/2117983431061868937",
+        "type": "Desk commentary"
+      },
+      {
+        "id": "deribit-2026-11-06",
+        "publisher": "Deribit",
+        "author": "Deribit",
+        "date": "2026-11-06",
+        "assets": [
+          "BTC",
+          "ETH"
+        ],
+        "horizon": "6 Nov expiry",
+        "stance": "Call-heavy BTC, put-heavy ETH",
+        "title": "$2.86B expiry: BTC call-weighted, ETH tilted to puts",
+        "view": "Deribit reported about $2.86B in BTC and ETH options expiring 6 Nov. BTC was $2.64B notional with a 0.38 put/call ratio, a $79K max pain and call concentrations at $82K and $85K. ETH was $224.5M with a 1.27 put/call ratio and a $2.35K max pain.",
+        "url": "https://x.com/DeribitOfficial/status/2118472425574949337",
+        "type": "Expiry positioning"
+      },
+      {
+        "id": "blockscholes-2026-11-06",
+        "publisher": "Block Scholes",
+        "author": "Block Scholes",
+        "date": "2026-11-06",
+        "assets": [
+          "BTC",
+          "ETH",
+          "SOL"
+        ],
+        "horizon": "30-day implied volatility",
+        "stance": "Divergent vol",
+        "title": "BTC implied vol eases while SOL climbs",
+        "view": "Block Scholes' BSIV puts 30-day implied volatility at 41.9% for BTC (down 1.4 points over 7 days), 60.7% for ETH (up 0.5) and 67.1% for SOL (up 4.1). This came as US equities had their worst day since April 2025.",
+        "url": "https://x.com/BlockScholes/status/2118667619754480015",
+        "type": "Volatility research"
+      },
+      {
+        "id": "blockscholes-2026-11-07",
+        "publisher": "Block Scholes",
+        "author": "Block Scholes",
+        "date": "2026-11-07",
+        "assets": [
+          "BTC",
+          "ETH",
+          "SOL",
+          "HYPE"
+        ],
+        "horizon": "Week to 5 Nov",
+        "stance": "Call-leaning flow",
+        "title": "BTC options turnover hits a one-month high on election day",
+        "view": "Across Deribit, Bybit and OKX, daily BTC options turnover peaked at $6.8B on 4 Nov, the heaviest session in a month. Calls were 54% of BTC volume, and 55–56% for ETH, SOL and HYPE. HYPE turnover peaked at $42M, down from $132M the week before.",
+        "url": "https://x.com/BlockScholes/status/2118744259381608911",
+        "type": "Flow data"
+      }
+    ],
+    "archivedIds": [
+      "blockscholes-2026-10-30"
+    ],
+    "excludedFreshSources": [
+      {
+        "url": "https://www.qcpgroup.com/insights/qcp-market-colour-58/",
+        "publishedAt": "2026-11-06",
+        "reason": "Macro and equities commentary; no options view."
+      },
+      {
+        "url": "https://x.com/volmexfinance/status/2118754918865482004",
+        "publishedAt": "2026-11-07",
+        "reason": "Product listing on Polymarket, not a market view."
+      },
+      {
+        "url": "https://x.com/GreeksLive/status/2118171192213504331",
+        "publishedAt": "2026-11-05",
+        "reason": "Regulatory commentary, not options positioning."
+      },
+      {
+        "url": "https://x.com/BlockScholes/status/2118034496725332178",
+        "publishedAt": "2026-11-05",
+        "reason": "Pointer to a Bybit livestream; covered instead by the original BSIV and volume posts."
+      }
+    ]
+  },
+  "summary": {
+    "reviewed": 41,
+    "withVerifiedNews": 18,
+    "notesChanged": 25,
+    "notesCleared": 7,
+    "traderViewsAdded": 6
+  }
+}

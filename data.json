@@ -1,5 +1,5 @@
 {
-  "headline": "This week: Toros launches options on Base. Derive adds LIT collateral. Block Scholes reports higher implied volatility.",
+  "headline": "This week · Nov 2–8: 3Jane signs a $100M forward flow with Settle, Stryke launches on Robinhood Chain, Gage opens permissionless vaults, Dream lists ONDO options.",
   "relations": [
     {
       "a": "Odette",
@@ -350,7 +350,7 @@
         "Ex-Lyra",
         "#1 onchain options"
       ],
-      "note": "LIT is now accepted as collateral for options and perpetuals.",
+      "note": "Partnered with Circuit AI on agent-based options trading; Chance integrated Derive into its upcoming terminal.",
       "app": "https://www.derive.xyz/options/eth",
       "backers": {
         "total": null,
@@ -459,7 +459,7 @@
         "Paradigm-incubated",
         "Perps"
       ],
-      "note": "",
+      "note": "Said October was its biggest month for options; refreshed its paradex.trade landing page.",
       "deep": {
         "thesis": "",
         "catalysts": [],
@@ -546,7 +546,7 @@
         "V4 RFQ",
         "Option vaults"
       ],
-      "note": "Teased a new DeFi product. Specifications and a launch date remain unannounced.",
+      "note": "",
       "deep": {
         "thesis": "",
         "catalysts": [
@@ -599,7 +599,7 @@
         "Pre-launch perps",
         "Own rollup"
       ],
-      "note": "Launched its affiliate program. The rewards dashboard now combines trading and staking estimates.",
+      "note": "Completed November's 1M AEVO buyback and burn, bringing 2026 monthly buybacks to 10M AEVO.",
       "app": "https://app.aevo.xyz/option/eth",
       "backers": {
         "total": null,
@@ -874,7 +874,7 @@
         "Points",
         "HYPE options"
       ],
-      "note": "The $1K-to-$10K trading challenge has finished. Week 3 points were distributed.",
+      "note": "Listed ONDO options and extended BTC expiries out to November 2027. Distributed week 4 points.",
       "deep": {
         "thesis": "",
         "catalysts": [
@@ -947,7 +947,7 @@
         "24/7",
         "Non-custodial"
       ],
-      "note": "Launched on Robinhood Chain with tokenized-stock and ETF options.",
+      "note": "Launched CallPut Points, earned on trades and referrals.",
       "app": "https://callput.app",
       "backers": {
         "level": "none",
@@ -1065,7 +1065,7 @@
         "Points",
         "Season 1 airdrop"
       ],
-      "note": "Opened an AVGOx liquidity pool and related derivatives markets.",
+      "note": "Launched Olive Pro on the Solana Seeker phone, including SKR options on mobile.",
       "app": "https://olive.exchange",
       "isNew": true,
       "backers": {
@@ -1104,7 +1104,7 @@
         "Unsecured credit",
         "Option vaults"
       ],
-      "note": "Launched the USD3 referral program.",
+      "note": "Signed a $100M forward-flow agreement with Settle. Reported $20M in total USD3 promises.",
       "app": "https://app.3jane.xyz",
       "backers": {
         "total": null,
@@ -1167,7 +1167,7 @@
         "BVIV / EVIV",
         "Vol perps"
       ],
-      "note": "Shared Goldman Sachs research featuring the BVIV Bitcoin volatility index.",
+      "note": "BVIV and EVIV index-linked markets expiring Nov 30 went live on Polymarket.",
       "deep": {
         "thesis": "The benchmark index company behind BVIV — the “VIX for Bitcoin”",
         "catalysts": [
@@ -1309,7 +1309,7 @@
         "Fixed yield",
         "RFQ"
       ],
-      "note": "Reported a new high in daily capital deployed on Ethereum mainnet.",
+      "note": "",
       "status": "Points · v12",
       "points": "Activity points + referral points (period v12) — open one position to unlock your referral code",
       "pointsUrl": "https://app.rysk.finance/points/",
@@ -1394,7 +1394,7 @@
         "Uniswap LP",
         "Oracle-free"
       ],
-      "note": "Highlighted its three options-vault strategies and volUSDC deposits.",
+      "note": "",
       "backers": {
         "total": null,
         "totalNote": "",
@@ -1491,7 +1491,7 @@
       "keywords": [
         "Risk exchange"
       ],
-      "note": "Trading-tournament rewards have been distributed through Upscale.",
+      "note": "",
       "backers": {
         "total": null,
         "totalNote": "",
@@ -1560,7 +1560,7 @@
         "USDC cash-settled",
         "Thetanuts V4"
       ],
-      "note": "",
+      "note": "Running a weekly trading competition with a $1,150 prize pool across the top 10 traders.",
       "backers": {
         "level": "none",
         "summary": null,
@@ -1594,7 +1594,7 @@
         "DAO",
         "Onchain settlement"
       ],
-      "note": "Reported a weekly burn of 7,310 RCH.",
+      "note": "Reported a weekly burn of 6,921 RCH.",
       "backers": {
         "level": "none",
         "summary": null,
@@ -1640,7 +1640,7 @@
         "Leveraged vaults",
         "Ex-dHEDGE"
       ],
-      "note": "Launched options on Base using Derive liquidity. Added 5% cashback for eligible Derive traders.",
+      "note": "",
       "backers": {
         "level": "none",
         "summary": null,
@@ -1694,7 +1694,7 @@
         "CLAMM",
         "Ex-Dopex"
       ],
-      "note": "",
+      "note": "Launched its new app on Robinhood Chain and Stryke Pro. Added SOL, gold, SpaceX, Meta and crude oil markets.",
       "backers": {
         "level": "none",
         "summary": null,
@@ -1877,7 +1877,7 @@
       "status": "Just launched",
       "since": "2026-10",
       "isNew": true,
-      "note": "",
+      "note": "Named as a partner on Chainlink's Asian equities effort. Options on those stocks are coming soon.",
       "deep": {
         "thesis": "",
         "catalysts": [],
@@ -1938,7 +1938,7 @@
       "status": "Live · V2",
       "since": "2026-09",
       "isNew": true,
-      "note": "Published its second changelog and linked the Pashov audit report.",
+      "note": "Shipped permissionless vault creation, Uniswap v4 rehypothecation and an open-source SDK. Supports 90+ collaterals.",
       "deep": {
         "thesis": "Options in loan form. Pledging NVDA for USDG with the right to walk away at expiry is economically a put struck at the reclaim cap: the borrower is long the put, lenders are short it and earn the fixed cost as premium. No oracle and no liquidation in the deal path — the decision happens only at expiry.",
         "catalysts": [
@@ -2077,7 +2077,7 @@
       "status": "Live",
       "since": "2026-07",
       "isNew": true,
-      "note": "",
+      "note": "Integrated with Montra. Set to go live on Elysium mainnet on November 9.",
       "deep": {
         "thesis": "Not an options venue, but options-adjacent: Uniswap LP fees rise with trading volume and volatility, so buying the variable side is a long-volatility-style trade, and the fixed side sells that exposure for a known rate.",
         "catalysts": [
@@ -2143,7 +2143,7 @@
         "Covered calls",
         "Stock lending"
       ],
-      "note": "Opened week 3 deposits for its stock-yield funds. Previewed a wheel vault for next week.",
+      "note": "Took Stock Yield to BNB Chain and Base. Launched agent options trading and Loop leveraged longs.",
       "auto": true,
       "backers": {
         "level": "none",
@@ -2231,7 +2231,7 @@
         "Copy trading",
         "RFQ"
       ],
-      "note": "Launched two-level referral rewards.",
+      "note": "",
       "deep": {
         "thesis": "",
         "catalysts": [
@@ -2341,7 +2341,7 @@
         "Funding arb",
         "AI Co-Pilot"
       ],
-      "note": "Introduced trader-following and copy-trading features.",
+      "note": "Launched Split Live, combining large trades, positioning and odds-versus-options data.",
       "deep": {
         "thesis": "",
         "catalysts": [
@@ -2473,7 +2473,7 @@
         "Liquidity vaults",
         "HyperEVM"
       ],
-      "note": "Published feedback-award rules and rewarded verified bug reports.",
+      "note": "",
       "auto": true,
       "app": "https://beta.ace.pro/"
     },
@@ -2493,7 +2493,7 @@
       "site": "",
       "x": "Olive_Exchange",
       "keywords": [],
-      "note": "Opened an AVGOx liquidity pool and related derivatives markets.",
+      "note": "Launched Olive Pro on the Solana Seeker phone, including SKR options on mobile.",
       "auto": true
     },
     {
@@ -2519,7 +2519,7 @@
         "Derive V3",
         "Testnet"
       ],
-      "note": "Launched its testnet trading competition with a 10,000 DRV prize pool.",
+      "note": "Testnet competition reached about 700 traders and $84B notional in Yield Perps. It ends November 12.",
       "deep": {
         "thesis": "Earn while BTC meets your chosen price conditions. No expiry. Testnet only.",
         "catalysts": [
@@ -2687,46 +2687,144 @@
     ]
   },
   "traderViews": {
-    "checkedAt": "2026-11-02T02:02:50.637871+00:00",
+    "checkedAt": "2026-11-09T02:28:05Z",
     "windowDays": 7,
     "sources": [
       {
         "name": "QCP Capital",
         "url": "https://www.qcpgroup.com/topic/market-updates/",
-        "status": "Oct 26 options view verified and archived: outside the live rolling window. Oct 30 article is macro commentary, with no new options view."
+        "status": "Nov 2 market colour verified and included (event vol, skew, put blocks). Nov 6 note is macro and equities only."
       },
       {
         "name": "Greeks.live",
         "url": "https://www.greeks.live/",
-        "status": "Official public X still shows Oct 22 as the latest visible view. No fresh options view verified."
+        "status": "Nov 4 official X commentary on post-midterm IV verified and included. Nov 5 post is regulatory, not an options view."
       },
       {
         "name": "Deribit Insights",
         "url": "https://insights.deribit.com/industry/",
-        "status": "Oct 30 block-RFQ announcement is an exchange update, not a market view. No fresh options commentary verified."
+        "status": "Nov 6 official expiry-positioning post included. Other posts were product, webinar or security updates. Insights feed has no new posts."
       },
       {
         "name": "Block Scholes",
         "url": "https://www.blockscholes.com/resource-centre",
-        "status": "Oct 30 official BSIV commentary verified and included."
+        "status": "Nov 6 BSIV and Nov 7 cross-exchange options volume verified on official X and included."
       },
       {
         "name": "Glassnode",
         "url": "https://research.glassnode.com/",
-        "status": "Oct 28 report discusses realized volatility; Oct 30 Strategy Watch covers September. Neither is presented as a fresh options-pricing view."
+        "status": "Week 45 BTC Market Pulse (Nov 2) verified and included. Other posts were on-chain or futures context."
       },
       {
         "name": "Amberdata",
         "url": "https://blog.amberdata.io/tag/featured",
-        "status": "Public blog redirects to the Kaiko acquisition announcement. No fresh accessible options view verified."
+        "status": "Nothing usable this week. The blog still redirects to the Kaiko acquisition page, and the AmberdataAPI X profile returned 404."
       },
       {
         "name": "Volmex",
         "url": "https://blog.volmex.finance/",
-        "status": "Oct 28 post is fresh but quotes an Oct 16 volatility comparison. Excluded from current views to avoid presenting old market conditions as current."
+        "status": "Nothing usable this week. The Nov 7 Polymarket BVIV/EVIV listing is a product update, not a market view. The blog RSS has nothing new since 2025."
       }
     ],
     "items": [
+      {
+        "id": "qcp-2026-11-02",
+        "publisher": "QCP Capital",
+        "author": "QCP Capital",
+        "date": "2026-11-02",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Midterm week / mid-November",
+        "stance": "Downside hedging",
+        "title": "Midterm event vol priced at 47 as downside skew stays bid",
+        "view": "QCP said the midterm event was priced at 47 vol and option flows were light. Some traders sold the 6 Nov 82k/85k call spread to fade upside. Downside skew stayed bid, which QCP linked mainly to the Binance hack. That news also drew two 1,000 BTC blocks of mid-November $74k puts.",
+        "url": "https://www.qcpgroup.com/insights/qcp-market-colour-57/",
+        "type": "Desk commentary"
+      },
+      {
+        "id": "glassnode-2026-11-02",
+        "publisher": "Glassnode",
+        "author": "Glassnode",
+        "date": "2026-11-02",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Near term",
+        "stance": "Protection buying",
+        "title": "Skew breaks above its high band as traders pay for protection",
+        "view": "Glassnode's week 45 Market Pulse reports that the BTC 25-delta skew moved above its high band. Implied volatility jumped with the drop, leaving the volatility spread well above its high band. Options open interest contracted after Friday's monthly expiry.",
+        "url": "https://research.glassnode.com/btc-market-pulse-week-45-2026/",
+        "type": "On-chain and options research"
+      },
+      {
+        "id": "greeks-2026-11-04",
+        "publisher": "Greeks.live",
+        "author": "Greeks.live",
+        "date": "2026-11-04",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Into year-end",
+        "stance": "Range-bound",
+        "title": "Post-election IV stabilises; little year-end move priced",
+        "view": "Greeks.live said implied volatility across major maturities rose about 1 point after the midterms, and the election-driven IV spike has largely stabilised. In its view, the options market does not expect any significant BTC move by year-end.",
+        "url": "https://x.com/GreeksLive/status/2117983431061868937",
+        "type": "Desk commentary"
+      },
+      {
+        "id": "deribit-2026-11-06",
+        "publisher": "Deribit",
+        "author": "Deribit",
+        "date": "2026-11-06",
+        "assets": [
+          "BTC",
+          "ETH"
+        ],
+        "horizon": "6 Nov expiry",
+        "stance": "Call-heavy BTC, put-heavy ETH",
+        "title": "$2.86B expiry: BTC call-weighted, ETH tilted to puts",
+        "view": "Deribit reported about $2.86B in BTC and ETH options expiring 6 Nov. BTC was $2.64B notional with a 0.38 put/call ratio, a $79K max pain and call concentrations at $82K and $85K. ETH was $224.5M with a 1.27 put/call ratio and a $2.35K max pain.",
+        "url": "https://x.com/DeribitOfficial/status/2118472425574949337",
+        "type": "Expiry positioning"
+      },
+      {
+        "id": "blockscholes-2026-11-06",
+        "publisher": "Block Scholes",
+        "author": "Block Scholes",
+        "date": "2026-11-06",
+        "assets": [
+          "BTC",
+          "ETH",
+          "SOL"
+        ],
+        "horizon": "30-day implied volatility",
+        "stance": "Divergent vol",
+        "title": "BTC implied vol eases while SOL climbs",
+        "view": "Block Scholes' BSIV puts 30-day implied volatility at 41.9% for BTC (down 1.4 points over 7 days), 60.7% for ETH (up 0.5) and 67.1% for SOL (up 4.1). This came as US equities had their worst day since April 2025.",
+        "url": "https://x.com/BlockScholes/status/2118667619754480015",
+        "type": "Volatility research"
+      },
+      {
+        "id": "blockscholes-2026-11-07",
+        "publisher": "Block Scholes",
+        "author": "Block Scholes",
+        "date": "2026-11-07",
+        "assets": [
+          "BTC",
+          "ETH",
+          "SOL",
+          "HYPE"
+        ],
+        "horizon": "Week to 5 Nov",
+        "stance": "Call-leaning flow",
+        "title": "BTC options turnover hits a one-month high on election day",
+        "view": "Across Deribit, Bybit and OKX, daily BTC options turnover peaked at $6.8B on 4 Nov, the heaviest session in a month. Calls were 54% of BTC volume, and 55–56% for ETH, SOL and HYPE. HYPE turnover peaked at $42M, down from $132M the week before.",
+        "url": "https://x.com/BlockScholes/status/2118744259381608911",
+        "type": "Flow data"
+      }
+    ],
+    "archive": [
       {
         "id": "blockscholes-2026-10-30",
         "publisher": "Block Scholes",
@@ -2743,9 +2841,117 @@
         "view": "Block Scholes reports 30-day implied volatility at 43.3% for BTC, 60.2% for ETH and 63.0% for SOL. All rose over seven days; ETH gained the most, at 5.3 points.",
         "url": "https://x.com/BlockScholes/status/2116121916666675500",
         "type": "Volatility research"
-      }
-    ],
-    "archive": [
+      },
+      {
+        "id": "qcp-2026-10-26",
+        "publisher": "QCP Capital",
+        "author": "QCP Capital",
+        "date": "2026-10-26",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Pre-Fed / through November",
+        "stance": "Downside hedging",
+        "title": "Short-tenor volatility rises ahead of the Fed",
+        "view": "QCP reported short-tenor implied volatility rising from about 30% to 35%. It observed demand for downside protection through November. This was a pre-Fed view.",
+        "url": "https://www.qcpgroup.com/insights/qcp-market-colour-55/",
+        "type": "Desk commentary"
+      },
+      {
+        "id": "blockscholes-2026-10-23",
+        "publisher": "Block Scholes",
+        "author": "Block Scholes",
+        "date": "2026-10-23",
+        "assets": [
+          "BTC",
+          "ETH",
+          "SOL"
+        ],
+        "horizon": "30-day implied volatility / October FOMC",
+        "stance": "Muted event volatility",
+        "title": "A Fed meeting inside the window has not lifted volatility broadly",
+        "view": "Block Scholes notes muted crypto volatility despite the October 28 Fed meeting falling inside its 30-day window. It reports BTC implied volatility at 40.1%, ETH at 54.9% and SOL at 61.2%; BTC rose 1.4 points over seven days while ETH and SOL declined.",
+        "url": "https://x.com/BlockScholes/status/2113569039297523961",
+        "type": "Volatility research"
+      },
+      {
+        "id": "greeks-2026-10-22",
+        "publisher": "Greeks.live",
+        "author": "Greeks.live",
+        "date": "2026-10-22",
+        "assets": [
+          "BTC",
+          "ETH"
+        ],
+        "horizon": "Near term / monthly expiry",
+        "stance": "Consolidation / put protection",
+        "title": "Low volatility keeps downside hedges attractive to the publisher",
+        "view": "Greeks.live describes a consolidating market with dispersed gamma exposure and subdued implied volatility. It sees insufficient evidence for a major bull cycle and continues to favour monthly out-of-the-money put protection. The post was published October 22 ahead of the October 23 expiry.",
+        "url": "https://x.com/GreeksLive/status/2113283980850245772",
+        "type": "Options desk commentary"
+      },
+      {
+        "id": "qcp-2026-10-19",
+        "publisher": "QCP Capital",
+        "author": "QCP Capital",
+        "date": "2026-10-19",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Near term / options expiry",
+        "stance": "Range / expiry risk",
+        "title": "Low implied volatility may conceal expiry sensitivity",
+        "view": "QCP observes below-average implied volatility across BTC tenors and suggests dealer long gamma may be containing price swings. It warns that this stabilizing effect could diminish as options expire; a range break could reprice spot and implied volatility, without expiry alone determining direction.",
+        "url": "https://www.qcpgroup.com/insights/qcp-market-colour-53/",
+        "type": "Desk commentary"
+      },
+      {
+        "id": "greeks-2026-10-16",
+        "publisher": "Greeks.live",
+        "author": "Greeks.live",
+        "date": "2026-10-16",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Near term / monthly options",
+        "stance": "Downside protection",
+        "title": "Cheap implied volatility keeps put hedges relevant",
+        "view": "Greeks.live describes BTC implied volatility as unusually low and buyers as reluctant to pay for risk. After the weekly decline, the publisher still favours rolling monthly out-of-the-money put protection; it also notes gamma building around $80K puts.",
+        "url": "https://x.com/GreeksLive/status/2111026279692857722",
+        "type": "Options desk commentary"
+      },
+      {
+        "id": "volmex-2026-10-15",
+        "publisher": "Volmex",
+        "author": "Volmex",
+        "date": "2026-10-15",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Market structure / October 15 snapshot",
+        "stance": "Options market structure",
+        "title": "Options become central to Bitcoin risk positioning",
+        "view": "Volmex argues that options have become central to Bitcoin derivatives risk even though perpetuals trade more volume. Its October 15 snapshot attributes about 58.9% of combined BTC derivatives open interest to options, including US ETF options; this is its market-structure interpretation, not a directional forecast.",
+        "url": "https://x.com/volmexfinance/status/2110820754585538966",
+        "type": "Market-structure commentary"
+      },
+      {
+        "id": "blockscholes-2026-10-13",
+        "publisher": "Block Scholes",
+        "author": "Block Scholes",
+        "date": "2026-10-13",
+        "assets": [
+          "BTC",
+          "ETH",
+          "SOL"
+        ],
+        "horizon": "30-day implied volatility",
+        "stance": "Low vol / event repricing",
+        "title": "Volatility rose, but remains low by the publisher’s classification",
+        "view": "Block Scholes reports 30-day implied volatility of 38.8% for BTC, 54.8% for ETH and 60.5% for SOL, all higher over seven days. It classifies BTC and SOL volatility as low and ETH as below average, highlighting weekend repricing ahead of oil futures reopening.",
+        "url": "https://x.com/BlockScholes/status/2109962975566008538",
+        "type": "Volatility research"
+      },
       {
         "id": "qcp-2026-10-12",
         "publisher": "QCP Capital",
@@ -2775,116 +2981,6 @@
         "view": "Glassnode reports higher put-versus-call skew and rising options open interest, interpreting the move as increased demand for downside hedges. Its volatility-spread measure also moved closer to zero.",
         "url": "https://research.glassnode.com/btc-market-pulse-week-42-2026/",
         "type": "Research view"
-      },
-      {
-        "id": "greeks-2026-10-16",
-        "publisher": "Greeks.live",
-        "author": "Greeks.live",
-        "date": "2026-10-16",
-        "assets": [
-          "BTC"
-        ],
-        "horizon": "Near term / monthly options",
-        "stance": "Downside protection",
-        "title": "Cheap implied volatility keeps put hedges relevant",
-        "view": "Greeks.live describes BTC implied volatility as unusually low and buyers as reluctant to pay for risk. After the weekly decline, the publisher still favours rolling monthly out-of-the-money put protection; it also notes gamma building around $80K puts.",
-        "url": "https://x.com/GreeksLive/status/2111026279692857722",
-        "type": "Options desk commentary"
-      },
-      {
-        "id": "blockscholes-2026-10-13",
-        "publisher": "Block Scholes",
-        "author": "Block Scholes",
-        "date": "2026-10-13",
-        "assets": [
-          "BTC",
-          "ETH",
-          "SOL"
-        ],
-        "horizon": "30-day implied volatility",
-        "stance": "Low vol / event repricing",
-        "title": "Volatility rose, but remains low by the publisher’s classification",
-        "view": "Block Scholes reports 30-day implied volatility of 38.8% for BTC, 54.8% for ETH and 60.5% for SOL, all higher over seven days. It classifies BTC and SOL volatility as low and ETH as below average, highlighting weekend repricing ahead of oil futures reopening.",
-        "url": "https://x.com/BlockScholes/status/2109962975566008538",
-        "type": "Volatility research"
-      },
-      {
-        "id": "volmex-2026-10-15",
-        "publisher": "Volmex",
-        "author": "Volmex",
-        "date": "2026-10-15",
-        "assets": [
-          "BTC"
-        ],
-        "horizon": "Market structure / October 15 snapshot",
-        "stance": "Options market structure",
-        "title": "Options become central to Bitcoin risk positioning",
-        "view": "Volmex argues that options have become central to Bitcoin derivatives risk even though perpetuals trade more volume. Its October 15 snapshot attributes about 58.9% of combined BTC derivatives open interest to options, including US ETF options; this is its market-structure interpretation, not a directional forecast.",
-        "url": "https://x.com/volmexfinance/status/2110820754585538966",
-        "type": "Market-structure commentary"
-      },
-      {
-        "id": "qcp-2026-10-19",
-        "publisher": "QCP Capital",
-        "author": "QCP Capital",
-        "date": "2026-10-19",
-        "assets": [
-          "BTC"
-        ],
-        "horizon": "Near term / options expiry",
-        "stance": "Range / expiry risk",
-        "title": "Low implied volatility may conceal expiry sensitivity",
-        "view": "QCP observes below-average implied volatility across BTC tenors and suggests dealer long gamma may be containing price swings. It warns that this stabilizing effect could diminish as options expire; a range break could reprice spot and implied volatility, without expiry alone determining direction.",
-        "url": "https://www.qcpgroup.com/insights/qcp-market-colour-53/",
-        "type": "Desk commentary"
-      },
-      {
-        "id": "greeks-2026-10-22",
-        "publisher": "Greeks.live",
-        "author": "Greeks.live",
-        "date": "2026-10-22",
-        "assets": [
-          "BTC",
-          "ETH"
-        ],
-        "horizon": "Near term / monthly expiry",
-        "stance": "Consolidation / put protection",
-        "title": "Low volatility keeps downside hedges attractive to the publisher",
-        "view": "Greeks.live describes a consolidating market with dispersed gamma exposure and subdued implied volatility. It sees insufficient evidence for a major bull cycle and continues to favour monthly out-of-the-money put protection. The post was published October 22 ahead of the October 23 expiry.",
-        "url": "https://x.com/GreeksLive/status/2113283980850245772",
-        "type": "Options desk commentary"
-      },
-      {
-        "id": "blockscholes-2026-10-23",
-        "publisher": "Block Scholes",
-        "author": "Block Scholes",
-        "date": "2026-10-23",
-        "assets": [
-          "BTC",
-          "ETH",
-          "SOL"
-        ],
-        "horizon": "30-day implied volatility / October FOMC",
-        "stance": "Muted event volatility",
-        "title": "A Fed meeting inside the window has not lifted volatility broadly",
-        "view": "Block Scholes notes muted crypto volatility despite the October 28 Fed meeting falling inside its 30-day window. It reports BTC implied volatility at 40.1%, ETH at 54.9% and SOL at 61.2%; BTC rose 1.4 points over seven days while ETH and SOL declined.",
-        "url": "https://x.com/BlockScholes/status/2113569039297523961",
-        "type": "Volatility research"
-      },
-      {
-        "id": "qcp-2026-10-26",
-        "publisher": "QCP Capital",
-        "author": "QCP Capital",
-        "date": "2026-10-26",
-        "assets": [
-          "BTC"
-        ],
-        "horizon": "Pre-Fed / through November",
-        "stance": "Downside hedging",
-        "title": "Short-tenor volatility rises ahead of the Fed",
-        "view": "QCP reported short-tenor implied volatility rising from about 30% to 35%. It observed demand for downside protection through November. This was a pre-Fed view.",
-        "url": "https://www.qcpgroup.com/insights/qcp-market-colour-55/",
-        "type": "Desk commentary"
       }
     ]
   },
