@@ -402,5 +402,18 @@
   "text": "BVIV 42.7 (+1.2% 24h) — BTC implied vol ticking up",
   "href": "#/deep/Volmex",
   "key": "BVIV"
+ },
+ {
+  "d": "2026-11-10",
+  "kind": "new",
+  "text": "New options project spotted: Pacifica",
+  "href": "#/deep/Pacifica"
+ },
+ {
+  "d": "2026-11-10",
+  "kind": "vol",
+  "text": "BVIV 40.6 (−4.4% 24h) — BTC implied vol easing",
+  "href": "#/deep/Volmex",
+  "key": "BVIV"
  }
 ]

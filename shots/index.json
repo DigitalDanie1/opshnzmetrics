@@ -9,8 +9,8 @@
   "Paradex": {
     "file": "shots/paradex.jpg",
     "url": "https://app.paradex.trade/trade/BTC-USD-PERP",
-    "at": "2026-11-02T07:39:26.357Z",
-    "kb": 88,
+    "at": "2026-11-10T08:22:29.624Z",
+    "kb": 96,
     "hid": 0
   },
   "Derive": {
@@ -271,5 +271,12 @@
     "at": "2026-11-06T07:55:09.530Z",
     "kb": 81,
     "hid": 0
+  },
+  "Pacifica": {
+    "file": "shots/pacifica.jpg",
+    "url": "https://app.pacifica.fi",
+    "at": "2026-11-10T08:22:39.348Z",
+    "kb": 141,
+    "hid": 2
   }
 }
