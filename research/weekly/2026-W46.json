@@ -1272,5 +1272,19 @@
       "glassnode-2026-11-02"
     ],
     "currentlyDisplayedViews": 4
+  },
+  "delivery": {
+    "channel": "Telegram",
+    "bot": "wenojadaniel_options_bot",
+    "imageMessageIds": [
+      18,
+      19,
+      20
+    ],
+    "summaryMessageId": 21,
+    "albumSentAt": "2026-11-10T02:07:09.055Z",
+    "summarySentAt": "2026-11-10T02:07:09.431Z",
+    "status": "Telegram API accepted album of three images and short summary",
+    "liveVerification": "Published index.html SHA-256 matched local build; standalone institutions page rendered four current views."
   }
 }
