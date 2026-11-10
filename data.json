@@ -2693,7 +2693,7 @@
       {
         "name": "QCP Capital",
         "url": "https://www.qcpgroup.com/topic/market-updates/",
-        "status": "Nov 2 market colour verified and included (event vol, skew, put blocks). Nov 6 note is macro and equities only."
+        "status": "Nov 2 market colour verified and included (event vol, skew, put blocks). Nov 6 note is macro and equities only. Nov 2 view is now archived, outside the rolling seven-day display."
       },
       {
         "name": "Greeks.live",
@@ -2713,7 +2713,7 @@
       {
         "name": "Glassnode",
         "url": "https://research.glassnode.com/",
-        "status": "Week 45 BTC Market Pulse (Nov 2) verified and included. Other posts were on-chain or futures context."
+        "status": "Week 45 BTC Market Pulse (Nov 2) verified and included. Other posts were on-chain or futures context. Nov 2 view is now archived, outside the rolling seven-day display."
       },
       {
         "name": "Amberdata",
@@ -2727,36 +2727,6 @@
       }
     ],
     "items": [
-      {
-        "id": "qcp-2026-11-02",
-        "publisher": "QCP Capital",
-        "author": "QCP Capital",
-        "date": "2026-11-02",
-        "assets": [
-          "BTC"
-        ],
-        "horizon": "Midterm week / mid-November",
-        "stance": "Downside hedging",
-        "title": "Midterm event vol priced at 47 as downside skew stays bid",
-        "view": "QCP said the midterm event was priced at 47 vol and option flows were light. Some traders sold the 6 Nov 82k/85k call spread to fade upside. Downside skew stayed bid, which QCP linked mainly to the Binance hack. That news also drew two 1,000 BTC blocks of mid-November $74k puts.",
-        "url": "https://www.qcpgroup.com/insights/qcp-market-colour-57/",
-        "type": "Desk commentary"
-      },
-      {
-        "id": "glassnode-2026-11-02",
-        "publisher": "Glassnode",
-        "author": "Glassnode",
-        "date": "2026-11-02",
-        "assets": [
-          "BTC"
-        ],
-        "horizon": "Near term",
-        "stance": "Protection buying",
-        "title": "Skew breaks above its high band as traders pay for protection",
-        "view": "Glassnode's week 45 Market Pulse reports that the BTC 25-delta skew moved above its high band. Implied volatility jumped with the drop, leaving the volatility spread well above its high band. Options open interest contracted after Friday's monthly expiry.",
-        "url": "https://research.glassnode.com/btc-market-pulse-week-45-2026/",
-        "type": "On-chain and options research"
-      },
       {
         "id": "greeks-2026-11-04",
         "publisher": "Greeks.live",
@@ -2981,6 +2951,36 @@
         "view": "Glassnode reports higher put-versus-call skew and rising options open interest, interpreting the move as increased demand for downside hedges. Its volatility-spread measure also moved closer to zero.",
         "url": "https://research.glassnode.com/btc-market-pulse-week-42-2026/",
         "type": "Research view"
+      },
+      {
+        "id": "qcp-2026-11-02",
+        "publisher": "QCP Capital",
+        "author": "QCP Capital",
+        "date": "2026-11-02",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Midterm week / mid-November",
+        "stance": "Downside hedging",
+        "title": "Midterm event vol priced at 47 as downside skew stays bid",
+        "view": "QCP said the midterm event was priced at 47 vol and option flows were light. Some traders sold the 6 Nov 82k/85k call spread to fade upside. Downside skew stayed bid, which QCP linked mainly to the Binance hack. That news also drew two 1,000 BTC blocks of mid-November $74k puts.",
+        "url": "https://www.qcpgroup.com/insights/qcp-market-colour-57/",
+        "type": "Desk commentary"
+      },
+      {
+        "id": "glassnode-2026-11-02",
+        "publisher": "Glassnode",
+        "author": "Glassnode",
+        "date": "2026-11-02",
+        "assets": [
+          "BTC"
+        ],
+        "horizon": "Near term",
+        "stance": "Protection buying",
+        "title": "Skew breaks above its high band as traders pay for protection",
+        "view": "Glassnode's week 45 Market Pulse reports that the BTC 25-delta skew moved above its high band. Implied volatility jumped with the drop, leaving the volatility spread well above its high band. Options open interest contracted after Friday's monthly expiry.",
+        "url": "https://research.glassnode.com/btc-market-pulse-week-45-2026/",
+        "type": "On-chain and options research"
       }
     ]
   },

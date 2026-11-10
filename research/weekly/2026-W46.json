@@ -1258,5 +1258,19 @@
     "notesChanged": 25,
     "notesCleared": 7,
     "traderViewsAdded": 6
+  },
+  "telegramHighlights": [
+    "3Jane: Settle과 $100M 규모 계약",
+    "Stryke: Robinhood Chain 앱 출시",
+    "Dream: ONDO 옵션 추가"
+  ],
+  "followup": {
+    "checkedAt": "2026-11-10T02:03:35.727047+00:00",
+    "reason": "Resume the already-published Nov 9 weekly update; deliver missing Telegram album and summary. Do not duplicate completed project research.",
+    "archivedIds": [
+      "qcp-2026-11-02",
+      "glassnode-2026-11-02"
+    ],
+    "currentlyDisplayedViews": 4
   }
 }

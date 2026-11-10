@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { weeklyReport } from './weekly-report.mjs';
 const dir = path.dirname(fileURLToPath(import.meta.url));
 const env = {};
 const local = path.join(dir, '.env');
@@ -22,19 +23,7 @@ async function api(method, body) {
 }
 const bot = await api('getMe', {});
 if (bot.username?.toLowerCase() !== 'wenojadaniel_options_bot') throw new Error('Bot identity mismatch; nothing sent.');
-const updated = research.projects.filter(p => p.note);
-const c = research.coverage;
-const period = c.from && c.toExclusive
-  ? `${c.from.slice(5,10).replace('-', '/')}–${new Date(Date.parse(c.toExclusive)-86400000).toISOString().slice(5,10).replace('-', '/')} KST`
-  : file;
-const highlights = updated.slice(0, 3).map(p => `• ${p.name}: ${p.note}`);
-const text = [
-  `OPSHNZ 주간 업데이트 · ${period}`,
-  `${research.projects.length}개 검토 · 소식 ${updated.length}건 · Trader views ${research.traderViews.items.length}건`,
-  '', ...highlights, '',
-  '전체 소식 → https://opshnz.com/#/overview',
-  '시장 관점 → https://opshnz.com/#/trader-views'
-].join('\n');
+const {period,text}=weeklyReport(research);
 const kinds = ['benchmark', 'movers', 'signals'];
 const images = kinds.map(kind => path.join(dir, 'share', `${file}-${kind}.png`));
 for (const image of images) {
@@ -43,6 +32,11 @@ for (const image of images) {
   if (!fs.readFileSync(image).subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])) && !fs.readFileSync(image).subarray(0,3).equals(Buffer.from([255,216,255])))
     throw new Error('Invalid PNG: ' + path.basename(image));
 }
+const receiptDir=path.join(dir,'logs','telegram'); fs.mkdirSync(receiptDir,{recursive:true});
+const receiptFile=path.join(receiptDir,`${file}.json`);
+let receipt=fs.existsSync(receiptFile)?JSON.parse(fs.readFileSync(receiptFile,'utf8')):{week:file,bot:bot.username};
+const save=()=>fs.writeFileSync(receiptFile,JSON.stringify(receipt,null,2)+'\n',{mode:0o600});
+if(!receipt.imageMessageIds) {
 const form = new FormData();
 form.set('chat_id', chat);
 form.set('media', JSON.stringify(kinds.map((kind,i) => ({type:'photo', media:`attach://${kind}`, ...(i===0 ? {caption:`OPSHNZ · ${period}\n벤치마크 · 가격 변화 · 시그널\nhttps://opshnz.com`} : {})}))));
@@ -50,8 +44,12 @@ images.forEach((image,i) => form.set(kinds[i], new Blob([fs.readFileSync(image)]
 const response = await fetch(`https://api.telegram.org/bot${token}/sendMediaGroup`, {method:'POST', body:form, signal:AbortSignal.timeout(60000)});
 const album = await response.json();
 if (!album.ok || album.result?.length !== 3) throw new Error(`Telegram image album failed (${album.error_code || response.status})`);
-console.log(JSON.stringify({imagesSent:3,messageIds:album.result.map(m=>m.message_id),week:file}));
-if (!process.argv.includes('--images-only')) {
+receipt.imageMessageIds=album.result.map(m=>m.message_id);receipt.albumSentAt=new Date().toISOString();save();
+console.log(JSON.stringify({imagesSent:3,messageIds:receipt.imageMessageIds,week:file}));
+}
+if (!process.argv.includes('--images-only') && !receipt.summaryMessageId) {
   const sent = await api('sendMessage', {chat_id: chat, text, disable_web_page_preview:true});
+  receipt.summaryMessageId=sent.message_id;receipt.summarySentAt=new Date().toISOString();save();
   console.log(JSON.stringify({sent:true, bot:bot.username, messageId:sent.message_id, week:file}));
 }
+console.log(JSON.stringify({week:file,imagesSent:receipt.imageMessageIds?.length || 0,summarySent:!!receipt.summaryMessageId}));

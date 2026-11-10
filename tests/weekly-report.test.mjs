@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {weeklyReport} from '../weekly-report.mjs';
+const projects=[{name:'A',note:'Launch'},{name:'B',note:''}];
+const common={week:'2026-W46',projects,traderViews:{items:[{}]}};
+const first=weeklyReport({...common,coverage:{from:'2026-11-02T00:00:00+09:00',toExclusive:'2026-11-09T00:00:00+09:00'}});
+const later=weeklyReport({...common,coverage:{startInclusive:'2026-11-02T00:00:00+09:00',endExclusive:'2026-11-09T00:00:00+09:00'},traderViews:{added:[{}]}});
+assert.deepEqual(first,later);assert.equal(first.period,'11/02–11/08 KST');
+assert.ok(first.text.includes('2개 검토 · 소식 1건 · 시장 관점 1건'));
+assert.ok(!first.text.includes('B:'));assert.ok(first.text.length<500);
+assert.throws(()=>weeklyReport({projects}));
+console.log('Weekly reports: schema aliases, calendar dates, verified news counts and short text passed.');
