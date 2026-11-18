@@ -513,5 +513,12 @@
   "text": "BVIV 46.9 (+6.0% 24h) — BTC implied vol spiking",
   "href": "#/deep/Volmex",
   "key": "BVIV"
+ },
+ {
+  "d": "2026-11-18",
+  "kind": "vol",
+  "text": "BVIV 46.8 (+1.2% 24h) — BTC implied vol ticking up",
+  "href": "#/deep/Volmex",
+  "key": "BVIV"
  }
 ]
