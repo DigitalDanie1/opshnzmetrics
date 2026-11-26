@@ -639,5 +639,26 @@
   "text": "BVIV 59.9 (+5.2% 24h) — BTC implied vol spiking",
   "href": "#/deep/Volmex",
   "key": "BVIV"
+ },
+ {
+  "d": "2026-11-26",
+  "kind": "move",
+  "text": "$DIME +8.8% in 24h",
+  "href": "#/deep/Paradex",
+  "key": "$DIME"
+ },
+ {
+  "d": "2026-11-26",
+  "kind": "move",
+  "text": "$SYN +8.2% in 24h",
+  "href": "#/deep/Hypercall",
+  "key": "$SYN"
+ },
+ {
+  "d": "2026-11-26",
+  "kind": "vol",
+  "text": "BVIV 53.4 (−8.3% 24h) — BTC implied vol collapsing",
+  "href": "#/deep/Volmex",
+  "key": "BVIV"
  }
 ]
