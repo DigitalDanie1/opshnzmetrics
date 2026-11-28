@@ -2,8 +2,8 @@
   "Thetanuts": {
     "file": "shots/thetanuts.jpg",
     "url": "https://app.thetanuts.finance",
-    "at": "2026-11-22T07:59:32.973Z",
-    "kb": 52,
+    "at": "2026-11-28T08:54:25.115Z",
+    "kb": 60,
     "hid": 1
   },
   "Paradex": {
@@ -16,147 +16,147 @@
   "Derive": {
     "file": "shots/derive.jpg",
     "url": "https://www.derive.xyz/options/eth",
-    "at": "2026-11-22T07:59:42.522Z",
-    "kb": 133,
+    "at": "2026-11-28T08:54:29.163Z",
+    "kb": 145,
     "hid": 1
   },
   "Aevo": {
     "file": "shots/aevo.jpg",
     "url": "https://app.aevo.xyz/option/eth",
-    "at": "2026-11-22T07:59:32.645Z",
+    "at": "2026-11-28T08:54:24.788Z",
     "kb": 53,
     "hid": 1
   },
   "Hypercall": {
     "file": "shots/hypercall.jpg",
     "url": "https://app.hypercall.xyz",
-    "at": "2026-11-22T07:59:44.956Z",
-    "kb": 73,
+    "at": "2026-11-28T08:54:38.733Z",
+    "kb": 59,
     "hid": 0
   },
   "GammaSwap": {
     "file": "shots/gammaswap.jpg",
     "url": "https://app.gammaswap.com",
-    "at": "2026-11-22T07:59:45.741Z",
-    "kb": 102,
+    "at": "2026-11-28T08:54:36.786Z",
+    "kb": 93,
     "hid": 3
   },
   "Dream": {
     "file": "shots/dream.jpg",
     "url": "https://dreamos.app",
-    "at": "2026-11-22T07:59:53.420Z",
+    "at": "2026-11-28T08:54:40.206Z",
     "kb": 48,
     "hid": 0
   },
   "CallPut": {
     "file": "shots/callput.jpg",
     "url": "https://callput.app",
-    "at": "2026-11-22T07:59:55.957Z",
+    "at": "2026-11-28T08:54:47.723Z",
     "kb": 67,
     "hid": 0
   },
   "Joyride": {
     "file": "shots/joyride.jpg",
     "url": "https://joyride.exchange",
-    "at": "2026-11-22T07:59:56.403Z",
+    "at": "2026-11-28T08:54:49.291Z",
     "kb": 68,
     "hid": 0
   },
   "Olive": {
     "file": "shots/olive.jpg",
     "url": "https://olive.exchange",
-    "at": "2026-11-22T08:00:05.330Z",
+    "at": "2026-11-28T08:54:51.161Z",
     "kb": 109,
     "hid": 0
   },
   "3Jane": {
     "file": "shots/3jane.jpg",
     "url": "https://app.3jane.xyz",
-    "at": "2026-11-22T08:00:07.201Z",
+    "at": "2026-11-28T08:54:58.424Z",
     "kb": 116,
     "hid": 0
   },
   "Volmex": {
     "file": "shots/volmex.jpg",
     "url": "https://app.hyperliquid.xyz/trade/mkts:BVIV",
-    "at": "2026-11-22T08:00:07.397Z",
-    "kb": 136,
+    "at": "2026-11-28T08:55:00.083Z",
+    "kb": 113,
     "hid": 1
   },
   "Hunch": {
     "file": "shots/hunch.jpg",
     "url": "https://www.hunch.cool",
-    "at": "2026-11-22T08:00:15.826Z",
-    "kb": 57,
+    "at": "2026-11-28T08:55:02.137Z",
+    "kb": 55,
     "hid": 0
   },
   "Hegic": {
     "file": "shots/hegic.jpg",
     "url": "https://www.hegic.co",
-    "at": "2026-11-22T08:00:40.152Z",
+    "at": "2026-11-28T08:55:32.147Z",
     "kb": 50,
     "hid": 0
   },
   "Panoptic": {
     "file": "shots/panoptic.jpg",
     "url": "https://panoptic.xyz",
-    "at": "2026-11-22T08:00:40.576Z",
+    "at": "2026-11-28T08:55:31.013Z",
     "kb": 62,
     "hid": 0
   },
   "Rysk": {
     "file": "shots/rysk.jpg",
     "url": "https://app.rysk.finance",
-    "at": "2026-11-22T08:00:18.535Z",
+    "at": "2026-11-28T08:55:09.321Z",
     "kb": 124,
     "hid": 0
   },
   "Deri": {
     "file": "shots/deri.jpg",
     "url": "https://deri.io",
-    "at": "2026-11-22T08:00:51.023Z",
-    "kb": 64,
+    "at": "2026-11-28T08:55:42.599Z",
+    "kb": 52,
     "hid": 0
   },
   "Toros": {
     "file": "shots/toros.jpg",
     "url": "https://chamberfi.com",
-    "at": "2026-11-22T08:01:02.185Z",
+    "at": "2026-11-28T08:55:53.916Z",
     "kb": 38,
     "hid": 1
   },
   "Stryke": {
     "file": "shots/stryke.jpg",
     "url": "https://www.stryke.xyz",
-    "at": "2026-11-22T08:01:02.921Z",
-    "kb": 84,
+    "at": "2026-11-28T08:55:55.554Z",
+    "kb": 86,
     "hid": 0
   },
   "Prodigy.Fi": {
     "file": "shots/prodigy-fi.jpg",
     "url": "https://prodigy.fi",
-    "at": "2026-11-22T08:01:13.899Z",
-    "kb": 59,
-    "hid": 2
+    "at": "2026-11-28T08:56:05.412Z",
+    "kb": 60,
+    "hid": 1
   },
   "Omen": {
     "file": "shots/omen.jpg",
     "url": "https://omen.trade",
-    "at": "2026-11-22T08:01:25.333Z",
-    "kb": 71,
+    "at": "2026-11-28T08:56:16.470Z",
+    "kb": 73,
     "hid": 0
   },
   "HedgeHood": {
     "file": "shots/hedgehood.jpg",
     "url": "https://hedgehood.app",
-    "at": "2026-11-22T08:01:36.076Z",
+    "at": "2026-11-28T08:56:26.939Z",
     "kb": 59,
     "hid": 0
   },
   "Heat": {
     "file": "shots/heat.jpg",
     "url": "https://www.useheat.xyz",
-    "at": "2026-11-22T08:00:26.443Z",
+    "at": "2026-11-28T08:55:12.558Z",
     "kb": 105,
     "hid": 0
   },
@@ -170,78 +170,78 @@
   "HARDCORE": {
     "file": "shots/hardcore.jpg",
     "url": "https://hardcore.finance",
-    "at": "2026-11-22T08:00:29.759Z",
+    "at": "2026-11-28T08:55:20.602Z",
     "kb": 122,
     "hid": 0
   },
   "Split Markets": {
     "file": "shots/split-markets.jpg",
     "url": "https://split.markets/updown",
-    "at": "2026-11-22T08:01:36.886Z",
+    "at": "2026-11-28T08:56:28.418Z",
     "kb": 123,
     "hid": 0
   },
   "Odette": {
     "file": "shots/odette.jpg",
     "url": "https://odette.fi",
-    "at": "2026-11-22T08:00:52.400Z",
+    "at": "2026-11-28T08:55:43.365Z",
     "kb": 56,
     "hid": 0
   },
   "SOFA.org": {
     "file": "shots/sofa-org.jpg",
     "url": "https://www.sofa.org",
-    "at": "2026-11-22T08:00:51.027Z",
+    "at": "2026-11-28T08:55:42.603Z",
     "kb": 24,
     "hid": 0
   },
   "Carmine": {
     "file": "shots/carmine.jpg",
     "url": "https://carmine.finance",
-    "at": "2026-11-22T08:01:02.789Z",
+    "at": "2026-11-28T08:55:53.663Z",
     "kb": 75,
     "hid": 0
   },
   "Hypersurface": {
     "file": "shots/hypersurface.jpg",
     "url": "https://app.hypersurface.io",
-    "at": "2026-11-22T08:01:15.448Z",
-    "kb": 69,
+    "at": "2026-11-28T08:56:05.096Z",
+    "kb": 65,
     "hid": 1
   },
   "Stochastic": {
     "file": "shots/stochastic.jpg",
     "url": "https://stochastic.finance",
-    "at": "2026-11-22T08:01:14.628Z",
-    "kb": 103,
+    "at": "2026-11-28T08:56:07.256Z",
+    "kb": 101,
     "hid": 0
   },
   "Gage": {
     "file": "shots/gage.jpg",
     "url": "https://gage.cash",
-    "at": "2026-11-22T08:01:25.616Z",
+    "at": "2026-11-28T08:56:16.262Z",
     "kb": 73,
     "hid": 0
   },
   "Saffron": {
     "file": "shots/saffron.jpg",
     "url": "https://app.saffron.finance",
-    "at": "2026-11-22T08:01:36.185Z",
-    "kb": 55,
+    "at": "2026-11-28T08:56:27.380Z",
+    "kb": 54,
     "hid": 2
   },
   "SuperVega": {
     "file": "shots/supervega.jpg",
     "url": "https://supervega.app",
-    "at": "2026-11-22T08:01:26.452Z",
-    "kb": 83,
+    "at": "2026-11-28T08:56:18.004Z",
+    "kb": 94,
     "hid": 0
   },
   "IVY": {
     "file": "shots/ivy.jpg",
     "url": "https://ivy.market/early-access",
-    "at": "2026-11-22T08:00:29.824Z",
-    "kb": 81,
+    "at": "2026-11-28T08:55:21.837Z",
+    "kb": 89,
     "hid": 0
   },
   "Ace.Pro": {
